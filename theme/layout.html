@@ -1,0 +1,86 @@
+{%- block doctype -%}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{%- endblock %}
+{%- set url_root = pathto('', 1) %}
+{# XXX necessary? #}
+{%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
+
+{%- macro css() %}
+  <link href="{{ pathto('_static/css/reset-min.css', 1) }}" rel="stylesheet" type="text/css" />
+  <link href="{{ pathto('_static/css/base.css', 1) }}" rel="stylesheet" type="text/css" />
+  <link href="{{ pathto('_static/css/code.css', 1) }}" rel="stylesheet" type="text/css" />
+  <link href="{{ pathto('_static/css/colors.css', 1) }}" rel="stylesheet" type="text/css" />
+  <link href="{{ pathto('_static/pygments.css', 1) }}" rel="stylesheet" type="text/css" />
+
+  {%- for cssfile in css_files %}
+    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
+  {%- endfor %}
+{%- endmacro %}
+
+{%- macro script() %}
+  {%- for scriptfile in script_files %}
+    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
+  {%- endfor %}
+{%- endmacro %}
+
+<html xmlns="http://www.w3.org/1999/xhtml"{% if language is not none %} lang="{{ language }}"{% endif %}>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}" />
+    <meta name="robots" content="index, follow, all" />
+    <meta name="Language" content="en" />
+    <meta name="Description" content="PHP Coding Standards Fixer" />
+    <meta name="Keywords" content="php, coding standards" />
+    {{ metatags }}
+    {%- block htmltitle %}
+      <title>PHP Coding Standards Fixer</title>
+    {%- endblock %}
+    {{ css() }}
+    {{ script() }}
+    {%- block extrahead %} {% endblock %}
+  </head>
+  <body>
+    {%- block header %}
+      <div class="hd">
+        <div class="illustration png_fix">
+          <div class="content">
+            <div class="sensio_product">
+              <img class="png_fix" src="{{ pathto('_static/images/sensio-labs-product.png', 1) }}" alt="a Sensio Labs Product" />
+            </div>
+            <div class="clearfix">
+              <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
+              <h1 class="title_header">
+                The Coding Standards fixer for your code
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+
+    {%- block content %}
+      <div class="bd">
+        <div class="content">
+          <div class="links_intro">
+            <ul>
+              <li>
+                <a href="http://get.sensiolabs.org/php-cs-fixer.phar"><img class="install_now png_fix" src="{{ pathto('_static/images/install_now.png', 1) }}" alt="Install now" /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="more_intro">
+            {% block body %} {% endblock %}
+          </div>
+        </div>
+      </div>
+    {%- endblock %}
+
+    {%- block footer %}
+      <div class="ft">
+        <div class="content">
+          The <a href="{{ pathto('_static/images/logo.png', 1) }}">logo</a> is &copy; 2010-2014 Sensio Labs
+        </div>
+      </div>
+    {%- endblock %}
+  </body>
+</html>
