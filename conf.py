@@ -50,7 +50,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'PHP CS Fixer'
-copyright = '2016, Friends of PHP'
+copyright = '2017, Friends of PHP'
 author = 'Friends of PHP'
 
 # The version info for the project you're documenting, acts as replacement for
