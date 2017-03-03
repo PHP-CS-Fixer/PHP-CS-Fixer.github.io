@@ -9,3 +9,5 @@ rm -rf build/.doctrees build/_sources build/theme
 cp CNAME build/CNAME
 cp -r download build/download
 rm build/.buildinfo build/genindex.html build/objects.inv build/search.html build/searchindex.js
+
+rm index.rst
