@@ -1,0 +1,29 @@
+sudo: false
+
+language: python
+python: 3.6
+
+cache:
+    pip: true
+
+install:
+    - pip install -r requirements.txt
+
+script:
+    - php download/php-cs-fixer-v2.phar self-update || curl -L "https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/$(curl -u keradus:5e7538aa415005c606ea68de2bbbade0409b4b8c https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/releases/latest | jq .tag_name | tr -d '"')/php-cs-fixer.phar" -o download/php-cs-fixer-v2.phar
+    - php download/php-cs-fixer-v2.phar readme > index.rst
+    - cat theme/who_is_behind.rst >> index.rst
+    - sphinx-build . build
+    - rm -rf build/.doctrees build/_sources build/theme build/.buildinfo build/genindex.html build/objects.inv build/search.html build/searchindex.js
+    - touch build/.nojekyll
+    - cp -r download build/download
+    - cp CNAME build/CNAME
+
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: build
+    target_branch: master
+    on:
+        branch: generator
