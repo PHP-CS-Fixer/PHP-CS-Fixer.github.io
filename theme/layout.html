@@ -37,11 +37,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}" />
     <meta name="robots" content="index, follow, all" />
     <meta name="Language" content="en" />
-    <meta name="Description" content="PHP Coding Standards Fixer" />
+    <meta name="Description" content="{{ project }}" />
     <meta name="Keywords" content="php, coding standards" />
     {{ metatags }}
     {%- block htmltitle %}
-      <title>PHP Coding Standards Fixer</title>
+      <title>{{ project }}</title>
     {%- endblock %}
     {{ css() }}
     {{ script() }}
@@ -56,9 +56,9 @@
               <img class="png_fix" src="{{ pathto('_static/images/sensio-labs-product.png', 1) }}" alt="a Sensio Labs Product" />
             </div>
             <div class="clearfix">
-              <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
+              <div class="logo_header"><a href="/">{{ project }}</a></div>
               <h1 class="title_header">
-                The Coding Standards fixer for your code
+                <strong>{{ theme_fixer_version_codename }} (v{{ theme_fixer_version_number }})</strong> edition
               </h1>
             </div>
           </div>

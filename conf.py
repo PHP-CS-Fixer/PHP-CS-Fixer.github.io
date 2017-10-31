@@ -49,7 +49,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'PHP CS Fixer'
+project = 'PHP Coding Standards Fixer'
 copyright = '2017, Friends of PHP'
 author = 'Friends of PHP'
 
