@@ -23,6 +23,8 @@ script:
 
 deploy:
     provider: pages
+    edge: # due to https://github.com/travis-ci/travis-ci/issues/9312
+       branch: v1.8.47
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
     local_dir: build
