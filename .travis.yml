@@ -13,8 +13,8 @@ script:
     - php download/php-cs-fixer-v2.phar self-update || curl -L "https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/$(curl -u keradus:5e7538aa415005c606ea68de2bbbade0409b4b8c https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/releases/latest | jq .tag_name | tr -d '"')/php-cs-fixer.phar" -o download/php-cs-fixer-v2.phar
     - php download/php-cs-fixer-v2.phar readme > index.rst
     - cat theme/who_is_behind.rst >> index.rst
-    - echo fixer_version_number = $(./extractor.php | jq .version.number | tail -c +2 | head -c -2) >> theme/theme.conf
-    - echo fixer_version_codename = $(./extractor.php | jq .version.codename | tail -c +2 | head -c -2) >> theme/theme.conf
+    - echo fixer_version_number = $(./extractor.php | jq -r .version.number) >> theme/theme.conf
+    - echo fixer_version_codename = $(./extractor.php | jq -r .version.codename) >> theme/theme.conf
     - sphinx-build . build
     - rm -rf build/.doctrees build/_sources build/theme build/.buildinfo build/genindex.html build/objects.inv build/search.html build/searchindex.js
     - touch build/.nojekyll
