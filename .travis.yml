@@ -15,17 +15,17 @@ script:
     - cp theme/theme.conf.dist theme/theme.conf
     - echo fixer_version_number = $(./extractor.php | jq -r .version.number) >> theme/theme.conf
     - echo fixer_version_codename = $(./extractor.php | jq -r .version.codename) >> theme/theme.conf
-    - sphinx-build . build
-    - rm -rf build/.doctrees build/_sources build/theme build/.buildinfo build/genindex.html build/objects.inv build/search.html build/searchindex.js
-    - touch build/.nojekyll
-    - cp -r download build/download
-    - cp CNAME build/CNAME
+    - sphinx-build . dist
+    - rm -rf dist/.doctrees dist/_sources dist/theme dist/.buildinfo dist/genindex.html dist/objects.inv dist/search.html dist/searchindex.js
+    - touch dist/.nojekyll
+    - cp -r download dist/download
+    - cp CNAME dist/CNAME
 
 deploy:
     provider: pages
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
-    local_dir: build
+    local_dir: dist
     target_branch: master
     on:
         branch: generator
