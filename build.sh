@@ -23,11 +23,16 @@ cat theme/who_is_behind.rst >> src/index.rst
 cp 404.rst src/404.rst
 
 echo λλλ fetch up doc/ folder from git repo
-curl --silent --fail -L "https://github.com/FriendsOfPHP/PHP-CS-Fixer/archive/v${PHP_CS_FIXER_VERSION}.tar.gz" -o src/archive.tar.gz
-tar -zxf src/archive.tar.gz -C src "PHP-CS-Fixer-${PHP_CS_FIXER_VERSION}/doc/"
-mv "src/PHP-CS-Fixer-${PHP_CS_FIXER_VERSION}/doc/" src/doc/
-rmdir "src/PHP-CS-Fixer-${PHP_CS_FIXER_VERSION}/"
-rm src/archive.tar.gz
+# we cannot use .tar.gz archive, as it does not contain doc files, let's clone the repo itself!
+#  curl --silent --fail -L "https://github.com/FriendsOfPHP/PHP-CS-Fixer/archive/v${PHP_CS_FIXER_VERSION}.tar.gz" -o src/archive.tar.gz
+#  tar -zxf src/archive.tar.gz -C src "PHP-CS-Fixer-${PHP_CS_FIXER_VERSION}/doc/"
+#  mv "src/PHP-CS-Fixer-${PHP_CS_FIXER_VERSION}/doc/" src/doc/
+#  rmdir "src/PHP-CS-Fixer-${PHP_CS_FIXER_VERSION}/"
+#  rm src/archive.tar.gz
+tmp_dir=$(mktemp --directory -t php-cs-fixer.github.io--repo-clone--XXXXX)
+git clone --branch "v${PHP_CS_FIXER_VERSION}" --depth 1 --no-checkout git@github.com:FriendsOfPHP/PHP-CS-Fixer.git $tmp_dir
+git -C $tmp_dir checkout HEAD doc/
+mv "${tmp_dir}/doc/" src/doc/
 
 echo λλλ replace internal links
 # ```diff
