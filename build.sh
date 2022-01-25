@@ -3,9 +3,12 @@ set -eu
 
 echo λλλ get newest PHP CS Fixer version
 php download/php-cs-fixer-v3.phar self-update || curl --silent --fail -L "https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/$(curl --silent --fail -u keradus:5e7538aa415005c606ea68de2bbbade0409b4b8c https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/releases/latest | jq -r .tag_name)/php-cs-fixer.phar" -o download/php-cs-fixer-v3.phar
-./extractor.php | jq .version
-PHP_CS_FIXER_VERSION=$(./extractor.php | jq -r .version.number)
-PHP_CS_FIXER_CODENAME=$(./extractor.php | jq -r .version.codename)
+./extractor.php | jq .version > download/version.json
+
+echo λλλ prepare PHP CS Fixer version variables
+cat download/version.json | jq
+PHP_CS_FIXER_VERSION=$(cat download/version.json | jq -r .number)
+PHP_CS_FIXER_CODENAME=$(cat download/version.json | jq -r .codename)
 
 echo λλλ prepare theme.conf and mark newest PHP CS Fixer version
 cp theme/theme.conf.dist theme/theme.conf
