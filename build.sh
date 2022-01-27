@@ -34,7 +34,7 @@ echo λλλ fetch up doc/ folder from git repo
 #  mv "src/PHP-CS-Fixer-${PHP_CS_FIXER_VERSION}/doc/" src/doc/
 #  rmdir "src/PHP-CS-Fixer-${PHP_CS_FIXER_VERSION}/"
 #  rm src/archive.tar.gz
-tmp_dir=$(mktemp --directory -t php-cs-fixer.github.io--repo-clone--XXXXX)
+tmp_dir=$(mktemp -d -t php-cs-fixer.github.io--repo-clone--XXXXX)
 git clone --branch "v${PHP_CS_FIXER_VERSION}" --depth 1 --no-checkout https://github.com/FriendsOfPHP/PHP-CS-Fixer.git $tmp_dir
 git -C $tmp_dir checkout HEAD doc/
 mv "${tmp_dir}/doc/" src/doc/
