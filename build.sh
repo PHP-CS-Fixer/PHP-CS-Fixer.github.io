@@ -45,7 +45,7 @@ echo λλλ replace internal links
 # +:doc:`DESC <PATH>`
 # ```
 # to find: grep -r --perl '`[^<]+<[^>]+\.rst>`_+' src
-find src -type f -name "*.rst" -print0 | xargs -0 sed -i -E 's/`([^<]+)<([^>]+)\.rst>`_+/:doc:`\1<\2>`/g'
+find src -type f -name "*.rst" -print0 | xargs -0 perl -pi -e 's/`([^<]+)<([^>]+)\.rst>`_+/:doc:`\1<\2>`/g'
 
 echo λλλ generate website content
 sphinx-build -c . src dist
