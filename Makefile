@@ -79,7 +79,7 @@ build-install-deps: requirements.txt
 	pip3 install -r requirements.txt
 
 .PHONY: build
-build: build-install-deps build-folders build-default-files build-fetch-docs build-internal-links
+build: build-install-deps build-folders build-theme-files build-default-files build-fetch-docs build-internal-links
 	echo λλλ generate website content
 	sphinx-build -c . src dist
 
