@@ -1,0 +1,576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index, follow, all" />
+    <meta name="Language" content="en" />
+    <meta name="Description" content="PHP Coding Standards Fixer" />
+    <meta name="Keywords" content="php, coding standards" />
+    
+      <title>PHP Coding Standards Fixer</title>
+    
+  <link href="../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
+  <link href="../_static/css/base.css" rel="stylesheet" type="text/css" />
+  <link href="../_static/css/code.css" rel="stylesheet" type="text/css" />
+  <link href="../_static/css/colors.css" rel="stylesheet" type="text/css" />
+  <link href="../_static/pygments.css" rel="stylesheet" type="text/css" />
+    
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32006827-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script> 
+  </head>
+  <body>
+      <div class="hd">
+        <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+
+        <div class="illustration png_fix">
+          <div class="content">
+            <div class="sensio_product">
+              <img class="png_fix" src="../_static/images/sensio-labs-product.png" alt="a Sensio Labs Product" />
+            </div>
+            <div class="clearfix">
+              <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
+              <h1 class="title_header">
+                <strong>BerSzcz against war! (v3.8.0)</strong> edition
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="bd">
+        <div class="content">
+          <div class="links_intro">
+            <ul>
+              <li>
+                <a href="./download/php-cs-fixer-v3.phar"><img class="install_now png_fix" src="../_static/images/install_now.png" alt="Install now" /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="more_intro">
+            
+  <div class="section" id="cookbook-making-a-new-fixer-for-php-cs-fixer">
+<h1>Cookbook - Making a new Fixer for PHP CS Fixer<a class="headerlink" href="#cookbook-making-a-new-fixer-for-php-cs-fixer" title="Permalink to this headline">¶</a></h1>
+<p>You want to make a new fixer to PHP CS Fixer and do not know how to
+start. Follow this document and you will be able to do it.</p>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>In order to be able to create a new fixer, you need some background.
+PHP CS Fixer is a transcompiler which takes valid PHP code and pretty
+print valid PHP code. It does all transformations in multiple passes,
+a.k.a., multi-pass compiler.</p>
+<p>Therefore, a new fixer is meant to be ideally <a class="reference external" href="https://en.wikipedia.org/wiki/Idempotence#Computer_science_meaning">idempotent</a>, or at least atomic
+in its actions. More on this later.</p>
+<p>All contributions go through a code review process. Do not feel
+discouraged - it is meant only to give more people more chance to
+contribute, and to detect bugs (<a class="reference external" href="https://en.wikipedia.org/wiki/Linus%27s_Law">Linus’s Law</a>).</p>
+<p>If possible, try to get acquainted with the public interface for the
+<a class="reference external" href="../src/Tokenizer/Tokens.php">Tokens class</a> and <a class="reference external" href="../src/Tokenizer/Token.php">Token class</a> classes.</p>
+</div>
+<div class="section" id="assumptions">
+<h2>Assumptions<a class="headerlink" href="#assumptions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>You are familiar with Test Driven Development.</p></li>
+<li><p>Forked FriendsOfPHP/PHP-CS-Fixer into your own GitHub Account.</p></li>
+<li><p>Cloned your forked repository locally.</p></li>
+<li><p>Installed the dependencies of PHP CS Fixer using <a class="reference external" href="https://getcomposer.org">Composer</a>.</p></li>
+<li><p>You have read <a class="reference external" href="../CONTRIBUTING.md">CONTRIBUTING.md</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="step-by-step">
+<h2>Step by step<a class="headerlink" href="#step-by-step" title="Permalink to this headline">¶</a></h2>
+<p>For this step-by-step, we are going to create a simple fixer that
+removes all comments from the code that are preceded by ‘;’ (semicolon).</p>
+<p>We are calling it <code class="docutils literal notranslate"><span class="pre">remove_comments</span></code> (code name), or,
+<code class="docutils literal notranslate"><span class="pre">RemoveCommentsFixer</span></code> (class name).</p>
+<div class="section" id="step-1-creating-files">
+<h3>Step 1 - Creating files<a class="headerlink" href="#step-1-creating-files" title="Permalink to this headline">¶</a></h3>
+<p>Create a new file in <code class="docutils literal notranslate"><span class="pre">src/Fixer/Comment/RemoveCommentsFixer.php</span></code>.
+Put this content inside:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="cm">/*</span>
+<span class="cm"> * This file is part of PHP CS Fixer.</span>
+<span class="cm"> *</span>
+<span class="cm"> * (c) Fabien Potencier &lt;fabien@symfony.com&gt;</span>
+<span class="cm"> *     Dariusz Rumiński &lt;dariusz.ruminski@gmail.com&gt;</span>
+<span class="cm"> *</span>
+<span class="cm"> * This source file is subject to the MIT license that is bundled</span>
+<span class="cm"> * with this source code in the file LICENSE.</span>
+<span class="cm"> */</span>
+
+<span class="k">namespace</span> <span class="nx">PhpCsFixer\Fixer\Comment</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">PhpCsFixer\AbstractFixer</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">PhpCsFixer\Tokenizer\Tokens</span><span class="p">;</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * @author Your name &lt;your@email.com&gt;</span>
+<span class="sd"> */</span>
+<span class="k">final</span> <span class="k">class</span> <span class="nc">RemoveCommentsFixer</span> <span class="k">extends</span> <span class="nx">AbstractFixer</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * {@inheritdoc}</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getDefinition</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// Return a definition of the fixer, it will be used in the documentation.</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * {@inheritdoc}</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">isCandidate</span><span class="p">(</span><span class="nx">Tokens</span> <span class="nv">$tokens</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Check whether the collection is a candidate for fixing.</span>
+        <span class="c1">// Has to be ultra cheap to execute.</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * {@inheritdoc}</span>
+<span class="sd">     */</span>
+    <span class="k">protected</span> <span class="k">function</span> <span class="nf">applyFix</span><span class="p">(</span><span class="nx">\SplFileInfo</span> <span class="nv">$file</span><span class="p">,</span> <span class="nx">Tokens</span> <span class="nv">$tokens</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Add the fixing logic of the fixer here.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Note how the class and file name match. Also keep in mind that all
+fixers must implement <code class="docutils literal notranslate"><span class="pre">Fixer\FixerInterface</span></code>. In this case, the fixer is
+inheriting from <code class="docutils literal notranslate"><span class="pre">AbstractFixer</span></code>, which fulfills the interface with some
+default behavior.</p>
+<p>Now let us create the test file at
+<code class="docutils literal notranslate"><span class="pre">tests/Fixer/Comment/RemoveCommentsFixerTest.php</span></code>. Put this content inside:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="cm">/*</span>
+<span class="cm"> * This file is part of PHP CS Fixer.</span>
+<span class="cm"> *</span>
+<span class="cm"> * (c) Fabien Potencier &lt;fabien@symfony.com&gt;</span>
+<span class="cm"> *     Dariusz Rumiński &lt;dariusz.ruminski@gmail.com&gt;</span>
+<span class="cm"> *</span>
+<span class="cm"> * This source file is subject to the MIT license that is bundled</span>
+<span class="cm"> * with this source code in the file LICENSE.</span>
+<span class="cm"> */</span>
+
+<span class="k">namespace</span> <span class="nx">PhpCsFixer\Tests\Fixer\Comment</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">PhpCsFixer\Tests\Test\AbstractFixerTestCase</span><span class="p">;</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * @author Your name &lt;your@email.com&gt;</span>
+<span class="sd"> *</span>
+<span class="sd"> * @internal</span>
+<span class="sd"> *</span>
+<span class="sd"> * @covers \PhpCsFixer\Fixer\Comment\RemoveCommentsFixer</span>
+<span class="sd"> */</span>
+<span class="k">final</span> <span class="k">class</span> <span class="nc">RemoveCommentsFixerTest</span> <span class="k">extends</span> <span class="nx">AbstractFixerTestCase</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * @param string      $expected</span>
+<span class="sd">     * @param null|string $input</span>
+<span class="sd">     *</span>
+<span class="sd">     * @dataProvider provideFixCases</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">testFix</span><span class="p">(</span><span class="nv">$expected</span><span class="p">,</span> <span class="nv">$input</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">doTest</span><span class="p">(</span><span class="nv">$expected</span><span class="p">,</span> <span class="nv">$input</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">provideFixCases</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-2-using-tests-to-define-fixers-behavior">
+<h3>Step 2 - Using tests to define fixers behavior<a class="headerlink" href="#step-2-using-tests-to-define-fixers-behavior" title="Permalink to this headline">¶</a></h3>
+<p>Now that the files are created, you can start writing tests to define the
+behavior of the fixer. You have to do it in two ways: first, ensuring
+the fixer changes what it should be changing; second, ensuring that
+fixer does not change what is not supposed to change. Thus:</p>
+<p>Keeping things as they are:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span>// tests/Fixer/Comment/RemoveCommentsFixerTest.php
+
+    // ...
+    public function provideFixCases()
+    {
+        return [
+            [&#39;&lt;?php echo &quot;This should not be changed&quot;;&#39;], // Each sub-array is a test
+        ];
+    }
+    // ...
+</pre></div>
+</div>
+<p>Ensuring things change:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span>// tests/Fixer/Comment/RemoveCommentsFixerTest.php
+
+    // ...
+    public function provideFixCases()
+    {
+        return [
+            [
+                &#39;&lt;?php echo &quot;This should be changed&quot;; &#39;, // This is expected output
+                &#39;&lt;?php echo &quot;This should be changed&quot;; /* Comment */&#39;, // This is input
+            ],
+        ];
+    }
+    // ...
+</pre></div>
+</div>
+<p>Note that expected outputs are <strong>always</strong> tested alone to ensure your fixer will not change it.</p>
+<p>We want to have a failing test to start with, so the test file now looks
+like:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// tests/Fixer/Comment/RemoveCommentsFixerTest.php</span>
+
+<span class="cm">/*</span>
+<span class="cm"> * This file is part of PHP CS Fixer.</span>
+<span class="cm"> *</span>
+<span class="cm"> * (c) Fabien Potencier &lt;fabien@symfony.com&gt;</span>
+<span class="cm"> *     Dariusz Rumiński &lt;dariusz.ruminski@gmail.com&gt;</span>
+<span class="cm"> *</span>
+<span class="cm"> * This source file is subject to the MIT license that is bundled</span>
+<span class="cm"> * with this source code in the file LICENSE.</span>
+<span class="cm"> */</span>
+
+<span class="k">namespace</span> <span class="nx">PhpCsFixer\Tests\Fixer\Comment</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">PhpCsFixer\Tests\Fixer\AbstractFixerTestBase</span><span class="p">;</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * @author Your name &lt;your@email.com&gt;</span>
+<span class="sd"> *</span>
+<span class="sd"> * @internal</span>
+<span class="sd"> */</span>
+<span class="k">final</span> <span class="k">class</span> <span class="nc">RemoveCommentsFixerTest</span> <span class="k">extends</span> <span class="nx">AbstractFixerTestBase</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * @param string      $expected</span>
+<span class="sd">     * @param null|string $input</span>
+<span class="sd">     *</span>
+<span class="sd">     * @dataProvider provideFixCases</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">testFix</span><span class="p">(</span><span class="nv">$expected</span><span class="p">,</span> <span class="nv">$input</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">doTest</span><span class="p">(</span><span class="nv">$expected</span><span class="p">,</span> <span class="nv">$input</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">provideFixCases</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="p">[</span>
+               <span class="s1">&#39;&lt;?php echo &quot;This should be changed&quot;; &#39;</span><span class="p">,</span> <span class="c1">// This is expected output</span>
+               <span class="s1">&#39;&lt;?php echo &quot;This should be changed&quot;; /* Comment */&#39;</span><span class="p">,</span> <span class="c1">// This is input</span>
+            <span class="p">],</span>
+        <span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-3-implement-your-solution">
+<h3>Step 3 - Implement your solution<a class="headerlink" href="#step-3-implement-your-solution" title="Permalink to this headline">¶</a></h3>
+<p>You have defined the behavior of your fixer in tests. Now it is time to
+implement it.</p>
+<p>First, we need to create one method to describe what this fixer does:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span>// src/Fixer/Comment/RemoveCommentsFixer.php
+
+final class RemoveCommentsFixer extends AbstractFixer
+{
+    /**
+     * {@inheritdoc}
+     */
+    public function getDefinition()
+    {
+        return new FixerDefinition(
+            &#39;Removes all comments of the code that are preceded by &quot;;&quot; (semicolon).&#39;, // Trailing dot is important. We thrive to use English grammar properly.
+            [
+                new CodeSample(
+                    &#39;&lt;?php echo 123; /* Comment */&#39;
+                ),
+            ]
+        );
+    }
+}
+</pre></div>
+</div>
+<p>Next, we need to update the documentation.
+Fortunately, PHP CS Fixer can help you here.
+Execute the following command in your command shell:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> php dev-tools/doc.php
+</pre></div>
+</div>
+<p>Next, we must filter what type of tokens we want to fix. Here, we are interested in code that contains <code class="docutils literal notranslate"><span class="pre">T_COMMENT</span></code> tokens:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">// src/Fixer/Comment/RemoveCommentsFixer.php</span>
+
+<span class="x">final class RemoveCommentsFixer extends AbstractFixer</span>
+<span class="x">{</span>
+<span class="x">    // ...</span>
+
+<span class="x">    /**</span>
+<span class="x">     * {@inheritdoc}</span>
+<span class="x">     */</span>
+<span class="x">    public function isCandidate(Tokens $tokens)</span>
+<span class="x">    {</span>
+<span class="x">        return $tokens-&gt;isTokenKindFound(T_COMMENT);</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+<p>For now, let us just make a fixer that applies no modification:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">// src/Fixer/Comment/RemoveCommentsFixer.php</span>
+
+<span class="x">class RemoveCommentsFixer extends AbstractFixer</span>
+<span class="x">{</span>
+<span class="x">    // ...</span>
+
+<span class="x">    /**</span>
+<span class="x">     * {@inheritdoc}</span>
+<span class="x">     */</span>
+<span class="x">    protected function applyFix(\SplFileInfo $file, Tokens $tokens)</span>
+<span class="x">    {</span>
+<span class="x">        // no action</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+<p>Run <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">phpunit</span> <span class="pre">tests/Fixer/Comment/RemoveCommentsFixerTest.php</span></code>.
+You are going to see that the tests fail.</p>
+</div>
+<div class="section" id="break">
+<h3>Break<a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h3>
+<p>Now we have pretty much a cradle to work with. A file with a failing
+test, and the fixer, that for now does not do anything.</p>
+<p>How do fixers work? In the PHP CS Fixer, they work by iterating through
+pieces of codes (each being a Token), and inspecting what exists before
+and after that bit and making a decision, usually:</p>
+<ul class="simple">
+<li><p>Adding code.</p></li>
+<li><p>Modifying code.</p></li>
+<li><p>Deleting code.</p></li>
+<li><p>Ignoring code.</p></li>
+</ul>
+<p>In our case, we want to find all comments, and foreach (pun intended)
+one of them check if they are preceded by a semicolon symbol.</p>
+<p>Now you need to do some reading, because all these symbols obey a list
+defined by the PHP compiler. It is the <a class="reference external" href="https://php.net/manual/en/tokens.php">List of Parser Tokens</a>.</p>
+<p>Internally, PHP CS Fixer transforms some of PHP native tokens into custom
+tokens through the use of <a class="reference external" href="../src/Tokenizer/Transformer">Transformers</a>, they aim to help you reason about the
+changes you may want to do in the fixers.</p>
+<p>So we can get to move forward, humor me in believing that comments have
+one symbol name: <code class="docutils literal notranslate"><span class="pre">T_COMMENT</span></code>.</p>
+</div>
+<div class="section" id="step-3-implement-your-solution-continuation">
+<h3>Step 3 - Implement your solution - continuation.<a class="headerlink" href="#step-3-implement-your-solution-continuation" title="Permalink to this headline">¶</a></h3>
+<p>We do not want all symbols to be analysed. Only <code class="docutils literal notranslate"><span class="pre">T_COMMENT</span></code>. So let us
+iterate the token(s) we are interested in.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">// src/Fixer/Comment/RemoveCommentsFixer.php</span>
+
+<span class="x">final class RemoveCommentsFixer extends AbstractFixer</span>
+<span class="x">{</span>
+<span class="x">    // ...</span>
+
+<span class="x">    /**</span>
+<span class="x">     * {@inheritdoc}</span>
+<span class="x">     */</span>
+<span class="x">    protected function applyFix(\SplFileInfo $file, Tokens $tokens)</span>
+<span class="x">    {</span>
+<span class="x">        foreach ($tokens as $index =&gt; $token) {</span>
+<span class="x">            if (!$token-&gt;isGivenKind(T_COMMENT)) {</span>
+<span class="x">                continue;</span>
+<span class="x">            }</span>
+
+<span class="x">            // need to figure out what to do here!</span>
+<span class="x">        }</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+<p>OK, now for each <code class="docutils literal notranslate"><span class="pre">T_COMMENT</span></code>, all we need to do is check if the previous
+token is a semicolon.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">// src/Fixer/Comment/RemoveCommentsFixer.php</span>
+
+<span class="x">final class RemoveCommentsFixer extends AbstractFixer</span>
+<span class="x">{</span>
+<span class="x">    // ...</span>
+
+<span class="x">    /**</span>
+<span class="x">     * {@inheritdoc}</span>
+<span class="x">     */</span>
+<span class="x">    protected function applyFix(\SplFileInfo $file, Tokens $tokens)</span>
+<span class="x">    {</span>
+<span class="x">        foreach ($tokens as $index =&gt; $token) {</span>
+<span class="x">            if (!$token-&gt;isGivenKind(T_COMMENT)) {</span>
+<span class="x">                continue;</span>
+<span class="x">            }</span>
+
+<span class="x">            $prevTokenIndex = $tokens-&gt;getPrevMeaningfulToken($index);</span>
+<span class="x">            $prevToken = $tokens[$prevTokenIndex];</span>
+
+<span class="x">            if ($prevToken-&gt;equals(&#39;;&#39;)) {</span>
+<span class="x">                $tokens-&gt;clearAt($index);</span>
+<span class="x">            }</span>
+<span class="x">        }</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+<p>So the fixer in the end looks like this:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="cm">/*</span>
+<span class="cm"> * This file is part of PHP CS Fixer.</span>
+<span class="cm"> *</span>
+<span class="cm"> * (c) Fabien Potencier &lt;fabien@symfony.com&gt;</span>
+<span class="cm"> *     Dariusz Rumiński &lt;dariusz.ruminski@gmail.com&gt;</span>
+<span class="cm"> *</span>
+<span class="cm"> * This source file is subject to the MIT license that is bundled</span>
+<span class="cm"> * with this source code in the file LICENSE.</span>
+<span class="cm"> */</span>
+
+<span class="k">namespace</span> <span class="nx">PhpCsFixer\Fixer\Comment</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">PhpCsFixer\AbstractFixer</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">PhpCsFixer\Tokenizer\Tokens</span><span class="p">;</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * @author Your name &lt;your@email.com&gt;</span>
+<span class="sd"> */</span>
+<span class="k">final</span> <span class="k">class</span> <span class="nc">RemoveCommentsFixer</span> <span class="k">extends</span> <span class="nx">AbstractFixer</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * {@inheritdoc}</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getDefinition</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nx">FixerDefinition</span><span class="p">(</span>
+            <span class="s1">&#39;Removes all comments of the code that are preceded by &quot;;&quot; (semicolon).&#39;</span><span class="p">,</span> <span class="c1">// Trailing dot is important. We thrive to use English grammar properly.</span>
+            <span class="p">[</span>
+                <span class="k">new</span> <span class="nx">CodeSample</span><span class="p">(</span>
+                    <span class="s1">&#39;&lt;?php echo 123; /* Comment */&#39;</span>
+                <span class="p">),</span>
+            <span class="p">]</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * {@inheritdoc}</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">isCandidate</span><span class="p">(</span><span class="nx">Tokens</span> <span class="nv">$tokens</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$tokens</span><span class="o">-&gt;</span><span class="na">isTokenKindFound</span><span class="p">(</span><span class="nx">T_COMMENT</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * {@inheritdoc}</span>
+<span class="sd">     */</span>
+    <span class="k">protected</span> <span class="k">function</span> <span class="nf">applyFix</span><span class="p">(</span><span class="nx">\SplFileInfo</span> <span class="nv">$file</span><span class="p">,</span> <span class="nx">Tokens</span> <span class="nv">$tokens</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">foreach</span><span class="p">(</span><span class="nv">$tokens</span> <span class="k">as</span> <span class="nv">$index</span> <span class="o">=&gt;</span> <span class="nv">$token</span><span class="p">){</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$token</span><span class="o">-&gt;</span><span class="na">isGivenKind</span><span class="p">(</span><span class="nx">T_COMMENT</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">continue</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="nv">$prevTokenIndex</span> <span class="o">=</span> <span class="nv">$tokens</span><span class="o">-&gt;</span><span class="na">getPrevMeaningfulToken</span><span class="p">(</span><span class="nv">$index</span><span class="p">);</span>
+            <span class="nv">$prevToken</span> <span class="o">=</span> <span class="nv">$tokens</span><span class="p">[</span><span class="nv">$prevTokenIndex</span><span class="p">];</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$prevToken</span><span class="o">-&gt;</span><span class="na">equals</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">))</span> <span class="p">{</span>
+                <span class="nv">$tokens</span><span class="o">-&gt;</span><span class="na">clearAt</span><span class="p">(</span><span class="nv">$index</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-4-format-commit-pr">
+<h3>Step 4 - Format, Commit, PR.<a class="headerlink" href="#step-4-format-commit-pr" title="Permalink to this headline">¶</a></h3>
+<p>Note that so far, we have not coded adhering to PSR-1/2. This is done on
+purpose. For every commit you make, you must use PHP CS Fixer to fix
+itself. Thus, on the command line call:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> php php-cs-fixer fix
+</pre></div>
+</div>
+<p>This will fix all the coding style mistakes.</p>
+<p>After the final CS fix, you are ready to commit. Do it.</p>
+<p>Now, go to GitHub and open a Pull Request.</p>
+</div>
+<div class="section" id="step-5-peer-review-it-is-all-about-code-and-community-building">
+<h3>Step 5 - Peer review: it is all about code and community building.<a class="headerlink" href="#step-5-peer-review-it-is-all-about-code-and-community-building" title="Permalink to this headline">¶</a></h3>
+<p>Congratulations, you have made your first fixer. Be proud. Your work
+will be reviewed carefully by PHP CS Fixer community.</p>
+<p>The review usually flows like this:</p>
+<ol class="arabic simple">
+<li><p>People will check your code for common mistakes and logical
+caveats. Usually, the person building a fixer is blind about some
+behavior mistakes of fixers. Expect to write few more tests to cater for
+the reviews.</p></li>
+<li><p>People will discuss the relevance of your fixer. If it is
+something that goes along with Symfony style standards, or PSR-1/PSR-2
+standards, they will ask you to add it to existing ruleset.</p></li>
+<li><p>People will also discuss whether your fixer is idempotent or not.
+If they understand that your fixer must always run before or after a
+certain fixer, they will ask you to override a method named
+<code class="docutils literal notranslate"><span class="pre">getPriority()</span></code>. Do not be afraid of asking the reviewer for help on how
+to do it.</p></li>
+<li><p>People may ask you to rebase your code to unify commits or to get
+rid of merge commits.</p></li>
+<li><p>Go to 1 until no actions are needed anymore.</p></li>
+</ol>
+<p>Your fixer will be incorporated in the next release.</p>
+<p>Congratulations! You have done it.</p>
+</div>
+</div>
+<div class="section" id="q-a">
+<h2>Q&amp;A<a class="headerlink" href="#q-a" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>Why is not my PR merged yet?</dt><dd><p>PHP CS Fixer is used by many people, that expect it to be stable. So
+sometimes, few PR are delayed a bit so to avoid cluttering at &#64;dev
+channel on composer.</p>
+<p>Other possibility is that reviewers are giving time to other members of
+PHP CS Fixer community to partake on the review debates of your fixer.</p>
+<p>In any case, we care a lot about what you do and we want to see it being
+part of the application as soon as possible.</p>
+</dd>
+<dt>Why am I asked to use <code class="docutils literal notranslate"><span class="pre">getPrevMeaningfulToken()</span></code> instead of <code class="docutils literal notranslate"><span class="pre">getPrevNonWhitespace()</span></code>?</dt><dd><p>The main difference is that <code class="docutils literal notranslate"><span class="pre">getPrevNonWhitespace()</span></code> ignores only
+whitespaces (<code class="docutils literal notranslate"><span class="pre">T_WHITESPACE</span></code>), while <code class="docutils literal notranslate"><span class="pre">getPrevMeaningfulToken()</span></code> ignores
+whitespaces and comments. And usually that is what you want. For
+example:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">$a-&gt;/*comment*/func();</span>
+</pre></div>
+</div>
+<p>If you are inspecting <code class="docutils literal notranslate"><span class="pre">func()</span></code>, and you want to check whether this is
+part of an object, if you use <code class="docutils literal notranslate"><span class="pre">getPrevNonWhitespace()</span></code> you are going to
+get <code class="docutils literal notranslate"><span class="pre">/*comment*/</span></code>, which might belie your test. On the other hand, if
+you use <code class="docutils literal notranslate"><span class="pre">getPrevMeaningfulToken()</span></code>, no matter if you have got a comment
+or a whitespace, the returned token will always be <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="ft">
+        <div class="content">
+          The <a href="../_static/images/logo.png">logo</a> is &copy; 2010-2022 Sensio Labs
+        </div>
+      </div>
+  </body>
+</html>

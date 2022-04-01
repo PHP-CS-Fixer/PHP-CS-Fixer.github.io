@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index, follow, all" />
+    <meta name="Language" content="en" />
+    <meta name="Description" content="PHP Coding Standards Fixer" />
+    <meta name="Keywords" content="php, coding standards" />
+    
+      <title>PHP Coding Standards Fixer</title>
+    
+  <link href="../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
+  <link href="../../_static/css/base.css" rel="stylesheet" type="text/css" />
+  <link href="../../_static/css/code.css" rel="stylesheet" type="text/css" />
+  <link href="../../_static/css/colors.css" rel="stylesheet" type="text/css" />
+  <link href="../../_static/pygments.css" rel="stylesheet" type="text/css" />
+    
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32006827-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script> 
+  </head>
+  <body>
+      <div class="hd">
+        <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+
+        <div class="illustration png_fix">
+          <div class="content">
+            <div class="sensio_product">
+              <img class="png_fix" src="../../_static/images/sensio-labs-product.png" alt="a Sensio Labs Product" />
+            </div>
+            <div class="clearfix">
+              <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
+              <h1 class="title_header">
+                <strong>BerSzcz against war! (v3.8.0)</strong> edition
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="bd">
+        <div class="content">
+          <div class="links_intro">
+            <ul>
+              <li>
+                <a href="./download/php-cs-fixer-v3.phar"><img class="install_now png_fix" src="../../_static/images/install_now.png" alt="Install now" /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="more_intro">
+            
+  <div class="section" id="rule-set-phpcsfixer">
+<h1>Rule set <code class="docutils literal notranslate"><span class="pre">&#64;PhpCsFixer</span></code><a class="headerlink" href="#rule-set-phpcsfixer" title="Permalink to this headline">¶</a></h1>
+<p>Rule set as used by the PHP-CS-Fixer development team, highly opinionated.</p>
+<div class="section" id="rules">
+<h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/phpdoc/align_multiline_comment.html"><span class="doc">align_multiline_comment</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/whitespace/array_indentation.html"><span class="doc">array_indentation</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/whitespace/blank_line_before_statement.html"><span class="doc">blank_line_before_statement</span></a>
+config:
+<code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['break',</span> <span class="pre">'case',</span> <span class="pre">'continue',</span> <span class="pre">'declare',</span> <span class="pre">'default',</span> <span class="pre">'exit',</span> <span class="pre">'goto',</span> <span class="pre">'include',</span> <span class="pre">'include_once',</span> <span class="pre">'phpdoc',</span> <span class="pre">'require',</span> <span class="pre">'require_once',</span> <span class="pre">'return',</span> <span class="pre">'switch',</span> <span class="pre">'throw',</span> <span class="pre">'try',</span> <span class="pre">'yield']]</span></code></p></li>
+<li><p><a class="reference internal" href="../rules/language_construct/combine_consecutive_issets.html"><span class="doc">combine_consecutive_issets</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/language_construct/combine_consecutive_unsets.html"><span class="doc">combine_consecutive_unsets</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/control_structure/empty_loop_body.html"><span class="doc">empty_loop_body</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/string_notation/escape_implicit_backslashes.html"><span class="doc">escape_implicit_backslashes</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/language_construct/explicit_indirect_variable.html"><span class="doc">explicit_indirect_variable</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/string_notation/explicit_string_variable.html"><span class="doc">explicit_string_variable</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/string_notation/heredoc_to_nowdoc.html"><span class="doc">heredoc_to_nowdoc</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/function_notation/method_argument_space.html"><span class="doc">method_argument_space</span></a>
+config:
+<code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline']</span></code></p></li>
+<li><p><a class="reference internal" href="../rules/whitespace/method_chaining_indentation.html"><span class="doc">method_chaining_indentation</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/comment/multiline_comment_opening_closing.html"><span class="doc">multiline_comment_opening_closing</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/semicolon/multiline_whitespace_before_semicolons.html"><span class="doc">multiline_whitespace_before_semicolons</span></a>
+config:
+<code class="docutils literal notranslate"><span class="pre">['strategy'</span> <span class="pre">=&gt;</span> <span class="pre">'new_line_for_chained_calls']</span></code></p></li>
+<li><p><a class="reference internal" href="../rules/whitespace/no_extra_blank_lines.html"><span class="doc">no_extra_blank_lines</span></a>
+config:
+<code class="docutils literal notranslate"><span class="pre">['tokens'</span> <span class="pre">=&gt;</span> <span class="pre">['break',</span> <span class="pre">'case',</span> <span class="pre">'continue',</span> <span class="pre">'curly_brace_block',</span> <span class="pre">'default',</span> <span class="pre">'extra',</span> <span class="pre">'parenthesis_brace_block',</span> <span class="pre">'return',</span> <span class="pre">'square_brace_block',</span> <span class="pre">'switch',</span> <span class="pre">'throw',</span> <span class="pre">'use']]</span></code></p></li>
+<li><p><a class="reference internal" href="../rules/class_notation/no_null_property_initialization.html"><span class="doc">no_null_property_initialization</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/control_structure/no_superfluous_elseif.html"><span class="doc">no_superfluous_elseif</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/control_structure/no_useless_else.html"><span class="doc">no_useless_else</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/return_notation/no_useless_return.html"><span class="doc">no_useless_return</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/operator/operator_linebreak.html"><span class="doc">operator_linebreak</span></a>
+config:
+<code class="docutils literal notranslate"><span class="pre">['only_booleans'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p></li>
+<li><p><a class="reference internal" href="../rules/class_notation/ordered_class_elements.html"><span class="doc">ordered_class_elements</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/php_unit/php_unit_internal_class.html"><span class="doc">php_unit_internal_class</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/php_unit/php_unit_test_class_requires_covers.html"><span class="doc">php_unit_test_class_requires_covers</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/phpdoc/phpdoc_add_missing_param_annotation.html"><span class="doc">phpdoc_add_missing_param_annotation</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/phpdoc/phpdoc_no_empty_return.html"><span class="doc">phpdoc_no_empty_return</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/phpdoc/phpdoc_order.html"><span class="doc">phpdoc_order</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/phpdoc/phpdoc_order_by_value.html"><span class="doc">phpdoc_order_by_value</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/phpdoc/phpdoc_types_order.html"><span class="doc">phpdoc_types_order</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/phpdoc/phpdoc_var_annotation_correct_order.html"><span class="doc">phpdoc_var_annotation_correct_order</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/return_notation/return_assignment.html"><span class="doc">return_assignment</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/string_notation/simple_to_complex_string_variable.html"><span class="doc">simple_to_complex_string_variable</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/comment/single_line_comment_style.html"><span class="doc">single_line_comment_style</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/function_notation/single_line_throw.html"><span class="doc">single_line_throw</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="ft">
+        <div class="content">
+          The <a href="../../_static/images/logo.png">logo</a> is &copy; 2010-2022 Sensio Labs
+        </div>
+      </div>
+  </body>
+</html>

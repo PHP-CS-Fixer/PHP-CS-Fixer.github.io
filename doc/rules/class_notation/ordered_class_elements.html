@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index, follow, all" />
+    <meta name="Language" content="en" />
+    <meta name="Description" content="PHP Coding Standards Fixer" />
+    <meta name="Keywords" content="php, coding standards" />
+    
+      <title>PHP Coding Standards Fixer</title>
+    
+  <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
+  <link href="../../../_static/css/base.css" rel="stylesheet" type="text/css" />
+  <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css" />
+  <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css" />
+  <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css" />
+    
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32006827-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script> 
+  </head>
+  <body>
+      <div class="hd">
+        <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+
+        <div class="illustration png_fix">
+          <div class="content">
+            <div class="sensio_product">
+              <img class="png_fix" src="../../../_static/images/sensio-labs-product.png" alt="a Sensio Labs Product" />
+            </div>
+            <div class="clearfix">
+              <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
+              <h1 class="title_header">
+                <strong>BerSzcz against war! (v3.8.0)</strong> edition
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="bd">
+        <div class="content">
+          <div class="links_intro">
+            <ul>
+              <li>
+                <a href="./download/php-cs-fixer-v3.phar"><img class="install_now png_fix" src="../../../_static/images/install_now.png" alt="Install now" /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="more_intro">
+            
+  <div class="section" id="rule-ordered-class-elements">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">ordered_class_elements</span></code><a class="headerlink" href="#rule-ordered-class-elements" title="Permalink to this headline">¶</a></h1>
+<p>Orders the elements of classes/interfaces/traits/enums.</p>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="order">
+<h3><code class="docutils literal notranslate"><span class="pre">order</span></code><a class="headerlink" href="#order" title="Permalink to this headline">¶</a></h3>
+<p>List of strings defining order of elements.</p>
+<p>Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['use_trait',</span> <span class="pre">'public',</span> <span class="pre">'protected',</span> <span class="pre">'private',</span> <span class="pre">'case',</span> <span class="pre">'constant',</span> <span class="pre">'constant_public',</span> <span class="pre">'constant_protected',</span> <span class="pre">'constant_private',</span> <span class="pre">'property',</span> <span class="pre">'property_static',</span> <span class="pre">'property_public',</span> <span class="pre">'property_protected',</span> <span class="pre">'property_private',</span> <span class="pre">'property_public_readonly',</span> <span class="pre">'property_protected_readonly',</span> <span class="pre">'property_private_readonly',</span> <span class="pre">'property_public_static',</span> <span class="pre">'property_protected_static',</span> <span class="pre">'property_private_static',</span> <span class="pre">'method',</span> <span class="pre">'method_abstract',</span> <span class="pre">'method_static',</span> <span class="pre">'method_public',</span> <span class="pre">'method_protected',</span> <span class="pre">'method_private',</span> <span class="pre">'method_public_abstract',</span> <span class="pre">'method_protected_abstract',</span> <span class="pre">'method_private_abstract',</span> <span class="pre">'method_public_abstract_static',</span> <span class="pre">'method_protected_abstract_static',</span> <span class="pre">'method_private_abstract_static',</span> <span class="pre">'method_public_static',</span> <span class="pre">'method_protected_static',</span> <span class="pre">'method_private_static',</span> <span class="pre">'construct',</span> <span class="pre">'destruct',</span> <span class="pre">'magic',</span> <span class="pre">'phpunit']</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">['use_trait',</span> <span class="pre">'case',</span> <span class="pre">'constant_public',</span> <span class="pre">'constant_protected',</span> <span class="pre">'constant_private',</span> <span class="pre">'property_public',</span> <span class="pre">'property_protected',</span> <span class="pre">'property_private',</span> <span class="pre">'construct',</span> <span class="pre">'destruct',</span> <span class="pre">'magic',</span> <span class="pre">'phpunit',</span> <span class="pre">'method_public',</span> <span class="pre">'method_protected',</span> <span class="pre">'method_private']</span></code></p>
+</div>
+<div class="section" id="sort-algorithm">
+<h3><code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code><a class="headerlink" href="#sort-algorithm" title="Permalink to this headline">¶</a></h3>
+<p>How multiple occurrences of same type statements should be sorted</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code>, <code class="docutils literal notranslate"><span class="pre">'none'</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'none'</span></code></p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-1">
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p><em>Default</em> configuration.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+ &lt;?php
+ final class Example
+ {
+     use BarTrait;
+     use BazTrait;
+     const C1 = 1;
+     const C2 = 2;
+<span class="gd">-    protected static $protStatProp;</span>
+     public static $pubStatProp1;
+     public $pubProp1;
+<span class="gi">+    var $pubProp2;</span>
+<span class="gi">+    public static $pubStatProp2;</span>
+<span class="gi">+    public $pubProp3;</span>
+<span class="gi">+    protected static $protStatProp;</span>
+     protected $protProp;
+<span class="gd">-    var $pubProp2;</span>
+     private static $privStatProp;
+     private $privProp;
+<span class="gd">-    public static $pubStatProp2;</span>
+<span class="gd">-    public $pubProp3;</span>
+     protected function __construct() {}
+<span class="gd">-    private static function privStatFunc() {}</span>
+<span class="gi">+    public function __destruct() {}</span>
+<span class="gi">+    public function __toString() {}</span>
+     public function pubFunc1() {}
+<span class="gd">-    public function __toString() {}</span>
+<span class="gd">-    protected function protFunc() {}</span>
+     function pubFunc2() {}
+     public static function pubStatFunc1() {}
+     public function pubFunc3() {}
+     static function pubStatFunc2() {}
+<span class="gd">-    private function privFunc() {}</span>
+     public static function pubStatFunc3() {}
+<span class="gi">+    protected function protFunc() {}</span>
+     protected static function protStatFunc() {}
+<span class="gd">-    public function __destruct() {}</span>
+<span class="gi">+    private static function privStatFunc() {}</span>
+<span class="gi">+    private function privFunc() {}</span>
+ }
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-2">
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['method_private',</span> <span class="pre">'method_public']]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+ &lt;?php
+ class Example
+ {
+<span class="gi">+    private function B(){}</span>
+     public function A(){}
+<span class="gd">-    private function B(){}</span>
+ }
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['method_public'],</span> <span class="pre">'sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'alpha']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+ &lt;?php
+ class Example
+ {
+<span class="gd">-    public function D(){}</span>
+<span class="gi">+    public function A(){}</span>
+     public function B(){}
+<span class="gd">-    public function A(){}</span>
+     public function C(){}
+<span class="gi">+    public function D(){}</span>
+ }
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="rule-sets">
+<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
+<p>The rule is part of the following rule sets:</p>
+<dl>
+<dt>&#64;PSR12</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">ordered_class_elements</span></code> rule with the config below:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['use_trait']]</span></code></p>
+</dd>
+<dt>&#64;PhpCsFixer</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">ordered_class_elements</span></code> rule with the default config.</p>
+</dd>
+<dt>&#64;Symfony</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">ordered_class_elements</span></code> rule with the config below:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['use_trait']]</span></code></p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="ft">
+        <div class="content">
+          The <a href="../../../_static/images/logo.png">logo</a> is &copy; 2010-2022 Sensio Labs
+        </div>
+      </div>
+  </body>
+</html>

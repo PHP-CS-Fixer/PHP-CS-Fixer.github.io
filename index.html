@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index, follow, all" />
+    <meta name="Language" content="en" />
+    <meta name="Description" content="PHP Coding Standards Fixer" />
+    <meta name="Keywords" content="php, coding standards" />
+    
+      <title>PHP Coding Standards Fixer</title>
+    
+  <link href="_static/css/reset-min.css" rel="stylesheet" type="text/css" />
+  <link href="_static/css/base.css" rel="stylesheet" type="text/css" />
+  <link href="_static/css/code.css" rel="stylesheet" type="text/css" />
+  <link href="_static/css/colors.css" rel="stylesheet" type="text/css" />
+  <link href="_static/pygments.css" rel="stylesheet" type="text/css" />
+    
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32006827-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script> 
+  </head>
+  <body>
+      <div class="hd">
+        <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+
+        <div class="illustration png_fix">
+          <div class="content">
+            <div class="sensio_product">
+              <img class="png_fix" src="_static/images/sensio-labs-product.png" alt="a Sensio Labs Product" />
+            </div>
+            <div class="clearfix">
+              <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
+              <h1 class="title_header">
+                <strong>BerSzcz against war! (v3.8.0)</strong> edition
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="bd">
+        <div class="content">
+          <div class="links_intro">
+            <ul>
+              <li>
+                <a href="./download/php-cs-fixer-v3.phar"><img class="install_now png_fix" src="_static/images/install_now.png" alt="Install now" /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="more_intro">
+            
+  <div class="section" id="php-coding-standards-fixer">
+<h1>PHP Coding Standards Fixer<a class="headerlink" href="#php-coding-standards-fixer" title="Permalink to this headline">¶</a></h1>
+<p>The PHP Coding Standards Fixer (PHP CS Fixer) tool fixes your code to
+follow standards; whether you want to follow PHP coding standards as defined in the
+PSR-1, PSR-2, etc., or other community driven ones like the Symfony one.
+You can <strong>also</strong> define your (team’s) style through configuration.</p>
+<p>It can modernize your code (like converting the <code class="docutils literal notranslate"><span class="pre">pow</span></code> function to
+the <code class="docutils literal notranslate"><span class="pre">**</span></code> operator on PHP 5.6) and (micro) optimize it.</p>
+<p>If you are already using a linter to identify coding standards
+problems in your code, you know that fixing them by hand is tedious, especially on
+large projects. This tool does not only detect them, but also fixes them for
+you.</p>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h3>
+<p>The recommended way to install PHP CS Fixer is to use
+<a class="reference external" href="https://getcomposer.org/download/">Composer</a> in a dedicated <code class="docutils literal notranslate"><span class="pre">composer.json</span></code> file in your project, for example in
+the <code class="docutils literal notranslate"><span class="pre">tools/php-cs-fixer</span></code> directory:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> mkdir --parents tools/php-cs-fixer
+<span class="gp">$</span> composer require --working-dir<span class="o">=</span>tools/php-cs-fixer friendsofphp/php-cs-fixer
+</pre></div>
+</div>
+<p>For more details and other installation methods, see <a class="reference internal" href="doc/installation.html"><span class="doc">installation instructions</span></a>.</p>
+</div>
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<p>Assuming you installed PHP CS Fixer as instructed above, you can run
+the following command to fix the files PHP files in the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src
+</pre></div>
+</div>
+<p>See <a class="reference internal" href="doc/usage.html"><span class="doc">usage</span></a>, list of <a class="reference internal" href="doc/rules/index.html"><span class="doc">built-in rules</span></a>, list of <a class="reference internal" href="doc/ruleSets/index.html"><span class="doc">rule sets</span></a> and <a class="reference internal" href="doc/config.html"><span class="doc">configuration file</span></a> documentation for more
+details.</p>
+<p>If you need to apply code styles that are not supported by the tool, you can <a class="reference internal" href="doc/custom_rules.html"><span class="doc">create custom rules</span></a>.</p>
+</div>
+</div>
+<div class="section" id="editor-integration">
+<h2>Editor Integration<a class="headerlink" href="#editor-integration" title="Permalink to this headline">¶</a></h2>
+<p>Dedicated plugins exist for:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/Glavin001/atom-beautify">Atom</a></p></li>
+<li><p><a class="reference external" href="http://plugins.netbeans.org/plugin/49042/php-cs-fixer">NetBeans</a></p></li>
+<li><p><a class="reference external" href="https://medium.com/&#64;valeryan/how-to-configure-phpstorm-to-use-php-cs-fixer-1844991e521f">PhpStorm</a></p></li>
+<li><p><a class="reference external" href="https://github.com/benmatselby/sublime-phpcs">Sublime Text</a></p></li>
+<li><p><a class="reference external" href="https://github.com/stephpy/vim-php-cs-fixer">Vim</a></p></li>
+<li><p><a class="reference external" href="https://github.com/junstyle/vscode-php-cs-fixer">VS Code</a></p></li>
+</ul>
+</div>
+<div class="section" id="community">
+<h2>Community<a class="headerlink" href="#community" title="Permalink to this headline">¶</a></h2>
+<p>The PHP CS Fixer is maintained on GitHub at
+<a class="reference external" href="https://github.com/FriendsOfPHP/PHP-CS-Fixer">https://github.com/FriendsOfPHP/PHP-CS-Fixer</a>.
+Bug reports and ideas about new features are welcome there.</p>
+<p>You can reach us at <a class="reference external" href="https://gitter.im/PHP-CS-Fixer/Lobby">https://gitter.im/PHP-CS-Fixer/Lobby</a> about the
+project, configuration, possible improvements, ideas and questions, please
+visit us!</p>
+</div>
+<div class="section" id="who-is-behind-the-php-coding-standards-fixer">
+<h2>Who is behind the PHP Coding Standards Fixer?<a class="headerlink" href="#who-is-behind-the-php-coding-standards-fixer" title="Permalink to this headline">¶</a></h2>
+<p>The PHP Coding Standards Fixer is brought to you by <a class="reference external" href="http://fabien.potencier.org/">Fabien Potencier</a>, the creator of the Symfony framework, and <a class="reference external" href="https://github.com/keradus">Dariusz Rumiński</a>. It is released under the <a class="reference external" href="https://raw.github.com/FriendsOfPHP/PHP-CS-Fixer/master/LICENSE">MIT license</a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="ft">
+        <div class="content">
+          The <a href="_static/images/logo.png">logo</a> is &copy; 2010-2022 Sensio Labs
+        </div>
+      </div>
+  </body>
+</html>

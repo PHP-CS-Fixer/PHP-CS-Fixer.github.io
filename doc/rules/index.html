@@ -1,0 +1,945 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index, follow, all" />
+    <meta name="Language" content="en" />
+    <meta name="Description" content="PHP Coding Standards Fixer" />
+    <meta name="Keywords" content="php, coding standards" />
+    
+      <title>PHP Coding Standards Fixer</title>
+    
+  <link href="../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
+  <link href="../../_static/css/base.css" rel="stylesheet" type="text/css" />
+  <link href="../../_static/css/code.css" rel="stylesheet" type="text/css" />
+  <link href="../../_static/css/colors.css" rel="stylesheet" type="text/css" />
+  <link href="../../_static/pygments.css" rel="stylesheet" type="text/css" />
+    
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32006827-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script> 
+  </head>
+  <body>
+      <div class="hd">
+        <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+
+        <div class="illustration png_fix">
+          <div class="content">
+            <div class="sensio_product">
+              <img class="png_fix" src="../../_static/images/sensio-labs-product.png" alt="a Sensio Labs Product" />
+            </div>
+            <div class="clearfix">
+              <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
+              <h1 class="title_header">
+                <strong>BerSzcz against war! (v3.8.0)</strong> edition
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="bd">
+        <div class="content">
+          <div class="links_intro">
+            <ul>
+              <li>
+                <a href="./download/php-cs-fixer-v3.phar"><img class="install_now png_fix" src="../../_static/images/install_now.png" alt="Install now" /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="more_intro">
+            
+  <div class="section" id="list-of-available-rules">
+<h1>List of Available Rules<a class="headerlink" href="#list-of-available-rules" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="alias">
+<h2>Alias<a class="headerlink" href="#alias" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="alias/array_push.html"><span class="doc">array_push</span></a> <em>(risky)</em></p>
+<p>Converts simple usages of <code class="docutils literal notranslate"><span class="pre">array_push($x,</span> <span class="pre">$y);</span></code> to <code class="docutils literal notranslate"><span class="pre">$x[]</span> <span class="pre">=</span> <span class="pre">$y;</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="alias/backtick_to_shell_exec.html"><span class="doc">backtick_to_shell_exec</span></a></p>
+<p>Converts backtick operators to <code class="docutils literal notranslate"><span class="pre">shell_exec</span></code> calls.</p>
+</li>
+<li><p><a class="reference internal" href="alias/ereg_to_preg.html"><span class="doc">ereg_to_preg</span></a> <em>(risky)</em></p>
+<p>Replace deprecated <code class="docutils literal notranslate"><span class="pre">ereg</span></code> regular expression functions with <code class="docutils literal notranslate"><span class="pre">preg</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="alias/mb_str_functions.html"><span class="doc">mb_str_functions</span></a> <em>(risky)</em></p>
+<p>Replace non multibyte-safe functions with corresponding mb function.</p>
+</li>
+<li><p><a class="reference internal" href="alias/modernize_strpos.html"><span class="doc">modernize_strpos</span></a> <em>(risky)</em></p>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">strpos()</span></code> calls with <code class="docutils literal notranslate"><span class="pre">str_starts_with()</span></code> or <code class="docutils literal notranslate"><span class="pre">str_contains()</span></code> if possible.</p>
+</li>
+<li><p><a class="reference internal" href="alias/no_alias_functions.html"><span class="doc">no_alias_functions</span></a> <em>(risky)</em></p>
+<p>Master functions shall be used instead of aliases.</p>
+</li>
+<li><p><a class="reference internal" href="alias/no_alias_language_construct_call.html"><span class="doc">no_alias_language_construct_call</span></a></p>
+<p>Master language constructs shall be used instead of aliases.</p>
+</li>
+<li><p><a class="reference internal" href="alias/no_mixed_echo_print.html"><span class="doc">no_mixed_echo_print</span></a></p>
+<p>Either language construct <code class="docutils literal notranslate"><span class="pre">print</span></code> or <code class="docutils literal notranslate"><span class="pre">echo</span></code> should be used.</p>
+</li>
+<li><p><a class="reference internal" href="alias/pow_to_exponentiation.html"><span class="doc">pow_to_exponentiation</span></a> <em>(risky)</em></p>
+<p>Converts <code class="docutils literal notranslate"><span class="pre">pow</span></code> to the <code class="docutils literal notranslate"><span class="pre">**</span></code> operator.</p>
+</li>
+<li><p><a class="reference internal" href="alias/random_api_migration.html"><span class="doc">random_api_migration</span></a> <em>(risky)</em></p>
+<p>Replaces <code class="docutils literal notranslate"><span class="pre">rand</span></code>, <code class="docutils literal notranslate"><span class="pre">srand</span></code>, <code class="docutils literal notranslate"><span class="pre">getrandmax</span></code> functions calls with their <code class="docutils literal notranslate"><span class="pre">mt_*</span></code> analogs or <code class="docutils literal notranslate"><span class="pre">random_int</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="alias/set_type_to_cast.html"><span class="doc">set_type_to_cast</span></a> <em>(risky)</em></p>
+<p>Cast shall be used, not <code class="docutils literal notranslate"><span class="pre">settype</span></code>.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="array-notation">
+<h2>Array Notation<a class="headerlink" href="#array-notation" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="array_notation/array_syntax.html"><span class="doc">array_syntax</span></a></p>
+<p>PHP arrays should be declared using the configured syntax.</p>
+</li>
+<li><p><a class="reference internal" href="array_notation/no_multiline_whitespace_around_double_arrow.html"><span class="doc">no_multiline_whitespace_around_double_arrow</span></a></p>
+<p>Operator <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code> should not be surrounded by multi-line whitespaces.</p>
+</li>
+<li><p><a class="reference internal" href="array_notation/no_trailing_comma_in_singleline_array.html"><span class="doc">no_trailing_comma_in_singleline_array</span></a></p>
+<p>PHP single-line arrays should not have trailing comma.</p>
+</li>
+<li><p><a class="reference internal" href="array_notation/no_whitespace_before_comma_in_array.html"><span class="doc">no_whitespace_before_comma_in_array</span></a></p>
+<p>In array declaration, there MUST NOT be a whitespace before each comma.</p>
+</li>
+<li><p><a class="reference internal" href="array_notation/normalize_index_brace.html"><span class="doc">normalize_index_brace</span></a></p>
+<p>Array index should always be written by using square braces.</p>
+</li>
+<li><p><a class="reference internal" href="array_notation/trim_array_spaces.html"><span class="doc">trim_array_spaces</span></a></p>
+<p>Arrays should be formatted like function/method arguments, without leading or trailing single line space.</p>
+</li>
+<li><p><a class="reference internal" href="array_notation/whitespace_after_comma_in_array.html"><span class="doc">whitespace_after_comma_in_array</span></a></p>
+<p>In array declaration, there MUST be a whitespace after each comma.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="basic">
+<h2>Basic<a class="headerlink" href="#basic" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="basic/braces.html"><span class="doc">braces</span></a></p>
+<p>The body of each structure MUST be enclosed by braces. Braces should be properly placed. Body of braces should be properly indented.</p>
+</li>
+<li><p><a class="reference internal" href="basic/encoding.html"><span class="doc">encoding</span></a></p>
+<p>PHP code MUST use only UTF-8 without BOM (remove BOM).</p>
+</li>
+<li><p><a class="reference internal" href="basic/non_printable_character.html"><span class="doc">non_printable_character</span></a> <em>(risky)</em></p>
+<p>Remove Zero-width space (ZWSP), Non-breaking space (NBSP) and other invisible unicode symbols.</p>
+</li>
+<li><p><a class="reference internal" href="basic/octal_notation.html"><span class="doc">octal_notation</span></a></p>
+<p>Literal octal must be in <code class="docutils literal notranslate"><span class="pre">0o</span></code> notation.</p>
+</li>
+<li><p><a class="reference internal" href="basic/psr_autoloading.html"><span class="doc">psr_autoloading</span></a> <em>(risky)</em></p>
+<p>Classes must be in a path that matches their namespace, be at least one namespace deep and the class name should match the file name.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="casing">
+<h2>Casing<a class="headerlink" href="#casing" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="casing/class_reference_name_casing.html"><span class="doc">class_reference_name_casing</span></a></p>
+<p>When referencing an internal class it must be written using the correct casing.</p>
+</li>
+<li><p><a class="reference internal" href="casing/constant_case.html"><span class="doc">constant_case</span></a></p>
+<p>The PHP constants <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>, and <code class="docutils literal notranslate"><span class="pre">null</span></code> MUST be written using the correct casing.</p>
+</li>
+<li><p><a class="reference internal" href="casing/integer_literal_case.html"><span class="doc">integer_literal_case</span></a></p>
+<p>Integer literals must be in correct case.</p>
+</li>
+<li><p><a class="reference internal" href="casing/lowercase_keywords.html"><span class="doc">lowercase_keywords</span></a></p>
+<p>PHP keywords MUST be in lower case.</p>
+</li>
+<li><p><a class="reference internal" href="casing/lowercase_static_reference.html"><span class="doc">lowercase_static_reference</span></a></p>
+<p>Class static references <code class="docutils literal notranslate"><span class="pre">self</span></code>, <code class="docutils literal notranslate"><span class="pre">static</span></code> and <code class="docutils literal notranslate"><span class="pre">parent</span></code> MUST be in lower case.</p>
+</li>
+<li><p><a class="reference internal" href="casing/magic_constant_casing.html"><span class="doc">magic_constant_casing</span></a></p>
+<p>Magic constants should be referred to using the correct casing.</p>
+</li>
+<li><p><a class="reference internal" href="casing/magic_method_casing.html"><span class="doc">magic_method_casing</span></a></p>
+<p>Magic method definitions and calls must be using the correct casing.</p>
+</li>
+<li><p><a class="reference internal" href="casing/native_function_casing.html"><span class="doc">native_function_casing</span></a></p>
+<p>Function defined by PHP should be called using the correct casing.</p>
+</li>
+<li><p><a class="reference internal" href="casing/native_function_type_declaration_casing.html"><span class="doc">native_function_type_declaration_casing</span></a></p>
+<p>Native type hints for functions should use the correct case.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="cast-notation">
+<h2>Cast Notation<a class="headerlink" href="#cast-notation" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="cast_notation/cast_spaces.html"><span class="doc">cast_spaces</span></a></p>
+<p>A single space or none should be between cast and variable.</p>
+</li>
+<li><p><a class="reference internal" href="cast_notation/lowercase_cast.html"><span class="doc">lowercase_cast</span></a></p>
+<p>Cast should be written in lower case.</p>
+</li>
+<li><p><a class="reference internal" href="cast_notation/modernize_types_casting.html"><span class="doc">modernize_types_casting</span></a> <em>(risky)</em></p>
+<p>Replaces <code class="docutils literal notranslate"><span class="pre">intval</span></code>, <code class="docutils literal notranslate"><span class="pre">floatval</span></code>, <code class="docutils literal notranslate"><span class="pre">doubleval</span></code>, <code class="docutils literal notranslate"><span class="pre">strval</span></code> and <code class="docutils literal notranslate"><span class="pre">boolval</span></code> function calls with according type casting operator.</p>
+</li>
+<li><p><a class="reference internal" href="cast_notation/no_short_bool_cast.html"><span class="doc">no_short_bool_cast</span></a></p>
+<p>Short cast <code class="docutils literal notranslate"><span class="pre">bool</span></code> using double exclamation mark should not be used.</p>
+</li>
+<li><p><a class="reference internal" href="cast_notation/no_unset_cast.html"><span class="doc">no_unset_cast</span></a></p>
+<p>Variables must be set <code class="docutils literal notranslate"><span class="pre">null</span></code> instead of using <code class="docutils literal notranslate"><span class="pre">(unset)</span></code> casting.</p>
+</li>
+<li><p><a class="reference internal" href="cast_notation/short_scalar_cast.html"><span class="doc">short_scalar_cast</span></a></p>
+<p>Cast <code class="docutils literal notranslate"><span class="pre">(boolean)</span></code> and <code class="docutils literal notranslate"><span class="pre">(integer)</span></code> should be written as <code class="docutils literal notranslate"><span class="pre">(bool)</span></code> and <code class="docutils literal notranslate"><span class="pre">(int)</span></code>, <code class="docutils literal notranslate"><span class="pre">(double)</span></code> and <code class="docutils literal notranslate"><span class="pre">(real)</span></code> as <code class="docutils literal notranslate"><span class="pre">(float)</span></code>, <code class="docutils literal notranslate"><span class="pre">(binary)</span></code> as <code class="docutils literal notranslate"><span class="pre">(string)</span></code>.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="class-notation">
+<h2>Class Notation<a class="headerlink" href="#class-notation" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="class_notation/class_attributes_separation.html"><span class="doc">class_attributes_separation</span></a></p>
+<p>Class, trait and interface elements must be separated with one or none blank line.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/class_definition.html"><span class="doc">class_definition</span></a></p>
+<p>Whitespace around the keywords of a class, trait, enum or interfaces definition should be one space.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/final_class.html"><span class="doc">final_class</span></a> <em>(risky)</em></p>
+<p>All classes must be final, except abstract ones and Doctrine entities.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/final_internal_class.html"><span class="doc">final_internal_class</span></a> <em>(risky)</em></p>
+<p>Internal classes should be <code class="docutils literal notranslate"><span class="pre">final</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/final_public_method_for_abstract_class.html"><span class="doc">final_public_method_for_abstract_class</span></a> <em>(risky)</em></p>
+<p>All <code class="docutils literal notranslate"><span class="pre">public</span></code> methods of <code class="docutils literal notranslate"><span class="pre">abstract</span></code> classes should be <code class="docutils literal notranslate"><span class="pre">final</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/no_blank_lines_after_class_opening.html"><span class="doc">no_blank_lines_after_class_opening</span></a></p>
+<p>There should be no empty lines after class opening brace.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/no_null_property_initialization.html"><span class="doc">no_null_property_initialization</span></a></p>
+<p>Properties MUST not be explicitly initialized with <code class="docutils literal notranslate"><span class="pre">null</span></code> except when they have a type declaration (PHP 7.4).</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/no_php4_constructor.html"><span class="doc">no_php4_constructor</span></a> <em>(risky)</em></p>
+<p>Convert PHP4-style constructors to <code class="docutils literal notranslate"><span class="pre">__construct</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/no_unneeded_final_method.html"><span class="doc">no_unneeded_final_method</span></a> <em>(risky)</em></p>
+<p>Removes <code class="docutils literal notranslate"><span class="pre">final</span></code> from methods where possible.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/ordered_class_elements.html"><span class="doc">ordered_class_elements</span></a></p>
+<p>Orders the elements of classes/interfaces/traits/enums.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/ordered_interfaces.html"><span class="doc">ordered_interfaces</span></a> <em>(risky)</em></p>
+<p>Orders the interfaces in an <code class="docutils literal notranslate"><span class="pre">implements</span></code> or <code class="docutils literal notranslate"><span class="pre">interface</span> <span class="pre">extends</span></code> clause.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/ordered_traits.html"><span class="doc">ordered_traits</span></a> <em>(risky)</em></p>
+<p>Trait <code class="docutils literal notranslate"><span class="pre">use</span></code> statements must be sorted alphabetically.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/protected_to_private.html"><span class="doc">protected_to_private</span></a></p>
+<p>Converts <code class="docutils literal notranslate"><span class="pre">protected</span></code> variables and methods to <code class="docutils literal notranslate"><span class="pre">private</span></code> where possible.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/self_accessor.html"><span class="doc">self_accessor</span></a> <em>(risky)</em></p>
+<p>Inside class or interface element <code class="docutils literal notranslate"><span class="pre">self</span></code> should be preferred to the class name itself.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/self_static_accessor.html"><span class="doc">self_static_accessor</span></a></p>
+<p>Inside a <code class="docutils literal notranslate"><span class="pre">final</span></code> class or anonymous class <code class="docutils literal notranslate"><span class="pre">self</span></code> should be preferred to <code class="docutils literal notranslate"><span class="pre">static</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/single_class_element_per_statement.html"><span class="doc">single_class_element_per_statement</span></a></p>
+<p>There MUST NOT be more than one property or constant declared per statement.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/single_trait_insert_per_statement.html"><span class="doc">single_trait_insert_per_statement</span></a></p>
+<p>Each trait <code class="docutils literal notranslate"><span class="pre">use</span></code> must be done as single statement.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/visibility_required.html"><span class="doc">visibility_required</span></a></p>
+<p>Visibility MUST be declared on all properties and methods; <code class="docutils literal notranslate"><span class="pre">abstract</span></code> and <code class="docutils literal notranslate"><span class="pre">final</span></code> MUST be declared before the visibility; <code class="docutils literal notranslate"><span class="pre">static</span></code> MUST be declared after the visibility.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="class-usage">
+<h2>Class Usage<a class="headerlink" href="#class-usage" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="class_usage/date_time_immutable.html"><span class="doc">date_time_immutable</span></a> <em>(risky)</em></p>
+<p>Class <code class="docutils literal notranslate"><span class="pre">DateTimeImmutable</span></code> should be used instead of <code class="docutils literal notranslate"><span class="pre">DateTime</span></code>.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="comment">
+<h2>Comment<a class="headerlink" href="#comment" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="comment/comment_to_phpdoc.html"><span class="doc">comment_to_phpdoc</span></a> <em>(risky)</em></p>
+<p>Comments with annotation should be docblock when used on structural elements.</p>
+</li>
+<li><p><a class="reference internal" href="comment/header_comment.html"><span class="doc">header_comment</span></a></p>
+<p>Add, replace or remove header comment.</p>
+</li>
+<li><p><a class="reference internal" href="comment/multiline_comment_opening_closing.html"><span class="doc">multiline_comment_opening_closing</span></a></p>
+<p>DocBlocks must start with two asterisks, multiline comments must start with a single asterisk, after the opening slash. Both must end with a single asterisk before the closing slash.</p>
+</li>
+<li><p><a class="reference internal" href="comment/no_empty_comment.html"><span class="doc">no_empty_comment</span></a></p>
+<p>There should not be any empty comments.</p>
+</li>
+<li><p><a class="reference internal" href="comment/no_trailing_whitespace_in_comment.html"><span class="doc">no_trailing_whitespace_in_comment</span></a></p>
+<p>There MUST be no trailing spaces inside comment or PHPDoc.</p>
+</li>
+<li><p><a class="reference internal" href="comment/single_line_comment_spacing.html"><span class="doc">single_line_comment_spacing</span></a></p>
+<p>Single-line comments must have proper spacing.</p>
+</li>
+<li><p><a class="reference internal" href="comment/single_line_comment_style.html"><span class="doc">single_line_comment_style</span></a></p>
+<p>Single-line comments and multi-line comments with only one line of actual content should use the <code class="docutils literal notranslate"><span class="pre">//</span></code> syntax.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="constant-notation">
+<h2>Constant Notation<a class="headerlink" href="#constant-notation" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="constant_notation/native_constant_invocation.html"><span class="doc">native_constant_invocation</span></a> <em>(risky)</em></p>
+<p>Add leading <code class="docutils literal notranslate"><span class="pre">\</span></code> before constant invocation of internal constant to speed up resolving. Constant name match is case-sensitive, except for <code class="docutils literal notranslate"><span class="pre">null</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="control-structure">
+<h2>Control Structure<a class="headerlink" href="#control-structure" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="control_structure/control_structure_continuation_position.html"><span class="doc">control_structure_continuation_position</span></a></p>
+<p>Control structure continuation keyword must be on the configured line.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/elseif.html"><span class="doc">elseif</span></a></p>
+<p>The keyword <code class="docutils literal notranslate"><span class="pre">elseif</span></code> should be used instead of <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> so that all control keywords look like single words.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/empty_loop_body.html"><span class="doc">empty_loop_body</span></a></p>
+<p>Empty loop-body must be in configured style.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/empty_loop_condition.html"><span class="doc">empty_loop_condition</span></a></p>
+<p>Empty loop-condition must be in configured style.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/include.html"><span class="doc">include</span></a></p>
+<p>Include/Require and file path should be divided with a single space. File path should not be placed under brackets.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/no_alternative_syntax.html"><span class="doc">no_alternative_syntax</span></a></p>
+<p>Replace control structure alternative syntax to use braces.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/no_break_comment.html"><span class="doc">no_break_comment</span></a></p>
+<p>There must be a comment when fall-through is intentional in a non-empty case body.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/no_superfluous_elseif.html"><span class="doc">no_superfluous_elseif</span></a></p>
+<p>Replaces superfluous <code class="docutils literal notranslate"><span class="pre">elseif</span></code> with <code class="docutils literal notranslate"><span class="pre">if</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/no_trailing_comma_in_list_call.html"><span class="doc">no_trailing_comma_in_list_call</span></a></p>
+<p>Remove trailing commas in list function calls.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/no_unneeded_control_parentheses.html"><span class="doc">no_unneeded_control_parentheses</span></a></p>
+<p>Removes unneeded parentheses around control statements.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/no_unneeded_curly_braces.html"><span class="doc">no_unneeded_curly_braces</span></a></p>
+<p>Removes unneeded curly braces that are superfluous and aren’t part of a control structure’s body.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/no_useless_else.html"><span class="doc">no_useless_else</span></a></p>
+<p>There should not be useless <code class="docutils literal notranslate"><span class="pre">else</span></code> cases.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/simplified_if_return.html"><span class="doc">simplified_if_return</span></a></p>
+<p>Simplify <code class="docutils literal notranslate"><span class="pre">if</span></code> control structures that return the boolean result of their condition.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/switch_case_semicolon_to_colon.html"><span class="doc">switch_case_semicolon_to_colon</span></a></p>
+<p>A case should be followed by a colon and not a semicolon.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/switch_case_space.html"><span class="doc">switch_case_space</span></a></p>
+<p>Removes extra spaces between colon and case value.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/switch_continue_to_break.html"><span class="doc">switch_continue_to_break</span></a></p>
+<p>Switch case must not be ended with <code class="docutils literal notranslate"><span class="pre">continue</span></code> but with <code class="docutils literal notranslate"><span class="pre">break</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/trailing_comma_in_multiline.html"><span class="doc">trailing_comma_in_multiline</span></a></p>
+<p>Multi-line arrays, arguments list and parameters list must have a trailing comma.</p>
+</li>
+<li><p><a class="reference internal" href="control_structure/yoda_style.html"><span class="doc">yoda_style</span></a></p>
+<p>Write conditions in Yoda style (<code class="docutils literal notranslate"><span class="pre">true</span></code>), non-Yoda style (<code class="docutils literal notranslate"><span class="pre">['equal'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'identical'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'less_and_greater'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>) or ignore those conditions (<code class="docutils literal notranslate"><span class="pre">null</span></code>) based on configuration.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="doctrine-annotation">
+<h2>Doctrine Annotation<a class="headerlink" href="#doctrine-annotation" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="doctrine_annotation/doctrine_annotation_array_assignment.html"><span class="doc">doctrine_annotation_array_assignment</span></a></p>
+<p>Doctrine annotations must use configured operator for assignment in arrays.</p>
+</li>
+<li><p><a class="reference internal" href="doctrine_annotation/doctrine_annotation_braces.html"><span class="doc">doctrine_annotation_braces</span></a></p>
+<p>Doctrine annotations without arguments must use the configured syntax.</p>
+</li>
+<li><p><a class="reference internal" href="doctrine_annotation/doctrine_annotation_indentation.html"><span class="doc">doctrine_annotation_indentation</span></a></p>
+<p>Doctrine annotations must be indented with four spaces.</p>
+</li>
+<li><p><a class="reference internal" href="doctrine_annotation/doctrine_annotation_spaces.html"><span class="doc">doctrine_annotation_spaces</span></a></p>
+<p>Fixes spaces in Doctrine annotations.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="function-notation">
+<h2>Function Notation<a class="headerlink" href="#function-notation" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="function_notation/combine_nested_dirname.html"><span class="doc">combine_nested_dirname</span></a> <em>(risky)</em></p>
+<p>Replace multiple nested calls of <code class="docutils literal notranslate"><span class="pre">dirname</span></code> by only one call with second <code class="docutils literal notranslate"><span class="pre">$level</span></code> parameter. Requires PHP &gt;= 7.0.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/date_time_create_from_format_call.html"><span class="doc">date_time_create_from_format_call</span></a></p>
+<p>The first argument of <code class="docutils literal notranslate"><span class="pre">DateTime::createFromFormat</span></code> method must start with <code class="docutils literal notranslate"><span class="pre">!</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/fopen_flag_order.html"><span class="doc">fopen_flag_order</span></a> <em>(risky)</em></p>
+<p>Order the flags in <code class="docutils literal notranslate"><span class="pre">fopen</span></code> calls, <code class="docutils literal notranslate"><span class="pre">b</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code> must be last.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/fopen_flags.html"><span class="doc">fopen_flags</span></a> <em>(risky)</em></p>
+<p>The flags in <code class="docutils literal notranslate"><span class="pre">fopen</span></code> calls must omit <code class="docutils literal notranslate"><span class="pre">t</span></code>, and <code class="docutils literal notranslate"><span class="pre">b</span></code> must be omitted or included consistently.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/function_declaration.html"><span class="doc">function_declaration</span></a></p>
+<p>Spaces should be properly placed in a function declaration.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/function_typehint_space.html"><span class="doc">function_typehint_space</span></a></p>
+<p>Ensure single space between function’s argument and its typehint.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/implode_call.html"><span class="doc">implode_call</span></a> <em>(risky)</em></p>
+<p>Function <code class="docutils literal notranslate"><span class="pre">implode</span></code> must be called with 2 arguments in the documented order.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/lambda_not_used_import.html"><span class="doc">lambda_not_used_import</span></a></p>
+<p>Lambda must not import variables it doesn’t use.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/method_argument_space.html"><span class="doc">method_argument_space</span></a></p>
+<p>In method arguments and method call, there MUST NOT be a space before each comma and there MUST be one space after each comma. Argument lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument per line.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/native_function_invocation.html"><span class="doc">native_function_invocation</span></a> <em>(risky)</em></p>
+<p>Add leading <code class="docutils literal notranslate"><span class="pre">\</span></code> before function invocation to speed up resolving.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/no_spaces_after_function_name.html"><span class="doc">no_spaces_after_function_name</span></a></p>
+<p>When making a method or function call, there MUST NOT be a space between the method or function name and the opening parenthesis.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/no_trailing_comma_in_singleline_function_call.html"><span class="doc">no_trailing_comma_in_singleline_function_call</span></a></p>
+<p>When making a method or function call on a single line there MUST NOT be a trailing comma after the last argument.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/no_unreachable_default_argument_value.html"><span class="doc">no_unreachable_default_argument_value</span></a> <em>(risky)</em></p>
+<p>In function arguments there must not be arguments with default values before non-default ones.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/no_useless_sprintf.html"><span class="doc">no_useless_sprintf</span></a> <em>(risky)</em></p>
+<p>There must be no <code class="docutils literal notranslate"><span class="pre">sprintf</span></code> calls with only the first argument.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/nullable_type_declaration_for_default_null_value.html"><span class="doc">nullable_type_declaration_for_default_null_value</span></a></p>
+<p>Adds or removes <code class="docutils literal notranslate"><span class="pre">?</span></code> before type declarations for parameters with a default <code class="docutils literal notranslate"><span class="pre">null</span></code> value.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/phpdoc_to_param_type.html"><span class="doc">phpdoc_to_param_type</span></a> <em>(risky)</em></p>
+<p>EXPERIMENTAL: Takes <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> annotations of non-mixed types and adjusts accordingly the function signature. Requires PHP &gt;= 7.0.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/phpdoc_to_property_type.html"><span class="doc">phpdoc_to_property_type</span></a> <em>(risky)</em></p>
+<p>EXPERIMENTAL: Takes <code class="docutils literal notranslate"><span class="pre">&#64;var</span></code> annotation of non-mixed types and adjusts accordingly the property signature. Requires PHP &gt;= 7.4.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/phpdoc_to_return_type.html"><span class="doc">phpdoc_to_return_type</span></a> <em>(risky)</em></p>
+<p>EXPERIMENTAL: Takes <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> annotation of non-mixed types and adjusts accordingly the function signature. Requires PHP &gt;= 7.0.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/regular_callable_call.html"><span class="doc">regular_callable_call</span></a> <em>(risky)</em></p>
+<p>Callables must be called without using <code class="docutils literal notranslate"><span class="pre">call_user_func*</span></code> when possible.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/return_type_declaration.html"><span class="doc">return_type_declaration</span></a></p>
+<p>There should be one or no space before colon, and one space after it in return type declarations, according to configuration.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/single_line_throw.html"><span class="doc">single_line_throw</span></a></p>
+<p>Throwing exception must be done in single line.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/static_lambda.html"><span class="doc">static_lambda</span></a> <em>(risky)</em></p>
+<p>Lambdas not (indirect) referencing <code class="docutils literal notranslate"><span class="pre">$this</span></code> must be declared <code class="docutils literal notranslate"><span class="pre">static</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/use_arrow_functions.html"><span class="doc">use_arrow_functions</span></a> <em>(risky)</em></p>
+<p>Anonymous functions with one-liner return statement must use arrow functions.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/void_return.html"><span class="doc">void_return</span></a> <em>(risky)</em></p>
+<p>Add <code class="docutils literal notranslate"><span class="pre">void</span></code> return type to functions with missing or empty return statements, but priority is given to <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> annotations. Requires PHP &gt;= 7.1.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="import">
+<h2>Import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="import/fully_qualified_strict_types.html"><span class="doc">fully_qualified_strict_types</span></a></p>
+<p>Transforms imported FQCN parameters and return types in function arguments to short version.</p>
+</li>
+<li><p><a class="reference internal" href="import/global_namespace_import.html"><span class="doc">global_namespace_import</span></a></p>
+<p>Imports or fully qualifies global classes/functions/constants.</p>
+</li>
+<li><p><a class="reference internal" href="import/group_import.html"><span class="doc">group_import</span></a></p>
+<p>There MUST be group use for the same namespaces.</p>
+</li>
+<li><p><a class="reference internal" href="import/no_leading_import_slash.html"><span class="doc">no_leading_import_slash</span></a></p>
+<p>Remove leading slashes in <code class="docutils literal notranslate"><span class="pre">use</span></code> clauses.</p>
+</li>
+<li><p><a class="reference internal" href="import/no_unneeded_import_alias.html"><span class="doc">no_unneeded_import_alias</span></a></p>
+<p>Imports should not be aliased as the same name.</p>
+</li>
+<li><p><a class="reference internal" href="import/no_unused_imports.html"><span class="doc">no_unused_imports</span></a></p>
+<p>Unused <code class="docutils literal notranslate"><span class="pre">use</span></code> statements must be removed.</p>
+</li>
+<li><p><a class="reference internal" href="import/ordered_imports.html"><span class="doc">ordered_imports</span></a></p>
+<p>Ordering <code class="docutils literal notranslate"><span class="pre">use</span></code> statements.</p>
+</li>
+<li><p><a class="reference internal" href="import/single_import_per_statement.html"><span class="doc">single_import_per_statement</span></a></p>
+<p>There MUST be one use keyword per declaration.</p>
+</li>
+<li><p><a class="reference internal" href="import/single_line_after_imports.html"><span class="doc">single_line_after_imports</span></a></p>
+<p>Each namespace use MUST go on its own line and there MUST be one blank line after the use statements block.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="language-construct">
+<h2>Language Construct<a class="headerlink" href="#language-construct" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="language_construct/class_keyword_remove.html"><span class="doc">class_keyword_remove</span></a> <em>(deprecated)</em></p>
+<p>Converts <code class="docutils literal notranslate"><span class="pre">::class</span></code> keywords to FQCN strings.</p>
+</li>
+<li><p><a class="reference internal" href="language_construct/combine_consecutive_issets.html"><span class="doc">combine_consecutive_issets</span></a></p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">isset($var)</span> <span class="pre">&amp;&amp;</span></code> multiple times should be done in one call.</p>
+</li>
+<li><p><a class="reference internal" href="language_construct/combine_consecutive_unsets.html"><span class="doc">combine_consecutive_unsets</span></a></p>
+<p>Calling <code class="docutils literal notranslate"><span class="pre">unset</span></code> on multiple items should be done in one call.</p>
+</li>
+<li><p><a class="reference internal" href="language_construct/declare_equal_normalize.html"><span class="doc">declare_equal_normalize</span></a></p>
+<p>Equal sign in declare statement should be surrounded by spaces or not following configuration.</p>
+</li>
+<li><p><a class="reference internal" href="language_construct/declare_parentheses.html"><span class="doc">declare_parentheses</span></a></p>
+<p>There must not be spaces around <code class="docutils literal notranslate"><span class="pre">declare</span></code> statement parentheses.</p>
+</li>
+<li><p><a class="reference internal" href="language_construct/dir_constant.html"><span class="doc">dir_constant</span></a> <em>(risky)</em></p>
+<p>Replaces <code class="docutils literal notranslate"><span class="pre">dirname(__FILE__)</span></code> expression with equivalent <code class="docutils literal notranslate"><span class="pre">__DIR__</span></code> constant.</p>
+</li>
+<li><p><a class="reference internal" href="language_construct/error_suppression.html"><span class="doc">error_suppression</span></a> <em>(risky)</em></p>
+<p>Error control operator should be added to deprecation notices and/or removed from other cases.</p>
+</li>
+<li><p><a class="reference internal" href="language_construct/explicit_indirect_variable.html"><span class="doc">explicit_indirect_variable</span></a></p>
+<p>Add curly braces to indirect variables to make them clear to understand. Requires PHP &gt;= 7.0.</p>
+</li>
+<li><p><a class="reference internal" href="language_construct/function_to_constant.html"><span class="doc">function_to_constant</span></a> <em>(risky)</em></p>
+<p>Replace core functions calls returning constants with the constants.</p>
+</li>
+<li><p><a class="reference internal" href="language_construct/get_class_to_class_keyword.html"><span class="doc">get_class_to_class_keyword</span></a> <em>(risky)</em></p>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">get_class</span></code> calls on object variables with class keyword syntax.</p>
+</li>
+<li><p><a class="reference internal" href="language_construct/is_null.html"><span class="doc">is_null</span></a> <em>(risky)</em></p>
+<p>Replaces <code class="docutils literal notranslate"><span class="pre">is_null($var)</span></code> expression with <code class="docutils literal notranslate"><span class="pre">null</span> <span class="pre">===</span> <span class="pre">$var</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="language_construct/no_unset_on_property.html"><span class="doc">no_unset_on_property</span></a> <em>(risky)</em></p>
+<p>Properties should be set to <code class="docutils literal notranslate"><span class="pre">null</span></code> instead of using <code class="docutils literal notranslate"><span class="pre">unset</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="language_construct/single_space_after_construct.html"><span class="doc">single_space_after_construct</span></a></p>
+<p>Ensures a single space after language constructs.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="list-notation">
+<h2>List Notation<a class="headerlink" href="#list-notation" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="list_notation/list_syntax.html"><span class="doc">list_syntax</span></a></p>
+<p>List (<code class="docutils literal notranslate"><span class="pre">array</span></code> destructuring) assignment should be declared using the configured syntax. Requires PHP &gt;= 7.1.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="namespace-notation">
+<h2>Namespace Notation<a class="headerlink" href="#namespace-notation" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="namespace_notation/blank_line_after_namespace.html"><span class="doc">blank_line_after_namespace</span></a></p>
+<p>There MUST be one blank line after the namespace declaration.</p>
+</li>
+<li><p><a class="reference internal" href="namespace_notation/clean_namespace.html"><span class="doc">clean_namespace</span></a></p>
+<p>Namespace must not contain spacing, comments or PHPDoc.</p>
+</li>
+<li><p><a class="reference internal" href="namespace_notation/no_blank_lines_before_namespace.html"><span class="doc">no_blank_lines_before_namespace</span></a></p>
+<p>There should be no blank lines before a namespace declaration.</p>
+</li>
+<li><p><a class="reference internal" href="namespace_notation/no_leading_namespace_whitespace.html"><span class="doc">no_leading_namespace_whitespace</span></a></p>
+<p>The namespace declaration line shouldn’t contain leading whitespace.</p>
+</li>
+<li><p><a class="reference internal" href="namespace_notation/single_blank_line_before_namespace.html"><span class="doc">single_blank_line_before_namespace</span></a></p>
+<p>There should be exactly one blank line before a namespace declaration.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="naming">
+<h2>Naming<a class="headerlink" href="#naming" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="naming/no_homoglyph_names.html"><span class="doc">no_homoglyph_names</span></a> <em>(risky)</em></p>
+<p>Replace accidental usage of homoglyphs (non ascii characters) in names.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="operator">
+<h2>Operator<a class="headerlink" href="#operator" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="operator/assign_null_coalescing_to_coalesce_equal.html"><span class="doc">assign_null_coalescing_to_coalesce_equal</span></a></p>
+<p>Use the null coalescing assignment operator <code class="docutils literal notranslate"><span class="pre">??=</span></code> where possible.</p>
+</li>
+<li><p><a class="reference internal" href="operator/binary_operator_spaces.html"><span class="doc">binary_operator_spaces</span></a></p>
+<p>Binary operators should be surrounded by space as configured.</p>
+</li>
+<li><p><a class="reference internal" href="operator/concat_space.html"><span class="doc">concat_space</span></a></p>
+<p>Concatenation should be spaced according configuration.</p>
+</li>
+<li><p><a class="reference internal" href="operator/increment_style.html"><span class="doc">increment_style</span></a></p>
+<p>Pre- or post-increment and decrement operators should be used if possible.</p>
+</li>
+<li><p><a class="reference internal" href="operator/logical_operators.html"><span class="doc">logical_operators</span></a> <em>(risky)</em></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> and <code class="docutils literal notranslate"><span class="pre">||</span></code> logical operators instead of <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="operator/new_with_braces.html"><span class="doc">new_with_braces</span></a></p>
+<p>All instances created with <code class="docutils literal notranslate"><span class="pre">new</span></code> keyword must (not) be followed by braces.</p>
+</li>
+<li><p><a class="reference internal" href="operator/no_space_around_double_colon.html"><span class="doc">no_space_around_double_colon</span></a></p>
+<p>There must be no space around double colons (also called Scope Resolution Operator or Paamayim Nekudotayim).</p>
+</li>
+<li><p><a class="reference internal" href="operator/not_operator_with_space.html"><span class="doc">not_operator_with_space</span></a></p>
+<p>Logical NOT operators (<code class="docutils literal notranslate"><span class="pre">!</span></code>) should have leading and trailing whitespaces.</p>
+</li>
+<li><p><a class="reference internal" href="operator/not_operator_with_successor_space.html"><span class="doc">not_operator_with_successor_space</span></a></p>
+<p>Logical NOT operators (<code class="docutils literal notranslate"><span class="pre">!</span></code>) should have one trailing whitespace.</p>
+</li>
+<li><p><a class="reference internal" href="operator/object_operator_without_whitespace.html"><span class="doc">object_operator_without_whitespace</span></a></p>
+<p>There should not be space before or after object operators <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">?-&gt;</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="operator/operator_linebreak.html"><span class="doc">operator_linebreak</span></a></p>
+<p>Operators - when multiline - must always be at the beginning or at the end of the line.</p>
+</li>
+<li><p><a class="reference internal" href="operator/standardize_increment.html"><span class="doc">standardize_increment</span></a></p>
+<p>Increment and decrement operators should be used if possible.</p>
+</li>
+<li><p><a class="reference internal" href="operator/standardize_not_equals.html"><span class="doc">standardize_not_equals</span></a></p>
+<p>Replace all <code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code> with <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="operator/ternary_operator_spaces.html"><span class="doc">ternary_operator_spaces</span></a></p>
+<p>Standardize spaces around ternary operator.</p>
+</li>
+<li><p><a class="reference internal" href="operator/ternary_to_elvis_operator.html"><span class="doc">ternary_to_elvis_operator</span></a> <em>(risky)</em></p>
+<p>Use the Elvis operator <code class="docutils literal notranslate"><span class="pre">?:</span></code> where possible.</p>
+</li>
+<li><p><a class="reference internal" href="operator/ternary_to_null_coalescing.html"><span class="doc">ternary_to_null_coalescing</span></a></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">null</span></code> coalescing operator <code class="docutils literal notranslate"><span class="pre">??</span></code> where possible. Requires PHP &gt;= 7.0.</p>
+</li>
+<li><p><a class="reference internal" href="operator/unary_operator_spaces.html"><span class="doc">unary_operator_spaces</span></a></p>
+<p>Unary operators should be placed adjacent to their operands.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="php-tag">
+<h2>PHP Tag<a class="headerlink" href="#php-tag" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="php_tag/blank_line_after_opening_tag.html"><span class="doc">blank_line_after_opening_tag</span></a></p>
+<p>Ensure there is no code on the same line as the PHP open tag and it is followed by a blank line.</p>
+</li>
+<li><p><a class="reference internal" href="php_tag/echo_tag_syntax.html"><span class="doc">echo_tag_syntax</span></a></p>
+<p>Replaces short-echo <code class="docutils literal notranslate"><span class="pre">&lt;?=</span></code> with long format <code class="docutils literal notranslate"><span class="pre">&lt;?php</span> <span class="pre">echo</span></code>/<code class="docutils literal notranslate"><span class="pre">&lt;?php</span> <span class="pre">print</span></code> syntax, or vice-versa.</p>
+</li>
+<li><p><a class="reference internal" href="php_tag/full_opening_tag.html"><span class="doc">full_opening_tag</span></a></p>
+<p>PHP code must use the long <code class="docutils literal notranslate"><span class="pre">&lt;?php</span></code> tags or short-echo <code class="docutils literal notranslate"><span class="pre">&lt;?=</span></code> tags and not other tag variations.</p>
+</li>
+<li><p><a class="reference internal" href="php_tag/linebreak_after_opening_tag.html"><span class="doc">linebreak_after_opening_tag</span></a></p>
+<p>Ensure there is no code on the same line as the PHP open tag.</p>
+</li>
+<li><p><a class="reference internal" href="php_tag/no_closing_tag.html"><span class="doc">no_closing_tag</span></a></p>
+<p>The closing <code class="docutils literal notranslate"><span class="pre">?&gt;</span></code> tag MUST be omitted from files containing only PHP.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="phpunit">
+<h2>PHPUnit<a class="headerlink" href="#phpunit" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="php_unit/php_unit_construct.html"><span class="doc">php_unit_construct</span></a> <em>(risky)</em></p>
+<p>PHPUnit assertion method calls like <code class="docutils literal notranslate"><span class="pre">-&gt;assertSame(true,</span> <span class="pre">$foo)</span></code> should be written with dedicated method like <code class="docutils literal notranslate"><span class="pre">-&gt;assertTrue($foo)</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="php_unit/php_unit_dedicate_assert.html"><span class="doc">php_unit_dedicate_assert</span></a> <em>(risky)</em></p>
+<p>PHPUnit assertions like <code class="docutils literal notranslate"><span class="pre">assertInternalType</span></code>, <code class="docutils literal notranslate"><span class="pre">assertFileExists</span></code>, should be used over <code class="docutils literal notranslate"><span class="pre">assertTrue</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="php_unit/php_unit_dedicate_assert_internal_type.html"><span class="doc">php_unit_dedicate_assert_internal_type</span></a> <em>(risky)</em></p>
+<p>PHPUnit assertions like <code class="docutils literal notranslate"><span class="pre">assertIsArray</span></code> should be used over <code class="docutils literal notranslate"><span class="pre">assertInternalType</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="php_unit/php_unit_expectation.html"><span class="doc">php_unit_expectation</span></a> <em>(risky)</em></p>
+<p>Usages of <code class="docutils literal notranslate"><span class="pre">-&gt;setExpectedException*</span></code> methods MUST be replaced by <code class="docutils literal notranslate"><span class="pre">-&gt;expectException*</span></code> methods.</p>
+</li>
+<li><p><a class="reference internal" href="php_unit/php_unit_fqcn_annotation.html"><span class="doc">php_unit_fqcn_annotation</span></a></p>
+<p>PHPUnit annotations should be a FQCNs including a root namespace.</p>
+</li>
+<li><p><a class="reference internal" href="php_unit/php_unit_internal_class.html"><span class="doc">php_unit_internal_class</span></a></p>
+<p>All PHPUnit test classes should be marked as internal.</p>
+</li>
+<li><p><a class="reference internal" href="php_unit/php_unit_method_casing.html"><span class="doc">php_unit_method_casing</span></a></p>
+<p>Enforce camel (or snake) case for PHPUnit test methods, following configuration.</p>
+</li>
+<li><p><a class="reference internal" href="php_unit/php_unit_mock.html"><span class="doc">php_unit_mock</span></a> <em>(risky)</em></p>
+<p>Usages of <code class="docutils literal notranslate"><span class="pre">-&gt;getMock</span></code> and <code class="docutils literal notranslate"><span class="pre">-&gt;getMockWithoutInvokingTheOriginalConstructor</span></code> methods MUST be replaced by <code class="docutils literal notranslate"><span class="pre">-&gt;createMock</span></code> or <code class="docutils literal notranslate"><span class="pre">-&gt;createPartialMock</span></code> methods.</p>
+</li>
+<li><p><a class="reference internal" href="php_unit/php_unit_mock_short_will_return.html"><span class="doc">php_unit_mock_short_will_return</span></a> <em>(risky)</em></p>
+<p>Usage of PHPUnit’s mock e.g. <code class="docutils literal notranslate"><span class="pre">-&gt;will($this-&gt;returnValue(..))</span></code> must be replaced by its shorter equivalent such as <code class="docutils literal notranslate"><span class="pre">-&gt;willReturn(...)</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="php_unit/php_unit_namespaced.html"><span class="doc">php_unit_namespaced</span></a> <em>(risky)</em></p>
+<p>PHPUnit classes MUST be used in namespaced version, e.g. <code class="docutils literal notranslate"><span class="pre">\PHPUnit\Framework\TestCase</span></code> instead of <code class="docutils literal notranslate"><span class="pre">\PHPUnit_Framework_TestCase</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="php_unit/php_unit_no_expectation_annotation.html"><span class="doc">php_unit_no_expectation_annotation</span></a> <em>(risky)</em></p>
+<p>Usages of <code class="docutils literal notranslate"><span class="pre">&#64;expectedException*</span></code> annotations MUST be replaced by <code class="docutils literal notranslate"><span class="pre">-&gt;setExpectedException*</span></code> methods.</p>
+</li>
+<li><p><a class="reference internal" href="php_unit/php_unit_set_up_tear_down_visibility.html"><span class="doc">php_unit_set_up_tear_down_visibility</span></a> <em>(risky)</em></p>
+<p>Changes the visibility of the <code class="docutils literal notranslate"><span class="pre">setUp()</span></code> and <code class="docutils literal notranslate"><span class="pre">tearDown()</span></code> functions of PHPUnit to <code class="docutils literal notranslate"><span class="pre">protected</span></code>, to match the PHPUnit TestCase.</p>
+</li>
+<li><p><a class="reference internal" href="php_unit/php_unit_size_class.html"><span class="doc">php_unit_size_class</span></a></p>
+<p>All PHPUnit test cases should have <code class="docutils literal notranslate"><span class="pre">&#64;small</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;medium</span></code> or <code class="docutils literal notranslate"><span class="pre">&#64;large</span></code> annotation to enable run time limits.</p>
+</li>
+<li><p><a class="reference internal" href="php_unit/php_unit_strict.html"><span class="doc">php_unit_strict</span></a> <em>(risky)</em></p>
+<p>PHPUnit methods like <code class="docutils literal notranslate"><span class="pre">assertSame</span></code> should be used instead of <code class="docutils literal notranslate"><span class="pre">assertEquals</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="php_unit/php_unit_test_annotation.html"><span class="doc">php_unit_test_annotation</span></a> <em>(risky)</em></p>
+<p>Adds or removes &#64;test annotations from tests, following configuration.</p>
+</li>
+<li><p><a class="reference internal" href="php_unit/php_unit_test_case_static_method_calls.html"><span class="doc">php_unit_test_case_static_method_calls</span></a> <em>(risky)</em></p>
+<p>Calls to <code class="docutils literal notranslate"><span class="pre">PHPUnit\Framework\TestCase</span></code> static methods must all be of the same type, either <code class="docutils literal notranslate"><span class="pre">$this-&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">self::</span></code> or <code class="docutils literal notranslate"><span class="pre">static::</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="php_unit/php_unit_test_class_requires_covers.html"><span class="doc">php_unit_test_class_requires_covers</span></a></p>
+<p>Adds a default <code class="docutils literal notranslate"><span class="pre">&#64;coversNothing</span></code> annotation to PHPUnit test classes that have no <code class="docutils literal notranslate"><span class="pre">&#64;covers*</span></code> annotation.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="phpdoc">
+<h2>PHPDoc<a class="headerlink" href="#phpdoc" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="phpdoc/align_multiline_comment.html"><span class="doc">align_multiline_comment</span></a></p>
+<p>Each line of multi-line DocComments must have an asterisk [PSR-5] and must be aligned with the first one.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/general_phpdoc_annotation_remove.html"><span class="doc">general_phpdoc_annotation_remove</span></a></p>
+<p>Configured annotations should be omitted from PHPDoc.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/general_phpdoc_tag_rename.html"><span class="doc">general_phpdoc_tag_rename</span></a></p>
+<p>Renames PHPDoc tags.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/no_blank_lines_after_phpdoc.html"><span class="doc">no_blank_lines_after_phpdoc</span></a></p>
+<p>There should not be blank lines between docblock and the documented element.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/no_empty_phpdoc.html"><span class="doc">no_empty_phpdoc</span></a></p>
+<p>There should not be empty PHPDoc blocks.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/no_superfluous_phpdoc_tags.html"><span class="doc">no_superfluous_phpdoc_tags</span></a></p>
+<p>Removes <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;var</span></code> tags that don’t provide any useful information.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_add_missing_param_annotation.html"><span class="doc">phpdoc_add_missing_param_annotation</span></a></p>
+<p>PHPDoc should contain <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> for all params.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_align.html"><span class="doc">phpdoc_align</span></a></p>
+<p>All items of the given phpdoc tags must be either left-aligned or (by default) aligned vertically.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_annotation_without_dot.html"><span class="doc">phpdoc_annotation_without_dot</span></a></p>
+<p>PHPDoc annotation descriptions should not be a sentence.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_indent.html"><span class="doc">phpdoc_indent</span></a></p>
+<p>Docblocks should have the same indentation as the documented subject.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_inline_tag_normalizer.html"><span class="doc">phpdoc_inline_tag_normalizer</span></a></p>
+<p>Fixes PHPDoc inline tags.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_line_span.html"><span class="doc">phpdoc_line_span</span></a></p>
+<p>Changes doc blocks from single to multi line, or reversed. Works for class constants, properties and methods only.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_no_access.html"><span class="doc">phpdoc_no_access</span></a></p>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;access</span></code> annotations should be omitted from PHPDoc.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_no_alias_tag.html"><span class="doc">phpdoc_no_alias_tag</span></a></p>
+<p>No alias PHPDoc tags should be used.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_no_empty_return.html"><span class="doc">phpdoc_no_empty_return</span></a></p>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;return</span> <span class="pre">void</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;return</span> <span class="pre">null</span></code> annotations should be omitted from PHPDoc.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_no_package.html"><span class="doc">phpdoc_no_package</span></a></p>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;package</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;subpackage</span></code> annotations should be omitted from PHPDoc.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_no_useless_inheritdoc.html"><span class="doc">phpdoc_no_useless_inheritdoc</span></a></p>
+<p>Classy that does not inherit must not have <code class="docutils literal notranslate"><span class="pre">&#64;inheritdoc</span></code> tags.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_order_by_value.html"><span class="doc">phpdoc_order_by_value</span></a></p>
+<p>Order phpdoc tags by value.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_order.html"><span class="doc">phpdoc_order</span></a></p>
+<p>Annotations in PHPDoc should be ordered so that <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> annotations come first, then <code class="docutils literal notranslate"><span class="pre">&#64;throws</span></code> annotations, then <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> annotations.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_return_self_reference.html"><span class="doc">phpdoc_return_self_reference</span></a></p>
+<p>The type of <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> annotations of methods returning a reference to itself must the configured one.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_scalar.html"><span class="doc">phpdoc_scalar</span></a></p>
+<p>Scalar types should always be written in the same form. <code class="docutils literal notranslate"><span class="pre">int</span></code> not <code class="docutils literal notranslate"><span class="pre">integer</span></code>, <code class="docutils literal notranslate"><span class="pre">bool</span></code> not <code class="docutils literal notranslate"><span class="pre">boolean</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code> not <code class="docutils literal notranslate"><span class="pre">real</span></code> or <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_separation.html"><span class="doc">phpdoc_separation</span></a></p>
+<p>Annotations in PHPDoc should be grouped together so that annotations of the same type immediately follow each other, and annotations of a different type are separated by a single blank line.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_single_line_var_spacing.html"><span class="doc">phpdoc_single_line_var_spacing</span></a></p>
+<p>Single line <code class="docutils literal notranslate"><span class="pre">&#64;var</span></code> PHPDoc should have proper spacing.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_summary.html"><span class="doc">phpdoc_summary</span></a></p>
+<p>PHPDoc summary should end in either a full stop, exclamation mark, or question mark.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_tag_casing.html"><span class="doc">phpdoc_tag_casing</span></a></p>
+<p>Fixes casing of PHPDoc tags.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_tag_type.html"><span class="doc">phpdoc_tag_type</span></a></p>
+<p>Forces PHPDoc tags to be either regular annotations or inline.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_to_comment.html"><span class="doc">phpdoc_to_comment</span></a></p>
+<p>Docblocks should only be used on structural elements.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_trim_consecutive_blank_line_separation.html"><span class="doc">phpdoc_trim_consecutive_blank_line_separation</span></a></p>
+<p>Removes extra blank lines after summary and after description in PHPDoc.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_trim.html"><span class="doc">phpdoc_trim</span></a></p>
+<p>PHPDoc should start and end with content, excluding the very first and last line of the docblocks.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_types.html"><span class="doc">phpdoc_types</span></a></p>
+<p>The correct case must be used for standard PHP types in PHPDoc.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_types_order.html"><span class="doc">phpdoc_types_order</span></a></p>
+<p>Sorts PHPDoc types.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_var_annotation_correct_order.html"><span class="doc">phpdoc_var_annotation_correct_order</span></a></p>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;var</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;type</span></code> annotations must have type and name in the correct order.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_var_without_name.html"><span class="doc">phpdoc_var_without_name</span></a></p>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;var</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;type</span></code> annotations of classy properties should not contain the name.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="return-notation">
+<h2>Return Notation<a class="headerlink" href="#return-notation" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="return_notation/no_useless_return.html"><span class="doc">no_useless_return</span></a></p>
+<p>There should not be an empty <code class="docutils literal notranslate"><span class="pre">return</span></code> statement at the end of a function.</p>
+</li>
+<li><p><a class="reference internal" href="return_notation/return_assignment.html"><span class="doc">return_assignment</span></a></p>
+<p>Local, dynamic and directly referenced variables should not be assigned and directly returned by a function or method.</p>
+</li>
+<li><p><a class="reference internal" href="return_notation/simplified_null_return.html"><span class="doc">simplified_null_return</span></a></p>
+<p>A return statement wishing to return <code class="docutils literal notranslate"><span class="pre">void</span></code> should not return <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="semicolon">
+<h2>Semicolon<a class="headerlink" href="#semicolon" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="semicolon/multiline_whitespace_before_semicolons.html"><span class="doc">multiline_whitespace_before_semicolons</span></a></p>
+<p>Forbid multi-line whitespace before the closing semicolon or move the semicolon to the new line for chained calls.</p>
+</li>
+<li><p><a class="reference internal" href="semicolon/no_empty_statement.html"><span class="doc">no_empty_statement</span></a></p>
+<p>Remove useless (semicolon) statements.</p>
+</li>
+<li><p><a class="reference internal" href="semicolon/no_singleline_whitespace_before_semicolons.html"><span class="doc">no_singleline_whitespace_before_semicolons</span></a></p>
+<p>Single-line whitespace before closing semicolon are prohibited.</p>
+</li>
+<li><p><a class="reference internal" href="semicolon/semicolon_after_instruction.html"><span class="doc">semicolon_after_instruction</span></a></p>
+<p>Instructions must be terminated with a semicolon.</p>
+</li>
+<li><p><a class="reference internal" href="semicolon/space_after_semicolon.html"><span class="doc">space_after_semicolon</span></a></p>
+<p>Fix whitespace after a semicolon.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="strict">
+<h2>Strict<a class="headerlink" href="#strict" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="strict/declare_strict_types.html"><span class="doc">declare_strict_types</span></a> <em>(risky)</em></p>
+<p>Force strict types declaration in all files. Requires PHP &gt;= 7.0.</p>
+</li>
+<li><p><a class="reference internal" href="strict/strict_comparison.html"><span class="doc">strict_comparison</span></a> <em>(risky)</em></p>
+<p>Comparisons should be strict.</p>
+</li>
+<li><p><a class="reference internal" href="strict/strict_param.html"><span class="doc">strict_param</span></a> <em>(risky)</em></p>
+<p>Functions should be used with <code class="docutils literal notranslate"><span class="pre">$strict</span></code> param set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="string-notation">
+<h2>String Notation<a class="headerlink" href="#string-notation" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="string_notation/escape_implicit_backslashes.html"><span class="doc">escape_implicit_backslashes</span></a></p>
+<p>Escape implicit backslashes in strings and heredocs to ease the understanding of which are special chars interpreted by PHP and which not.</p>
+</li>
+<li><p><a class="reference internal" href="string_notation/explicit_string_variable.html"><span class="doc">explicit_string_variable</span></a></p>
+<p>Converts implicit variables into explicit ones in double-quoted strings or heredoc syntax.</p>
+</li>
+<li><p><a class="reference internal" href="string_notation/heredoc_to_nowdoc.html"><span class="doc">heredoc_to_nowdoc</span></a></p>
+<p>Convert <code class="docutils literal notranslate"><span class="pre">heredoc</span></code> to <code class="docutils literal notranslate"><span class="pre">nowdoc</span></code> where possible.</p>
+</li>
+<li><p><a class="reference internal" href="string_notation/no_binary_string.html"><span class="doc">no_binary_string</span></a></p>
+<p>There should not be a binary flag before strings.</p>
+</li>
+<li><p><a class="reference internal" href="string_notation/no_trailing_whitespace_in_string.html"><span class="doc">no_trailing_whitespace_in_string</span></a> <em>(risky)</em></p>
+<p>There must be no trailing whitespace in strings.</p>
+</li>
+<li><p><a class="reference internal" href="string_notation/simple_to_complex_string_variable.html"><span class="doc">simple_to_complex_string_variable</span></a></p>
+<p>Converts explicit variables in double-quoted strings and heredoc syntax from simple to complex format (<code class="docutils literal notranslate"><span class="pre">${</span></code> to <code class="docutils literal notranslate"><span class="pre">{$</span></code>).</p>
+</li>
+<li><p><a class="reference internal" href="string_notation/single_quote.html"><span class="doc">single_quote</span></a></p>
+<p>Convert double quotes to single quotes for simple strings.</p>
+</li>
+<li><p><a class="reference internal" href="string_notation/string_length_to_empty.html"><span class="doc">string_length_to_empty</span></a> <em>(risky)</em></p>
+<p>String tests for empty must be done against <code class="docutils literal notranslate"><span class="pre">''</span></code>, not with <code class="docutils literal notranslate"><span class="pre">strlen</span></code>.</p>
+</li>
+<li><p><a class="reference internal" href="string_notation/string_line_ending.html"><span class="doc">string_line_ending</span></a> <em>(risky)</em></p>
+<p>All multi-line strings must use correct line ending.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="whitespace">
+<h2>Whitespace<a class="headerlink" href="#whitespace" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><a class="reference internal" href="whitespace/array_indentation.html"><span class="doc">array_indentation</span></a></p>
+<p>Each element of an array must be indented exactly once.</p>
+</li>
+<li><p><a class="reference internal" href="whitespace/blank_line_before_statement.html"><span class="doc">blank_line_before_statement</span></a></p>
+<p>An empty line feed must precede any configured statement.</p>
+</li>
+<li><p><a class="reference internal" href="whitespace/compact_nullable_typehint.html"><span class="doc">compact_nullable_typehint</span></a></p>
+<p>Remove extra spaces in a nullable typehint.</p>
+</li>
+<li><p><a class="reference internal" href="whitespace/heredoc_indentation.html"><span class="doc">heredoc_indentation</span></a></p>
+<p>Heredoc/nowdoc content must be properly indented. Requires PHP &gt;= 7.3.</p>
+</li>
+<li><p><a class="reference internal" href="whitespace/indentation_type.html"><span class="doc">indentation_type</span></a></p>
+<p>Code MUST use configured indentation type.</p>
+</li>
+<li><p><a class="reference internal" href="whitespace/line_ending.html"><span class="doc">line_ending</span></a></p>
+<p>All PHP files must use same line ending.</p>
+</li>
+<li><p><a class="reference internal" href="whitespace/method_chaining_indentation.html"><span class="doc">method_chaining_indentation</span></a></p>
+<p>Method chaining MUST be properly indented. Method chaining with different levels of indentation is not supported.</p>
+</li>
+<li><p><a class="reference internal" href="whitespace/no_extra_blank_lines.html"><span class="doc">no_extra_blank_lines</span></a></p>
+<p>Removes extra blank lines and/or blank lines following configuration.</p>
+</li>
+<li><p><a class="reference internal" href="whitespace/no_spaces_around_offset.html"><span class="doc">no_spaces_around_offset</span></a></p>
+<p>There MUST NOT be spaces around offset braces.</p>
+</li>
+<li><p><a class="reference internal" href="whitespace/no_spaces_inside_parenthesis.html"><span class="doc">no_spaces_inside_parenthesis</span></a></p>
+<p>There MUST NOT be a space after the opening parenthesis. There MUST NOT be a space before the closing parenthesis.</p>
+</li>
+<li><p><a class="reference internal" href="whitespace/no_trailing_whitespace.html"><span class="doc">no_trailing_whitespace</span></a></p>
+<p>Remove trailing whitespace at the end of non-blank lines.</p>
+</li>
+<li><p><a class="reference internal" href="whitespace/no_whitespace_in_blank_line.html"><span class="doc">no_whitespace_in_blank_line</span></a></p>
+<p>Remove trailing whitespace at the end of blank lines.</p>
+</li>
+<li><p><a class="reference internal" href="whitespace/single_blank_line_at_eof.html"><span class="doc">single_blank_line_at_eof</span></a></p>
+<p>A PHP file without end tag must always end with a single empty line feed.</p>
+</li>
+<li><p><a class="reference internal" href="whitespace/types_spaces.html"><span class="doc">types_spaces</span></a></p>
+<p>A single space or none should be around union type operator.</p>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="ft">
+        <div class="content">
+          The <a href="../../_static/images/logo.png">logo</a> is &copy; 2010-2022 Sensio Labs
+        </div>
+      </div>
+  </body>
+</html>

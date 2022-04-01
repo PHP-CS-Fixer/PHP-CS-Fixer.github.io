@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index, follow, all" />
+    <meta name="Language" content="en" />
+    <meta name="Description" content="PHP Coding Standards Fixer" />
+    <meta name="Keywords" content="php, coding standards" />
+    
+      <title>PHP Coding Standards Fixer</title>
+    
+  <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
+  <link href="../../../_static/css/base.css" rel="stylesheet" type="text/css" />
+  <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css" />
+  <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css" />
+  <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css" />
+    
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32006827-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script> 
+  </head>
+  <body>
+      <div class="hd">
+        <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+
+        <div class="illustration png_fix">
+          <div class="content">
+            <div class="sensio_product">
+              <img class="png_fix" src="../../../_static/images/sensio-labs-product.png" alt="a Sensio Labs Product" />
+            </div>
+            <div class="clearfix">
+              <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
+              <h1 class="title_header">
+                <strong>BerSzcz against war! (v3.8.0)</strong> edition
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="bd">
+        <div class="content">
+          <div class="links_intro">
+            <ul>
+              <li>
+                <a href="./download/php-cs-fixer-v3.phar"><img class="install_now png_fix" src="../../../_static/images/install_now.png" alt="Install now" /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="more_intro">
+            
+  <div class="section" id="rule-phpdoc-to-comment">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">phpdoc_to_comment</span></code><a class="headerlink" href="#rule-phpdoc-to-comment" title="Permalink to this headline">¶</a></h1>
+<p>Docblocks should only be used on structural elements.</p>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ignored-tags">
+<h3><code class="docutils literal notranslate"><span class="pre">ignored_tags</span></code><a class="headerlink" href="#ignored-tags" title="Permalink to this headline">¶</a></h3>
+<p>List of ignored tags (matched case insensitively)</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-1">
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p><em>Default</em> configuration.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+ &lt;?php
+ $first = true;// needed because by default first docblock is never fixed.
+
+<span class="gd">-/** This should be a comment */</span>
+<span class="gi">+/* This should be a comment */</span>
+ foreach($connections as $key =&gt; $sqlite) {
+     $sqlite-&gt;open($path);
+ }
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-2">
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['ignored_tags'</span> <span class="pre">=&gt;</span> <span class="pre">['todo']]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+ &lt;?php
+ $first = true;// needed because by default first docblock is never fixed.
+
+<span class="gd">-/** This should be a comment */</span>
+<span class="gi">+/* This should be a comment */</span>
+ foreach($connections as $key =&gt; $sqlite) {
+     $sqlite-&gt;open($path);
+ }
+
+ /** @todo This should be a PHPDoc as the tag is on &quot;ignored_tags&quot; list */
+ foreach($connections as $key =&gt; $sqlite) {
+     $sqlite-&gt;open($path);
+ }
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="rule-sets">
+<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
+<p>The rule is part of the following rule sets:</p>
+<dl class="simple">
+<dt>&#64;PhpCsFixer</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">phpdoc_to_comment</span></code> rule with the default config.</p>
+</dd>
+<dt>&#64;Symfony</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">phpdoc_to_comment</span></code> rule with the default config.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="ft">
+        <div class="content">
+          The <a href="../../../_static/images/logo.png">logo</a> is &copy; 2010-2022 Sensio Labs
+        </div>
+      </div>
+  </body>
+</html>
