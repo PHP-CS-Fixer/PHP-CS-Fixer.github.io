@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>BerSzcz against war! (v3.8.0)</strong> edition
+                <strong>Grand Awaiting (v3.9.1)</strong> edition
               </h1>
             </div>
           </div>
@@ -63,10 +63,20 @@
   <div class="section" id="rule-single-import-per-statement">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">single_import_per_statement</span></code><a class="headerlink" href="#rule-single-import-per-statement" title="Permalink to this headline">¶</a></h1>
 <p>There MUST be one use keyword per declaration.</p>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="group-to-single-imports">
+<h3><code class="docutils literal notranslate"><span class="pre">group_to_single_imports</span></code><a class="headerlink" href="#group-to-single-imports" title="Permalink to this headline">¶</a></h3>
+<p>Whether to change group imports into single imports.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+</div>
+</div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
  &lt;?php
@@ -77,18 +87,36 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="example-2">
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['group_to_single_imports'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+ &lt;?php
+<span class="gd">-use Space\Models\ {</span>
+<span class="gd">-    TestModelA,</span>
+<span class="gd">-    TestModelB,</span>
+<span class="gd">-    TestModel,</span>
+<span class="gd">-};</span>
+<span class="gi">+use Space\Models\TestModelA;</span>
+<span class="gi">+use Space\Models\TestModelB;</span>
+<span class="gi">+use Space\Models\TestModel;</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
-<dl class="simple">
-<dt>&#64;PSR12</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">single_import_per_statement</span></code> rule.</p>
+<dl>
+<dt>&#64;PSR12</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">single_import_per_statement</span></code> rule with the config below:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['group_to_single_imports'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code></p>
 </dd>
-<dt>&#64;PSR2</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">single_import_per_statement</span></code> rule.</p>
+<dt>&#64;PSR2</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">single_import_per_statement</span></code> rule with the default config.</p>
 </dd>
-<dt>&#64;PhpCsFixer</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">single_import_per_statement</span></code> rule.</p>
+<dt>&#64;PhpCsFixer</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">single_import_per_statement</span></code> rule with the default config.</p>
 </dd>
-<dt>&#64;Symfony</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">single_import_per_statement</span></code> rule.</p>
+<dt>&#64;Symfony</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">single_import_per_statement</span></code> rule with the default config.</p>
 </dd>
 </dl>
 </div>

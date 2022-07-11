@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>BerSzcz against war! (v3.8.0)</strong> edition
+                <strong>Grand Awaiting (v3.9.1)</strong> edition
               </h1>
             </div>
           </div>
@@ -117,7 +117,7 @@ config:
 <li><p><a class="reference internal" href="../rules/semicolon/no_empty_statement.html"><span class="doc">no_empty_statement</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/whitespace/no_extra_blank_lines.html"><span class="doc">no_extra_blank_lines</span></a>
 config:
-<code class="docutils literal notranslate"><span class="pre">['tokens'</span> <span class="pre">=&gt;</span> <span class="pre">['case',</span> <span class="pre">'continue',</span> <span class="pre">'curly_brace_block',</span> <span class="pre">'default',</span> <span class="pre">'extra',</span> <span class="pre">'parenthesis_brace_block',</span> <span class="pre">'square_brace_block',</span> <span class="pre">'switch',</span> <span class="pre">'throw',</span> <span class="pre">'use']]</span></code></p></li>
+<code class="docutils literal notranslate"><span class="pre">['tokens'</span> <span class="pre">=&gt;</span> <span class="pre">['attribute',</span> <span class="pre">'case',</span> <span class="pre">'continue',</span> <span class="pre">'curly_brace_block',</span> <span class="pre">'default',</span> <span class="pre">'extra',</span> <span class="pre">'parenthesis_brace_block',</span> <span class="pre">'square_brace_block',</span> <span class="pre">'switch',</span> <span class="pre">'throw',</span> <span class="pre">'use']]</span></code></p></li>
 <li><p><a class="reference internal" href="../rules/namespace_notation/no_leading_namespace_whitespace.html"><span class="doc">no_leading_namespace_whitespace</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/alias/no_mixed_echo_print.html"><span class="doc">no_mixed_echo_print</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/array_notation/no_multiline_whitespace_around_double_arrow.html"><span class="doc">no_multiline_whitespace_around_double_arrow</span></a></p></li>
@@ -132,13 +132,14 @@ config:
 <li><p><a class="reference internal" href="../rules/function_notation/no_trailing_comma_in_singleline_function_call.html"><span class="doc">no_trailing_comma_in_singleline_function_call</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/control_structure/no_unneeded_control_parentheses.html"><span class="doc">no_unneeded_control_parentheses</span></a>
 config:
-<code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['break',</span> <span class="pre">'clone',</span> <span class="pre">'continue',</span> <span class="pre">'echo_print',</span> <span class="pre">'return',</span> <span class="pre">'switch_case',</span> <span class="pre">'yield',</span> <span class="pre">'yield_from']]</span></code></p></li>
+<code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['break',</span> <span class="pre">'clone',</span> <span class="pre">'continue',</span> <span class="pre">'echo_print',</span> <span class="pre">'others',</span> <span class="pre">'return',</span> <span class="pre">'switch_case',</span> <span class="pre">'yield',</span> <span class="pre">'yield_from']]</span></code></p></li>
 <li><p><a class="reference internal" href="../rules/control_structure/no_unneeded_curly_braces.html"><span class="doc">no_unneeded_curly_braces</span></a>
 config:
 <code class="docutils literal notranslate"><span class="pre">['namespaces'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p></li>
 <li><p><a class="reference internal" href="../rules/import/no_unneeded_import_alias.html"><span class="doc">no_unneeded_import_alias</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/cast_notation/no_unset_cast.html"><span class="doc">no_unset_cast</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/import/no_unused_imports.html"><span class="doc">no_unused_imports</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/operator/no_useless_nullsafe_operator.html"><span class="doc">no_useless_nullsafe_operator</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/array_notation/no_whitespace_before_comma_in_array.html"><span class="doc">no_whitespace_before_comma_in_array</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/array_notation/normalize_index_brace.html"><span class="doc">normalize_index_brace</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/operator/object_operator_without_whitespace.html"><span class="doc">object_operator_without_whitespace</span></a></p></li>
@@ -171,14 +172,18 @@ config:
 <li><p><a class="reference internal" href="../rules/phpdoc/phpdoc_var_without_name.html"><span class="doc">phpdoc_var_without_name</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/class_notation/protected_to_private.html"><span class="doc">protected_to_private</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/semicolon/semicolon_after_instruction.html"><span class="doc">semicolon_after_instruction</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/string_notation/simple_to_complex_string_variable.html"><span class="doc">simple_to_complex_string_variable</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/class_notation/single_class_element_per_statement.html"><span class="doc">single_class_element_per_statement</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/import/single_import_per_statement.html"><span class="doc">single_import_per_statement</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/comment/single_line_comment_spacing.html"><span class="doc">single_line_comment_spacing</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/comment/single_line_comment_style.html"><span class="doc">single_line_comment_style</span></a>
 config:
 <code class="docutils literal notranslate"><span class="pre">['comment_types'</span> <span class="pre">=&gt;</span> <span class="pre">['hash']]</span></code></p></li>
 <li><p><a class="reference internal" href="../rules/function_notation/single_line_throw.html"><span class="doc">single_line_throw</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/string_notation/single_quote.html"><span class="doc">single_quote</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/language_construct/single_space_after_construct.html"><span class="doc">single_space_after_construct</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/language_construct/single_space_after_construct.html"><span class="doc">single_space_after_construct</span></a>
+config:
+<code class="docutils literal notranslate"><span class="pre">['constructs'</span> <span class="pre">=&gt;</span> <span class="pre">['abstract',</span> <span class="pre">'as',</span> <span class="pre">'attribute',</span> <span class="pre">'break',</span> <span class="pre">'case',</span> <span class="pre">'catch',</span> <span class="pre">'class',</span> <span class="pre">'clone',</span> <span class="pre">'comment',</span> <span class="pre">'const',</span> <span class="pre">'const_import',</span> <span class="pre">'continue',</span> <span class="pre">'do',</span> <span class="pre">'echo',</span> <span class="pre">'else',</span> <span class="pre">'elseif',</span> <span class="pre">'enum',</span> <span class="pre">'extends',</span> <span class="pre">'final',</span> <span class="pre">'finally',</span> <span class="pre">'for',</span> <span class="pre">'foreach',</span> <span class="pre">'function',</span> <span class="pre">'function_import',</span> <span class="pre">'global',</span> <span class="pre">'goto',</span> <span class="pre">'if',</span> <span class="pre">'implements',</span> <span class="pre">'include',</span> <span class="pre">'include_once',</span> <span class="pre">'instanceof',</span> <span class="pre">'insteadof',</span> <span class="pre">'interface',</span> <span class="pre">'match',</span> <span class="pre">'named_argument',</span> <span class="pre">'namespace',</span> <span class="pre">'new',</span> <span class="pre">'open_tag_with_echo',</span> <span class="pre">'php_doc',</span> <span class="pre">'php_open',</span> <span class="pre">'print',</span> <span class="pre">'private',</span> <span class="pre">'protected',</span> <span class="pre">'public',</span> <span class="pre">'readonly',</span> <span class="pre">'require',</span> <span class="pre">'require_once',</span> <span class="pre">'return',</span> <span class="pre">'static',</span> <span class="pre">'switch',</span> <span class="pre">'throw',</span> <span class="pre">'trait',</span> <span class="pre">'try',</span> <span class="pre">'type_colon',</span> <span class="pre">'use',</span> <span class="pre">'use_lambda',</span> <span class="pre">'use_trait',</span> <span class="pre">'var',</span> <span class="pre">'while',</span> <span class="pre">'yield',</span> <span class="pre">'yield_from']]</span></code></p></li>
 <li><p><a class="reference internal" href="../rules/semicolon/space_after_semicolon.html"><span class="doc">space_after_semicolon</span></a>
 config:
 <code class="docutils literal notranslate"><span class="pre">['remove_in_empty_for_expressions'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p></li>

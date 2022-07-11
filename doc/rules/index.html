@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>BerSzcz against war! (v3.8.0)</strong> edition
+                <strong>Grand Awaiting (v3.9.1)</strong> edition
               </h1>
             </div>
           </div>
@@ -131,6 +131,9 @@
 <ul>
 <li><p><a class="reference internal" href="basic/braces.html"><span class="doc">braces</span></a></p>
 <p>The body of each structure MUST be enclosed by braces. Braces should be properly placed. Body of braces should be properly indented.</p>
+</li>
+<li><p><a class="reference internal" href="basic/curly_braces_position.html"><span class="doc">curly_braces_position</span></a></p>
+<p>Curly braces must be placed as configured.</p>
 </li>
 <li><p><a class="reference internal" href="basic/encoding.html"><span class="doc">encoding</span></a></p>
 <p>PHP code MUST use only UTF-8 without BOM (remove BOM).</p>
@@ -305,6 +308,9 @@
 <div class="section" id="control-structure">
 <h2>Control Structure<a class="headerlink" href="#control-structure" title="Permalink to this headline">¶</a></h2>
 <ul>
+<li><p><a class="reference internal" href="control_structure/control_structure_braces.html"><span class="doc">control_structure_braces</span></a></p>
+<p>The body of each control structure MUST be enclosed within braces.</p>
+</li>
 <li><p><a class="reference internal" href="control_structure/control_structure_continuation_position.html"><span class="doc">control_structure_continuation_position</span></a></p>
 <p>Control structure continuation keyword must be on the configured line.</p>
 </li>
@@ -354,7 +360,7 @@
 <p>Switch case must not be ended with <code class="docutils literal notranslate"><span class="pre">continue</span></code> but with <code class="docutils literal notranslate"><span class="pre">break</span></code>.</p>
 </li>
 <li><p><a class="reference internal" href="control_structure/trailing_comma_in_multiline.html"><span class="doc">trailing_comma_in_multiline</span></a></p>
-<p>Multi-line arrays, arguments list and parameters list must have a trailing comma.</p>
+<p>Multi-line arrays, arguments list, parameters list and <code class="docutils literal notranslate"><span class="pre">match</span></code> expressions must have a trailing comma.</p>
 </li>
 <li><p><a class="reference internal" href="control_structure/yoda_style.html"><span class="doc">yoda_style</span></a></p>
 <p>Write conditions in Yoda style (<code class="docutils literal notranslate"><span class="pre">true</span></code>), non-Yoda style (<code class="docutils literal notranslate"><span class="pre">['equal'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'identical'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'less_and_greater'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>) or ignore those conditions (<code class="docutils literal notranslate"><span class="pre">null</span></code>) based on configuration.</p>
@@ -590,6 +596,9 @@
 </li>
 <li><p><a class="reference internal" href="operator/no_space_around_double_colon.html"><span class="doc">no_space_around_double_colon</span></a></p>
 <p>There must be no space around double colons (also called Scope Resolution Operator or Paamayim Nekudotayim).</p>
+</li>
+<li><p><a class="reference internal" href="operator/no_useless_nullsafe_operator.html"><span class="doc">no_useless_nullsafe_operator</span></a></p>
+<p>There should not be useless <code class="docutils literal notranslate"><span class="pre">null-safe-operators</span></code> <code class="docutils literal notranslate"><span class="pre">?-&gt;</span></code> used.</p>
 </li>
 <li><p><a class="reference internal" href="operator/not_operator_with_space.html"><span class="doc">not_operator_with_space</span></a></p>
 <p>Logical NOT operators (<code class="docutils literal notranslate"><span class="pre">!</span></code>) should have leading and trailing whitespaces.</p>
@@ -892,6 +901,9 @@
 <li><p><a class="reference internal" href="whitespace/blank_line_before_statement.html"><span class="doc">blank_line_before_statement</span></a></p>
 <p>An empty line feed must precede any configured statement.</p>
 </li>
+<li><p><a class="reference internal" href="whitespace/blank_line_between_import_groups.html"><span class="doc">blank_line_between_import_groups</span></a></p>
+<p>Putting blank lines between <code class="docutils literal notranslate"><span class="pre">use</span></code> statement groups.</p>
+</li>
 <li><p><a class="reference internal" href="whitespace/compact_nullable_typehint.html"><span class="doc">compact_nullable_typehint</span></a></p>
 <p>Remove extra spaces in a nullable typehint.</p>
 </li>
@@ -924,6 +936,9 @@
 </li>
 <li><p><a class="reference internal" href="whitespace/single_blank_line_at_eof.html"><span class="doc">single_blank_line_at_eof</span></a></p>
 <p>A PHP file without end tag must always end with a single empty line feed.</p>
+</li>
+<li><p><a class="reference internal" href="whitespace/statement_indentation.html"><span class="doc">statement_indentation</span></a></p>
+<p>Each statement must be indented.</p>
 </li>
 <li><p><a class="reference internal" href="whitespace/types_spaces.html"><span class="doc">types_spaces</span></a></p>
 <p>A single space or none should be around union type operator.</p>
