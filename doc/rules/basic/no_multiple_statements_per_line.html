@@ -60,29 +60,19 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-date-time-create-from-format-call">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">date_time_create_from_format_call</span></code><a class="headerlink" href="#rule-date-time-create-from-format-call" title="Permalink to this headline">¶</a></h1>
-<p>The first argument of <code class="docutils literal notranslate"><span class="pre">DateTime::createFromFormat</span></code> method must start with
-<code class="docutils literal notranslate"><span class="pre">!</span></code>.</p>
-<div class="section" id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>Consider this code:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">DateTime::createFromFormat('Y-m-d',</span> <span class="pre">'2022-02-11')</span></code>.
-What value will be returned? ‘2022-01-11 00:00:00.0’? No, actual return</p>
-</dd>
-<dt>value has ‘H:i:s’ section like ‘2022-02-11 16:55:37.0’.</dt><dd><p>Change ‘Y-m-d’ to ‘!Y-m-d’, return value will be ‘2022-01-11 00:00:00.0’.
-So, adding <code class="docutils literal notranslate"><span class="pre">!</span></code> to format string will make return value more intuitive.</p>
-</dd>
-</dl>
-</div>
+  <div class="section" id="rule-no-multiple-statements-per-line">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">no_multiple_statements_per_line</span></code><a class="headerlink" href="#rule-no-multiple-statements-per-line" title="Permalink to this headline">¶</a></h1>
+<p>There must not be more than one statement per line.</p>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
-<span class="gd">-&lt;?php \DateTime::createFromFormat(&#39;Y-m-d&#39;, &#39;2022-02-11&#39;);</span>
-<span class="gi">+&lt;?php \DateTime::createFromFormat(&#39;!Y-m-d&#39;, &#39;2022-02-11&#39;);</span>
+ &lt;?php
+<span class="gd">-foo(); bar();</span>
+<span class="gi">+foo();</span>
+<span class="gi">+bar();</span>
 </pre></div>
 </div>
 </div>

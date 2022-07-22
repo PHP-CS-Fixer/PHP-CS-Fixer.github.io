@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Grand Awaiting (v3.9.4)</strong> edition
+                <strong>Grand Awaiting (v3.9.5)</strong> edition
               </h1>
             </div>
           </div>
@@ -137,6 +137,9 @@
 </li>
 <li><p><a class="reference internal" href="basic/encoding.html"><span class="doc">encoding</span></a></p>
 <p>PHP code MUST use only UTF-8 without BOM (remove BOM).</p>
+</li>
+<li><p><a class="reference internal" href="basic/no_multiple_statements_per_line.html"><span class="doc">no_multiple_statements_per_line</span></a></p>
+<p>There must not be more than one statement per line.</p>
 </li>
 <li><p><a class="reference internal" href="basic/non_printable_character.html"><span class="doc">non_printable_character</span></a> <em>(risky)</em></p>
 <p>Remove Zero-width space (ZWSP), Non-breaking space (NBSP) and other invisible unicode symbols.</p>
@@ -445,7 +448,7 @@
 <p>Callables must be called without using <code class="docutils literal notranslate"><span class="pre">call_user_func*</span></code> when possible.</p>
 </li>
 <li><p><a class="reference internal" href="function_notation/return_type_declaration.html"><span class="doc">return_type_declaration</span></a></p>
-<p>There should be one or no space before colon, and one space after it in return type declarations, according to configuration.</p>
+<p>Adjust spacing around colon in return type declarations and backed enum types.</p>
 </li>
 <li><p><a class="reference internal" href="function_notation/single_line_throw.html"><span class="doc">single_line_throw</span></a></p>
 <p>Throwing exception must be done in single line.</p>

@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Grand Awaiting (v3.9.4)</strong> edition
+                <strong>Grand Awaiting (v3.9.5)</strong> edition
               </h1>
             </div>
           </div>
@@ -1562,6 +1562,10 @@ to renamed code (<code class="docutils literal notranslate"><span class="pre">$$
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ArrayNotation/NoMultilineWhitespaceAroundDoubleArrowFixer.php">Source PhpCsFixer\Fixer\ArrayNotation\NoMultilineWhitespaceAroundDoubleArrowFixer</a></p>
 </li>
+<li><p><a class="reference internal" href="rules/basic/no_multiple_statements_per_line.html"><span class="doc">no_multiple_statements_per_line</span></a></p>
+<p>There must not be more than one statement per line.</p>
+<p><a class="reference external" href="./../src/Fixer/Basic/NoMultipleStatementsPerLineFixer.php">Source PhpCsFixer\Fixer\Basic\NoMultipleStatementsPerLineFixer</a></p>
+</li>
 <li><p><a class="reference internal" href="rules/class_notation/no_null_property_initialization.html"><span class="doc">no_null_property_initialization</span></a></p>
 <p>Properties MUST not be explicitly initialized with <code class="docutils literal notranslate"><span class="pre">null</span></code> except when they have a type declaration (PHP 7.4).</p>
 <p>Part of rule set <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p>
@@ -2588,7 +2592,7 @@ overridden or when are used in constructions that should be avoided, like
 <p><a class="reference external" href="./../src/Fixer/ReturnNotation/ReturnAssignmentFixer.php">Source PhpCsFixer\Fixer\ReturnNotation\ReturnAssignmentFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/return_type_declaration.html"><span class="doc">return_type_declaration</span></a></p>
-<p>There should be one or no space before colon, and one space after it in return type declarations, according to configuration.</p>
+<p>Adjust spacing around colon in return type declarations and backed enum types.</p>
 <p>Rule is applied only in a PHP 7+ environment.</p>
 <p>Configuration options:</p>
 <ul>
