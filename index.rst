@@ -52,8 +52,8 @@ Editor Integration
 Dedicated plugins exist for:
 
 -  `Atom <https://github.com/Glavin001/atom-beautify>`__
--  `NetBeans <http://plugins.netbeans.org/plugin/49042/php-cs-fixer>`__
--  `PhpStorm <https://medium.com/@valeryan/how-to-configure-phpstorm-to-use-php-cs-fixer-1844991e521f>`__
+-  `NetBeans <https://plugins.netbeans.apache.org/catalogue/?id=36>`__
+-  `PhpStorm <https://www.jetbrains.com/help/phpstorm/using-php-cs-fixer.html>`__
 -  `Sublime Text <https://github.com/benmatselby/sublime-phpcs>`__
 -  `Vim <https://github.com/stephpy/vim-php-cs-fixer>`__
 -  `VS Code <https://github.com/junstyle/vscode-php-cs-fixer>`__
