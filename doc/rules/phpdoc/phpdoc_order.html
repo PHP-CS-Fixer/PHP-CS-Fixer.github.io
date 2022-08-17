@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Grand Awaiting (v3.9.5)</strong> edition
+                <strong>Oliva (v3.10.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -62,12 +62,21 @@
             
   <div class="section" id="rule-phpdoc-order">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">phpdoc_order</span></code><a class="headerlink" href="#rule-phpdoc-order" title="Permalink to this headline">¶</a></h1>
-<p>Annotations in PHPDoc should be ordered so that <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> annotations come
-first, then <code class="docutils literal notranslate"><span class="pre">&#64;throws</span></code> annotations, then <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> annotations.</p>
+<p>Annotations in PHPDoc should be ordered in defined sequence.</p>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="order">
+<h3><code class="docutils literal notranslate"><span class="pre">order</span></code><a class="headerlink" href="#order" title="Permalink to this headline">¶</a></h3>
+<p>Sequence in which annotations in PHPDoc should be ordered.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">string[]</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">['param',</span> <span class="pre">'throws',</span> <span class="pre">'return']</span></code></p>
+</div>
+</div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
  &lt;?php
@@ -85,12 +94,76 @@ first, then <code class="docutils literal notranslate"><span class="pre">&#64;th
 </pre></div>
 </div>
 </div>
+<div class="section" id="example-2">
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['param',</span> <span class="pre">'throws',</span> <span class="pre">'return']]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+ &lt;?php
+ /**
+  * Hello there!
+  *
+<span class="gd">- * @throws Exception|RuntimeException foo</span>
+  * @custom Test!
+<span class="gd">- * @return int  Return the number of changes.</span>
+  * @param string $foo
+  * @param bool   $bar Bar
+<span class="gi">+ * @throws Exception|RuntimeException foo</span>
+<span class="gi">+ * @return int  Return the number of changes.</span>
+  */
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['param',</span> <span class="pre">'return',</span> <span class="pre">'throws']]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+ &lt;?php
+ /**
+  * Hello there!
+  *
+<span class="gd">- * @throws Exception|RuntimeException foo</span>
+  * @custom Test!
+<span class="gd">- * @return int  Return the number of changes.</span>
+  * @param string $foo
+  * @param bool   $bar Bar
+<span class="gi">+ * @return int  Return the number of changes.</span>
+<span class="gi">+ * @throws Exception|RuntimeException foo</span>
+  */
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-4">
+<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['param',</span> <span class="pre">'custom',</span> <span class="pre">'throws',</span> <span class="pre">'return']]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+ &lt;?php
+ /**
+  * Hello there!
+  *
+<span class="gi">+ * @param string $foo</span>
+<span class="gi">+ * @param bool   $bar Bar</span>
+<span class="gi">+ * @custom Test!</span>
+  * @throws Exception|RuntimeException foo
+<span class="gd">- * @custom Test!</span>
+  * @return int  Return the number of changes.
+<span class="gd">- * @param string $foo</span>
+<span class="gd">- * @param bool   $bar Bar</span>
+  */
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
-<p>The rule is part of the following rule set:</p>
-<dl class="simple">
-<dt>&#64;PhpCsFixer</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">phpdoc_order</span></code> rule.</p>
+<p>The rule is part of the following rule sets:</p>
+<dl>
+<dt>&#64;PhpCsFixer</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">phpdoc_order</span></code> rule with the default config.</p>
+</dd>
+<dt>&#64;Symfony</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">phpdoc_order</span></code> rule with the config below:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['param',</span> <span class="pre">'return',</span> <span class="pre">'throws']]</span></code></p>
 </dd>
 </dl>
 </div>

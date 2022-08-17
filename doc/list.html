@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Grand Awaiting (v3.9.5)</strong> edition
+                <strong>Oliva (v3.10.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -2051,8 +2051,18 @@ interface, because PHP doesn’t break on <code class="docutils literal notransl
 <p><a class="reference external" href="./../src/Fixer/Phpdoc/PhpdocNoUselessInheritdocFixer.php">Source PhpCsFixer\Fixer\Phpdoc\PhpdocNoUselessInheritdocFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/phpdoc/phpdoc_order.html"><span class="doc">phpdoc_order</span></a></p>
-<p>Annotations in PHPDoc should be ordered so that <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> annotations come first, then <code class="docutils literal notranslate"><span class="pre">&#64;throws</span></code> annotations, then <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> annotations.</p>
-<p>Part of rule set <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p>
+<p>Annotations in PHPDoc should be ordered in defined sequence.</p>
+<p>Configuration options:</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">order</span></code></div>
+<div class="line">Sequence in which annotations in PHPDoc should be ordered.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">string[]</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['param',</span> <span class="pre">'throws',</span> <span class="pre">'return']</span></code></div>
+</div>
+</li>
+</ul>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Phpdoc/PhpdocOrderFixer.php">Source PhpCsFixer\Fixer\Phpdoc\PhpdocOrderFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/phpdoc/phpdoc_order_by_value.html"><span class="doc">phpdoc_order_by_value</span></a></p>
@@ -2877,12 +2887,12 @@ comparisons and outputs.</p>
 <p><a class="reference external" href="./../src/Fixer/ArrayNotation/TrimArraySpacesFixer.php">Source PhpCsFixer\Fixer\ArrayNotation\TrimArraySpacesFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/whitespace/types_spaces.html"><span class="doc">types_spaces</span></a></p>
-<p>A single space or none should be around union type operator.</p>
+<p>A single space or none should be around union type and intersection type operators.</p>
 <p>Configuration options:</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">space</span></code></div>
-<div class="line">spacing to apply around union type operator.</div>
+<div class="line">spacing to apply around union type and intersection type operators.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 </div>
@@ -2933,6 +2943,16 @@ comparisons and outputs.</p>
 </li>
 <li><p><a class="reference internal" href="rules/array_notation/whitespace_after_comma_in_array.html"><span class="doc">whitespace_after_comma_in_array</span></a></p>
 <p>In array declaration, there MUST be a whitespace after each comma.</p>
+<p>Configuration options:</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">ensure_single_space</span></code></div>
+<div class="line">If there are only horizontal whitespaces after the comma then ensure it is a single space.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
+</div>
+</li>
+</ul>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ArrayNotation/WhitespaceAfterCommaInArrayFixer.php">Source PhpCsFixer\Fixer\ArrayNotation\WhitespaceAfterCommaInArrayFixer</a></p>
 </li>
