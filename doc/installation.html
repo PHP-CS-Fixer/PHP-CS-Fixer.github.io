@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Oliva (v3.10.0)</strong> edition
+                <strong>Oliva (v3.11.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -76,20 +76,20 @@
 <h3>Globally (manual)<a class="headerlink" href="#globally-manual" title="Permalink to this headline">¶</a></h3>
 <p>You can run these commands to easily access latest <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code> from anywhere on
 your system:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> wget https://cs.symfony.com/download/php-cs-fixer-v3.phar -O php-cs-fixer
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">wget https://cs.symfony.com/download/php-cs-fixer-v3.phar -O php-cs-fixer</span>
 </pre></div>
 </div>
 <p>or with specified version:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> wget https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v3.0.1/php-cs-fixer.phar -O php-cs-fixer
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">wget https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v3.0.1/php-cs-fixer.phar -O php-cs-fixer</span>
 </pre></div>
 </div>
 <p>or with curl:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> curl -L https://cs.symfony.com/download/php-cs-fixer-v3.phar -o php-cs-fixer
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">curl -L https://cs.symfony.com/download/php-cs-fixer-v3.phar -o php-cs-fixer</span>
 </pre></div>
 </div>
 <p>then:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo chmod a+x php-cs-fixer
-<span class="gp">$</span> sudo mv php-cs-fixer /usr/local/bin/php-cs-fixer
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo chmod a+x php-cs-fixer</span>
+<span class="go">sudo mv php-cs-fixer /usr/local/bin/php-cs-fixer</span>
 </pre></div>
 </div>
 <p>Then, just run <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code>.</p>
@@ -97,24 +97,24 @@ your system:</p>
 <div class="section" id="globally-composer">
 <h3>Globally (Composer)<a class="headerlink" href="#globally-composer" title="Permalink to this headline">¶</a></h3>
 <p>To install PHP CS Fixer, <a class="reference external" href="https://getcomposer.org/download/">install Composer</a> and issue the following command:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> composer global require friendsofphp/php-cs-fixer
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">composer global require friendsofphp/php-cs-fixer</span>
 </pre></div>
 </div>
 <p>Then make sure you have the global Composer binaries directory in your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. This directory is platform-dependent, see <a class="reference external" href="https://getcomposer.org/doc/03-cli.md#composer-home">Composer documentation</a> for details. Example for some Unix systems:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$PATH</span><span class="s2">:</span><span class="nv">$HOME</span><span class="s2">/.composer/vendor/bin&quot;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export PATH=&quot;$PATH:$HOME/.composer/vendor/bin&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="globally-homebrew">
 <h3>Globally (homebrew)<a class="headerlink" href="#globally-homebrew" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> brew install php-cs-fixer
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">brew install php-cs-fixer</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="locally-phive">
 <h3>Locally (PHIVE)<a class="headerlink" href="#locally-phive" title="Permalink to this headline">¶</a></h3>
 <p>Install <a class="reference external" href="https://phar.io">PHIVE</a> and issue the following command:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> phive install php-cs-fixer <span class="c1"># use `--global` for global install</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">phive install php-cs-fixer # use `--global` for global install</span>
 </pre></div>
 </div>
 </div>
@@ -124,34 +124,34 @@ your system:</p>
 <div class="section" id="id2">
 <h3>Locally<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">self-update</span></code> command tries to update <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code> itself:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> php php-cs-fixer.phar self-update
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar self-update</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id3">
 <h3>Globally (manual)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>You can update <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code> through this command:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo php-cs-fixer self-update
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo php-cs-fixer self-update</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id4">
 <h3>Globally (Composer)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>You can update <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code> through this command:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> ./composer.phar global update friendsofphp/php-cs-fixer
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">./composer.phar global update friendsofphp/php-cs-fixer</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id5">
 <h3>Globally (homebrew)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>You can update <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code> through this command:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> brew upgrade php-cs-fixer
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">brew upgrade php-cs-fixer</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id6">
 <h3>Locally (PHIVE)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> phive update php-cs-fixer
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">phive update php-cs-fixer</span>
 </pre></div>
 </div>
 </div>

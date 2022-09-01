@@ -60,22 +60,47 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-phpdoc-summary">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">phpdoc_summary</span></code><a class="headerlink" href="#rule-phpdoc-summary" title="Permalink to this headline">¶</a></h1>
-<p>PHPDoc summary should end in either a full stop, exclamation mark, or question
-mark.</p>
+  <div class="section" id="rule-no-trailing-comma-in-singleline">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">no_trailing_comma_in_singleline</span></code><a class="headerlink" href="#rule-no-trailing-comma-in-singleline" title="Permalink to this headline">¶</a></h1>
+<p>If a list of values separated by a comma is contained on a single line, then the
+last item MUST NOT have a trailing comma.</p>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="elements">
+<h3><code class="docutils literal notranslate"><span class="pre">elements</span></code><a class="headerlink" href="#elements" title="Permalink to this headline">¶</a></h3>
+<p>Which elements to fix.</p>
+<p>Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['arguments',</span> <span class="pre">'array_destructuring',</span> <span class="pre">'array',</span> <span class="pre">'group_import']</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">['arguments',</span> <span class="pre">'array_destructuring',</span> <span class="pre">'array',</span> <span class="pre">'group_import']</span></code></p>
+</div>
+</div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
  &lt;?php
- /**
-<span class="gd">- * Foo function is great</span>
-<span class="gi">+ * Foo function is great.</span>
-  */
- function foo () {}
+<span class="gd">-foo($a,);</span>
+<span class="gd">-$foo = array(1,);</span>
+<span class="gd">-[$foo, $bar,] = $array;</span>
+<span class="gd">-use a\{ClassA, ClassB,};</span>
+<span class="gi">+foo($a);</span>
+<span class="gi">+$foo = array(1);</span>
+<span class="gi">+[$foo, $bar] = $array;</span>
+<span class="gi">+use a\{ClassA, ClassB};</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-2">
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['elements'</span> <span class="pre">=&gt;</span> <span class="pre">['array_destructuring']]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+ &lt;?php
+ foo($a,);
+<span class="gd">-[$foo, $bar,] = $array;</span>
+<span class="gi">+[$foo, $bar] = $array;</span>
 </pre></div>
 </div>
 </div>
@@ -84,9 +109,9 @@ mark.</p>
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <dl class="simple">
-<dt>&#64;PhpCsFixer</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">phpdoc_summary</span></code> rule.</p>
+<dt>&#64;PhpCsFixer</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">no_trailing_comma_in_singleline</span></code> rule with the default config.</p>
 </dd>
-<dt>&#64;Symfony</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">phpdoc_summary</span></code> rule.</p>
+<dt>&#64;Symfony</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">no_trailing_comma_in_singleline</span></code> rule with the default config.</p>
 </dd>
 </dl>
 </div>

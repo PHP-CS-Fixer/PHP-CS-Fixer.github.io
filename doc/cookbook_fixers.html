@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Oliva (v3.10.0)</strong> edition
+                <strong>Oliva (v3.11.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -312,7 +312,7 @@ final class RemoveCommentsFixer extends AbstractFixer
 <p>Next, we need to update the documentation.
 Fortunately, PHP CS Fixer can help you here.
 Execute the following command in your command shell:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> php dev-tools/doc.php
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php dev-tools/doc.php</span>
 </pre></div>
 </div>
 <p>Next, we must filter what type of tokens we want to fix. Here, we are interested in code that contains <code class="docutils literal notranslate"><span class="pre">T_COMMENT</span></code> tokens:</p>
@@ -349,7 +349,7 @@ Execute the following command in your command shell:</p>
 <span class="x">}</span>
 </pre></div>
 </div>
-<p>Run <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">phpunit</span> <span class="pre">tests/Fixer/Comment/RemoveCommentsFixerTest.php</span></code>.
+<p>Run <code class="docutils literal notranslate"><span class="pre">phpunit</span> <span class="pre">tests/Fixer/Comment/RemoveCommentsFixerTest.php</span></code>.
 You are going to see that the tests fail.</p>
 </div>
 <div class="section" id="break">
@@ -502,7 +502,7 @@ token is a semicolon.</p>
 <p>Note that so far, we have not coded adhering to PSR-1/2. This is done on
 purpose. For every commit you make, you must use PHP CS Fixer to fix
 itself. Thus, on the command line call:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> php php-cs-fixer fix
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer fix</span>
 </pre></div>
 </div>
 <p>This will fix all the coding style mistakes.</p>

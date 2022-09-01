@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Oliva (v3.10.0)</strong> edition
+                <strong>Oliva (v3.11.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -109,7 +109,7 @@
 <li><p><a class="reference internal" href="array_notation/no_multiline_whitespace_around_double_arrow.html"><span class="doc">no_multiline_whitespace_around_double_arrow</span></a></p>
 <p>Operator <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code> should not be surrounded by multi-line whitespaces.</p>
 </li>
-<li><p><a class="reference internal" href="array_notation/no_trailing_comma_in_singleline_array.html"><span class="doc">no_trailing_comma_in_singleline_array</span></a></p>
+<li><p><a class="reference internal" href="array_notation/no_trailing_comma_in_singleline_array.html"><span class="doc">no_trailing_comma_in_singleline_array</span></a> <em>(deprecated)</em></p>
 <p>PHP single-line arrays should not have trailing comma.</p>
 </li>
 <li><p><a class="reference internal" href="array_notation/no_whitespace_before_comma_in_array.html"><span class="doc">no_whitespace_before_comma_in_array</span></a></p>
@@ -140,6 +140,9 @@
 </li>
 <li><p><a class="reference internal" href="basic/no_multiple_statements_per_line.html"><span class="doc">no_multiple_statements_per_line</span></a></p>
 <p>There must not be more than one statement per line.</p>
+</li>
+<li><p><a class="reference internal" href="basic/no_trailing_comma_in_singleline.html"><span class="doc">no_trailing_comma_in_singleline</span></a></p>
+<p>If a list of values separated by a comma is contained on a single line, then the last item MUST NOT have a trailing comma.</p>
 </li>
 <li><p><a class="reference internal" href="basic/non_printable_character.html"><span class="doc">non_printable_character</span></a> <em>(risky)</em></p>
 <p>Remove Zero-width space (ZWSP), Non-breaking space (NBSP) and other invisible unicode symbols.</p>
@@ -338,7 +341,7 @@
 <li><p><a class="reference internal" href="control_structure/no_superfluous_elseif.html"><span class="doc">no_superfluous_elseif</span></a></p>
 <p>Replaces superfluous <code class="docutils literal notranslate"><span class="pre">elseif</span></code> with <code class="docutils literal notranslate"><span class="pre">if</span></code>.</p>
 </li>
-<li><p><a class="reference internal" href="control_structure/no_trailing_comma_in_list_call.html"><span class="doc">no_trailing_comma_in_list_call</span></a></p>
+<li><p><a class="reference internal" href="control_structure/no_trailing_comma_in_list_call.html"><span class="doc">no_trailing_comma_in_list_call</span></a> <em>(deprecated)</em></p>
 <p>Remove trailing commas in list function calls.</p>
 </li>
 <li><p><a class="reference internal" href="control_structure/no_unneeded_control_parentheses.html"><span class="doc">no_unneeded_control_parentheses</span></a></p>
@@ -393,7 +396,7 @@
 <li><p><a class="reference internal" href="function_notation/combine_nested_dirname.html"><span class="doc">combine_nested_dirname</span></a> <em>(risky)</em></p>
 <p>Replace multiple nested calls of <code class="docutils literal notranslate"><span class="pre">dirname</span></code> by only one call with second <code class="docutils literal notranslate"><span class="pre">$level</span></code> parameter. Requires PHP &gt;= 7.0.</p>
 </li>
-<li><p><a class="reference internal" href="function_notation/date_time_create_from_format_call.html"><span class="doc">date_time_create_from_format_call</span></a></p>
+<li><p><a class="reference internal" href="function_notation/date_time_create_from_format_call.html"><span class="doc">date_time_create_from_format_call</span></a> <em>(risky)</em></p>
 <p>The first argument of <code class="docutils literal notranslate"><span class="pre">DateTime::createFromFormat</span></code> method must start with <code class="docutils literal notranslate"><span class="pre">!</span></code>.</p>
 </li>
 <li><p><a class="reference internal" href="function_notation/fopen_flag_order.html"><span class="doc">fopen_flag_order</span></a> <em>(risky)</em></p>
@@ -423,7 +426,7 @@
 <li><p><a class="reference internal" href="function_notation/no_spaces_after_function_name.html"><span class="doc">no_spaces_after_function_name</span></a></p>
 <p>When making a method or function call, there MUST NOT be a space between the method or function name and the opening parenthesis.</p>
 </li>
-<li><p><a class="reference internal" href="function_notation/no_trailing_comma_in_singleline_function_call.html"><span class="doc">no_trailing_comma_in_singleline_function_call</span></a></p>
+<li><p><a class="reference internal" href="function_notation/no_trailing_comma_in_singleline_function_call.html"><span class="doc">no_trailing_comma_in_singleline_function_call</span></a> <em>(deprecated)</em></p>
 <p>When making a method or function call on a single line there MUST NOT be a trailing comma after the last argument.</p>
 </li>
 <li><p><a class="reference internal" href="function_notation/no_unreachable_default_argument_value.html"><span class="doc">no_unreachable_default_argument_value</span></a> <em>(risky)</em></p>
@@ -778,7 +781,7 @@
 <p>Scalar types should always be written in the same form. <code class="docutils literal notranslate"><span class="pre">int</span></code> not <code class="docutils literal notranslate"><span class="pre">integer</span></code>, <code class="docutils literal notranslate"><span class="pre">bool</span></code> not <code class="docutils literal notranslate"><span class="pre">boolean</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code> not <code class="docutils literal notranslate"><span class="pre">real</span></code> or <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
 </li>
 <li><p><a class="reference internal" href="phpdoc/phpdoc_separation.html"><span class="doc">phpdoc_separation</span></a></p>
-<p>Annotations in PHPDoc should be grouped together so that annotations of the same type immediately follow each other, and annotations of a different type are separated by a single blank line.</p>
+<p>Annotations in PHPDoc should be grouped together so that annotations of the same type immediately follow each other. Annotations of a different type are separated by a single blank line.</p>
 </li>
 <li><p><a class="reference internal" href="phpdoc/phpdoc_single_line_var_spacing.html"><span class="doc">phpdoc_single_line_var_spacing</span></a></p>
 <p>Single line <code class="docutils literal notranslate"><span class="pre">&#64;var</span></code> PHPDoc should have proper spacing.</p>
