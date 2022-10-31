@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Oliva (v3.12.0)</strong> edition
+                <strong>Oliva (v3.13.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -68,9 +68,9 @@
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <dl class="simple">
 <dt>Consider this code:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">DateTime::createFromFormat('Y-m-d',</span> <span class="pre">'2022-02-11')</span></code>.
-What value will be returned? ‘2022-01-11 00:00:00.0’? No, actual return</p>
+What value will be returned? ‘2022-02-11 00:00:00.0’? No, actual return</p>
 </dd>
-<dt>value has ‘H:i:s’ section like ‘2022-02-11 16:55:37.0’.</dt><dd><p>Change ‘Y-m-d’ to ‘!Y-m-d’, return value will be ‘2022-01-11 00:00:00.0’.
+<dt>value has ‘H:i:s’ section like ‘2022-02-11 16:55:37.0’.</dt><dd><p>Change ‘Y-m-d’ to ‘!Y-m-d’, return value will be ‘2022-02-11 00:00:00.0’.
 So, adding <code class="docutils literal notranslate"><span class="pre">!</span></code> to format string will make return value more intuitive.</p>
 </dd>
 </dl>

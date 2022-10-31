@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Oliva (v3.12.0)</strong> edition
+                <strong>Oliva (v3.13.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -446,9 +446,9 @@ new column in database.</p>
 <p>The first argument of <code class="docutils literal notranslate"><span class="pre">DateTime::createFromFormat</span></code> method must start with <code class="docutils literal notranslate"><span class="pre">!</span></code>.</p>
 <dl class="simple">
 <dt>Consider this code:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">DateTime::createFromFormat('Y-m-d',</span> <span class="pre">'2022-02-11')</span></code>.
-What value will be returned? ‘2022-01-11 00:00:00.0’? No, actual return</p>
+What value will be returned? ‘2022-02-11 00:00:00.0’? No, actual return</p>
 </dd>
-<dt>value has ‘H:i:s’ section like ‘2022-02-11 16:55:37.0’.</dt><dd><p>Change ‘Y-m-d’ to ‘!Y-m-d’, return value will be ‘2022-01-11 00:00:00.0’.
+<dt>value has ‘H:i:s’ section like ‘2022-02-11 16:55:37.0’.</dt><dd><p>Change ‘Y-m-d’ to ‘!Y-m-d’, return value will be ‘2022-02-11 00:00:00.0’.
 So, adding <code class="docutils literal notranslate"><span class="pre">!</span></code> to format string will make return value more intuitive.</p>
 </dd>
 </dl>
@@ -898,6 +898,13 @@ override a method, use the Template method pattern.</p>
 </div>
 </li>
 <li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">closure_fn_spacing</span></code></div>
+<div class="line">Spacing to use before open parenthesis for short arrow functions.</div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'one'</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'one'</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">trailing_comma_single_line</span></code></div>
 <div class="line">Whether trailing commas are allowed in single line signatures.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
@@ -938,6 +945,13 @@ override a method, use the Template method pattern.</p>
 <div class="line">List of annotations to remove, e.g. <cite>[“author”]</cite>.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">case_sensitive</span></code></div>
+<div class="line">Should annotations be case sensitive.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
 </li>
 </ul>
@@ -1011,6 +1025,7 @@ override a method, use the Template method pattern.</p>
 </div>
 </li>
 </ul>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Import/GlobalNamespaceImportFixer.php">Source PhpCsFixer\Fixer\Import\GlobalNamespaceImportFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/import/group_import.html"><span class="doc">group_import</span></a></p>
@@ -1426,7 +1441,7 @@ overridden.</p>
 <blockquote>
 <div><blockquote>
 <div><div class="line-block">
-<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['&#64;all',</span> <span class="pre">'&#64;internal',</span> <span class="pre">'&#64;exif',</span> <span class="pre">'&#64;ftp',</span> <span class="pre">'&#64;IMAP',</span> <span class="pre">'&#64;ldap',</span> <span class="pre">'&#64;mbreg',</span> <span class="pre">'&#64;mysqli',</span> <span class="pre">'&#64;oci',</span> <span class="pre">'&#64;odbc',</span> <span class="pre">'&#64;openssl',</span> <span class="pre">'&#64;pcntl',</span> <span class="pre">'&#64;pg',</span> <span class="pre">'&#64;posix',</span> <span class="pre">'&#64;snmp',</span> <span class="pre">'&#64;sodium',</span> <span class="pre">'&#64;time']</span></code></div>
+<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['&#64;all',</span> <span class="pre">'&#64;exif',</span> <span class="pre">'&#64;ftp',</span> <span class="pre">'&#64;IMAP',</span> <span class="pre">'&#64;internal',</span> <span class="pre">'&#64;ldap',</span> <span class="pre">'&#64;mbreg',</span> <span class="pre">'&#64;mysqli',</span> <span class="pre">'&#64;oci',</span> <span class="pre">'&#64;odbc',</span> <span class="pre">'&#64;openssl',</span> <span class="pre">'&#64;pcntl',</span> <span class="pre">'&#64;pg',</span> <span class="pre">'&#64;posix',</span> <span class="pre">'&#64;snmp',</span> <span class="pre">'&#64;sodium',</span> <span class="pre">'&#64;time']</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['&#64;internal',</span> <span class="pre">'&#64;IMAP',</span> <span class="pre">'&#64;pg']</span></code></div>
 </div>
 </div></blockquote>
@@ -1666,7 +1681,7 @@ parent one.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">elements</span></code></div>
 <div class="line">Which elements to fix.</div>
-<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['arguments',</span> <span class="pre">'array_destructuring',</span> <span class="pre">'array',</span> <span class="pre">'group_import']</span></code></div>
+<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['arguments',</span> <span class="pre">'array',</span> <span class="pre">'array_destructuring',</span> <span class="pre">'group_import']</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['arguments',</span> <span class="pre">'array_destructuring',</span> <span class="pre">'array',</span> <span class="pre">'group_import']</span></code></div>
 </div>
 </li>
@@ -1890,7 +1905,7 @@ assignments to properties whose type declaration does not allow it.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">order</span></code></div>
 <div class="line">List of strings defining order of elements.</div>
-<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['use_trait',</span> <span class="pre">'public',</span> <span class="pre">'protected',</span> <span class="pre">'private',</span> <span class="pre">'case',</span> <span class="pre">'constant',</span> <span class="pre">'constant_public',</span> <span class="pre">'constant_protected',</span> <span class="pre">'constant_private',</span> <span class="pre">'property',</span> <span class="pre">'property_static',</span> <span class="pre">'property_public',</span> <span class="pre">'property_protected',</span> <span class="pre">'property_private',</span> <span class="pre">'property_public_readonly',</span> <span class="pre">'property_protected_readonly',</span> <span class="pre">'property_private_readonly',</span> <span class="pre">'property_public_static',</span> <span class="pre">'property_protected_static',</span> <span class="pre">'property_private_static',</span> <span class="pre">'method',</span> <span class="pre">'method_abstract',</span> <span class="pre">'method_static',</span> <span class="pre">'method_public',</span> <span class="pre">'method_protected',</span> <span class="pre">'method_private',</span> <span class="pre">'method_public_abstract',</span> <span class="pre">'method_protected_abstract',</span> <span class="pre">'method_private_abstract',</span> <span class="pre">'method_public_abstract_static',</span> <span class="pre">'method_protected_abstract_static',</span> <span class="pre">'method_private_abstract_static',</span> <span class="pre">'method_public_static',</span> <span class="pre">'method_protected_static',</span> <span class="pre">'method_private_static',</span> <span class="pre">'construct',</span> <span class="pre">'destruct',</span> <span class="pre">'magic',</span> <span class="pre">'phpunit']</span></code></div>
+<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['case',</span> <span class="pre">'constant',</span> <span class="pre">'constant_private',</span> <span class="pre">'constant_protected',</span> <span class="pre">'constant_public',</span> <span class="pre">'construct',</span> <span class="pre">'destruct',</span> <span class="pre">'magic',</span> <span class="pre">'method',</span> <span class="pre">'method_abstract',</span> <span class="pre">'method_private',</span> <span class="pre">'method_private_abstract',</span> <span class="pre">'method_private_abstract_static',</span> <span class="pre">'method_private_static',</span> <span class="pre">'method_protected',</span> <span class="pre">'method_protected_abstract',</span> <span class="pre">'method_protected_abstract_static',</span> <span class="pre">'method_protected_static',</span> <span class="pre">'method_public',</span> <span class="pre">'method_public_abstract',</span> <span class="pre">'method_public_abstract_static',</span> <span class="pre">'method_public_static',</span> <span class="pre">'method_static',</span> <span class="pre">'phpunit',</span> <span class="pre">'private',</span> <span class="pre">'property',</span> <span class="pre">'property_private',</span> <span class="pre">'property_private_readonly',</span> <span class="pre">'property_private_static',</span> <span class="pre">'property_protected',</span> <span class="pre">'property_protected_readonly',</span> <span class="pre">'property_protected_static',</span> <span class="pre">'property_public',</span> <span class="pre">'property_public_readonly',</span> <span class="pre">'property_public_static',</span> <span class="pre">'property_static',</span> <span class="pre">'protected',</span> <span class="pre">'public',</span> <span class="pre">'use_trait']</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['use_trait',</span> <span class="pre">'case',</span> <span class="pre">'constant_public',</span> <span class="pre">'constant_protected',</span> <span class="pre">'constant_private',</span> <span class="pre">'property_public',</span> <span class="pre">'property_protected',</span> <span class="pre">'property_private',</span> <span class="pre">'construct',</span> <span class="pre">'destruct',</span> <span class="pre">'magic',</span> <span class="pre">'phpunit',</span> <span class="pre">'method_public',</span> <span class="pre">'method_protected',</span> <span class="pre">'method_private']</span></code></div>
 </div>
 </li>
@@ -1979,7 +1994,7 @@ interface, because PHP doesn’t break on <code class="docutils literal notransl
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">tags</span></code></div>
 <div class="line">The tags that should be aligned.</div>
-<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['param',</span> <span class="pre">'property',</span> <span class="pre">'property-read',</span> <span class="pre">'property-write',</span> <span class="pre">'return',</span> <span class="pre">'throws',</span> <span class="pre">'type',</span> <span class="pre">'var',</span> <span class="pre">'method']</span></code></div>
+<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['method',</span> <span class="pre">'param',</span> <span class="pre">'property',</span> <span class="pre">'property-read',</span> <span class="pre">'property-write',</span> <span class="pre">'return',</span> <span class="pre">'throws',</span> <span class="pre">'type',</span> <span class="pre">'var']</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['method',</span> <span class="pre">'param',</span> <span class="pre">'property',</span> <span class="pre">'return',</span> <span class="pre">'throws',</span> <span class="pre">'type',</span> <span class="pre">'var']</span></code></div>
 </div>
 </li>
@@ -2285,7 +2300,7 @@ properly documented.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">groups</span></code></div>
 <div class="line">Type groups to fix.</div>
-<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['simple',</span> <span class="pre">'alias',</span> <span class="pre">'meta']</span></code></div>
+<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['alias',</span> <span class="pre">'meta',</span> <span class="pre">'simple']</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['simple',</span> <span class="pre">'alias',</span> <span class="pre">'meta']</span></code></div>
 </div>
 </li>
@@ -2333,7 +2348,7 @@ properly documented.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">assertions</span></code></div>
 <div class="line">List of assertion methods to fix.</div>
-<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['assertSame',</span> <span class="pre">'assertEquals',</span> <span class="pre">'assertNotEquals',</span> <span class="pre">'assertNotSame']</span></code></div>
+<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['assertEquals',</span> <span class="pre">'assertNotEquals',</span> <span class="pre">'assertNotSame',</span> <span class="pre">'assertSame']</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['assertEquals',</span> <span class="pre">'assertSame',</span> <span class="pre">'assertNotEquals',</span> <span class="pre">'assertNotSame']</span></code></div>
 </div>
 </li>
@@ -2403,7 +2418,7 @@ has PHPUnit incompatibilities.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">types</span></code></div>
 <div class="line">What types of classes to mark as internal</div>
-<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['normal',</span> <span class="pre">'final',</span> <span class="pre">'abstract']</span></code></div>
+<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['abstract',</span> <span class="pre">'final',</span> <span class="pre">'normal']</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['normal',</span> <span class="pre">'final']</span></code></div>
 </div>
 </li>
@@ -2915,7 +2930,7 @@ comparisons and outputs.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">elements</span></code></div>
 <div class="line">Where to fix multiline trailing comma (PHP &gt;= 8.0 for <cite>parameters</cite> and <cite>match</cite>).</div>
-<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['arrays',</span> <span class="pre">'arguments',</span> <span class="pre">'parameters',</span> <span class="pre">'match']</span></code></div>
+<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['arguments',</span> <span class="pre">'arrays',</span> <span class="pre">'match',</span> <span class="pre">'parameters']</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['arrays']</span></code></div>
 </div>
 </li>
@@ -2969,7 +2984,7 @@ comparisons and outputs.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">elements</span></code></div>
 <div class="line">The structural elements to fix (PHP &gt;= 7.1 required for <cite>const</cite>).</div>
-<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['property',</span> <span class="pre">'method',</span> <span class="pre">'const']</span></code></div>
+<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['const',</span> <span class="pre">'method',</span> <span class="pre">'property']</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['property',</span> <span class="pre">'method',</span> <span class="pre">'const']</span></code></div>
 </div>
 </li>
