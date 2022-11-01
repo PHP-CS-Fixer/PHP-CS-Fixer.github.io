@@ -9,7 +9,7 @@ it: build
 phar-download:
 	## As we have issue to have single job on Travis CI to have both, new PHP and new Python, we temporarily disable the PHP part and execute it manually
 	echo λλλ get newest PHP CS Fixer version
-	php download/php-cs-fixer-v3.phar self-update || curl --silent --fail -L "https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/$(curl --silent --fail -u keradus:5e7538aa415005c606ea68de2bbbade0409b4b8c https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/releases/latest | jq -r .tag_name)/php-cs-fixer.phar" -o download/php-cs-fixer-v3.phar
+	php download/php-cs-fixer-v3.phar self-update || curl --silent --fail -L "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/releases/download/$(curl --silent --fail -u keradus:5e7538aa415005c606ea68de2bbbade0409b4b8c https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/releases/latest | jq -r .tag_name)/php-cs-fixer.phar" -o download/php-cs-fixer-v3.phar
 
 .PHONY: phar-analyse
 .SILENT:
@@ -52,14 +52,14 @@ build-default-files: build-folders
 build-fetch-docs: build-folders
 	echo λλλ fetch up doc/ folder from git repo
 	# we cannot use .tar.gz archive, as it does not contain doc files, let's clone the repo itself!
-	#  curl --silent --fail -L "https://github.com/FriendsOfPHP/PHP-CS-Fixer/archive/v${PHP_CS_FIXER_VERSION}.tar.gz" -o src/archive.tar.gz
+	#  curl --silent --fail -L "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/archive/v${PHP_CS_FIXER_VERSION}.tar.gz" -o src/archive.tar.gz
 	#  tar -zxf src/archive.tar.gz -C src "PHP-CS-Fixer-${PHP_CS_FIXER_VERSION}/doc/"
 	#  mv "src/PHP-CS-Fixer-${PHP_CS_FIXER_VERSION}/doc/" src/doc/
 	#  rmdir "src/PHP-CS-Fixer-${PHP_CS_FIXER_VERSION}/"
 	#  rm src/archive.tar.gz
 	PHP_CS_FIXER_VERSION=$(shell cat download/version.json | jq .number) && \
 	tmp_dir=$(shell mktemp -d -t php-cs-fixer.github.io--repo-clone--XXXXX) && \
-	git clone --branch v$${PHP_CS_FIXER_VERSION} --depth 1 --no-checkout https://github.com/FriendsOfPHP/PHP-CS-Fixer.git $${tmp_dir} && \
+	git clone --branch v$${PHP_CS_FIXER_VERSION} --depth 1 --no-checkout https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git $${tmp_dir} && \
 	git -C $${tmp_dir} checkout HEAD doc/ && \
 	mv $${tmp_dir}/doc/ src/doc/
 

@@ -6,4 +6,4 @@ The PHP Coding Standards Fixer is brought to you by `Fabien Potencier`_, the cre
 
 .. _Dariusz Rumiński:  https://github.com/keradus
 .. _Fabien Potencier:  http://fabien.potencier.org/
-.. _MIT license:       https://raw.github.com/FriendsOfPHP/PHP-CS-Fixer/master/LICENSE
+.. _MIT license:       https://raw.github.com/PHP-CS-Fixer/PHP-CS-Fixer/master/LICENSE
