@@ -79,29 +79,29 @@ calls.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- function foo () {
-<span class="gd">-    return 1 + 2</span>
-<span class="gd">-        ;</span>
-<span class="gi">+    return 1 + 2;</span>
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>function foo () {<span class="w"></span>
+<span class="gd">-    return 1 + 2</span><span class="w"></span>
+<span class="gd">-        ;</span><span class="w"></span>
+<span class="gi">+    return 1 + 2;</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['strategy'</span> <span class="pre">=&gt;</span> <span class="pre">'new_line_for_chained_calls']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
-                         $this-&gt;method1()
-                             -&gt;method2()
-<span class="gd">-                            -&gt;method(3);</span>
-<span class="gi">+                            -&gt;method(3)</span>
-<span class="gi">+;</span>
-                     ?&gt;
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>                        $this-&gt;method1()<span class="w"></span>
+<span class="w"> </span>                            -&gt;method2()<span class="w"></span>
+<span class="gd">-                            -&gt;method(3);</span><span class="w"></span>
+<span class="gi">+                            -&gt;method(3)</span><span class="w"></span>
+<span class="gi">+;</span><span class="w"></span>
+<span class="w"> </span>                    ?&gt;<span class="w"></span>
 </pre></div>
 </div>
 </div>

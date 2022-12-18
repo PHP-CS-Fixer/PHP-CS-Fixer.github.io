@@ -90,68 +90,68 @@ syntax, or vice-versa.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
-<span class="gd">-&lt;?=1?&gt;</span>
-<span class="gi">+&lt;?php echo 1?&gt;</span>
- &lt;?php print &#39;2&#39; . &#39;3&#39;; ?&gt;
- &lt;?php /* comment */ echo &#39;2&#39; . &#39;3&#39;; ?&gt;
- &lt;?php print &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="gd">-&lt;?=1?&gt;</span><span class="w"></span>
+<span class="gi">+&lt;?php echo 1?&gt;</span><span class="w"></span>
+<span class="w"> </span>&lt;?php print &#39;2&#39; . &#39;3&#39;; ?&gt;<span class="w"></span>
+<span class="w"> </span>&lt;?php /* comment */ echo &#39;2&#39; . &#39;3&#39;; ?&gt;<span class="w"></span>
+<span class="w"> </span>&lt;?php print &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['format'</span> <span class="pre">=&gt;</span> <span class="pre">'long']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
-<span class="gd">-&lt;?=1?&gt;</span>
-<span class="gi">+&lt;?php echo 1?&gt;</span>
- &lt;?php print &#39;2&#39; . &#39;3&#39;; ?&gt;
- &lt;?php /* comment */ echo &#39;2&#39; . &#39;3&#39;; ?&gt;
- &lt;?php print &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="gd">-&lt;?=1?&gt;</span><span class="w"></span>
+<span class="gi">+&lt;?php echo 1?&gt;</span><span class="w"></span>
+<span class="w"> </span>&lt;?php print &#39;2&#39; . &#39;3&#39;; ?&gt;<span class="w"></span>
+<span class="w"> </span>&lt;?php /* comment */ echo &#39;2&#39; . &#39;3&#39;; ?&gt;<span class="w"></span>
+<span class="w"> </span>&lt;?php print &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['format'</span> <span class="pre">=&gt;</span> <span class="pre">'long',</span> <span class="pre">'long_function'</span> <span class="pre">=&gt;</span> <span class="pre">'print']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
-<span class="gd">-&lt;?=1?&gt;</span>
-<span class="gi">+&lt;?php print 1?&gt;</span>
- &lt;?php print &#39;2&#39; . &#39;3&#39;; ?&gt;
- &lt;?php /* comment */ echo &#39;2&#39; . &#39;3&#39;; ?&gt;
- &lt;?php print &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="gd">-&lt;?=1?&gt;</span><span class="w"></span>
+<span class="gi">+&lt;?php print 1?&gt;</span><span class="w"></span>
+<span class="w"> </span>&lt;?php print &#39;2&#39; . &#39;3&#39;; ?&gt;<span class="w"></span>
+<span class="w"> </span>&lt;?php /* comment */ echo &#39;2&#39; . &#39;3&#39;; ?&gt;<span class="w"></span>
+<span class="w"> </span>&lt;?php print &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['format'</span> <span class="pre">=&gt;</span> <span class="pre">'short']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?=1?&gt;
-<span class="gd">-&lt;?php print &#39;2&#39; . &#39;3&#39;; ?&gt;</span>
-<span class="gd">-&lt;?php /* comment */ echo &#39;2&#39; . &#39;3&#39;; ?&gt;</span>
-<span class="gi">+&lt;?= &#39;2&#39; . &#39;3&#39;; ?&gt;</span>
-<span class="gi">+&lt;?=/* comment */ &#39;2&#39; . &#39;3&#39;; ?&gt;</span>
- &lt;?php print &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?=1?&gt;<span class="w"></span>
+<span class="gd">-&lt;?php print &#39;2&#39; . &#39;3&#39;; ?&gt;</span><span class="w"></span>
+<span class="gd">-&lt;?php /* comment */ echo &#39;2&#39; . &#39;3&#39;; ?&gt;</span><span class="w"></span>
+<span class="gi">+&lt;?= &#39;2&#39; . &#39;3&#39;; ?&gt;</span><span class="w"></span>
+<span class="gi">+&lt;?=/* comment */ &#39;2&#39; . &#39;3&#39;; ?&gt;</span><span class="w"></span>
+<span class="w"> </span>&lt;?php print &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['format'</span> <span class="pre">=&gt;</span> <span class="pre">'short',</span> <span class="pre">'shorten_simple_statements_only'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?=1?&gt;
-<span class="gd">-&lt;?php print &#39;2&#39; . &#39;3&#39;; ?&gt;</span>
-<span class="gd">-&lt;?php /* comment */ echo &#39;2&#39; . &#39;3&#39;; ?&gt;</span>
-<span class="gd">-&lt;?php print &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;</span>
-<span class="gi">+&lt;?= &#39;2&#39; . &#39;3&#39;; ?&gt;</span>
-<span class="gi">+&lt;?=/* comment */ &#39;2&#39; . &#39;3&#39;; ?&gt;</span>
-<span class="gi">+&lt;?= &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;</span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?=1?&gt;<span class="w"></span>
+<span class="gd">-&lt;?php print &#39;2&#39; . &#39;3&#39;; ?&gt;</span><span class="w"></span>
+<span class="gd">-&lt;?php /* comment */ echo &#39;2&#39; . &#39;3&#39;; ?&gt;</span><span class="w"></span>
+<span class="gd">-&lt;?php print &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;</span><span class="w"></span>
+<span class="gi">+&lt;?= &#39;2&#39; . &#39;3&#39;; ?&gt;</span><span class="w"></span>
+<span class="gi">+&lt;?=/* comment */ &#39;2&#39; . &#39;3&#39;; ?&gt;</span><span class="w"></span>
+<span class="gi">+&lt;?= &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

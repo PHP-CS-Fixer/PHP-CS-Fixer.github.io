@@ -84,93 +84,93 @@ sorted</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
-<span class="gi">+use AAA;</span>
-<span class="gi">+use const AAB;</span>
- use function AAC;
-<span class="gd">-use const AAB;</span>
-<span class="gd">-use AAA;</span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gi">+use AAA;</span><span class="w"></span>
+<span class="gi">+use const AAB;</span><span class="w"></span>
+<span class="w"> </span>use function AAC;<span class="w"></span>
+<span class="gd">-use const AAB;</span><span class="w"></span>
+<span class="gd">-use AAA;</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'length']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
-<span class="gi">+use Bar;</span>
-<span class="gi">+use Acme;</span>
-<span class="gi">+use Bar1;</span>
- use Acme\Bar;
-<span class="gd">-use Bar1;</span>
-<span class="gd">-use Acme;</span>
-<span class="gd">-use Bar;</span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gi">+use Bar;</span><span class="w"></span>
+<span class="gi">+use Acme;</span><span class="w"></span>
+<span class="gi">+use Bar1;</span><span class="w"></span>
+<span class="w"> </span>use Acme\Bar;<span class="w"></span>
+<span class="gd">-use Bar1;</span><span class="w"></span>
+<span class="gd">-use Acme;</span><span class="w"></span>
+<span class="gd">-use Bar;</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'length',</span> <span class="pre">'imports_order'</span> <span class="pre">=&gt;</span> <span class="pre">['const',</span> <span class="pre">'class',</span> <span class="pre">'function']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
-<span class="gi">+use const BBB;</span>
- use const AAAA;
-<span class="gd">-use const BBB;</span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gi">+use const BBB;</span><span class="w"></span>
+<span class="w"> </span>use const AAAA;<span class="w"></span>
+<span class="gd">-use const BBB;</span><span class="w"></span>
 
-<span class="gi">+use AAC;</span>
- use Bar;
-<span class="gd">-use AAC;</span>
- use Acme;
+<span class="gi">+use AAC;</span><span class="w"></span>
+<span class="w"> </span>use Bar;<span class="w"></span>
+<span class="gd">-use AAC;</span><span class="w"></span>
+<span class="w"> </span>use Acme;<span class="w"></span>
 
-<span class="gi">+use function DDD;</span>
- use function CCC\AA;
-<span class="gd">-use function DDD;</span>
+<span class="gi">+use function DDD;</span><span class="w"></span>
+<span class="w"> </span>use function CCC\AA;<span class="w"></span>
+<span class="gd">-use function DDD;</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'alpha',</span> <span class="pre">'imports_order'</span> <span class="pre">=&gt;</span> <span class="pre">['const',</span> <span class="pre">'class',</span> <span class="pre">'function']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
-<span class="gi">+use const AAAA;</span>
- use const BBB;
-<span class="gd">-use const AAAA;</span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gi">+use const AAAA;</span><span class="w"></span>
+<span class="w"> </span>use const BBB;<span class="w"></span>
+<span class="gd">-use const AAAA;</span><span class="w"></span>
 
-<span class="gi">+use AAC;</span>
- use Acme;
-<span class="gd">-use AAC;</span>
- use Bar;
+<span class="gi">+use AAC;</span><span class="w"></span>
+<span class="w"> </span>use Acme;<span class="w"></span>
+<span class="gd">-use AAC;</span><span class="w"></span>
+<span class="w"> </span>use Bar;<span class="w"></span>
 
-<span class="gi">+use function CCC\AA;</span>
- use function DDD;
-<span class="gd">-use function CCC\AA;</span>
+<span class="gi">+use function CCC\AA;</span><span class="w"></span>
+<span class="w"> </span>use function DDD;<span class="w"></span>
+<span class="gd">-use function CCC\AA;</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'none',</span> <span class="pre">'imports_order'</span> <span class="pre">=&gt;</span> <span class="pre">['const',</span> <span class="pre">'class',</span> <span class="pre">'function']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- use const BBB;
- use const AAAA;
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>use const BBB;<span class="w"></span>
+<span class="w"> </span>use const AAAA;<span class="w"></span>
 
-<span class="gd">-use function DDD;</span>
-<span class="gd">-use function CCC\AA;</span>
-<span class="gd">-</span>
- use Acme;
- use AAC;
-<span class="gi">+</span>
- use Bar;
-<span class="gi">+use function DDD;</span>
-<span class="gi">+use function CCC\AA;</span>
+<span class="gd">-use function DDD;</span><span class="w"></span>
+<span class="gd">-use function CCC\AA;</span><span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>use Acme;<span class="w"></span>
+<span class="w"> </span>use AAC;<span class="w"></span>
+<span class="gi">+</span><span class="w"></span>
+<span class="w"> </span>use Bar;<span class="w"></span>
+<span class="gi">+use function DDD;</span><span class="w"></span>
+<span class="gi">+use function CCC\AA;</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

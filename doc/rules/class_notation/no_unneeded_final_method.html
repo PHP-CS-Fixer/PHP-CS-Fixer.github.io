@@ -84,43 +84,43 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- final class Foo
- {
-<span class="gd">-    final public function foo1() {}</span>
-<span class="gd">-    final protected function bar() {}</span>
-<span class="gd">-    final private function baz() {}</span>
-<span class="gi">+    public function foo1() {}</span>
-<span class="gi">+    protected function bar() {}</span>
-<span class="gi">+    private function baz() {}</span>
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>final class Foo<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="gd">-    final public function foo1() {}</span><span class="w"></span>
+<span class="gd">-    final protected function bar() {}</span><span class="w"></span>
+<span class="gd">-    final private function baz() {}</span><span class="w"></span>
+<span class="gi">+    public function foo1() {}</span><span class="w"></span>
+<span class="gi">+    protected function bar() {}</span><span class="w"></span>
+<span class="gi">+    private function baz() {}</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 
- class Bar
- {
-<span class="gd">-    final private function bar1() {}</span>
-<span class="gi">+    private function bar1() {}</span>
- }
+<span class="w"> </span>class Bar<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="gd">-    final private function bar1() {}</span><span class="w"></span>
+<span class="gi">+    private function bar1() {}</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['private_methods'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- final class Foo
- {
-<span class="gd">-    final private function baz() {}</span>
-<span class="gi">+    private function baz() {}</span>
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>final class Foo<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="gd">-    final private function baz() {}</span><span class="w"></span>
+<span class="gi">+    private function baz() {}</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 
- class Bar
- {
-     final private function bar1() {}
- }
+<span class="w"> </span>class Bar<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    final private function bar1() {}<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>

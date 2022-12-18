@@ -68,45 +68,45 @@ case.</p>
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- class Foo extends Bar
- {
-     public function baz1()
-     {
-<span class="gd">-        return STATIC::baz2();</span>
-<span class="gi">+        return static::baz2();</span>
-     }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>class Foo extends Bar<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    public function baz1()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        return STATIC::baz2();</span><span class="w"></span>
+<span class="gi">+        return static::baz2();</span><span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
 
-     public function baz2($x)
-     {
-<span class="gd">-        return $x instanceof Self;</span>
-<span class="gi">+        return $x instanceof self;</span>
-     }
+<span class="w"> </span>    public function baz2($x)<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        return $x instanceof Self;</span><span class="w"></span>
+<span class="gi">+        return $x instanceof self;</span><span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
 
-<span class="gd">-    public function baz3(PaRent $x)</span>
-<span class="gi">+    public function baz3(parent $x)</span>
-     {
-         return true;
-     }
- }
+<span class="gd">-    public function baz3(PaRent $x)</span><span class="w"></span>
+<span class="gi">+    public function baz3(parent $x)</span><span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="w"> </span>        return true;<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- class Foo extends Bar
- {
-<span class="gd">-    public function baz(?self $x) : SELF</span>
-<span class="gi">+    public function baz(?self $x) : self</span>
-     {
-         return false;
-     }
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>class Foo extends Bar<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="gd">-    public function baz(?self $x) : SELF</span><span class="w"></span>
+<span class="gi">+    public function baz(?self $x) : self</span><span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="w"> </span>        return false;<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>

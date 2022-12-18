@@ -80,18 +80,18 @@ usage.</p>
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- $a = array_keys($b);
-<span class="gd">-$a = array_search($b, $c);</span>
-<span class="gd">-$a = base64_decode($b);</span>
-<span class="gd">-$a = in_array($b, $c);</span>
-<span class="gd">-$a = mb_detect_encoding($b, $c);</span>
-<span class="gi">+$a = array_search($b, $c, true);</span>
-<span class="gi">+$a = base64_decode($b, true);</span>
-<span class="gi">+$a = in_array($b, $c, true);</span>
-<span class="gi">+$a = mb_detect_encoding($b, $c, true);</span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>$a = array_keys($b);<span class="w"></span>
+<span class="gd">-$a = array_search($b, $c);</span><span class="w"></span>
+<span class="gd">-$a = base64_decode($b);</span><span class="w"></span>
+<span class="gd">-$a = in_array($b, $c);</span><span class="w"></span>
+<span class="gd">-$a = mb_detect_encoding($b, $c);</span><span class="w"></span>
+<span class="gi">+$a = array_search($b, $c, true);</span><span class="w"></span>
+<span class="gi">+$a = base64_decode($b, true);</span><span class="w"></span>
+<span class="gi">+$a = in_array($b, $c, true);</span><span class="w"></span>
+<span class="gi">+$a = mb_detect_encoding($b, $c, true);</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

@@ -84,43 +84,43 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- final class MyTest extends \PHPUnit_Framework_TestCase
- {
-     public function testSomeTest()
-     {
-<span class="gd">-        $this-&gt;assertAttributeEquals(a(), b());</span>
-<span class="gd">-        $this-&gt;assertAttributeNotEquals(a(), b());</span>
-<span class="gd">-        $this-&gt;assertEquals(a(), b());</span>
-<span class="gd">-        $this-&gt;assertNotEquals(a(), b());</span>
-<span class="gi">+        $this-&gt;assertAttributeSame(a(), b());</span>
-<span class="gi">+        $this-&gt;assertAttributeNotSame(a(), b());</span>
-<span class="gi">+        $this-&gt;assertSame(a(), b());</span>
-<span class="gi">+        $this-&gt;assertNotSame(a(), b());</span>
-     }
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    public function testSomeTest()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        $this-&gt;assertAttributeEquals(a(), b());</span><span class="w"></span>
+<span class="gd">-        $this-&gt;assertAttributeNotEquals(a(), b());</span><span class="w"></span>
+<span class="gd">-        $this-&gt;assertEquals(a(), b());</span><span class="w"></span>
+<span class="gd">-        $this-&gt;assertNotEquals(a(), b());</span><span class="w"></span>
+<span class="gi">+        $this-&gt;assertAttributeSame(a(), b());</span><span class="w"></span>
+<span class="gi">+        $this-&gt;assertAttributeNotSame(a(), b());</span><span class="w"></span>
+<span class="gi">+        $this-&gt;assertSame(a(), b());</span><span class="w"></span>
+<span class="gi">+        $this-&gt;assertNotSame(a(), b());</span><span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['assertions'</span> <span class="pre">=&gt;</span> <span class="pre">['assertEquals']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- final class MyTest extends \PHPUnit_Framework_TestCase
- {
-     public function testSomeTest()
-     {
-         $this-&gt;assertAttributeEquals(a(), b());
-         $this-&gt;assertAttributeNotEquals(a(), b());
-<span class="gd">-        $this-&gt;assertEquals(a(), b());</span>
-<span class="gi">+        $this-&gt;assertSame(a(), b());</span>
-         $this-&gt;assertNotEquals(a(), b());
-     }
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    public function testSomeTest()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="w"> </span>        $this-&gt;assertAttributeEquals(a(), b());<span class="w"></span>
+<span class="w"> </span>        $this-&gt;assertAttributeNotEquals(a(), b());<span class="w"></span>
+<span class="gd">-        $this-&gt;assertEquals(a(), b());</span><span class="w"></span>
+<span class="gi">+        $this-&gt;assertSame(a(), b());</span><span class="w"></span>
+<span class="w"> </span>        $this-&gt;assertNotEquals(a(), b());<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>

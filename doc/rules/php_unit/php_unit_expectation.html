@@ -86,111 +86,111 @@ PHPUnit incompatibilities.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- final class MyTest extends \PHPUnit_Framework_TestCase
- {
-     public function testFoo()
-     {
-<span class="gd">-        $this-&gt;setExpectedException(&quot;RuntimeException&quot;, &quot;Msg&quot;, 123);</span>
-<span class="gi">+        $this-&gt;expectException(&quot;RuntimeException&quot;);</span>
-<span class="gi">+        $this-&gt;expectExceptionMessage(&quot;Msg&quot;);</span>
-<span class="gi">+        $this-&gt;expectExceptionCode(123);</span>
-         foo();
-     }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    public function testFoo()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        $this-&gt;setExpectedException(&quot;RuntimeException&quot;, &quot;Msg&quot;, 123);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectException(&quot;RuntimeException&quot;);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectExceptionMessage(&quot;Msg&quot;);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectExceptionCode(123);</span><span class="w"></span>
+<span class="w"> </span>        foo();<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
 
-     public function testBar()
-     {
-<span class="gd">-        $this-&gt;setExpectedExceptionRegExp(&quot;RuntimeException&quot;, &quot;/Msg.*/&quot;, 123);</span>
-<span class="gi">+        $this-&gt;expectException(&quot;RuntimeException&quot;);</span>
-<span class="gi">+        $this-&gt;expectExceptionMessageMatches(&quot;/Msg.*/&quot;);</span>
-<span class="gi">+        $this-&gt;expectExceptionCode(123);</span>
-         bar();
-     }
- }
+<span class="w"> </span>    public function testBar()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        $this-&gt;setExpectedExceptionRegExp(&quot;RuntimeException&quot;, &quot;/Msg.*/&quot;, 123);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectException(&quot;RuntimeException&quot;);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectExceptionMessageMatches(&quot;/Msg.*/&quot;);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectExceptionCode(123);</span><span class="w"></span>
+<span class="w"> </span>        bar();<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['target'</span> <span class="pre">=&gt;</span> <span class="pre">'8.4']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- final class MyTest extends \PHPUnit_Framework_TestCase
- {
-     public function testFoo()
-     {
-<span class="gd">-        $this-&gt;setExpectedException(&quot;RuntimeException&quot;, null, 123);</span>
-<span class="gi">+        $this-&gt;expectException(&quot;RuntimeException&quot;);</span>
-<span class="gi">+        $this-&gt;expectExceptionCode(123);</span>
-         foo();
-     }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    public function testFoo()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        $this-&gt;setExpectedException(&quot;RuntimeException&quot;, null, 123);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectException(&quot;RuntimeException&quot;);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectExceptionCode(123);</span><span class="w"></span>
+<span class="w"> </span>        foo();<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
 
-     public function testBar()
-     {
-<span class="gd">-        $this-&gt;setExpectedExceptionRegExp(&quot;RuntimeException&quot;, &quot;/Msg.*/&quot;, 123);</span>
-<span class="gi">+        $this-&gt;expectException(&quot;RuntimeException&quot;);</span>
-<span class="gi">+        $this-&gt;expectExceptionMessageMatches(&quot;/Msg.*/&quot;);</span>
-<span class="gi">+        $this-&gt;expectExceptionCode(123);</span>
-         bar();
-     }
- }
+<span class="w"> </span>    public function testBar()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        $this-&gt;setExpectedExceptionRegExp(&quot;RuntimeException&quot;, &quot;/Msg.*/&quot;, 123);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectException(&quot;RuntimeException&quot;);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectExceptionMessageMatches(&quot;/Msg.*/&quot;);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectExceptionCode(123);</span><span class="w"></span>
+<span class="w"> </span>        bar();<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['target'</span> <span class="pre">=&gt;</span> <span class="pre">'5.6']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- final class MyTest extends \PHPUnit_Framework_TestCase
- {
-     public function testFoo()
-     {
-<span class="gd">-        $this-&gt;setExpectedException(&quot;RuntimeException&quot;, null, 123);</span>
-<span class="gi">+        $this-&gt;expectException(&quot;RuntimeException&quot;);</span>
-<span class="gi">+        $this-&gt;expectExceptionCode(123);</span>
-         foo();
-     }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    public function testFoo()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        $this-&gt;setExpectedException(&quot;RuntimeException&quot;, null, 123);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectException(&quot;RuntimeException&quot;);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectExceptionCode(123);</span><span class="w"></span>
+<span class="w"> </span>        foo();<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
 
-     public function testBar()
-     {
-<span class="gd">-        $this-&gt;setExpectedExceptionRegExp(&quot;RuntimeException&quot;, &quot;/Msg.*/&quot;, 123);</span>
-<span class="gi">+        $this-&gt;expectException(&quot;RuntimeException&quot;);</span>
-<span class="gi">+        $this-&gt;expectExceptionMessageRegExp(&quot;/Msg.*/&quot;);</span>
-<span class="gi">+        $this-&gt;expectExceptionCode(123);</span>
-         bar();
-     }
- }
+<span class="w"> </span>    public function testBar()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        $this-&gt;setExpectedExceptionRegExp(&quot;RuntimeException&quot;, &quot;/Msg.*/&quot;, 123);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectException(&quot;RuntimeException&quot;);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectExceptionMessageRegExp(&quot;/Msg.*/&quot;);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectExceptionCode(123);</span><span class="w"></span>
+<span class="w"> </span>        bar();<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['target'</span> <span class="pre">=&gt;</span> <span class="pre">'5.2']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- final class MyTest extends \PHPUnit_Framework_TestCase
- {
-     public function testFoo()
-     {
-<span class="gd">-        $this-&gt;setExpectedException(&quot;RuntimeException&quot;, &quot;Msg&quot;, 123);</span>
-<span class="gi">+        $this-&gt;expectException(&quot;RuntimeException&quot;);</span>
-<span class="gi">+        $this-&gt;expectExceptionMessage(&quot;Msg&quot;);</span>
-<span class="gi">+        $this-&gt;expectExceptionCode(123);</span>
-         foo();
-     }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    public function testFoo()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        $this-&gt;setExpectedException(&quot;RuntimeException&quot;, &quot;Msg&quot;, 123);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectException(&quot;RuntimeException&quot;);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectExceptionMessage(&quot;Msg&quot;);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;expectExceptionCode(123);</span><span class="w"></span>
+<span class="w"> </span>        foo();<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
 
-     public function testBar()
-     {
-         $this-&gt;setExpectedExceptionRegExp(&quot;RuntimeException&quot;, &quot;/Msg.*/&quot;, 123);
-         bar();
-     }
- }
+<span class="w"> </span>    public function testBar()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="w"> </span>        $this-&gt;setExpectedExceptionRegExp(&quot;RuntimeException&quot;, &quot;/Msg.*/&quot;, 123);<span class="w"></span>
+<span class="w"> </span>        bar();<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>

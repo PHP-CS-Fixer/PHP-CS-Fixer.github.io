@@ -83,36 +83,36 @@ no fall-through.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- switch ($foo) {
-     case 1:
-         foo();
-<span class="gi">+        // no break</span>
-     case 2:
-         bar();
-<span class="gd">-        // no break</span>
-         break;
-     case 3:
-         baz();
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>switch ($foo) {<span class="w"></span>
+<span class="w"> </span>    case 1:<span class="w"></span>
+<span class="w"> </span>        foo();<span class="w"></span>
+<span class="gi">+        // no break</span><span class="w"></span>
+<span class="w"> </span>    case 2:<span class="w"></span>
+<span class="w"> </span>        bar();<span class="w"></span>
+<span class="gd">-        // no break</span><span class="w"></span>
+<span class="w"> </span>        break;<span class="w"></span>
+<span class="w"> </span>    case 3:<span class="w"></span>
+<span class="w"> </span>        baz();<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['comment_text'</span> <span class="pre">=&gt;</span> <span class="pre">'some</span> <span class="pre">comment']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- switch ($foo) {
-     case 1:
-         foo();
-<span class="gi">+        // some comment</span>
-     case 2:
-         foo();
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>switch ($foo) {<span class="w"></span>
+<span class="w"> </span>    case 1:<span class="w"></span>
+<span class="w"> </span>        foo();<span class="w"></span>
+<span class="gi">+        // some comment</span><span class="w"></span>
+<span class="w"> </span>    case 2:<span class="w"></span>
+<span class="w"> </span>        foo();<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>

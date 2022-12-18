@@ -76,24 +76,24 @@ PHPUnit tests, when a class is wrongly seen as a PHPUnit test.</p>
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- final class MyTest extends \PHPUnit_Framework_TestCase
- {
-     private $hello;
-<span class="gd">-    public function setUp()</span>
-<span class="gi">+    protected function setUp()</span>
-     {
-         $this-&gt;hello = &quot;hello&quot;;
-     }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    private $hello;<span class="w"></span>
+<span class="gd">-    public function setUp()</span><span class="w"></span>
+<span class="gi">+    protected function setUp()</span><span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="w"> </span>        $this-&gt;hello = &quot;hello&quot;;<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
 
-<span class="gd">-    public function tearDown()</span>
-<span class="gi">+    protected function tearDown()</span>
-     {
-         $this-&gt;hello = null;
-     }
- }
+<span class="gd">-    public function tearDown()</span><span class="w"></span>
+<span class="gi">+    protected function tearDown()</span><span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="w"> </span>        $this-&gt;hello = null;<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>

@@ -77,30 +77,30 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
-<span class="gd">-use Foo, Sample, Sample\Sample as Sample2;</span>
-<span class="gi">+use Foo;</span>
-<span class="gi">+use Sample;</span>
-<span class="gi">+use Sample\Sample as Sample2;</span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-use Foo, Sample, Sample\Sample as Sample2;</span><span class="w"></span>
+<span class="gi">+use Foo;</span><span class="w"></span>
+<span class="gi">+use Sample;</span><span class="w"></span>
+<span class="gi">+use Sample\Sample as Sample2;</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['group_to_single_imports'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
-<span class="gd">-use Space\Models\ {</span>
-<span class="gd">-    TestModelA,</span>
-<span class="gd">-    TestModelB,</span>
-<span class="gd">-    TestModel,</span>
-<span class="gd">-};</span>
-<span class="gi">+use Space\Models\TestModelA;</span>
-<span class="gi">+use Space\Models\TestModelB;</span>
-<span class="gi">+use Space\Models\TestModel;</span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-use Space\Models\ {</span><span class="w"></span>
+<span class="gd">-    TestModelA,</span><span class="w"></span>
+<span class="gd">-    TestModelB,</span><span class="w"></span>
+<span class="gd">-    TestModel,</span><span class="w"></span>
+<span class="gd">-};</span><span class="w"></span>
+<span class="gi">+use Space\Models\TestModelA;</span><span class="w"></span>
+<span class="gi">+use Space\Models\TestModelB;</span><span class="w"></span>
+<span class="gi">+use Space\Models\TestModel;</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

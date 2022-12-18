@@ -103,62 +103,62 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
-<span class="gd">-$a = chop($b);</span>
-<span class="gd">-close($b);</span>
-<span class="gd">-$a = doubleval($b);</span>
-<span class="gd">-$a = fputs($b, $c);</span>
-<span class="gd">-$a = get_required_files();</span>
-<span class="gd">-ini_alter($b, $c);</span>
-<span class="gd">-$a = is_double($b);</span>
-<span class="gd">-$a = is_integer($b);</span>
-<span class="gd">-$a = is_long($b);</span>
-<span class="gd">-$a = is_real($b);</span>
-<span class="gd">-$a = is_writeable($b);</span>
-<span class="gd">-$a = join($glue, $pieces);</span>
-<span class="gd">-$a = key_exists($key, $array);</span>
-<span class="gd">-magic_quotes_runtime($new_setting);</span>
-<span class="gd">-$a = pos($array);</span>
-<span class="gd">-$a = show_source($filename, true);</span>
-<span class="gd">-$a = sizeof($b);</span>
-<span class="gd">-$a = strchr($haystack, $needle);</span>
-<span class="gd">-$a = imap_header($imap_stream, 1);</span>
-<span class="gd">-user_error($message);</span>
-<span class="gi">+$a = rtrim($b);</span>
-<span class="gi">+closedir($b);</span>
-<span class="gi">+$a = floatval($b);</span>
-<span class="gi">+$a = fwrite($b, $c);</span>
-<span class="gi">+$a = get_included_files();</span>
-<span class="gi">+ini_set($b, $c);</span>
-<span class="gi">+$a = is_float($b);</span>
-<span class="gi">+$a = is_int($b);</span>
-<span class="gi">+$a = is_int($b);</span>
-<span class="gi">+$a = is_float($b);</span>
-<span class="gi">+$a = is_writable($b);</span>
-<span class="gi">+$a = implode($glue, $pieces);</span>
-<span class="gi">+$a = array_key_exists($key, $array);</span>
-<span class="gi">+set_magic_quotes_runtime($new_setting);</span>
-<span class="gi">+$a = current($array);</span>
-<span class="gi">+$a = highlight_file($filename, true);</span>
-<span class="gi">+$a = count($b);</span>
-<span class="gi">+$a = strstr($haystack, $needle);</span>
-<span class="gi">+$a = imap_headerinfo($imap_stream, 1);</span>
-<span class="gi">+trigger_error($message);</span>
- mbereg_search_getregs();
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-$a = chop($b);</span><span class="w"></span>
+<span class="gd">-close($b);</span><span class="w"></span>
+<span class="gd">-$a = doubleval($b);</span><span class="w"></span>
+<span class="gd">-$a = fputs($b, $c);</span><span class="w"></span>
+<span class="gd">-$a = get_required_files();</span><span class="w"></span>
+<span class="gd">-ini_alter($b, $c);</span><span class="w"></span>
+<span class="gd">-$a = is_double($b);</span><span class="w"></span>
+<span class="gd">-$a = is_integer($b);</span><span class="w"></span>
+<span class="gd">-$a = is_long($b);</span><span class="w"></span>
+<span class="gd">-$a = is_real($b);</span><span class="w"></span>
+<span class="gd">-$a = is_writeable($b);</span><span class="w"></span>
+<span class="gd">-$a = join($glue, $pieces);</span><span class="w"></span>
+<span class="gd">-$a = key_exists($key, $array);</span><span class="w"></span>
+<span class="gd">-magic_quotes_runtime($new_setting);</span><span class="w"></span>
+<span class="gd">-$a = pos($array);</span><span class="w"></span>
+<span class="gd">-$a = show_source($filename, true);</span><span class="w"></span>
+<span class="gd">-$a = sizeof($b);</span><span class="w"></span>
+<span class="gd">-$a = strchr($haystack, $needle);</span><span class="w"></span>
+<span class="gd">-$a = imap_header($imap_stream, 1);</span><span class="w"></span>
+<span class="gd">-user_error($message);</span><span class="w"></span>
+<span class="gi">+$a = rtrim($b);</span><span class="w"></span>
+<span class="gi">+closedir($b);</span><span class="w"></span>
+<span class="gi">+$a = floatval($b);</span><span class="w"></span>
+<span class="gi">+$a = fwrite($b, $c);</span><span class="w"></span>
+<span class="gi">+$a = get_included_files();</span><span class="w"></span>
+<span class="gi">+ini_set($b, $c);</span><span class="w"></span>
+<span class="gi">+$a = is_float($b);</span><span class="w"></span>
+<span class="gi">+$a = is_int($b);</span><span class="w"></span>
+<span class="gi">+$a = is_int($b);</span><span class="w"></span>
+<span class="gi">+$a = is_float($b);</span><span class="w"></span>
+<span class="gi">+$a = is_writable($b);</span><span class="w"></span>
+<span class="gi">+$a = implode($glue, $pieces);</span><span class="w"></span>
+<span class="gi">+$a = array_key_exists($key, $array);</span><span class="w"></span>
+<span class="gi">+set_magic_quotes_runtime($new_setting);</span><span class="w"></span>
+<span class="gi">+$a = current($array);</span><span class="w"></span>
+<span class="gi">+$a = highlight_file($filename, true);</span><span class="w"></span>
+<span class="gi">+$a = count($b);</span><span class="w"></span>
+<span class="gi">+$a = strstr($haystack, $needle);</span><span class="w"></span>
+<span class="gi">+$a = imap_headerinfo($imap_stream, 1);</span><span class="w"></span>
+<span class="gi">+trigger_error($message);</span><span class="w"></span>
+<span class="w"> </span>mbereg_search_getregs();<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['sets'</span> <span class="pre">=&gt;</span> <span class="pre">['&#64;mbreg']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- $a = is_double($b);
-<span class="gd">-mbereg_search_getregs();</span>
-<span class="gi">+mb_ereg_search_getregs();</span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>$a = is_double($b);<span class="w"></span>
+<span class="gd">-mbereg_search_getregs();</span><span class="w"></span>
+<span class="gi">+mb_ereg_search_getregs();</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

@@ -68,71 +68,71 @@
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- final class Sample
- {
-     private static $A = 1;
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>final class Sample<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    private static $A = 1;<span class="w"></span>
 
-     public function getBar()
-     {
-<span class="gd">-        return static::class.static::test().static::$A;</span>
-<span class="gi">+        return self::class.self::test().self::$A;</span>
-     }
+<span class="w"> </span>    public function getBar()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        return static::class.static::test().static::$A;</span><span class="w"></span>
+<span class="gi">+        return self::class.self::test().self::$A;</span><span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
 
-     private static function test()
-     {
-         return &#39;test&#39;;
-     }
- }
+<span class="w"> </span>    private static function test()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="w"> </span>        return &#39;test&#39;;<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- final class Foo
- {
-     public function bar()
-     {
-<span class="gd">-        return new static();</span>
-<span class="gi">+        return new self();</span>
-     }
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>final class Foo<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    public function bar()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        return new static();</span><span class="w"></span>
+<span class="gi">+        return new self();</span><span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- final class Foo
- {
-     public function isBar()
-     {
-<span class="gd">-        return $foo instanceof static;</span>
-<span class="gi">+        return $foo instanceof self;</span>
-     }
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>final class Foo<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    public function isBar()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        return $foo instanceof static;</span><span class="w"></span>
+<span class="gi">+        return $foo instanceof self;</span><span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- $a = new class() {
-     public function getBar()
-     {
-<span class="gd">-        return static::class;</span>
-<span class="gi">+        return self::class;</span>
-     }
- };
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>$a = new class() {<span class="w"></span>
+<span class="w"> </span>    public function getBar()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        return static::class;</span><span class="w"></span>
+<span class="gi">+        return self::class;</span><span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>};<span class="w"></span>
 </pre></div>
 </div>
 </div>

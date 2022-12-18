@@ -79,100 +79,100 @@ line.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- final class Sample
- {
-     protected function foo()
-     {
-     }
-<span class="gi">+</span>
-     protected function bar()
-     {
-     }
-<span class="gd">-</span>
-<span class="gd">-</span>
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>final class Sample<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    protected function foo()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="gi">+</span><span class="w"></span>
+<span class="w"> </span>    protected function bar()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['elements'</span> <span class="pre">=&gt;</span> <span class="pre">['property'</span> <span class="pre">=&gt;</span> <span class="pre">'one']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- class Sample
-<span class="gd">-{private $a; // foo</span>
-<span class="gi">+{</span>
-<span class="gi">+private $a; // foo</span>
-<span class="gi">+</span>
-     /** second in a hour */
-     private $b;
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>class Sample<span class="w"></span>
+<span class="gd">-{private $a; // foo</span><span class="w"></span>
+<span class="gi">+{</span><span class="w"></span>
+<span class="gi">+private $a; // foo</span><span class="w"></span>
+<span class="gi">+</span><span class="w"></span>
+<span class="w"> </span>    /** second in a hour */<span class="w"></span>
+<span class="w"> </span>    private $b;<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['elements'</span> <span class="pre">=&gt;</span> <span class="pre">['const'</span> <span class="pre">=&gt;</span> <span class="pre">'one']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- class Sample
- {
-     const A = 1;
-<span class="gi">+</span>
-     /** seconds in some hours */
-     const B = 3600;
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>class Sample<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    const A = 1;<span class="w"></span>
+<span class="gi">+</span><span class="w"></span>
+<span class="w"> </span>    /** seconds in some hours */<span class="w"></span>
+<span class="w"> </span>    const B = 3600;<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['elements'</span> <span class="pre">=&gt;</span> <span class="pre">['const'</span> <span class="pre">=&gt;</span> <span class="pre">'only_if_meta']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- class Sample
- {
-     /** @var int */
-     const SECOND = 1;
-<span class="gi">+</span>
-     /** @var int */
-     const MINUTE = 60;
-<span class="gd">-</span>
-     const HOUR = 3600;
-<span class="gd">-</span>
-     const DAY = 86400;
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>class Sample<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    /** @var int */<span class="w"></span>
+<span class="w"> </span>    const SECOND = 1;<span class="w"></span>
+<span class="gi">+</span><span class="w"></span>
+<span class="w"> </span>    /** @var int */<span class="w"></span>
+<span class="w"> </span>    const MINUTE = 60;<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>    const HOUR = 3600;<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>    const DAY = 86400;<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['elements'</span> <span class="pre">=&gt;</span> <span class="pre">['property'</span> <span class="pre">=&gt;</span> <span class="pre">'only_if_meta']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- class Sample
- {
-     public $a;
-<span class="gi">+</span>
-     #[SetUp]
-     public $b;
-<span class="gi">+</span>
-     /** @var string */
-     public $c;
-<span class="gi">+</span>
-     /** @internal */
-     #[Assert\String()]
-     public $d;
-<span class="gd">-</span>
-     public $e;
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>class Sample<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    public $a;<span class="w"></span>
+<span class="gi">+</span><span class="w"></span>
+<span class="w"> </span>    #[SetUp]<span class="w"></span>
+<span class="w"> </span>    public $b;<span class="w"></span>
+<span class="gi">+</span><span class="w"></span>
+<span class="w"> </span>    /** @var string */<span class="w"></span>
+<span class="w"> </span>    public $c;<span class="w"></span>
+<span class="gi">+</span><span class="w"></span>
+<span class="w"> </span>    /** @internal */<span class="w"></span>
+<span class="w"> </span>    #[Assert\String()]<span class="w"></span>
+<span class="w"> </span>    public $d;<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>    public $e;<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>

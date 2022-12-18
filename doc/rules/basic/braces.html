@@ -106,108 +106,108 @@ anonymous constructs (anonymous classes and lambda functions).</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
 
-<span class="gd">-class Foo {</span>
-<span class="gd">-    public function bar($baz) {</span>
-<span class="gd">-        if ($baz = 900) echo &quot;Hello!&quot;;</span>
-<span class="gi">+class Foo</span>
-<span class="gi">+{</span>
-<span class="gi">+    public function bar($baz)</span>
-<span class="gi">+    {</span>
-<span class="gi">+        if ($baz = 900) {</span>
-<span class="gi">+            echo &quot;Hello!&quot;;</span>
-<span class="gi">+        }</span>
+<span class="gd">-class Foo {</span><span class="w"></span>
+<span class="gd">-    public function bar($baz) {</span><span class="w"></span>
+<span class="gd">-        if ($baz = 900) echo &quot;Hello!&quot;;</span><span class="w"></span>
+<span class="gi">+class Foo</span><span class="w"></span>
+<span class="gi">+{</span><span class="w"></span>
+<span class="gi">+    public function bar($baz)</span><span class="w"></span>
+<span class="gi">+    {</span><span class="w"></span>
+<span class="gi">+        if ($baz = 900) {</span><span class="w"></span>
+<span class="gi">+            echo &quot;Hello!&quot;;</span><span class="w"></span>
+<span class="gi">+        }</span><span class="w"></span>
 
-<span class="gd">-        if ($baz = 9000)</span>
-<span class="gi">+        if ($baz = 9000) {</span>
-             echo &quot;Wait!&quot;;
-<span class="gi">+        }</span>
+<span class="gd">-        if ($baz = 9000)</span><span class="w"></span>
+<span class="gi">+        if ($baz = 9000) {</span><span class="w"></span>
+<span class="w"> </span>            echo &quot;Wait!&quot;;<span class="w"></span>
+<span class="gi">+        }</span><span class="w"></span>
 
-<span class="gd">-        if ($baz == true)</span>
-<span class="gd">-        {</span>
-<span class="gi">+        if ($baz == true) {</span>
-             echo &quot;Why?&quot;;
-<span class="gd">-        }</span>
-<span class="gd">-        else</span>
-<span class="gd">-        {</span>
-<span class="gi">+        } else {</span>
-             echo &quot;Ha?&quot;;
-         }
+<span class="gd">-        if ($baz == true)</span><span class="w"></span>
+<span class="gd">-        {</span><span class="w"></span>
+<span class="gi">+        if ($baz == true) {</span><span class="w"></span>
+<span class="w"> </span>            echo &quot;Why?&quot;;<span class="w"></span>
+<span class="gd">-        }</span><span class="w"></span>
+<span class="gd">-        else</span><span class="w"></span>
+<span class="gd">-        {</span><span class="w"></span>
+<span class="gi">+        } else {</span><span class="w"></span>
+<span class="w"> </span>            echo &quot;Ha?&quot;;<span class="w"></span>
+<span class="w"> </span>        }<span class="w"></span>
 
-<span class="gd">-        if (is_array($baz))</span>
-<span class="gd">-            foreach ($baz as $b)</span>
-<span class="gd">-            {</span>
-<span class="gi">+        if (is_array($baz)) {</span>
-<span class="gi">+            foreach ($baz as $b) {</span>
-                 echo $b;
-             }
-<span class="gi">+        }</span>
-     }
- }
+<span class="gd">-        if (is_array($baz))</span><span class="w"></span>
+<span class="gd">-            foreach ($baz as $b)</span><span class="w"></span>
+<span class="gd">-            {</span><span class="w"></span>
+<span class="gi">+        if (is_array($baz)) {</span><span class="w"></span>
+<span class="gi">+            foreach ($baz as $b) {</span><span class="w"></span>
+<span class="w"> </span>                echo $b;<span class="w"></span>
+<span class="w"> </span>            }<span class="w"></span>
+<span class="gi">+        }</span><span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['allow_single_line_closure'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- $positive = function ($item) { return $item &gt;= 0; };
- $negative = function ($item) {
-<span class="gd">-                return $item &lt; 0; };</span>
-<span class="gi">+    return $item &lt; 0;</span>
-<span class="gi">+};</span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>$positive = function ($item) { return $item &gt;= 0; };<span class="w"></span>
+<span class="w"> </span>$negative = function ($item) {<span class="w"></span>
+<span class="gd">-                return $item &lt; 0; };</span><span class="w"></span>
+<span class="gi">+    return $item &lt; 0;</span><span class="w"></span>
+<span class="gi">+};</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['position_after_functions_and_oop_constructs'</span> <span class="pre">=&gt;</span> <span class="pre">'same']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
 
-<span class="gd">-class Foo</span>
-<span class="gd">-{</span>
-<span class="gd">-    public function bar($baz)</span>
-<span class="gd">-    {</span>
-<span class="gd">-        if ($baz = 900) echo &quot;Hello!&quot;;</span>
-<span class="gi">+class Foo {</span>
-<span class="gi">+    public function bar($baz) {</span>
-<span class="gi">+        if ($baz = 900) {</span>
-<span class="gi">+            echo &quot;Hello!&quot;;</span>
-<span class="gi">+        }</span>
+<span class="gd">-class Foo</span><span class="w"></span>
+<span class="gd">-{</span><span class="w"></span>
+<span class="gd">-    public function bar($baz)</span><span class="w"></span>
+<span class="gd">-    {</span><span class="w"></span>
+<span class="gd">-        if ($baz = 900) echo &quot;Hello!&quot;;</span><span class="w"></span>
+<span class="gi">+class Foo {</span><span class="w"></span>
+<span class="gi">+    public function bar($baz) {</span><span class="w"></span>
+<span class="gi">+        if ($baz = 900) {</span><span class="w"></span>
+<span class="gi">+            echo &quot;Hello!&quot;;</span><span class="w"></span>
+<span class="gi">+        }</span><span class="w"></span>
 
-<span class="gd">-        if ($baz = 9000)</span>
-<span class="gi">+        if ($baz = 9000) {</span>
-             echo &quot;Wait!&quot;;
-<span class="gi">+        }</span>
+<span class="gd">-        if ($baz = 9000)</span><span class="w"></span>
+<span class="gi">+        if ($baz = 9000) {</span><span class="w"></span>
+<span class="w"> </span>            echo &quot;Wait!&quot;;<span class="w"></span>
+<span class="gi">+        }</span><span class="w"></span>
 
-<span class="gd">-        if ($baz == true)</span>
-<span class="gd">-        {</span>
-<span class="gi">+        if ($baz == true) {</span>
-             echo &quot;Why?&quot;;
-<span class="gd">-        }</span>
-<span class="gd">-        else</span>
-<span class="gd">-        {</span>
-<span class="gi">+        } else {</span>
-             echo &quot;Ha?&quot;;
-         }
+<span class="gd">-        if ($baz == true)</span><span class="w"></span>
+<span class="gd">-        {</span><span class="w"></span>
+<span class="gi">+        if ($baz == true) {</span><span class="w"></span>
+<span class="w"> </span>            echo &quot;Why?&quot;;<span class="w"></span>
+<span class="gd">-        }</span><span class="w"></span>
+<span class="gd">-        else</span><span class="w"></span>
+<span class="gd">-        {</span><span class="w"></span>
+<span class="gi">+        } else {</span><span class="w"></span>
+<span class="w"> </span>            echo &quot;Ha?&quot;;<span class="w"></span>
+<span class="w"> </span>        }<span class="w"></span>
 
-<span class="gd">-        if (is_array($baz))</span>
-<span class="gd">-            foreach ($baz as $b)</span>
-<span class="gd">-            {</span>
-<span class="gi">+        if (is_array($baz)) {</span>
-<span class="gi">+            foreach ($baz as $b) {</span>
-                 echo $b;
-             }
-<span class="gi">+        }</span>
-     }
- }
+<span class="gd">-        if (is_array($baz))</span><span class="w"></span>
+<span class="gd">-            foreach ($baz as $b)</span><span class="w"></span>
+<span class="gd">-            {</span><span class="w"></span>
+<span class="gi">+        if (is_array($baz)) {</span><span class="w"></span>
+<span class="gi">+            foreach ($baz as $b) {</span><span class="w"></span>
+<span class="w"> </span>                echo $b;<span class="w"></span>
+<span class="w"> </span>            }<span class="w"></span>
+<span class="gi">+        }</span><span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>

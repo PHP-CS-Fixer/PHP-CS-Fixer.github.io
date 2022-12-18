@@ -93,40 +93,40 @@ strategy.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- final class MyTest extends \PHPUnit_Framework_TestCase
- {
-     public function testMe()
-     {
-<span class="gd">-        $this-&gt;assertSame(1, 2);</span>
-<span class="gd">-        self::assertSame(1, 2);</span>
-<span class="gi">+        static::assertSame(1, 2);</span>
-<span class="gi">+        static::assertSame(1, 2);</span>
-         static::assertSame(1, 2);
-     }
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    public function testMe()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        $this-&gt;assertSame(1, 2);</span><span class="w"></span>
+<span class="gd">-        self::assertSame(1, 2);</span><span class="w"></span>
+<span class="gi">+        static::assertSame(1, 2);</span><span class="w"></span>
+<span class="gi">+        static::assertSame(1, 2);</span><span class="w"></span>
+<span class="w"> </span>        static::assertSame(1, 2);<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['call_type'</span> <span class="pre">=&gt;</span> <span class="pre">'this']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- final class MyTest extends \PHPUnit_Framework_TestCase
- {
-     public function testMe()
-     {
-         $this-&gt;assertSame(1, 2);
-<span class="gd">-        self::assertSame(1, 2);</span>
-<span class="gd">-        static::assertSame(1, 2);</span>
-<span class="gi">+        $this-&gt;assertSame(1, 2);</span>
-<span class="gi">+        $this-&gt;assertSame(1, 2);</span>
-     }
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    public function testMe()<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="w"> </span>        $this-&gt;assertSame(1, 2);<span class="w"></span>
+<span class="gd">-        self::assertSame(1, 2);</span><span class="w"></span>
+<span class="gd">-        static::assertSame(1, 2);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;assertSame(1, 2);</span><span class="w"></span>
+<span class="gi">+        $this-&gt;assertSame(1, 2);</span><span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>

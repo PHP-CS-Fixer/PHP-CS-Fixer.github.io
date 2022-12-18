@@ -85,60 +85,60 @@ must have a trailing comma.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- array(
-     1,
-<span class="gd">-    2</span>
-<span class="gi">+    2,</span>
- );
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>array(<span class="w"></span>
+<span class="w"> </span>    1,<span class="w"></span>
+<span class="gd">-    2</span><span class="w"></span>
+<span class="gi">+    2,</span><span class="w"></span>
+<span class="w"> </span>);<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['after_heredoc'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
-     $x = [
-         &#39;foo&#39;,
-         &lt;&lt;&lt;EOD
-             bar
-<span class="gd">-            EOD</span>
-<span class="gi">+            EOD,</span>
-     ];
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>    $x = [<span class="w"></span>
+<span class="w"> </span>        &#39;foo&#39;,<span class="w"></span>
+<span class="w"> </span>        &lt;&lt;&lt;EOD<span class="w"></span>
+<span class="w"> </span>            bar<span class="w"></span>
+<span class="gd">-            EOD</span><span class="w"></span>
+<span class="gi">+            EOD,</span><span class="w"></span>
+<span class="w"> </span>    ];<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['elements'</span> <span class="pre">=&gt;</span> <span class="pre">['arguments']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- foo(
-     1,
-<span class="gd">-    2</span>
-<span class="gi">+    2,</span>
- );
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>foo(<span class="w"></span>
+<span class="w"> </span>    1,<span class="w"></span>
+<span class="gd">-    2</span><span class="w"></span>
+<span class="gi">+    2,</span><span class="w"></span>
+<span class="w"> </span>);<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['elements'</span> <span class="pre">=&gt;</span> <span class="pre">['parameters']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- function foo(
-     $x,
-<span class="gd">-    $y</span>
-<span class="gi">+    $y,</span>
- )
- {
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>function foo(<span class="w"></span>
+<span class="w"> </span>    $x,<span class="w"></span>
+<span class="gd">-    $y</span><span class="w"></span>
+<span class="gi">+    $y,</span><span class="w"></span>
+<span class="w"> </span>)<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>

@@ -77,37 +77,37 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- $first = true;// needed because by default first docblock is never fixed.
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>$first = true;// needed because by default first docblock is never fixed.<span class="w"></span>
 
-<span class="gd">-/** This should be a comment */</span>
-<span class="gi">+/* This should be a comment */</span>
- foreach($connections as $key =&gt; $sqlite) {
-     $sqlite-&gt;open($path);
- }
+<span class="gd">-/** This should be a comment */</span><span class="w"></span>
+<span class="gi">+/* This should be a comment */</span><span class="w"></span>
+<span class="w"> </span>foreach($connections as $key =&gt; $sqlite) {<span class="w"></span>
+<span class="w"> </span>    $sqlite-&gt;open($path);<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['ignored_tags'</span> <span class="pre">=&gt;</span> <span class="pre">['todo']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- $first = true;// needed because by default first docblock is never fixed.
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>$first = true;// needed because by default first docblock is never fixed.<span class="w"></span>
 
-<span class="gd">-/** This should be a comment */</span>
-<span class="gi">+/* This should be a comment */</span>
- foreach($connections as $key =&gt; $sqlite) {
-     $sqlite-&gt;open($path);
- }
+<span class="gd">-/** This should be a comment */</span><span class="w"></span>
+<span class="gi">+/* This should be a comment */</span><span class="w"></span>
+<span class="w"> </span>foreach($connections as $key =&gt; $sqlite) {<span class="w"></span>
+<span class="w"> </span>    $sqlite-&gt;open($path);<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 
- /** @todo This should be a PHPDoc as the tag is on &quot;ignored_tags&quot; list */
- foreach($connections as $key =&gt; $sqlite) {
-     $sqlite-&gt;open($path);
- }
+<span class="w"> </span>/** @todo This should be a PHPDoc as the tag is on &quot;ignored_tags&quot; list */<span class="w"></span>
+<span class="w"> </span>foreach($connections as $key =&gt; $sqlite) {<span class="w"></span>
+<span class="w"> </span>    $sqlite-&gt;open($path);<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>

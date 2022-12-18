@@ -77,173 +77,173 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
 
- $foo = array(&quot;foo&quot;);
+<span class="w"> </span>$foo = array(&quot;foo&quot;);<span class="w"></span>
 
-<span class="gd">-</span>
- $bar = &quot;bar&quot;;
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>$bar = &quot;bar&quot;;<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['tokens'</span> <span class="pre">=&gt;</span> <span class="pre">['break']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
 
- switch ($foo) {
-     case 41:
-         echo &quot;foo&quot;;
-         break;
-<span class="gd">-</span>
-     case 42:
-         break;
- }
+<span class="w"> </span>switch ($foo) {<span class="w"></span>
+<span class="w"> </span>    case 41:<span class="w"></span>
+<span class="w"> </span>        echo &quot;foo&quot;;<span class="w"></span>
+<span class="w"> </span>        break;<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>    case 42:<span class="w"></span>
+<span class="w"> </span>        break;<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['tokens'</span> <span class="pre">=&gt;</span> <span class="pre">['continue']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
 
- for ($i = 0; $i &lt; 9000; ++$i) {
-     if (true) {
-         continue;
-<span class="gd">-</span>
-     }
- }
+<span class="w"> </span>for ($i = 0; $i &lt; 9000; ++$i) {<span class="w"></span>
+<span class="w"> </span>    if (true) {<span class="w"></span>
+<span class="w"> </span>        continue;<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['tokens'</span> <span class="pre">=&gt;</span> <span class="pre">['curly_brace_block']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
 
- for ($i = 0; $i &lt; 9000; ++$i) {
-<span class="gd">-</span>
-     echo $i;
-<span class="gd">-</span>
- }
+<span class="w"> </span>for ($i = 0; $i &lt; 9000; ++$i) {<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>    echo $i;<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['tokens'</span> <span class="pre">=&gt;</span> <span class="pre">['extra']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
 
- $foo = array(&quot;foo&quot;);
+<span class="w"> </span>$foo = array(&quot;foo&quot;);<span class="w"></span>
 
-<span class="gd">-</span>
- $bar = &quot;bar&quot;;
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>$bar = &quot;bar&quot;;<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-6">
 <h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['tokens'</span> <span class="pre">=&gt;</span> <span class="pre">['parenthesis_brace_block']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
 
- $foo = array(
-<span class="gd">-</span>
-     &quot;foo&quot;
-<span class="gd">-</span>
- );
+<span class="w"> </span>$foo = array(<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>    &quot;foo&quot;<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>);<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-7">
 <h3>Example #7<a class="headerlink" href="#example-7" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['tokens'</span> <span class="pre">=&gt;</span> <span class="pre">['return']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
 
- function foo($bar)
- {
-     return $bar;
-<span class="gd">-</span>
- }
+<span class="w"> </span>function foo($bar)<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    return $bar;<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-8">
 <h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['tokens'</span> <span class="pre">=&gt;</span> <span class="pre">['square_brace_block']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
 
- $foo = [
-<span class="gd">-</span>
-     &quot;foo&quot;
-<span class="gd">-</span>
- ];
+<span class="w"> </span>$foo = [<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>    &quot;foo&quot;<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>];<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-9">
 <h3>Example #9<a class="headerlink" href="#example-9" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['tokens'</span> <span class="pre">=&gt;</span> <span class="pre">['throw']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
 
- function foo($bar)
- {
-     throw new \Exception(&quot;Hello!&quot;);
-<span class="gd">-</span>
- }
+<span class="w"> </span>function foo($bar)<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    throw new \Exception(&quot;Hello!&quot;);<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-10">
 <h3>Example #10<a class="headerlink" href="#example-10" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['tokens'</span> <span class="pre">=&gt;</span> <span class="pre">['use']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
 
- namespace Foo;
+<span class="w"> </span>namespace Foo;<span class="w"></span>
 
- use Bar\Baz;
-<span class="gd">-</span>
- use Baz\Bar;
+<span class="w"> </span>use Bar\Baz;<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>use Baz\Bar;<span class="w"></span>
 
- class Bar
- {
- }
+<span class="w"> </span>class Bar<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-11">
 <h3>Example #11<a class="headerlink" href="#example-11" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['tokens'</span> <span class="pre">=&gt;</span> <span class="pre">['switch',</span> <span class="pre">'case',</span> <span class="pre">'default']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
- switch($a) {
-<span class="gd">-</span>
-     case 1:
-<span class="gd">-</span>
-     default:
-<span class="gd">-</span>
-         echo 3;
- }
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>switch($a) {<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>    case 1:<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>    default:<span class="w"></span>
+<span class="gd">-</span><span class="w"></span>
+<span class="w"> </span>        echo 3;<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>

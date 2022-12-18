@@ -72,13 +72,13 @@ single-quotes, double-quotes and backticks are not used inside the command.</p>
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
- &lt;?php
-<span class="gd">-$plain = `ls -lah`;</span>
-<span class="gd">-$withVar = `ls -lah $var1 ${var2} {$var3} {$var4[0]} {$var5-&gt;call()}`;</span>
-<span class="gi">+$plain = shell_exec(&quot;ls -lah&quot;);</span>
-<span class="gi">+$withVar = shell_exec(&quot;ls -lah $var1 ${var2} {$var3} {$var4[0]} {$var5-&gt;call()}&quot;);</span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-$plain = `ls -lah`;</span><span class="w"></span>
+<span class="gd">-$withVar = `ls -lah $var1 ${var2} {$var3} {$var4[0]} {$var5-&gt;call()}`;</span><span class="w"></span>
+<span class="gi">+$plain = shell_exec(&quot;ls -lah&quot;);</span><span class="w"></span>
+<span class="gi">+$withVar = shell_exec(&quot;ls -lah $var1 ${var2} {$var3} {$var4[0]} {$var5-&gt;call()}&quot;);</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
