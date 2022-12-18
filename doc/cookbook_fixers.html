@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Oliva (v3.13.0)</strong> edition
+                <strong>Oliva (v3.13.1)</strong> edition
               </h1>
             </div>
           </div>
@@ -91,7 +91,7 @@ contribute, and to detect bugs (<a class="reference external" href="https://en.w
 <div class="section" id="step-by-step">
 <h2>Step by step<a class="headerlink" href="#step-by-step" title="Permalink to this headline">¶</a></h2>
 <p>For this step-by-step, we are going to create a simple fixer that
-removes all comments from the code that are preceded by ‘;’ (semicolon).</p>
+removes all comments from the code that are preceded by <cite>;</cite> (semicolon).</p>
 <p>We are calling it <code class="docutils literal notranslate"><span class="pre">remove_comments</span></code> (code name), or,
 <code class="docutils literal notranslate"><span class="pre">RemoveCommentsFixer</span></code> (class name).</p>
 <div class="section" id="step-1-creating-files">
@@ -288,25 +288,25 @@ like:</p>
 <p>You have defined the behavior of your fixer in tests. Now it is time to
 implement it.</p>
 <p>First, we need to create one method to describe what this fixer does:</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span>// src/Fixer/Comment/RemoveCommentsFixer.php
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">// src/Fixer/Comment/RemoveCommentsFixer.php</span>
 
-final class RemoveCommentsFixer extends AbstractFixer
-{
-    /**
-     * {@inheritdoc}
-     */
-    public function getDefinition()
-    {
-        return new FixerDefinition(
-            &#39;Removes all comments of the code that are preceded by &quot;;&quot; (semicolon).&#39;, // Trailing dot is important. We thrive to use English grammar properly.
-            [
-                new CodeSample(
-                    &#39;&lt;?php echo 123; /* Comment */&#39;
-                ),
-            ]
-        );
-    }
-}
+<span class="x">final class RemoveCommentsFixer extends AbstractFixer</span>
+<span class="x">{</span>
+<span class="x">    /**</span>
+<span class="x">     * {@inheritdoc}</span>
+<span class="x">     */</span>
+<span class="x">    public function getDefinition()</span>
+<span class="x">    {</span>
+<span class="x">        return new FixerDefinition(</span>
+<span class="x">            &#39;Removes all comments of the code that are preceded by `;` (semicolon).&#39;, // Trailing dot is important. We thrive to use English grammar properly.</span>
+<span class="x">            [</span>
+<span class="x">                new CodeSample(</span>
+<span class="x">                    &quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="mi">123</span><span class="p">;</span> <span class="cm">/* Comment */</span><span class="nx">\n</span><span class="s2">&quot;</span>
+<span class="s2">                ),</span>
+<span class="s2">            ]</span>
+<span class="s2">        );</span>
+<span class="s2">    }</span>
+<span class="s2">}</span>
 </pre></div>
 </div>
 <p>Next, we need to update the documentation.
@@ -459,10 +459,10 @@ token is a semicolon.</p>
     <span class="k">public</span> <span class="k">function</span> <span class="nf">getDefinition</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="k">return</span> <span class="k">new</span> <span class="nx">FixerDefinition</span><span class="p">(</span>
-            <span class="s1">&#39;Removes all comments of the code that are preceded by &quot;;&quot; (semicolon).&#39;</span><span class="p">,</span> <span class="c1">// Trailing dot is important. We thrive to use English grammar properly.</span>
+            <span class="s1">&#39;Removes all comments of the code that are preceded by `;` (semicolon).&#39;</span><span class="p">,</span> <span class="c1">// Trailing dot is important. We thrive to use English grammar properly.</span>
             <span class="p">[</span>
                 <span class="k">new</span> <span class="nx">CodeSample</span><span class="p">(</span>
-                    <span class="s1">&#39;&lt;?php echo 123; /* Comment */&#39;</span>
+                    <span class="s2">&quot;&lt;?php echo 123; /* Comment */</span><span class="se">\n</span><span class="s2">&quot;</span>
                 <span class="p">),</span>
             <span class="p">]</span>
         <span class="p">);</span>
