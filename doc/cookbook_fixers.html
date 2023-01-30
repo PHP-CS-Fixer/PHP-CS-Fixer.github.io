@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Oliva (v3.13.2)</strong> edition
+                <strong>Oliva (v3.14.3)</strong> edition
               </h1>
             </div>
           </div>
@@ -179,12 +179,9 @@ default behavior.</p>
 <span class="k">final</span> <span class="k">class</span> <span class="nc">RemoveCommentsFixerTest</span> <span class="k">extends</span> <span class="nx">AbstractFixerTestCase</span>
 <span class="p">{</span>
     <span class="sd">/**</span>
-<span class="sd">     * @param string      $expected</span>
-<span class="sd">     * @param null|string $input</span>
-<span class="sd">     *</span>
 <span class="sd">     * @dataProvider provideFixCases</span>
 <span class="sd">     */</span>
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">testFix</span><span class="p">(</span><span class="nv">$expected</span><span class="p">,</span> <span class="nv">$input</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">testFix</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$expected</span><span class="p">,</span> <span class="o">?</span><span class="nx">string</span> <span class="nv">$input</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span>
     <span class="p">{</span>
         <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">doTest</span><span class="p">(</span><span class="nv">$expected</span><span class="p">,</span> <span class="nv">$input</span><span class="p">);</span>
     <span class="p">}</span>

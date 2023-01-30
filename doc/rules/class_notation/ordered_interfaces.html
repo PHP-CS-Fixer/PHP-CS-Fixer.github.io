@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Oliva (v3.13.2)</strong> edition
+                <strong>Oliva (v3.14.3)</strong> edition
               </h1>
             </div>
           </div>
@@ -63,15 +63,6 @@
   <div class="section" id="rule-ordered-interfaces">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">ordered_interfaces</span></code><a class="headerlink" href="#rule-ordered-interfaces" title="Permalink to this headline">¶</a></h1>
 <p>Orders the interfaces in an <code class="docutils literal notranslate"><span class="pre">implements</span></code> or <code class="docutils literal notranslate"><span class="pre">interface</span> <span class="pre">extends</span></code> clause.</p>
-<div class="section" id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="using-this-rule-is-risky">
-<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
-<p>Risky for <code class="docutils literal notranslate"><span class="pre">implements</span></code> when specifying both an interface and its parent
-interface, because PHP doesn’t break on <code class="docutils literal notranslate"><span class="pre">parent,</span> <span class="pre">child</span></code> but does on <code class="docutils literal notranslate"><span class="pre">child,</span>
-<span class="pre">parent</span></code>.</p>
-</div>
-</div>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="order">

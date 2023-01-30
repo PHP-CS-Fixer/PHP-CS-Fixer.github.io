@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Oliva (v3.13.2)</strong> edition
+                <strong>Oliva (v3.14.3)</strong> edition
               </h1>
             </div>
           </div>
@@ -69,9 +69,16 @@ separated by a single blank line.</p>
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="groups">
 <h3><code class="docutils literal notranslate"><span class="pre">groups</span></code><a class="headerlink" href="#groups" title="Permalink to this headline">¶</a></h3>
-<p>Sets of annotation types to be grouped together.</p>
+<p>Sets of annotation types to be grouped together. Use <code class="docutils literal notranslate"><span class="pre">*</span></code> to match any tag
+character.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">string[][]</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">[['deprecated',</span> <span class="pre">'link',</span> <span class="pre">'see',</span> <span class="pre">'since'],</span> <span class="pre">['author',</span> <span class="pre">'copyright',</span> <span class="pre">'license'],</span> <span class="pre">['category',</span> <span class="pre">'package',</span> <span class="pre">'subpackage'],</span> <span class="pre">['property',</span> <span class="pre">'property-read',</span> <span class="pre">'property-write']]</span></code></p>
+</div>
+<div class="section" id="skip-unlisted-annotations">
+<h3><code class="docutils literal notranslate"><span class="pre">skip_unlisted_annotations</span></code><a class="headerlink" href="#skip-unlisted-annotations" title="Permalink to this headline">¶</a></h3>
+<p>Whether to skip annotations that are not listed in any group.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </div>
 </div>
 <div class="section" id="examples">
@@ -137,6 +144,46 @@ separated by a single blank line.</p>
 <span class="gi">+ * @throws Exception|RuntimeException foo</span><span class="w"></span>
 <span class="w"> </span> *<span class="w"></span>
 <span class="gd">- * @throws Exception|RuntimeException foo</span><span class="w"></span>
+<span class="w"> </span> * @param string $foo<span class="w"></span>
+<span class="gd">- *</span><span class="w"></span>
+<span class="w"> </span> * @param bool   $bar Bar<span class="w"></span>
+<span class="w"> </span> * @return int  Return the number of changes.<span class="w"></span>
+<span class="w"> </span> */<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-4">
+<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['groups'</span> <span class="pre">=&gt;</span> <span class="pre">[['ORM\\*'],</span> <span class="pre">['Assert\\*']]]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>/**<span class="w"></span>
+<span class="w"> </span> * @ORM\Id<span class="w"></span>
+<span class="gi">+ * @ORM\GeneratedValue</span><span class="w"></span>
+<span class="w"> </span> *<span class="w"></span>
+<span class="gd">- * @ORM\GeneratedValue</span><span class="w"></span>
+<span class="w"> </span> * @Assert\NotNull<span class="w"></span>
+<span class="gd">- *</span><span class="w"></span>
+<span class="w"> </span> * @Assert\Type(&quot;string&quot;)<span class="w"></span>
+<span class="w"> </span> */<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-5">
+<h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['skip_unlisted_annotations'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>/**<span class="w"></span>
+<span class="w"> </span> * Hello there!<span class="w"></span>
+<span class="w"> </span> *<span class="w"></span>
+<span class="w"> </span> * @author John Doe<span class="w"></span>
+<span class="gi">+ *</span><span class="w"></span>
+<span class="w"> </span> * @custom Test!<span class="w"></span>
+<span class="w"> </span> *<span class="w"></span>
+<span class="w"> </span> * @throws Exception|RuntimeException foo<span class="w"></span>
 <span class="w"> </span> * @param string $foo<span class="w"></span>
 <span class="gd">- *</span><span class="w"></span>
 <span class="w"> </span> * @param bool   $bar Bar<span class="w"></span>

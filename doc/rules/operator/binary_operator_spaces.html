@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Oliva (v3.13.2)</strong> edition
+                <strong>Oliva (v3.14.3)</strong> edition
               </h1>
             </div>
           </div>
@@ -68,7 +68,7 @@
 <div class="section" id="default">
 <h3><code class="docutils literal notranslate"><span class="pre">default</span></code><a class="headerlink" href="#default" title="Permalink to this headline">¶</a></h3>
 <p>Default fix strategy.</p>
-<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'align'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_minimal'</span></code>, <code class="docutils literal notranslate"><span class="pre">'no_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'align'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_minimal'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_minimal_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'no_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'single_space'</span></code></p>
 </div>
 <div class="section" id="operators">
@@ -181,12 +181,31 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <span class="gd">-    &quot;foo&quot; =&gt; 12,</span><span class="w"></span>
 <span class="gi">+    &quot;foo&quot;            =&gt; 12,</span><span class="w"></span>
 <span class="w"> </span>    &quot;baaaaaaaaaaar&quot;  =&gt; 13,<span class="w"></span>
+
+<span class="w"> </span>    &quot;baz&quot; =&gt; 1,<span class="w"></span>
 <span class="w"> </span>];<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-8">
 <h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align_by_scope']]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>$array = [<span class="w"></span>
+<span class="gd">-    &quot;foo&quot; =&gt; 12,</span><span class="w"></span>
+<span class="gi">+    &quot;foo&quot;            =&gt; 12,</span><span class="w"></span>
+<span class="w"> </span>    &quot;baaaaaaaaaaar&quot;  =&gt; 13,<span class="w"></span>
+
+<span class="gd">-    &quot;baz&quot; =&gt; 1,</span><span class="w"></span>
+<span class="gi">+    &quot;baz&quot;            =&gt; 1,</span><span class="w"></span>
+<span class="w"> </span>];<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-9">
+<h3>Example #9<a class="headerlink" href="#example-9" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align_single_space']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
@@ -195,12 +214,31 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <span class="gd">-    &quot;foo&quot; =&gt; 12,</span><span class="w"></span>
 <span class="gi">+    &quot;foo&quot;            =&gt; 12,</span><span class="w"></span>
 <span class="w"> </span>    &quot;baaaaaaaaaaar&quot;  =&gt; 13,<span class="w"></span>
+
+<span class="w"> </span>    &quot;baz&quot; =&gt; 1,<span class="w"></span>
 <span class="w"> </span>];<span class="w"></span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="example-9">
-<h3>Example #9<a class="headerlink" href="#example-9" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-10">
+<h3>Example #10<a class="headerlink" href="#example-10" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align_single_space_by_scope']]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>$array = [<span class="w"></span>
+<span class="gd">-    &quot;foo&quot; =&gt; 12,</span><span class="w"></span>
+<span class="gi">+    &quot;foo&quot;            =&gt; 12,</span><span class="w"></span>
+<span class="w"> </span>    &quot;baaaaaaaaaaar&quot;  =&gt; 13,<span class="w"></span>
+
+<span class="gd">-    &quot;baz&quot; =&gt; 1,</span><span class="w"></span>
+<span class="gi">+    &quot;baz&quot;            =&gt; 1,</span><span class="w"></span>
+<span class="w"> </span>];<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-11">
+<h3>Example #11<a class="headerlink" href="#example-11" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align_single_space_minimal']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
@@ -210,6 +248,26 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <span class="gd">-    &quot;baaaaaaaaaaar&quot;  =&gt; 13,</span><span class="w"></span>
 <span class="gi">+    &quot;foo&quot;           =&gt; 12,</span><span class="w"></span>
 <span class="gi">+    &quot;baaaaaaaaaaar&quot; =&gt; 13,</span><span class="w"></span>
+
+<span class="w"> </span>    &quot;baz&quot; =&gt; 1,<span class="w"></span>
+<span class="w"> </span>];<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-12">
+<h3>Example #12<a class="headerlink" href="#example-12" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align_single_space_minimal_by_scope']]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>$array = [<span class="w"></span>
+<span class="gd">-    &quot;foo&quot; =&gt; 12,</span><span class="w"></span>
+<span class="gd">-    &quot;baaaaaaaaaaar&quot;  =&gt; 13,</span><span class="w"></span>
+<span class="gi">+    &quot;foo&quot;           =&gt; 12,</span><span class="w"></span>
+<span class="gi">+    &quot;baaaaaaaaaaar&quot; =&gt; 13,</span><span class="w"></span>
+
+<span class="gd">-    &quot;baz&quot; =&gt; 1,</span><span class="w"></span>
+<span class="gi">+    &quot;baz&quot;           =&gt; 1,</span><span class="w"></span>
 <span class="w"> </span>];<span class="w"></span>
 </pre></div>
 </div>
