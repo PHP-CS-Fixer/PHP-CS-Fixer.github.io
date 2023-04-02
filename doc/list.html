@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>BoY42 (v3.15.1)</strong> edition
+                <strong>BoY42 (v3.16.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -129,7 +129,7 @@ single-quotes, double-quotes and backticks are not used inside the command.</p>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">operators</span></code></div>
-<div class="line">Dictionary of <cite>binary operator</cite> =&gt; <cite>fix strategy</cite> values that differ from the default strategy. Supported are: <cite>=</cite>, <cite>*</cite>, <cite>/</cite>, <cite>%</cite>, <cite>&lt;</cite>, <cite>&gt;</cite>, <cite>|</cite>, <cite>^</cite>, <cite>+</cite>, <cite>-</cite>, <cite>&amp;</cite>, <cite>&amp;=</cite>, <cite>&amp;&amp;</cite>, <cite>||</cite>, <cite>.=</cite>, <cite>/=</cite>, <cite>=&gt;</cite>, <cite>==</cite>, <cite>&gt;=</cite>, <cite>===</cite>, <cite>!=</cite>, <cite>&lt;&gt;</cite>, <cite>!==</cite>, <cite>&lt;=</cite>, <cite>and</cite>, <cite>or</cite>, <cite>xor</cite>, <cite>-=</cite>, <cite>%=</cite>, <cite>*=</cite>, <cite>|=</cite>, <cite>+=</cite>, <cite>&lt;&lt;</cite>, <cite>&lt;&lt;=</cite>, <cite>&gt;&gt;</cite>, <cite>&gt;&gt;=</cite>, <cite>^=</cite>, <cite>**</cite>, <cite>**=</cite>, <cite>&lt;=&gt;</cite>, <cite>??</cite>, <cite>??=</cite></div>
+<div class="line">Dictionary of <cite>binary operator</cite> =&gt; <cite>fix strategy</cite> values that differ from the default strategy. Supported are: <cite>=</cite>, <cite>*</cite>, <cite>/</cite>, <cite>%</cite>, <cite>&lt;</cite>, <cite>&gt;</cite>, <cite>|</cite>, <cite>^</cite>, <cite>+</cite>, <cite>-</cite>, <cite>&amp;</cite>, <cite>&amp;=</cite>, <cite>&amp;&amp;</cite>, <cite>||</cite>, <cite>.=</cite>, <cite>/=</cite>, <cite>=&gt;</cite>, <cite>==</cite>, <cite>&gt;=</cite>, <cite>===</cite>, <cite>!=</cite>, <cite>&lt;&gt;</cite>, <cite>!==</cite>, <cite>&lt;=</cite>, <cite>and</cite>, <cite>or</cite>, <cite>xor</cite>, <cite>-=</cite>, <cite>%=</cite>, <cite>*=</cite>, <cite>|=</cite>, <cite>+=</cite>, <cite>&lt;&lt;</cite>, <cite>&lt;&lt;=</cite>, <cite>&gt;&gt;</cite>, <cite>&gt;&gt;=</cite>, <cite>^=</cite>, <cite>**</cite>, <cite>**=</cite>, <cite>&lt;=&gt;</cite>, <cite>??</cite>, <cite>??=</cite>.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></div>
 </div>
@@ -170,6 +170,10 @@ single-quotes, double-quotes and backticks are not used inside the command.</p>
 </li>
 <li><p><a class="reference internal" href="rules/basic/braces.html"><span class="doc">braces</span></a></p>
 <p>The body of each structure MUST be enclosed by braces. Braces should be properly placed. Body of braces should be properly indented.</p>
+<p><em>warning deprecated</em>   Use <code class="docutils literal notranslate"><span class="pre">single_space_around_construct</span></code>, <code class="docutils literal notranslate"><span class="pre">control_structure_braces</span></code>,
+<code class="docutils literal notranslate"><span class="pre">curly_braces_position</span></code>, <code class="docutils literal notranslate"><span class="pre">control_structure_continuation_position</span></code>,
+<code class="docutils literal notranslate"><span class="pre">declare_parentheses</span></code>, <code class="docutils literal notranslate"><span class="pre">statement_indentation</span></code>,
+<code class="docutils literal notranslate"><span class="pre">no_multiple_statements_per_line</span></code> and <code class="docutils literal notranslate"><span class="pre">no_extra_blank_lines</span></code> instead.</p>
 <p>Configuration options:</p>
 <ul>
 <li><div class="line-block">
@@ -188,27 +192,26 @@ single-quotes, double-quotes and backticks are not used inside the command.</p>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">position_after_functions_and_oop_constructs</span></code></div>
-<div class="line">whether the opening brace should be placed on “next” or “same” line after classy constructs (non-anonymous classes, interfaces, traits, methods and non-lambda functions).</div>
+<div class="line">Whether the opening brace should be placed on “next” or “same” line after classy constructs (non-anonymous classes, interfaces, traits, methods and non-lambda functions).</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'next'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">position_after_control_structures</span></code></div>
-<div class="line">whether the opening brace should be placed on “next” or “same” line after control structures.</div>
+<div class="line">Whether the opening brace should be placed on “next” or “same” line after control structures.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'same'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">position_after_anonymous_constructs</span></code></div>
-<div class="line">whether the opening brace should be placed on “next” or “same” line after anonymous constructs (anonymous classes and lambda functions).</div>
+<div class="line">Whether the opening brace should be placed on “next” or “same” line after anonymous constructs (anonymous classes and lambda functions).</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'same'</span></code></div>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Basic/BracesFixer.php">Source PhpCsFixer\Fixer\Basic\BracesFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/cast_notation/cast_spaces.html"><span class="doc">cast_spaces</span></a></p>
@@ -217,7 +220,7 @@ single-quotes, double-quotes and backticks are not used inside the command.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">space</span></code></div>
-<div class="line">spacing to apply between cast and variable.</div>
+<div class="line">Spacing to apply between cast and variable.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'single'</span></code></div>
 </div>
@@ -323,7 +326,7 @@ new column in database.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">ignored_tags</span></code></div>
-<div class="line">List of ignored tags</div>
+<div class="line">List of ignored tags.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></div>
 </div>
@@ -339,7 +342,7 @@ new column in database.</p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/CompactNullableTypehintFixer.php">Source PhpCsFixer\Fixer\Whitespace\CompactNullableTypehintFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/operator/concat_space.html"><span class="doc">concat_space</span></a></p>
-<p>Concatenation should be spaced according configuration.</p>
+<p>Concatenation should be spaced according to configuration.</p>
 <p>Configuration options:</p>
 <ul>
 <li><div class="line-block">
@@ -370,6 +373,7 @@ new column in database.</p>
 </li>
 <li><p><a class="reference internal" href="rules/control_structure/control_structure_braces.html"><span class="doc">control_structure_braces</span></a></p>
 <p>The body of each control structure MUST be enclosed within braces.</p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ControlStructure/ControlStructureBracesFixer.php">Source PhpCsFixer\Fixer\ControlStructure\ControlStructureBracesFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/control_structure/control_structure_continuation_position.html"><span class="doc">control_structure_continuation_position</span></a></p>
@@ -378,12 +382,13 @@ new column in database.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">position</span></code></div>
-<div class="line">the position of the keyword that continues the control structure.</div>
+<div class="line">The position of the keyword that continues the control structure.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 </div>
 </li>
 </ul>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ControlStructure/ControlStructureContinuationPositionFixer.php">Source PhpCsFixer\Fixer\ControlStructure\ControlStructureContinuationPositionFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/basic/curly_braces_position.html"><span class="doc">curly_braces_position</span></a></p>
@@ -392,54 +397,55 @@ new column in database.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">control_structures_opening_brace</span></code></div>
-<div class="line">the position of the opening brace of control structures body.</div>
+<div class="line">The position of the opening brace of control structures‘ body.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">functions_opening_brace</span></code></div>
-<div class="line">the position of the opening brace of functions body.</div>
+<div class="line">The position of the opening brace of functions‘ body.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">anonymous_functions_opening_brace</span></code></div>
-<div class="line">the position of the opening brace of anonymous functions body.</div>
+<div class="line">The position of the opening brace of anonymous functions‘ body.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">classes_opening_brace</span></code></div>
-<div class="line">the position of the opening brace of classes body.</div>
+<div class="line">The position of the opening brace of classes‘ body.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">anonymous_classes_opening_brace</span></code></div>
-<div class="line">the position of the opening brace of anonymous classes body.</div>
+<div class="line">The position of the opening brace of anonymous classes‘ body.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">allow_single_line_empty_anonymous_classes</span></code></div>
-<div class="line">allow anonymous classes to have opening and closing braces on the same line.</div>
+<div class="line">Allow anonymous classes to have opening and closing braces on the same line.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">allow_single_line_anonymous_functions</span></code></div>
-<div class="line">allow anonymous functions to have opening and closing braces on the same line.</div>
+<div class="line">Allow anonymous functions to have opening and closing braces on the same line.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
 </li>
 </ul>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Basic/CurlyBracesPositionFixer.php">Source PhpCsFixer\Fixer\Basic\CurlyBracesPositionFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/date_time_create_from_format_call.html"><span class="doc">date_time_create_from_format_call</span></a></p>
@@ -479,6 +485,7 @@ set in format.</p>
 </li>
 <li><p><a class="reference internal" href="rules/language_construct/declare_parentheses.html"><span class="doc">declare_parentheses</span></a></p>
 <p>There must not be spaces around <code class="docutils literal notranslate"><span class="pre">declare</span></code> statement parentheses.</p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/LanguageConstruct/DeclareParenthesesFixer.php">Source PhpCsFixer\Fixer\LanguageConstruct\DeclareParenthesesFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/strict/declare_strict_types.html"><span class="doc">declare_strict_types</span></a></p>
@@ -647,14 +654,14 @@ assignment operator.</p>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">long_function</span></code></div>
-<div class="line">The function to be used to expand the short echo tags</div>
+<div class="line">The function to be used to expand the short echo tags.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'echo'</span></code>, <code class="docutils literal notranslate"><span class="pre">'print'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'echo'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">shorten_simple_statements_only</span></code></div>
-<div class="line">Render short-echo tags only in case of simple code</div>
+<div class="line">Render short-echo tags only in case of simple code.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
@@ -731,7 +738,7 @@ if <code class="docutils literal notranslate"><span class="pre">trigger_error</s
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">noise_remaining_usages_exclude</span></code></div>
-<div class="line">List of global functions to exclude from removing <cite>&#64;</cite></div>
+<div class="line">List of global functions to exclude from removing <cite>&#64;</cite>.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></div>
 </div>
@@ -824,21 +831,21 @@ FinalInternalClassFixer, it’s fine.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">annotation_include</span></code></div>
-<div class="line">Class level annotations tags that must be set in order to fix the class. (case insensitive)</div>
+<div class="line">Class level annotations tags that must be set in order to fix the class (case insensitive).</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['&#64;internal']</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">annotation_exclude</span></code></div>
-<div class="line">Class level annotations tags that must be omitted to fix the class, even if all of the white list ones are used as well. (case insensitive)</div>
+<div class="line">Class level annotations tags that must be omitted to fix the class, even if all of the white list ones are used as well (case insensitive).</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['&#64;final',</span> <span class="pre">'&#64;Entity',</span> <span class="pre">'&#64;ORM\\Entity',</span> <span class="pre">'&#64;ORM\\Mapping\\Entity',</span> <span class="pre">'&#64;Mapping\\Entity',</span> <span class="pre">'&#64;Document',</span> <span class="pre">'&#64;ODM\\Document']</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">consider_absent_docblock_as_internal_class</span></code></div>
-<div class="line">Should classes without any DocBlock be fixed to final?</div>
+<div class="line">Whether classes without any DocBlock should be fixed to final.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
 </div>
@@ -1421,25 +1428,24 @@ overridden.</p>
 </li>
 </ul>
 <ul>
-<li><p><cite>&#64;all</cite> (all listed sets)</p></li>
-<li><p><cite>&#64;internal</cite> (native functions)</p></li>
-<li><p><cite>&#64;exif</cite> (EXIF functions)</p></li>
-<li><p><cite>&#64;ftp</cite> (FTP functions)</p></li>
-<li><p><cite>&#64;IMAP</cite> (IMAP functions)</p></li>
-<li><p><cite>&#64;ldap</cite> (LDAP functions)</p></li>
-<li><p><cite>&#64;mbreg</cite> (from <cite>ext-mbstring</cite>)</p></li>
-<li><p><cite>&#64;mysqli</cite> (mysqli functions)</p></li>
-<li><p><cite>&#64;oci</cite> (oci functions)</p></li>
-<li><p><cite>&#64;odbc</cite> (odbc functions)</p></li>
-<li><p><cite>&#64;openssl</cite> (openssl functions)</p></li>
-<li><p><cite>&#64;pcntl</cite> (PCNTL functions)</p></li>
-<li><p><cite>&#64;pg</cite> (pg functions)</p></li>
-<li><p><cite>&#64;posix</cite> (POSIX functions)</p></li>
-<li><p><cite>&#64;snmp</cite> (SNMP functions)</p></li>
-<li><p><cite>&#64;sodium</cite> (libsodium functions)</p></li>
-<li><p><cite>&#64;time</cite> (time functions)</p>
-<blockquote>
-<div><blockquote>
+<li><p><cite>&#64;all</cite> (all listed sets);</p></li>
+<li><p><cite>&#64;internal</cite> (native functions);</p></li>
+<li><p><cite>&#64;exif</cite> (EXIF functions);</p></li>
+<li><p><cite>&#64;ftp</cite> (FTP functions);</p></li>
+<li><p><cite>&#64;IMAP</cite> (IMAP functions);</p></li>
+<li><p><cite>&#64;ldap</cite> (LDAP functions);</p></li>
+<li><p><cite>&#64;mbreg</cite> (from <cite>ext-mbstring</cite>);</p></li>
+<li><p><cite>&#64;mysqli</cite> (mysqli functions);</p></li>
+<li><p><cite>&#64;oci</cite> (oci functions);</p></li>
+<li><p><cite>&#64;odbc</cite> (odbc functions);</p></li>
+<li><p><cite>&#64;openssl</cite> (openssl functions);</p></li>
+<li><p><cite>&#64;pcntl</cite> (PCNTL functions);</p></li>
+<li><p><cite>&#64;pg</cite> (pg functions);</p></li>
+<li><p><cite>&#64;posix</cite> (POSIX functions);</p></li>
+<li><p><cite>&#64;snmp</cite> (SNMP functions);</p></li>
+<li><p><cite>&#64;sodium</cite> (libsodium functions);</p></li>
+<li><dl>
+<dt><cite>&#64;time</cite> (time functions).</dt><dd><blockquote>
 <div><div class="line-block">
 <div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['&#64;all',</span> <span class="pre">'&#64;exif',</span> <span class="pre">'&#64;ftp',</span> <span class="pre">'&#64;IMAP',</span> <span class="pre">'&#64;internal',</span> <span class="pre">'&#64;ldap',</span> <span class="pre">'&#64;mbreg',</span> <span class="pre">'&#64;mysqli',</span> <span class="pre">'&#64;oci',</span> <span class="pre">'&#64;odbc',</span> <span class="pre">'&#64;openssl',</span> <span class="pre">'&#64;pcntl',</span> <span class="pre">'&#64;pg',</span> <span class="pre">'&#64;posix',</span> <span class="pre">'&#64;snmp',</span> <span class="pre">'&#64;sodium',</span> <span class="pre">'&#64;time']</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['&#64;internal',</span> <span class="pre">'&#64;IMAP',</span> <span class="pre">'&#64;pg']</span></code></div>
@@ -1447,7 +1453,8 @@ overridden.</p>
 </div></blockquote>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PHP74MigrationRisky.html"><span class="doc">&#64;PHP74Migration:risky</span></a> <a class="reference internal" href="ruleSets/PHP80MigrationRisky.html"><span class="doc">&#64;PHP80Migration:risky</span></a> <a class="reference internal" href="ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a> <a class="reference internal" href="ruleSets/SymfonyRisky.html"><span class="doc">&#64;Symfony:risky</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Alias/NoAliasFunctionsFixer.php">Source PhpCsFixer\Fixer\Alias\NoAliasFunctionsFixer</a></p>
-</div></blockquote>
+</dd>
+</dl>
 </li>
 </ul>
 <ul>
@@ -1581,6 +1588,7 @@ to renamed code (<code class="docutils literal notranslate"><span class="pre">$$
 </li>
 <li><p><a class="reference internal" href="rules/basic/no_multiple_statements_per_line.html"><span class="doc">no_multiple_statements_per_line</span></a></p>
 <p>There must not be more than one statement per line.</p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Basic/NoMultipleStatementsPerLineFixer.php">Source PhpCsFixer\Fixer\Basic\NoMultipleStatementsPerLineFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/no_null_property_initialization.html"><span class="doc">no_null_property_initialization</span></a></p>
@@ -1646,21 +1654,21 @@ parent one.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">allow_mixed</span></code></div>
-<div class="line">Whether type <cite>mixed</cite> without description is allowed (<cite>true</cite>) or considered superfluous (<cite>false</cite>)</div>
+<div class="line">Whether type <cite>mixed</cite> without description is allowed (<cite>true</cite>) or considered superfluous (<cite>false</cite>).</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">remove_inheritdoc</span></code></div>
-<div class="line">Remove <cite>&#64;inheritDoc</cite> tags</div>
+<div class="line">Remove <cite>&#64;inheritDoc</cite> tags.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">allow_unused_params</span></code></div>
-<div class="line">Whether <cite>param</cite> annotation without actual signature is allowed (<cite>true</cite>) or considered superfluous (<cite>false</cite>)</div>
+<div class="line">Whether <cite>param</cite> annotation without actual signature is allowed (<cite>true</cite>) or considered superfluous (<cite>false</cite>).</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
 </div>
@@ -1882,14 +1890,14 @@ assignments to properties whose type declaration does not allow it.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">only_booleans</span></code></div>
-<div class="line">whether to limit operators to only boolean ones</div>
+<div class="line">Whether to limit operators to only boolean ones.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">position</span></code></div>
-<div class="line">whether to place operators at the beginning or at the end of the line</div>
+<div class="line">Whether to place operators at the beginning or at the end of the line.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'beginning'</span></code>, <code class="docutils literal notranslate"><span class="pre">'end'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'beginning'</span></code></div>
 </div>
@@ -1911,7 +1919,7 @@ assignments to properties whose type declaration does not allow it.</p>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code></div>
-<div class="line">How multiple occurrences of same type statements should be sorted</div>
+<div class="line">How multiple occurrences of same type statements should be sorted.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code>, <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 </div>
@@ -1926,7 +1934,7 @@ assignments to properties whose type declaration does not allow it.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code></div>
-<div class="line">whether the statements should be sorted alphabetically or by length, or not sorted</div>
+<div class="line">Whether the statements should be sorted alphabetically or by length, or not sorted.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code>, <code class="docutils literal notranslate"><span class="pre">'length'</span></code>, <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code></div>
 </div>
@@ -1948,14 +1956,14 @@ assignments to properties whose type declaration does not allow it.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">order</span></code></div>
-<div class="line">How the interfaces should be ordered</div>
+<div class="line">How the interfaces should be ordered.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code>, <code class="docutils literal notranslate"><span class="pre">'length'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">direction</span></code></div>
-<div class="line">Which direction the interfaces should be ordered</div>
+<div class="line">Which direction the interfaces should be ordered.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'ascend'</span></code>, <code class="docutils literal notranslate"><span class="pre">'descend'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'ascend'</span></code></div>
 </div>
@@ -1997,7 +2005,7 @@ assignments to properties whose type declaration does not allow it.</p>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">align</span></code></div>
-<div class="line">Align comments</div>
+<div class="line">How comments should be aligned.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'left'</span></code>, <code class="docutils literal notranslate"><span class="pre">'vertical'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'vertical'</span></code></div>
 </div>
@@ -2022,7 +2030,7 @@ assignments to properties whose type declaration does not allow it.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">tags</span></code></div>
-<div class="line">The list of tags to normalize</div>
+<div class="line">The list of tags to normalize.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['example',</span> <span class="pre">'id',</span> <span class="pre">'internal',</span> <span class="pre">'inheritdoc',</span> <span class="pre">'inheritdocs',</span> <span class="pre">'link',</span> <span class="pre">'source',</span> <span class="pre">'toc',</span> <span class="pre">'tutorial']</span></code></div>
 </div>
@@ -2037,21 +2045,21 @@ assignments to properties whose type declaration does not allow it.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">const</span></code></div>
-<div class="line">Whether const blocks should be single or multi line</div>
+<div class="line">Whether const blocks should be single or multi line.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">property</span></code></div>
-<div class="line">Whether property doc blocks should be single or multi line</div>
+<div class="line">Whether property doc blocks should be single or multi line.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">method</span></code></div>
-<div class="line">Whether method doc blocks should be single or multi line</div>
+<div class="line">Whether method doc blocks should be single or multi line.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code></div>
 </div>
@@ -2206,7 +2214,7 @@ assignments to properties whose type declaration does not allow it.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">tags</span></code></div>
-<div class="line">The list of tags to fix</div>
+<div class="line">The list of tags to fix.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['api'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'author'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'copyright'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'deprecated'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'example'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'global'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'inheritDoc'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'internal'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'license'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'method'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'package'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'param'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'property'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'return'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'see'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'since'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'throws'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'todo'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'uses'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'var'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation',</span> <span class="pre">'version'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation']</span></code></div>
 </div>
@@ -2221,7 +2229,7 @@ assignments to properties whose type declaration does not allow it.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">ignored_tags</span></code></div>
-<div class="line">List of ignored tags (matched case insensitively)</div>
+<div class="line">List of ignored tags (matched case insensitively).</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></div>
 </div>
@@ -2363,6 +2371,16 @@ properly documented.</p>
 <li><p><a class="reference internal" href="rules/php_unit/php_unit_data_provider_static.html"><span class="doc">php_unit_data_provider_static</span></a></p>
 <p>Data providers must be static.</p>
 <p><em>warning risky</em> Fixer could be risky if one is calling data provider function dynamically.</p>
+<p>Configuration options:</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">force</span></code></div>
+<div class="line">Whether to make the data providers static even if they have a dynamic class call (may introduce fatal error “using $this when not in object context”, and you may have to adjust the code manually by converting dynamic calls to static ones).</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
+</div>
+</li>
+</ul>
 <p>Part of rule set <a class="reference internal" href="ruleSets/PHPUnit100MigrationRisky.html"><span class="doc">&#64;PHPUnit100Migration:risky</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/PhpUnit/PhpUnitDataProviderStaticFixer.php">Source PhpCsFixer\Fixer\PhpUnit\PhpUnitDataProviderStaticFixer</a></p>
 </li>
@@ -2427,7 +2445,7 @@ has PHPUnit incompatibilities.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">types</span></code></div>
-<div class="line">What types of classes to mark as internal</div>
+<div class="line">What types of classes to mark as internal.</div>
 <div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['abstract',</span> <span class="pre">'final',</span> <span class="pre">'normal']</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['normal',</span> <span class="pre">'final']</span></code></div>
 </div>
@@ -2442,7 +2460,7 @@ has PHPUnit incompatibilities.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">case</span></code></div>
-<div class="line">Apply camel or snake case to test methods</div>
+<div class="line">Apply camel or snake case to test methods.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'camel_case'</span></code>, <code class="docutils literal notranslate"><span class="pre">'snake_case'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'camel_case'</span></code></div>
 </div>
@@ -2539,7 +2557,7 @@ that are taking long to be executed.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">group</span></code></div>
-<div class="line">Define a specific group to be used in case no group is already in use</div>
+<div class="line">Define a specific group to be used in case no group is already in use.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'large'</span></code>, <code class="docutils literal notranslate"><span class="pre">'medium'</span></code>, <code class="docutils literal notranslate"><span class="pre">'small'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'small'</span></code></div>
 </div>
@@ -2783,7 +2801,7 @@ binding.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">comment_types</span></code></div>
-<div class="line">List of comment types to fix</div>
+<div class="line">List of comment types to fix.</div>
 <div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['asterisk',</span> <span class="pre">'hash']</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['asterisk',</span> <span class="pre">'hash']</span></code></div>
 </div>
@@ -2814,6 +2832,7 @@ binding.</p>
 </li>
 <li><p><a class="reference internal" href="rules/language_construct/single_space_after_construct.html"><span class="doc">single_space_after_construct</span></a></p>
 <p>Ensures a single space after language constructs.</p>
+<p><em>warning deprecated</em>   Use <code class="docutils literal notranslate"><span class="pre">single_space_around_construct</span></code> instead.</p>
 <p>Configuration options:</p>
 <ul>
 <li><div class="line-block">
@@ -2824,8 +2843,36 @@ binding.</p>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/LanguageConstruct/SingleSpaceAfterConstructFixer.php">Source PhpCsFixer\Fixer\LanguageConstruct\SingleSpaceAfterConstructFixer</a></p>
+</li>
+<li><p><a class="reference internal" href="rules/language_construct/single_space_around_construct.html"><span class="doc">single_space_around_construct</span></a></p>
+<p>Ensures a single space after language constructs.</p>
+<p>Configuration options:</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">constructs_contain_a_single_space</span></code></div>
+<div class="line">List of constructs which must contain a single space.</div>
+<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['yield_from']</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['yield_from']</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">constructs_preceded_by_a_single_space</span></code></div>
+<div class="line">List of constructs which must be preceded by a single space.</div>
+<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['use_lambda']</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['use_lambda']</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">constructs_followed_by_a_single_space</span></code></div>
+<div class="line">List of constructs which must be followed by a single space.</div>
+<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['abstract',</span> <span class="pre">'as',</span> <span class="pre">'attribute',</span> <span class="pre">'break',</span> <span class="pre">'case',</span> <span class="pre">'catch',</span> <span class="pre">'class',</span> <span class="pre">'clone',</span> <span class="pre">'comment',</span> <span class="pre">'const',</span> <span class="pre">'const_import',</span> <span class="pre">'continue',</span> <span class="pre">'do',</span> <span class="pre">'echo',</span> <span class="pre">'else',</span> <span class="pre">'elseif',</span> <span class="pre">'enum',</span> <span class="pre">'extends',</span> <span class="pre">'final',</span> <span class="pre">'finally',</span> <span class="pre">'for',</span> <span class="pre">'foreach',</span> <span class="pre">'function',</span> <span class="pre">'function_import',</span> <span class="pre">'global',</span> <span class="pre">'goto',</span> <span class="pre">'if',</span> <span class="pre">'implements',</span> <span class="pre">'include',</span> <span class="pre">'include_once',</span> <span class="pre">'instanceof',</span> <span class="pre">'insteadof',</span> <span class="pre">'interface',</span> <span class="pre">'match',</span> <span class="pre">'named_argument',</span> <span class="pre">'namespace',</span> <span class="pre">'new',</span> <span class="pre">'open_tag_with_echo',</span> <span class="pre">'php_doc',</span> <span class="pre">'php_open',</span> <span class="pre">'print',</span> <span class="pre">'private',</span> <span class="pre">'protected',</span> <span class="pre">'public',</span> <span class="pre">'readonly',</span> <span class="pre">'require',</span> <span class="pre">'require_once',</span> <span class="pre">'return',</span> <span class="pre">'static',</span> <span class="pre">'switch',</span> <span class="pre">'throw',</span> <span class="pre">'trait',</span> <span class="pre">'try',</span> <span class="pre">'type_colon',</span> <span class="pre">'use',</span> <span class="pre">'use_lambda',</span> <span class="pre">'use_trait',</span> <span class="pre">'var',</span> <span class="pre">'while',</span> <span class="pre">'yield',</span> <span class="pre">'yield_from']</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['abstract',</span> <span class="pre">'as',</span> <span class="pre">'attribute',</span> <span class="pre">'break',</span> <span class="pre">'case',</span> <span class="pre">'catch',</span> <span class="pre">'class',</span> <span class="pre">'clone',</span> <span class="pre">'comment',</span> <span class="pre">'const',</span> <span class="pre">'const_import',</span> <span class="pre">'continue',</span> <span class="pre">'do',</span> <span class="pre">'echo',</span> <span class="pre">'else',</span> <span class="pre">'elseif',</span> <span class="pre">'enum',</span> <span class="pre">'extends',</span> <span class="pre">'final',</span> <span class="pre">'finally',</span> <span class="pre">'for',</span> <span class="pre">'foreach',</span> <span class="pre">'function',</span> <span class="pre">'function_import',</span> <span class="pre">'global',</span> <span class="pre">'goto',</span> <span class="pre">'if',</span> <span class="pre">'implements',</span> <span class="pre">'include',</span> <span class="pre">'include_once',</span> <span class="pre">'instanceof',</span> <span class="pre">'insteadof',</span> <span class="pre">'interface',</span> <span class="pre">'match',</span> <span class="pre">'named_argument',</span> <span class="pre">'namespace',</span> <span class="pre">'new',</span> <span class="pre">'open_tag_with_echo',</span> <span class="pre">'php_doc',</span> <span class="pre">'php_open',</span> <span class="pre">'print',</span> <span class="pre">'private',</span> <span class="pre">'protected',</span> <span class="pre">'public',</span> <span class="pre">'readonly',</span> <span class="pre">'require',</span> <span class="pre">'require_once',</span> <span class="pre">'return',</span> <span class="pre">'static',</span> <span class="pre">'switch',</span> <span class="pre">'throw',</span> <span class="pre">'trait',</span> <span class="pre">'try',</span> <span class="pre">'type_colon',</span> <span class="pre">'use',</span> <span class="pre">'use_lambda',</span> <span class="pre">'use_trait',</span> <span class="pre">'var',</span> <span class="pre">'while',</span> <span class="pre">'yield',</span> <span class="pre">'yield_from']</span></code></div>
+</div>
+</li>
+</ul>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p><a class="reference external" href="./../src/Fixer/LanguageConstruct/SingleSpaceAroundConstructFixer.php">Source PhpCsFixer\Fixer\LanguageConstruct\SingleSpaceAroundConstructFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/single_trait_insert_per_statement.html"><span class="doc">single_trait_insert_per_statement</span></a></p>
 <p>Each trait <code class="docutils literal notranslate"><span class="pre">use</span></code> must be done as single statement.</p>
@@ -2859,6 +2906,7 @@ binding.</p>
 </li>
 <li><p><a class="reference internal" href="rules/whitespace/statement_indentation.html"><span class="doc">statement_indentation</span></a></p>
 <p>Each statement must be indented.</p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/StatementIndentationFixer.php">Source PhpCsFixer\Fixer\Whitespace\StatementIndentationFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/static_lambda.html"><span class="doc">static_lambda</span></a></p>
@@ -2959,14 +3007,14 @@ comparisons and outputs.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">space</span></code></div>
-<div class="line">spacing to apply around union type and intersection type operators.</div>
+<div class="line">Spacing to apply around union type and intersection type operators.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">space_multiple_catch</span></code></div>
-<div class="line">spacing to apply around type operator when catching exceptions of multiple types, use <cite>null</cite> to follow the value configured for <cite>space</cite>.</div>
+<div class="line">Spacing to apply around type operator when catching exceptions of multiple types, use <cite>null</cite> to follow the value configured for <cite>space</cite>.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 </div>

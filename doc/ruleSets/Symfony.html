@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>BoY42 (v3.15.1)</strong> edition
+                <strong>BoY42 (v3.16.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -73,9 +73,6 @@
 <li><p><a class="reference internal" href="../rules/whitespace/blank_line_before_statement.html"><span class="doc">blank_line_before_statement</span></a>
 config:
 <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['return']]</span></code></p></li>
-<li><p><a class="reference internal" href="../rules/basic/braces.html"><span class="doc">braces</span></a>
-config:
-<code class="docutils literal notranslate"><span class="pre">['allow_single_line_anonymous_class_with_empty_body'</span> <span class="pre">=&gt;</span> <span class="pre">true,</span> <span class="pre">'allow_single_line_closure'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p></li>
 <li><p><a class="reference internal" href="../rules/cast_notation/cast_spaces.html"><span class="doc">cast_spaces</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/class_notation/class_attributes_separation.html"><span class="doc">class_attributes_separation</span></a>
 config:
@@ -86,6 +83,10 @@ config:
 <li><p><a class="reference internal" href="../rules/casing/class_reference_name_casing.html"><span class="doc">class_reference_name_casing</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/namespace_notation/clean_namespace.html"><span class="doc">clean_namespace</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/operator/concat_space.html"><span class="doc">concat_space</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/basic/curly_braces_position.html"><span class="doc">curly_braces_position</span></a>
+config:
+<code class="docutils literal notranslate"><span class="pre">['allow_single_line_anonymous_functions'</span> <span class="pre">=&gt;</span> <span class="pre">true,</span> <span class="pre">'allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p></li>
+<li><p><a class="reference internal" href="../rules/language_construct/declare_parentheses.html"><span class="doc">declare_parentheses</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/php_tag/echo_tag_syntax.html"><span class="doc">echo_tag_syntax</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/control_structure/empty_loop_body.html"><span class="doc">empty_loop_body</span></a>
 config:
@@ -188,9 +189,7 @@ config:
 <code class="docutils literal notranslate"><span class="pre">['comment_types'</span> <span class="pre">=&gt;</span> <span class="pre">['hash']]</span></code></p></li>
 <li><p><a class="reference internal" href="../rules/function_notation/single_line_throw.html"><span class="doc">single_line_throw</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/string_notation/single_quote.html"><span class="doc">single_quote</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/language_construct/single_space_after_construct.html"><span class="doc">single_space_after_construct</span></a>
-config:
-<code class="docutils literal notranslate"><span class="pre">['constructs'</span> <span class="pre">=&gt;</span> <span class="pre">['abstract',</span> <span class="pre">'as',</span> <span class="pre">'attribute',</span> <span class="pre">'break',</span> <span class="pre">'case',</span> <span class="pre">'catch',</span> <span class="pre">'class',</span> <span class="pre">'clone',</span> <span class="pre">'comment',</span> <span class="pre">'const',</span> <span class="pre">'const_import',</span> <span class="pre">'continue',</span> <span class="pre">'do',</span> <span class="pre">'echo',</span> <span class="pre">'else',</span> <span class="pre">'elseif',</span> <span class="pre">'enum',</span> <span class="pre">'extends',</span> <span class="pre">'final',</span> <span class="pre">'finally',</span> <span class="pre">'for',</span> <span class="pre">'foreach',</span> <span class="pre">'function',</span> <span class="pre">'function_import',</span> <span class="pre">'global',</span> <span class="pre">'goto',</span> <span class="pre">'if',</span> <span class="pre">'implements',</span> <span class="pre">'include',</span> <span class="pre">'include_once',</span> <span class="pre">'instanceof',</span> <span class="pre">'insteadof',</span> <span class="pre">'interface',</span> <span class="pre">'match',</span> <span class="pre">'named_argument',</span> <span class="pre">'namespace',</span> <span class="pre">'new',</span> <span class="pre">'open_tag_with_echo',</span> <span class="pre">'php_doc',</span> <span class="pre">'php_open',</span> <span class="pre">'print',</span> <span class="pre">'private',</span> <span class="pre">'protected',</span> <span class="pre">'public',</span> <span class="pre">'readonly',</span> <span class="pre">'require',</span> <span class="pre">'require_once',</span> <span class="pre">'return',</span> <span class="pre">'static',</span> <span class="pre">'switch',</span> <span class="pre">'throw',</span> <span class="pre">'trait',</span> <span class="pre">'try',</span> <span class="pre">'type_colon',</span> <span class="pre">'use',</span> <span class="pre">'use_lambda',</span> <span class="pre">'use_trait',</span> <span class="pre">'var',</span> <span class="pre">'while',</span> <span class="pre">'yield',</span> <span class="pre">'yield_from']]</span></code></p></li>
+<li><p><a class="reference internal" href="../rules/language_construct/single_space_around_construct.html"><span class="doc">single_space_around_construct</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/semicolon/space_after_semicolon.html"><span class="doc">space_after_semicolon</span></a>
 config:
 <code class="docutils literal notranslate"><span class="pre">['remove_in_empty_for_expressions'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p></li>
