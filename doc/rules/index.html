@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>BoY42 (v3.16.0)</strong> edition
+                <strong>Brazilian Kangaroo (v3.17.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -153,6 +153,9 @@
 <li><p><a class="reference internal" href="basic/psr_autoloading.html"><span class="doc">psr_autoloading</span></a> <em>(risky)</em></p>
 <p>Classes must be in a path that matches their namespace, be at least one namespace deep and the class name should match the file name.</p>
 </li>
+<li><p><a class="reference internal" href="basic/single_line_empty_body.html"><span class="doc">single_line_empty_body</span></a></p>
+<p>Empty body of class or function must be abbreviated as <code class="docutils literal notranslate"><span class="pre">{}</span></code> and placed on the same line as the previous symbol, separated by a space.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="casing">
@@ -248,6 +251,9 @@
 </li>
 <li><p><a class="reference internal" href="class_notation/ordered_traits.html"><span class="doc">ordered_traits</span></a> <em>(risky)</em></p>
 <p>Trait <code class="docutils literal notranslate"><span class="pre">use</span></code> statements must be sorted alphabetically.</p>
+</li>
+<li><p><a class="reference internal" href="class_notation/ordered_types.html"><span class="doc">ordered_types</span></a></p>
+<p>Sort union types and intersection types using configured order.</p>
 </li>
 <li><p><a class="reference internal" href="class_notation/protected_to_private.html"><span class="doc">protected_to_private</span></a></p>
 <p>Converts <code class="docutils literal notranslate"><span class="pre">protected</span></code> variables and methods to <code class="docutils literal notranslate"><span class="pre">private</span></code> where possible.</p>
@@ -782,6 +788,9 @@
 </li>
 <li><p><a class="reference internal" href="phpdoc/phpdoc_order.html"><span class="doc">phpdoc_order</span></a></p>
 <p>Annotations in PHPDoc should be ordered in defined sequence.</p>
+</li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_param_order.html"><span class="doc">phpdoc_param_order</span></a></p>
+<p>Orders all <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> annotations in DocBlocks according to method signature.</p>
 </li>
 <li><p><a class="reference internal" href="phpdoc/phpdoc_return_self_reference.html"><span class="doc">phpdoc_return_self_reference</span></a></p>
 <p>The type of <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> annotations of methods returning a reference to itself must the configured one.</p>

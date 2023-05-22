@@ -60,38 +60,28 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-no-homoglyph-names">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">no_homoglyph_names</span></code><a class="headerlink" href="#rule-no-homoglyph-names" title="Permalink to this headline">¶</a></h1>
-<p>Replace accidental usage of homoglyphs (non ascii characters) in names.</p>
-<div class="section" id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="using-this-rule-is-risky">
-<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
-<p>Renames classes and cannot rename the files. You might have string references to
-renamed code (<code class="docutils literal notranslate"><span class="pre">$$name</span></code>).</p>
-</div>
-</div>
+  <div class="section" id="rule-phpdoc-param-order">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">phpdoc_param_order</span></code><a class="headerlink" href="#rule-phpdoc-param-order" title="Permalink to this headline">¶</a></h1>
+<p>Orders all <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> annotations in DocBlocks according to method signature.</p>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
-<span class="gd">-&lt;?php $nаmе = &#39;wrong &quot;a&quot; character&#39;;</span><span class="w"></span>
-<span class="gi">+&lt;?php $name = &#39;wrong &quot;a&quot; character&#39;;</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>/**<span class="w"></span>
+<span class="w"> </span> * Annotations in wrong order<span class="w"></span>
+<span class="w"> </span> *<span class="w"></span>
+<span class="w"> </span> * @param int   $a<span class="w"></span>
+<span class="gi">+ * @param array $b</span><span class="w"></span>
+<span class="w"> </span> * @param Foo   $c<span class="w"></span>
+<span class="gd">- * @param array $b</span><span class="w"></span>
+<span class="w"> </span> */<span class="w"></span>
+<span class="w"> </span>function m($a, array $b, Foo $c) {}<span class="w"></span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
-<p>The rule is part of the following rule sets:</p>
-<dl class="simple">
-<dt>&#64;PhpCsFixer:risky</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">no_homoglyph_names</span></code> rule.</p>
-</dd>
-<dt>&#64;Symfony:risky</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/SymfonyRisky.html"><span class="doc">&#64;Symfony:risky</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">no_homoglyph_names</span></code> rule.</p>
-</dd>
-</dl>
 </div>
 </div>
 

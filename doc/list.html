@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>BoY42 (v3.16.0)</strong> edition
+                <strong>Brazilian Kangaroo (v3.17.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -75,7 +75,7 @@
 </div>
 </li>
 </ul>
-<p>Part of rule set <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Phpdoc/AlignMultilineCommentFixer.php">Source PhpCsFixer\Fixer\Phpdoc\AlignMultilineCommentFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/whitespace/array_indentation.html"><span class="doc">array_indentation</span></a></p>
@@ -1003,7 +1003,7 @@ override a method, use the Template method pattern.</p>
 <li><p><a class="reference internal" href="rules/language_construct/get_class_to_class_keyword.html"><span class="doc">get_class_to_class_keyword</span></a></p>
 <p>Replace <code class="docutils literal notranslate"><span class="pre">get_class</span></code> calls on object variables with class keyword syntax.</p>
 <p><em>warning risky</em> Risky if the <code class="docutils literal notranslate"><span class="pre">get_class</span></code> function is overridden.</p>
-<p>Part of rule set <a class="reference internal" href="ruleSets/PHP80MigrationRisky.html"><span class="doc">&#64;PHP80Migration:risky</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PHP80MigrationRisky.html"><span class="doc">&#64;PHP80Migration:risky</span></a> <a class="reference internal" href="ruleSets/SymfonyRisky.html"><span class="doc">&#64;Symfony:risky</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/LanguageConstruct/GetClassToClassKeywordFixer.php">Source PhpCsFixer\Fixer\LanguageConstruct\GetClassToClassKeywordFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/import/global_namespace_import.html"><span class="doc">global_namespace_import</span></a></p>
@@ -1242,7 +1242,7 @@ byte size rather than its length in characters.</p>
 <p>Replace <code class="docutils literal notranslate"><span class="pre">strpos()</span></code> calls with <code class="docutils literal notranslate"><span class="pre">str_starts_with()</span></code> or <code class="docutils literal notranslate"><span class="pre">str_contains()</span></code> if possible.</p>
 <p><em>warning risky</em> Risky if <code class="docutils literal notranslate"><span class="pre">strpos</span></code>, <code class="docutils literal notranslate"><span class="pre">str_starts_with</span></code> or <code class="docutils literal notranslate"><span class="pre">str_contains</span></code> functions are
 overridden.</p>
-<p>Part of rule set <a class="reference internal" href="ruleSets/PHP80MigrationRisky.html"><span class="doc">&#64;PHP80Migration:risky</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PHP80MigrationRisky.html"><span class="doc">&#64;PHP80Migration:risky</span></a> <a class="reference internal" href="ruleSets/SymfonyRisky.html"><span class="doc">&#64;Symfony:risky</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Alias/ModernizeStrposFixer.php">Source PhpCsFixer\Fixer\Alias\ModernizeStrposFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/cast_notation/modernize_types_casting.html"><span class="doc">modernize_types_casting</span></a></p>
@@ -1593,7 +1593,7 @@ to renamed code (<code class="docutils literal notranslate"><span class="pre">$$
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/no_null_property_initialization.html"><span class="doc">no_null_property_initialization</span></a></p>
 <p>Properties MUST not be explicitly initialized with <code class="docutils literal notranslate"><span class="pre">null</span></code> except when they have a type declaration (PHP 7.4).</p>
-<p>Part of rule set <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ClassNotation/NoNullPropertyInitializationFixer.php">Source PhpCsFixer\Fixer\ClassNotation\NoNullPropertyInitializationFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/no_php4_constructor.html"><span class="doc">no_php4_constructor</span></a></p>
@@ -1872,6 +1872,7 @@ assignments to properties whose type declaration does not allow it.</p>
 </div>
 </li>
 </ul>
+<p>Part of rule set <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/FunctionNotation/NullableTypeDeclarationForDefaultNullValueFixer.php">Source PhpCsFixer\Fixer\FunctionNotation\NullableTypeDeclarationForDefaultNullValueFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/operator/object_operator_without_whitespace.html"><span class="doc">object_operator_without_whitespace</span></a></p>
@@ -1903,7 +1904,7 @@ assignments to properties whose type declaration does not allow it.</p>
 </div>
 </li>
 </ul>
-<p>Part of rule set <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Operator/OperatorLinebreakFixer.php">Source PhpCsFixer\Fixer\Operator\OperatorLinebreakFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/ordered_class_elements.html"><span class="doc">ordered_class_elements</span></a></p>
@@ -1977,6 +1978,27 @@ assignments to properties whose type declaration does not allow it.</p>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a> <a class="reference internal" href="ruleSets/SymfonyRisky.html"><span class="doc">&#64;Symfony:risky</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ClassNotation/OrderedTraitsFixer.php">Source PhpCsFixer\Fixer\ClassNotation\OrderedTraitsFixer</a></p>
 </li>
+<li><p><a class="reference internal" href="rules/class_notation/ordered_types.html"><span class="doc">ordered_types</span></a></p>
+<p>Sort union types and intersection types using configured order.</p>
+<p>Configuration options:</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code></div>
+<div class="line">Whether the types should be sorted alphabetically, or not sorted.</div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code>, <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">null_adjustment</span></code></div>
+<div class="line">Forces the position of <cite>null</cite> (overrides <cite>sort_algorithm</cite>).</div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'always_first'</span></code>, <code class="docutils literal notranslate"><span class="pre">'always_last'</span></code>, <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'always_first'</span></code></div>
+</div>
+</li>
+</ul>
+<p><a class="reference external" href="./../src/Fixer/ClassNotation/OrderedTypesFixer.php">Source PhpCsFixer\Fixer\ClassNotation\OrderedTypesFixer</a></p>
+</li>
 <li><p><a class="reference internal" href="rules/phpdoc/phpdoc_add_missing_param_annotation.html"><span class="doc">phpdoc_add_missing_param_annotation</span></a></p>
 <p>PHPDoc should contain <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> for all params.</p>
 <p>Configuration options:</p>
@@ -1999,7 +2021,7 @@ assignments to properties whose type declaration does not allow it.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">tags</span></code></div>
 <div class="line">The tags that should be aligned.</div>
-<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['method',</span> <span class="pre">'param',</span> <span class="pre">'property',</span> <span class="pre">'property-read',</span> <span class="pre">'property-write',</span> <span class="pre">'return',</span> <span class="pre">'throws',</span> <span class="pre">'type',</span> <span class="pre">'var']</span></code></div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['method',</span> <span class="pre">'param',</span> <span class="pre">'property',</span> <span class="pre">'return',</span> <span class="pre">'throws',</span> <span class="pre">'type',</span> <span class="pre">'var']</span></code></div>
 </div>
 </li>
@@ -2131,6 +2153,10 @@ assignments to properties whose type declaration does not allow it.</p>
 </ul>
 <p>Part of rule set <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Phpdoc/PhpdocOrderByValueFixer.php">Source PhpCsFixer\Fixer\Phpdoc\PhpdocOrderByValueFixer</a></p>
+</li>
+<li><p><a class="reference internal" href="rules/phpdoc/phpdoc_param_order.html"><span class="doc">phpdoc_param_order</span></a></p>
+<p>Orders all <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> annotations in DocBlocks according to method signature.</p>
+<p><a class="reference external" href="./../src/Fixer/Phpdoc/PhpdocParamOrderFixer.php">Source PhpCsFixer\Fixer\Phpdoc\PhpdocParamOrderFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/phpdoc/phpdoc_return_self_reference.html"><span class="doc">phpdoc_return_self_reference</span></a></p>
 <p>The type of <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> annotations of methods returning a reference to itself must the configured one.</p>
@@ -2636,7 +2662,7 @@ has PHPUnit incompatibilities.</p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/protected_to_private.html"><span class="doc">protected_to_private</span></a></p>
 <p>Converts <code class="docutils literal notranslate"><span class="pre">protected</span></code> variables and methods to <code class="docutils literal notranslate"><span class="pre">private</span></code> where possible.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule set <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ClassNotation/ProtectedToPrivateFixer.php">Source PhpCsFixer\Fixer\ClassNotation\ProtectedToPrivateFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/basic/psr_autoloading.html"><span class="doc">psr_autoloading</span></a></p>
@@ -2711,6 +2737,7 @@ binding.</p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/self_static_accessor.html"><span class="doc">self_static_accessor</span></a></p>
 <p>Inside a <code class="docutils literal notranslate"><span class="pre">final</span></code> class or anonymous class <code class="docutils literal notranslate"><span class="pre">self</span></code> should be preferred to <code class="docutils literal notranslate"><span class="pre">static</span></code>.</p>
+<p>Part of rule set <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ClassNotation/SelfStaticAccessorFixer.php">Source PhpCsFixer\Fixer\ClassNotation\SelfStaticAccessorFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/semicolon/semicolon_after_instruction.html"><span class="doc">semicolon_after_instruction</span></a></p>
@@ -2809,6 +2836,10 @@ binding.</p>
 </ul>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Comment/SingleLineCommentStyleFixer.php">Source PhpCsFixer\Fixer\Comment\SingleLineCommentStyleFixer</a></p>
+</li>
+<li><p><a class="reference internal" href="rules/basic/single_line_empty_body.html"><span class="doc">single_line_empty_body</span></a></p>
+<p>Empty body of class or function must be abbreviated as <code class="docutils literal notranslate"><span class="pre">{}</span></code> and placed on the same line as the previous symbol, separated by a space.</p>
+<p><a class="reference external" href="./../src/Fixer/Basic/SingleLineEmptyBodyFixer.php">Source PhpCsFixer\Fixer\Basic\SingleLineEmptyBodyFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/single_line_throw.html"><span class="doc">single_line_throw</span></a></p>
 <p>Throwing exception must be done in single line.</p>

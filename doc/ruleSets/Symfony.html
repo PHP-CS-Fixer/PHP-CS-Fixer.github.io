@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>BoY42 (v3.16.0)</strong> edition
+                <strong>Brazilian Kangaroo (v3.17.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -67,6 +67,7 @@
 <h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="PSR12.html"><span class="doc">&#64;PSR12</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/phpdoc/align_multiline_comment.html"><span class="doc">align_multiline_comment</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/array_notation/array_syntax.html"><span class="doc">array_syntax</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/alias/backtick_to_shell_exec.html"><span class="doc">backtick_to_shell_exec</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/operator/binary_operator_spaces.html"><span class="doc">binary_operator_spaces</span></a></p></li>
@@ -125,12 +126,13 @@ config:
 <li><p><a class="reference internal" href="../rules/namespace_notation/no_leading_namespace_whitespace.html"><span class="doc">no_leading_namespace_whitespace</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/alias/no_mixed_echo_print.html"><span class="doc">no_mixed_echo_print</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/array_notation/no_multiline_whitespace_around_double_arrow.html"><span class="doc">no_multiline_whitespace_around_double_arrow</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/class_notation/no_null_property_initialization.html"><span class="doc">no_null_property_initialization</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/cast_notation/no_short_bool_cast.html"><span class="doc">no_short_bool_cast</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/semicolon/no_singleline_whitespace_before_semicolons.html"><span class="doc">no_singleline_whitespace_before_semicolons</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/whitespace/no_spaces_around_offset.html"><span class="doc">no_spaces_around_offset</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/phpdoc/no_superfluous_phpdoc_tags.html"><span class="doc">no_superfluous_phpdoc_tags</span></a>
 config:
-<code class="docutils literal notranslate"><span class="pre">['allow_mixed'</span> <span class="pre">=&gt;</span> <span class="pre">true,</span> <span class="pre">'allow_unused_params'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p></li>
+<code class="docutils literal notranslate"><span class="pre">['remove_inheritdoc'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p></li>
 <li><p><a class="reference internal" href="../rules/basic/no_trailing_comma_in_singleline.html"><span class="doc">no_trailing_comma_in_singleline</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/control_structure/no_unneeded_control_parentheses.html"><span class="doc">no_unneeded_control_parentheses</span></a>
 config:
@@ -145,7 +147,13 @@ config:
 <li><p><a class="reference internal" href="../rules/operator/no_useless_nullsafe_operator.html"><span class="doc">no_useless_nullsafe_operator</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/array_notation/no_whitespace_before_comma_in_array.html"><span class="doc">no_whitespace_before_comma_in_array</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/array_notation/normalize_index_brace.html"><span class="doc">normalize_index_brace</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/function_notation/nullable_type_declaration_for_default_null_value.html"><span class="doc">nullable_type_declaration_for_default_null_value</span></a>
+config:
+<code class="docutils literal notranslate"><span class="pre">['use_nullable_type_declaration'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code></p></li>
 <li><p><a class="reference internal" href="../rules/operator/object_operator_without_whitespace.html"><span class="doc">object_operator_without_whitespace</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/operator/operator_linebreak.html"><span class="doc">operator_linebreak</span></a>
+config:
+<code class="docutils literal notranslate"><span class="pre">['only_booleans'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p></li>
 <li><p><a class="reference internal" href="../rules/import/ordered_imports.html"><span class="doc">ordered_imports</span></a>
 config:
 <code class="docutils literal notranslate"><span class="pre">['imports_order'</span> <span class="pre">=&gt;</span> <span class="pre">['class',</span> <span class="pre">'function',</span> <span class="pre">'const'],</span> <span class="pre">'sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'alpha']</span></code></p></li>
@@ -178,7 +186,6 @@ config:
 config:
 <code class="docutils literal notranslate"><span class="pre">['null_adjustment'</span> <span class="pre">=&gt;</span> <span class="pre">'always_last',</span> <span class="pre">'sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'none']</span></code></p></li>
 <li><p><a class="reference internal" href="../rules/phpdoc/phpdoc_var_without_name.html"><span class="doc">phpdoc_var_without_name</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/class_notation/protected_to_private.html"><span class="doc">protected_to_private</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/semicolon/semicolon_after_instruction.html"><span class="doc">semicolon_after_instruction</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/string_notation/simple_to_complex_string_variable.html"><span class="doc">simple_to_complex_string_variable</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/class_notation/single_class_element_per_statement.html"><span class="doc">single_class_element_per_statement</span></a></p></li>

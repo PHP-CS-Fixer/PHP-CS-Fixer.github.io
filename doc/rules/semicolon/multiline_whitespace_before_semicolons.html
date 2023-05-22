@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>BoY42 (v3.16.0)</strong> edition
+                <strong>Brazilian Kangaroo (v3.17.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -82,7 +82,7 @@ calls.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>function foo () {<span class="w"></span>
+<span class="w"> </span>function foo() {<span class="w"></span>
 <span class="gd">-    return 1 + 2</span><span class="w"></span>
 <span class="gd">-        ;</span><span class="w"></span>
 <span class="gi">+    return 1 + 2;</span><span class="w"></span>
@@ -96,12 +96,11 @@ calls.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>                        $this-&gt;method1()<span class="w"></span>
-<span class="w"> </span>                            -&gt;method2()<span class="w"></span>
-<span class="gd">-                            -&gt;method(3);</span><span class="w"></span>
-<span class="gi">+                            -&gt;method(3)</span><span class="w"></span>
+<span class="w"> </span>$object-&gt;method1()<span class="w"></span>
+<span class="w"> </span>    -&gt;method2()<span class="w"></span>
+<span class="gd">-    -&gt;method(3);</span><span class="w"></span>
+<span class="gi">+    -&gt;method(3)</span><span class="w"></span>
 <span class="gi">+;</span><span class="w"></span>
-<span class="w"> </span>                    ?&gt;<span class="w"></span>
 </pre></div>
 </div>
 </div>
