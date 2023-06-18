@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Brazilian Kangaroo (v3.17.0)</strong> edition
+                <strong>Triangle (v3.18.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,7 +64,7 @@
             
   <div class="section" id="rule-self-static-accessor">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">self_static_accessor</span></code><a class="headerlink" href="#rule-self-static-accessor" title="Permalink to this headline">¶</a></h1>
-<p>Inside a <code class="docutils literal notranslate"><span class="pre">final</span></code> class or anonymous class <code class="docutils literal notranslate"><span class="pre">self</span></code> should be preferred to
+<p>Inside an enum or <code class="docutils literal notranslate"><span class="pre">final</span></code>/anonymous class, <code class="docutils literal notranslate"><span class="pre">self</span></code> should be preferred over
 <code class="docutils literal notranslate"><span class="pre">static</span></code>.</p>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
@@ -135,6 +135,24 @@
 <span class="gi">+        return self::class;</span><span class="w"></span>
 <span class="w"> </span>    }<span class="w"></span>
 <span class="w"> </span>};<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-5">
+<h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>enum Foo<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    public const A = 123;<span class="w"></span>
+
+<span class="w"> </span>    public static function bar(): void<span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        echo static::A;</span><span class="w"></span>
+<span class="gi">+        echo self::A;</span><span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>

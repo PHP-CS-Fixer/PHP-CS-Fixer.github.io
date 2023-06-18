@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Brazilian Kangaroo (v3.17.0)</strong> edition
+                <strong>Triangle (v3.18.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -264,7 +264,7 @@
 <p>Inside class or interface element <code class="docutils literal notranslate"><span class="pre">self</span></code> should be preferred to the class name itself.</p>
 </li>
 <li><p><a class="reference internal" href="class_notation/self_static_accessor.html"><span class="doc">self_static_accessor</span></a></p>
-<p>Inside a <code class="docutils literal notranslate"><span class="pre">final</span></code> class or anonymous class <code class="docutils literal notranslate"><span class="pre">self</span></code> should be preferred to <code class="docutils literal notranslate"><span class="pre">static</span></code>.</p>
+<p>Inside an enum or <code class="docutils literal notranslate"><span class="pre">final</span></code>/anonymous class, <code class="docutils literal notranslate"><span class="pre">self</span></code> should be preferred over <code class="docutils literal notranslate"><span class="pre">static</span></code>.</p>
 </li>
 <li><p><a class="reference internal" href="class_notation/single_class_element_per_statement.html"><span class="doc">single_class_element_per_statement</span></a></p>
 <p>There MUST NOT be more than one property or constant declared per statement.</p>
@@ -568,16 +568,19 @@
 <li><p><a class="reference internal" href="namespace_notation/blank_line_after_namespace.html"><span class="doc">blank_line_after_namespace</span></a></p>
 <p>There MUST be one blank line after the namespace declaration.</p>
 </li>
+<li><p><a class="reference internal" href="namespace_notation/blank_lines_before_namespace.html"><span class="doc">blank_lines_before_namespace</span></a></p>
+<p>Controls blank lines before a namespace declaration.</p>
+</li>
 <li><p><a class="reference internal" href="namespace_notation/clean_namespace.html"><span class="doc">clean_namespace</span></a></p>
 <p>Namespace must not contain spacing, comments or PHPDoc.</p>
 </li>
-<li><p><a class="reference internal" href="namespace_notation/no_blank_lines_before_namespace.html"><span class="doc">no_blank_lines_before_namespace</span></a></p>
+<li><p><a class="reference internal" href="namespace_notation/no_blank_lines_before_namespace.html"><span class="doc">no_blank_lines_before_namespace</span></a> <em>(deprecated)</em></p>
 <p>There should be no blank lines before a namespace declaration.</p>
 </li>
 <li><p><a class="reference internal" href="namespace_notation/no_leading_namespace_whitespace.html"><span class="doc">no_leading_namespace_whitespace</span></a></p>
 <p>The namespace declaration line shouldn’t contain leading whitespace.</p>
 </li>
-<li><p><a class="reference internal" href="namespace_notation/single_blank_line_before_namespace.html"><span class="doc">single_blank_line_before_namespace</span></a></p>
+<li><p><a class="reference internal" href="namespace_notation/single_blank_line_before_namespace.html"><span class="doc">single_blank_line_before_namespace</span></a> <em>(deprecated)</em></p>
 <p>There should be exactly one blank line before a namespace declaration.</p>
 </li>
 </ul>

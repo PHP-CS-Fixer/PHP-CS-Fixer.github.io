@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Brazilian Kangaroo (v3.17.0)</strong> edition
+                <strong>Triangle (v3.18.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -71,13 +71,13 @@
 <h3><code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code><a class="headerlink" href="#sort-algorithm" title="Permalink to this headline">¶</a></h3>
 <p>Whether the statements should be sorted alphabetically or by length, or not
 sorted.</p>
-<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code>, <code class="docutils literal notranslate"><span class="pre">'length'</span></code>, <code class="docutils literal notranslate"><span class="pre">'none'</span></code></p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code>, <code class="docutils literal notranslate"><span class="pre">'length'</span></code> and <code class="docutils literal notranslate"><span class="pre">'none'</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code></p>
 </div>
 <div class="section" id="imports-order">
 <h3><code class="docutils literal notranslate"><span class="pre">imports_order</span></code><a class="headerlink" href="#imports-order" title="Permalink to this headline">¶</a></h3>
 <p>Defines the order of import types.</p>
-<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
 </div>
 </div>
@@ -182,6 +182,9 @@ sorted.</p>
 <p>The rule is part of the following rule sets:</p>
 <dl>
 <dt>&#64;PER</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PER.html"><span class="doc">&#64;PER</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">ordered_imports</span></code> rule with the config below:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['imports_order'</span> <span class="pre">=&gt;</span> <span class="pre">['class',</span> <span class="pre">'function',</span> <span class="pre">'const'],</span> <span class="pre">'sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'none']</span></code></p>
+</dd>
+<dt>&#64;PER-CS1.0</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">ordered_imports</span></code> rule with the config below:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['imports_order'</span> <span class="pre">=&gt;</span> <span class="pre">['class',</span> <span class="pre">'function',</span> <span class="pre">'const'],</span> <span class="pre">'sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'none']</span></code></p>
 </dd>
 <dt>&#64;PSR12</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">ordered_imports</span></code> rule with the config below:</p>

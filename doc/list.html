@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Brazilian Kangaroo (v3.17.0)</strong> edition
+                <strong>Triangle (v3.18.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -72,7 +72,7 @@
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">comment_type</span></code></div>
 <div class="line">Whether to fix PHPDoc comments only (<cite>phpdocs_only</cite>), any multi-line comment whose lines all start with an asterisk (<cite>phpdocs_like</cite>) or any multi-line comment (<cite>all_multiline</cite>).</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'all_multiline'</span></code>, <code class="docutils literal notranslate"><span class="pre">'phpdocs_like'</span></code>, <code class="docutils literal notranslate"><span class="pre">'phpdocs_only'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'all_multiline'</span></code>, <code class="docutils literal notranslate"><span class="pre">'phpdocs_like'</span></code> and <code class="docutils literal notranslate"><span class="pre">'phpdocs_only'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'phpdocs_only'</span></code></div>
 </div>
 </li>
@@ -98,7 +98,7 @@
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">syntax</span></code></div>
 <div class="line">Whether to use the <cite>long</cite> or <cite>short</cite> array syntax.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'long'</span></code>, <code class="docutils literal notranslate"><span class="pre">'short'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'long'</span></code> and <code class="docutils literal notranslate"><span class="pre">'short'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'short'</span></code></div>
 </div>
 </li>
@@ -125,13 +125,13 @@ single-quotes, double-quotes and backticks are not used inside the command.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">default</span></code></div>
 <div class="line">Default fix strategy.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'align'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_minimal'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_minimal_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'no_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'align'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_minimal'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_minimal_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'no_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single_space'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'single_space'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">operators</span></code></div>
-<div class="line">Dictionary of <cite>binary operator</cite> =&gt; <cite>fix strategy</cite> values that differ from the default strategy. Supported are: <cite>=</cite>, <cite>*</cite>, <cite>/</cite>, <cite>%</cite>, <cite>&lt;</cite>, <cite>&gt;</cite>, <cite>|</cite>, <cite>^</cite>, <cite>+</cite>, <cite>-</cite>, <cite>&amp;</cite>, <cite>&amp;=</cite>, <cite>&amp;&amp;</cite>, <cite>||</cite>, <cite>.=</cite>, <cite>/=</cite>, <cite>=&gt;</cite>, <cite>==</cite>, <cite>&gt;=</cite>, <cite>===</cite>, <cite>!=</cite>, <cite>&lt;&gt;</cite>, <cite>!==</cite>, <cite>&lt;=</cite>, <cite>and</cite>, <cite>or</cite>, <cite>xor</cite>, <cite>-=</cite>, <cite>%=</cite>, <cite>*=</cite>, <cite>|=</cite>, <cite>+=</cite>, <cite>&lt;&lt;</cite>, <cite>&lt;&lt;=</cite>, <cite>&gt;&gt;</cite>, <cite>&gt;&gt;=</cite>, <cite>^=</cite>, <cite>**</cite>, <cite>**=</cite>, <cite>&lt;=&gt;</cite>, <cite>??</cite>, <cite>??=</cite>.</div>
+<div class="line">Dictionary of <cite>binary operator</cite> =&gt; <cite>fix strategy</cite> values that differ from the default strategy. Supported are: <cite>=</cite>, <cite>*</cite>, <cite>/</cite>, <cite>%</cite>, <cite>&lt;</cite>, <cite>&gt;</cite>, <cite>|</cite>, <cite>^</cite>, <cite>+</cite>, <cite>-</cite>, <cite>&amp;</cite>, <cite>&amp;=</cite>, <cite>&amp;&amp;</cite>, <cite>||</cite>, <cite>.=</cite>, <cite>/=</cite>, <cite>=&gt;</cite>, <cite>==</cite>, <cite>&gt;=</cite>, <cite>===</cite>, <cite>!=</cite>, <cite>&lt;&gt;</cite>, <cite>!==</cite>, <cite>&lt;=</cite>, <cite>and</cite>, <cite>or</cite>, <cite>xor</cite>, <cite>-=</cite>, <cite>%=</cite>, <cite>*=</cite>, <cite>|=</cite>, <cite>+=</cite>, <cite>&lt;&lt;</cite>, <cite>&lt;&lt;=</cite>, <cite>&gt;&gt;</cite>, <cite>&gt;&gt;=</cite>, <cite>^=</cite>, <cite>**</cite>, <cite>**=</cite>, <cite>&lt;=&gt;</cite>, <cite>??</cite> and <cite>??=</cite>.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></div>
 </div>
@@ -140,14 +140,36 @@ single-quotes, double-quotes and backticks are not used inside the command.</p>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Operator/BinaryOperatorSpacesFixer.php">Source PhpCsFixer\Fixer\Operator\BinaryOperatorSpacesFixer</a></p>
 </li>
+<li><p><a class="reference internal" href="rules/namespace_notation/blank_lines_before_namespace.html"><span class="doc">blank_lines_before_namespace</span></a></p>
+<p>Controls blank lines before a namespace declaration.</p>
+<p>Configuration options:</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">min_line_breaks</span></code></div>
+<div class="line">Minimum line breaks that should exist before namespace declaration.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">int</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">2</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">max_line_breaks</span></code></div>
+<div class="line">Maximum line breaks that should exist before namespace declaration.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">int</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">2</span></code></div>
+</div>
+</li>
+</ul>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p><a class="reference external" href="./../src/Fixer/NamespaceNotation/BlankLinesBeforeNamespaceFixer.php">Source PhpCsFixer\Fixer\NamespaceNotation\BlankLinesBeforeNamespaceFixer</a></p>
+</li>
 <li><p><a class="reference internal" href="rules/namespace_notation/blank_line_after_namespace.html"><span class="doc">blank_line_after_namespace</span></a></p>
 <p>There MUST be one blank line after the namespace declaration.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/NamespaceNotation/BlankLineAfterNamespaceFixer.php">Source PhpCsFixer\Fixer\NamespaceNotation\BlankLineAfterNamespaceFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/php_tag/blank_line_after_opening_tag.html"><span class="doc">blank_line_after_opening_tag</span></a></p>
 <p>Ensure there is no code on the same line as the PHP open tag and it is followed by a blank line.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/PhpTag/BlankLineAfterOpeningTagFixer.php">Source PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/whitespace/blank_line_before_statement.html"><span class="doc">blank_line_before_statement</span></a></p>
@@ -167,7 +189,7 @@ single-quotes, double-quotes and backticks are not used inside the command.</p>
 </li>
 <li><p><a class="reference internal" href="rules/whitespace/blank_line_between_import_groups.html"><span class="doc">blank_line_between_import_groups</span></a></p>
 <p>Putting blank lines between <code class="docutils literal notranslate"><span class="pre">use</span></code> statement groups.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/BlankLineBetweenImportGroupsFixer.php">Source PhpCsFixer\Fixer\Whitespace\BlankLineBetweenImportGroupsFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/basic/braces.html"><span class="doc">braces</span></a></p>
@@ -195,21 +217,21 @@ single-quotes, double-quotes and backticks are not used inside the command.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">position_after_functions_and_oop_constructs</span></code></div>
 <div class="line">Whether the opening brace should be placed on “next” or “same” line after classy constructs (non-anonymous classes, interfaces, traits, methods and non-lambda functions).</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'next'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">position_after_control_structures</span></code></div>
 <div class="line">Whether the opening brace should be placed on “next” or “same” line after control structures.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'same'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">position_after_anonymous_constructs</span></code></div>
 <div class="line">Whether the opening brace should be placed on “next” or “same” line after anonymous constructs (anonymous classes and lambda functions).</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'same'</span></code></div>
 </div>
 </li>
@@ -223,7 +245,7 @@ single-quotes, double-quotes and backticks are not used inside the command.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">space</span></code></div>
 <div class="line">Spacing to apply between cast and variable.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code> and <code class="docutils literal notranslate"><span class="pre">'single'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'single'</span></code></div>
 </div>
 </li>
@@ -286,7 +308,7 @@ single-quotes, double-quotes and backticks are not used inside the command.</p>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ClassNotation/ClassDefinitionFixer.php">Source PhpCsFixer\Fixer\ClassNotation\ClassDefinitionFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/language_construct/class_keyword_remove.html"><span class="doc">class_keyword_remove</span></a></p>
@@ -340,7 +362,7 @@ new column in database.</p>
 <li><p><a class="reference internal" href="rules/whitespace/compact_nullable_typehint.html"><span class="doc">compact_nullable_typehint</span></a></p>
 <p>Remove extra spaces in a nullable typehint.</p>
 <p>Rule is applied only in a PHP 7.1+ environment.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/CompactNullableTypehintFixer.php">Source PhpCsFixer\Fixer\Whitespace\CompactNullableTypehintFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/operator/concat_space.html"><span class="doc">concat_space</span></a></p>
@@ -350,7 +372,7 @@ new column in database.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">spacing</span></code></div>
 <div class="line">Spacing to apply around concatenation operator.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'one'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code> and <code class="docutils literal notranslate"><span class="pre">'one'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 </div>
 </li>
@@ -365,17 +387,17 @@ new column in database.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">case</span></code></div>
 <div class="line">Whether to use the <cite>upper</cite> or <cite>lower</cite> case syntax.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'lower'</span></code>, <code class="docutils literal notranslate"><span class="pre">'upper'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'lower'</span></code> and <code class="docutils literal notranslate"><span class="pre">'upper'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'lower'</span></code></div>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Casing/ConstantCaseFixer.php">Source PhpCsFixer\Fixer\Casing\ConstantCaseFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/control_structure/control_structure_braces.html"><span class="doc">control_structure_braces</span></a></p>
 <p>The body of each control structure MUST be enclosed within braces.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ControlStructure/ControlStructureBracesFixer.php">Source PhpCsFixer\Fixer\ControlStructure\ControlStructureBracesFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/control_structure/control_structure_continuation_position.html"><span class="doc">control_structure_continuation_position</span></a></p>
@@ -385,12 +407,12 @@ new column in database.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">position</span></code></div>
 <div class="line">The position of the keyword that continues the control structure.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ControlStructure/ControlStructureContinuationPositionFixer.php">Source PhpCsFixer\Fixer\ControlStructure\ControlStructureContinuationPositionFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/basic/curly_braces_position.html"><span class="doc">curly_braces_position</span></a></p>
@@ -400,35 +422,35 @@ new column in database.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">control_structures_opening_brace</span></code></div>
 <div class="line">The position of the opening brace of control structures‘ body.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">functions_opening_brace</span></code></div>
 <div class="line">The position of the opening brace of functions‘ body.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">anonymous_functions_opening_brace</span></code></div>
 <div class="line">The position of the opening brace of anonymous functions‘ body.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">classes_opening_brace</span></code></div>
 <div class="line">The position of the opening brace of classes‘ body.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">anonymous_classes_opening_brace</span></code></div>
 <div class="line">The position of the opening brace of anonymous classes‘ body.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
 </div>
 </li>
@@ -447,7 +469,7 @@ new column in database.</p>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Basic/CurlyBracesPositionFixer.php">Source PhpCsFixer\Fixer\Basic\CurlyBracesPositionFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/date_time_create_from_format_call.html"><span class="doc">date_time_create_from_format_call</span></a></p>
@@ -477,12 +499,12 @@ set in format.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">space</span></code></div>
 <div class="line">Spacing to apply around the equal sign.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code> and <code class="docutils literal notranslate"><span class="pre">'single'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/LanguageConstruct/DeclareEqualNormalizeFixer.php">Source PhpCsFixer\Fixer\LanguageConstruct\DeclareEqualNormalizeFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/language_construct/declare_parentheses.html"><span class="doc">declare_parentheses</span></a></p>
@@ -516,7 +538,7 @@ set in format.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">operator</span></code></div>
 <div class="line">The operator to use.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">':'</span></code>, <code class="docutils literal notranslate"><span class="pre">'='</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">':'</span></code> and <code class="docutils literal notranslate"><span class="pre">'='</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'='</span></code></div>
 </div>
 </li>
@@ -538,7 +560,7 @@ set in format.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">syntax</span></code></div>
 <div class="line">Whether to add or remove braces.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'with_braces'</span></code>, <code class="docutils literal notranslate"><span class="pre">'without_braces'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'with_braces'</span></code> and <code class="docutils literal notranslate"><span class="pre">'without_braces'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'without_braces'</span></code></div>
 </div>
 </li>
@@ -600,42 +622,42 @@ assignment operator.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">before_argument_assignments</span></code></div>
 <div class="line">Whether to add, remove or ignore spaces before argument assignment operator.</div>
-<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code>, <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">after_argument_assignments</span></code></div>
 <div class="line">Whether to add, remove or ignore spaces after argument assignment operator.</div>
-<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code>, <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">before_array_assignments_equals</span></code></div>
 <div class="line">Whether to add, remove or ignore spaces before array <cite>=</cite> assignment operator.</div>
-<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code>, <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">after_array_assignments_equals</span></code></div>
 <div class="line">Whether to add, remove or ignore spaces after array assignment <cite>=</cite> operator.</div>
-<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code>, <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">before_array_assignments_colon</span></code></div>
 <div class="line">Whether to add, remove or ignore spaces before array <cite>:</cite> assignment operator.</div>
-<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code>, <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">after_array_assignments_colon</span></code></div>
 <div class="line">Whether to add, remove or ignore spaces after array assignment <cite>:</cite> operator.</div>
-<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code>, <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
 </li>
@@ -650,14 +672,14 @@ assignment operator.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">format</span></code></div>
 <div class="line">The desired language construct.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'long'</span></code>, <code class="docutils literal notranslate"><span class="pre">'short'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'long'</span></code> and <code class="docutils literal notranslate"><span class="pre">'short'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'long'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">long_function</span></code></div>
 <div class="line">The function to be used to expand the short echo tags.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'echo'</span></code>, <code class="docutils literal notranslate"><span class="pre">'print'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'echo'</span></code> and <code class="docutils literal notranslate"><span class="pre">'print'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'echo'</span></code></div>
 </div>
 </li>
@@ -674,7 +696,7 @@ assignment operator.</p>
 </li>
 <li><p><a class="reference internal" href="rules/control_structure/elseif.html"><span class="doc">elseif</span></a></p>
 <p>The keyword <code class="docutils literal notranslate"><span class="pre">elseif</span></code> should be used instead of <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> so that all control keywords look like single words.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ControlStructure/ElseifFixer.php">Source PhpCsFixer\Fixer\ControlStructure\ElseifFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/control_structure/empty_loop_body.html"><span class="doc">empty_loop_body</span></a></p>
@@ -684,7 +706,7 @@ assignment operator.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">style</span></code></div>
 <div class="line">Style of empty loop-bodies.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'braces'</span></code>, <code class="docutils literal notranslate"><span class="pre">'semicolon'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'braces'</span></code> and <code class="docutils literal notranslate"><span class="pre">'semicolon'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'semicolon'</span></code></div>
 </div>
 </li>
@@ -699,7 +721,7 @@ assignment operator.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">style</span></code></div>
 <div class="line">Style of empty loop-condition.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'for'</span></code>, <code class="docutils literal notranslate"><span class="pre">'while'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'for'</span></code> and <code class="docutils literal notranslate"><span class="pre">'while'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'while'</span></code></div>
 </div>
 </li>
@@ -709,7 +731,7 @@ assignment operator.</p>
 </li>
 <li><p><a class="reference internal" href="rules/basic/encoding.html"><span class="doc">encoding</span></a></p>
 <p>PHP code MUST use only UTF-8 without BOM (remove BOM).</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR1.html"><span class="doc">&#64;PSR1</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR1.html"><span class="doc">&#64;PSR1</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Basic/EncodingFixer.php">Source PhpCsFixer\Fixer\Basic\EncodingFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/alias/ereg_to_preg.html"><span class="doc">ereg_to_preg</span></a></p>
@@ -833,16 +855,32 @@ FinalInternalClassFixer, it’s fine.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">annotation_include</span></code></div>
-<div class="line">Class level annotations tags that must be set in order to fix the class (case insensitive).</div>
+<div class="line">Class level attribute or annotation tags that must be set in order to fix the class (case insensitive).</div>
+<div class="line">warning:: This option is deprecated and will be removed on next major version. Use <code class="docutils literal notranslate"><span class="pre">include</span></code> to configure PHPDoc annotations tags and attributes.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['&#64;internal']</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">annotation_exclude</span></code></div>
-<div class="line">Class level annotations tags that must be omitted to fix the class, even if all of the white list ones are used as well (case insensitive).</div>
+<div class="line">Class level attribute or annotation tags that must be omitted to fix the class, even if all of the white list ones are used as well (case insensitive).</div>
+<div class="line">warning:: This option is deprecated and will be removed on next major version. Use <code class="docutils literal notranslate"><span class="pre">exclude</span></code> to configure PHPDoc annotations tags and attributes.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['&#64;final',</span> <span class="pre">'&#64;Entity',</span> <span class="pre">'&#64;ORM\\Entity',</span> <span class="pre">'&#64;ORM\\Mapping\\Entity',</span> <span class="pre">'&#64;Mapping\\Entity',</span> <span class="pre">'&#64;Document',</span> <span class="pre">'&#64;ODM\\Document']</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">include</span></code></div>
+<div class="line">Class level attribute or annotation tags that must be set in order to fix the class (case insensitive).</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['internal']</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">exclude</span></code></div>
+<div class="line">Class level attribute or annotation tags that must be omitted to fix the class, even if all of the white list ones are used as well (case insensitive).</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['final',</span> <span class="pre">'Entity',</span> <span class="pre">'ORM\\Entity',</span> <span class="pre">'ORM\\Mapping\\Entity',</span> <span class="pre">'Mapping\\Entity',</span> <span class="pre">'Document',</span> <span class="pre">'ODM\\Document']</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
@@ -892,7 +930,7 @@ override a method, use the Template method pattern.</p>
 </li>
 <li><p><a class="reference internal" href="rules/php_tag/full_opening_tag.html"><span class="doc">full_opening_tag</span></a></p>
 <p>PHP code must use the long <code class="docutils literal notranslate"><span class="pre">&lt;?php</span></code> tags or short-echo <code class="docutils literal notranslate"><span class="pre">&lt;?=</span></code> tags and not other tag variations.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR1.html"><span class="doc">&#64;PSR1</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR1.html"><span class="doc">&#64;PSR1</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/PhpTag/FullOpeningTagFixer.php">Source PhpCsFixer\Fixer\PhpTag\FullOpeningTagFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/function_declaration.html"><span class="doc">function_declaration</span></a></p>
@@ -902,14 +940,14 @@ override a method, use the Template method pattern.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">closure_function_spacing</span></code></div>
 <div class="line">Spacing to use before open parenthesis for closures.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'one'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code> and <code class="docutils literal notranslate"><span class="pre">'one'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'one'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">closure_fn_spacing</span></code></div>
 <div class="line">Spacing to use before open parenthesis for short arrow functions.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'one'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code> and <code class="docutils literal notranslate"><span class="pre">'one'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'one'</span></code></div>
 </div>
 </li>
@@ -921,7 +959,7 @@ override a method, use the Template method pattern.</p>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/FunctionNotation/FunctionDeclarationFixer.php">Source PhpCsFixer\Fixer\FunctionNotation\FunctionDeclarationFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/language_construct/function_to_constant.html"><span class="doc">function_to_constant</span></a></p>
@@ -1015,21 +1053,21 @@ override a method, use the Template method pattern.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">import_constants</span></code></div>
 <div class="line">Whether to import, not import or ignore global constants.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code>, <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">import_functions</span></code></div>
 <div class="line">Whether to import, not import or ignore global functions.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code>, <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">import_classes</span></code></div>
 <div class="line">Whether to import, not import or ignore global classes.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code>, <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
 </li>
@@ -1055,21 +1093,21 @@ override a method, use the Template method pattern.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">comment_type</span></code></div>
 <div class="line">Comment syntax type.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'comment'</span></code>, <code class="docutils literal notranslate"><span class="pre">'PHPDoc'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'comment'</span></code> and <code class="docutils literal notranslate"><span class="pre">'PHPDoc'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'comment'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">location</span></code></div>
 <div class="line">The location of the inserted header.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'after_declare_strict'</span></code>, <code class="docutils literal notranslate"><span class="pre">'after_open'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'after_declare_strict'</span></code> and <code class="docutils literal notranslate"><span class="pre">'after_open'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'after_declare_strict'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">separate</span></code></div>
 <div class="line">Whether the header should be separated from the file content with a new line.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'both'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bottom'</span></code>, <code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'top'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'both'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bottom'</span></code>, <code class="docutils literal notranslate"><span class="pre">'none'</span></code> and <code class="docutils literal notranslate"><span class="pre">'top'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'both'</span></code></div>
 </div>
 </li>
@@ -1083,7 +1121,7 @@ override a method, use the Template method pattern.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">indentation</span></code></div>
 <div class="line">Whether the indentation should be the same as in the start token line or one level more.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'same_as_start'</span></code>, <code class="docutils literal notranslate"><span class="pre">'start_plus_one'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'same_as_start'</span></code> and <code class="docutils literal notranslate"><span class="pre">'start_plus_one'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'start_plus_one'</span></code></div>
 </div>
 </li>
@@ -1114,7 +1152,7 @@ override a method, use the Template method pattern.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">style</span></code></div>
 <div class="line">Whether to use pre- or post-increment and decrement operators.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'post'</span></code>, <code class="docutils literal notranslate"><span class="pre">'pre'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'post'</span></code> and <code class="docutils literal notranslate"><span class="pre">'pre'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'pre'</span></code></div>
 </div>
 </li>
@@ -1124,7 +1162,7 @@ override a method, use the Template method pattern.</p>
 </li>
 <li><p><a class="reference internal" href="rules/whitespace/indentation_type.html"><span class="doc">indentation_type</span></a></p>
 <p>Code MUST use configured indentation type.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/IndentationTypeFixer.php">Source PhpCsFixer\Fixer\Whitespace\IndentationTypeFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/casing/integer_literal_case.html"><span class="doc">integer_literal_case</span></a></p>
@@ -1150,7 +1188,7 @@ override a method, use the Template method pattern.</p>
 </li>
 <li><p><a class="reference internal" href="rules/whitespace/line_ending.html"><span class="doc">line_ending</span></a></p>
 <p>All PHP files must use same line ending.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/LineEndingFixer.php">Source PhpCsFixer\Fixer\Whitespace\LineEndingFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/list_notation/list_syntax.html"><span class="doc">list_syntax</span></a></p>
@@ -1160,7 +1198,7 @@ override a method, use the Template method pattern.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">syntax</span></code></div>
 <div class="line">Whether to use the <cite>long</cite> or <cite>short</cite> <cite>list</cite> syntax.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'long'</span></code>, <code class="docutils literal notranslate"><span class="pre">'short'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'long'</span></code> and <code class="docutils literal notranslate"><span class="pre">'short'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'short'</span></code></div>
 </div>
 </li>
@@ -1177,17 +1215,17 @@ was intentional.</p>
 </li>
 <li><p><a class="reference internal" href="rules/cast_notation/lowercase_cast.html"><span class="doc">lowercase_cast</span></a></p>
 <p>Cast should be written in lower case.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/CastNotation/LowercaseCastFixer.php">Source PhpCsFixer\Fixer\CastNotation\LowercaseCastFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/casing/lowercase_keywords.html"><span class="doc">lowercase_keywords</span></a></p>
 <p>PHP keywords MUST be in lower case.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Casing/LowercaseKeywordsFixer.php">Source PhpCsFixer\Fixer\Casing\LowercaseKeywordsFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/casing/lowercase_static_reference.html"><span class="doc">lowercase_static_reference</span></a></p>
 <p>Class static references <code class="docutils literal notranslate"><span class="pre">self</span></code>, <code class="docutils literal notranslate"><span class="pre">static</span></code> and <code class="docutils literal notranslate"><span class="pre">parent</span></code> MUST be in lower case.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Casing/LowercaseStaticReferenceFixer.php">Source PhpCsFixer\Fixer\Casing\LowercaseStaticReferenceFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/casing/magic_constant_casing.html"><span class="doc">magic_constant_casing</span></a></p>
@@ -1220,7 +1258,7 @@ byte size rather than its length in characters.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">on_multiline</span></code></div>
 <div class="line">Defines how to handle function arguments lists that contain newlines.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'ensure_fully_multiline'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ensure_single_line'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ignore'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'ensure_fully_multiline'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ensure_single_line'</span></code> and <code class="docutils literal notranslate"><span class="pre">'ignore'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'ensure_fully_multiline'</span></code></div>
 </div>
 </li>
@@ -1232,7 +1270,7 @@ byte size rather than its length in characters.</p>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PHP73Migration.html"><span class="doc">&#64;PHP73Migration</span></a> <a class="reference internal" href="ruleSets/PHP74Migration.html"><span class="doc">&#64;PHP74Migration</span></a> <a class="reference internal" href="ruleSets/PHP80Migration.html"><span class="doc">&#64;PHP80Migration</span></a> <a class="reference internal" href="ruleSets/PHP81Migration.html"><span class="doc">&#64;PHP81Migration</span></a> <a class="reference internal" href="ruleSets/PHP82Migration.html"><span class="doc">&#64;PHP82Migration</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PHP73Migration.html"><span class="doc">&#64;PHP73Migration</span></a> <a class="reference internal" href="ruleSets/PHP74Migration.html"><span class="doc">&#64;PHP74Migration</span></a> <a class="reference internal" href="ruleSets/PHP80Migration.html"><span class="doc">&#64;PHP80Migration</span></a> <a class="reference internal" href="ruleSets/PHP81Migration.html"><span class="doc">&#64;PHP81Migration</span></a> <a class="reference internal" href="ruleSets/PHP82Migration.html"><span class="doc">&#64;PHP82Migration</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/FunctionNotation/MethodArgumentSpaceFixer.php">Source PhpCsFixer\Fixer\FunctionNotation\MethodArgumentSpaceFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/whitespace/method_chaining_indentation.html"><span class="doc">method_chaining_indentation</span></a></p>
@@ -1266,7 +1304,7 @@ overridden.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">strategy</span></code></div>
 <div class="line">Forbid multi-line whitespace or move the semicolon to the new line for chained calls.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'new_line_for_chained_calls'</span></code>, <code class="docutils literal notranslate"><span class="pre">'no_multi_line'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'new_line_for_chained_calls'</span></code> and <code class="docutils literal notranslate"><span class="pre">'no_multi_line'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'no_multi_line'</span></code></div>
 </div>
 </li>
@@ -1303,7 +1341,7 @@ overridden.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">scope</span></code></div>
 <div class="line">Only fix constant invocations that are made within a namespace or fix all.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'all'</span></code>, <code class="docutils literal notranslate"><span class="pre">'namespaced'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'all'</span></code> and <code class="docutils literal notranslate"><span class="pre">'namespaced'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'all'</span></code></div>
 </div>
 </li>
@@ -1345,7 +1383,7 @@ overridden.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">scope</span></code></div>
 <div class="line">Only fix function calls that are made within a namespace or fix all.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'all'</span></code>, <code class="docutils literal notranslate"><span class="pre">'namespaced'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'all'</span></code> and <code class="docutils literal notranslate"><span class="pre">'namespaced'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'all'</span></code></div>
 </div>
 </li>
@@ -1384,7 +1422,7 @@ overridden.</p>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Operator/NewWithBracesFixer.php">Source PhpCsFixer\Fixer\Operator\NewWithBracesFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/basic/non_printable_character.html"><span class="doc">non_printable_character</span></a></p>
@@ -1487,7 +1525,7 @@ overridden.</p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/no_blank_lines_after_class_opening.html"><span class="doc">no_blank_lines_after_class_opening</span></a></p>
 <p>There should be no empty lines after class opening brace.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ClassNotation/NoBlankLinesAfterClassOpeningFixer.php">Source PhpCsFixer\Fixer\ClassNotation\NoBlankLinesAfterClassOpeningFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/phpdoc/no_blank_lines_after_phpdoc.html"><span class="doc">no_blank_lines_after_phpdoc</span></a></p>
@@ -1497,6 +1535,7 @@ overridden.</p>
 </li>
 <li><p><a class="reference internal" href="rules/namespace_notation/no_blank_lines_before_namespace.html"><span class="doc">no_blank_lines_before_namespace</span></a></p>
 <p>There should be no blank lines before a namespace declaration.</p>
+<p><em>warning deprecated</em>   Use <code class="docutils literal notranslate"><span class="pre">blank_lines_before_namespace</span></code> instead.</p>
 <p><a class="reference external" href="./../src/Fixer/NamespaceNotation/NoBlankLinesBeforeNamespaceFixer.php">Source PhpCsFixer\Fixer\NamespaceNotation\NoBlankLinesBeforeNamespaceFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/control_structure/no_break_comment.html"><span class="doc">no_break_comment</span></a></p>
@@ -1513,12 +1552,12 @@ is no fall-through.</p>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ControlStructure/NoBreakCommentFixer.php">Source PhpCsFixer\Fixer\ControlStructure\NoBreakCommentFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/php_tag/no_closing_tag.html"><span class="doc">no_closing_tag</span></a></p>
 <p>The closing <code class="docutils literal notranslate"><span class="pre">?&gt;</span></code> tag MUST be omitted from files containing only PHP.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/PhpTag/NoClosingTagFixer.php">Source PhpCsFixer\Fixer\PhpTag\NoClosingTagFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/comment/no_empty_comment.html"><span class="doc">no_empty_comment</span></a></p>
@@ -1560,7 +1599,7 @@ to renamed code (<code class="docutils literal notranslate"><span class="pre">$$
 </li>
 <li><p><a class="reference internal" href="rules/import/no_leading_import_slash.html"><span class="doc">no_leading_import_slash</span></a></p>
 <p>Remove leading slashes in <code class="docutils literal notranslate"><span class="pre">use</span></code> clauses.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Import/NoLeadingImportSlashFixer.php">Source PhpCsFixer\Fixer\Import\NoLeadingImportSlashFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/namespace_notation/no_leading_namespace_whitespace.html"><span class="doc">no_leading_namespace_whitespace</span></a></p>
@@ -1575,7 +1614,7 @@ to renamed code (<code class="docutils literal notranslate"><span class="pre">$$
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">use</span></code></div>
 <div class="line">The desired language construct.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'echo'</span></code>, <code class="docutils literal notranslate"><span class="pre">'print'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'echo'</span></code> and <code class="docutils literal notranslate"><span class="pre">'print'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'echo'</span></code></div>
 </div>
 </li>
@@ -1590,7 +1629,7 @@ to renamed code (<code class="docutils literal notranslate"><span class="pre">$$
 </li>
 <li><p><a class="reference internal" href="rules/basic/no_multiple_statements_per_line.html"><span class="doc">no_multiple_statements_per_line</span></a></p>
 <p>There must not be more than one statement per line.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Basic/NoMultipleStatementsPerLineFixer.php">Source PhpCsFixer\Fixer\Basic\NoMultipleStatementsPerLineFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/no_null_property_initialization.html"><span class="doc">no_null_property_initialization</span></a></p>
@@ -1617,7 +1656,7 @@ parent one.</p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/no_spaces_after_function_name.html"><span class="doc">no_spaces_after_function_name</span></a></p>
 <p>When making a method or function call, there MUST NOT be a space between the method or function name and the opening parenthesis.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/FunctionNotation/NoSpacesAfterFunctionNameFixer.php">Source PhpCsFixer\Fixer\FunctionNotation\NoSpacesAfterFunctionNameFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/whitespace/no_spaces_around_offset.html"><span class="doc">no_spaces_around_offset</span></a></p>
@@ -1637,12 +1676,12 @@ parent one.</p>
 </li>
 <li><p><a class="reference internal" href="rules/whitespace/no_spaces_inside_parenthesis.html"><span class="doc">no_spaces_inside_parenthesis</span></a></p>
 <p>There MUST NOT be a space after the opening parenthesis. There MUST NOT be a space before the closing parenthesis.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/NoSpacesInsideParenthesisFixer.php">Source PhpCsFixer\Fixer\Whitespace\NoSpacesInsideParenthesisFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/operator/no_space_around_double_colon.html"><span class="doc">no_space_around_double_colon</span></a></p>
 <p>There must be no space around double colons (also called Scope Resolution Operator or Paamayim Nekudotayim).</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Operator/NoSpaceAroundDoubleColonFixer.php">Source PhpCsFixer\Fixer\Operator\NoSpaceAroundDoubleColonFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/control_structure/no_superfluous_elseif.html"><span class="doc">no_superfluous_elseif</span></a></p>
@@ -1711,19 +1750,19 @@ parent one.</p>
 </li>
 <li><p><a class="reference internal" href="rules/whitespace/no_trailing_whitespace.html"><span class="doc">no_trailing_whitespace</span></a></p>
 <p>Remove trailing whitespace at the end of non-blank lines.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/NoTrailingWhitespaceFixer.php">Source PhpCsFixer\Fixer\Whitespace\NoTrailingWhitespaceFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/comment/no_trailing_whitespace_in_comment.html"><span class="doc">no_trailing_whitespace_in_comment</span></a></p>
 <p>There MUST be no trailing spaces inside comment or PHPDoc.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Comment/NoTrailingWhitespaceInCommentFixer.php">Source PhpCsFixer\Fixer\Comment\NoTrailingWhitespaceInCommentFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/string_notation/no_trailing_whitespace_in_string.html"><span class="doc">no_trailing_whitespace_in_string</span></a></p>
 <p>There must be no trailing whitespace in strings.</p>
 <p><em>warning risky</em> Changing the whitespaces in strings might affect string comparisons and
 outputs.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PERRisky.html"><span class="doc">&#64;PER:risky</span></a> <a class="reference internal" href="ruleSets/PSR12Risky.html"><span class="doc">&#64;PSR12:risky</span></a> <a class="reference internal" href="ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a> <a class="reference internal" href="ruleSets/SymfonyRisky.html"><span class="doc">&#64;Symfony:risky</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER-CS1.0Risky.html"><span class="doc">&#64;PER-CS1.0:risky</span></a> <a class="reference internal" href="ruleSets/PERRisky.html"><span class="doc">&#64;PER:risky</span></a> <a class="reference internal" href="ruleSets/PSR12Risky.html"><span class="doc">&#64;PSR12:risky</span></a> <a class="reference internal" href="ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a> <a class="reference internal" href="ruleSets/SymfonyRisky.html"><span class="doc">&#64;Symfony:risky</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/StringNotation/NoTrailingWhitespaceInStringFixer.php">Source PhpCsFixer\Fixer\StringNotation\NoTrailingWhitespaceInStringFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/control_structure/no_unneeded_control_parentheses.html"><span class="doc">no_unneeded_control_parentheses</span></a></p>
@@ -1782,7 +1821,7 @@ outputs.</p>
 <p><em>warning risky</em> Modifies the signature of functions; therefore risky when using systems (such
 as some Symfony components) that rely on those (for example through
 reflection).</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PERRisky.html"><span class="doc">&#64;PER:risky</span></a> <a class="reference internal" href="ruleSets/PHP80MigrationRisky.html"><span class="doc">&#64;PHP80Migration:risky</span></a> <a class="reference internal" href="ruleSets/PSR12Risky.html"><span class="doc">&#64;PSR12:risky</span></a> <a class="reference internal" href="ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER-CS1.0Risky.html"><span class="doc">&#64;PER-CS1.0:risky</span></a> <a class="reference internal" href="ruleSets/PERRisky.html"><span class="doc">&#64;PER:risky</span></a> <a class="reference internal" href="ruleSets/PHP80MigrationRisky.html"><span class="doc">&#64;PHP80Migration:risky</span></a> <a class="reference internal" href="ruleSets/PSR12Risky.html"><span class="doc">&#64;PSR12:risky</span></a> <a class="reference internal" href="ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/FunctionNotation/NoUnreachableDefaultArgumentValueFixer.php">Source PhpCsFixer\Fixer\FunctionNotation\NoUnreachableDefaultArgumentValueFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/cast_notation/no_unset_cast.html"><span class="doc">no_unset_cast</span></a></p>
@@ -1858,7 +1897,7 @@ assignments to properties whose type declaration does not allow it.</p>
 </li>
 <li><p><a class="reference internal" href="rules/whitespace/no_whitespace_in_blank_line.html"><span class="doc">no_whitespace_in_blank_line</span></a></p>
 <p>Remove trailing whitespace at the end of blank lines.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/NoWhitespaceInBlankLineFixer.php">Source PhpCsFixer\Fixer\Whitespace\NoWhitespaceInBlankLineFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/nullable_type_declaration_for_default_null_value.html"><span class="doc">nullable_type_declaration_for_default_null_value</span></a></p>
@@ -1901,7 +1940,7 @@ assignments to properties whose type declaration does not allow it.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">position</span></code></div>
 <div class="line">Whether to place operators at the beginning or at the end of the line.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'beginning'</span></code>, <code class="docutils literal notranslate"><span class="pre">'end'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'beginning'</span></code> and <code class="docutils literal notranslate"><span class="pre">'end'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'beginning'</span></code></div>
 </div>
 </li>
@@ -1911,24 +1950,51 @@ assignments to properties whose type declaration does not allow it.</p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/ordered_class_elements.html"><span class="doc">ordered_class_elements</span></a></p>
 <p>Orders the elements of classes/interfaces/traits/enums.</p>
+<p>Accepts a subset of pre-defined element types, special element groups, and
+custom patterns.</p>
+<p>Element types: <code class="docutils literal notranslate"><span class="pre">['use_trait',</span> <span class="pre">'public',</span> <span class="pre">'protected',</span> <span class="pre">'private',</span> <span class="pre">'case',</span>
+<span class="pre">'constant',</span> <span class="pre">'constant_public',</span> <span class="pre">'constant_protected',</span> <span class="pre">'constant_private',</span>
+<span class="pre">'property',</span> <span class="pre">'property_static',</span> <span class="pre">'property_public',</span> <span class="pre">'property_protected',</span>
+<span class="pre">'property_private',</span> <span class="pre">'property_public_readonly',</span>
+<span class="pre">'property_protected_readonly',</span> <span class="pre">'property_private_readonly',</span>
+<span class="pre">'property_public_static',</span> <span class="pre">'property_protected_static',</span>
+<span class="pre">'property_private_static',</span> <span class="pre">'method',</span> <span class="pre">'method_abstract',</span> <span class="pre">'method_static',</span>
+<span class="pre">'method_public',</span> <span class="pre">'method_protected',</span> <span class="pre">'method_private',</span>
+<span class="pre">'method_public_abstract',</span> <span class="pre">'method_protected_abstract',</span>
+<span class="pre">'method_private_abstract',</span> <span class="pre">'method_public_abstract_static',</span>
+<span class="pre">'method_protected_abstract_static',</span> <span class="pre">'method_private_abstract_static',</span>
+<span class="pre">'method_public_static',</span> <span class="pre">'method_protected_static',</span> <span class="pre">'method_private_static']</span></code></p>
+<p>Special element types: <code class="docutils literal notranslate"><span class="pre">['construct',</span> <span class="pre">'destruct',</span> <span class="pre">'magic',</span> <span class="pre">'phpunit']</span></code></p>
+<p>Custom values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">method:*</span></code>: specify a single method name (e.g. <code class="docutils literal notranslate"><span class="pre">method:__invoke</span></code>) to</p></li>
+</ul>
+<p>set the order of that specific method</p>
 <p>Configuration options:</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">order</span></code></div>
 <div class="line">List of strings defining order of elements.</div>
-<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['case',</span> <span class="pre">'constant',</span> <span class="pre">'constant_private',</span> <span class="pre">'constant_protected',</span> <span class="pre">'constant_public',</span> <span class="pre">'construct',</span> <span class="pre">'destruct',</span> <span class="pre">'magic',</span> <span class="pre">'method',</span> <span class="pre">'method_abstract',</span> <span class="pre">'method_private',</span> <span class="pre">'method_private_abstract',</span> <span class="pre">'method_private_abstract_static',</span> <span class="pre">'method_private_static',</span> <span class="pre">'method_protected',</span> <span class="pre">'method_protected_abstract',</span> <span class="pre">'method_protected_abstract_static',</span> <span class="pre">'method_protected_static',</span> <span class="pre">'method_public',</span> <span class="pre">'method_public_abstract',</span> <span class="pre">'method_public_abstract_static',</span> <span class="pre">'method_public_static',</span> <span class="pre">'method_static',</span> <span class="pre">'phpunit',</span> <span class="pre">'private',</span> <span class="pre">'property',</span> <span class="pre">'property_private',</span> <span class="pre">'property_private_readonly',</span> <span class="pre">'property_private_static',</span> <span class="pre">'property_protected',</span> <span class="pre">'property_protected_readonly',</span> <span class="pre">'property_protected_static',</span> <span class="pre">'property_public',</span> <span class="pre">'property_public_readonly',</span> <span class="pre">'property_public_static',</span> <span class="pre">'property_static',</span> <span class="pre">'protected',</span> <span class="pre">'public',</span> <span class="pre">'use_trait']</span></code></div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['use_trait',</span> <span class="pre">'case',</span> <span class="pre">'constant_public',</span> <span class="pre">'constant_protected',</span> <span class="pre">'constant_private',</span> <span class="pre">'property_public',</span> <span class="pre">'property_protected',</span> <span class="pre">'property_private',</span> <span class="pre">'construct',</span> <span class="pre">'destruct',</span> <span class="pre">'magic',</span> <span class="pre">'phpunit',</span> <span class="pre">'method_public',</span> <span class="pre">'method_protected',</span> <span class="pre">'method_private']</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code></div>
 <div class="line">How multiple occurrences of same type statements should be sorted.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code>, <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code> and <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 </div>
 </li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">case_sensitive</span></code></div>
+<div class="line">Whether the sorting should be case sensitive.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
+</div>
+</li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ClassNotation/OrderedClassElementsFixer.php">Source PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/import/ordered_imports.html"><span class="doc">ordered_imports</span></a></p>
@@ -1938,19 +2004,19 @@ assignments to properties whose type declaration does not allow it.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code></div>
 <div class="line">Whether the statements should be sorted alphabetically or by length, or not sorted.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code>, <code class="docutils literal notranslate"><span class="pre">'length'</span></code>, <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code>, <code class="docutils literal notranslate"><span class="pre">'length'</span></code> and <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">imports_order</span></code></div>
 <div class="line">Defines the order of import types.</div>
-<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Import/OrderedImportsFixer.php">Source PhpCsFixer\Fixer\Import\OrderedImportsFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/ordered_interfaces.html"><span class="doc">ordered_interfaces</span></a></p>
@@ -1960,14 +2026,14 @@ assignments to properties whose type declaration does not allow it.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">order</span></code></div>
 <div class="line">How the interfaces should be ordered.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code>, <code class="docutils literal notranslate"><span class="pre">'length'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code> and <code class="docutils literal notranslate"><span class="pre">'length'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">direction</span></code></div>
 <div class="line">Which direction the interfaces should be ordered.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'ascend'</span></code>, <code class="docutils literal notranslate"><span class="pre">'descend'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'ascend'</span></code> and <code class="docutils literal notranslate"><span class="pre">'descend'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'ascend'</span></code></div>
 </div>
 </li>
@@ -1987,14 +2053,14 @@ assignments to properties whose type declaration does not allow it.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code></div>
 <div class="line">Whether the types should be sorted alphabetically, or not sorted.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code>, <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code> and <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">null_adjustment</span></code></div>
 <div class="line">Forces the position of <cite>null</cite> (overrides <cite>sort_algorithm</cite>).</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'always_first'</span></code>, <code class="docutils literal notranslate"><span class="pre">'always_last'</span></code>, <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'always_first'</span></code>, <code class="docutils literal notranslate"><span class="pre">'always_last'</span></code> and <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'always_first'</span></code></div>
 </div>
 </li>
@@ -2030,7 +2096,7 @@ assignments to properties whose type declaration does not allow it.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">align</span></code></div>
 <div class="line">How comments should be aligned.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'left'</span></code>, <code class="docutils literal notranslate"><span class="pre">'vertical'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'left'</span></code> and <code class="docutils literal notranslate"><span class="pre">'vertical'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'vertical'</span></code></div>
 </div>
 </li>
@@ -2070,21 +2136,21 @@ assignments to properties whose type declaration does not allow it.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">const</span></code></div>
 <div class="line">Whether const blocks should be single or multi line.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">property</span></code></div>
 <div class="line">Whether property doc blocks should be single or multi line.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">method</span></code></div>
 <div class="line">Whether method doc blocks should be single or multi line.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code></div>
 </div>
 </li>
@@ -2355,14 +2421,14 @@ properly documented.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code></div>
 <div class="line">The sorting algorithm to apply.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code>, <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code> and <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">null_adjustment</span></code></div>
 <div class="line">Forces the position of <cite>null</cite> (overrides <cite>sort_algorithm</cite>).</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'always_first'</span></code>, <code class="docutils literal notranslate"><span class="pre">'always_last'</span></code>, <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'always_first'</span></code>, <code class="docutils literal notranslate"><span class="pre">'always_last'</span></code> and <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'always_first'</span></code></div>
 </div>
 </li>
@@ -2420,7 +2486,7 @@ properly documented.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">target</span></code></div>
 <div class="line">Target version of PHPUnit.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'3.0'</span></code>, <code class="docutils literal notranslate"><span class="pre">'3.5'</span></code>, <code class="docutils literal notranslate"><span class="pre">'5.0'</span></code>, <code class="docutils literal notranslate"><span class="pre">'5.6'</span></code>, <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'3.0'</span></code>, <code class="docutils literal notranslate"><span class="pre">'3.5'</span></code>, <code class="docutils literal notranslate"><span class="pre">'5.0'</span></code>, <code class="docutils literal notranslate"><span class="pre">'5.6'</span></code> and <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
 </div>
 </li>
@@ -2437,7 +2503,7 @@ incompatibilities.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">target</span></code></div>
 <div class="line">Target version of PHPUnit.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'7.5'</span></code>, <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'7.5'</span></code> and <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
 </div>
 </li>
@@ -2454,7 +2520,7 @@ has PHPUnit incompatibilities.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">target</span></code></div>
 <div class="line">Target version of PHPUnit.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'5.2'</span></code>, <code class="docutils literal notranslate"><span class="pre">'5.6'</span></code>, <code class="docutils literal notranslate"><span class="pre">'8.4'</span></code>, <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'5.2'</span></code>, <code class="docutils literal notranslate"><span class="pre">'5.6'</span></code>, <code class="docutils literal notranslate"><span class="pre">'8.4'</span></code> and <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
 </div>
 </li>
@@ -2489,7 +2555,7 @@ has PHPUnit incompatibilities.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">case</span></code></div>
 <div class="line">Apply camel or snake case to test methods.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'camel_case'</span></code>, <code class="docutils literal notranslate"><span class="pre">'snake_case'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'camel_case'</span></code> and <code class="docutils literal notranslate"><span class="pre">'snake_case'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'camel_case'</span></code></div>
 </div>
 </li>
@@ -2506,7 +2572,7 @@ has PHPUnit incompatibilities.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">target</span></code></div>
 <div class="line">Target version of PHPUnit.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'5.4'</span></code>, <code class="docutils literal notranslate"><span class="pre">'5.5'</span></code>, <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'5.4'</span></code>, <code class="docutils literal notranslate"><span class="pre">'5.5'</span></code> and <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
 </div>
 </li>
@@ -2538,7 +2604,7 @@ has PHPUnit incompatibilities.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">target</span></code></div>
 <div class="line">Target version of PHPUnit.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'4.8'</span></code>, <code class="docutils literal notranslate"><span class="pre">'5.7'</span></code>, <code class="docutils literal notranslate"><span class="pre">'6.0'</span></code>, <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'4.8'</span></code>, <code class="docutils literal notranslate"><span class="pre">'5.7'</span></code>, <code class="docutils literal notranslate"><span class="pre">'6.0'</span></code> and <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
 </div>
 </li>
@@ -2555,7 +2621,7 @@ has PHPUnit incompatibilities.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">target</span></code></div>
 <div class="line">Target version of PHPUnit.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'3.2'</span></code>, <code class="docutils literal notranslate"><span class="pre">'4.3'</span></code>, <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'3.2'</span></code>, <code class="docutils literal notranslate"><span class="pre">'4.3'</span></code> and <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'newest'</span></code></div>
 </div>
 </li>
@@ -2586,7 +2652,7 @@ that are taking long to be executed.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">group</span></code></div>
 <div class="line">Define a specific group to be used in case no group is already in use.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'large'</span></code>, <code class="docutils literal notranslate"><span class="pre">'medium'</span></code>, <code class="docutils literal notranslate"><span class="pre">'small'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'large'</span></code>, <code class="docutils literal notranslate"><span class="pre">'medium'</span></code> and <code class="docutils literal notranslate"><span class="pre">'small'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'small'</span></code></div>
 </div>
 </li>
@@ -2619,7 +2685,7 @@ with abstract classes or interfaces.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">style</span></code></div>
 <div class="line">Whether to use the &#64;test annotation or not.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'annotation'</span></code>, <code class="docutils literal notranslate"><span class="pre">'prefix'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'annotation'</span></code> and <code class="docutils literal notranslate"><span class="pre">'prefix'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'prefix'</span></code></div>
 </div>
 </li>
@@ -2636,7 +2702,7 @@ has PHPUnit incompatibilities.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">call_type</span></code></div>
 <div class="line">The call type to use for referring to PHPUnit methods.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'self'</span></code>, <code class="docutils literal notranslate"><span class="pre">'static'</span></code>, <code class="docutils literal notranslate"><span class="pre">'this'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'self'</span></code>, <code class="docutils literal notranslate"><span class="pre">'static'</span></code> and <code class="docutils literal notranslate"><span class="pre">'this'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'static'</span></code></div>
 </div>
 </li>
@@ -2676,7 +2742,7 @@ on the old name.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">dir</span></code></div>
 <div class="line">If provided, the directory where the project code is placed.</div>
-<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code>, <code class="docutils literal notranslate"><span class="pre">string</span></code></div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">string</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 </div>
 </li>
@@ -2722,12 +2788,12 @@ overridden or when are used in constructions that should be avoided, like
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">space_before</span></code></div>
 <div class="line">Spacing to apply before colon.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'one'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code> and <code class="docutils literal notranslate"><span class="pre">'one'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/FunctionNotation/ReturnTypeDeclarationFixer.php">Source PhpCsFixer\Fixer\FunctionNotation\ReturnTypeDeclarationFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/self_accessor.html"><span class="doc">self_accessor</span></a></p>
@@ -2738,7 +2804,7 @@ binding.</p>
 <p><a class="reference external" href="./../src/Fixer/ClassNotation/SelfAccessorFixer.php">Source PhpCsFixer\Fixer\ClassNotation\SelfAccessorFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/self_static_accessor.html"><span class="doc">self_static_accessor</span></a></p>
-<p>Inside a <code class="docutils literal notranslate"><span class="pre">final</span></code> class or anonymous class <code class="docutils literal notranslate"><span class="pre">self</span></code> should be preferred to <code class="docutils literal notranslate"><span class="pre">static</span></code>.</p>
+<p>Inside an enum or <code class="docutils literal notranslate"><span class="pre">final</span></code>/anonymous class, <code class="docutils literal notranslate"><span class="pre">self</span></code> should be preferred over <code class="docutils literal notranslate"><span class="pre">static</span></code>.</p>
 <p>Part of rule set <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ClassNotation/SelfStaticAccessorFixer.php">Source PhpCsFixer\Fixer\ClassNotation\SelfStaticAccessorFixer</a></p>
 </li>
@@ -2756,7 +2822,7 @@ binding.</p>
 </li>
 <li><p><a class="reference internal" href="rules/cast_notation/short_scalar_cast.html"><span class="doc">short_scalar_cast</span></a></p>
 <p>Cast <code class="docutils literal notranslate"><span class="pre">(boolean)</span></code> and <code class="docutils literal notranslate"><span class="pre">(integer)</span></code> should be written as <code class="docutils literal notranslate"><span class="pre">(bool)</span></code> and <code class="docutils literal notranslate"><span class="pre">(int)</span></code>, <code class="docutils literal notranslate"><span class="pre">(double)</span></code> and <code class="docutils literal notranslate"><span class="pre">(real)</span></code> as <code class="docutils literal notranslate"><span class="pre">(float)</span></code>, <code class="docutils literal notranslate"><span class="pre">(binary)</span></code> as <code class="docutils literal notranslate"><span class="pre">(string)</span></code>.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PHP74Migration.html"><span class="doc">&#64;PHP74Migration</span></a> <a class="reference internal" href="ruleSets/PHP80Migration.html"><span class="doc">&#64;PHP80Migration</span></a> <a class="reference internal" href="ruleSets/PHP81Migration.html"><span class="doc">&#64;PHP81Migration</span></a> <a class="reference internal" href="ruleSets/PHP82Migration.html"><span class="doc">&#64;PHP82Migration</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PHP74Migration.html"><span class="doc">&#64;PHP74Migration</span></a> <a class="reference internal" href="ruleSets/PHP80Migration.html"><span class="doc">&#64;PHP80Migration</span></a> <a class="reference internal" href="ruleSets/PHP81Migration.html"><span class="doc">&#64;PHP81Migration</span></a> <a class="reference internal" href="ruleSets/PHP82Migration.html"><span class="doc">&#64;PHP82Migration</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/CastNotation/ShortScalarCastFixer.php">Source PhpCsFixer\Fixer\CastNotation\ShortScalarCastFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/string_notation/simple_to_complex_string_variable.html"><span class="doc">simple_to_complex_string_variable</span></a></p>
@@ -2776,12 +2842,12 @@ binding.</p>
 </li>
 <li><p><a class="reference internal" href="rules/whitespace/single_blank_line_at_eof.html"><span class="doc">single_blank_line_at_eof</span></a></p>
 <p>A PHP file without end tag must always end with a single empty line feed.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/SingleBlankLineAtEofFixer.php">Source PhpCsFixer\Fixer\Whitespace\SingleBlankLineAtEofFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/namespace_notation/single_blank_line_before_namespace.html"><span class="doc">single_blank_line_before_namespace</span></a></p>
 <p>There should be exactly one blank line before a namespace declaration.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p><em>warning deprecated</em>   Use <code class="docutils literal notranslate"><span class="pre">blank_lines_before_namespace</span></code> instead.</p>
 <p><a class="reference external" href="./../src/Fixer/NamespaceNotation/SingleBlankLineBeforeNamespaceFixer.php">Source PhpCsFixer\Fixer\NamespaceNotation\SingleBlankLineBeforeNamespaceFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/single_class_element_per_statement.html"><span class="doc">single_class_element_per_statement</span></a></p>
@@ -2796,7 +2862,7 @@ binding.</p>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ClassNotation/SingleClassElementPerStatementFixer.php">Source PhpCsFixer\Fixer\ClassNotation\SingleClassElementPerStatementFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/import/single_import_per_statement.html"><span class="doc">single_import_per_statement</span></a></p>
@@ -2811,12 +2877,12 @@ binding.</p>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Import/SingleImportPerStatementFixer.php">Source PhpCsFixer\Fixer\Import\SingleImportPerStatementFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/import/single_line_after_imports.html"><span class="doc">single_line_after_imports</span></a></p>
 <p>Each namespace use MUST go on its own line and there MUST be one blank line after the use statements block.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Import/SingleLineAfterImportsFixer.php">Source PhpCsFixer\Fixer\Import\SingleLineAfterImportsFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/comment/single_line_comment_spacing.html"><span class="doc">single_line_comment_spacing</span></a></p>
@@ -2892,8 +2958,8 @@ binding.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">constructs_preceded_by_a_single_space</span></code></div>
 <div class="line">List of constructs which must be preceded by a single space.</div>
-<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['use_lambda']</span></code></div>
-<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['use_lambda']</span></code></div>
+<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['as',</span> <span class="pre">'use_lambda']</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['as',</span> <span class="pre">'use_lambda']</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
@@ -2909,7 +2975,7 @@ binding.</p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/single_trait_insert_per_statement.html"><span class="doc">single_trait_insert_per_statement</span></a></p>
 <p>Each trait <code class="docutils literal notranslate"><span class="pre">use</span></code> must be done as single statement.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ClassNotation/SingleTraitInsertPerStatementFixer.php">Source PhpCsFixer\Fixer\ClassNotation\SingleTraitInsertPerStatementFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/semicolon/space_after_semicolon.html"><span class="doc">space_after_semicolon</span></a></p>
@@ -2939,7 +3005,7 @@ binding.</p>
 </li>
 <li><p><a class="reference internal" href="rules/whitespace/statement_indentation.html"><span class="doc">statement_indentation</span></a></p>
 <p>Each statement must be indented.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/StatementIndentationFixer.php">Source PhpCsFixer\Fixer\Whitespace\StatementIndentationFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/static_lambda.html"><span class="doc">static_lambda</span></a></p>
@@ -2978,12 +3044,12 @@ comparisons and outputs.</p>
 </li>
 <li><p><a class="reference internal" href="rules/control_structure/switch_case_semicolon_to_colon.html"><span class="doc">switch_case_semicolon_to_colon</span></a></p>
 <p>A case should be followed by a colon and not a semicolon.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ControlStructure/SwitchCaseSemicolonToColonFixer.php">Source PhpCsFixer\Fixer\ControlStructure\SwitchCaseSemicolonToColonFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/control_structure/switch_case_space.html"><span class="doc">switch_case_space</span></a></p>
 <p>Removes extra spaces between colon and case value.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ControlStructure/SwitchCaseSpaceFixer.php">Source PhpCsFixer\Fixer\ControlStructure\SwitchCaseSpaceFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/control_structure/switch_continue_to_break.html"><span class="doc">switch_continue_to_break</span></a></p>
@@ -2993,7 +3059,7 @@ comparisons and outputs.</p>
 </li>
 <li><p><a class="reference internal" href="rules/operator/ternary_operator_spaces.html"><span class="doc">ternary_operator_spaces</span></a></p>
 <p>Standardize spaces around ternary operator.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Operator/TernaryOperatorSpacesFixer.php">Source PhpCsFixer\Fixer\Operator\TernaryOperatorSpacesFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/operator/ternary_to_elvis_operator.html"><span class="doc">ternary_to_elvis_operator</span></a></p>
@@ -3041,14 +3107,14 @@ comparisons and outputs.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">space</span></code></div>
 <div class="line">Spacing to apply around union type and intersection type operators.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code> and <code class="docutils literal notranslate"><span class="pre">'single'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">space_multiple_catch</span></code></div>
 <div class="line">Spacing to apply around type operator when catching exceptions of multiple types, use <cite>null</cite> to follow the value configured for <cite>space</cite>.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 </div>
 </li>
@@ -3080,7 +3146,7 @@ comparisons and outputs.</p>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PHP71Migration.html"><span class="doc">&#64;PHP71Migration</span></a> <a class="reference internal" href="ruleSets/PHP73Migration.html"><span class="doc">&#64;PHP73Migration</span></a> <a class="reference internal" href="ruleSets/PHP74Migration.html"><span class="doc">&#64;PHP74Migration</span></a> <a class="reference internal" href="ruleSets/PHP80Migration.html"><span class="doc">&#64;PHP80Migration</span></a> <a class="reference internal" href="ruleSets/PHP81Migration.html"><span class="doc">&#64;PHP81Migration</span></a> <a class="reference internal" href="ruleSets/PHP82Migration.html"><span class="doc">&#64;PHP82Migration</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PHP71Migration.html"><span class="doc">&#64;PHP71Migration</span></a> <a class="reference internal" href="ruleSets/PHP73Migration.html"><span class="doc">&#64;PHP73Migration</span></a> <a class="reference internal" href="ruleSets/PHP74Migration.html"><span class="doc">&#64;PHP74Migration</span></a> <a class="reference internal" href="ruleSets/PHP80Migration.html"><span class="doc">&#64;PHP80Migration</span></a> <a class="reference internal" href="ruleSets/PHP81Migration.html"><span class="doc">&#64;PHP81Migration</span></a> <a class="reference internal" href="ruleSets/PHP82Migration.html"><span class="doc">&#64;PHP82Migration</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ClassNotation/VisibilityRequiredFixer.php">Source PhpCsFixer\Fixer\ClassNotation\VisibilityRequiredFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/void_return.html"><span class="doc">void_return</span></a></p>
@@ -3111,21 +3177,21 @@ comparisons and outputs.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">equal</span></code></div>
 <div class="line">Style for equal (<cite>==</cite>, <cite>!=</cite>) statements.</div>
-<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">identical</span></code></div>
 <div class="line">Style for identical (<cite>===</cite>, <cite>!==</cite>) statements.</div>
-<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">less_and_greater</span></code></div>
 <div class="line">Style for less and greater than (<cite>&lt;</cite>, <cite>&lt;=</cite>, <cite>&gt;</cite>, <cite>&gt;=</cite>) statements.</div>
-<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 </div>
 </li>

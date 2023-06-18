@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Brazilian Kangaroo (v3.17.0)</strong> edition
+                <strong>Triangle (v3.18.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -65,19 +65,47 @@
   <div class="section" id="rule-ordered-class-elements">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">ordered_class_elements</span></code><a class="headerlink" href="#rule-ordered-class-elements" title="Permalink to this headline">¶</a></h1>
 <p>Orders the elements of classes/interfaces/traits/enums.</p>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Accepts a subset of pre-defined element types, special element groups, and
+custom patterns.</p>
+<p>Element types: <code class="docutils literal notranslate"><span class="pre">['use_trait',</span> <span class="pre">'public',</span> <span class="pre">'protected',</span> <span class="pre">'private',</span> <span class="pre">'case',</span>
+<span class="pre">'constant',</span> <span class="pre">'constant_public',</span> <span class="pre">'constant_protected',</span> <span class="pre">'constant_private',</span>
+<span class="pre">'property',</span> <span class="pre">'property_static',</span> <span class="pre">'property_public',</span> <span class="pre">'property_protected',</span>
+<span class="pre">'property_private',</span> <span class="pre">'property_public_readonly',</span> <span class="pre">'property_protected_readonly',</span>
+<span class="pre">'property_private_readonly',</span> <span class="pre">'property_public_static',</span>
+<span class="pre">'property_protected_static',</span> <span class="pre">'property_private_static',</span> <span class="pre">'method',</span>
+<span class="pre">'method_abstract',</span> <span class="pre">'method_static',</span> <span class="pre">'method_public',</span> <span class="pre">'method_protected',</span>
+<span class="pre">'method_private',</span> <span class="pre">'method_public_abstract',</span> <span class="pre">'method_protected_abstract',</span>
+<span class="pre">'method_private_abstract',</span> <span class="pre">'method_public_abstract_static',</span>
+<span class="pre">'method_protected_abstract_static',</span> <span class="pre">'method_private_abstract_static',</span>
+<span class="pre">'method_public_static',</span> <span class="pre">'method_protected_static',</span> <span class="pre">'method_private_static']</span></code></p>
+<p>Special element types: <code class="docutils literal notranslate"><span class="pre">['construct',</span> <span class="pre">'destruct',</span> <span class="pre">'magic',</span> <span class="pre">'phpunit']</span></code></p>
+<p>Custom values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">method:*</span></code>: specify a single method name (e.g. <code class="docutils literal notranslate"><span class="pre">method:__invoke</span></code>) to set</p></li>
+</ul>
+<p>the order of that specific method</p>
+</div>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="order">
 <h3><code class="docutils literal notranslate"><span class="pre">order</span></code><a class="headerlink" href="#order" title="Permalink to this headline">¶</a></h3>
 <p>List of strings defining order of elements.</p>
-<p>Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['case',</span> <span class="pre">'constant',</span> <span class="pre">'constant_private',</span> <span class="pre">'constant_protected',</span> <span class="pre">'constant_public',</span> <span class="pre">'construct',</span> <span class="pre">'destruct',</span> <span class="pre">'magic',</span> <span class="pre">'method',</span> <span class="pre">'method_abstract',</span> <span class="pre">'method_private',</span> <span class="pre">'method_private_abstract',</span> <span class="pre">'method_private_abstract_static',</span> <span class="pre">'method_private_static',</span> <span class="pre">'method_protected',</span> <span class="pre">'method_protected_abstract',</span> <span class="pre">'method_protected_abstract_static',</span> <span class="pre">'method_protected_static',</span> <span class="pre">'method_public',</span> <span class="pre">'method_public_abstract',</span> <span class="pre">'method_public_abstract_static',</span> <span class="pre">'method_public_static',</span> <span class="pre">'method_static',</span> <span class="pre">'phpunit',</span> <span class="pre">'private',</span> <span class="pre">'property',</span> <span class="pre">'property_private',</span> <span class="pre">'property_private_readonly',</span> <span class="pre">'property_private_static',</span> <span class="pre">'property_protected',</span> <span class="pre">'property_protected_readonly',</span> <span class="pre">'property_protected_static',</span> <span class="pre">'property_public',</span> <span class="pre">'property_public_readonly',</span> <span class="pre">'property_public_static',</span> <span class="pre">'property_static',</span> <span class="pre">'protected',</span> <span class="pre">'public',</span> <span class="pre">'use_trait']</span></code></p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['use_trait',</span> <span class="pre">'case',</span> <span class="pre">'constant_public',</span> <span class="pre">'constant_protected',</span> <span class="pre">'constant_private',</span> <span class="pre">'property_public',</span> <span class="pre">'property_protected',</span> <span class="pre">'property_private',</span> <span class="pre">'construct',</span> <span class="pre">'destruct',</span> <span class="pre">'magic',</span> <span class="pre">'phpunit',</span> <span class="pre">'method_public',</span> <span class="pre">'method_protected',</span> <span class="pre">'method_private']</span></code></p>
 </div>
 <div class="section" id="sort-algorithm">
 <h3><code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code><a class="headerlink" href="#sort-algorithm" title="Permalink to this headline">¶</a></h3>
 <p>How multiple occurrences of same type statements should be sorted.</p>
-<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code>, <code class="docutils literal notranslate"><span class="pre">'none'</span></code></p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code> and <code class="docutils literal notranslate"><span class="pre">'none'</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'none'</span></code></p>
+</div>
+<div class="section" id="case-sensitive">
+<h3><code class="docutils literal notranslate"><span class="pre">case_sensitive</span></code><a class="headerlink" href="#case-sensitive" title="Permalink to this headline">¶</a></h3>
+<p>Whether the sorting should be case sensitive.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </div>
 </div>
 <div class="section" id="examples">
@@ -162,12 +190,33 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="example-4">
+<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['method_public'],</span> <span class="pre">'sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'alpha',</span> <span class="pre">'case_sensitive'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>class Example<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="gi">+    public function AA(){}</span><span class="w"></span>
+<span class="gi">+    public function AWs(){}</span><span class="w"></span>
+<span class="w"> </span>    public function Aa(){}<span class="w"></span>
+<span class="gd">-    public function AA(){}</span><span class="w"></span>
+<span class="w"> </span>    public function AwS(){}<span class="w"></span>
+<span class="gd">-    public function AWs(){}</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <dl>
 <dt>&#64;PER</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PER.html"><span class="doc">&#64;PER</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">ordered_class_elements</span></code> rule with the config below:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['use_trait']]</span></code></p>
+</dd>
+<dt>&#64;PER-CS1.0</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">ordered_class_elements</span></code> rule with the config below:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['use_trait']]</span></code></p>
 </dd>
 <dt>&#64;PSR12</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">ordered_class_elements</span></code> rule with the config below:</p>
