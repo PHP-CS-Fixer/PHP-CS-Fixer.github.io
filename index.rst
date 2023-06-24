@@ -56,10 +56,13 @@ If you need to apply code styles that are not supported by the tool, you can `cr
 Editor Integration
 ------------------
 
+Native support exists for:
+
+-  `PhpStorm <https://www.jetbrains.com/help/phpstorm/using-php-cs-fixer.html>`__
+
 Dedicated plugins exist for:
 
 -  `NetBeans <https://plugins.netbeans.apache.org/catalogue/?id=36>`__
--  `PhpStorm <https://www.jetbrains.com/help/phpstorm/using-php-cs-fixer.html>`__
 -  `Sublime Text <https://github.com/benmatselby/sublime-phpcs>`__
 -  `Vim <https://github.com/stephpy/vim-php-cs-fixer>`__
 -  `VS Code <https://github.com/junstyle/vscode-php-cs-fixer>`__
