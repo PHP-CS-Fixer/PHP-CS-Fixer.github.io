@@ -31,15 +31,24 @@ jobs:
           ref: master
           path: deploy_dir
           fetch-depth: 0
-      - name: deploy
+      - name: move files
         run: |
-          PHP_CS_FIXER_VERSION=$(cat download/version.json | jq .number -r)
           cd deploy_dir/
           git rm -r * -q
           cd ../
           mv dist/* deploy_dir/
           cd deploy_dir/
           git add .
+          cd ../
+      - name: diff files
+        run: |
+          cd deploy_dir/
+          git diff --staged
+          cd ../
+      - name: deploy
+        run: |
+          PHP_CS_FIXER_VERSION=$(cat download/version.json | jq .number -r)
+          cd deploy_dir/
           git config --local user.name github-actions
           git config --local user.email github-actions@github.com
           git commit -m "bump to v${PHP_CS_FIXER_VERSION}"
