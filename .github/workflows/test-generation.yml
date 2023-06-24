@@ -17,3 +17,23 @@ jobs:
           fetch-depth: 0
       - name: build
         run: make it
+      - name: Checkout pages
+        uses: actions/checkout@v3
+        with:
+          ref: master
+          path: deploy_dir
+          fetch-depth: 0
+      - name: move files
+        run: |
+          cd deploy_dir/
+          git rm -r * -q
+          cd ../
+          mv dist/* deploy_dir/
+          cd deploy_dir/
+          git add .
+          cd ../
+      - name: diff files
+        run: |
+          cd deploy_dir/
+          git diff --staged
+          cd ../
