@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  pull_request:
+    branches: generator ## TODO: drop me
+
+permissions:
+  contents: read
+
+jobs:
+  test-generation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: build
+        run: make it
