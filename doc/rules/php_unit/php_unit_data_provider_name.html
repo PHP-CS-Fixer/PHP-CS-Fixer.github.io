@@ -62,25 +62,29 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-php-unit-data-provider-static">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">php_unit_data_provider_static</span></code><a class="headerlink" href="#rule-php-unit-data-provider-static" title="Permalink to this headline">¶</a></h1>
-<p>Data providers must be static.</p>
+  <div class="section" id="rule-php-unit-data-provider-name">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">php_unit_data_provider_name</span></code><a class="headerlink" href="#rule-php-unit-data-provider-name" title="Permalink to this headline">¶</a></h1>
+<p>Data provider names must match the name of the test.</p>
 <div class="section" id="warning">
 <h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="using-this-rule-is-risky">
 <h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
-<p>Fixer could be risky if one is calling data provider function dynamically.</p>
+<p>Fixer could be risky if one is calling data provider by name as function.</p>
 </div>
 </div>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="force">
-<h3><code class="docutils literal notranslate"><span class="pre">force</span></code><a class="headerlink" href="#force" title="Permalink to this headline">¶</a></h3>
-<p>Whether to make the data providers static even if they have a dynamic class call
-(may introduce fatal error “using $this when not in object context”, and you may
-have to adjust the code manually by converting dynamic calls to static ones).</p>
-<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+<div class="section" id="prefix">
+<h3><code class="docutils literal notranslate"><span class="pre">prefix</span></code><a class="headerlink" href="#prefix" title="Permalink to this headline">¶</a></h3>
+<p>Prefix that replaces “test”.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">string</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'provide'</span></code></p>
+</div>
+<div class="section" id="suffix">
+<h3><code class="docutils literal notranslate"><span class="pre">suffix</span></code><a class="headerlink" href="#suffix" title="Permalink to this headline">¶</a></h3>
+<p>Suffix to be present at the end.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">string</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'Cases'</span></code></p>
 </div>
 </div>
 <div class="section" id="examples">
@@ -93,50 +97,65 @@ have to adjust the code manually by converting dynamic calls to static ones).</p
 <span class="w"> </span>&lt;?php<span class="w"></span>
 <span class="w"> </span>class FooTest extends TestCase {<span class="w"></span>
 <span class="w"> </span>    /**<span class="w"></span>
-<span class="w"> </span>     * @dataProvider provideSomethingCases<span class="w"></span>
+<span class="gd">-     * @dataProvider dataProvider</span><span class="w"></span>
+<span class="gi">+     * @dataProvider provideSomethingCases</span><span class="w"></span>
 <span class="w"> </span>     */<span class="w"></span>
 <span class="w"> </span>    public function testSomething($expected, $actual) {}<span class="w"></span>
-<span class="gd">-    public function provideSomethingCases() {}</span><span class="w"></span>
-<span class="gi">+    public static function provideSomethingCases() {}</span><span class="w"></span>
+<span class="gd">-    public function dataProvider() {}</span><span class="w"></span>
+<span class="gi">+    public function provideSomethingCases() {}</span><span class="w"></span>
 <span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
-<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['force'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['prefix'</span> <span class="pre">=&gt;</span> <span class="pre">'data_',</span> <span class="pre">'suffix'</span> <span class="pre">=&gt;</span> <span class="pre">'']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
 <span class="w"> </span>class FooTest extends TestCase {<span class="w"></span>
 <span class="w"> </span>    /**<span class="w"></span>
-<span class="w"> </span>     * @dataProvider provideSomethingCases1<span class="w"></span>
-<span class="w"> </span>     * @dataProvider provideSomethingCases2<span class="w"></span>
+<span class="gd">-     * @dataProvider dt_prvdr_ftr</span><span class="w"></span>
+<span class="gi">+     * @dataProvider data_feature</span><span class="w"></span>
 <span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function testSomething($expected, $actual) {}<span class="w"></span>
-<span class="gd">-    public function provideSomethingCases1() { $this-&gt;getData1(); }</span><span class="w"></span>
-<span class="gd">-    public function provideSomethingCases2() { self::getData2(); }</span><span class="w"></span>
-<span class="gi">+    public static function provideSomethingCases1() { $this-&gt;getData1(); }</span><span class="w"></span>
-<span class="gi">+    public static function provideSomethingCases2() { self::getData2(); }</span><span class="w"></span>
+<span class="w"> </span>    public function test_feature($expected, $actual) {}<span class="w"></span>
+<span class="gd">-    public function dt_prvdr_ftr() {}</span><span class="w"></span>
+<span class="gi">+    public function data_feature() {}</span><span class="w"></span>
 <span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
-<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['force'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['prefix'</span> <span class="pre">=&gt;</span> <span class="pre">'provides',</span> <span class="pre">'suffix'</span> <span class="pre">=&gt;</span> <span class="pre">'Data']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
 <span class="w"> </span>class FooTest extends TestCase {<span class="w"></span>
 <span class="w"> </span>    /**<span class="w"></span>
-<span class="w"> </span>     * @dataProvider provideSomething1Cases<span class="w"></span>
-<span class="w"> </span>     * @dataProvider provideSomething2Cases<span class="w"></span>
+<span class="w"> </span>     * @dataProvider dataProviderUsedInMultipleTests<span class="w"></span>
 <span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function testSomething($expected, $actual) {}<span class="w"></span>
-<span class="w"> </span>    public function provideSomething1Cases() { $this-&gt;getData1(); }<span class="w"></span>
-<span class="gd">-    public function provideSomething2Cases() { self::getData2(); }</span><span class="w"></span>
-<span class="gi">+    public static function provideSomething2Cases() { self::getData2(); }</span><span class="w"></span>
+<span class="w"> </span>    public function testA($expected, $actual) {}<span class="w"></span>
+<span class="w"> </span>    /**<span class="w"></span>
+<span class="w"> </span>     * @dataProvider dataProviderUsedInMultipleTests<span class="w"></span>
+<span class="w"> </span>     */<span class="w"></span>
+<span class="w"> </span>    public function testB($expected, $actual) {}<span class="w"></span>
+<span class="w"> </span>    /**<span class="w"></span>
+<span class="gd">-     * @dataProvider dataProviderUsedInSingleTest</span><span class="w"></span>
+<span class="gi">+     * @dataProvider providesCData</span><span class="w"></span>
+<span class="w"> </span>     */<span class="w"></span>
+<span class="w"> </span>    public function testC($expected, $actual) {}<span class="w"></span>
+<span class="w"> </span>    /**<span class="w"></span>
+<span class="w"> </span>     * @dataProvider dataProviderUsedAsFirstInTest<span class="w"></span>
+<span class="w"> </span>     * @dataProvider dataProviderUsedAsSecondInTest<span class="w"></span>
+<span class="w"> </span>     */<span class="w"></span>
+<span class="w"> </span>    public function testD($expected, $actual) {}<span class="w"></span>
+
+<span class="w"> </span>    public function dataProviderUsedInMultipleTests() {}<span class="w"></span>
+<span class="gd">-    public function dataProviderUsedInSingleTest() {}</span><span class="w"></span>
+<span class="gi">+    public function providesCData() {}</span><span class="w"></span>
+<span class="w"> </span>    public function dataProviderUsedAsFirstInTest() {}<span class="w"></span>
+<span class="w"> </span>    public function dataProviderUsedAsSecondInTest() {}<span class="w"></span>
 <span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
@@ -145,9 +164,8 @@ have to adjust the code manually by converting dynamic calls to static ones).</p
 <div class="section" id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule set:</p>
-<dl>
-<dt>&#64;PHPUnit100Migration:risky</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PHPUnit100MigrationRisky.html"><span class="doc">&#64;PHPUnit100Migration:risky</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">php_unit_data_provider_static</span></code> rule with the config below:</p>
-<p><code class="docutils literal notranslate"><span class="pre">['force'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
+<dl class="simple">
+<dt>&#64;PhpCsFixer:risky</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">php_unit_data_provider_name</span></code> rule with the default config.</p>
 </dd>
 </dl>
 </div>

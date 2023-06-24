@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Triangle (v3.18.0)</strong> edition
+                <strong>Triangle (v3.19.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -2461,6 +2461,29 @@ properly documented.</p>
 </ul>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a> <a class="reference internal" href="ruleSets/SymfonyRisky.html"><span class="doc">&#64;Symfony:risky</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/PhpUnit/PhpUnitConstructFixer.php">Source PhpCsFixer\Fixer\PhpUnit\PhpUnitConstructFixer</a></p>
+</li>
+<li><p><a class="reference internal" href="rules/php_unit/php_unit_data_provider_name.html"><span class="doc">php_unit_data_provider_name</span></a></p>
+<p>Data provider names must match the name of the test.</p>
+<p><em>warning risky</em> Fixer could be risky if one is calling data provider by name as function.</p>
+<p>Configuration options:</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">prefix</span></code></div>
+<div class="line">Prefix that replaces “test”.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">string</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'provide'</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">suffix</span></code></div>
+<div class="line">Suffix to be present at the end.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">string</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'Cases'</span></code></div>
+</div>
+</li>
+</ul>
+<p>Part of rule set <a class="reference internal" href="ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a></p>
+<p><a class="reference external" href="./../src/Fixer/PhpUnit/PhpUnitDataProviderNameFixer.php">Source PhpCsFixer\Fixer\PhpUnit\PhpUnitDataProviderNameFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/php_unit/php_unit_data_provider_static.html"><span class="doc">php_unit_data_provider_static</span></a></p>
 <p>Data providers must be static.</p>
