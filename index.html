@@ -64,16 +64,24 @@
             
   <div class="section" id="php-coding-standards-fixer">
 <h1>PHP Coding Standards Fixer<a class="headerlink" href="#php-coding-standards-fixer" title="Permalink to this headline">¶</a></h1>
-<p>The PHP Coding Standards Fixer (PHP CS Fixer) tool fixes your code to
-follow standards; whether you want to follow PHP coding standards as defined in the
-PSR-1, PSR-2, etc., or other community driven ones like the Symfony one.
+<p>The PHP Coding Standards Fixer (PHP CS Fixer) tool fixes your code to follow standards;
+whether you want to follow PHP coding standards as defined in the PSR-1, PSR-2, etc.,
+or other community driven ones like the Symfony one.
 You can <strong>also</strong> define your (team’s) style through configuration.</p>
-<p>It can modernize your code (like converting the <code class="docutils literal notranslate"><span class="pre">pow</span></code> function to
-the <code class="docutils literal notranslate"><span class="pre">**</span></code> operator on PHP 5.6) and (micro) optimize it.</p>
-<p>If you are already using a linter to identify coding standards
-problems in your code, you know that fixing them by hand is tedious, especially on
-large projects. This tool does not only detect them, but also fixes them for
-you.</p>
+<p>It can modernize your code (like converting the <code class="docutils literal notranslate"><span class="pre">pow</span></code> function to the <code class="docutils literal notranslate"><span class="pre">**</span></code> operator on PHP 5.6)
+and (micro) optimize it.</p>
+<p>If you are already using a linter to identify coding standards problems in your
+code, you know that fixing them by hand is tedious, especially on large
+projects. This tool does not only detect them, but also fixes them for you.</p>
+<div class="section" id="supported-php-versions">
+<h2>Supported PHP Versions<a class="headerlink" href="#supported-php-versions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>PHP 7.4</p></li>
+<li><p>PHP 8.0 (except PHP 8.0.0 due to [bug in PHP tokenizer](<a class="reference external" href="https://bugs.php.net/bug.php?id=80462">https://bugs.php.net/bug.php?id=80462</a>))</p></li>
+<li><p>PHP 8.1</p></li>
+<li><p>PHP 8.2</p></li>
+</ul>
+</div>
 <div class="section" id="documentation">
 <h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="installation">
@@ -103,7 +111,6 @@ details.</p>
 <h2>Editor Integration<a class="headerlink" href="#editor-integration" title="Permalink to this headline">¶</a></h2>
 <p>Dedicated plugins exist for:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/Glavin001/atom-beautify">Atom</a></p></li>
 <li><p><a class="reference external" href="https://plugins.netbeans.apache.org/catalogue/?id=36">NetBeans</a></p></li>
 <li><p><a class="reference external" href="https://www.jetbrains.com/help/phpstorm/using-php-cs-fixer.html">PhpStorm</a></p></li>
 <li><p><a class="reference external" href="https://github.com/benmatselby/sublime-phpcs">Sublime Text</a></p></li>
