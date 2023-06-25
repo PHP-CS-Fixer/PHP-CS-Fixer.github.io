@@ -20,8 +20,9 @@ phar-analyse:
 .PHONY: phar-commit
 .SILENT:
 phar-commit:
-	git add download
-	git commit -m "update phar"
+	git add download/
+	PHP_CS_FIXER_VERSION=$(shell cat download/version.json | jq .number) && \
+	git commit -m "update phar to v$${PHP_CS_FIXER_VERSION}"
 	git push
 
 .PHONY: build-theme-files
