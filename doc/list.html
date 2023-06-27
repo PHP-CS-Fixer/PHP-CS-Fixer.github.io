@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Triangle (v3.19.2)</strong> edition
+                <strong>Triangle (v3.20.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -1901,13 +1901,13 @@ assignments to properties whose type declaration does not allow it.</p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/NoWhitespaceInBlankLineFixer.php">Source PhpCsFixer\Fixer\Whitespace\NoWhitespaceInBlankLineFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/nullable_type_declaration_for_default_null_value.html"><span class="doc">nullable_type_declaration_for_default_null_value</span></a></p>
-<p>Adds or removes <code class="docutils literal notranslate"><span class="pre">?</span></code> before type declarations for parameters with a default <code class="docutils literal notranslate"><span class="pre">null</span></code> value.</p>
+<p>Adds or removes <code class="docutils literal notranslate"><span class="pre">?</span></code> before single type declarations or <code class="docutils literal notranslate"><span class="pre">|null</span></code> at the end of union types when parameters have a default <code class="docutils literal notranslate"><span class="pre">null</span></code> value.</p>
 <p>Rule is applied only in a PHP 7.1+ environment.</p>
 <p>Configuration options:</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">use_nullable_type_declaration</span></code></div>
-<div class="line">Whether to add or remove <cite>?</cite> before type declarations for parameters with a default <cite>null</cite> value.</div>
+<div class="line">Whether to add or remove <cite>?</cite> or <cite>|null</cite> to parameters with a default <cite>null</cite> value.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
@@ -2929,7 +2929,7 @@ binding.</p>
 <p><a class="reference external" href="./../src/Fixer/Comment/SingleLineCommentStyleFixer.php">Source PhpCsFixer\Fixer\Comment\SingleLineCommentStyleFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/basic/single_line_empty_body.html"><span class="doc">single_line_empty_body</span></a></p>
-<p>Empty body of class or function must be abbreviated as <code class="docutils literal notranslate"><span class="pre">{}</span></code> and placed on the same line as the previous symbol, separated by a space.</p>
+<p>Empty body of class, interface, trait, enum or function must be abbreviated as <code class="docutils literal notranslate"><span class="pre">{}</span></code> and placed on the same line as the previous symbol, separated by a single space.</p>
 <p><a class="reference external" href="./../src/Fixer/Basic/SingleLineEmptyBodyFixer.php">Source PhpCsFixer\Fixer\Basic\SingleLineEmptyBodyFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/single_line_throw.html"><span class="doc">single_line_throw</span></a></p>

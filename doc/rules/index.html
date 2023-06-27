@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Triangle (v3.19.2)</strong> edition
+                <strong>Triangle (v3.20.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -156,7 +156,7 @@
 <p>Classes must be in a path that matches their namespace, be at least one namespace deep and the class name should match the file name.</p>
 </li>
 <li><p><a class="reference internal" href="basic/single_line_empty_body.html"><span class="doc">single_line_empty_body</span></a></p>
-<p>Empty body of class or function must be abbreviated as <code class="docutils literal notranslate"><span class="pre">{}</span></code> and placed on the same line as the previous symbol, separated by a space.</p>
+<p>Empty body of class, interface, trait, enum or function must be abbreviated as <code class="docutils literal notranslate"><span class="pre">{}</span></code> and placed on the same line as the previous symbol, separated by a single space.</p>
 </li>
 </ul>
 </div>
@@ -444,7 +444,7 @@
 <p>There must be no <code class="docutils literal notranslate"><span class="pre">sprintf</span></code> calls with only the first argument.</p>
 </li>
 <li><p><a class="reference internal" href="function_notation/nullable_type_declaration_for_default_null_value.html"><span class="doc">nullable_type_declaration_for_default_null_value</span></a></p>
-<p>Adds or removes <code class="docutils literal notranslate"><span class="pre">?</span></code> before type declarations for parameters with a default <code class="docutils literal notranslate"><span class="pre">null</span></code> value.</p>
+<p>Adds or removes <code class="docutils literal notranslate"><span class="pre">?</span></code> before single type declarations or <code class="docutils literal notranslate"><span class="pre">|null</span></code> at the end of union types when parameters have a default <code class="docutils literal notranslate"><span class="pre">null</span></code> value.</p>
 </li>
 <li><p><a class="reference internal" href="function_notation/phpdoc_to_param_type.html"><span class="doc">phpdoc_to_param_type</span></a> <em>(risky)</em></p>
 <p>EXPERIMENTAL: Takes <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> annotations of non-mixed types and adjusts accordingly the function signature. Requires PHP &gt;= 7.0.</p>

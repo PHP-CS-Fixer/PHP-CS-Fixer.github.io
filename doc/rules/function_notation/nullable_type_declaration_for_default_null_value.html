@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Triangle (v3.19.2)</strong> edition
+                <strong>Triangle (v3.20.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,8 +64,8 @@
             
   <div class="section" id="rule-nullable-type-declaration-for-default-null-value">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">nullable_type_declaration_for_default_null_value</span></code><a class="headerlink" href="#rule-nullable-type-declaration-for-default-null-value" title="Permalink to this headline">¶</a></h1>
-<p>Adds or removes <code class="docutils literal notranslate"><span class="pre">?</span></code> before type declarations for parameters with a default
-<code class="docutils literal notranslate"><span class="pre">null</span></code> value.</p>
+<p>Adds or removes <code class="docutils literal notranslate"><span class="pre">?</span></code> before single type declarations or <code class="docutils literal notranslate"><span class="pre">|null</span></code> at the end of
+union types when parameters have a default <code class="docutils literal notranslate"><span class="pre">null</span></code> value.</p>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Rule is applied only in a PHP 7.1+ environment.</p>
@@ -74,8 +74,8 @@
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="use-nullable-type-declaration">
 <h3><code class="docutils literal notranslate"><span class="pre">use_nullable_type_declaration</span></code><a class="headerlink" href="#use-nullable-type-declaration" title="Permalink to this headline">¶</a></h3>
-<p>Whether to add or remove <code class="docutils literal notranslate"><span class="pre">?</span></code> before type declarations for parameters with a
-default <code class="docutils literal notranslate"><span class="pre">null</span></code> value.</p>
+<p>Whether to add or remove <code class="docutils literal notranslate"><span class="pre">?</span></code> or <code class="docutils literal notranslate"><span class="pre">|null</span></code> to parameters with a default
+<code class="docutils literal notranslate"><span class="pre">null</span></code> value.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
 </div>
@@ -102,6 +102,54 @@ default <code class="docutils literal notranslate"><span class="pre">null</span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
 <span class="gd">-function sample(?string $str = null)</span><span class="w"></span>
 <span class="gi">+function sample(string $str = null)</span><span class="w"></span>
+<span class="w"> </span>{}<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<p><em>Default</em> configuration.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-function sample(string|int $str = null)</span><span class="w"></span>
+<span class="gi">+function sample(string|int|null $str = null)</span><span class="w"></span>
+<span class="w"> </span>{}<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-4">
+<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['use_nullable_type_declaration'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-function sample(string|int|null $str = null)</span><span class="w"></span>
+<span class="gi">+function sample(string|int $str = null)</span><span class="w"></span>
+<span class="w"> </span>{}<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-5">
+<h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
+<p><em>Default</em> configuration.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-function sample(\Foo&amp;\Bar $str = null)</span><span class="w"></span>
+<span class="gi">+function sample((\Foo&amp;\Bar)|null $str = null)</span><span class="w"></span>
+<span class="w"> </span>{}<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-6">
+<h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['use_nullable_type_declaration'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-function sample((\Foo&amp;\Bar)|null $str = null)</span><span class="w"></span>
+<span class="gi">+function sample(\Foo&amp;\Bar $str = null)</span><span class="w"></span>
 <span class="w"> </span>{}<span class="w"></span>
 </pre></div>
 </div>
