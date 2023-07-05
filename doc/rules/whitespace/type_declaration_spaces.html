@@ -62,16 +62,18 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-phpdoc-types">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">phpdoc_types</span></code><a class="headerlink" href="#rule-phpdoc-types" title="Permalink to this headline">¶</a></h1>
-<p>The correct case must be used for standard PHP types in PHPDoc.</p>
+  <div class="section" id="rule-type-declaration-spaces">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">type_declaration_spaces</span></code><a class="headerlink" href="#rule-type-declaration-spaces" title="Permalink to this headline">¶</a></h1>
+<p>Ensure single space between a variable and its type declaration in function
+arguments and properties.</p>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="groups">
-<h3><code class="docutils literal notranslate"><span class="pre">groups</span></code><a class="headerlink" href="#groups" title="Permalink to this headline">¶</a></h3>
-<p>Type groups to fix.</p>
-<p>Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['alias',</span> <span class="pre">'meta',</span> <span class="pre">'simple']</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">['simple',</span> <span class="pre">'alias',</span> <span class="pre">'meta']</span></code></p>
+<div class="section" id="elements">
+<h3><code class="docutils literal notranslate"><span class="pre">elements</span></code><a class="headerlink" href="#elements" title="Permalink to this headline">¶</a></h3>
+<p>Structural elements where the spacing after the type declaration should be
+fixed.</p>
+<p>Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['function',</span> <span class="pre">'property']</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">['function',</span> <span class="pre">'property']</span></code></p>
 </div>
 </div>
 <div class="section" id="examples">
@@ -82,28 +84,52 @@
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="gd">- * @param STRING|String[] $bar</span><span class="w"></span>
-<span class="gi">+ * @param string|string[] $bar</span><span class="w"></span>
-<span class="w"> </span> *<span class="w"></span>
-<span class="gd">- * @return inT[]</span><span class="w"></span>
-<span class="gi">+ * @return int[]</span><span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
+<span class="w"> </span>class Bar<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="gd">-    private string    $a;</span><span class="w"></span>
+<span class="gd">-    private bool   $b;</span><span class="w"></span>
+<span class="gi">+    private string $a;</span><span class="w"></span>
+<span class="gi">+    private bool $b;</span><span class="w"></span>
+
+<span class="gd">-    public function __invoke(array   $c) {}</span><span class="w"></span>
+<span class="gi">+    public function __invoke(array $c) {}</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
-<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['groups'</span> <span class="pre">=&gt;</span> <span class="pre">['simple',</span> <span class="pre">'alias']]</span></code>.</p>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['elements'</span> <span class="pre">=&gt;</span> <span class="pre">['function']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="gd">- * @param BOOL $foo</span><span class="w"></span>
-<span class="gi">+ * @param bool $foo</span><span class="w"></span>
-<span class="w"> </span> *<span class="w"></span>
-<span class="w"> </span> * @return MIXED<span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
+<span class="w"> </span>class Foo<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    public int   $bar;<span class="w"></span>
+
+<span class="gd">-    public function baz(string     $a)</span><span class="w"></span>
+<span class="gi">+    public function baz(string $a)</span><span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="gd">-        return fn(bool    $c): string =&gt; (string) $c;</span><span class="w"></span>
+<span class="gi">+        return fn(bool $c): string =&gt; (string) $c;</span><span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['elements'</span> <span class="pre">=&gt;</span> <span class="pre">['property']]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>class Foo<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="gd">-    public int   $bar;</span><span class="w"></span>
+<span class="gi">+    public int $bar;</span><span class="w"></span>
+
+<span class="w"> </span>    public function baz(string     $a) {}<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -112,9 +138,9 @@
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <dl class="simple">
-<dt>&#64;PhpCsFixer</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">phpdoc_types</span></code> rule with the default config.</p>
+<dt>&#64;PhpCsFixer</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">type_declaration_spaces</span></code> rule with the default config.</p>
 </dd>
-<dt>&#64;Symfony</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">phpdoc_types</span></code> rule with the default config.</p>
+<dt>&#64;Symfony</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">type_declaration_spaces</span></code> rule with the default config.</p>
 </dd>
 </dl>
 </div>

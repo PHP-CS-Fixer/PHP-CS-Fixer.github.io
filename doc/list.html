@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Triangle (v3.20.0)</strong> edition
+                <strong>Triangle (v3.21.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -980,7 +980,7 @@ override a method, use the Template method pattern.</p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/function_typehint_space.html"><span class="doc">function_typehint_space</span></a></p>
 <p>Ensure single space between function’s argument and its typehint.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p><em>warning deprecated</em>   Use <code class="docutils literal notranslate"><span class="pre">type_declaration_spaces</span></code> instead.</p>
 <p><a class="reference external" href="./../src/Fixer/FunctionNotation/FunctionTypehintSpaceFixer.php">Source PhpCsFixer\Fixer\FunctionNotation\FunctionTypehintSpaceFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/phpdoc/general_phpdoc_annotation_remove.html"><span class="doc">general_phpdoc_annotation_remove</span></a></p>
@@ -1899,6 +1899,20 @@ assignments to properties whose type declaration does not allow it.</p>
 <p>Remove trailing whitespace at the end of blank lines.</p>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/NoWhitespaceInBlankLineFixer.php">Source PhpCsFixer\Fixer\Whitespace\NoWhitespaceInBlankLineFixer</a></p>
+</li>
+<li><p><a class="reference internal" href="rules/language_construct/nullable_type_declaration.html"><span class="doc">nullable_type_declaration</span></a></p>
+<p>Nullable single type declaration should be standardised using configured syntax.</p>
+<p>Configuration options:</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">syntax</span></code></div>
+<div class="line">Whether to use question mark (<cite>?</cite>) or explicit <cite>null</cite> union for nullable type.</div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'question_mark'</span></code> and <code class="docutils literal notranslate"><span class="pre">'union'</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'question_mark'</span></code></div>
+</div>
+</li>
+</ul>
+<p><a class="reference external" href="./../src/Fixer/LanguageConstruct/NullableTypeDeclarationFixer.php">Source PhpCsFixer\Fixer\LanguageConstruct\NullableTypeDeclarationFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/nullable_type_declaration_for_default_null_value.html"><span class="doc">nullable_type_declaration_for_default_null_value</span></a></p>
 <p>Adds or removes <code class="docutils literal notranslate"><span class="pre">?</span></code> before single type declarations or <code class="docutils literal notranslate"><span class="pre">|null</span></code> at the end of union types when parameters have a default <code class="docutils literal notranslate"><span class="pre">null</span></code> value.</p>
@@ -3144,6 +3158,21 @@ comparisons and outputs.</p>
 </ul>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/TypesSpacesFixer.php">Source PhpCsFixer\Fixer\Whitespace\TypesSpacesFixer</a></p>
+</li>
+<li><p><a class="reference internal" href="rules/whitespace/type_declaration_spaces.html"><span class="doc">type_declaration_spaces</span></a></p>
+<p>Ensure single space between a variable and its type declaration in function arguments and properties.</p>
+<p>Configuration options:</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">elements</span></code></div>
+<div class="line">Structural elements where the spacing after the type declaration should be fixed.</div>
+<div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['function',</span> <span class="pre">'property']</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['function',</span> <span class="pre">'property']</span></code></div>
+</div>
+</li>
+</ul>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p><a class="reference external" href="./../src/Fixer/Whitespace/TypeDeclarationSpacesFixer.php">Source PhpCsFixer\Fixer\Whitespace\TypeDeclarationSpacesFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/operator/unary_operator_spaces.html"><span class="doc">unary_operator_spaces</span></a></p>
 <p>Unary operators should be placed adjacent to their operands.</p>

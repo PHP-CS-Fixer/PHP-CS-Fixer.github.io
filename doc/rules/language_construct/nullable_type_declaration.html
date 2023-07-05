@@ -62,16 +62,17 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-phpdoc-types">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">phpdoc_types</span></code><a class="headerlink" href="#rule-phpdoc-types" title="Permalink to this headline">¶</a></h1>
-<p>The correct case must be used for standard PHP types in PHPDoc.</p>
+  <div class="section" id="rule-nullable-type-declaration">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">nullable_type_declaration</span></code><a class="headerlink" href="#rule-nullable-type-declaration" title="Permalink to this headline">¶</a></h1>
+<p>Nullable single type declaration should be standardised using configured syntax.</p>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="groups">
-<h3><code class="docutils literal notranslate"><span class="pre">groups</span></code><a class="headerlink" href="#groups" title="Permalink to this headline">¶</a></h3>
-<p>Type groups to fix.</p>
-<p>Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['alias',</span> <span class="pre">'meta',</span> <span class="pre">'simple']</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">['simple',</span> <span class="pre">'alias',</span> <span class="pre">'meta']</span></code></p>
+<div class="section" id="syntax">
+<h3><code class="docutils literal notranslate"><span class="pre">syntax</span></code><a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h3>
+<p>Whether to use question mark (<code class="docutils literal notranslate"><span class="pre">?</span></code>) or explicit <code class="docutils literal notranslate"><span class="pre">null</span></code> union for nullable
+type.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'question_mark'</span></code> and <code class="docutils literal notranslate"><span class="pre">'union'</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'question_mark'</span></code></p>
 </div>
 </div>
 <div class="section" id="examples">
@@ -82,41 +83,41 @@
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="gd">- * @param STRING|String[] $bar</span><span class="w"></span>
-<span class="gi">+ * @param string|string[] $bar</span><span class="w"></span>
-<span class="w"> </span> *<span class="w"></span>
-<span class="gd">- * @return inT[]</span><span class="w"></span>
-<span class="gi">+ * @return int[]</span><span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
+<span class="gd">-function bar(null|int $value, null|\Closure $callable): void {}</span><span class="w"></span>
+<span class="gi">+function bar(?int $value, ?\Closure $callable): void {}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
-<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['groups'</span> <span class="pre">=&gt;</span> <span class="pre">['simple',</span> <span class="pre">'alias']]</span></code>.</p>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['syntax'</span> <span class="pre">=&gt;</span> <span class="pre">'union']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="gd">- * @param BOOL $foo</span><span class="w"></span>
-<span class="gi">+ * @param bool $foo</span><span class="w"></span>
-<span class="w"> </span> *<span class="w"></span>
-<span class="w"> </span> * @return MIXED<span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
+<span class="gd">-function baz(?int $value, ?\stdClass $obj, ?array $config): ?int {}</span><span class="w"></span>
+<span class="gi">+function baz(null|int $value, null|\stdClass $obj, null|array $config): null|int {}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
+<div class="section" id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['syntax'</span> <span class="pre">=&gt;</span> <span class="pre">'question_mark']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>class ValueObject<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="gd">-    public null|string $name;</span><span class="w"></span>
+<span class="gi">+    public ?string $name;</span><span class="w"></span>
+<span class="w"> </span>    public ?int $count;<span class="w"></span>
+<span class="gd">-    public null|bool $internal;</span><span class="w"></span>
+<span class="gd">-    public null|\Closure $callback;</span><span class="w"></span>
+<span class="gi">+    public ?bool $internal;</span><span class="w"></span>
+<span class="gi">+    public ?\Closure $callback;</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
+</pre></div>
 </div>
-<div class="section" id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
-<p>The rule is part of the following rule sets:</p>
-<dl class="simple">
-<dt>&#64;PhpCsFixer</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">phpdoc_types</span></code> rule with the default config.</p>
-</dd>
-<dt>&#64;Symfony</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">phpdoc_types</span></code> rule with the default config.</p>
-</dd>
-</dl>
+</div>
 </div>
 </div>
 
