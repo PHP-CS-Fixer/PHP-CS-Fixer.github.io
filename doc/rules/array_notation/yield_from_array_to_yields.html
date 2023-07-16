@@ -62,33 +62,35 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-no-unused-imports">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">no_unused_imports</span></code><a class="headerlink" href="#rule-no-unused-imports" title="Permalink to this headline">¶</a></h1>
-<p>Unused <code class="docutils literal notranslate"><span class="pre">use</span></code> statements must be removed.</p>
+  <div class="section" id="rule-yield-from-array-to-yields">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">yield_from_array_to_yields</span></code><a class="headerlink" href="#rule-yield-from-array-to-yields" title="Permalink to this headline">¶</a></h1>
+<p>Yield from array must be unpacked to series of yields.</p>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>The conversion will make the array in <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">from</span></code> changed in arrays of 1 less
+dimension.</p>
+</div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>use \DateTime;<span class="w"></span>
-<span class="gd">-use \Exception;</span><span class="w"></span>
-
-<span class="w"> </span>new DateTime();<span class="w"></span>
+<span class="w"> </span>&lt;?php function generate() {<span class="w"></span>
+<span class="gd">-    yield from [</span><span class="w"></span>
+<span class="gd">-        1,</span><span class="w"></span>
+<span class="gd">-        2,</span><span class="w"></span>
+<span class="gd">-        3,</span><span class="w"></span>
+<span class="gd">-    ];</span><span class="w"></span>
+<span class="gi">+</span><span class="w"></span>
+<span class="gi">+        yield 1;</span><span class="w"></span>
+<span class="gi">+        yield 2;</span><span class="w"></span>
+<span class="gi">+        yield 3;</span><span class="w"></span>
+<span class="gi">+</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
-<p>The rule is part of the following rule sets:</p>
-<dl class="simple">
-<dt>&#64;PhpCsFixer</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">no_unused_imports</span></code> rule.</p>
-</dd>
-<dt>&#64;Symfony</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">no_unused_imports</span></code> rule.</p>
-</dd>
-</dl>
 </div>
 </div>
 

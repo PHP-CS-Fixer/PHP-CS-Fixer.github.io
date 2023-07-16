@@ -62,9 +62,21 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-no-unused-imports">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">no_unused_imports</span></code><a class="headerlink" href="#rule-no-unused-imports" title="Permalink to this headline">¶</a></h1>
-<p>Unused <code class="docutils literal notranslate"><span class="pre">use</span></code> statements must be removed.</p>
+  <div class="section" id="rule-php-unit-data-provider-return-type">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">php_unit_data_provider_return_type</span></code><a class="headerlink" href="#rule-php-unit-data-provider-return-type" title="Permalink to this headline">¶</a></h1>
+<p>The return type of PHPUnit data provider must be <code class="docutils literal notranslate"><span class="pre">iterable</span></code>.</p>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Data provider must return <code class="docutils literal notranslate"><span class="pre">iterable</span></code>, either an array of arrays or an object
+that implements the <code class="docutils literal notranslate"><span class="pre">Traversable</span></code> interface.</p>
+</div>
+<div class="section" id="warning">
+<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-this-rule-is-risky">
+<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
+<p>Risky when relying on signature of the data provider.</p>
+</div>
+</div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
@@ -72,21 +84,39 @@
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>use \DateTime;<span class="w"></span>
-<span class="gd">-use \Exception;</span><span class="w"></span>
-
-<span class="w"> </span>new DateTime();<span class="w"></span>
+<span class="w"> </span>class FooTest extends TestCase {<span class="w"></span>
+<span class="w"> </span>    /**<span class="w"></span>
+<span class="w"> </span>     * @dataProvider provideSomethingCases<span class="w"></span>
+<span class="w"> </span>     */<span class="w"></span>
+<span class="w"> </span>    public function testSomething($expected, $actual) {}<span class="w"></span>
+<span class="gd">-    public function provideSomethingCases(): array {}</span><span class="w"></span>
+<span class="gi">+    public function provideSomethingCases(): iterable {}</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-2">
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>class FooTest extends TestCase {<span class="w"></span>
+<span class="w"> </span>    /**<span class="w"></span>
+<span class="w"> </span>     * @dataProvider provideSomethingCases<span class="w"></span>
+<span class="w"> </span>     */<span class="w"></span>
+<span class="w"> </span>    public function testSomething($expected, $actual) {}<span class="w"></span>
+<span class="gd">-    public function provideSomethingCases() {}</span><span class="w"></span>
+<span class="gi">+    public function provideSomethingCases(): iterable {}</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
-<p>The rule is part of the following rule sets:</p>
+<p>The rule is part of the following rule set:</p>
 <dl class="simple">
-<dt>&#64;PhpCsFixer</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">no_unused_imports</span></code> rule.</p>
-</dd>
-<dt>&#64;Symfony</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">no_unused_imports</span></code> rule.</p>
+<dt>&#64;PhpCsFixer:risky</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">php_unit_data_provider_return_type</span></code> rule.</p>
 </dd>
 </dl>
 </div>

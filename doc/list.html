@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Triangle (v3.21.3)</strong> edition
+                <strong>Chips & Pizza (v3.22.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -2499,6 +2499,14 @@ properly documented.</p>
 <p>Part of rule set <a class="reference internal" href="ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/PhpUnit/PhpUnitDataProviderNameFixer.php">Source PhpCsFixer\Fixer\PhpUnit\PhpUnitDataProviderNameFixer</a></p>
 </li>
+<li><p><a class="reference internal" href="rules/php_unit/php_unit_data_provider_return_type.html"><span class="doc">php_unit_data_provider_return_type</span></a></p>
+<p>The return type of PHPUnit data provider must be <code class="docutils literal notranslate"><span class="pre">iterable</span></code>.</p>
+<p>Data provider must return <code class="docutils literal notranslate"><span class="pre">iterable</span></code>, either an array of arrays or an
+object that implements the <code class="docutils literal notranslate"><span class="pre">Traversable</span></code> interface.</p>
+<p><em>warning risky</em> Risky when relying on signature of the data provider.</p>
+<p>Part of rule set <a class="reference internal" href="ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a></p>
+<p><a class="reference external" href="./../src/Fixer/PhpUnit/PhpUnitDataProviderReturnTypeFixer.php">Source PhpCsFixer\Fixer\PhpUnit\PhpUnitDataProviderReturnTypeFixer</a></p>
+</li>
 <li><p><a class="reference internal" href="rules/php_unit/php_unit_data_provider_static.html"><span class="doc">php_unit_data_provider_static</span></a></p>
 <p>Data providers must be static.</p>
 <p><em>warning risky</em> Fixer could be risky if one is calling data provider function dynamically.</p>
@@ -3221,6 +3229,12 @@ comparisons and outputs.</p>
 </ul>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ArrayNotation/WhitespaceAfterCommaInArrayFixer.php">Source PhpCsFixer\Fixer\ArrayNotation\WhitespaceAfterCommaInArrayFixer</a></p>
+</li>
+<li><p><a class="reference internal" href="rules/array_notation/yield_from_array_to_yields.html"><span class="doc">yield_from_array_to_yields</span></a></p>
+<p>Yield from array must be unpacked to series of yields.</p>
+<p>The conversion will make the array in <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">from</span></code> changed in arrays of 1
+less dimension.</p>
+<p><a class="reference external" href="./../src/Fixer/ArrayNotation/YieldFromArrayToYieldsFixer.php">Source PhpCsFixer\Fixer\ArrayNotation\YieldFromArrayToYieldsFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/control_structure/yoda_style.html"><span class="doc">yoda_style</span></a></p>
 <p>Write conditions in Yoda style (<code class="docutils literal notranslate"><span class="pre">true</span></code>), non-Yoda style (<code class="docutils literal notranslate"><span class="pre">['equal'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'identical'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'less_and_greater'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>) or ignore those conditions (<code class="docutils literal notranslate"><span class="pre">null</span></code>) based on configuration.</p>
