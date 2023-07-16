@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Triangle (v3.21.1)</strong> edition
+                <strong>Triangle (v3.21.2)</strong> edition
               </h1>
             </div>
           </div>
@@ -822,15 +822,15 @@ codebase.</p>
 <p>Converts implicit variables into explicit ones in double-quoted strings or heredoc syntax.</p>
 <p>The reasoning behind this rule is the following:
 - When there are two valid ways of doing the same thing, using both is
-confusing, there should be a coding standard to follow
+confusing, there should be a coding standard to follow.
 - PHP manual marks <code class="docutils literal notranslate"><span class="pre">&quot;$var&quot;</span></code> syntax as implicit and <code class="docutils literal notranslate"><span class="pre">&quot;${var}&quot;</span></code> syntax as
-explicit: explicit code should always be preferred
+explicit: explicit code should always be preferred.
 - Explicit syntax allows word concatenation inside strings, e.g.
-<code class="docutils literal notranslate"><span class="pre">&quot;${var}IsAVar&quot;</span></code>, implicit doesn’t
+<code class="docutils literal notranslate"><span class="pre">&quot;${var}IsAVar&quot;</span></code>, implicit doesn’t.
 - Explicit syntax is easier to detect for IDE/editors and therefore has
-colors/highlight with higher contrast, which is easier to read
+colors/highlight with higher contrast, which is easier to read.
 Backtick operator is skipped because it is harder to handle; you can use
-<code class="docutils literal notranslate"><span class="pre">backtick_to_shell_exec</span></code> fixer to normalize backticks to strings</p>
+<code class="docutils literal notranslate"><span class="pre">backtick_to_shell_exec</span></code> fixer to normalize backticks to strings.</p>
 <p>Part of rule set <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/StringNotation/ExplicitStringVariableFixer.php">Source PhpCsFixer\Fixer\StringNotation\ExplicitStringVariableFixer</a></p>
 </li>
@@ -1983,7 +1983,7 @@ custom patterns.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">method:*</span></code>: specify a single method name (e.g. <code class="docutils literal notranslate"><span class="pre">method:__invoke</span></code>) to</p></li>
 </ul>
-<p>set the order of that specific method</p>
+<p>set the order of that specific method.</p>
 <p>Configuration options:</p>
 <ul>
 <li><div class="line-block">
