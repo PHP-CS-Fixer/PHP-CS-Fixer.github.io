@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Chips & Pizza (v3.22.0)</strong> edition
+                <strong>First Steps (v3.23.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -67,25 +67,25 @@
 <p>Rule set as used by the PHP-CS-Fixer development team, highly opinionated. This set contains rules that are risky.</p>
 <div class="section" id="rules">
 <h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
+<ul>
 <li><p><a class="reference internal" href="PERRisky.html"><span class="doc">&#64;PER:risky</span></a></p></li>
 <li><p><a class="reference internal" href="SymfonyRisky.html"><span class="doc">&#64;Symfony:risky</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/comment/comment_to_phpdoc.html"><span class="doc">comment_to_phpdoc</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/class_notation/final_internal_class.html"><span class="doc">final_internal_class</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/constant_notation/native_constant_invocation.html"><span class="doc">native_constant_invocation</span></a>
-config:
-<code class="docutils literal notranslate"><span class="pre">['fix_built_in'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'include'</span> <span class="pre">=&gt;</span> <span class="pre">['DIRECTORY_SEPARATOR',</span> <span class="pre">'PHP_INT_SIZE',</span> <span class="pre">'PHP_SAPI',</span> <span class="pre">'PHP_VERSION_ID'],</span> <span class="pre">'scope'</span> <span class="pre">=&gt;</span> <span class="pre">'namespaced',</span> <span class="pre">'strict'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p></li>
-<li><p><a class="reference internal" href="../rules/alias/no_alias_functions.html"><span class="doc">no_alias_functions</span></a>
-config:
-<code class="docutils literal notranslate"><span class="pre">['sets'</span> <span class="pre">=&gt;</span> <span class="pre">['&#64;all']]</span></code></p></li>
+<li><p><a class="reference internal" href="../rules/constant_notation/native_constant_invocation.html"><span class="doc">native_constant_invocation</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['fix_built_in'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'include'</span> <span class="pre">=&gt;</span> <span class="pre">['DIRECTORY_SEPARATOR',</span> <span class="pre">'PHP_INT_SIZE',</span> <span class="pre">'PHP_SAPI',</span> <span class="pre">'PHP_VERSION_ID'],</span> <span class="pre">'scope'</span> <span class="pre">=&gt;</span> <span class="pre">'namespaced',</span> <span class="pre">'strict'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
+</li>
+<li><p><a class="reference internal" href="../rules/alias/no_alias_functions.html"><span class="doc">no_alias_functions</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['sets'</span> <span class="pre">=&gt;</span> <span class="pre">['&#64;all']]</span></code></p>
+</li>
 <li><p><a class="reference internal" href="../rules/function_notation/no_unreachable_default_argument_value.html"><span class="doc">no_unreachable_default_argument_value</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/language_construct/no_unset_on_property.html"><span class="doc">no_unset_on_property</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/php_unit/php_unit_data_provider_name.html"><span class="doc">php_unit_data_provider_name</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/php_unit/php_unit_data_provider_return_type.html"><span class="doc">php_unit_data_provider_return_type</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/php_unit/php_unit_strict.html"><span class="doc">php_unit_strict</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/php_unit/php_unit_test_case_static_method_calls.html"><span class="doc">php_unit_test_case_static_method_calls</span></a>
-config:
-<code class="docutils literal notranslate"><span class="pre">['call_type'</span> <span class="pre">=&gt;</span> <span class="pre">'self']</span></code></p></li>
+<li><p><a class="reference internal" href="../rules/php_unit/php_unit_test_case_static_method_calls.html"><span class="doc">php_unit_test_case_static_method_calls</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['call_type'</span> <span class="pre">=&gt;</span> <span class="pre">'self']</span></code></p>
+</li>
 <li><p><a class="reference internal" href="../rules/strict/strict_comparison.html"><span class="doc">strict_comparison</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/strict/strict_param.html"><span class="doc">strict_param</span></a></p></li>
 </ul>

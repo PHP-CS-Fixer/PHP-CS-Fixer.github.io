@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Chips & Pizza (v3.22.0)</strong> edition
+                <strong>First Steps (v3.23.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,7 +64,7 @@
             
   <div class="section" id="rule-heredoc-indentation">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">heredoc_indentation</span></code><a class="headerlink" href="#rule-heredoc-indentation" title="Permalink to this headline">¶</a></h1>
-<p>Heredoc/nowdoc content must be properly indented. Requires PHP &gt;= 7.3.</p>
+<p>Heredoc/nowdoc content must be properly indented.</p>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="indentation">
@@ -83,7 +83,15 @@ level more.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>    $a = &lt;&lt;&lt;EOD<span class="w"></span>
+<span class="w"> </span>    $heredoc = &lt;&lt;&lt;EOD<span class="w"></span>
+<span class="gd">-abc</span><span class="w"></span>
+<span class="gd">-    def</span><span class="w"></span>
+<span class="gd">-EOD;</span><span class="w"></span>
+<span class="gi">+        abc</span><span class="w"></span>
+<span class="gi">+            def</span><span class="w"></span>
+<span class="gi">+        EOD;</span><span class="w"></span>
+
+<span class="w"> </span>    $nowdoc = &lt;&lt;&lt;&#39;EOD&#39;<span class="w"></span>
 <span class="gd">-abc</span><span class="w"></span>
 <span class="gd">-    def</span><span class="w"></span>
 <span class="gd">-EOD;</span><span class="w"></span>
@@ -95,27 +103,11 @@ level more.</p>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
-<p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>    $a = &lt;&lt;&lt;&#39;EOD&#39;<span class="w"></span>
-<span class="gd">-abc</span><span class="w"></span>
-<span class="gd">-    def</span><span class="w"></span>
-<span class="gd">-EOD;</span><span class="w"></span>
-<span class="gi">+        abc</span><span class="w"></span>
-<span class="gi">+            def</span><span class="w"></span>
-<span class="gi">+        EOD;</span><span class="w"></span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="example-3">
-<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['indentation'</span> <span class="pre">=&gt;</span> <span class="pre">'same_as_start']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>    $a = &lt;&lt;&lt;&#39;EOD&#39;<span class="w"></span>
+<span class="w"> </span>    $nowdoc = &lt;&lt;&lt;&#39;EOD&#39;<span class="w"></span>
 <span class="gd">-abc</span><span class="w"></span>
 <span class="gd">-    def</span><span class="w"></span>
 <span class="gd">-EOD;</span><span class="w"></span>
@@ -129,18 +121,13 @@ level more.</p>
 <div class="section" id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
-<dl class="simple">
-<dt>&#64;PHP73Migration</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PHP73Migration.html"><span class="doc">&#64;PHP73Migration</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">heredoc_indentation</span></code> rule with the default config.</p>
-</dd>
-<dt>&#64;PHP74Migration</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PHP74Migration.html"><span class="doc">&#64;PHP74Migration</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">heredoc_indentation</span></code> rule with the default config.</p>
-</dd>
-<dt>&#64;PHP80Migration</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PHP80Migration.html"><span class="doc">&#64;PHP80Migration</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">heredoc_indentation</span></code> rule with the default config.</p>
-</dd>
-<dt>&#64;PHP81Migration</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PHP81Migration.html"><span class="doc">&#64;PHP81Migration</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">heredoc_indentation</span></code> rule with the default config.</p>
-</dd>
-<dt>&#64;PHP82Migration</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PHP82Migration.html"><span class="doc">&#64;PHP82Migration</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">heredoc_indentation</span></code> rule with the default config.</p>
-</dd>
-</dl>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../ruleSets/PHP73Migration.html"><span class="doc">&#64;PHP73Migration</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/PHP74Migration.html"><span class="doc">&#64;PHP74Migration</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/PHP80Migration.html"><span class="doc">&#64;PHP80Migration</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/PHP81Migration.html"><span class="doc">&#64;PHP81Migration</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/PHP82Migration.html"><span class="doc">&#64;PHP82Migration</span></a></p></li>
+</ul>
 </div>
 </div>
 

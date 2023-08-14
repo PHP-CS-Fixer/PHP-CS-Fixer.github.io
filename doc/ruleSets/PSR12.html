@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Chips & Pizza (v3.22.0)</strong> edition
+                <strong>First Steps (v3.23.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -67,18 +67,21 @@
 <p>Rules that follow <a class="reference external" href="https://www.php-fig.org/psr/psr-12/">PSR-12</a> standard.</p>
 <div class="section" id="rules">
 <h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
+<ul>
 <li><p><a class="reference internal" href="PSR2.html"><span class="doc">&#64;PSR2</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/operator/binary_operator_spaces.html"><span class="doc">binary_operator_spaces</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['default'</span> <span class="pre">=&gt;</span> <span class="pre">'at_least_single_space']</span></code></p>
+</li>
 <li><p><a class="reference internal" href="../rules/php_tag/blank_line_after_opening_tag.html"><span class="doc">blank_line_after_opening_tag</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/whitespace/blank_line_between_import_groups.html"><span class="doc">blank_line_between_import_groups</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/namespace_notation/blank_lines_before_namespace.html"><span class="doc">blank_lines_before_namespace</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/class_notation/class_definition.html"><span class="doc">class_definition</span></a>
-config:
-<code class="docutils literal notranslate"><span class="pre">['inline_constructor_arguments'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'space_before_parenthesis'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p></li>
+<li><p><a class="reference internal" href="../rules/class_notation/class_definition.html"><span class="doc">class_definition</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['inline_constructor_arguments'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'space_before_parenthesis'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
+</li>
 <li><p><a class="reference internal" href="../rules/whitespace/compact_nullable_typehint.html"><span class="doc">compact_nullable_typehint</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/basic/curly_braces_position.html"><span class="doc">curly_braces_position</span></a>
-config:
-<code class="docutils literal notranslate"><span class="pre">['allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p></li>
+<li><p><a class="reference internal" href="../rules/basic/curly_braces_position.html"><span class="doc">curly_braces_position</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
+</li>
 <li><p><a class="reference internal" href="../rules/language_construct/declare_equal_normalize.html"><span class="doc">declare_equal_normalize</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/cast_notation/lowercase_cast.html"><span class="doc">lowercase_cast</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/casing/lowercase_static_reference.html"><span class="doc">lowercase_static_reference</span></a></p></li>
@@ -86,17 +89,17 @@ config:
 <li><p><a class="reference internal" href="../rules/class_notation/no_blank_lines_after_class_opening.html"><span class="doc">no_blank_lines_after_class_opening</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/import/no_leading_import_slash.html"><span class="doc">no_leading_import_slash</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/whitespace/no_whitespace_in_blank_line.html"><span class="doc">no_whitespace_in_blank_line</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/class_notation/ordered_class_elements.html"><span class="doc">ordered_class_elements</span></a>
-config:
-<code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['use_trait']]</span></code></p></li>
-<li><p><a class="reference internal" href="../rules/import/ordered_imports.html"><span class="doc">ordered_imports</span></a>
-config:
-<code class="docutils literal notranslate"><span class="pre">['imports_order'</span> <span class="pre">=&gt;</span> <span class="pre">['class',</span> <span class="pre">'function',</span> <span class="pre">'const'],</span> <span class="pre">'sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'none']</span></code></p></li>
+<li><p><a class="reference internal" href="../rules/class_notation/ordered_class_elements.html"><span class="doc">ordered_class_elements</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['use_trait']]</span></code></p>
+</li>
+<li><p><a class="reference internal" href="../rules/import/ordered_imports.html"><span class="doc">ordered_imports</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['imports_order'</span> <span class="pre">=&gt;</span> <span class="pre">['class',</span> <span class="pre">'function',</span> <span class="pre">'const'],</span> <span class="pre">'sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'none']</span></code></p>
+</li>
 <li><p><a class="reference internal" href="../rules/function_notation/return_type_declaration.html"><span class="doc">return_type_declaration</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/cast_notation/short_scalar_cast.html"><span class="doc">short_scalar_cast</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/import/single_import_per_statement.html"><span class="doc">single_import_per_statement</span></a>
-config:
-<code class="docutils literal notranslate"><span class="pre">['group_to_single_imports'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code></p></li>
+<li><p><a class="reference internal" href="../rules/import/single_import_per_statement.html"><span class="doc">single_import_per_statement</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['group_to_single_imports'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code></p>
+</li>
 <li><p><a class="reference internal" href="../rules/class_notation/single_trait_insert_per_statement.html"><span class="doc">single_trait_insert_per_statement</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/operator/ternary_operator_spaces.html"><span class="doc">ternary_operator_spaces</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/class_notation/visibility_required.html"><span class="doc">visibility_required</span></a></p></li>

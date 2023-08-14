@@ -62,44 +62,76 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-switch-continue-to-break">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">switch_continue_to_break</span></code><a class="headerlink" href="#rule-switch-continue-to-break" title="Permalink to this headline">¶</a></h1>
-<p>Switch case must not be ended with <code class="docutils literal notranslate"><span class="pre">continue</span></code> but with <code class="docutils literal notranslate"><span class="pre">break</span></code>.</p>
+  <div class="section" id="rule-spaces-inside-parentheses">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">spaces_inside_parentheses</span></code><a class="headerlink" href="#rule-spaces-inside-parentheses" title="Permalink to this headline">¶</a></h1>
+<p>Parentheses must be declared using the configured whitespace.</p>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>By default there are not any additional spaces inside parentheses, however with
+<code class="docutils literal notranslate"><span class="pre">space=single</span></code> configuration option whitespace inside parentheses will be
+unified to single space.</p>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="space">
+<h3><code class="docutils literal notranslate"><span class="pre">space</span></code><a class="headerlink" href="#space" title="Permalink to this headline">¶</a></h3>
+<p>Whether to have <code class="docutils literal notranslate"><span class="pre">single</span></code> or <code class="docutils literal notranslate"><span class="pre">none</span></code> space inside parentheses.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code> and <code class="docutils literal notranslate"><span class="pre">'single'</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'none'</span></code></p>
+</div>
+</div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>switch ($foo) {<span class="w"></span>
-<span class="w"> </span>    case 1:<span class="w"></span>
-<span class="gd">-        continue;</span><span class="w"></span>
-<span class="gi">+        break;</span><span class="w"></span>
+<span class="gd">-if ( $a ) {</span><span class="w"></span>
+<span class="gd">-    foo( );</span><span class="w"></span>
+<span class="gi">+if ($a) {</span><span class="w"></span>
+<span class="gi">+    foo();</span><span class="w"></span>
 <span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['space'</span> <span class="pre">=&gt;</span> <span class="pre">'none']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>switch ($foo) {<span class="w"></span>
-<span class="w"> </span>    case 1:<span class="w"></span>
-<span class="w"> </span>        while($bar) {<span class="w"></span>
-<span class="w"> </span>            do {<span class="w"></span>
-<span class="gd">-                continue 3;</span><span class="w"></span>
-<span class="gi">+                break 3;</span><span class="w"></span>
-<span class="w"> </span>            } while(false);<span class="w"></span>
-
-<span class="w"> </span>            if ($foo + 1 &gt; 3) {<span class="w"></span>
-<span class="w"> </span>                continue;<span class="w"></span>
-<span class="w"> </span>            }<span class="w"></span>
-
-<span class="gd">-            continue 2;</span><span class="w"></span>
-<span class="gi">+            break 2;</span><span class="w"></span>
-<span class="w"> </span>        }<span class="w"></span>
+<span class="gd">-function foo( $bar, $baz )</span><span class="w"></span>
+<span class="gi">+function foo($bar, $baz)</span><span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['space'</span> <span class="pre">=&gt;</span> <span class="pre">'single']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-if ($a) {</span><span class="w"></span>
+<span class="gd">-    foo( );</span><span class="w"></span>
+<span class="gi">+if ( $a ) {</span><span class="w"></span>
+<span class="gi">+    foo();</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-4">
+<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['space'</span> <span class="pre">=&gt;</span> <span class="pre">'single']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-function foo($bar, $baz)</span><span class="w"></span>
+<span class="gi">+function foo( $bar, $baz )</span><span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
 <span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
@@ -109,6 +141,10 @@
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul class="simple">
+<li><p><a class="reference internal" href="../../ruleSets/PER.html"><span class="doc">&#64;PER</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
 </ul>

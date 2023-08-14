@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Chips & Pizza (v3.22.0)</strong> edition
+                <strong>First Steps (v3.23.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -70,7 +70,15 @@ aligned vertically.</p>
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="tags">
 <h3><code class="docutils literal notranslate"><span class="pre">tags</span></code><a class="headerlink" href="#tags" title="Permalink to this headline">¶</a></h3>
-<p>The tags that should be aligned.</p>
+<p>The tags that should be aligned. Allowed values are tags with name (<code class="docutils literal notranslate"><span class="pre">'param',</span>
+<span class="pre">'property',</span> <span class="pre">'property-read',</span> <span class="pre">'property-write',</span> <span class="pre">'phpstan-param',</span>
+<span class="pre">'phpstan-property',</span> <span class="pre">'phpstan-property-read',</span> <span class="pre">'phpstan-property-write',</span>
+<span class="pre">'phpstan-assert',</span> <span class="pre">'phpstan-assert-if-true',</span> <span class="pre">'phpstan-assert-if-false',</span>
+<span class="pre">'psalm-param',</span> <span class="pre">'psalm-param-out',</span> <span class="pre">'psalm-property',</span> <span class="pre">'psalm-property-read',</span>
+<span class="pre">'psalm-property-write',</span> <span class="pre">'psalm-assert',</span> <span class="pre">'psalm-assert-if-true',</span>
+<span class="pre">'psalm-assert-if-false'</span></code>), tags with method signature (<code class="docutils literal notranslate"><span class="pre">'method',</span>
+<span class="pre">'phpstan-method',</span> <span class="pre">'psalm-method'</span></code>) and any custom tag with description (e.g.
+<code class="docutils literal notranslate"><span class="pre">&#64;tag</span> <span class="pre">&lt;desc&gt;</span></code>).</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['method',</span> <span class="pre">'param',</span> <span class="pre">'property',</span> <span class="pre">'return',</span> <span class="pre">'throws',</span> <span class="pre">'type',</span> <span class="pre">'var']</span></code></p>
 </div>
@@ -150,12 +158,10 @@ aligned vertically.</p>
 <div class="section" id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
-<dl class="simple">
-<dt>&#64;PhpCsFixer</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">phpdoc_align</span></code> rule with the default config.</p>
-</dd>
-<dt>&#64;Symfony</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">phpdoc_align</span></code> rule with the default config.</p>
-</dd>
-</dl>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
+</ul>
 </div>
 </div>
 

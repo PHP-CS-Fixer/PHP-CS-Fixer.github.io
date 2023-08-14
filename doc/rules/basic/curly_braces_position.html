@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Chips & Pizza (v3.22.0)</strong> edition
+                <strong>First Steps (v3.23.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -138,15 +138,7 @@
 <span class="gi">+if (foo()) {</span><span class="w"></span>
 <span class="w"> </span>    bar();<span class="w"></span>
 <span class="w"> </span>}<span class="w"></span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="example-2">
-<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
-<p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+
 <span class="gd">-$foo = new class</span><span class="w"></span>
 <span class="gd">-{</span><span class="w"></span>
 <span class="gi">+$foo = new class {</span><span class="w"></span>
@@ -154,8 +146,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="example-3">
-<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-2">
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['control_structures_opening_brace'</span> <span class="pre">=&gt;</span> <span class="pre">'next_line_unless_newline_at_signature_end']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
@@ -168,8 +160,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="example-4">
-<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['functions_opening_brace'</span> <span class="pre">=&gt;</span> <span class="pre">'same_line']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
@@ -181,8 +173,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="example-5">
-<h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-4">
+<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['anonymous_functions_opening_brace'</span> <span class="pre">=&gt;</span> <span class="pre">'next_line_unless_newline_at_signature_end']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
@@ -194,8 +186,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="example-6">
-<h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-5">
+<h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['classes_opening_brace'</span> <span class="pre">=&gt;</span> <span class="pre">'same_line']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
@@ -207,8 +199,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="example-7">
-<h3>Example #7<a class="headerlink" href="#example-7" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-6">
+<h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['anonymous_classes_opening_brace'</span> <span class="pre">=&gt;</span> <span class="pre">'next_line_unless_newline_at_signature_end']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
@@ -220,8 +212,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="example-8">
-<h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-7">
+<h3>Example #7<a class="headerlink" href="#example-7" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
@@ -234,8 +226,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="example-9">
-<h3>Example #9<a class="headerlink" href="#example-9" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-8">
+<h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['allow_single_line_anonymous_functions'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
@@ -254,25 +246,24 @@
 <div class="section" id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
-<dl>
-<dt>&#64;PER</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PER.html"><span class="doc">&#64;PER</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">curly_braces_position</span></code> rule with the config below:</p>
+<ul>
+<li><p><a class="reference internal" href="../../ruleSets/PER.html"><span class="doc">&#64;PER</span></a> with config:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
-</dd>
-<dt>&#64;PER-CS1.0</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">curly_braces_position</span></code> rule with the config below:</p>
+</li>
+<li><p><a class="reference internal" href="../../ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> with config:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
-</dd>
-<dt>&#64;PSR2</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">curly_braces_position</span></code> rule with the default config.</p>
-</dd>
-<dt>&#64;PSR12</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">curly_braces_position</span></code> rule with the config below:</p>
+</li>
+<li><p><a class="reference internal" href="../../ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> with config:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
-</dd>
-<dt>&#64;PhpCsFixer</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">curly_braces_position</span></code> rule with the config below:</p>
+</li>
+<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> with config:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['allow_single_line_anonymous_functions'</span> <span class="pre">=&gt;</span> <span class="pre">true,</span> <span class="pre">'allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
-</dd>
-<dt>&#64;Symfony</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">curly_braces_position</span></code> rule with the config below:</p>
+</li>
+<li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> with config:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['allow_single_line_anonymous_functions'</span> <span class="pre">=&gt;</span> <span class="pre">true,</span> <span class="pre">'allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
-</dd>
-</dl>
+</li>
+</ul>
 </div>
 </div>
 

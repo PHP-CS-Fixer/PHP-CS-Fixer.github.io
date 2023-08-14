@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Chips & Pizza (v3.22.0)</strong> edition
+                <strong>First Steps (v3.23.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -119,6 +119,9 @@
 </li>
 <li><p><a class="reference internal" href="array_notation/normalize_index_brace.html"><span class="doc">normalize_index_brace</span></a></p>
 <p>Array index should always be written by using square braces.</p>
+</li>
+<li><p><a class="reference internal" href="array_notation/return_to_yield_from.html"><span class="doc">return_to_yield_from</span></a></p>
+<p>If the function explicitly returns an array, and has the return type <code class="docutils literal notranslate"><span class="pre">iterable</span></code>, then <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">from</span></code> must be used instead of <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p>
 </li>
 <li><p><a class="reference internal" href="array_notation/trim_array_spaces.html"><span class="doc">trim_array_spaces</span></a></p>
 <p>Arrays should be formatted like function/method arguments, without leading or trailing single line space.</p>
@@ -456,7 +459,7 @@
 <p>EXPERIMENTAL: Takes <code class="docutils literal notranslate"><span class="pre">&#64;var</span></code> annotation of non-mixed types and adjusts accordingly the property signature. Requires PHP &gt;= 7.4.</p>
 </li>
 <li><p><a class="reference internal" href="function_notation/phpdoc_to_return_type.html"><span class="doc">phpdoc_to_return_type</span></a> <em>(risky)</em></p>
-<p>EXPERIMENTAL: Takes <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> annotation of non-mixed types and adjusts accordingly the function signature. Requires PHP &gt;= 7.0.</p>
+<p>EXPERIMENTAL: Takes <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> annotation of non-mixed types and adjusts accordingly the function signature.</p>
 </li>
 <li><p><a class="reference internal" href="function_notation/regular_callable_call.html"><span class="doc">regular_callable_call</span></a> <em>(risky)</em></p>
 <p>Callables must be called without using <code class="docutils literal notranslate"><span class="pre">call_user_func*</span></code> when possible.</p>
@@ -627,7 +630,7 @@
 <p>There should not be useless concat operations.</p>
 </li>
 <li><p><a class="reference internal" href="operator/no_useless_nullsafe_operator.html"><span class="doc">no_useless_nullsafe_operator</span></a></p>
-<p>There should not be useless <code class="docutils literal notranslate"><span class="pre">null-safe-operators</span></code> <code class="docutils literal notranslate"><span class="pre">?-&gt;</span></code> used.</p>
+<p>There should not be useless Null-safe operator <code class="docutils literal notranslate"><span class="pre">?-&gt;</span></code> used.</p>
 </li>
 <li><p><a class="reference internal" href="operator/not_operator_with_space.html"><span class="doc">not_operator_with_space</span></a></p>
 <p>Logical NOT operators (<code class="docutils literal notranslate"><span class="pre">!</span></code>) should have leading and trailing whitespaces.</p>
@@ -949,7 +952,7 @@
 <p>Remove extra spaces in a nullable typehint.</p>
 </li>
 <li><p><a class="reference internal" href="whitespace/heredoc_indentation.html"><span class="doc">heredoc_indentation</span></a></p>
-<p>Heredoc/nowdoc content must be properly indented. Requires PHP &gt;= 7.3.</p>
+<p>Heredoc/nowdoc content must be properly indented.</p>
 </li>
 <li><p><a class="reference internal" href="whitespace/indentation_type.html"><span class="doc">indentation_type</span></a></p>
 <p>Code MUST use configured indentation type.</p>
@@ -966,7 +969,7 @@
 <li><p><a class="reference internal" href="whitespace/no_spaces_around_offset.html"><span class="doc">no_spaces_around_offset</span></a></p>
 <p>There MUST NOT be spaces around offset braces.</p>
 </li>
-<li><p><a class="reference internal" href="whitespace/no_spaces_inside_parenthesis.html"><span class="doc">no_spaces_inside_parenthesis</span></a></p>
+<li><p><a class="reference internal" href="whitespace/no_spaces_inside_parenthesis.html"><span class="doc">no_spaces_inside_parenthesis</span></a> <em>(deprecated)</em></p>
 <p>There MUST NOT be a space after the opening parenthesis. There MUST NOT be a space before the closing parenthesis.</p>
 </li>
 <li><p><a class="reference internal" href="whitespace/no_trailing_whitespace.html"><span class="doc">no_trailing_whitespace</span></a></p>
@@ -977,6 +980,9 @@
 </li>
 <li><p><a class="reference internal" href="whitespace/single_blank_line_at_eof.html"><span class="doc">single_blank_line_at_eof</span></a></p>
 <p>A PHP file without end tag must always end with a single empty line feed.</p>
+</li>
+<li><p><a class="reference internal" href="whitespace/spaces_inside_parentheses.html"><span class="doc">spaces_inside_parentheses</span></a></p>
+<p>Parentheses must be declared using the configured whitespace.</p>
 </li>
 <li><p><a class="reference internal" href="whitespace/statement_indentation.html"><span class="doc">statement_indentation</span></a></p>
 <p>Each statement must be indented.</p>

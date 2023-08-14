@@ -62,28 +62,23 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-no-empty-phpdoc">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">no_empty_phpdoc</span></code><a class="headerlink" href="#rule-no-empty-phpdoc" title="Permalink to this headline">¶</a></h1>
-<p>There should not be empty PHPDoc blocks.</p>
+  <div class="section" id="rule-return-to-yield-from">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">return_to_yield_from</span></code><a class="headerlink" href="#rule-return-to-yield-from" title="Permalink to this headline">¶</a></h1>
+<p>If the function explicitly returns an array, and has the return type
+<code class="docutils literal notranslate"><span class="pre">iterable</span></code>, then <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">from</span></code> must be used instead of <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
-<span class="gd">-&lt;?php /**  */</span><span class="w"></span>
-<span class="gi">+&lt;?php</span><span class="w"></span>
+<span class="w"> </span>&lt;?php function giveMeData(): iterable {<span class="w"></span>
+<span class="gd">-    return [1, 2, 3];</span><span class="w"></span>
+<span class="gi">+    yield from [1, 2, 3];</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
-<p>The rule is part of the following rule sets:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
-</ul>
 </div>
 </div>
 

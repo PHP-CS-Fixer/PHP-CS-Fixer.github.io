@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Chips & Pizza (v3.22.0)</strong> edition
+                <strong>First Steps (v3.23.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -251,11 +251,13 @@
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
-
-<span class="w"> </span>if (true) {<span class="w"></span>
-<span class="w"> </span>    $foo = $bar;<span class="w"></span>
+<span class="w"> </span>function getValues() {<span class="w"></span>
+<span class="w"> </span>    yield 1;<span class="w"></span>
 <span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>    yield $foo;<span class="w"></span>
+<span class="w"> </span>    yield 2;<span class="w"></span>
+<span class="gi">+</span><span class="w"></span>
+<span class="w"> </span>    // comment<span class="w"></span>
+<span class="w"> </span>    yield 3;<span class="w"></span>
 <span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
@@ -264,14 +266,14 @@
 <div class="section" id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
-<dl>
-<dt>&#64;PhpCsFixer</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">blank_line_before_statement</span></code> rule with the config below:</p>
+<ul>
+<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> with config:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['break',</span> <span class="pre">'case',</span> <span class="pre">'continue',</span> <span class="pre">'declare',</span> <span class="pre">'default',</span> <span class="pre">'exit',</span> <span class="pre">'goto',</span> <span class="pre">'include',</span> <span class="pre">'include_once',</span> <span class="pre">'phpdoc',</span> <span class="pre">'require',</span> <span class="pre">'require_once',</span> <span class="pre">'return',</span> <span class="pre">'switch',</span> <span class="pre">'throw',</span> <span class="pre">'try',</span> <span class="pre">'yield',</span> <span class="pre">'yield_from']]</span></code></p>
-</dd>
-<dt>&#64;Symfony</dt><dd><p>Using the <a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> rule set will enable the <code class="docutils literal notranslate"><span class="pre">blank_line_before_statement</span></code> rule with the config below:</p>
+</li>
+<li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> with config:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['return']]</span></code></p>
-</dd>
-</dl>
+</li>
+</ul>
 </div>
 </div>
 

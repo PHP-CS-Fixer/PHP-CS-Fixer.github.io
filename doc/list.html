@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Chips & Pizza (v3.22.0)</strong> edition
+                <strong>First Steps (v3.23.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -71,7 +71,7 @@
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">comment_type</span></code></div>
-<div class="line">Whether to fix PHPDoc comments only (<cite>phpdocs_only</cite>), any multi-line comment whose lines all start with an asterisk (<cite>phpdocs_like</cite>) or any multi-line comment (<cite>all_multiline</cite>).</div>
+<div class="line">Whether to fix PHPDoc comments only (<code class="docutils literal notranslate"><span class="pre">phpdocs_only</span></code>), any multi-line comment whose lines all start with an asterisk (<code class="docutils literal notranslate"><span class="pre">phpdocs_like</span></code>) or any multi-line comment (<code class="docutils literal notranslate"><span class="pre">all_multiline</span></code>).</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'all_multiline'</span></code>, <code class="docutils literal notranslate"><span class="pre">'phpdocs_like'</span></code> and <code class="docutils literal notranslate"><span class="pre">'phpdocs_only'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'phpdocs_only'</span></code></div>
 </div>
@@ -97,7 +97,7 @@
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">syntax</span></code></div>
-<div class="line">Whether to use the <cite>long</cite> or <cite>short</cite> array syntax.</div>
+<div class="line">Whether to use the <code class="docutils literal notranslate"><span class="pre">long</span></code> or <code class="docutils literal notranslate"><span class="pre">short</span></code> array syntax.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'long'</span></code> and <code class="docutils literal notranslate"><span class="pre">'short'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'short'</span></code></div>
 </div>
@@ -125,19 +125,19 @@ single-quotes, double-quotes and backticks are not used inside the command.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">default</span></code></div>
 <div class="line">Default fix strategy.</div>
-<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'align'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_minimal'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_minimal_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'no_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single_space'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'align'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_minimal'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_minimal_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'at_least_single_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">'no_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single_space'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'single_space'</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">operators</span></code></div>
-<div class="line">Dictionary of <cite>binary operator</cite> =&gt; <cite>fix strategy</cite> values that differ from the default strategy. Supported are: <cite>=</cite>, <cite>*</cite>, <cite>/</cite>, <cite>%</cite>, <cite>&lt;</cite>, <cite>&gt;</cite>, <cite>|</cite>, <cite>^</cite>, <cite>+</cite>, <cite>-</cite>, <cite>&amp;</cite>, <cite>&amp;=</cite>, <cite>&amp;&amp;</cite>, <cite>||</cite>, <cite>.=</cite>, <cite>/=</cite>, <cite>=&gt;</cite>, <cite>==</cite>, <cite>&gt;=</cite>, <cite>===</cite>, <cite>!=</cite>, <cite>&lt;&gt;</cite>, <cite>!==</cite>, <cite>&lt;=</cite>, <cite>and</cite>, <cite>or</cite>, <cite>xor</cite>, <cite>-=</cite>, <cite>%=</cite>, <cite>*=</cite>, <cite>|=</cite>, <cite>+=</cite>, <cite>&lt;&lt;</cite>, <cite>&lt;&lt;=</cite>, <cite>&gt;&gt;</cite>, <cite>&gt;&gt;=</cite>, <cite>^=</cite>, <cite>**</cite>, <cite>**=</cite>, <cite>&lt;=&gt;</cite>, <cite>??</cite> and <cite>??=</cite>.</div>
+<div class="line">Dictionary of <code class="docutils literal notranslate"><span class="pre">binary</span> <span class="pre">operator</span></code> =&gt; <code class="docutils literal notranslate"><span class="pre">fix</span> <span class="pre">strategy</span></code> values that differ from the default strategy. Supported are: <code class="docutils literal notranslate"><span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">%</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">|</span></code>, <code class="docutils literal notranslate"><span class="pre">^</span></code>, <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">&amp;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">||</span></code>, <code class="docutils literal notranslate"><span class="pre">.=</span></code>, <code class="docutils literal notranslate"><span class="pre">/=</span></code>, <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">===</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">!==</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">xor</span></code>, <code class="docutils literal notranslate"><span class="pre">-=</span></code>, <code class="docutils literal notranslate"><span class="pre">%=</span></code>, <code class="docutils literal notranslate"><span class="pre">*=</span></code>, <code class="docutils literal notranslate"><span class="pre">|=</span></code>, <code class="docutils literal notranslate"><span class="pre">+=</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">^=</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code>, <code class="docutils literal notranslate"><span class="pre">**=</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">??</span></code> and <code class="docutils literal notranslate"><span class="pre">??=</span></code>.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></div>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Operator/BinaryOperatorSpacesFixer.php">Source PhpCsFixer\Fixer\Operator\BinaryOperatorSpacesFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/namespace_notation/blank_lines_before_namespace.html"><span class="doc">blank_lines_before_namespace</span></a></p>
@@ -259,7 +259,7 @@ single-quotes, double-quotes and backticks are not used inside the command.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">elements</span></code></div>
-<div class="line">Dictionary of <cite>const|method|property|trait_import|case</cite> =&gt; <cite>none|one|only_if_meta</cite> values.</div>
+<div class="line">Dictionary of <code class="docutils literal notranslate"><span class="pre">const|method|property|trait_import|case</span></code> =&gt; <code class="docutils literal notranslate"><span class="pre">none|one|only_if_meta</span></code> values.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['const'</span> <span class="pre">=&gt;</span> <span class="pre">'one',</span> <span class="pre">'method'</span> <span class="pre">=&gt;</span> <span class="pre">'one',</span> <span class="pre">'property'</span> <span class="pre">=&gt;</span> <span class="pre">'one',</span> <span class="pre">'trait_import'</span> <span class="pre">=&gt;</span> <span class="pre">'none',</span> <span class="pre">'case'</span> <span class="pre">=&gt;</span> <span class="pre">'none']</span></code></div>
 </div>
@@ -386,7 +386,7 @@ new column in database.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">case</span></code></div>
-<div class="line">Whether to use the <cite>upper</cite> or <cite>lower</cite> case syntax.</div>
+<div class="line">Whether to use the <code class="docutils literal notranslate"><span class="pre">upper</span></code> or <code class="docutils literal notranslate"><span class="pre">lower</span></code> case syntax.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'lower'</span></code> and <code class="docutils literal notranslate"><span class="pre">'upper'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'lower'</span></code></div>
 </div>
@@ -635,28 +635,28 @@ assignment operator.</p>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">before_array_assignments_equals</span></code></div>
-<div class="line">Whether to add, remove or ignore spaces before array <cite>=</cite> assignment operator.</div>
+<div class="line">Whether to add, remove or ignore spaces before array <code class="docutils literal notranslate"><span class="pre">=</span></code> assignment operator.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">after_array_assignments_equals</span></code></div>
-<div class="line">Whether to add, remove or ignore spaces after array assignment <cite>=</cite> operator.</div>
+<div class="line">Whether to add, remove or ignore spaces after array assignment <code class="docutils literal notranslate"><span class="pre">=</span></code> operator.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">before_array_assignments_colon</span></code></div>
-<div class="line">Whether to add, remove or ignore spaces before array <cite>:</cite> assignment operator.</div>
+<div class="line">Whether to add, remove or ignore spaces before array <code class="docutils literal notranslate"><span class="pre">:</span></code> assignment operator.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">after_array_assignments_colon</span></code></div>
-<div class="line">Whether to add, remove or ignore spaces after array assignment <cite>:</cite> operator.</div>
+<div class="line">Whether to add, remove or ignore spaces after array assignment <code class="docutils literal notranslate"><span class="pre">:</span></code> operator.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
@@ -748,21 +748,21 @@ if <code class="docutils literal notranslate"><span class="pre">trigger_error</s
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">mute_deprecation_error</span></code></div>
-<div class="line">Whether to add <cite>&#64;</cite> in deprecation notices.</div>
+<div class="line">Whether to add <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> in deprecation notices.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">noise_remaining_usages</span></code></div>
-<div class="line">Whether to remove <cite>&#64;</cite> in remaining usages.</div>
+<div class="line">Whether to remove <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> in remaining usages.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">noise_remaining_usages_exclude</span></code></div>
-<div class="line">List of global functions to exclude from removing <cite>&#64;</cite>.</div>
+<div class="line">List of global functions to exclude from removing <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></div>
 </div>
@@ -908,7 +908,7 @@ override a method, use the Template method pattern.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">b_mode</span></code></div>
-<div class="line">The <cite>b</cite> flag must be used (<cite>true</cite>) or omitted (<cite>false</cite>).</div>
+<div class="line">The <code class="docutils literal notranslate"><span class="pre">b</span></code> flag must be used (<code class="docutils literal notranslate"><span class="pre">true</span></code>) or omitted (<code class="docutils literal notranslate"><span class="pre">false</span></code>).</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
@@ -989,7 +989,7 @@ override a method, use the Template method pattern.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">annotations</span></code></div>
-<div class="line">List of annotations to remove, e.g. <cite>[“author”]</cite>.</div>
+<div class="line">List of annotations to remove, e.g. <code class="docutils literal notranslate"><span class="pre">[&quot;author&quot;]</span></code>.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></div>
 </div>
@@ -1115,7 +1115,7 @@ override a method, use the Template method pattern.</p>
 <p><a class="reference external" href="./../src/Fixer/Comment/HeaderCommentFixer.php">Source PhpCsFixer\Fixer\Comment\HeaderCommentFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/whitespace/heredoc_indentation.html"><span class="doc">heredoc_indentation</span></a></p>
-<p>Heredoc/nowdoc content must be properly indented. Requires PHP &gt;= 7.3.</p>
+<p>Heredoc/nowdoc content must be properly indented.</p>
 <p>Configuration options:</p>
 <ul>
 <li><div class="line-block">
@@ -1197,7 +1197,7 @@ override a method, use the Template method pattern.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">syntax</span></code></div>
-<div class="line">Whether to use the <cite>long</cite> or <cite>short</cite> <cite>list</cite> syntax.</div>
+<div class="line">Whether to use the <code class="docutils literal notranslate"><span class="pre">long</span></code> or <code class="docutils literal notranslate"><span class="pre">short</span></code> syntax for array destructuring.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'long'</span></code> and <code class="docutils literal notranslate"><span class="pre">'short'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'short'</span></code></div>
 </div>
@@ -1246,6 +1246,7 @@ byte size rather than its length in characters.</p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/method_argument_space.html"><span class="doc">method_argument_space</span></a></p>
 <p>In method arguments and method call, there MUST NOT be a space before each comma and there MUST be one space after each comma. Argument lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument per line.</p>
+<p>This fixer covers rules defined in PSR2 ¶4.4, ¶4.6.</p>
 <p>Configuration options:</p>
 <ul>
 <li><div class="line-block">
@@ -1319,7 +1320,7 @@ overridden.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">fix_built_in</span></code></div>
-<div class="line">Whether to fix constants returned by <cite>get_defined_constants</cite>. User constants are not accounted in this list and must be specified in the include one.</div>
+<div class="line">Whether to fix constants returned by <code class="docutils literal notranslate"><span class="pre">get_defined_constants</span></code>. User constants are not accounted in this list and must be specified in the include one.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
@@ -1347,7 +1348,7 @@ overridden.</p>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">strict</span></code></div>
-<div class="line">Whether leading <a href="#id1"><span class="problematic" id="id2">`</span></a>` of constant invocation not meant to have it should be removed.</div>
+<div class="line">Whether leading <code class="docutils literal notranslate"><span class="pre">\</span></code> of constant invocation not meant to have it should be removed.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
@@ -1375,7 +1376,7 @@ overridden.</p>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">include</span></code></div>
-<div class="line">List of function names or sets to fix. Defined sets are <cite>&#64;internal</cite> (all native functions), <cite>&#64;all</cite> (all global functions) and <cite>&#64;compiler_optimized</cite> (functions that are specially optimized by Zend).</div>
+<div class="line">List of function names or sets to fix. Defined sets are <code class="docutils literal notranslate"><span class="pre">&#64;internal</span></code> (all native functions), <code class="docutils literal notranslate"><span class="pre">&#64;all</span></code> (all global functions) and <code class="docutils literal notranslate"><span class="pre">&#64;compiler_optimized</span></code> (functions that are specially optimized by Zend).</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['&#64;compiler_optimized']</span></code></div>
 </div>
@@ -1389,7 +1390,7 @@ overridden.</p>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">strict</span></code></div>
-<div class="line">Whether leading <a href="#id3"><span class="problematic" id="id4">`</span></a>` of function call not meant to have it should be removed.</div>
+<div class="line">Whether leading <code class="docutils literal notranslate"><span class="pre">\</span></code> of function call not meant to have it should be removed.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
@@ -1468,24 +1469,24 @@ overridden.</p>
 </li>
 </ul>
 <ul>
-<li><p><cite>&#64;all</cite> (all listed sets);</p></li>
-<li><p><cite>&#64;internal</cite> (native functions);</p></li>
-<li><p><cite>&#64;exif</cite> (EXIF functions);</p></li>
-<li><p><cite>&#64;ftp</cite> (FTP functions);</p></li>
-<li><p><cite>&#64;IMAP</cite> (IMAP functions);</p></li>
-<li><p><cite>&#64;ldap</cite> (LDAP functions);</p></li>
-<li><p><cite>&#64;mbreg</cite> (from <cite>ext-mbstring</cite>);</p></li>
-<li><p><cite>&#64;mysqli</cite> (mysqli functions);</p></li>
-<li><p><cite>&#64;oci</cite> (oci functions);</p></li>
-<li><p><cite>&#64;odbc</cite> (odbc functions);</p></li>
-<li><p><cite>&#64;openssl</cite> (openssl functions);</p></li>
-<li><p><cite>&#64;pcntl</cite> (PCNTL functions);</p></li>
-<li><p><cite>&#64;pg</cite> (pg functions);</p></li>
-<li><p><cite>&#64;posix</cite> (POSIX functions);</p></li>
-<li><p><cite>&#64;snmp</cite> (SNMP functions);</p></li>
-<li><p><cite>&#64;sodium</cite> (libsodium functions);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;all</span></code> (all listed sets);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;internal</span></code> (native functions);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;exif</span></code> (EXIF functions);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;ftp</span></code> (FTP functions);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;IMAP</span></code> (IMAP functions);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;ldap</span></code> (LDAP functions);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;mbreg</span></code> (from <code class="docutils literal notranslate"><span class="pre">ext-mbstring</span></code>);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;mysqli</span></code> (mysqli functions);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;oci</span></code> (oci functions);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;odbc</span></code> (odbc functions);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;openssl</span></code> (openssl functions);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;pcntl</span></code> (PCNTL functions);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;pg</span></code> (pg functions);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;posix</span></code> (POSIX functions);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;snmp</span></code> (SNMP functions);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;sodium</span></code> (libsodium functions);</p></li>
 <li><dl>
-<dt><cite>&#64;time</cite> (time functions).</dt><dd><blockquote>
+<dt><code class="docutils literal notranslate"><span class="pre">&#64;time</span></code> (time functions).</dt><dd><blockquote>
 <div><div class="line-block">
 <div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['&#64;all',</span> <span class="pre">'&#64;exif',</span> <span class="pre">'&#64;ftp',</span> <span class="pre">'&#64;IMAP',</span> <span class="pre">'&#64;internal',</span> <span class="pre">'&#64;ldap',</span> <span class="pre">'&#64;mbreg',</span> <span class="pre">'&#64;mysqli',</span> <span class="pre">'&#64;oci',</span> <span class="pre">'&#64;odbc',</span> <span class="pre">'&#64;openssl',</span> <span class="pre">'&#64;pcntl',</span> <span class="pre">'&#64;pg',</span> <span class="pre">'&#64;posix',</span> <span class="pre">'&#64;snmp',</span> <span class="pre">'&#64;sodium',</span> <span class="pre">'&#64;time']</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['&#64;internal',</span> <span class="pre">'&#64;IMAP',</span> <span class="pre">'&#64;pg']</span></code></div>
@@ -1676,7 +1677,7 @@ parent one.</p>
 </li>
 <li><p><a class="reference internal" href="rules/whitespace/no_spaces_inside_parenthesis.html"><span class="doc">no_spaces_inside_parenthesis</span></a></p>
 <p>There MUST NOT be a space after the opening parenthesis. There MUST NOT be a space before the closing parenthesis.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p><em>warning deprecated</em>   Use <code class="docutils literal notranslate"><span class="pre">spaces_inside_parentheses</span></code> instead.</p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/NoSpacesInsideParenthesisFixer.php">Source PhpCsFixer\Fixer\Whitespace\NoSpacesInsideParenthesisFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/operator/no_space_around_double_colon.html"><span class="doc">no_space_around_double_colon</span></a></p>
@@ -1695,21 +1696,21 @@ parent one.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">allow_mixed</span></code></div>
-<div class="line">Whether type <cite>mixed</cite> without description is allowed (<cite>true</cite>) or considered superfluous (<cite>false</cite>).</div>
+<div class="line">Whether type <code class="docutils literal notranslate"><span class="pre">mixed</span></code> without description is allowed (<code class="docutils literal notranslate"><span class="pre">true</span></code>) or considered superfluous (<code class="docutils literal notranslate"><span class="pre">false</span></code>).</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">remove_inheritdoc</span></code></div>
-<div class="line">Remove <cite>&#64;inheritDoc</cite> tags.</div>
+<div class="line">Remove <code class="docutils literal notranslate"><span class="pre">&#64;inheritDoc</span></code> tags.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">allow_unused_params</span></code></div>
-<div class="line">Whether <cite>param</cite> annotation without actual signature is allowed (<cite>true</cite>) or considered superfluous (<cite>false</cite>).</div>
+<div class="line">Whether <code class="docutils literal notranslate"><span class="pre">param</span></code> annotation without actual signature is allowed (<code class="docutils literal notranslate"><span class="pre">true</span></code>) or considered superfluous (<code class="docutils literal notranslate"><span class="pre">false</span></code>).</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
 </div>
@@ -1802,7 +1803,7 @@ outputs.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">private_methods</span></code></div>
-<div class="line">Private methods of non-<cite>final</cite> classes must not be declared <cite>final</cite>.</div>
+<div class="line">Private methods of non-<code class="docutils literal notranslate"><span class="pre">final</span></code> classes must not be declared <code class="docutils literal notranslate"><span class="pre">final</span></code>.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
@@ -1865,7 +1866,7 @@ assignments to properties whose type declaration does not allow it.</p>
 <p><a class="reference external" href="./../src/Fixer/ControlStructure/NoUselessElseFixer.php">Source PhpCsFixer\Fixer\ControlStructure\NoUselessElseFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/operator/no_useless_nullsafe_operator.html"><span class="doc">no_useless_nullsafe_operator</span></a></p>
-<p>There should not be useless <code class="docutils literal notranslate"><span class="pre">null-safe-operators</span></code> <code class="docutils literal notranslate"><span class="pre">?-&gt;</span></code> used.</p>
+<p>There should not be useless Null-safe operator <code class="docutils literal notranslate"><span class="pre">?-&gt;</span></code> used.</p>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Operator/NoUselessNullsafeOperatorFixer.php">Source PhpCsFixer\Fixer\Operator\NoUselessNullsafeOperatorFixer</a></p>
 </li>
@@ -1906,7 +1907,7 @@ assignments to properties whose type declaration does not allow it.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">syntax</span></code></div>
-<div class="line">Whether to use question mark (<cite>?</cite>) or explicit <cite>null</cite> union for nullable type.</div>
+<div class="line">Whether to use question mark (<code class="docutils literal notranslate"><span class="pre">?</span></code>) or explicit <code class="docutils literal notranslate"><span class="pre">null</span></code> union for nullable type.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'question_mark'</span></code> and <code class="docutils literal notranslate"><span class="pre">'union'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'question_mark'</span></code></div>
 </div>
@@ -1921,7 +1922,7 @@ assignments to properties whose type declaration does not allow it.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">use_nullable_type_declaration</span></code></div>
-<div class="line">Whether to add or remove <cite>?</cite> or <cite>|null</cite> to parameters with a default <cite>null</cite> value.</div>
+<div class="line">Whether to add or remove <code class="docutils literal notranslate"><span class="pre">?</span></code> or <code class="docutils literal notranslate"><span class="pre">|null</span></code> to parameters with a default <code class="docutils literal notranslate"><span class="pre">null</span></code> value.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
@@ -2073,7 +2074,7 @@ custom patterns.</p>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">null_adjustment</span></code></div>
-<div class="line">Forces the position of <cite>null</cite> (overrides <cite>sort_algorithm</cite>).</div>
+<div class="line">Forces the position of <code class="docutils literal notranslate"><span class="pre">null</span></code> (overrides <code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code>).</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'always_first'</span></code>, <code class="docutils literal notranslate"><span class="pre">'always_last'</span></code> and <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'always_first'</span></code></div>
 </div>
@@ -2087,7 +2088,7 @@ custom patterns.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">only_untyped</span></code></div>
-<div class="line">Whether to add missing <cite>&#64;param</cite> annotations for untyped parameters only.</div>
+<div class="line">Whether to add missing <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> annotations for untyped parameters only.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
@@ -2102,7 +2103,7 @@ custom patterns.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">tags</span></code></div>
-<div class="line">The tags that should be aligned.</div>
+<div class="line">The tags that should be aligned. Allowed values are tags with name (<code class="docutils literal notranslate"><span class="pre">'param',</span> <span class="pre">'property',</span> <span class="pre">'property-read',</span> <span class="pre">'property-write',</span> <span class="pre">'phpstan-param',</span> <span class="pre">'phpstan-property',</span> <span class="pre">'phpstan-property-read',</span> <span class="pre">'phpstan-property-write',</span> <span class="pre">'phpstan-assert',</span> <span class="pre">'phpstan-assert-if-true',</span> <span class="pre">'phpstan-assert-if-false',</span> <span class="pre">'psalm-param',</span> <span class="pre">'psalm-param-out',</span> <span class="pre">'psalm-property',</span> <span class="pre">'psalm-property-read',</span> <span class="pre">'psalm-property-write',</span> <span class="pre">'psalm-assert',</span> <span class="pre">'psalm-assert-if-true',</span> <span class="pre">'psalm-assert-if-false'</span></code>), tags with method signature (<code class="docutils literal notranslate"><span class="pre">'method',</span> <span class="pre">'phpstan-method',</span> <span class="pre">'psalm-method'</span></code>) and any custom tag with description (e.g. <code class="docutils literal notranslate"><span class="pre">&#64;tag</span> <span class="pre">&lt;desc&gt;</span></code>).</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['method',</span> <span class="pre">'param',</span> <span class="pre">'property',</span> <span class="pre">'return',</span> <span class="pre">'throws',</span> <span class="pre">'type',</span> <span class="pre">'var']</span></code></div>
 </div>
@@ -2227,7 +2228,7 @@ custom patterns.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">annotations</span></code></div>
-<div class="line">List of annotations to order, e.g. <cite>[“covers”]</cite>.</div>
+<div class="line">List of annotations to order, e.g. <code class="docutils literal notranslate"><span class="pre">[&quot;covers&quot;]</span></code>.</div>
 <div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['author',</span> <span class="pre">'covers',</span> <span class="pre">'coversNothing',</span> <span class="pre">'dataProvider',</span> <span class="pre">'depends',</span> <span class="pre">'group',</span> <span class="pre">'internal',</span> <span class="pre">'method',</span> <span class="pre">'mixin',</span> <span class="pre">'property',</span> <span class="pre">'property-read',</span> <span class="pre">'property-write',</span> <span class="pre">'requires',</span> <span class="pre">'throws',</span> <span class="pre">'uses']</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['covers']</span></code></div>
 </div>
@@ -2276,7 +2277,7 @@ custom patterns.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">groups</span></code></div>
-<div class="line">Sets of annotation types to be grouped together. Use <cite>*</cite> to match any tag character.</div>
+<div class="line">Sets of annotation types to be grouped together. Use <code class="docutils literal notranslate"><span class="pre">*</span></code> to match any tag character.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">string[][]</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">[['deprecated',</span> <span class="pre">'link',</span> <span class="pre">'see',</span> <span class="pre">'since'],</span> <span class="pre">['author',</span> <span class="pre">'copyright',</span> <span class="pre">'license'],</span> <span class="pre">['category',</span> <span class="pre">'package',</span> <span class="pre">'subpackage'],</span> <span class="pre">['property',</span> <span class="pre">'property-read',</span> <span class="pre">'property-write']]</span></code></div>
 </div>
@@ -2385,7 +2386,7 @@ before initialization.</p>
 <p><a class="reference external" href="./../src/Fixer/FunctionNotation/PhpdocToPropertyTypeFixer.php">Source PhpCsFixer\Fixer\FunctionNotation\PhpdocToPropertyTypeFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/phpdoc_to_return_type.html"><span class="doc">phpdoc_to_return_type</span></a></p>
-<p>EXPERIMENTAL: Takes <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> annotation of non-mixed types and adjusts accordingly the function signature. Requires PHP &gt;= 7.0.</p>
+<p>EXPERIMENTAL: Takes <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> annotation of non-mixed types and adjusts accordingly the function signature.</p>
 <p><em>warning risky</em> This rule is EXPERIMENTAL and [1] is not covered with backward compatibility
 promise. [2] <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> annotation is mandatory for the fixer to make
 changes, signatures of methods without it (no docblock, inheritdocs) will not
@@ -2441,7 +2442,7 @@ properly documented.</p>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">null_adjustment</span></code></div>
-<div class="line">Forces the position of <cite>null</cite> (overrides <cite>sort_algorithm</cite>).</div>
+<div class="line">Forces the position of <code class="docutils literal notranslate"><span class="pre">null</span></code> (overrides <code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code>).</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'always_first'</span></code>, <code class="docutils literal notranslate"><span class="pre">'always_last'</span></code> and <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'always_first'</span></code></div>
 </div>
@@ -2753,7 +2754,7 @@ has PHPUnit incompatibilities.</p>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">methods</span></code></div>
-<div class="line">Dictionary of <cite>method</cite> =&gt; <cite>call_type</cite> values that differ from the default strategy.</div>
+<div class="line">Dictionary of <code class="docutils literal notranslate"><span class="pre">method</span></code> =&gt; <code class="docutils literal notranslate"><span class="pre">call_type</span></code> values that differ from the default strategy.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></div>
 </div>
@@ -2824,6 +2825,10 @@ overridden or when are used in constructions that should be avoided, like
 <p>Local, dynamic and directly referenced variables should not be assigned and directly returned by a function or method.</p>
 <p>Part of rule set <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ReturnNotation/ReturnAssignmentFixer.php">Source PhpCsFixer\Fixer\ReturnNotation\ReturnAssignmentFixer</a></p>
+</li>
+<li><p><a class="reference internal" href="rules/array_notation/return_to_yield_from.html"><span class="doc">return_to_yield_from</span></a></p>
+<p>If the function explicitly returns an array, and has the return type <code class="docutils literal notranslate"><span class="pre">iterable</span></code>, then <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">from</span></code> must be used instead of <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p>
+<p><a class="reference external" href="./../src/Fixer/ArrayNotation/ReturnToYieldFromFixer.php">Source PhpCsFixer\Fixer\ArrayNotation\ReturnToYieldFromFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/return_type_declaration.html"><span class="doc">return_type_declaration</span></a></p>
 <p>Adjust spacing around colon in return type declarations and backed enum types.</p>
@@ -3023,13 +3028,31 @@ binding.</p>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ClassNotation/SingleTraitInsertPerStatementFixer.php">Source PhpCsFixer\Fixer\ClassNotation\SingleTraitInsertPerStatementFixer</a></p>
 </li>
+<li><p><a class="reference internal" href="rules/whitespace/spaces_inside_parentheses.html"><span class="doc">spaces_inside_parentheses</span></a></p>
+<p>Parentheses must be declared using the configured whitespace.</p>
+<p>By default there are not any additional spaces inside parentheses, however
+with <code class="docutils literal notranslate"><span class="pre">space=single</span></code> configuration option whitespace inside parentheses will
+be unified to single space.</p>
+<p>Configuration options:</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">space</span></code></div>
+<div class="line">Whether to have <code class="docutils literal notranslate"><span class="pre">single</span></code> or <code class="docutils literal notranslate"><span class="pre">none</span></code> space inside parentheses.</div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code> and <code class="docutils literal notranslate"><span class="pre">'single'</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
+</div>
+</li>
+</ul>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p><a class="reference external" href="./../src/Fixer/Whitespace/SpacesInsideParenthesesFixer.php">Source PhpCsFixer\Fixer\Whitespace\SpacesInsideParenthesesFixer</a></p>
+</li>
 <li><p><a class="reference internal" href="rules/semicolon/space_after_semicolon.html"><span class="doc">space_after_semicolon</span></a></p>
 <p>Fix whitespace after a semicolon.</p>
 <p>Configuration options:</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">remove_in_empty_for_expressions</span></code></div>
-<div class="line">Whether spaces should be removed for empty <cite>for</cite> expressions.</div>
+<div class="line">Whether spaces should be removed for empty <code class="docutils literal notranslate"><span class="pre">for</span></code> expressions.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
 </div>
@@ -3131,7 +3154,7 @@ comparisons and outputs.</p>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">elements</span></code></div>
-<div class="line">Where to fix multiline trailing comma (PHP &gt;= 8.0 for <cite>parameters</cite> and <cite>match</cite>).</div>
+<div class="line">Where to fix multiline trailing comma (PHP &gt;= 8.0 for <code class="docutils literal notranslate"><span class="pre">parameters</span></code> and <code class="docutils literal notranslate"><span class="pre">match</span></code>).</div>
 <div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['arguments',</span> <span class="pre">'arrays',</span> <span class="pre">'match',</span> <span class="pre">'parameters']</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['arrays']</span></code></div>
 </div>
@@ -3158,7 +3181,7 @@ comparisons and outputs.</p>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">space_multiple_catch</span></code></div>
-<div class="line">Spacing to apply around type operator when catching exceptions of multiple types, use <cite>null</cite> to follow the value configured for <cite>space</cite>.</div>
+<div class="line">Spacing to apply around type operator when catching exceptions of multiple types, use <code class="docutils literal notranslate"><span class="pre">null</span></code> to follow the value configured for <code class="docutils literal notranslate"><span class="pre">space</span></code>.</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 </div>
@@ -3200,7 +3223,7 @@ comparisons and outputs.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">elements</span></code></div>
-<div class="line">The structural elements to fix (PHP &gt;= 7.1 required for <cite>const</cite>).</div>
+<div class="line">The structural elements to fix (PHP &gt;= 7.1 required for <code class="docutils literal notranslate"><span class="pre">const</span></code>).</div>
 <div class="line">Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['const',</span> <span class="pre">'method',</span> <span class="pre">'property']</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['property',</span> <span class="pre">'method',</span> <span class="pre">'const']</span></code></div>
 </div>
@@ -3234,6 +3257,7 @@ comparisons and outputs.</p>
 <p>Yield from array must be unpacked to series of yields.</p>
 <p>The conversion will make the array in <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">from</span></code> changed in arrays of 1
 less dimension.</p>
+<p>Part of rule set <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ArrayNotation/YieldFromArrayToYieldsFixer.php">Source PhpCsFixer\Fixer\ArrayNotation\YieldFromArrayToYieldsFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/control_structure/yoda_style.html"><span class="doc">yoda_style</span></a></p>
@@ -3242,21 +3266,21 @@ less dimension.</p>
 <ul>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">equal</span></code></div>
-<div class="line">Style for equal (<cite>==</cite>, <cite>!=</cite>) statements.</div>
+<div class="line">Style for equal (<code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code>) statements.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">identical</span></code></div>
-<div class="line">Style for identical (<cite>===</cite>, <cite>!==</cite>) statements.</div>
+<div class="line">Style for identical (<code class="docutils literal notranslate"><span class="pre">===</span></code>, <code class="docutils literal notranslate"><span class="pre">!==</span></code>) statements.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">less_and_greater</span></code></div>
-<div class="line">Style for less and greater than (<cite>&lt;</cite>, <cite>&lt;=</cite>, <cite>&gt;</cite>, <cite>&gt;=</cite>) statements.</div>
+<div class="line">Style for less and greater than (<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>) statements.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 </div>
