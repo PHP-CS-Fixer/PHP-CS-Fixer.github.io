@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>First Steps (v3.23.0)</strong> edition
+                <strong>Crank Cake (v3.24.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -72,15 +72,36 @@
 <p>Risky when depending on order of the imports.</p>
 </div>
 </div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="case-sensitive">
+<h3><code class="docutils literal notranslate"><span class="pre">case_sensitive</span></code><a class="headerlink" href="#case-sensitive" title="Permalink to this headline">¶</a></h3>
+<p>Whether the sorting should be case sensitive.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</div>
+</div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php class Foo {<span class="w"></span>
 <span class="gd">-use Z; use A; }</span><span class="w"></span>
 <span class="gi">+use A; use Z; }</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-2">
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['case_sensitive'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php class Foo {<span class="w"></span>
+<span class="gd">-use Aaa; use AA; }</span><span class="w"></span>
+<span class="gi">+use AA; use Aaa; }</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

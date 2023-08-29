@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>First Steps (v3.23.0)</strong> edition
+                <strong>Crank Cake (v3.24.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -2030,6 +2030,13 @@ custom patterns.</p>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 </div>
 </li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">case_sensitive</span></code></div>
+<div class="line">Whether the sorting should be case sensitive.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
+</div>
+</li>
 </ul>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Import/OrderedImportsFixer.php">Source PhpCsFixer\Fixer\Import\OrderedImportsFixer</a></p>
@@ -2052,12 +2059,29 @@ custom patterns.</p>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'ascend'</span></code></div>
 </div>
 </li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">case_sensitive</span></code></div>
+<div class="line">Whether the sorting should be case sensitive.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
+</div>
+</li>
 </ul>
 <p><a class="reference external" href="./../src/Fixer/ClassNotation/OrderedInterfacesFixer.php">Source PhpCsFixer\Fixer\ClassNotation\OrderedInterfacesFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/ordered_traits.html"><span class="doc">ordered_traits</span></a></p>
 <p>Trait <code class="docutils literal notranslate"><span class="pre">use</span></code> statements must be sorted alphabetically.</p>
 <p><em>warning risky</em> Risky when depending on order of the imports.</p>
+<p>Configuration options:</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">case_sensitive</span></code></div>
+<div class="line">Whether the sorting should be case sensitive.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
+</div>
+</li>
+</ul>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a> <a class="reference internal" href="ruleSets/SymfonyRisky.html"><span class="doc">&#64;Symfony:risky</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ClassNotation/OrderedTraitsFixer.php">Source PhpCsFixer\Fixer\ClassNotation\OrderedTraitsFixer</a></p>
 </li>
@@ -2077,6 +2101,13 @@ custom patterns.</p>
 <div class="line">Forces the position of <code class="docutils literal notranslate"><span class="pre">null</span></code> (overrides <code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code>).</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'always_first'</span></code>, <code class="docutils literal notranslate"><span class="pre">'always_last'</span></code> and <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'always_first'</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">case_sensitive</span></code></div>
+<div class="line">Whether the sorting should be case sensitive.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
 </div>
 </li>
 </ul>
@@ -2445,6 +2476,13 @@ properly documented.</p>
 <div class="line">Forces the position of <code class="docutils literal notranslate"><span class="pre">null</span></code> (overrides <code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code>).</div>
 <div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'always_first'</span></code>, <code class="docutils literal notranslate"><span class="pre">'always_last'</span></code> and <code class="docutils literal notranslate"><span class="pre">'none'</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'always_first'</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">case_sensitive</span></code></div>
+<div class="line">Whether the sorting should be case sensitive.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
 </div>
 </li>
 </ul>
@@ -3077,8 +3115,9 @@ be unified to single space.</p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/StatementIndentationFixer.php">Source PhpCsFixer\Fixer\Whitespace\StatementIndentationFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/static_lambda.html"><span class="doc">static_lambda</span></a></p>
-<p>Lambdas not (indirect) referencing <code class="docutils literal notranslate"><span class="pre">$this</span></code> must be declared <code class="docutils literal notranslate"><span class="pre">static</span></code>.</p>
+<p>Lambdas not (indirectly) referencing <code class="docutils literal notranslate"><span class="pre">$this</span></code> must be declared <code class="docutils literal notranslate"><span class="pre">static</span></code>.</p>
 <p><em>warning risky</em> Risky when using <code class="docutils literal notranslate"><span class="pre">-&gt;bindTo</span></code> on lambdas without referencing to <code class="docutils literal notranslate"><span class="pre">$this</span></code>.</p>
+<p>Part of rule set <a class="reference internal" href="ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/FunctionNotation/StaticLambdaFixer.php">Source PhpCsFixer\Fixer\FunctionNotation\StaticLambdaFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/strict/strict_comparison.html"><span class="doc">strict_comparison</span></a></p>

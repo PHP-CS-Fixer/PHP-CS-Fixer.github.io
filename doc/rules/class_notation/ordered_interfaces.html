@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>First Steps (v3.23.0)</strong> edition
+                <strong>Crank Cake (v3.24.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -78,6 +78,12 @@
 <p>Which direction the interfaces should be ordered.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'ascend'</span></code> and <code class="docutils literal notranslate"><span class="pre">'descend'</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'ascend'</span></code></p>
+</div>
+<div class="section" id="case-sensitive">
+<h3><code class="docutils literal notranslate"><span class="pre">case_sensitive</span></code><a class="headerlink" href="#case-sensitive" title="Permalink to this headline">¶</a></h3>
+<p>Whether the sorting should be case sensitive.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </div>
 </div>
 <div class="section" id="examples">
@@ -139,6 +145,36 @@
 
 <span class="gd">-interface ExampleB extends MuchLonger, Short, Longer {}</span><span class="w"></span>
 <span class="gi">+interface ExampleB extends MuchLonger, Longer, Short {}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-5">
+<h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">'alpha']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+
+<span class="gd">-final class ExampleA implements IgnorecaseB, IgNoReCaSeA, IgnoreCaseC {}</span><span class="w"></span>
+<span class="gi">+final class ExampleA implements IgNoReCaSeA, IgnorecaseB, IgnoreCaseC {}</span><span class="w"></span>
+
+<span class="gd">-interface ExampleB extends IgnorecaseB, IgNoReCaSeA, IgnoreCaseC {}</span><span class="w"></span>
+<span class="gi">+interface ExampleB extends IgNoReCaSeA, IgnorecaseB, IgnoreCaseC {}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-6">
+<h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">'alpha',</span> <span class="pre">'case_sensitive'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+
+<span class="gd">-final class ExampleA implements Casesensitivea, CaseSensitiveA, CasesensitiveA {}</span><span class="w"></span>
+<span class="gi">+final class ExampleA implements CaseSensitiveA, CasesensitiveA, Casesensitivea {}</span><span class="w"></span>
+
+<span class="gd">-interface ExampleB extends Casesensitivea, CaseSensitiveA, CasesensitiveA {}</span><span class="w"></span>
+<span class="gi">+interface ExampleB extends CaseSensitiveA, CasesensitiveA, Casesensitivea {}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
