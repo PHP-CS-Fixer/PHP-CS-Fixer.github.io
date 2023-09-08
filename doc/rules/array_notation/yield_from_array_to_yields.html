@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Crank Cake (v3.25.1)</strong> edition
+                <strong>Crank Cake (v3.26.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -69,6 +69,17 @@
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>The conversion will make the array in <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">from</span></code> changed in arrays of 1 less
 dimension.</p>
+</div>
+<div class="section" id="warning">
+<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-this-rule-is-risky">
+<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
+<p>The rule is risky in case of <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">from</span></code> being used multiple times within
+single function scope, while using list-alike data sources (e.g. <code class="docutils literal notranslate"><span class="pre">function</span>
+<span class="pre">foo()</span> <span class="pre">{</span> <span class="pre">yield</span> <span class="pre">from</span> <span class="pre">[&quot;a&quot;];</span> <span class="pre">yield</span> <span class="pre">from</span> <span class="pre">[&quot;b&quot;];</span> <span class="pre">}</span></code>). It only matters when consuming
+such iterator with key-value context, because set of yielded keys may be changed
+after applying this rule.</p>
+</div>
 </div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
@@ -96,7 +107,7 @@ dimension.</p>
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule set:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a></p></li>
 </ul>
 </div>
 </div>
