@@ -62,9 +62,9 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-no-useless-nullsafe-operator">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">no_useless_nullsafe_operator</span></code><a class="headerlink" href="#rule-no-useless-nullsafe-operator" title="Permalink to this headline">¶</a></h1>
-<p>There should not be useless Null-safe operator <code class="docutils literal notranslate"><span class="pre">?-&gt;</span></code> used.</p>
+  <div class="section" id="rule-long-to-shorthand-operator">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">long_to_shorthand_operator</span></code><a class="headerlink" href="#rule-long-to-shorthand-operator" title="Permalink to this headline">¶</a></h1>
+<p>Shorthand notation for operators should be used if possible.</p>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
@@ -72,13 +72,8 @@
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class Foo extends Bar<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>    public function test() {<span class="w"></span>
-<span class="gd">-        echo $this?-&gt;parentMethod();</span><span class="w"></span>
-<span class="gi">+        echo $this-&gt;parentMethod();</span><span class="w"></span>
-<span class="w"> </span>    }<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="gd">-$i = $i + 10;</span><span class="w"></span>
+<span class="gi">+$i += 10;</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
