@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Jump & Run (v3.29.0)</strong> edition
+                <strong>Jump & Run (v3.30.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -110,6 +110,20 @@
 <p>Use the null coalescing assignment operator <code class="docutils literal notranslate"><span class="pre">??=</span></code> where possible.</p>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PHP74Migration.html"><span class="doc">&#64;PHP74Migration</span></a> <a class="reference internal" href="ruleSets/PHP80Migration.html"><span class="doc">&#64;PHP80Migration</span></a> <a class="reference internal" href="ruleSets/PHP81Migration.html"><span class="doc">&#64;PHP81Migration</span></a> <a class="reference internal" href="ruleSets/PHP82Migration.html"><span class="doc">&#64;PHP82Migration</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Operator/AssignNullCoalescingToCoalesceEqualFixer.php">Source PhpCsFixer\Fixer\Operator\AssignNullCoalescingToCoalesceEqualFixer</a></p>
+</li>
+<li><p><a class="reference internal" href="rules/attribute_notation/attribute_empty_parentheses.html"><span class="doc">attribute_empty_parentheses</span></a></p>
+<p>PHP attributes declared without arguments must (not) be followed by empty parentheses.</p>
+<p>Configuration options:</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">use_parentheses</span></code></div>
+<div class="line">Whether attributes should be followed by parentheses or not.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
+</div>
+</li>
+</ul>
+<p><a class="reference external" href="./../src/Fixer/AttributeNotation/AttributeEmptyParenthesesFixer.php">Source PhpCsFixer\Fixer\AttributeNotation\AttributeEmptyParenthesesFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/alias/backtick_to_shell_exec.html"><span class="doc">backtick_to_shell_exec</span></a></p>
 <p>Converts backtick operators to <code class="docutils literal notranslate"><span class="pre">shell_exec</span></code> calls.</p>
