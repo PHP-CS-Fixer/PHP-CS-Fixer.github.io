@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Jump & Run (v3.30.0)</strong> edition
+                <strong>Jump & Run (v3.31.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -870,7 +870,7 @@ FinalInternalClassFixer, it’s fine.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">annotation_include</span></code></div>
 <div class="line">Class level attribute or annotation tags that must be set in order to fix the class (case insensitive).</div>
-<div class="line">warning:: This option is deprecated and will be removed on next major version. Use <code class="docutils literal notranslate"><span class="pre">include</span></code> to configure PHPDoc annotations tags and attributes.</div>
+<div class="line">warning:: This option is deprecated and will be removed in the next major version. Use <code class="docutils literal notranslate"><span class="pre">include</span></code> to configure PHPDoc annotations tags and attributes.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['&#64;internal']</span></code></div>
 </div>
@@ -878,7 +878,7 @@ FinalInternalClassFixer, it’s fine.</p>
 <li><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">annotation_exclude</span></code></div>
 <div class="line">Class level attribute or annotation tags that must be omitted to fix the class, even if all of the white list ones are used as well (case insensitive).</div>
-<div class="line">warning:: This option is deprecated and will be removed on next major version. Use <code class="docutils literal notranslate"><span class="pre">exclude</span></code> to configure PHPDoc annotations tags and attributes.</div>
+<div class="line">warning:: This option is deprecated and will be removed in the next major version. Use <code class="docutils literal notranslate"><span class="pre">exclude</span></code> to configure PHPDoc annotations tags and attributes.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></div>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">['&#64;final',</span> <span class="pre">'&#64;Entity',</span> <span class="pre">'&#64;ORM\\Entity',</span> <span class="pre">'&#64;ORM\\Mapping\\Entity',</span> <span class="pre">'&#64;Mapping\\Entity',</span> <span class="pre">'&#64;Document',</span> <span class="pre">'&#64;ODM\\Document']</span></code></div>
 </div>
@@ -1155,7 +1155,7 @@ override a method, use the Template method pattern.</p>
 <p><a class="reference external" href="./../src/Fixer/FunctionNotation/ImplodeCallFixer.php">Source PhpCsFixer\Fixer\FunctionNotation\ImplodeCallFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/control_structure/include.html"><span class="doc">include</span></a></p>
-<p>Include/Require and file path should be divided with a single space. File path should not be placed under brackets.</p>
+<p>Include/Require and file path should be divided with a single space. File path should not be placed within parentheses.</p>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ControlStructure/IncludeFixer.php">Source PhpCsFixer\Fixer\ControlStructure\IncludeFixer</a></p>
 </li>
@@ -1289,6 +1289,13 @@ byte size rather than its length in characters.</p>
 <div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
 </div>
 </li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">attribute_placement</span></code></div>
+<div class="line">Defines how to handle argument attributes when function definition is multiline.</div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'ignore'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code> and <code class="docutils literal notranslate"><span class="pre">'standalone'</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'standalone'</span></code></div>
+</div>
+</li>
 </ul>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS.html"><span class="doc">&#64;PER-CS</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PER-CS2.0.html"><span class="doc">&#64;PER-CS2.0</span></a> <a class="reference internal" href="ruleSets/PHP73Migration.html"><span class="doc">&#64;PHP73Migration</span></a> <a class="reference internal" href="ruleSets/PHP74Migration.html"><span class="doc">&#64;PHP74Migration</span></a> <a class="reference internal" href="ruleSets/PHP80Migration.html"><span class="doc">&#64;PHP80Migration</span></a> <a class="reference internal" href="ruleSets/PHP81Migration.html"><span class="doc">&#64;PHP81Migration</span></a> <a class="reference internal" href="ruleSets/PHP82Migration.html"><span class="doc">&#64;PHP82Migration</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/FunctionNotation/MethodArgumentSpaceFixer.php">Source PhpCsFixer\Fixer\FunctionNotation\MethodArgumentSpaceFixer</a></p>
@@ -1419,7 +1426,7 @@ overridden.</p>
 <p><a class="reference external" href="./../src/Fixer/FunctionNotation/NativeFunctionInvocationFixer.php">Source PhpCsFixer\Fixer\FunctionNotation\NativeFunctionInvocationFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/casing/native_function_type_declaration_casing.html"><span class="doc">native_function_type_declaration_casing</span></a></p>
-<p>Native type hints for functions should use the correct case.</p>
+<p>Native type declarations for functions should use the correct case.</p>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Casing/NativeFunctionTypeDeclarationCasingFixer.php">Source PhpCsFixer\Fixer\Casing\NativeFunctionTypeDeclarationCasingFixer</a></p>
 </li>

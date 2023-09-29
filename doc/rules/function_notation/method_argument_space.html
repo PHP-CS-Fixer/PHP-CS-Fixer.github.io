@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Jump & Run (v3.30.0)</strong> edition
+                <strong>Jump & Run (v3.31.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -92,6 +92,12 @@ argument per line.</p>
 <p>Whether the whitespace between heredoc end and comma should be removed.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</div>
+<div class="section" id="attribute-placement">
+<h3><code class="docutils literal notranslate"><span class="pre">attribute_placement</span></code><a class="headerlink" href="#attribute-placement" title="Permalink to this headline">¶</a></h3>
+<p>Defines how to handle argument attributes when function definition is multiline.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'ignore'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code> and <code class="docutils literal notranslate"><span class="pre">'standalone'</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'standalone'</span></code></p>
 </div>
 </div>
 <div class="section" id="examples">
@@ -228,6 +234,64 @@ argument per line.</p>
 </div>
 <div class="section" id="example-8">
 <h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline',</span> <span class="pre">'attribute_placement'</span> <span class="pre">=&gt;</span> <span class="pre">'ignore']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-function sample(#[Foo] #[Bar] $a=10,</span><span class="w"></span>
+<span class="gd">-    $b=20,$c=30) {}</span><span class="w"></span>
+<span class="gd">-sample(1,  2);</span><span class="w"></span>
+<span class="gi">+function sample(</span><span class="w"></span>
+<span class="gi">+    #[Foo] #[Bar] $a=10,</span><span class="w"></span>
+<span class="gi">+    $b=20,</span><span class="w"></span>
+<span class="gi">+    $c=30</span><span class="w"></span>
+<span class="gi">+) {}</span><span class="w"></span>
+<span class="gi">+sample(1, 2);</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-9">
+<h3>Example #9<a class="headerlink" href="#example-9" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline',</span> <span class="pre">'attribute_placement'</span> <span class="pre">=&gt;</span> <span class="pre">'same_line']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-function sample(#[Foo]</span><span class="w"></span>
+<span class="gd">-    #[Bar]</span><span class="w"></span>
+<span class="gd">-    $a=10,</span><span class="w"></span>
+<span class="gd">-    $b=20,$c=30) {}</span><span class="w"></span>
+<span class="gd">-sample(1,  2);</span><span class="w"></span>
+<span class="gi">+function sample(</span><span class="w"></span>
+<span class="gi">+    #[Foo] #[Bar] $a=10,</span><span class="w"></span>
+<span class="gi">+    $b=20,</span><span class="w"></span>
+<span class="gi">+    $c=30</span><span class="w"></span>
+<span class="gi">+) {}</span><span class="w"></span>
+<span class="gi">+sample(1, 2);</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-10">
+<h3>Example #10<a class="headerlink" href="#example-10" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline',</span> <span class="pre">'attribute_placement'</span> <span class="pre">=&gt;</span> <span class="pre">'standalone']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-function sample(#[Foo] #[Bar] $a=10,</span><span class="w"></span>
+<span class="gd">-    $b=20,$c=30) {}</span><span class="w"></span>
+<span class="gd">-sample(1,  2);</span><span class="w"></span>
+<span class="gi">+function sample(</span><span class="w"></span>
+<span class="gi">+    #[Foo]</span><span class="w"></span>
+<span class="gi">+    #[Bar]</span><span class="w"></span>
+<span class="gi">+    $a=10,</span><span class="w"></span>
+<span class="gi">+    $b=20,</span><span class="w"></span>
+<span class="gi">+    $c=30</span><span class="w"></span>
+<span class="gi">+) {}</span><span class="w"></span>
+<span class="gi">+sample(1, 2);</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-11">
+<h3>Example #11<a class="headerlink" href="#example-11" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['after_heredoc'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
@@ -248,18 +312,12 @@ argument per line.</p>
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul>
-<li><p><a class="reference internal" href="../../ruleSets/PER.html"><span class="doc">&#64;PER</span></a> with config:</p>
-<p><code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline']</span></code></p>
-</li>
-<li><p><a class="reference internal" href="../../ruleSets/PER-CS.html"><span class="doc">&#64;PER-CS</span></a> with config:</p>
-<p><code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline']</span></code></p>
-</li>
+<li><p><a class="reference internal" href="../../ruleSets/PER.html"><span class="doc">&#64;PER</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/PER-CS.html"><span class="doc">&#64;PER-CS</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> with config:</p>
-<p><code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline']</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">['attribute_placement'</span> <span class="pre">=&gt;</span> <span class="pre">'ignore',</span> <span class="pre">'on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline']</span></code></p>
 </li>
-<li><p><a class="reference internal" href="../../ruleSets/PER-CS2.0.html"><span class="doc">&#64;PER-CS2.0</span></a> with config:</p>
-<p><code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline']</span></code></p>
-</li>
+<li><p><a class="reference internal" href="../../ruleSets/PER-CS2.0.html"><span class="doc">&#64;PER-CS2.0</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/PHP73Migration.html"><span class="doc">&#64;PHP73Migration</span></a> with config:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['after_heredoc'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
 </li>
@@ -276,10 +334,10 @@ argument per line.</p>
 <p><code class="docutils literal notranslate"><span class="pre">['after_heredoc'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
 </li>
 <li><p><a class="reference internal" href="../../ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> with config:</p>
-<p><code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline']</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">['attribute_placement'</span> <span class="pre">=&gt;</span> <span class="pre">'ignore',</span> <span class="pre">'on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline']</span></code></p>
 </li>
 <li><p><a class="reference internal" href="../../ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> with config:</p>
-<p><code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline']</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">['attribute_placement'</span> <span class="pre">=&gt;</span> <span class="pre">'ignore',</span> <span class="pre">'on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline']</span></code></p>
 </li>
 <li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> with config:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline']</span></code></p>
