@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Deprecation train (v3.32.0)</strong> edition
+                <strong>The Old Guard (v3.33.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -1490,8 +1490,13 @@ overridden.</p>
 </li>
 <li><p><a class="reference internal" href="rules/casing/native_function_type_declaration_casing.html"><span class="doc">native_function_type_declaration_casing</span></a></p>
 <p>Native type declarations for functions should use the correct case.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p><em>warning deprecated</em>   Use <code class="docutils literal notranslate"><span class="pre">native_type_declaration_casing</span></code> instead.</p>
 <p><a class="reference external" href="./../src/Fixer/Casing/NativeFunctionTypeDeclarationCasingFixer.php">Source PhpCsFixer\Fixer\Casing\NativeFunctionTypeDeclarationCasingFixer</a></p>
+</li>
+<li><p><a class="reference internal" href="rules/casing/native_type_declaration_casing.html"><span class="doc">native_type_declaration_casing</span></a></p>
+<p>Native type declarations should be used in the correct case.</p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p><a class="reference external" href="./../src/Fixer/Casing/NativeTypeDeclarationCasingFixer.php">Source PhpCsFixer\Fixer\Casing\NativeTypeDeclarationCasingFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/operator/new_with_braces.html"><span class="doc">new_with_braces</span></a></p>
 <p>All instances created with <code class="docutils literal notranslate"><span class="pre">new</span></code> keyword must (not) be followed by braces.</p>

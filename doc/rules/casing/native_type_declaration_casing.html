@@ -62,65 +62,47 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-phpdoc-to-param-type">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">phpdoc_to_param_type</span></code><a class="headerlink" href="#rule-phpdoc-to-param-type" title="Permalink to this headline">¶</a></h1>
-<p>EXPERIMENTAL: Takes <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> annotations of non-mixed types and adjusts
-accordingly the function signature. Requires PHP &gt;= 7.0.</p>
-<div class="section" id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="using-this-rule-is-risky">
-<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
-<p>This rule is EXPERIMENTAL and [1] is not covered with backward compatibility
-promise. [2] <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> annotation is mandatory for the fixer to make changes,
-signatures of methods without it (no docblock, inheritdocs) will not be fixed.
-[3] Manual actions are required if inherited signatures are not properly
-documented.</p>
-</div>
-</div>
-<div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="scalar-types">
-<h3><code class="docutils literal notranslate"><span class="pre">scalar_types</span></code><a class="headerlink" href="#scalar-types" title="Permalink to this headline">¶</a></h3>
-<p>Fix also scalar types; may have unexpected behaviour due to PHP bad type
-coercion system.</p>
-<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
-</div>
-</div>
+  <div class="section" id="rule-native-type-declaration-casing">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">native_type_declaration_casing</span></code><a class="headerlink" href="#rule-native-type-declaration-casing" title="Permalink to this headline">¶</a></h1>
+<p>Native type declarations should be used in the correct case.</p>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
-
-<span class="w"> </span>/**<span class="w"></span>
-<span class="w"> </span> * @param string $foo<span class="w"></span>
-<span class="w"> </span> * @param string|null $bar<span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
-<span class="gd">-function f($foo, $bar)</span><span class="w"></span>
-<span class="gi">+function f(string $foo, ?string $bar)</span><span class="w"></span>
-<span class="w"> </span>{}<span class="w"></span>
+<span class="w"> </span>class Bar {<span class="w"></span>
+<span class="gd">-    public function Foo(CALLABLE $bar): INT</span><span class="w"></span>
+<span class="gi">+    public function Foo(callable $bar): int</span><span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="w"> </span>        return 1;<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
-<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['scalar_types'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
 <span class="w"> </span>&lt;?php<span class="w"></span>
-
-<span class="w"> </span>/** @param Foo $foo */<span class="w"></span>
-<span class="gd">-function foo($foo) {}</span><span class="w"></span>
-<span class="gi">+function foo(Foo $foo) {}</span><span class="w"></span>
-<span class="w"> </span>/** @param string $foo */<span class="w"></span>
-<span class="w"> </span>function bar($foo) {}<span class="w"></span>
+<span class="w"> </span>class Foo<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="gd">-    const INT BAR = 1;</span><span class="w"></span>
+<span class="gi">+    const int BAR = 1;</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="rule-sets">
+<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
+<p>The rule is part of the following rule sets:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
+</ul>
 </div>
 </div>
 
