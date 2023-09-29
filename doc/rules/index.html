@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Jump & Run (v3.31.0)</strong> edition
+                <strong>Deprecation train (v3.32.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -148,7 +148,10 @@
 <li><p><a class="reference internal" href="basic/braces.html"><span class="doc">braces</span></a> <em>(deprecated)</em></p>
 <p>The body of each structure MUST be enclosed by braces. Braces should be properly placed. Body of braces should be properly indented.</p>
 </li>
-<li><p><a class="reference internal" href="basic/curly_braces_position.html"><span class="doc">curly_braces_position</span></a></p>
+<li><p><a class="reference internal" href="basic/braces_position.html"><span class="doc">braces_position</span></a></p>
+<p>Braces must be placed as configured.</p>
+</li>
+<li><p><a class="reference internal" href="basic/curly_braces_position.html"><span class="doc">curly_braces_position</span></a> <em>(deprecated)</em></p>
 <p>Curly braces must be placed as configured.</p>
 </li>
 <li><p><a class="reference internal" href="basic/encoding.html"><span class="doc">encoding</span></a></p>
@@ -366,10 +369,13 @@
 <li><p><a class="reference internal" href="control_structure/no_trailing_comma_in_list_call.html"><span class="doc">no_trailing_comma_in_list_call</span></a> <em>(deprecated)</em></p>
 <p>Remove trailing commas in list function calls.</p>
 </li>
+<li><p><a class="reference internal" href="control_structure/no_unneeded_braces.html"><span class="doc">no_unneeded_braces</span></a></p>
+<p>Removes unneeded braces that are superfluous and aren’t part of a control structure’s body.</p>
+</li>
 <li><p><a class="reference internal" href="control_structure/no_unneeded_control_parentheses.html"><span class="doc">no_unneeded_control_parentheses</span></a></p>
 <p>Removes unneeded parentheses around control statements.</p>
 </li>
-<li><p><a class="reference internal" href="control_structure/no_unneeded_curly_braces.html"><span class="doc">no_unneeded_curly_braces</span></a></p>
+<li><p><a class="reference internal" href="control_structure/no_unneeded_curly_braces.html"><span class="doc">no_unneeded_curly_braces</span></a> <em>(deprecated)</em></p>
 <p>Removes unneeded curly braces that are superfluous and aren’t part of a control structure’s body.</p>
 </li>
 <li><p><a class="reference internal" href="control_structure/no_useless_else.html"><span class="doc">no_useless_else</span></a></p>
@@ -631,8 +637,11 @@
 <li><p><a class="reference internal" href="operator/long_to_shorthand_operator.html"><span class="doc">long_to_shorthand_operator</span></a></p>
 <p>Shorthand notation for operators should be used if possible.</p>
 </li>
-<li><p><a class="reference internal" href="operator/new_with_braces.html"><span class="doc">new_with_braces</span></a></p>
+<li><p><a class="reference internal" href="operator/new_with_braces.html"><span class="doc">new_with_braces</span></a> <em>(deprecated)</em></p>
 <p>All instances created with <code class="docutils literal notranslate"><span class="pre">new</span></code> keyword must (not) be followed by braces.</p>
+</li>
+<li><p><a class="reference internal" href="operator/new_with_parentheses.html"><span class="doc">new_with_parentheses</span></a></p>
+<p>All instances created with <code class="docutils literal notranslate"><span class="pre">new</span></code> keyword must (not) be followed by parentheses.</p>
 </li>
 <li><p><a class="reference internal" href="operator/no_space_around_double_colon.html"><span class="doc">no_space_around_double_colon</span></a></p>
 <p>There must be no space around double colons (also called Scope Resolution Operator or Paamayim Nekudotayim).</p>
@@ -959,7 +968,10 @@
 <li><p><a class="reference internal" href="whitespace/blank_line_between_import_groups.html"><span class="doc">blank_line_between_import_groups</span></a></p>
 <p>Putting blank lines between <code class="docutils literal notranslate"><span class="pre">use</span></code> statement groups.</p>
 </li>
-<li><p><a class="reference internal" href="whitespace/compact_nullable_typehint.html"><span class="doc">compact_nullable_typehint</span></a></p>
+<li><p><a class="reference internal" href="whitespace/compact_nullable_type_declaration.html"><span class="doc">compact_nullable_type_declaration</span></a></p>
+<p>Remove extra spaces in a nullable type declaration.</p>
+</li>
+<li><p><a class="reference internal" href="whitespace/compact_nullable_typehint.html"><span class="doc">compact_nullable_typehint</span></a> <em>(deprecated)</em></p>
 <p>Remove extra spaces in a nullable typehint.</p>
 </li>
 <li><p><a class="reference internal" href="whitespace/heredoc_indentation.html"><span class="doc">heredoc_indentation</span></a></p>

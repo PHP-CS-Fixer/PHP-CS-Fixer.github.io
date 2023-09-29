@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Jump & Run (v3.31.0)</strong> edition
+                <strong>Deprecation train (v3.32.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -252,6 +252,63 @@ single-quotes, double-quotes and backticks are not used inside the command.</p>
 </ul>
 <p><a class="reference external" href="./../src/Fixer/Basic/BracesFixer.php">Source PhpCsFixer\Fixer\Basic\BracesFixer</a></p>
 </li>
+<li><p><a class="reference internal" href="rules/basic/braces_position.html"><span class="doc">braces_position</span></a></p>
+<p>Braces must be placed as configured.</p>
+<p>Configuration options:</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">control_structures_opening_brace</span></code></div>
+<div class="line">The position of the opening brace of control structures‘ body.</div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">functions_opening_brace</span></code></div>
+<div class="line">The position of the opening brace of functions‘ body.</div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">anonymous_functions_opening_brace</span></code></div>
+<div class="line">The position of the opening brace of anonymous functions‘ body.</div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">classes_opening_brace</span></code></div>
+<div class="line">The position of the opening brace of classes‘ body.</div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">anonymous_classes_opening_brace</span></code></div>
+<div class="line">The position of the opening brace of anonymous classes‘ body.</div>
+<div class="line">Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">allow_single_line_empty_anonymous_classes</span></code></div>
+<div class="line">Allow anonymous classes to have opening and closing braces on the same line.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">allow_single_line_anonymous_functions</span></code></div>
+<div class="line">Allow anonymous functions to have opening and closing braces on the same line.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
+</div>
+</li>
+</ul>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS.html"><span class="doc">&#64;PER-CS</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PER-CS2.0.html"><span class="doc">&#64;PER-CS2.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p><a class="reference external" href="./../src/Fixer/Basic/BracesPositionFixer.php">Source PhpCsFixer\Fixer\Basic\BracesPositionFixer</a></p>
+</li>
 <li><p><a class="reference internal" href="rules/cast_notation/cast_spaces.html"><span class="doc">cast_spaces</span></a></p>
 <p>A single space or none should be between cast and variable.</p>
 <p>Configuration options:</p>
@@ -376,8 +433,14 @@ new column in database.</p>
 <li><p><a class="reference internal" href="rules/whitespace/compact_nullable_typehint.html"><span class="doc">compact_nullable_typehint</span></a></p>
 <p>Remove extra spaces in a nullable typehint.</p>
 <p>Rule is applied only in a PHP 7.1+ environment.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS.html"><span class="doc">&#64;PER-CS</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PER-CS2.0.html"><span class="doc">&#64;PER-CS2.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p><em>warning deprecated</em>   Use <code class="docutils literal notranslate"><span class="pre">compact_nullable_type_declaration</span></code> instead.</p>
 <p><a class="reference external" href="./../src/Fixer/Whitespace/CompactNullableTypehintFixer.php">Source PhpCsFixer\Fixer\Whitespace\CompactNullableTypehintFixer</a></p>
+</li>
+<li><p><a class="reference internal" href="rules/whitespace/compact_nullable_type_declaration.html"><span class="doc">compact_nullable_type_declaration</span></a></p>
+<p>Remove extra spaces in a nullable type declaration.</p>
+<p>Rule is applied only in a PHP 7.1+ environment.</p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS.html"><span class="doc">&#64;PER-CS</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PER-CS2.0.html"><span class="doc">&#64;PER-CS2.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p><a class="reference external" href="./../src/Fixer/Whitespace/CompactNullableTypeDeclarationFixer.php">Source PhpCsFixer\Fixer\Whitespace\CompactNullableTypeDeclarationFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/operator/concat_space.html"><span class="doc">concat_space</span></a></p>
 <p>Concatenation should be spaced according to configuration.</p>
@@ -431,6 +494,7 @@ new column in database.</p>
 </li>
 <li><p><a class="reference internal" href="rules/basic/curly_braces_position.html"><span class="doc">curly_braces_position</span></a></p>
 <p>Curly braces must be placed as configured.</p>
+<p><em>warning deprecated</em>   Use <code class="docutils literal notranslate"><span class="pre">braces_position</span></code> instead.</p>
 <p>Configuration options:</p>
 <ul>
 <li><div class="line-block">
@@ -483,7 +547,6 @@ new column in database.</p>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS.html"><span class="doc">&#64;PER-CS</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PER-CS2.0.html"><span class="doc">&#64;PER-CS2.0</span></a> <a class="reference internal" href="ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Basic/CurlyBracesPositionFixer.php">Source PhpCsFixer\Fixer\Basic\CurlyBracesPositionFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/function_notation/date_time_create_from_format_call.html"><span class="doc">date_time_create_from_format_call</span></a></p>
@@ -1432,6 +1495,28 @@ overridden.</p>
 </li>
 <li><p><a class="reference internal" href="rules/operator/new_with_braces.html"><span class="doc">new_with_braces</span></a></p>
 <p>All instances created with <code class="docutils literal notranslate"><span class="pre">new</span></code> keyword must (not) be followed by braces.</p>
+<p><em>warning deprecated</em>   Use <code class="docutils literal notranslate"><span class="pre">new_with_parentheses</span></code> instead.</p>
+<p>Configuration options:</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">named_class</span></code></div>
+<div class="line">Whether named classes should be followed by parentheses.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">anonymous_class</span></code></div>
+<div class="line">Whether anonymous classes should be followed by parentheses.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></div>
+</div>
+</li>
+</ul>
+<p><a class="reference external" href="./../src/Fixer/Operator/NewWithBracesFixer.php">Source PhpCsFixer\Fixer\Operator\NewWithBracesFixer</a></p>
+</li>
+<li><p><a class="reference internal" href="rules/operator/new_with_parentheses.html"><span class="doc">new_with_parentheses</span></a></p>
+<p>All instances created with <code class="docutils literal notranslate"><span class="pre">new</span></code> keyword must (not) be followed by parentheses.</p>
 <p>Configuration options:</p>
 <ul>
 <li><div class="line-block">
@@ -1450,7 +1535,7 @@ overridden.</p>
 </li>
 </ul>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <a class="reference internal" href="ruleSets/PER-CS.html"><span class="doc">&#64;PER-CS</span></a> <a class="reference internal" href="ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <a class="reference internal" href="ruleSets/PER-CS2.0.html"><span class="doc">&#64;PER-CS2.0</span></a> <a class="reference internal" href="ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
-<p><a class="reference external" href="./../src/Fixer/Operator/NewWithBracesFixer.php">Source PhpCsFixer\Fixer\Operator\NewWithBracesFixer</a></p>
+<p><a class="reference external" href="./../src/Fixer/Operator/NewWithParenthesesFixer.php">Source PhpCsFixer\Fixer\Operator\NewWithParenthesesFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/basic/non_printable_character.html"><span class="doc">non_printable_character</span></a></p>
 <p>Remove Zero-width space (ZWSP), Non-breaking space (NBSP) and other invisible unicode symbols.</p>
@@ -1792,6 +1877,21 @@ outputs.</p>
 <p>Part of rule sets <a class="reference internal" href="ruleSets/PER-CS1.0Risky.html"><span class="doc">&#64;PER-CS1.0:risky</span></a> <a class="reference internal" href="ruleSets/PER-CS2.0Risky.html"><span class="doc">&#64;PER-CS2.0:risky</span></a> <a class="reference internal" href="ruleSets/PER-CSRisky.html"><span class="doc">&#64;PER-CS:risky</span></a> <a class="reference internal" href="ruleSets/PERRisky.html"><span class="doc">&#64;PER:risky</span></a> <a class="reference internal" href="ruleSets/PSR12Risky.html"><span class="doc">&#64;PSR12:risky</span></a> <a class="reference internal" href="ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a> <a class="reference internal" href="ruleSets/SymfonyRisky.html"><span class="doc">&#64;Symfony:risky</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/StringNotation/NoTrailingWhitespaceInStringFixer.php">Source PhpCsFixer\Fixer\StringNotation\NoTrailingWhitespaceInStringFixer</a></p>
 </li>
+<li><p><a class="reference internal" href="rules/control_structure/no_unneeded_braces.html"><span class="doc">no_unneeded_braces</span></a></p>
+<p>Removes unneeded braces that are superfluous and aren’t part of a control structure’s body.</p>
+<p>Configuration options:</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">namespaces</span></code></div>
+<div class="line">Remove unneeded braces from bracketed namespaces.</div>
+<div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></div>
+</div>
+</li>
+</ul>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p><a class="reference external" href="./../src/Fixer/ControlStructure/NoUnneededBracesFixer.php">Source PhpCsFixer\Fixer\ControlStructure\NoUnneededBracesFixer</a></p>
+</li>
 <li><p><a class="reference internal" href="rules/control_structure/no_unneeded_control_parentheses.html"><span class="doc">no_unneeded_control_parentheses</span></a></p>
 <p>Removes unneeded parentheses around control statements.</p>
 <p>Configuration options:</p>
@@ -1809,6 +1909,7 @@ outputs.</p>
 </li>
 <li><p><a class="reference internal" href="rules/control_structure/no_unneeded_curly_braces.html"><span class="doc">no_unneeded_curly_braces</span></a></p>
 <p>Removes unneeded curly braces that are superfluous and aren’t part of a control structure’s body.</p>
+<p><em>warning deprecated</em>   Use <code class="docutils literal notranslate"><span class="pre">no_unneeded_braces</span></code> instead.</p>
 <p>Configuration options:</p>
 <ul>
 <li><div class="line-block">
@@ -1819,7 +1920,6 @@ outputs.</p>
 </div>
 </li>
 </ul>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/ControlStructure/NoUnneededCurlyBracesFixer.php">Source PhpCsFixer\Fixer\ControlStructure\NoUnneededCurlyBracesFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/no_unneeded_final_method.html"><span class="doc">no_unneeded_final_method</span></a></p>

@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index, follow, all" />
+    <meta name="Language" content="en" />
+    <meta name="Description" content="PHP Coding Standards Fixer" />
+    <meta name="Keywords" content="php, coding standards" />
+    
+      <title>PHP Coding Standards Fixer</title>
+    
+  <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
+  <link href="../../../_static/css/base.css" rel="stylesheet" type="text/css" />
+  <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css" />
+  <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css" />
+  <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css" />
+    
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32006827-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script> 
+  </head>
+  <body>
+      <div class="hd">
+        <a href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer">
+          <img style="position: absolute; top: 0; left: 0; border: 0;" decoding="async" loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_gray_6d6d6d.png?resize=149%2C149" alt="Fork me on GitHub">
+        </a>
+
+        <div class="illustration png_fix">
+          <div class="content">
+            <div class="sensio_product">
+              <img class="png_fix" src="../../../_static/images/sensio-labs-product.png" alt="a Sensio Labs Product" />
+            </div>
+            <div class="clearfix">
+              <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
+              <h1 class="title_header">
+                <strong>Deprecation train (v3.32.0)</strong> edition
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="bd">
+        <div class="content">
+          <div class="links_intro">
+            <ul>
+              <li>
+                <a href="./download/php-cs-fixer-v3.phar"><img class="install_now png_fix" src="../../../_static/images/install_now.png" alt="Install now" /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="more_intro">
+            
+  <div class="section" id="rule-braces-position">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">braces_position</span></code><a class="headerlink" href="#rule-braces-position" title="Permalink to this headline">¶</a></h1>
+<p>Braces must be placed as configured.</p>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="control-structures-opening-brace">
+<h3><code class="docutils literal notranslate"><span class="pre">control_structures_opening_brace</span></code><a class="headerlink" href="#control-structures-opening-brace" title="Permalink to this headline">¶</a></h3>
+<p>The position of the opening brace of control structures‘ body.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></p>
+</div>
+<div class="section" id="functions-opening-brace">
+<h3><code class="docutils literal notranslate"><span class="pre">functions_opening_brace</span></code><a class="headerlink" href="#functions-opening-brace" title="Permalink to this headline">¶</a></h3>
+<p>The position of the opening brace of functions‘ body.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code></p>
+</div>
+<div class="section" id="anonymous-functions-opening-brace">
+<h3><code class="docutils literal notranslate"><span class="pre">anonymous_functions_opening_brace</span></code><a class="headerlink" href="#anonymous-functions-opening-brace" title="Permalink to this headline">¶</a></h3>
+<p>The position of the opening brace of anonymous functions‘ body.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></p>
+</div>
+<div class="section" id="classes-opening-brace">
+<h3><code class="docutils literal notranslate"><span class="pre">classes_opening_brace</span></code><a class="headerlink" href="#classes-opening-brace" title="Permalink to this headline">¶</a></h3>
+<p>The position of the opening brace of classes‘ body.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code></p>
+</div>
+<div class="section" id="anonymous-classes-opening-brace">
+<h3><code class="docutils literal notranslate"><span class="pre">anonymous_classes_opening_brace</span></code><a class="headerlink" href="#anonymous-classes-opening-brace" title="Permalink to this headline">¶</a></h3>
+<p>The position of the opening brace of anonymous classes‘ body.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></p>
+</div>
+<div class="section" id="allow-single-line-empty-anonymous-classes">
+<h3><code class="docutils literal notranslate"><span class="pre">allow_single_line_empty_anonymous_classes</span></code><a class="headerlink" href="#allow-single-line-empty-anonymous-classes" title="Permalink to this headline">¶</a></h3>
+<p>Allow anonymous classes to have opening and closing braces on the same line.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+</div>
+<div class="section" id="allow-single-line-anonymous-functions">
+<h3><code class="docutils literal notranslate"><span class="pre">allow_single_line_anonymous_functions</span></code><a class="headerlink" href="#allow-single-line-anonymous-functions" title="Permalink to this headline">¶</a></h3>
+<p>Allow anonymous functions to have opening and closing braces on the same line.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-1">
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p><em>Default</em> configuration.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-class Foo {</span><span class="w"></span>
+<span class="gi">+class Foo</span><span class="w"></span>
+<span class="gi">+{</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
+
+<span class="gd">-function foo() {</span><span class="w"></span>
+<span class="gi">+function foo()</span><span class="w"></span>
+<span class="gi">+{</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
+
+<span class="gd">-$foo = function()</span><span class="w"></span>
+<span class="gd">-{</span><span class="w"></span>
+<span class="gi">+$foo = function() {</span><span class="w"></span>
+<span class="w"> </span>};<span class="w"></span>
+
+<span class="gd">-if (foo())</span><span class="w"></span>
+<span class="gd">-{</span><span class="w"></span>
+<span class="gi">+if (foo()) {</span><span class="w"></span>
+<span class="w"> </span>    bar();<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
+
+<span class="gd">-$foo = new class</span><span class="w"></span>
+<span class="gd">-{</span><span class="w"></span>
+<span class="gi">+$foo = new class {</span><span class="w"></span>
+<span class="w"> </span>};<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-2">
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['control_structures_opening_brace'</span> <span class="pre">=&gt;</span> <span class="pre">'next_line_unless_newline_at_signature_end']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-if (foo()) {</span><span class="w"></span>
+<span class="gi">+if (foo())</span><span class="w"></span>
+<span class="gi">+{</span><span class="w"></span>
+<span class="w"> </span>    bar();<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['functions_opening_brace'</span> <span class="pre">=&gt;</span> <span class="pre">'same_line']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-function foo()</span><span class="w"></span>
+<span class="gd">-{</span><span class="w"></span>
+<span class="gi">+function foo() {</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-4">
+<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['anonymous_functions_opening_brace'</span> <span class="pre">=&gt;</span> <span class="pre">'next_line_unless_newline_at_signature_end']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-$foo = function () {</span><span class="w"></span>
+<span class="gi">+$foo = function ()</span><span class="w"></span>
+<span class="gi">+{</span><span class="w"></span>
+<span class="w"> </span>};<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-5">
+<h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['classes_opening_brace'</span> <span class="pre">=&gt;</span> <span class="pre">'same_line']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-class Foo</span><span class="w"></span>
+<span class="gd">-{</span><span class="w"></span>
+<span class="gi">+class Foo {</span><span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-6">
+<h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['anonymous_classes_opening_brace'</span> <span class="pre">=&gt;</span> <span class="pre">'next_line_unless_newline_at_signature_end']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="gd">-$foo = new class {</span><span class="w"></span>
+<span class="gi">+$foo = new class</span><span class="w"></span>
+<span class="gi">+{</span><span class="w"></span>
+<span class="w"> </span>};<span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-7">
+<h3>Example #7<a class="headerlink" href="#example-7" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>$foo = new class { };<span class="w"></span>
+<span class="gd">-$bar = new class { private $baz; };</span><span class="w"></span>
+<span class="gi">+$bar = new class {</span><span class="w"></span>
+<span class="gi">+private $baz;</span><span class="w"></span>
+<span class="gi">+};</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-8">
+<h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['allow_single_line_anonymous_functions'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
+<span class="gi">+++ New</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>$foo = function () { return true; };<span class="w"></span>
+<span class="gd">-$bar = function () { $result = true;</span><span class="w"></span>
+<span class="gd">-    return $result; };</span><span class="w"></span>
+<span class="gi">+$bar = function () {</span><span class="w"></span>
+<span class="gi">+$result = true;</span><span class="w"></span>
+<span class="gi">+    return $result;</span><span class="w"></span>
+<span class="gi">+};</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="rule-sets">
+<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
+<p>The rule is part of the following rule sets:</p>
+<ul>
+<li><p><a class="reference internal" href="../../ruleSets/PER.html"><span class="doc">&#64;PER</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
+</li>
+<li><p><a class="reference internal" href="../../ruleSets/PER-CS.html"><span class="doc">&#64;PER-CS</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
+</li>
+<li><p><a class="reference internal" href="../../ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
+</li>
+<li><p><a class="reference internal" href="../../ruleSets/PER-CS2.0.html"><span class="doc">&#64;PER-CS2.0</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
+</li>
+<li><p><a class="reference internal" href="../../ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
+</li>
+<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['allow_single_line_anonymous_functions'</span> <span class="pre">=&gt;</span> <span class="pre">true,</span> <span class="pre">'allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
+</li>
+<li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['allow_single_line_anonymous_functions'</span> <span class="pre">=&gt;</span> <span class="pre">true,</span> <span class="pre">'allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="ft">
+        <div class="content">
+          The <a href="../../../_static/images/logo.png">logo</a> is &copy; 2010-2022 Sensio Labs
+        </div>
+      </div>
+  </body>
+</html>
