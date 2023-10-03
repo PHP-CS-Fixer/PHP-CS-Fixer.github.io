@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>The Old Guard (v3.33.1)</strong> edition
+                <strong>BerSzcz Saturnalia (v3.34.1)</strong> edition
               </h1>
             </div>
           </div>
@@ -118,7 +118,7 @@ using <code class="docutils literal notranslate"><span class="pre">-name_of_fixe
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix /path/to/project --rules=&#39;{&quot;concat_space&quot;: {&quot;spacing&quot;: &quot;none&quot;}}&#39;</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">--dry-run</span></code> flag will run the fixer without making changes to your files.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">--dry-run</span></code> flag will run the fixer without making changes to your files (implicitly set when you use <cite>check</cite> command).</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">--diff</span></code> flag can be used to let the fixer output all the changes it makes in <code class="docutils literal notranslate"><span class="pre">udiff</span></code> format.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">--allow-risky</span></code> option (pass <code class="docutils literal notranslate"><span class="pre">yes</span></code> or <code class="docutils literal notranslate"><span class="pre">no</span></code>) allows you to set whether risky rules may run. Default value is taken from config file.
 A rule is considered risky if it could change code behaviour. By default no risky rules are run.</p>
@@ -149,6 +149,11 @@ fixed but without actually modifying them:</p>
 </div>
 <p>By using <code class="docutils literal notranslate"><span class="pre">--using-cache</span></code> option with <code class="docutils literal notranslate"><span class="pre">yes</span></code> or <code class="docutils literal notranslate"><span class="pre">no</span></code> you can set if the caching
 mechanism should be used.</p>
+</div>
+<div class="section" id="the-check-command">
+<h2>The <code class="docutils literal notranslate"><span class="pre">check</span></code> command<a class="headerlink" href="#the-check-command" title="Permalink to this headline">¶</a></h2>
+<p>This command is a shorthand for <code class="docutils literal notranslate"><span class="pre">fix</span> <span class="pre">--dry-run</span></code> and offers all the options and arguments as <code class="docutils literal notranslate"><span class="pre">fix</span></code> command.
+The only difference is that <code class="docutils literal notranslate"><span class="pre">check</span></code> command won’t apply any changes, but will only print analysis result.</p>
 </div>
 <div class="section" id="the-list-files-command">
 <h2>The <code class="docutils literal notranslate"><span class="pre">list-files</span></code> command<a class="headerlink" href="#the-list-files-command" title="Permalink to this headline">¶</a></h2>
@@ -216,7 +221,7 @@ composer.</p>
 <span class="go">&#39;</span>
 <span class="go">CHANGED_FILES=$(git diff --name-only --diff-filter=ACMRTUXB &quot;${COMMIT_RANGE}&quot;)</span>
 <span class="go">if ! echo &quot;${CHANGED_FILES}&quot; | grep -qE &quot;^(\\.php-cs-fixer(\\.dist)?\\.php|composer\\.lock)$&quot;; then EXTRA_ARGS=$(printf -- &#39;--path-mode=intersection\n--\n%s&#39; &quot;${CHANGED_FILES}&quot;); else EXTRA_ARGS=&#39;&#39;; fi</span>
-<span class="go">vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php -v --dry-run --stop-on-violation --using-cache=no ${EXTRA_ARGS}</span>
+<span class="go">vendor/bin/php-cs-fixer check --config=.php-cs-fixer.dist.php -v --stop-on-violation --using-cache=no ${EXTRA_ARGS}</span>
 </pre></div>
 </div>
 <p>Where <code class="docutils literal notranslate"><span class="pre">$COMMIT_RANGE</span></code> is your range of commits, e.g. <code class="docutils literal notranslate"><span class="pre">$TRAVIS_COMMIT_RANGE</span></code> or <code class="docutils literal notranslate"><span class="pre">HEAD~..HEAD</span></code>.</p>
