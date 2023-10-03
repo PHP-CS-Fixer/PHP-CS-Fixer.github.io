@@ -62,17 +62,23 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-no-empty-statement">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">no_empty_statement</span></code><a class="headerlink" href="#rule-no-empty-statement" title="Permalink to this headline">¶</a></h1>
-<p>Remove useless (semicolon) statements.</p>
+  <div class="section" id="rule-native-type-declaration-casing">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">native_type_declaration_casing</span></code><a class="headerlink" href="#rule-native-type-declaration-casing" title="Permalink to this headline">¶</a></h1>
+<p>Native type declarations should be used in the correct case.</p>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
-<span class="gd">-&lt;?php $a = 1;;</span><span class="w"></span>
-<span class="gi">+&lt;?php $a = 1;</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>class Bar {<span class="w"></span>
+<span class="gd">-    public function Foo(CALLABLE $bar): INT</span><span class="w"></span>
+<span class="gi">+    public function Foo(callable $bar): int</span><span class="w"></span>
+<span class="w"> </span>    {<span class="w"></span>
+<span class="w"> </span>        return 1;<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -80,18 +86,11 @@
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
 <span class="gi">+++ New</span><span class="w"></span>
-<span class="gd">-&lt;?php echo 1;2;</span><span class="w"></span>
-<span class="gi">+&lt;?php echo 1;</span><span class="w"></span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="example-3">
-<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php while(foo()){<span class="w"></span>
-<span class="gd">-    continue 1;</span><span class="w"></span>
-<span class="gi">+    continue ;</span><span class="w"></span>
+<span class="w"> </span>&lt;?php<span class="w"></span>
+<span class="w"> </span>class Foo<span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="gd">-    const INT BAR = 1;</span><span class="w"></span>
+<span class="gi">+    const int BAR = 1;</span><span class="w"></span>
 <span class="w"> </span>}<span class="w"></span>
 </pre></div>
 </div>
