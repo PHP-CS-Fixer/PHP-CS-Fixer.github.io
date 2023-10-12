@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Freezy Vrooom (v3.35.0)</strong> edition
+                <strong>Freezy Vrooom (v3.35.1)</strong> edition
               </h1>
             </div>
           </div>
@@ -2416,6 +2416,8 @@ custom patterns.</p>
 </li>
 <li><p><a class="reference internal" href="rules/class_notation/phpdoc_readonly_class_comment_to_keyword.html"><span class="doc">phpdoc_readonly_class_comment_to_keyword</span></a></p>
 <p>Converts readonly comment on classes to the readonly keyword.</p>
+<p><em>warning risky</em> If classes marked with <code class="docutils literal notranslate"><span class="pre">&#64;readonly</span></code> annotation were extended anyway,
+applying this fixer may break the inheritance for their child classes.</p>
 <p><a class="reference external" href="./../src/Fixer/ClassNotation/PhpdocReadonlyClassCommentToKeywordFixer.php">Source PhpCsFixer\Fixer\ClassNotation\PhpdocReadonlyClassCommentToKeywordFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/phpdoc/phpdoc_return_self_reference.html"><span class="doc">phpdoc_return_self_reference</span></a></p>
