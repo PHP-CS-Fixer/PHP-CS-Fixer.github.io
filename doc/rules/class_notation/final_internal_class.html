@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>BerSzcz Saturnalia (v3.34.1)</strong> edition
+                <strong>Freezy Vrooom (v3.35.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -74,17 +74,6 @@
 </div>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="annotation-include">
-<h3><code class="docutils literal notranslate"><span class="pre">annotation_include</span></code><a class="headerlink" href="#annotation-include" title="Permalink to this headline">¶</a></h3>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This option is deprecated and will be removed in the next major version. Use <code class="docutils literal notranslate"><span class="pre">include</span></code> to configure PHPDoc annotations tags and attributes.</p>
-</div>
-<p>Class level attribute or annotation tags that must be set in order to fix the
-class (case insensitive).</p>
-<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">['&#64;internal']</span></code></p>
-</div>
 <div class="section" id="annotation-exclude">
 <h3><code class="docutils literal notranslate"><span class="pre">annotation_exclude</span></code><a class="headerlink" href="#annotation-exclude" title="Permalink to this headline">¶</a></h3>
 <div class="admonition warning">
@@ -96,12 +85,22 @@ even if all of the white list ones are used as well (case insensitive).</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['&#64;final',</span> <span class="pre">'&#64;Entity',</span> <span class="pre">'&#64;ORM\\Entity',</span> <span class="pre">'&#64;ORM\\Mapping\\Entity',</span> <span class="pre">'&#64;Mapping\\Entity',</span> <span class="pre">'&#64;Document',</span> <span class="pre">'&#64;ODM\\Document']</span></code></p>
 </div>
-<div class="section" id="include">
-<h3><code class="docutils literal notranslate"><span class="pre">include</span></code><a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="annotation-include">
+<h3><code class="docutils literal notranslate"><span class="pre">annotation_include</span></code><a class="headerlink" href="#annotation-include" title="Permalink to this headline">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This option is deprecated and will be removed in the next major version. Use <code class="docutils literal notranslate"><span class="pre">include</span></code> to configure PHPDoc annotations tags and attributes.</p>
+</div>
 <p>Class level attribute or annotation tags that must be set in order to fix the
 class (case insensitive).</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">['internal']</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">['&#64;internal']</span></code></p>
+</div>
+<div class="section" id="consider-absent-docblock-as-internal-class">
+<h3><code class="docutils literal notranslate"><span class="pre">consider_absent_docblock_as_internal_class</span></code><a class="headerlink" href="#consider-absent-docblock-as-internal-class" title="Permalink to this headline">¶</a></h3>
+<p>Whether classes without any DocBlock should be fixed to final.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </div>
 <div class="section" id="exclude">
 <h3><code class="docutils literal notranslate"><span class="pre">exclude</span></code><a class="headerlink" href="#exclude" title="Permalink to this headline">¶</a></h3>
@@ -110,11 +109,12 @@ even if all of the white list ones are used as well (case insensitive).</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['final',</span> <span class="pre">'Entity',</span> <span class="pre">'ORM\\Entity',</span> <span class="pre">'ORM\\Mapping\\Entity',</span> <span class="pre">'Mapping\\Entity',</span> <span class="pre">'Document',</span> <span class="pre">'ODM\\Document']</span></code></p>
 </div>
-<div class="section" id="consider-absent-docblock-as-internal-class">
-<h3><code class="docutils literal notranslate"><span class="pre">consider_absent_docblock_as_internal_class</span></code><a class="headerlink" href="#consider-absent-docblock-as-internal-class" title="Permalink to this headline">¶</a></h3>
-<p>Whether classes without any DocBlock should be fixed to final.</p>
-<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+<div class="section" id="include">
+<h3><code class="docutils literal notranslate"><span class="pre">include</span></code><a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h3>
+<p>Class level attribute or annotation tags that must be set in order to fix the
+class (case insensitive).</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">['internal']</span></code></p>
 </div>
 </div>
 <div class="section" id="examples">

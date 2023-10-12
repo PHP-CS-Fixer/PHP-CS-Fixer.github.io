@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>BerSzcz Saturnalia (v3.34.1)</strong> edition
+                <strong>Freezy Vrooom (v3.35.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -67,17 +67,23 @@
 <p>Braces must be placed as configured.</p>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="control-structures-opening-brace">
-<h3><code class="docutils literal notranslate"><span class="pre">control_structures_opening_brace</span></code><a class="headerlink" href="#control-structures-opening-brace" title="Permalink to this headline">¶</a></h3>
-<p>The position of the opening brace of control structures‘ body.</p>
+<div class="section" id="allow-single-line-anonymous-functions">
+<h3><code class="docutils literal notranslate"><span class="pre">allow_single_line_anonymous_functions</span></code><a class="headerlink" href="#allow-single-line-anonymous-functions" title="Permalink to this headline">¶</a></h3>
+<p>Allow anonymous functions to have opening and closing braces on the same line.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+</div>
+<div class="section" id="allow-single-line-empty-anonymous-classes">
+<h3><code class="docutils literal notranslate"><span class="pre">allow_single_line_empty_anonymous_classes</span></code><a class="headerlink" href="#allow-single-line-empty-anonymous-classes" title="Permalink to this headline">¶</a></h3>
+<p>Allow anonymous classes to have opening and closing braces on the same line.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+</div>
+<div class="section" id="anonymous-classes-opening-brace">
+<h3><code class="docutils literal notranslate"><span class="pre">anonymous_classes_opening_brace</span></code><a class="headerlink" href="#anonymous-classes-opening-brace" title="Permalink to this headline">¶</a></h3>
+<p>The position of the opening brace of anonymous classes‘ body.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></p>
-</div>
-<div class="section" id="functions-opening-brace">
-<h3><code class="docutils literal notranslate"><span class="pre">functions_opening_brace</span></code><a class="headerlink" href="#functions-opening-brace" title="Permalink to this headline">¶</a></h3>
-<p>The position of the opening brace of functions‘ body.</p>
-<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code></p>
 </div>
 <div class="section" id="anonymous-functions-opening-brace">
 <h3><code class="docutils literal notranslate"><span class="pre">anonymous_functions_opening_brace</span></code><a class="headerlink" href="#anonymous-functions-opening-brace" title="Permalink to this headline">¶</a></h3>
@@ -91,23 +97,17 @@
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code></p>
 </div>
-<div class="section" id="anonymous-classes-opening-brace">
-<h3><code class="docutils literal notranslate"><span class="pre">anonymous_classes_opening_brace</span></code><a class="headerlink" href="#anonymous-classes-opening-brace" title="Permalink to this headline">¶</a></h3>
-<p>The position of the opening brace of anonymous classes‘ body.</p>
+<div class="section" id="control-structures-opening-brace">
+<h3><code class="docutils literal notranslate"><span class="pre">control_structures_opening_brace</span></code><a class="headerlink" href="#control-structures-opening-brace" title="Permalink to this headline">¶</a></h3>
+<p>The position of the opening brace of control structures‘ body.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></p>
 </div>
-<div class="section" id="allow-single-line-empty-anonymous-classes">
-<h3><code class="docutils literal notranslate"><span class="pre">allow_single_line_empty_anonymous_classes</span></code><a class="headerlink" href="#allow-single-line-empty-anonymous-classes" title="Permalink to this headline">¶</a></h3>
-<p>Allow anonymous classes to have opening and closing braces on the same line.</p>
-<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
-</div>
-<div class="section" id="allow-single-line-anonymous-functions">
-<h3><code class="docutils literal notranslate"><span class="pre">allow_single_line_anonymous_functions</span></code><a class="headerlink" href="#allow-single-line-anonymous-functions" title="Permalink to this headline">¶</a></h3>
-<p>Allow anonymous functions to have opening and closing braces on the same line.</p>
-<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+<div class="section" id="functions-opening-brace">
+<h3><code class="docutils literal notranslate"><span class="pre">functions_opening_brace</span></code><a class="headerlink" href="#functions-opening-brace" title="Permalink to this headline">¶</a></h3>
+<p>The position of the opening brace of functions‘ body.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code> and <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'next_line_unless_newline_at_signature_end'</span></code></p>
 </div>
 </div>
 <div class="section" id="examples">
