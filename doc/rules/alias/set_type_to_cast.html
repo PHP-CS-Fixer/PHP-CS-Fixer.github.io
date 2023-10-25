@@ -77,15 +77,15 @@ expression in a <code class="docutils literal notranslate"><span class="pre">for
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-settype($foo, &quot;integer&quot;);</span><span class="w"></span>
-<span class="gd">-settype($bar, &quot;string&quot;);</span><span class="w"></span>
-<span class="gd">-settype($bar, &quot;null&quot;);</span><span class="w"></span>
-<span class="gi">+$foo = (int) $foo;</span><span class="w"></span>
-<span class="gi">+$bar = (string) $bar;</span><span class="w"></span>
-<span class="gi">+$bar = null;</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-settype($foo, &quot;integer&quot;);</span>
+<span class="gd">-settype($bar, &quot;string&quot;);</span>
+<span class="gd">-settype($bar, &quot;null&quot;);</span>
+<span class="gi">+$foo = (int) $foo;</span>
+<span class="gi">+$bar = (string) $bar;</span>
+<span class="gi">+$bar = null;</span>
 </pre></div>
 </div>
 </div>

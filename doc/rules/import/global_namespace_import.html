@@ -91,64 +91,64 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="w"> </span>namespace Foo;<span class="w"></span>
-<span class="gi">+use DateTimeImmutable;</span><span class="w"></span>
+<span class="w"> </span>namespace Foo;
+<span class="gi">+use DateTimeImmutable;</span>
 
-<span class="gd">-$d = new \DateTimeImmutable();</span><span class="w"></span>
-<span class="gi">+$d = new DateTimeImmutable();</span><span class="w"></span>
+<span class="gd">-$d = new \DateTimeImmutable();</span>
+<span class="gi">+$d = new DateTimeImmutable();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['import_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true,</span> <span class="pre">'import_constants'</span> <span class="pre">=&gt;</span> <span class="pre">true,</span> <span class="pre">'import_functions'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="w"> </span>namespace Foo;<span class="w"></span>
-<span class="gi">+use DateTimeImmutable;</span><span class="w"></span>
-<span class="gi">+use function count;</span><span class="w"></span>
-<span class="gi">+use const M_PI;</span><span class="w"></span>
+<span class="w"> </span>namespace Foo;
+<span class="gi">+use DateTimeImmutable;</span>
+<span class="gi">+use function count;</span>
+<span class="gi">+use const M_PI;</span>
 
-<span class="gd">-if (\count($x)) {</span><span class="w"></span>
-<span class="gd">-    /** @var \DateTimeImmutable $d */</span><span class="w"></span>
-<span class="gd">-    $d = new \DateTimeImmutable();</span><span class="w"></span>
-<span class="gd">-    $p = \M_PI;</span><span class="w"></span>
-<span class="gi">+if (count($x)) {</span><span class="w"></span>
-<span class="gi">+    /** @var DateTimeImmutable $d */</span><span class="w"></span>
-<span class="gi">+    $d = new DateTimeImmutable();</span><span class="w"></span>
-<span class="gi">+    $p = M_PI;</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="gd">-if (\count($x)) {</span>
+<span class="gd">-    /** @var \DateTimeImmutable $d */</span>
+<span class="gd">-    $d = new \DateTimeImmutable();</span>
+<span class="gd">-    $p = \M_PI;</span>
+<span class="gi">+if (count($x)) {</span>
+<span class="gi">+    /** @var DateTimeImmutable $d */</span>
+<span class="gi">+    $d = new DateTimeImmutable();</span>
+<span class="gi">+    $p = M_PI;</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['import_classes'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'import_constants'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'import_functions'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="w"> </span>namespace Foo;<span class="w"></span>
+<span class="w"> </span>namespace Foo;
 
-<span class="w"> </span>use DateTimeImmutable;<span class="w"></span>
-<span class="w"> </span>use function count;<span class="w"></span>
-<span class="w"> </span>use const M_PI;<span class="w"></span>
+<span class="w"> </span>use DateTimeImmutable;
+<span class="w"> </span>use function count;
+<span class="w"> </span>use const M_PI;
 
-<span class="gd">-if (count($x)) {</span><span class="w"></span>
-<span class="gd">-    /** @var DateTimeImmutable $d */</span><span class="w"></span>
-<span class="gd">-    $d = new DateTimeImmutable();</span><span class="w"></span>
-<span class="gd">-    $p = M_PI;</span><span class="w"></span>
-<span class="gi">+if (\count($x)) {</span><span class="w"></span>
-<span class="gi">+    /** @var \DateTimeImmutable $d */</span><span class="w"></span>
-<span class="gi">+    $d = new \DateTimeImmutable();</span><span class="w"></span>
-<span class="gi">+    $p = \M_PI;</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="gd">-if (count($x)) {</span>
+<span class="gd">-    /** @var DateTimeImmutable $d */</span>
+<span class="gd">-    $d = new DateTimeImmutable();</span>
+<span class="gd">-    $p = M_PI;</span>
+<span class="gi">+if (\count($x)) {</span>
+<span class="gi">+    /** @var \DateTimeImmutable $d */</span>
+<span class="gi">+    $d = new \DateTimeImmutable();</span>
+<span class="gi">+    $p = \M_PI;</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

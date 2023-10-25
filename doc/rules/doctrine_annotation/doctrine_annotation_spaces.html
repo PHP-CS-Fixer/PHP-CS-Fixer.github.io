@@ -133,40 +133,40 @@ assignment operator; there must be one space around array assignment operator.</
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="gd">- * @Foo ( )</span><span class="w"></span>
-<span class="gi">+ * @Foo()</span><span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
-<span class="w"> </span>class Bar {}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="gd">- * @Foo ( )</span>
+<span class="gi">+ * @Foo()</span>
+<span class="w"> </span> */
+<span class="w"> </span>class Bar {}
 
-<span class="w"> </span>/**<span class="w"></span>
-<span class="gd">- * @Foo(&quot;bar&quot; ,&quot;baz&quot;)</span><span class="w"></span>
-<span class="gi">+ * @Foo(&quot;bar&quot;, &quot;baz&quot;)</span><span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
-<span class="w"> </span>class Bar2 {}<span class="w"></span>
+<span class="w"> </span>/**
+<span class="gd">- * @Foo(&quot;bar&quot; ,&quot;baz&quot;)</span>
+<span class="gi">+ * @Foo(&quot;bar&quot;, &quot;baz&quot;)</span>
+<span class="w"> </span> */
+<span class="w"> </span>class Bar2 {}
 
-<span class="w"> </span>/**<span class="w"></span>
-<span class="gd">- * @Foo(foo = &quot;foo&quot;, bar = {&quot;foo&quot;:&quot;foo&quot;, &quot;bar&quot;=&quot;bar&quot;})</span><span class="w"></span>
-<span class="gi">+ * @Foo(foo=&quot;foo&quot;, bar={&quot;foo&quot; : &quot;foo&quot;, &quot;bar&quot; = &quot;bar&quot;})</span><span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
-<span class="w"> </span>class Bar3 {}<span class="w"></span>
+<span class="w"> </span>/**
+<span class="gd">- * @Foo(foo = &quot;foo&quot;, bar = {&quot;foo&quot;:&quot;foo&quot;, &quot;bar&quot;=&quot;bar&quot;})</span>
+<span class="gi">+ * @Foo(foo=&quot;foo&quot;, bar={&quot;foo&quot; : &quot;foo&quot;, &quot;bar&quot; = &quot;bar&quot;})</span>
+<span class="w"> </span> */
+<span class="w"> </span>class Bar3 {}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['after_array_assignments_equals'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'before_array_assignments_equals'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="gd">- * @Foo(foo = &quot;foo&quot;, bar = {&quot;foo&quot;:&quot;foo&quot;, &quot;bar&quot;=&quot;bar&quot;})</span><span class="w"></span>
-<span class="gi">+ * @Foo(foo=&quot;foo&quot;, bar={&quot;foo&quot; : &quot;foo&quot;, &quot;bar&quot;=&quot;bar&quot;})</span><span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
-<span class="w"> </span>class Bar {}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="gd">- * @Foo(foo = &quot;foo&quot;, bar = {&quot;foo&quot;:&quot;foo&quot;, &quot;bar&quot;=&quot;bar&quot;})</span>
+<span class="gi">+ * @Foo(foo=&quot;foo&quot;, bar={&quot;foo&quot; : &quot;foo&quot;, &quot;bar&quot;=&quot;bar&quot;})</span>
+<span class="w"> </span> */
+<span class="w"> </span>class Bar {}
 </pre></div>
 </div>
 </div>

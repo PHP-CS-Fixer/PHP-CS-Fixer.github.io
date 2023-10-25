@@ -79,34 +79,34 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>final class Example<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="gd">-    const FOO_1 = 1, FOO_2 = 2;</span><span class="w"></span>
-<span class="gd">-    private static $bar1 = array(1,2,3), $bar2 = [1,2,3];</span><span class="w"></span>
-<span class="gi">+    const FOO_1 = 1;</span><span class="w"></span>
-<span class="gi">+    const FOO_2 = 2;</span><span class="w"></span>
-<span class="gi">+    private static $bar1 = array(1,2,3);</span><span class="w"></span>
-<span class="gi">+    private static $bar2 = [1,2,3];</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>final class Example
+<span class="w"> </span>{
+<span class="gd">-    const FOO_1 = 1, FOO_2 = 2;</span>
+<span class="gd">-    private static $bar1 = array(1,2,3), $bar2 = [1,2,3];</span>
+<span class="gi">+    const FOO_1 = 1;</span>
+<span class="gi">+    const FOO_2 = 2;</span>
+<span class="gi">+    private static $bar1 = array(1,2,3);</span>
+<span class="gi">+    private static $bar2 = [1,2,3];</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['elements'</span> <span class="pre">=&gt;</span> <span class="pre">['property']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>final class Example<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>    const FOO_1 = 1, FOO_2 = 2;<span class="w"></span>
-<span class="gd">-    private static $bar1 = array(1,2,3), $bar2 = [1,2,3];</span><span class="w"></span>
-<span class="gi">+    private static $bar1 = array(1,2,3);</span><span class="w"></span>
-<span class="gi">+    private static $bar2 = [1,2,3];</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>final class Example
+<span class="w"> </span>{
+<span class="w"> </span>    const FOO_1 = 1, FOO_2 = 2;
+<span class="gd">-    private static $bar1 = array(1,2,3), $bar2 = [1,2,3];</span>
+<span class="gi">+    private static $bar1 = array(1,2,3);</span>
+<span class="gi">+    private static $bar2 = [1,2,3];</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

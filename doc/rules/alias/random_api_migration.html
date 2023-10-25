@@ -88,38 +88,38 @@ based generating of the numbers.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-$a = getrandmax();</span><span class="w"></span>
-<span class="gd">-$a = rand($b, $c);</span><span class="w"></span>
-<span class="gd">-$a = srand();</span><span class="w"></span>
-<span class="gi">+$a = mt_getrandmax();</span><span class="w"></span>
-<span class="gi">+$a = mt_rand($b, $c);</span><span class="w"></span>
-<span class="gi">+$a = mt_srand();</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$a = getrandmax();</span>
+<span class="gd">-$a = rand($b, $c);</span>
+<span class="gd">-$a = srand();</span>
+<span class="gi">+$a = mt_getrandmax();</span>
+<span class="gi">+$a = mt_rand($b, $c);</span>
+<span class="gi">+$a = mt_srand();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['replacements'</span> <span class="pre">=&gt;</span> <span class="pre">['getrandmax'</span> <span class="pre">=&gt;</span> <span class="pre">'mt_getrandmax']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-$a = getrandmax();</span><span class="w"></span>
-<span class="gi">+$a = mt_getrandmax();</span><span class="w"></span>
-<span class="w"> </span>$a = rand($b, $c);<span class="w"></span>
-<span class="w"> </span>$a = srand();<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$a = getrandmax();</span>
+<span class="gi">+$a = mt_getrandmax();</span>
+<span class="w"> </span>$a = rand($b, $c);
+<span class="w"> </span>$a = srand();
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['replacements'</span> <span class="pre">=&gt;</span> <span class="pre">['rand'</span> <span class="pre">=&gt;</span> <span class="pre">'random_int']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="gd">-&lt;?php $a = rand($b, $c);</span><span class="w"></span>
-<span class="gi">+&lt;?php $a = random_int($b, $c);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="gd">-&lt;?php $a = rand($b, $c);</span>
+<span class="gi">+&lt;?php $a = random_int($b, $c);</span>
 </pre></div>
 </div>
 </div>

@@ -88,38 +88,38 @@ incompatibilities.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>final class MyTest extends \PHPUnit\Framework\TestCase<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>    public function testMe()<span class="w"></span>
-<span class="w"> </span>    {<span class="w"></span>
-<span class="gd">-        $this-&gt;assertInternalType(&quot;array&quot;, $var);</span><span class="w"></span>
-<span class="gd">-        $this-&gt;assertInternalType(&quot;boolean&quot;, $var);</span><span class="w"></span>
-<span class="gi">+        $this-&gt;assertIsArray($var);</span><span class="w"></span>
-<span class="gi">+        $this-&gt;assertIsBool($var);</span><span class="w"></span>
-<span class="w"> </span>    }<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>final class MyTest extends \PHPUnit\Framework\TestCase
+<span class="w"> </span>{
+<span class="w"> </span>    public function testMe()
+<span class="w"> </span>    {
+<span class="gd">-        $this-&gt;assertInternalType(&quot;array&quot;, $var);</span>
+<span class="gd">-        $this-&gt;assertInternalType(&quot;boolean&quot;, $var);</span>
+<span class="gi">+        $this-&gt;assertIsArray($var);</span>
+<span class="gi">+        $this-&gt;assertIsBool($var);</span>
+<span class="w"> </span>    }
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['target'</span> <span class="pre">=&gt;</span> <span class="pre">'7.5']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>final class MyTest extends \PHPUnit\Framework\TestCase<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>    public function testMe()<span class="w"></span>
-<span class="w"> </span>    {<span class="w"></span>
-<span class="gd">-        $this-&gt;assertInternalType(&quot;array&quot;, $var);</span><span class="w"></span>
-<span class="gd">-        $this-&gt;assertInternalType(&quot;boolean&quot;, $var);</span><span class="w"></span>
-<span class="gi">+        $this-&gt;assertIsArray($var);</span><span class="w"></span>
-<span class="gi">+        $this-&gt;assertIsBool($var);</span><span class="w"></span>
-<span class="w"> </span>    }<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>final class MyTest extends \PHPUnit\Framework\TestCase
+<span class="w"> </span>{
+<span class="w"> </span>    public function testMe()
+<span class="w"> </span>    {
+<span class="gd">-        $this-&gt;assertInternalType(&quot;array&quot;, $var);</span>
+<span class="gd">-        $this-&gt;assertInternalType(&quot;boolean&quot;, $var);</span>
+<span class="gi">+        $this-&gt;assertIsArray($var);</span>
+<span class="gi">+        $this-&gt;assertIsBool($var);</span>
+<span class="w"> </span>    }
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

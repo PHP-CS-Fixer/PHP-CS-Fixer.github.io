@@ -92,33 +92,33 @@ coercion system.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class Foo {<span class="w"></span>
-<span class="w"> </span>    /** @var int */<span class="w"></span>
-<span class="gd">-    private $foo;</span><span class="w"></span>
-<span class="gi">+    private int $foo;</span><span class="w"></span>
-<span class="w"> </span>    /** @var \Traversable */<span class="w"></span>
-<span class="gd">-    private $bar;</span><span class="w"></span>
-<span class="gi">+    private \Traversable $bar;</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class Foo {
+<span class="w"> </span>    /** @var int */
+<span class="gd">-    private $foo;</span>
+<span class="gi">+    private int $foo;</span>
+<span class="w"> </span>    /** @var \Traversable */
+<span class="gd">-    private $bar;</span>
+<span class="gi">+    private \Traversable $bar;</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['scalar_types'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class Foo {<span class="w"></span>
-<span class="w"> </span>    /** @var int */<span class="w"></span>
-<span class="w"> </span>    private $foo;<span class="w"></span>
-<span class="w"> </span>    /** @var \Traversable */<span class="w"></span>
-<span class="gd">-    private $bar;</span><span class="w"></span>
-<span class="gi">+    private \Traversable $bar;</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class Foo {
+<span class="w"> </span>    /** @var int */
+<span class="w"> </span>    private $foo;
+<span class="w"> </span>    /** @var \Traversable */
+<span class="gd">-    private $bar;</span>
+<span class="gi">+    private \Traversable $bar;</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

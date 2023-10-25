@@ -91,61 +91,61 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="gd">-throw  new  \Exception();</span><span class="w"></span>
-<span class="gi">+throw new \Exception();</span><span class="w"></span>
+<span class="gd">-throw  new  \Exception();</span>
+<span class="gi">+throw new \Exception();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['constructs_contain_a_single_space'</span> <span class="pre">=&gt;</span> <span class="pre">['yield_from'],</span> <span class="pre">'constructs_followed_by_a_single_space'</span> <span class="pre">=&gt;</span> <span class="pre">['yield_from']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="gd">-function foo() { yield  from  baz(); }</span><span class="w"></span>
-<span class="gi">+function foo() { yield from baz(); }</span><span class="w"></span>
+<span class="gd">-function foo() { yield  from  baz(); }</span>
+<span class="gi">+function foo() { yield from baz(); }</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['constructs_preceded_by_a_single_space'</span> <span class="pre">=&gt;</span> <span class="pre">['use_lambda'],</span> <span class="pre">'constructs_followed_by_a_single_space'</span> <span class="pre">=&gt;</span> <span class="pre">['use_lambda']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="gd">-$foo = function&amp; ()use($bar) {</span><span class="w"></span>
-<span class="gi">+$foo = function&amp; () use ($bar) {</span><span class="w"></span>
-<span class="w"> </span>};<span class="w"></span>
+<span class="gd">-$foo = function&amp; ()use($bar) {</span>
+<span class="gi">+$foo = function&amp; () use ($bar) {</span>
+<span class="w"> </span>};
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['constructs_followed_by_a_single_space'</span> <span class="pre">=&gt;</span> <span class="pre">['echo']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="gd">-echo  &quot;Hello!&quot;;</span><span class="w"></span>
-<span class="gi">+echo &quot;Hello!&quot;;</span><span class="w"></span>
+<span class="gd">-echo  &quot;Hello!&quot;;</span>
+<span class="gi">+echo &quot;Hello!&quot;;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['constructs_followed_by_a_single_space'</span> <span class="pre">=&gt;</span> <span class="pre">['yield_from']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="gd">-yield  from  baz();</span><span class="w"></span>
-<span class="gi">+yield from baz();</span><span class="w"></span>
+<span class="gd">-yield  from  baz();</span>
+<span class="gi">+yield from baz();</span>
 </pre></div>
 </div>
 </div>

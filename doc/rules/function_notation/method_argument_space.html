@@ -105,205 +105,205 @@ argument per line.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-function sample($a=10,$b=20,$c=30) {}</span><span class="w"></span>
-<span class="gd">-sample(1,  2);</span><span class="w"></span>
-<span class="gi">+function sample($a=10, $b=20, $c=30) {}</span><span class="w"></span>
-<span class="gi">+sample(1, 2);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-function sample($a=10,$b=20,$c=30) {}</span>
+<span class="gd">-sample(1,  2);</span>
+<span class="gi">+function sample($a=10, $b=20, $c=30) {}</span>
+<span class="gi">+sample(1, 2);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['keep_multiple_spaces_after_comma'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-function sample($a=10,$b=20,$c=30) {}</span><span class="w"></span>
-<span class="gd">-sample(1,  2);</span><span class="w"></span>
-<span class="gi">+function sample($a=10, $b=20, $c=30) {}</span><span class="w"></span>
-<span class="gi">+sample(1, 2);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-function sample($a=10,$b=20,$c=30) {}</span>
+<span class="gd">-sample(1,  2);</span>
+<span class="gi">+function sample($a=10, $b=20, $c=30) {}</span>
+<span class="gi">+sample(1, 2);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['keep_multiple_spaces_after_comma'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-function sample($a=10,$b=20,$c=30) {}</span><span class="w"></span>
-<span class="gi">+function sample($a=10, $b=20, $c=30) {}</span><span class="w"></span>
-<span class="w"> </span>sample(1,  2);<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-function sample($a=10,$b=20,$c=30) {}</span>
+<span class="gi">+function sample($a=10, $b=20, $c=30) {}</span>
+<span class="w"> </span>sample(1,  2);
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-function sample($a=10,</span><span class="w"></span>
-<span class="gd">-    $b=20,$c=30) {}</span><span class="w"></span>
-<span class="gd">-sample(1,</span><span class="w"></span>
-<span class="gd">-    2);</span><span class="w"></span>
-<span class="gi">+function sample(</span><span class="w"></span>
-<span class="gi">+    $a=10,</span><span class="w"></span>
-<span class="gi">+    $b=20,</span><span class="w"></span>
-<span class="gi">+    $c=30</span><span class="w"></span>
-<span class="gi">+) {}</span><span class="w"></span>
-<span class="gi">+sample(</span><span class="w"></span>
-<span class="gi">+    1,</span><span class="w"></span>
-<span class="gi">+    2</span><span class="w"></span>
-<span class="gi">+);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-function sample($a=10,</span>
+<span class="gd">-    $b=20,$c=30) {}</span>
+<span class="gd">-sample(1,</span>
+<span class="gd">-    2);</span>
+<span class="gi">+function sample(</span>
+<span class="gi">+    $a=10,</span>
+<span class="gi">+    $b=20,</span>
+<span class="gi">+    $c=30</span>
+<span class="gi">+) {}</span>
+<span class="gi">+sample(</span>
+<span class="gi">+    1,</span>
+<span class="gi">+    2</span>
+<span class="gi">+);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_single_line']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-function sample(</span><span class="w"></span>
-<span class="gd">-    $a=10,</span><span class="w"></span>
-<span class="gd">-    $b=20,</span><span class="w"></span>
-<span class="gd">-    $c=30</span><span class="w"></span>
-<span class="gd">-) {}</span><span class="w"></span>
-<span class="gd">-sample(</span><span class="w"></span>
-<span class="gd">-    1,</span><span class="w"></span>
-<span class="gd">-    2</span><span class="w"></span>
-<span class="gd">-);</span><span class="w"></span>
-<span class="gi">+function sample($a=10, $b=20, $c=30) {}</span><span class="w"></span>
-<span class="gi">+sample(1, 2);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-function sample(</span>
+<span class="gd">-    $a=10,</span>
+<span class="gd">-    $b=20,</span>
+<span class="gd">-    $c=30</span>
+<span class="gd">-) {}</span>
+<span class="gd">-sample(</span>
+<span class="gd">-    1,</span>
+<span class="gd">-    2</span>
+<span class="gd">-);</span>
+<span class="gi">+function sample($a=10, $b=20, $c=30) {}</span>
+<span class="gi">+sample(1, 2);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-6">
 <h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline',</span> <span class="pre">'keep_multiple_spaces_after_comma'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-function sample($a=10,</span><span class="w"></span>
-<span class="gd">-    $b=20,$c=30) {}</span><span class="w"></span>
-<span class="gd">-sample(1,</span><span class="w"></span>
-<span class="gd">-    2);</span><span class="w"></span>
-<span class="gi">+function sample(</span><span class="w"></span>
-<span class="gi">+    $a=10,</span><span class="w"></span>
-<span class="gi">+    $b=20,</span><span class="w"></span>
-<span class="gi">+    $c=30</span><span class="w"></span>
-<span class="gi">+) {}</span><span class="w"></span>
-<span class="gi">+sample(</span><span class="w"></span>
-<span class="gi">+    1,</span><span class="w"></span>
-<span class="gi">+    2</span><span class="w"></span>
-<span class="gi">+);</span><span class="w"></span>
-<span class="w"> </span>sample(&#39;foo&#39;,    &#39;foobarbaz&#39;, &#39;baz&#39;);<span class="w"></span>
-<span class="w"> </span>sample(&#39;foobar&#39;, &#39;bar&#39;,       &#39;baz&#39;);<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-function sample($a=10,</span>
+<span class="gd">-    $b=20,$c=30) {}</span>
+<span class="gd">-sample(1,</span>
+<span class="gd">-    2);</span>
+<span class="gi">+function sample(</span>
+<span class="gi">+    $a=10,</span>
+<span class="gi">+    $b=20,</span>
+<span class="gi">+    $c=30</span>
+<span class="gi">+) {}</span>
+<span class="gi">+sample(</span>
+<span class="gi">+    1,</span>
+<span class="gi">+    2</span>
+<span class="gi">+);</span>
+<span class="w"> </span>sample(&#39;foo&#39;,    &#39;foobarbaz&#39;, &#39;baz&#39;);
+<span class="w"> </span>sample(&#39;foobar&#39;, &#39;bar&#39;,       &#39;baz&#39;);
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-7">
 <h3>Example #7<a class="headerlink" href="#example-7" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline',</span> <span class="pre">'keep_multiple_spaces_after_comma'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-function sample($a=10,</span><span class="w"></span>
-<span class="gd">-    $b=20,$c=30) {}</span><span class="w"></span>
-<span class="gd">-sample(1,</span><span class="w"></span>
-<span class="gd">-    2);</span><span class="w"></span>
-<span class="gd">-sample(&#39;foo&#39;,    &#39;foobarbaz&#39;, &#39;baz&#39;);</span><span class="w"></span>
-<span class="gd">-sample(&#39;foobar&#39;, &#39;bar&#39;,       &#39;baz&#39;);</span><span class="w"></span>
-<span class="gi">+function sample(</span><span class="w"></span>
-<span class="gi">+    $a=10,</span><span class="w"></span>
-<span class="gi">+    $b=20,</span><span class="w"></span>
-<span class="gi">+    $c=30</span><span class="w"></span>
-<span class="gi">+) {}</span><span class="w"></span>
-<span class="gi">+sample(</span><span class="w"></span>
-<span class="gi">+    1,</span><span class="w"></span>
-<span class="gi">+    2</span><span class="w"></span>
-<span class="gi">+);</span><span class="w"></span>
-<span class="gi">+sample(&#39;foo&#39;, &#39;foobarbaz&#39;, &#39;baz&#39;);</span><span class="w"></span>
-<span class="gi">+sample(&#39;foobar&#39;, &#39;bar&#39;, &#39;baz&#39;);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-function sample($a=10,</span>
+<span class="gd">-    $b=20,$c=30) {}</span>
+<span class="gd">-sample(1,</span>
+<span class="gd">-    2);</span>
+<span class="gd">-sample(&#39;foo&#39;,    &#39;foobarbaz&#39;, &#39;baz&#39;);</span>
+<span class="gd">-sample(&#39;foobar&#39;, &#39;bar&#39;,       &#39;baz&#39;);</span>
+<span class="gi">+function sample(</span>
+<span class="gi">+    $a=10,</span>
+<span class="gi">+    $b=20,</span>
+<span class="gi">+    $c=30</span>
+<span class="gi">+) {}</span>
+<span class="gi">+sample(</span>
+<span class="gi">+    1,</span>
+<span class="gi">+    2</span>
+<span class="gi">+);</span>
+<span class="gi">+sample(&#39;foo&#39;, &#39;foobarbaz&#39;, &#39;baz&#39;);</span>
+<span class="gi">+sample(&#39;foobar&#39;, &#39;bar&#39;, &#39;baz&#39;);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-8">
 <h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline',</span> <span class="pre">'attribute_placement'</span> <span class="pre">=&gt;</span> <span class="pre">'ignore']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-function sample(#[Foo] #[Bar] $a=10,</span><span class="w"></span>
-<span class="gd">-    $b=20,$c=30) {}</span><span class="w"></span>
-<span class="gd">-sample(1,  2);</span><span class="w"></span>
-<span class="gi">+function sample(</span><span class="w"></span>
-<span class="gi">+    #[Foo] #[Bar] $a=10,</span><span class="w"></span>
-<span class="gi">+    $b=20,</span><span class="w"></span>
-<span class="gi">+    $c=30</span><span class="w"></span>
-<span class="gi">+) {}</span><span class="w"></span>
-<span class="gi">+sample(1, 2);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-function sample(#[Foo] #[Bar] $a=10,</span>
+<span class="gd">-    $b=20,$c=30) {}</span>
+<span class="gd">-sample(1,  2);</span>
+<span class="gi">+function sample(</span>
+<span class="gi">+    #[Foo] #[Bar] $a=10,</span>
+<span class="gi">+    $b=20,</span>
+<span class="gi">+    $c=30</span>
+<span class="gi">+) {}</span>
+<span class="gi">+sample(1, 2);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-9">
 <h3>Example #9<a class="headerlink" href="#example-9" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline',</span> <span class="pre">'attribute_placement'</span> <span class="pre">=&gt;</span> <span class="pre">'same_line']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-function sample(#[Foo]</span><span class="w"></span>
-<span class="gd">-    #[Bar]</span><span class="w"></span>
-<span class="gd">-    $a=10,</span><span class="w"></span>
-<span class="gd">-    $b=20,$c=30) {}</span><span class="w"></span>
-<span class="gd">-sample(1,  2);</span><span class="w"></span>
-<span class="gi">+function sample(</span><span class="w"></span>
-<span class="gi">+    #[Foo] #[Bar] $a=10,</span><span class="w"></span>
-<span class="gi">+    $b=20,</span><span class="w"></span>
-<span class="gi">+    $c=30</span><span class="w"></span>
-<span class="gi">+) {}</span><span class="w"></span>
-<span class="gi">+sample(1, 2);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-function sample(#[Foo]</span>
+<span class="gd">-    #[Bar]</span>
+<span class="gd">-    $a=10,</span>
+<span class="gd">-    $b=20,$c=30) {}</span>
+<span class="gd">-sample(1,  2);</span>
+<span class="gi">+function sample(</span>
+<span class="gi">+    #[Foo] #[Bar] $a=10,</span>
+<span class="gi">+    $b=20,</span>
+<span class="gi">+    $c=30</span>
+<span class="gi">+) {}</span>
+<span class="gi">+sample(1, 2);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-10">
 <h3>Example #10<a class="headerlink" href="#example-10" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline',</span> <span class="pre">'attribute_placement'</span> <span class="pre">=&gt;</span> <span class="pre">'standalone']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-function sample(#[Foo] #[Bar] $a=10,</span><span class="w"></span>
-<span class="gd">-    $b=20,$c=30) {}</span><span class="w"></span>
-<span class="gd">-sample(1,  2);</span><span class="w"></span>
-<span class="gi">+function sample(</span><span class="w"></span>
-<span class="gi">+    #[Foo]</span><span class="w"></span>
-<span class="gi">+    #[Bar]</span><span class="w"></span>
-<span class="gi">+    $a=10,</span><span class="w"></span>
-<span class="gi">+    $b=20,</span><span class="w"></span>
-<span class="gi">+    $c=30</span><span class="w"></span>
-<span class="gi">+) {}</span><span class="w"></span>
-<span class="gi">+sample(1, 2);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-function sample(#[Foo] #[Bar] $a=10,</span>
+<span class="gd">-    $b=20,$c=30) {}</span>
+<span class="gd">-sample(1,  2);</span>
+<span class="gi">+function sample(</span>
+<span class="gi">+    #[Foo]</span>
+<span class="gi">+    #[Bar]</span>
+<span class="gi">+    $a=10,</span>
+<span class="gi">+    $b=20,</span>
+<span class="gi">+    $c=30</span>
+<span class="gi">+) {}</span>
+<span class="gi">+sample(1, 2);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-11">
 <h3>Example #11<a class="headerlink" href="#example-11" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['after_heredoc'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>sample(<span class="w"></span>
-<span class="w"> </span>    &lt;&lt;&lt;EOD<span class="w"></span>
-<span class="w"> </span>        foo<span class="w"></span>
-<span class="gd">-        EOD</span><span class="w"></span>
-<span class="gd">-    ,</span><span class="w"></span>
-<span class="gi">+        EOD,</span><span class="w"></span>
-<span class="w"> </span>    &#39;bar&#39;<span class="w"></span>
-<span class="w"> </span>);<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>sample(
+<span class="w"> </span>    &lt;&lt;&lt;EOD
+<span class="w"> </span>        foo
+<span class="gd">-        EOD</span>
+<span class="gd">-    ,</span>
+<span class="gi">+        EOD,</span>
+<span class="w"> </span>    &#39;bar&#39;
+<span class="w"> </span>);
 </pre></div>
 </div>
 </div>

@@ -77,33 +77,33 @@ byte size rather than its length in characters.</p>
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-$a = strlen($a);</span><span class="w"></span>
-<span class="gd">-$a = strpos($a, $b);</span><span class="w"></span>
-<span class="gd">-$a = strrpos($a, $b);</span><span class="w"></span>
-<span class="gd">-$a = substr($a, $b);</span><span class="w"></span>
-<span class="gd">-$a = strtolower($a);</span><span class="w"></span>
-<span class="gd">-$a = strtoupper($a);</span><span class="w"></span>
-<span class="gd">-$a = stripos($a, $b);</span><span class="w"></span>
-<span class="gd">-$a = strripos($a, $b);</span><span class="w"></span>
-<span class="gd">-$a = strstr($a, $b);</span><span class="w"></span>
-<span class="gd">-$a = stristr($a, $b);</span><span class="w"></span>
-<span class="gd">-$a = strrchr($a, $b);</span><span class="w"></span>
-<span class="gd">-$a = substr_count($a, $b);</span><span class="w"></span>
-<span class="gi">+$a = mb_strlen($a);</span><span class="w"></span>
-<span class="gi">+$a = mb_strpos($a, $b);</span><span class="w"></span>
-<span class="gi">+$a = mb_strrpos($a, $b);</span><span class="w"></span>
-<span class="gi">+$a = mb_substr($a, $b);</span><span class="w"></span>
-<span class="gi">+$a = mb_strtolower($a);</span><span class="w"></span>
-<span class="gi">+$a = mb_strtoupper($a);</span><span class="w"></span>
-<span class="gi">+$a = mb_stripos($a, $b);</span><span class="w"></span>
-<span class="gi">+$a = mb_strripos($a, $b);</span><span class="w"></span>
-<span class="gi">+$a = mb_strstr($a, $b);</span><span class="w"></span>
-<span class="gi">+$a = mb_stristr($a, $b);</span><span class="w"></span>
-<span class="gi">+$a = mb_strrchr($a, $b);</span><span class="w"></span>
-<span class="gi">+$a = mb_substr_count($a, $b);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$a = strlen($a);</span>
+<span class="gd">-$a = strpos($a, $b);</span>
+<span class="gd">-$a = strrpos($a, $b);</span>
+<span class="gd">-$a = substr($a, $b);</span>
+<span class="gd">-$a = strtolower($a);</span>
+<span class="gd">-$a = strtoupper($a);</span>
+<span class="gd">-$a = stripos($a, $b);</span>
+<span class="gd">-$a = strripos($a, $b);</span>
+<span class="gd">-$a = strstr($a, $b);</span>
+<span class="gd">-$a = stristr($a, $b);</span>
+<span class="gd">-$a = strrchr($a, $b);</span>
+<span class="gd">-$a = substr_count($a, $b);</span>
+<span class="gi">+$a = mb_strlen($a);</span>
+<span class="gi">+$a = mb_strpos($a, $b);</span>
+<span class="gi">+$a = mb_strrpos($a, $b);</span>
+<span class="gi">+$a = mb_substr($a, $b);</span>
+<span class="gi">+$a = mb_strtolower($a);</span>
+<span class="gi">+$a = mb_strtoupper($a);</span>
+<span class="gi">+$a = mb_stripos($a, $b);</span>
+<span class="gi">+$a = mb_strripos($a, $b);</span>
+<span class="gi">+$a = mb_strstr($a, $b);</span>
+<span class="gi">+$a = mb_stristr($a, $b);</span>
+<span class="gi">+$a = mb_strrchr($a, $b);</span>
+<span class="gi">+$a = mb_substr_count($a, $b);</span>
 </pre></div>
 </div>
 </div>

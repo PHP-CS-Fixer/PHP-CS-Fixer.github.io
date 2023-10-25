@@ -94,67 +94,67 @@ considered superfluous (<code class="docutils literal notranslate"><span class="
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class Foo {<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="gd">-     * @param Bar $bar</span><span class="w"></span>
-<span class="gd">-     * @param mixed $baz</span><span class="w"></span>
-<span class="w"> </span>     *<span class="w"></span>
-<span class="gd">-     * @return Baz</span><span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function doFoo(Bar $bar, $baz): Baz {}<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class Foo {
+<span class="w"> </span>    /**
+<span class="gd">-     * @param Bar $bar</span>
+<span class="gd">-     * @param mixed $baz</span>
+<span class="w"> </span>     *
+<span class="gd">-     * @return Baz</span>
+<span class="w"> </span>     */
+<span class="w"> </span>    public function doFoo(Bar $bar, $baz): Baz {}
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['allow_mixed'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class Foo {<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="gd">-     * @param Bar $bar</span><span class="w"></span>
-<span class="w"> </span>     * @param mixed $baz<span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function doFoo(Bar $bar, $baz) {}<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class Foo {
+<span class="w"> </span>    /**
+<span class="gd">-     * @param Bar $bar</span>
+<span class="w"> </span>     * @param mixed $baz
+<span class="w"> </span>     */
+<span class="w"> </span>    public function doFoo(Bar $bar, $baz) {}
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['remove_inheritdoc'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class Foo {<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="gd">-     * @inheritDoc</span><span class="w"></span>
-<span class="gi">+     *</span><span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function doFoo(Bar $bar, $baz) {}<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class Foo {
+<span class="w"> </span>    /**
+<span class="gd">-     * @inheritDoc</span>
+<span class="gi">+     *</span>
+<span class="w"> </span>     */
+<span class="w"> </span>    public function doFoo(Bar $bar, $baz) {}
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['allow_unused_params'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class Foo {<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="gd">-     * @param Bar $bar</span><span class="w"></span>
-<span class="gd">-     * @param mixed $baz</span><span class="w"></span>
-<span class="w"> </span>     * @param string|int|null $qux<span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function doFoo(Bar $bar, $baz /*, $qux = null */) {}<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class Foo {
+<span class="w"> </span>    /**
+<span class="gd">-     * @param Bar $bar</span>
+<span class="gd">-     * @param mixed $baz</span>
+<span class="w"> </span>     * @param string|int|null $qux
+<span class="w"> </span>     */
+<span class="w"> </span>    public function doFoo(Bar $bar, $baz /*, $qux = null */) {}
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

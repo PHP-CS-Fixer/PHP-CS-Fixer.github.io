@@ -88,56 +88,56 @@ have to adjust the code manually by converting dynamic calls to static ones).</p
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class FooTest extends TestCase {<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="w"> </span>     * @dataProvider provideSomethingCases<span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function testSomething($expected, $actual) {}<span class="w"></span>
-<span class="gd">-    public function provideSomethingCases() {}</span><span class="w"></span>
-<span class="gi">+    public static function provideSomethingCases() {}</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class FooTest extends TestCase {
+<span class="w"> </span>    /**
+<span class="w"> </span>     * @dataProvider provideSomethingCases
+<span class="w"> </span>     */
+<span class="w"> </span>    public function testSomething($expected, $actual) {}
+<span class="gd">-    public function provideSomethingCases() {}</span>
+<span class="gi">+    public static function provideSomethingCases() {}</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['force'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class FooTest extends TestCase {<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="w"> </span>     * @dataProvider provideSomethingCases1<span class="w"></span>
-<span class="w"> </span>     * @dataProvider provideSomethingCases2<span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function testSomething($expected, $actual) {}<span class="w"></span>
-<span class="gd">-    public function provideSomethingCases1() { $this-&gt;getData1(); }</span><span class="w"></span>
-<span class="gd">-    public function provideSomethingCases2() { self::getData2(); }</span><span class="w"></span>
-<span class="gi">+    public static function provideSomethingCases1() { $this-&gt;getData1(); }</span><span class="w"></span>
-<span class="gi">+    public static function provideSomethingCases2() { self::getData2(); }</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class FooTest extends TestCase {
+<span class="w"> </span>    /**
+<span class="w"> </span>     * @dataProvider provideSomethingCases1
+<span class="w"> </span>     * @dataProvider provideSomethingCases2
+<span class="w"> </span>     */
+<span class="w"> </span>    public function testSomething($expected, $actual) {}
+<span class="gd">-    public function provideSomethingCases1() { $this-&gt;getData1(); }</span>
+<span class="gd">-    public function provideSomethingCases2() { self::getData2(); }</span>
+<span class="gi">+    public static function provideSomethingCases1() { $this-&gt;getData1(); }</span>
+<span class="gi">+    public static function provideSomethingCases2() { self::getData2(); }</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['force'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class FooTest extends TestCase {<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="w"> </span>     * @dataProvider provideSomething1Cases<span class="w"></span>
-<span class="w"> </span>     * @dataProvider provideSomething2Cases<span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function testSomething($expected, $actual) {}<span class="w"></span>
-<span class="w"> </span>    public function provideSomething1Cases() { $this-&gt;getData1(); }<span class="w"></span>
-<span class="gd">-    public function provideSomething2Cases() { self::getData2(); }</span><span class="w"></span>
-<span class="gi">+    public static function provideSomething2Cases() { self::getData2(); }</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class FooTest extends TestCase {
+<span class="w"> </span>    /**
+<span class="w"> </span>     * @dataProvider provideSomething1Cases
+<span class="w"> </span>     * @dataProvider provideSomething2Cases
+<span class="w"> </span>     */
+<span class="w"> </span>    public function testSomething($expected, $actual) {}
+<span class="w"> </span>    public function provideSomething1Cases() { $this-&gt;getData1(); }
+<span class="gd">-    public function provideSomething2Cases() { self::getData2(); }</span>
+<span class="gi">+    public static function provideSomething2Cases() { self::getData2(); }</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

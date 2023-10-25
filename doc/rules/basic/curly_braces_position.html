@@ -122,130 +122,130 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-class Foo {</span><span class="w"></span>
-<span class="gi">+class Foo</span><span class="w"></span>
-<span class="gi">+{</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-class Foo {</span>
+<span class="gi">+class Foo</span>
+<span class="gi">+{</span>
+<span class="w"> </span>}
 
-<span class="gd">-function foo() {</span><span class="w"></span>
-<span class="gi">+function foo()</span><span class="w"></span>
-<span class="gi">+{</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="gd">-function foo() {</span>
+<span class="gi">+function foo()</span>
+<span class="gi">+{</span>
+<span class="w"> </span>}
 
-<span class="gd">-$foo = function()</span><span class="w"></span>
-<span class="gd">-{</span><span class="w"></span>
-<span class="gi">+$foo = function() {</span><span class="w"></span>
-<span class="w"> </span>};<span class="w"></span>
+<span class="gd">-$foo = function()</span>
+<span class="gd">-{</span>
+<span class="gi">+$foo = function() {</span>
+<span class="w"> </span>};
 
-<span class="gd">-if (foo())</span><span class="w"></span>
-<span class="gd">-{</span><span class="w"></span>
-<span class="gi">+if (foo()) {</span><span class="w"></span>
-<span class="w"> </span>    bar();<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="gd">-if (foo())</span>
+<span class="gd">-{</span>
+<span class="gi">+if (foo()) {</span>
+<span class="w"> </span>    bar();
+<span class="w"> </span>}
 
-<span class="gd">-$foo = new class</span><span class="w"></span>
-<span class="gd">-{</span><span class="w"></span>
-<span class="gi">+$foo = new class {</span><span class="w"></span>
-<span class="w"> </span>};<span class="w"></span>
+<span class="gd">-$foo = new class</span>
+<span class="gd">-{</span>
+<span class="gi">+$foo = new class {</span>
+<span class="w"> </span>};
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['control_structures_opening_brace'</span> <span class="pre">=&gt;</span> <span class="pre">'next_line_unless_newline_at_signature_end']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-if (foo()) {</span><span class="w"></span>
-<span class="gi">+if (foo())</span><span class="w"></span>
-<span class="gi">+{</span><span class="w"></span>
-<span class="w"> </span>    bar();<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-if (foo()) {</span>
+<span class="gi">+if (foo())</span>
+<span class="gi">+{</span>
+<span class="w"> </span>    bar();
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['functions_opening_brace'</span> <span class="pre">=&gt;</span> <span class="pre">'same_line']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-function foo()</span><span class="w"></span>
-<span class="gd">-{</span><span class="w"></span>
-<span class="gi">+function foo() {</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-function foo()</span>
+<span class="gd">-{</span>
+<span class="gi">+function foo() {</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['anonymous_functions_opening_brace'</span> <span class="pre">=&gt;</span> <span class="pre">'next_line_unless_newline_at_signature_end']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-$foo = function () {</span><span class="w"></span>
-<span class="gi">+$foo = function ()</span><span class="w"></span>
-<span class="gi">+{</span><span class="w"></span>
-<span class="w"> </span>};<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$foo = function () {</span>
+<span class="gi">+$foo = function ()</span>
+<span class="gi">+{</span>
+<span class="w"> </span>};
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['classes_opening_brace'</span> <span class="pre">=&gt;</span> <span class="pre">'same_line']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-class Foo</span><span class="w"></span>
-<span class="gd">-{</span><span class="w"></span>
-<span class="gi">+class Foo {</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-class Foo</span>
+<span class="gd">-{</span>
+<span class="gi">+class Foo {</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-6">
 <h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['anonymous_classes_opening_brace'</span> <span class="pre">=&gt;</span> <span class="pre">'next_line_unless_newline_at_signature_end']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-$foo = new class {</span><span class="w"></span>
-<span class="gi">+$foo = new class</span><span class="w"></span>
-<span class="gi">+{</span><span class="w"></span>
-<span class="w"> </span>};<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$foo = new class {</span>
+<span class="gi">+$foo = new class</span>
+<span class="gi">+{</span>
+<span class="w"> </span>};
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-7">
 <h3>Example #7<a class="headerlink" href="#example-7" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>$foo = new class { };<span class="w"></span>
-<span class="gd">-$bar = new class { private $baz; };</span><span class="w"></span>
-<span class="gi">+$bar = new class {</span><span class="w"></span>
-<span class="gi">+private $baz;</span><span class="w"></span>
-<span class="gi">+};</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>$foo = new class { };
+<span class="gd">-$bar = new class { private $baz; };</span>
+<span class="gi">+$bar = new class {</span>
+<span class="gi">+private $baz;</span>
+<span class="gi">+};</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-8">
 <h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['allow_single_line_anonymous_functions'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>$foo = function () { return true; };<span class="w"></span>
-<span class="gd">-$bar = function () { $result = true;</span><span class="w"></span>
-<span class="gd">-    return $result; };</span><span class="w"></span>
-<span class="gi">+$bar = function () {</span><span class="w"></span>
-<span class="gi">+$result = true;</span><span class="w"></span>
-<span class="gi">+    return $result;</span><span class="w"></span>
-<span class="gi">+};</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>$foo = function () { return true; };
+<span class="gd">-$bar = function () { $result = true;</span>
+<span class="gd">-    return $result; };</span>
+<span class="gi">+$bar = function () {</span>
+<span class="gi">+$result = true;</span>
+<span class="gi">+    return $result;</span>
+<span class="gi">+};</span>
 </pre></div>
 </div>
 </div>

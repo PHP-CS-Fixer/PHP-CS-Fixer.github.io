@@ -113,98 +113,98 @@ custom patterns.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>final class Example<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>    use BarTrait;<span class="w"></span>
-<span class="w"> </span>    use BazTrait;<span class="w"></span>
-<span class="w"> </span>    const C1 = 1;<span class="w"></span>
-<span class="w"> </span>    const C2 = 2;<span class="w"></span>
-<span class="gd">-    protected static $protStatProp;</span><span class="w"></span>
-<span class="w"> </span>    public static $pubStatProp1;<span class="w"></span>
-<span class="w"> </span>    public $pubProp1;<span class="w"></span>
-<span class="gi">+    var $pubProp2;</span><span class="w"></span>
-<span class="gi">+    public static $pubStatProp2;</span><span class="w"></span>
-<span class="gi">+    public $pubProp3;</span><span class="w"></span>
-<span class="gi">+    protected static $protStatProp;</span><span class="w"></span>
-<span class="w"> </span>    protected $protProp;<span class="w"></span>
-<span class="gd">-    var $pubProp2;</span><span class="w"></span>
-<span class="w"> </span>    private static $privStatProp;<span class="w"></span>
-<span class="w"> </span>    private $privProp;<span class="w"></span>
-<span class="gd">-    public static $pubStatProp2;</span><span class="w"></span>
-<span class="gd">-    public $pubProp3;</span><span class="w"></span>
-<span class="w"> </span>    protected function __construct() {}<span class="w"></span>
-<span class="gd">-    private static function privStatFunc() {}</span><span class="w"></span>
-<span class="gi">+    public function __destruct() {}</span><span class="w"></span>
-<span class="gi">+    public function __toString() {}</span><span class="w"></span>
-<span class="w"> </span>    public function pubFunc1() {}<span class="w"></span>
-<span class="gd">-    public function __toString() {}</span><span class="w"></span>
-<span class="gd">-    protected function protFunc() {}</span><span class="w"></span>
-<span class="w"> </span>    function pubFunc2() {}<span class="w"></span>
-<span class="w"> </span>    public static function pubStatFunc1() {}<span class="w"></span>
-<span class="w"> </span>    public function pubFunc3() {}<span class="w"></span>
-<span class="w"> </span>    static function pubStatFunc2() {}<span class="w"></span>
-<span class="gd">-    private function privFunc() {}</span><span class="w"></span>
-<span class="w"> </span>    public static function pubStatFunc3() {}<span class="w"></span>
-<span class="gi">+    protected function protFunc() {}</span><span class="w"></span>
-<span class="w"> </span>    protected static function protStatFunc() {}<span class="w"></span>
-<span class="gd">-    public function __destruct() {}</span><span class="w"></span>
-<span class="gi">+    private static function privStatFunc() {}</span><span class="w"></span>
-<span class="gi">+    private function privFunc() {}</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>final class Example
+<span class="w"> </span>{
+<span class="w"> </span>    use BarTrait;
+<span class="w"> </span>    use BazTrait;
+<span class="w"> </span>    const C1 = 1;
+<span class="w"> </span>    const C2 = 2;
+<span class="gd">-    protected static $protStatProp;</span>
+<span class="w"> </span>    public static $pubStatProp1;
+<span class="w"> </span>    public $pubProp1;
+<span class="gi">+    var $pubProp2;</span>
+<span class="gi">+    public static $pubStatProp2;</span>
+<span class="gi">+    public $pubProp3;</span>
+<span class="gi">+    protected static $protStatProp;</span>
+<span class="w"> </span>    protected $protProp;
+<span class="gd">-    var $pubProp2;</span>
+<span class="w"> </span>    private static $privStatProp;
+<span class="w"> </span>    private $privProp;
+<span class="gd">-    public static $pubStatProp2;</span>
+<span class="gd">-    public $pubProp3;</span>
+<span class="w"> </span>    protected function __construct() {}
+<span class="gd">-    private static function privStatFunc() {}</span>
+<span class="gi">+    public function __destruct() {}</span>
+<span class="gi">+    public function __toString() {}</span>
+<span class="w"> </span>    public function pubFunc1() {}
+<span class="gd">-    public function __toString() {}</span>
+<span class="gd">-    protected function protFunc() {}</span>
+<span class="w"> </span>    function pubFunc2() {}
+<span class="w"> </span>    public static function pubStatFunc1() {}
+<span class="w"> </span>    public function pubFunc3() {}
+<span class="w"> </span>    static function pubStatFunc2() {}
+<span class="gd">-    private function privFunc() {}</span>
+<span class="w"> </span>    public static function pubStatFunc3() {}
+<span class="gi">+    protected function protFunc() {}</span>
+<span class="w"> </span>    protected static function protStatFunc() {}
+<span class="gd">-    public function __destruct() {}</span>
+<span class="gi">+    private static function privStatFunc() {}</span>
+<span class="gi">+    private function privFunc() {}</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['method_private',</span> <span class="pre">'method_public']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class Example<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="gi">+    private function B(){}</span><span class="w"></span>
-<span class="w"> </span>    public function A(){}<span class="w"></span>
-<span class="gd">-    private function B(){}</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class Example
+<span class="w"> </span>{
+<span class="gi">+    private function B(){}</span>
+<span class="w"> </span>    public function A(){}
+<span class="gd">-    private function B(){}</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['method_public'],</span> <span class="pre">'sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'alpha']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class Example<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="gd">-    public function D(){}</span><span class="w"></span>
-<span class="gi">+    public function A(){}</span><span class="w"></span>
-<span class="w"> </span>    public function B(){}<span class="w"></span>
-<span class="gd">-    public function A(){}</span><span class="w"></span>
-<span class="w"> </span>    public function C(){}<span class="w"></span>
-<span class="gi">+    public function D(){}</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class Example
+<span class="w"> </span>{
+<span class="gd">-    public function D(){}</span>
+<span class="gi">+    public function A(){}</span>
+<span class="w"> </span>    public function B(){}
+<span class="gd">-    public function A(){}</span>
+<span class="w"> </span>    public function C(){}
+<span class="gi">+    public function D(){}</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['method_public'],</span> <span class="pre">'sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'alpha',</span> <span class="pre">'case_sensitive'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class Example<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="gi">+    public function AA(){}</span><span class="w"></span>
-<span class="gi">+    public function AWs(){}</span><span class="w"></span>
-<span class="w"> </span>    public function Aa(){}<span class="w"></span>
-<span class="gd">-    public function AA(){}</span><span class="w"></span>
-<span class="w"> </span>    public function AwS(){}<span class="w"></span>
-<span class="gd">-    public function AWs(){}</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class Example
+<span class="w"> </span>{
+<span class="gi">+    public function AA(){}</span>
+<span class="gi">+    public function AWs(){}</span>
+<span class="w"> </span>    public function Aa(){}
+<span class="gd">-    public function AA(){}</span>
+<span class="w"> </span>    public function AwS(){}
+<span class="gd">-    public function AWs(){}</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

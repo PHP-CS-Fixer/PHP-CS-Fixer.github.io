@@ -100,52 +100,52 @@ style.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-    if ($a === null) {</span><span class="w"></span>
-<span class="gi">+    if (null === $a) {</span><span class="w"></span>
-<span class="w"> </span>        echo &quot;null&quot;;<span class="w"></span>
-<span class="w"> </span>    }<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-    if ($a === null) {</span>
+<span class="gi">+    if (null === $a) {</span>
+<span class="w"> </span>        echo &quot;null&quot;;
+<span class="w"> </span>    }
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['equal'</span> <span class="pre">=&gt;</span> <span class="pre">true,</span> <span class="pre">'identical'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'less_and_greater'</span> <span class="pre">=&gt;</span> <span class="pre">null]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-    $b = $c != 1;  // equal</span><span class="w"></span>
-<span class="gd">-    $a = 1 === $b; // identical</span><span class="w"></span>
-<span class="gi">+    $b = 1 != $c;  // equal</span><span class="w"></span>
-<span class="gi">+    $a = $b === 1; // identical</span><span class="w"></span>
-<span class="w"> </span>    $c = $c &gt; 3;   // less than<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-    $b = $c != 1;  // equal</span>
+<span class="gd">-    $a = 1 === $b; // identical</span>
+<span class="gi">+    $b = 1 != $c;  // equal</span>
+<span class="gi">+    $a = $b === 1; // identical</span>
+<span class="w"> </span>    $c = $c &gt; 3;   // less than
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['always_move_variable'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-return $foo === count($bar);</span><span class="w"></span>
-<span class="gi">+return count($bar) === $foo;</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-return $foo === count($bar);</span>
+<span class="gi">+return count($bar) === $foo;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['equal'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'identical'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'less_and_greater'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>    // Enforce non-Yoda style.<span class="w"></span>
-<span class="gd">-    if (null === $a) {</span><span class="w"></span>
-<span class="gi">+    if ($a === null) {</span><span class="w"></span>
-<span class="w"> </span>        echo &quot;null&quot;;<span class="w"></span>
-<span class="w"> </span>    }<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>    // Enforce non-Yoda style.
+<span class="gd">-    if (null === $a) {</span>
+<span class="gi">+    if ($a === null) {</span>
+<span class="w"> </span>        echo &quot;null&quot;;
+<span class="w"> </span>    }
 </pre></div>
 </div>
 </div>

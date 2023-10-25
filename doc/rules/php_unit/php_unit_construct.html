@@ -87,40 +87,40 @@ written with dedicated method like <code class="docutils literal notranslate"><s
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>final class FooTest extends \PHPUnit_Framework_TestCase {<span class="w"></span>
-<span class="w"> </span>    public function testSomething() {<span class="w"></span>
-<span class="gd">-        $this-&gt;assertEquals(false, $b);</span><span class="w"></span>
-<span class="gd">-        $this-&gt;assertSame(true, $a);</span><span class="w"></span>
-<span class="gd">-        $this-&gt;assertNotEquals(null, $c);</span><span class="w"></span>
-<span class="gd">-        $this-&gt;assertNotSame(null, $d);</span><span class="w"></span>
-<span class="gi">+        $this-&gt;assertFalse($b);</span><span class="w"></span>
-<span class="gi">+        $this-&gt;assertTrue($a);</span><span class="w"></span>
-<span class="gi">+        $this-&gt;assertNotNull($c);</span><span class="w"></span>
-<span class="gi">+        $this-&gt;assertNotNull($d);</span><span class="w"></span>
-<span class="w"> </span>    }<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>final class FooTest extends \PHPUnit_Framework_TestCase {
+<span class="w"> </span>    public function testSomething() {
+<span class="gd">-        $this-&gt;assertEquals(false, $b);</span>
+<span class="gd">-        $this-&gt;assertSame(true, $a);</span>
+<span class="gd">-        $this-&gt;assertNotEquals(null, $c);</span>
+<span class="gd">-        $this-&gt;assertNotSame(null, $d);</span>
+<span class="gi">+        $this-&gt;assertFalse($b);</span>
+<span class="gi">+        $this-&gt;assertTrue($a);</span>
+<span class="gi">+        $this-&gt;assertNotNull($c);</span>
+<span class="gi">+        $this-&gt;assertNotNull($d);</span>
+<span class="w"> </span>    }
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['assertions'</span> <span class="pre">=&gt;</span> <span class="pre">['assertSame',</span> <span class="pre">'assertNotSame']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>final class FooTest extends \PHPUnit_Framework_TestCase {<span class="w"></span>
-<span class="w"> </span>    public function testSomething() {<span class="w"></span>
-<span class="w"> </span>        $this-&gt;assertEquals(false, $b);<span class="w"></span>
-<span class="gd">-        $this-&gt;assertSame(true, $a);</span><span class="w"></span>
-<span class="gi">+        $this-&gt;assertTrue($a);</span><span class="w"></span>
-<span class="w"> </span>        $this-&gt;assertNotEquals(null, $c);<span class="w"></span>
-<span class="gd">-        $this-&gt;assertNotSame(null, $d);</span><span class="w"></span>
-<span class="gi">+        $this-&gt;assertNotNull($d);</span><span class="w"></span>
-<span class="w"> </span>    }<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>final class FooTest extends \PHPUnit_Framework_TestCase {
+<span class="w"> </span>    public function testSomething() {
+<span class="w"> </span>        $this-&gt;assertEquals(false, $b);
+<span class="gd">-        $this-&gt;assertSame(true, $a);</span>
+<span class="gi">+        $this-&gt;assertTrue($a);</span>
+<span class="w"> </span>        $this-&gt;assertNotEquals(null, $c);
+<span class="gd">-        $this-&gt;assertNotSame(null, $d);</span>
+<span class="gi">+        $this-&gt;assertNotNull($d);</span>
+<span class="w"> </span>    }
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

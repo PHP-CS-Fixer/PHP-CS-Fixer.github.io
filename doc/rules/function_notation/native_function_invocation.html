@@ -106,120 +106,120 @@ native functions), <code class="docutils literal notranslate"><span class="pre">
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="w"> </span>function baz($options)<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="gd">-    if (!array_key_exists(&quot;foo&quot;, $options)) {</span><span class="w"></span>
-<span class="gi">+    if (!\array_key_exists(&quot;foo&quot;, $options)) {</span><span class="w"></span>
-<span class="w"> </span>        throw new \InvalidArgumentException();<span class="w"></span>
-<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>function baz($options)
+<span class="w"> </span>{
+<span class="gd">-    if (!array_key_exists(&quot;foo&quot;, $options)) {</span>
+<span class="gi">+    if (!\array_key_exists(&quot;foo&quot;, $options)) {</span>
+<span class="w"> </span>        throw new \InvalidArgumentException();
+<span class="w"> </span>    }
 
-<span class="w"> </span>    return json_encode($options);<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="w"> </span>    return json_encode($options);
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['exclude'</span> <span class="pre">=&gt;</span> <span class="pre">['json_encode']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="w"> </span>function baz($options)<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="gd">-    if (!array_key_exists(&quot;foo&quot;, $options)) {</span><span class="w"></span>
-<span class="gi">+    if (!\array_key_exists(&quot;foo&quot;, $options)) {</span><span class="w"></span>
-<span class="w"> </span>        throw new \InvalidArgumentException();<span class="w"></span>
-<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>function baz($options)
+<span class="w"> </span>{
+<span class="gd">-    if (!array_key_exists(&quot;foo&quot;, $options)) {</span>
+<span class="gi">+    if (!\array_key_exists(&quot;foo&quot;, $options)) {</span>
+<span class="w"> </span>        throw new \InvalidArgumentException();
+<span class="w"> </span>    }
 
-<span class="w"> </span>    return json_encode($options);<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="w"> </span>    return json_encode($options);
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['scope'</span> <span class="pre">=&gt;</span> <span class="pre">'all']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>namespace space1 {<span class="w"></span>
-<span class="gd">-    echo count([1]);</span><span class="w"></span>
-<span class="gi">+    echo \count([1]);</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
-<span class="w"> </span>namespace {<span class="w"></span>
-<span class="gd">-    echo count([1]);</span><span class="w"></span>
-<span class="gi">+    echo \count([1]);</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>namespace space1 {
+<span class="gd">-    echo count([1]);</span>
+<span class="gi">+    echo \count([1]);</span>
+<span class="w"> </span>}
+<span class="w"> </span>namespace {
+<span class="gd">-    echo count([1]);</span>
+<span class="gi">+    echo \count([1]);</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['scope'</span> <span class="pre">=&gt;</span> <span class="pre">'namespaced']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>namespace space1 {<span class="w"></span>
-<span class="gd">-    echo count([1]);</span><span class="w"></span>
-<span class="gi">+    echo \count([1]);</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
-<span class="w"> </span>namespace {<span class="w"></span>
-<span class="w"> </span>    echo count([1]);<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>namespace space1 {
+<span class="gd">-    echo count([1]);</span>
+<span class="gi">+    echo \count([1]);</span>
+<span class="w"> </span>}
+<span class="w"> </span>namespace {
+<span class="w"> </span>    echo count([1]);
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['include'</span> <span class="pre">=&gt;</span> <span class="pre">['myGlobalFunction']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-myGlobalFunction();</span><span class="w"></span>
-<span class="gi">+\myGlobalFunction();</span><span class="w"></span>
-<span class="w"> </span>count();<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-myGlobalFunction();</span>
+<span class="gi">+\myGlobalFunction();</span>
+<span class="w"> </span>count();
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-6">
 <h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['include'</span> <span class="pre">=&gt;</span> <span class="pre">['&#64;all']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-myGlobalFunction();</span><span class="w"></span>
-<span class="gd">-count();</span><span class="w"></span>
-<span class="gi">+\myGlobalFunction();</span><span class="w"></span>
-<span class="gi">+\count();</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-myGlobalFunction();</span>
+<span class="gd">-count();</span>
+<span class="gi">+\myGlobalFunction();</span>
+<span class="gi">+\count();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-7">
 <h3>Example #7<a class="headerlink" href="#example-7" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['include'</span> <span class="pre">=&gt;</span> <span class="pre">['&#64;internal']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>myGlobalFunction();<span class="w"></span>
-<span class="gd">-count();</span><span class="w"></span>
-<span class="gi">+\count();</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>myGlobalFunction();
+<span class="gd">-count();</span>
+<span class="gi">+\count();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-8">
 <h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['include'</span> <span class="pre">=&gt;</span> <span class="pre">['&#64;compiler_optimized']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>$a .= str_repeat($a, 4);<span class="w"></span>
-<span class="gd">-$c = get_class($d);</span><span class="w"></span>
-<span class="gi">+$c = \get_class($d);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>$a .= str_repeat($a, 4);
+<span class="gd">-$c = get_class($d);</span>
+<span class="gi">+$c = \get_class($d);</span>
 </pre></div>
 </div>
 </div>

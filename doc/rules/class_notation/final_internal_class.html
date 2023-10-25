@@ -122,36 +122,36 @@ class (case insensitive).</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="w"> </span> * @internal<span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
-<span class="gd">-class Sample</span><span class="w"></span>
-<span class="gi">+final class Sample</span><span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="w"> </span> * @internal
+<span class="w"> </span> */
+<span class="gd">-class Sample</span>
+<span class="gi">+final class Sample</span>
+<span class="w"> </span>{
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['include'</span> <span class="pre">=&gt;</span> <span class="pre">['&#64;Custom'],</span> <span class="pre">'exclude'</span> <span class="pre">=&gt;</span> <span class="pre">['&#64;not-fix']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="w"> </span> * @CUSTOM<span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
-<span class="gd">-class A{}</span><span class="w"></span>
-<span class="gi">+final class A{}</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="w"> </span> * @CUSTOM
+<span class="w"> </span> */
+<span class="gd">-class A{}</span>
+<span class="gi">+final class A{}</span>
 
-<span class="w"> </span>/**<span class="w"></span>
-<span class="w"> </span> * @CUSTOM<span class="w"></span>
-<span class="w"> </span> * @not-fix<span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
-<span class="w"> </span>class B{}<span class="w"></span>
+<span class="w"> </span>/**
+<span class="w"> </span> * @CUSTOM
+<span class="w"> </span> * @not-fix
+<span class="w"> </span> */
+<span class="w"> </span>class B{}
 </pre></div>
 </div>
 </div>

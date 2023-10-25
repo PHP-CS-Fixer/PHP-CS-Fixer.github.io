@@ -78,26 +78,26 @@ PHPUnit incompatibilities.</p>
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>    public function testSomeTest()<span class="w"></span>
-<span class="w"> </span>    {<span class="w"></span>
-<span class="w"> </span>        $someMock = $this-&gt;createMock(Some::class);<span class="w"></span>
-<span class="gd">-        $someMock-&gt;method(&quot;some&quot;)-&gt;will($this-&gt;returnSelf());</span><span class="w"></span>
-<span class="gd">-        $someMock-&gt;method(&quot;some&quot;)-&gt;will($this-&gt;returnValue(&quot;example&quot;));</span><span class="w"></span>
-<span class="gd">-        $someMock-&gt;method(&quot;some&quot;)-&gt;will($this-&gt;returnArgument(2));</span><span class="w"></span>
-<span class="gd">-        $someMock-&gt;method(&quot;some&quot;)-&gt;will($this-&gt;returnCallback(&quot;str_rot13&quot;));</span><span class="w"></span>
-<span class="gd">-        $someMock-&gt;method(&quot;some&quot;)-&gt;will($this-&gt;returnValueMap([&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]));</span><span class="w"></span>
-<span class="gi">+        $someMock-&gt;method(&quot;some&quot;)-&gt;willReturnSelf();</span><span class="w"></span>
-<span class="gi">+        $someMock-&gt;method(&quot;some&quot;)-&gt;willReturn(&quot;example&quot;);</span><span class="w"></span>
-<span class="gi">+        $someMock-&gt;method(&quot;some&quot;)-&gt;willReturnArgument(2);</span><span class="w"></span>
-<span class="gi">+        $someMock-&gt;method(&quot;some&quot;)-&gt;willReturnCallback(&quot;str_rot13&quot;);</span><span class="w"></span>
-<span class="gi">+        $someMock-&gt;method(&quot;some&quot;)-&gt;willReturnMap([&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]);</span><span class="w"></span>
-<span class="w"> </span>    }<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase
+<span class="w"> </span>{
+<span class="w"> </span>    public function testSomeTest()
+<span class="w"> </span>    {
+<span class="w"> </span>        $someMock = $this-&gt;createMock(Some::class);
+<span class="gd">-        $someMock-&gt;method(&quot;some&quot;)-&gt;will($this-&gt;returnSelf());</span>
+<span class="gd">-        $someMock-&gt;method(&quot;some&quot;)-&gt;will($this-&gt;returnValue(&quot;example&quot;));</span>
+<span class="gd">-        $someMock-&gt;method(&quot;some&quot;)-&gt;will($this-&gt;returnArgument(2));</span>
+<span class="gd">-        $someMock-&gt;method(&quot;some&quot;)-&gt;will($this-&gt;returnCallback(&quot;str_rot13&quot;));</span>
+<span class="gd">-        $someMock-&gt;method(&quot;some&quot;)-&gt;will($this-&gt;returnValueMap([&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]));</span>
+<span class="gi">+        $someMock-&gt;method(&quot;some&quot;)-&gt;willReturnSelf();</span>
+<span class="gi">+        $someMock-&gt;method(&quot;some&quot;)-&gt;willReturn(&quot;example&quot;);</span>
+<span class="gi">+        $someMock-&gt;method(&quot;some&quot;)-&gt;willReturnArgument(2);</span>
+<span class="gi">+        $someMock-&gt;method(&quot;some&quot;)-&gt;willReturnCallback(&quot;str_rot13&quot;);</span>
+<span class="gi">+        $someMock-&gt;method(&quot;some&quot;)-&gt;willReturnMap([&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]);</span>
+<span class="w"> </span>    }
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

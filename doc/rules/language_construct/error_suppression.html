@@ -100,36 +100,36 @@ from other cases.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-trigger_error(&#39;Warning.&#39;, E_USER_DEPRECATED);</span><span class="w"></span>
-<span class="gi">+@trigger_error(&#39;Warning.&#39;, E_USER_DEPRECATED);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-trigger_error(&#39;Warning.&#39;, E_USER_DEPRECATED);</span>
+<span class="gi">+@trigger_error(&#39;Warning.&#39;, E_USER_DEPRECATED);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['noise_remaining_usages'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-@mkdir($dir);</span><span class="w"></span>
-<span class="gd">-@unlink($path);</span><span class="w"></span>
-<span class="gi">+mkdir($dir);</span><span class="w"></span>
-<span class="gi">+unlink($path);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-@mkdir($dir);</span>
+<span class="gd">-@unlink($path);</span>
+<span class="gi">+mkdir($dir);</span>
+<span class="gi">+unlink($path);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['noise_remaining_usages'</span> <span class="pre">=&gt;</span> <span class="pre">true,</span> <span class="pre">'noise_remaining_usages_exclude'</span> <span class="pre">=&gt;</span> <span class="pre">['unlink']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-@mkdir($dir);</span><span class="w"></span>
-<span class="gi">+mkdir($dir);</span><span class="w"></span>
-<span class="w"> </span>@unlink($path);<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-@mkdir($dir);</span>
+<span class="gi">+mkdir($dir);</span>
+<span class="w"> </span>@unlink($path);
 </pre></div>
 </div>
 </div>

@@ -114,56 +114,56 @@ removed.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="gd">-&lt;?php var_dump(PHP_VERSION, M_PI, MY_CUSTOM_PI);</span><span class="w"></span>
-<span class="gi">+&lt;?php var_dump(\PHP_VERSION, \M_PI, MY_CUSTOM_PI);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="gd">-&lt;?php var_dump(PHP_VERSION, M_PI, MY_CUSTOM_PI);</span>
+<span class="gi">+&lt;?php var_dump(\PHP_VERSION, \M_PI, MY_CUSTOM_PI);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['scope'</span> <span class="pre">=&gt;</span> <span class="pre">'namespaced']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>namespace space1 {<span class="w"></span>
-<span class="gd">-    echo PHP_VERSION;</span><span class="w"></span>
-<span class="gi">+    echo \PHP_VERSION;</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
-<span class="w"> </span>namespace {<span class="w"></span>
-<span class="w"> </span>    echo M_PI;<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>namespace space1 {
+<span class="gd">-    echo PHP_VERSION;</span>
+<span class="gi">+    echo \PHP_VERSION;</span>
+<span class="w"> </span>}
+<span class="w"> </span>namespace {
+<span class="w"> </span>    echo M_PI;
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['include'</span> <span class="pre">=&gt;</span> <span class="pre">['MY_CUSTOM_PI']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="gd">-&lt;?php var_dump(PHP_VERSION, M_PI, MY_CUSTOM_PI);</span><span class="w"></span>
-<span class="gi">+&lt;?php var_dump(\PHP_VERSION, \M_PI, \MY_CUSTOM_PI);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="gd">-&lt;?php var_dump(PHP_VERSION, M_PI, MY_CUSTOM_PI);</span>
+<span class="gi">+&lt;?php var_dump(\PHP_VERSION, \M_PI, \MY_CUSTOM_PI);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['fix_built_in'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'include'</span> <span class="pre">=&gt;</span> <span class="pre">['MY_CUSTOM_PI']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="gd">-&lt;?php var_dump(PHP_VERSION, M_PI, MY_CUSTOM_PI);</span><span class="w"></span>
-<span class="gi">+&lt;?php var_dump(PHP_VERSION, M_PI, \MY_CUSTOM_PI);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="gd">-&lt;?php var_dump(PHP_VERSION, M_PI, MY_CUSTOM_PI);</span>
+<span class="gi">+&lt;?php var_dump(PHP_VERSION, M_PI, \MY_CUSTOM_PI);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['exclude'</span> <span class="pre">=&gt;</span> <span class="pre">['M_PI']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="gd">-&lt;?php var_dump(PHP_VERSION, M_PI, MY_CUSTOM_PI);</span><span class="w"></span>
-<span class="gi">+&lt;?php var_dump(\PHP_VERSION, M_PI, MY_CUSTOM_PI);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="gd">-&lt;?php var_dump(PHP_VERSION, M_PI, MY_CUSTOM_PI);</span>
+<span class="gi">+&lt;?php var_dump(\PHP_VERSION, M_PI, MY_CUSTOM_PI);</span>
 </pre></div>
 </div>
 </div>

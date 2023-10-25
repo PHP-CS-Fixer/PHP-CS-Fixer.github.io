@@ -78,19 +78,19 @@ function calls with according type casting operator.</p>
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-    $a = intval($b);</span><span class="w"></span>
-<span class="gd">-    $a = floatval($b);</span><span class="w"></span>
-<span class="gd">-    $a = doubleval($b);</span><span class="w"></span>
-<span class="gd">-    $a = strval ($b);</span><span class="w"></span>
-<span class="gd">-    $a = boolval($b);</span><span class="w"></span>
-<span class="gi">+    $a = (int) $b;</span><span class="w"></span>
-<span class="gi">+    $a = (float) $b;</span><span class="w"></span>
-<span class="gi">+    $a = (float) $b;</span><span class="w"></span>
-<span class="gi">+    $a = (string) $b;</span><span class="w"></span>
-<span class="gi">+    $a = (bool) $b;</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-    $a = intval($b);</span>
+<span class="gd">-    $a = floatval($b);</span>
+<span class="gd">-    $a = doubleval($b);</span>
+<span class="gd">-    $a = strval ($b);</span>
+<span class="gd">-    $a = boolval($b);</span>
+<span class="gi">+    $a = (int) $b;</span>
+<span class="gi">+    $a = (float) $b;</span>
+<span class="gi">+    $a = (float) $b;</span>
+<span class="gi">+    $a = (string) $b;</span>
+<span class="gi">+    $a = (bool) $b;</span>
 </pre></div>
 </div>
 </div>

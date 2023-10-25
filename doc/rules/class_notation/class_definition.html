@@ -105,98 +105,98 @@ should be one space.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="gd">-class  Foo  extends  Bar  implements  Baz,  BarBaz</span><span class="w"></span>
-<span class="gi">+class Foo extends Bar implements Baz, BarBaz</span><span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="gd">-class  Foo  extends  Bar  implements  Baz,  BarBaz</span>
+<span class="gi">+class Foo extends Bar implements Baz, BarBaz</span>
+<span class="w"> </span>{
+<span class="w"> </span>}
 
-<span class="gd">-final  class  Foo  extends  Bar  implements  Baz,  BarBaz</span><span class="w"></span>
-<span class="gi">+final class Foo extends Bar implements Baz, BarBaz</span><span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="gd">-final  class  Foo  extends  Bar  implements  Baz,  BarBaz</span>
+<span class="gi">+final class Foo extends Bar implements Baz, BarBaz</span>
+<span class="w"> </span>{
+<span class="w"> </span>}
 
-<span class="gd">-trait  Foo</span><span class="w"></span>
-<span class="gi">+trait Foo</span><span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="gd">-trait  Foo</span>
+<span class="gi">+trait Foo</span>
+<span class="w"> </span>{
+<span class="w"> </span>}
 
-<span class="gd">-$foo = new  class  extends  Bar  implements  Baz,  BarBaz {};</span><span class="w"></span>
-<span class="gi">+$foo = new class extends Bar implements Baz, BarBaz {};</span><span class="w"></span>
+<span class="gd">-$foo = new  class  extends  Bar  implements  Baz,  BarBaz {};</span>
+<span class="gi">+$foo = new class extends Bar implements Baz, BarBaz {};</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['single_line'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="gd">-class Foo</span><span class="w"></span>
-<span class="gd">-extends Bar</span><span class="w"></span>
-<span class="gd">-implements Baz, BarBaz</span><span class="w"></span>
-<span class="gi">+class Foo extends Bar implements Baz, BarBaz</span><span class="w"></span>
-<span class="w"> </span>{}<span class="w"></span>
+<span class="gd">-class Foo</span>
+<span class="gd">-extends Bar</span>
+<span class="gd">-implements Baz, BarBaz</span>
+<span class="gi">+class Foo extends Bar implements Baz, BarBaz</span>
+<span class="w"> </span>{}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['single_item_single_line'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="gd">-class Foo</span><span class="w"></span>
-<span class="gd">-extends Bar</span><span class="w"></span>
-<span class="gd">-implements Baz</span><span class="w"></span>
-<span class="gi">+class Foo extends Bar implements Baz</span><span class="w"></span>
-<span class="w"> </span>{}<span class="w"></span>
+<span class="gd">-class Foo</span>
+<span class="gd">-extends Bar</span>
+<span class="gd">-implements Baz</span>
+<span class="gi">+class Foo extends Bar implements Baz</span>
+<span class="w"> </span>{}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['multi_line_extends_each_single_line'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="w"> </span>interface Bar extends<span class="w"></span>
-<span class="gd">-    Bar, BarBaz, FooBarBaz</span><span class="w"></span>
-<span class="gi">+    Bar,</span><span class="w"></span>
-<span class="gi">+    BarBaz,</span><span class="w"></span>
-<span class="gi">+    FooBarBaz</span><span class="w"></span>
-<span class="w"> </span>{}<span class="w"></span>
+<span class="w"> </span>interface Bar extends
+<span class="gd">-    Bar, BarBaz, FooBarBaz</span>
+<span class="gi">+    Bar,</span>
+<span class="gi">+    BarBaz,</span>
+<span class="gi">+    FooBarBaz</span>
+<span class="w"> </span>{}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['space_before_parenthesis'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-$foo = new class(){};</span><span class="w"></span>
-<span class="gi">+$foo = new class () {};</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$foo = new class(){};</span>
+<span class="gi">+$foo = new class () {};</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-6">
 <h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['inline_constructor_arguments'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-$foo = new class(</span><span class="w"></span>
-<span class="gd">-    $bar,</span><span class="w"></span>
-<span class="gd">-    $baz</span><span class="w"></span>
-<span class="gd">-) {};</span><span class="w"></span>
-<span class="gi">+$foo = new class($bar, $baz) {};</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$foo = new class(</span>
+<span class="gd">-    $bar,</span>
+<span class="gd">-    $baz</span>
+<span class="gd">-) {};</span>
+<span class="gi">+$foo = new class($bar, $baz) {};</span>
 </pre></div>
 </div>
 </div>

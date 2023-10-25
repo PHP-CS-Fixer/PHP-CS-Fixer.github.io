@@ -81,33 +81,33 @@ that implements the <code class="docutils literal notranslate"><span class="pre"
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class FooTest extends TestCase {<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="w"> </span>     * @dataProvider provideSomethingCases<span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function testSomething($expected, $actual) {}<span class="w"></span>
-<span class="gd">-    public function provideSomethingCases(): array {}</span><span class="w"></span>
-<span class="gi">+    public function provideSomethingCases(): iterable {}</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class FooTest extends TestCase {
+<span class="w"> </span>    /**
+<span class="w"> </span>     * @dataProvider provideSomethingCases
+<span class="w"> </span>     */
+<span class="w"> </span>    public function testSomething($expected, $actual) {}
+<span class="gd">-    public function provideSomethingCases(): array {}</span>
+<span class="gi">+    public function provideSomethingCases(): iterable {}</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class FooTest extends TestCase {<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="w"> </span>     * @dataProvider provideSomethingCases<span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function testSomething($expected, $actual) {}<span class="w"></span>
-<span class="gd">-    public function provideSomethingCases() {}</span><span class="w"></span>
-<span class="gi">+    public function provideSomethingCases(): iterable {}</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class FooTest extends TestCase {
+<span class="w"> </span>    /**
+<span class="w"> </span>     * @dataProvider provideSomethingCases
+<span class="w"> </span>     */
+<span class="w"> </span>    public function testSomething($expected, $actual) {}
+<span class="gd">-    public function provideSomethingCases() {}</span>
+<span class="gi">+    public function provideSomethingCases(): iterable {}</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

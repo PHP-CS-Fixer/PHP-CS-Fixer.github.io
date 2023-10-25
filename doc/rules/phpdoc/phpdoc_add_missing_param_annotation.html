@@ -79,49 +79,49 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="w"> </span> * @param int $bar<span class="w"></span>
-<span class="gi">+ * @param mixed $baz</span><span class="w"></span>
-<span class="w"> </span> *<span class="w"></span>
-<span class="w"> </span> * @return void<span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
-<span class="w"> </span>function f9(string $foo, $bar, $baz) {}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="w"> </span> * @param int $bar
+<span class="gi">+ * @param mixed $baz</span>
+<span class="w"> </span> *
+<span class="w"> </span> * @return void
+<span class="w"> </span> */
+<span class="w"> </span>function f9(string $foo, $bar, $baz) {}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['only_untyped'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="w"> </span> * @param int $bar<span class="w"></span>
-<span class="gi">+ * @param mixed $baz</span><span class="w"></span>
-<span class="w"> </span> *<span class="w"></span>
-<span class="w"> </span> * @return void<span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
-<span class="w"> </span>function f9(string $foo, $bar, $baz) {}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="w"> </span> * @param int $bar
+<span class="gi">+ * @param mixed $baz</span>
+<span class="w"> </span> *
+<span class="w"> </span> * @return void
+<span class="w"> </span> */
+<span class="w"> </span>function f9(string $foo, $bar, $baz) {}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['only_untyped'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="w"> </span> * @param int $bar<span class="w"></span>
-<span class="gi">+ * @param string $foo</span><span class="w"></span>
-<span class="gi">+ * @param mixed $baz</span><span class="w"></span>
-<span class="w"> </span> *<span class="w"></span>
-<span class="w"> </span> * @return void<span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
-<span class="w"> </span>function f9(string $foo, $bar, $baz) {}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="w"> </span> * @param int $bar
+<span class="gi">+ * @param string $foo</span>
+<span class="gi">+ * @param mixed $baz</span>
+<span class="w"> </span> *
+<span class="w"> </span> * @return void
+<span class="w"> </span> */
+<span class="w"> </span>function f9(string $foo, $bar, $baz) {}
 </pre></div>
 </div>
 </div>

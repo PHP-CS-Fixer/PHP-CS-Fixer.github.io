@@ -94,54 +94,54 @@ PHPUnit incompatibilities.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="gd">-     * @expectedException FooException</span><span class="w"></span>
-<span class="gd">-     * @expectedExceptionMessageRegExp /foo.*$/</span><span class="w"></span>
-<span class="gd">-     * @expectedExceptionCode 123</span><span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    function testAaa()<span class="w"></span>
-<span class="w"> </span>    {<span class="w"></span>
-<span class="gi">+        $this-&gt;setExpectedExceptionRegExp(\FooException::class, &#39;/foo.*$/&#39;, 123);</span><span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>        aaa();<span class="w"></span>
-<span class="w"> </span>    }<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase
+<span class="w"> </span>{
+<span class="w"> </span>    /**
+<span class="gd">-     * @expectedException FooException</span>
+<span class="gd">-     * @expectedExceptionMessageRegExp /foo.*$/</span>
+<span class="gd">-     * @expectedExceptionCode 123</span>
+<span class="w"> </span>     */
+<span class="w"> </span>    function testAaa()
+<span class="w"> </span>    {
+<span class="gi">+        $this-&gt;setExpectedExceptionRegExp(\FooException::class, &#39;/foo.*$/&#39;, 123);</span>
+<span class="gi">+</span>
+<span class="w"> </span>        aaa();
+<span class="w"> </span>    }
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['target'</span> <span class="pre">=&gt;</span> <span class="pre">'3.2']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="gd">-     * @expectedException FooException</span><span class="w"></span>
-<span class="gd">-     * @expectedExceptionCode 123</span><span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    function testBbb()<span class="w"></span>
-<span class="w"> </span>    {<span class="w"></span>
-<span class="gi">+        $this-&gt;setExpectedException(\FooException::class, null, 123);</span><span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>        bbb();<span class="w"></span>
-<span class="w"> </span>    }<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase
+<span class="w"> </span>{
+<span class="w"> </span>    /**
+<span class="gd">-     * @expectedException FooException</span>
+<span class="gd">-     * @expectedExceptionCode 123</span>
+<span class="w"> </span>     */
+<span class="w"> </span>    function testBbb()
+<span class="w"> </span>    {
+<span class="gi">+        $this-&gt;setExpectedException(\FooException::class, null, 123);</span>
+<span class="gi">+</span>
+<span class="w"> </span>        bbb();
+<span class="w"> </span>    }
 
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="w"> </span>     * @expectedException FooException<span class="w"></span>
-<span class="w"> </span>     * @expectedExceptionMessageRegExp /foo.*$/<span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    function testCcc()<span class="w"></span>
-<span class="w"> </span>    {<span class="w"></span>
-<span class="w"> </span>        ccc();<span class="w"></span>
-<span class="w"> </span>    }<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="w"> </span>    /**
+<span class="w"> </span>     * @expectedException FooException
+<span class="w"> </span>     * @expectedExceptionMessageRegExp /foo.*$/
+<span class="w"> </span>     */
+<span class="w"> </span>    function testCcc()
+<span class="w"> </span>    {
+<span class="w"> </span>        ccc();
+<span class="w"> </span>    }
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

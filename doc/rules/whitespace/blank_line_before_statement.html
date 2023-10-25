@@ -79,186 +79,186 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>function A() {<span class="w"></span>
-<span class="w"> </span>    echo 1;<span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>    return 1;<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>function A() {
+<span class="w"> </span>    echo 1;
+<span class="gi">+</span>
+<span class="w"> </span>    return 1;
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['break']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>switch ($foo) {<span class="w"></span>
-<span class="w"> </span>    case 42:<span class="w"></span>
-<span class="w"> </span>        $bar-&gt;process();<span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>        break;<span class="w"></span>
-<span class="w"> </span>    case 44:<span class="w"></span>
-<span class="w"> </span>        break;<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>switch ($foo) {
+<span class="w"> </span>    case 42:
+<span class="w"> </span>        $bar-&gt;process();
+<span class="gi">+</span>
+<span class="w"> </span>        break;
+<span class="w"> </span>    case 44:
+<span class="w"> </span>        break;
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['continue']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>foreach ($foo as $bar) {<span class="w"></span>
-<span class="w"> </span>    if ($bar-&gt;isTired()) {<span class="w"></span>
-<span class="w"> </span>        $bar-&gt;sleep();<span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>        continue;<span class="w"></span>
-<span class="w"> </span>    }<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>foreach ($foo as $bar) {
+<span class="w"> </span>    if ($bar-&gt;isTired()) {
+<span class="w"> </span>        $bar-&gt;sleep();
+<span class="gi">+</span>
+<span class="w"> </span>        continue;
+<span class="w"> </span>    }
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['do']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>$i = 0;<span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>do {<span class="w"></span>
-<span class="w"> </span>    echo $i;<span class="w"></span>
-<span class="w"> </span>} while ($i &gt; 0);<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>$i = 0;
+<span class="gi">+</span>
+<span class="w"> </span>do {
+<span class="w"> </span>    echo $i;
+<span class="w"> </span>} while ($i &gt; 0);
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['exit']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>if ($foo === false) {<span class="w"></span>
-<span class="w"> </span>    exit(0);<span class="w"></span>
-<span class="w"> </span>} else {<span class="w"></span>
-<span class="w"> </span>    $bar = 9000;<span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>    exit(1);<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>if ($foo === false) {
+<span class="w"> </span>    exit(0);
+<span class="w"> </span>} else {
+<span class="w"> </span>    $bar = 9000;
+<span class="gi">+</span>
+<span class="w"> </span>    exit(1);
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-6">
 <h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['goto']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>a:<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>a:
 
-<span class="w"> </span>if ($foo === false) {<span class="w"></span>
-<span class="w"> </span>    goto a;<span class="w"></span>
-<span class="w"> </span>} else {<span class="w"></span>
-<span class="w"> </span>    $bar = 9000;<span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>    goto b;<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="w"> </span>if ($foo === false) {
+<span class="w"> </span>    goto a;
+<span class="w"> </span>} else {
+<span class="w"> </span>    $bar = 9000;
+<span class="gi">+</span>
+<span class="w"> </span>    goto b;
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-7">
 <h3>Example #7<a class="headerlink" href="#example-7" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['if']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>$a = 9000;<span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>if (true) {<span class="w"></span>
-<span class="w"> </span>    $foo = $bar;<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>$a = 9000;
+<span class="gi">+</span>
+<span class="w"> </span>if (true) {
+<span class="w"> </span>    $foo = $bar;
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-8">
 <h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['return']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="w"> </span>if (true) {<span class="w"></span>
-<span class="w"> </span>    $foo = $bar;<span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>    return;<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="w"> </span>if (true) {
+<span class="w"> </span>    $foo = $bar;
+<span class="gi">+</span>
+<span class="w"> </span>    return;
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-9">
 <h3>Example #9<a class="headerlink" href="#example-9" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['switch']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>$a = 9000;<span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>switch ($a) {<span class="w"></span>
-<span class="w"> </span>    case 42:<span class="w"></span>
-<span class="w"> </span>        break;<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>$a = 9000;
+<span class="gi">+</span>
+<span class="w"> </span>switch ($a) {
+<span class="w"> </span>    case 42:
+<span class="w"> </span>        break;
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-10">
 <h3>Example #10<a class="headerlink" href="#example-10" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['throw']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>if (null === $a) {<span class="w"></span>
-<span class="w"> </span>    $foo-&gt;bar();<span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>    throw new \UnexpectedValueException(&quot;A cannot be null.&quot;);<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>if (null === $a) {
+<span class="w"> </span>    $foo-&gt;bar();
+<span class="gi">+</span>
+<span class="w"> </span>    throw new \UnexpectedValueException(&quot;A cannot be null.&quot;);
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-11">
 <h3>Example #11<a class="headerlink" href="#example-11" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['try']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>$a = 9000;<span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>try {<span class="w"></span>
-<span class="w"> </span>    $foo-&gt;bar();<span class="w"></span>
-<span class="w"> </span>} catch (\Exception $exception) {<span class="w"></span>
-<span class="w"> </span>    $a = -1;<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>$a = 9000;
+<span class="gi">+</span>
+<span class="w"> </span>try {
+<span class="w"> </span>    $foo-&gt;bar();
+<span class="w"> </span>} catch (\Exception $exception) {
+<span class="w"> </span>    $a = -1;
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-12">
 <h3>Example #12<a class="headerlink" href="#example-12" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['yield']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>function getValues() {<span class="w"></span>
-<span class="w"> </span>    yield 1;<span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>    yield 2;<span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>    // comment<span class="w"></span>
-<span class="w"> </span>    yield 3;<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>function getValues() {
+<span class="w"> </span>    yield 1;
+<span class="gi">+</span>
+<span class="w"> </span>    yield 2;
+<span class="gi">+</span>
+<span class="w"> </span>    // comment
+<span class="w"> </span>    yield 3;
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

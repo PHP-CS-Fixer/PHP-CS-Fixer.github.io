@@ -90,187 +90,187 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-$a= 1  + $b^ $d !==  $e or   $f;</span><span class="w"></span>
-<span class="gi">+$a = 1 + $b ^ $d !== $e or $f;</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$a= 1  + $b^ $d !==  $e or   $f;</span>
+<span class="gi">+$a = 1 + $b ^ $d !== $e or $f;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['='</span> <span class="pre">=&gt;</span> <span class="pre">'align',</span> <span class="pre">'xor'</span> <span class="pre">=&gt;</span> <span class="pre">null]]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>$aa=  1;<span class="w"></span>
-<span class="gd">-$b=2;</span><span class="w"></span>
-<span class="gi">+$b =2;</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>$aa=  1;
+<span class="gd">-$b=2;</span>
+<span class="gi">+$b =2;</span>
 
-<span class="w"> </span>$c = $d    xor    $e;<span class="w"></span>
-<span class="gd">-$f    -=  1;</span><span class="w"></span>
-<span class="gi">+$f -= 1;</span><span class="w"></span>
+<span class="w"> </span>$c = $d    xor    $e;
+<span class="gd">-$f    -=  1;</span>
+<span class="gi">+$f -= 1;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['+='</span> <span class="pre">=&gt;</span> <span class="pre">'align_single_space']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-$a = $b +=$c;</span><span class="w"></span>
-<span class="gd">-$d = $ee+=$f;</span><span class="w"></span>
-<span class="gi">+$a = $b  += $c;</span><span class="w"></span>
-<span class="gi">+$d = $ee += $f;</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$a = $b +=$c;</span>
+<span class="gd">-$d = $ee+=$f;</span>
+<span class="gi">+$a = $b  += $c;</span>
+<span class="gi">+$d = $ee += $f;</span>
 
-<span class="gd">-$g = $b     +=$c;</span><span class="w"></span>
-<span class="gd">-$h = $ee+=$f;</span><span class="w"></span>
-<span class="gi">+$g = $b     += $c;</span><span class="w"></span>
-<span class="gi">+$h = $ee    += $f;</span><span class="w"></span>
+<span class="gd">-$g = $b     +=$c;</span>
+<span class="gd">-$h = $ee+=$f;</span>
+<span class="gi">+$g = $b     += $c;</span>
+<span class="gi">+$h = $ee    += $f;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['==='</span> <span class="pre">=&gt;</span> <span class="pre">'align_single_space_minimal']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-$a = $b===$c;</span><span class="w"></span>
-<span class="gd">-$d = $f   ===  $g;</span><span class="w"></span>
-<span class="gd">-$h = $i===  $j;</span><span class="w"></span>
-<span class="gi">+$a = $b === $c;</span><span class="w"></span>
-<span class="gi">+$d = $f === $g;</span><span class="w"></span>
-<span class="gi">+$h = $i === $j;</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$a = $b===$c;</span>
+<span class="gd">-$d = $f   ===  $g;</span>
+<span class="gd">-$h = $i===  $j;</span>
+<span class="gi">+$a = $b === $c;</span>
+<span class="gi">+$d = $f === $g;</span>
+<span class="gi">+$h = $i === $j;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['|'</span> <span class="pre">=&gt;</span> <span class="pre">'no_space']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-$foo = \json_encode($bar, JSON_PRESERVE_ZERO_FRACTION | JSON_PRETTY_PRINT);</span><span class="w"></span>
-<span class="gi">+$foo = \json_encode($bar, JSON_PRESERVE_ZERO_FRACTION|JSON_PRETTY_PRINT);</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$foo = \json_encode($bar, JSON_PRESERVE_ZERO_FRACTION | JSON_PRETTY_PRINT);</span>
+<span class="gi">+$foo = \json_encode($bar, JSON_PRESERVE_ZERO_FRACTION|JSON_PRETTY_PRINT);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-6">
 <h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'single_space']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>$array = [<span class="w"></span>
-<span class="gd">-    &quot;foo&quot;            =&gt;   1,</span><span class="w"></span>
-<span class="gd">-    &quot;baaaaaaaaaaar&quot;  =&gt;  11,</span><span class="w"></span>
-<span class="gi">+    &quot;foo&quot; =&gt; 1,</span><span class="w"></span>
-<span class="gi">+    &quot;baaaaaaaaaaar&quot; =&gt; 11,</span><span class="w"></span>
-<span class="w"> </span>];<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>$array = [
+<span class="gd">-    &quot;foo&quot;            =&gt;   1,</span>
+<span class="gd">-    &quot;baaaaaaaaaaar&quot;  =&gt;  11,</span>
+<span class="gi">+    &quot;foo&quot; =&gt; 1,</span>
+<span class="gi">+    &quot;baaaaaaaaaaar&quot; =&gt; 11,</span>
+<span class="w"> </span>];
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-7">
 <h3>Example #7<a class="headerlink" href="#example-7" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>$array = [<span class="w"></span>
-<span class="gd">-    &quot;foo&quot; =&gt; 12,</span><span class="w"></span>
-<span class="gi">+    &quot;foo&quot;            =&gt; 12,</span><span class="w"></span>
-<span class="w"> </span>    &quot;baaaaaaaaaaar&quot;  =&gt; 13,<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>$array = [
+<span class="gd">-    &quot;foo&quot; =&gt; 12,</span>
+<span class="gi">+    &quot;foo&quot;            =&gt; 12,</span>
+<span class="w"> </span>    &quot;baaaaaaaaaaar&quot;  =&gt; 13,
 
-<span class="w"> </span>    &quot;baz&quot; =&gt; 1,<span class="w"></span>
-<span class="w"> </span>];<span class="w"></span>
+<span class="w"> </span>    &quot;baz&quot; =&gt; 1,
+<span class="w"> </span>];
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-8">
 <h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align_by_scope']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>$array = [<span class="w"></span>
-<span class="gd">-    &quot;foo&quot; =&gt; 12,</span><span class="w"></span>
-<span class="gi">+    &quot;foo&quot;            =&gt; 12,</span><span class="w"></span>
-<span class="w"> </span>    &quot;baaaaaaaaaaar&quot;  =&gt; 13,<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>$array = [
+<span class="gd">-    &quot;foo&quot; =&gt; 12,</span>
+<span class="gi">+    &quot;foo&quot;            =&gt; 12,</span>
+<span class="w"> </span>    &quot;baaaaaaaaaaar&quot;  =&gt; 13,
 
-<span class="gd">-    &quot;baz&quot; =&gt; 1,</span><span class="w"></span>
-<span class="gi">+    &quot;baz&quot;            =&gt; 1,</span><span class="w"></span>
-<span class="w"> </span>];<span class="w"></span>
+<span class="gd">-    &quot;baz&quot; =&gt; 1,</span>
+<span class="gi">+    &quot;baz&quot;            =&gt; 1,</span>
+<span class="w"> </span>];
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-9">
 <h3>Example #9<a class="headerlink" href="#example-9" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align_single_space']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>$array = [<span class="w"></span>
-<span class="gd">-    &quot;foo&quot; =&gt; 12,</span><span class="w"></span>
-<span class="gi">+    &quot;foo&quot;            =&gt; 12,</span><span class="w"></span>
-<span class="w"> </span>    &quot;baaaaaaaaaaar&quot;  =&gt; 13,<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>$array = [
+<span class="gd">-    &quot;foo&quot; =&gt; 12,</span>
+<span class="gi">+    &quot;foo&quot;            =&gt; 12,</span>
+<span class="w"> </span>    &quot;baaaaaaaaaaar&quot;  =&gt; 13,
 
-<span class="w"> </span>    &quot;baz&quot; =&gt; 1,<span class="w"></span>
-<span class="w"> </span>];<span class="w"></span>
+<span class="w"> </span>    &quot;baz&quot; =&gt; 1,
+<span class="w"> </span>];
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-10">
 <h3>Example #10<a class="headerlink" href="#example-10" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align_single_space_by_scope']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>$array = [<span class="w"></span>
-<span class="gd">-    &quot;foo&quot; =&gt; 12,</span><span class="w"></span>
-<span class="gi">+    &quot;foo&quot;            =&gt; 12,</span><span class="w"></span>
-<span class="w"> </span>    &quot;baaaaaaaaaaar&quot;  =&gt; 13,<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>$array = [
+<span class="gd">-    &quot;foo&quot; =&gt; 12,</span>
+<span class="gi">+    &quot;foo&quot;            =&gt; 12,</span>
+<span class="w"> </span>    &quot;baaaaaaaaaaar&quot;  =&gt; 13,
 
-<span class="gd">-    &quot;baz&quot; =&gt; 1,</span><span class="w"></span>
-<span class="gi">+    &quot;baz&quot;            =&gt; 1,</span><span class="w"></span>
-<span class="w"> </span>];<span class="w"></span>
+<span class="gd">-    &quot;baz&quot; =&gt; 1,</span>
+<span class="gi">+    &quot;baz&quot;            =&gt; 1,</span>
+<span class="w"> </span>];
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-11">
 <h3>Example #11<a class="headerlink" href="#example-11" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align_single_space_minimal']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>$array = [<span class="w"></span>
-<span class="gd">-    &quot;foo&quot; =&gt; 12,</span><span class="w"></span>
-<span class="gd">-    &quot;baaaaaaaaaaar&quot;  =&gt; 13,</span><span class="w"></span>
-<span class="gi">+    &quot;foo&quot;           =&gt; 12,</span><span class="w"></span>
-<span class="gi">+    &quot;baaaaaaaaaaar&quot; =&gt; 13,</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>$array = [
+<span class="gd">-    &quot;foo&quot; =&gt; 12,</span>
+<span class="gd">-    &quot;baaaaaaaaaaar&quot;  =&gt; 13,</span>
+<span class="gi">+    &quot;foo&quot;           =&gt; 12,</span>
+<span class="gi">+    &quot;baaaaaaaaaaar&quot; =&gt; 13,</span>
 
-<span class="w"> </span>    &quot;baz&quot; =&gt; 1,<span class="w"></span>
-<span class="w"> </span>];<span class="w"></span>
+<span class="w"> </span>    &quot;baz&quot; =&gt; 1,
+<span class="w"> </span>];
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-12">
 <h3>Example #12<a class="headerlink" href="#example-12" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align_single_space_minimal_by_scope']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>$array = [<span class="w"></span>
-<span class="gd">-    &quot;foo&quot; =&gt; 12,</span><span class="w"></span>
-<span class="gd">-    &quot;baaaaaaaaaaar&quot;  =&gt; 13,</span><span class="w"></span>
-<span class="gi">+    &quot;foo&quot;           =&gt; 12,</span><span class="w"></span>
-<span class="gi">+    &quot;baaaaaaaaaaar&quot; =&gt; 13,</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>$array = [
+<span class="gd">-    &quot;foo&quot; =&gt; 12,</span>
+<span class="gd">-    &quot;baaaaaaaaaaar&quot;  =&gt; 13,</span>
+<span class="gi">+    &quot;foo&quot;           =&gt; 12,</span>
+<span class="gi">+    &quot;baaaaaaaaaaar&quot; =&gt; 13,</span>
 
-<span class="gd">-    &quot;baz&quot; =&gt; 1,</span><span class="w"></span>
-<span class="gi">+    &quot;baz&quot;           =&gt; 1,</span><span class="w"></span>
-<span class="w"> </span>];<span class="w"></span>
+<span class="gd">-    &quot;baz&quot; =&gt; 1,</span>
+<span class="gi">+    &quot;baz&quot;           =&gt; 1,</span>
+<span class="w"> </span>];
 </pre></div>
 </div>
 </div>

@@ -106,75 +106,75 @@ have a uniformed way to have them written all over the codebase.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="w"> </span>$singleQuoted = &#39;String with \&quot; and My\Prefix\\&#39;;<span class="w"></span>
+<span class="w"> </span>$singleQuoted = &#39;String with \&quot; and My\Prefix\\&#39;;
 
-<span class="gd">-$doubleQuoted = &quot;Interpret my \n but not my \a&quot;;</span><span class="w"></span>
-<span class="gi">+$doubleQuoted = &quot;Interpret my \n but not my \\a&quot;;</span><span class="w"></span>
+<span class="gd">-$doubleQuoted = &quot;Interpret my \n but not my \a&quot;;</span>
+<span class="gi">+$doubleQuoted = &quot;Interpret my \n but not my \\a&quot;;</span>
 
-<span class="w"> </span>$hereDoc = &lt;&lt;&lt;HEREDOC<span class="w"></span>
-<span class="gd">-Interpret my \100 but not my \999</span><span class="w"></span>
-<span class="gi">+Interpret my \100 but not my \\999</span><span class="w"></span>
-<span class="w"> </span>HEREDOC;<span class="w"></span>
+<span class="w"> </span>$hereDoc = &lt;&lt;&lt;HEREDOC
+<span class="gd">-Interpret my \100 but not my \999</span>
+<span class="gi">+Interpret my \100 but not my \\999</span>
+<span class="w"> </span>HEREDOC;
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['single_quoted'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="gd">-$singleQuoted = &#39;String with \&quot; and My\Prefix\\&#39;;</span><span class="w"></span>
-<span class="gi">+$singleQuoted = &#39;String with \\&quot; and My\\Prefix\\&#39;;</span><span class="w"></span>
+<span class="gd">-$singleQuoted = &#39;String with \&quot; and My\Prefix\\&#39;;</span>
+<span class="gi">+$singleQuoted = &#39;String with \\&quot; and My\\Prefix\\&#39;;</span>
 
-<span class="gd">-$doubleQuoted = &quot;Interpret my \n but not my \a&quot;;</span><span class="w"></span>
-<span class="gi">+$doubleQuoted = &quot;Interpret my \n but not my \\a&quot;;</span><span class="w"></span>
+<span class="gd">-$doubleQuoted = &quot;Interpret my \n but not my \a&quot;;</span>
+<span class="gi">+$doubleQuoted = &quot;Interpret my \n but not my \\a&quot;;</span>
 
-<span class="w"> </span>$hereDoc = &lt;&lt;&lt;HEREDOC<span class="w"></span>
-<span class="gd">-Interpret my \100 but not my \999</span><span class="w"></span>
-<span class="gi">+Interpret my \100 but not my \\999</span><span class="w"></span>
-<span class="w"> </span>HEREDOC;<span class="w"></span>
+<span class="w"> </span>$hereDoc = &lt;&lt;&lt;HEREDOC
+<span class="gd">-Interpret my \100 but not my \999</span>
+<span class="gi">+Interpret my \100 but not my \\999</span>
+<span class="w"> </span>HEREDOC;
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['double_quoted'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="w"> </span>$singleQuoted = &#39;String with \&quot; and My\Prefix\\&#39;;<span class="w"></span>
+<span class="w"> </span>$singleQuoted = &#39;String with \&quot; and My\Prefix\\&#39;;
 
-<span class="w"> </span>$doubleQuoted = &quot;Interpret my \n but not my \a&quot;;<span class="w"></span>
+<span class="w"> </span>$doubleQuoted = &quot;Interpret my \n but not my \a&quot;;
 
-<span class="w"> </span>$hereDoc = &lt;&lt;&lt;HEREDOC<span class="w"></span>
-<span class="gd">-Interpret my \100 but not my \999</span><span class="w"></span>
-<span class="gi">+Interpret my \100 but not my \\999</span><span class="w"></span>
-<span class="w"> </span>HEREDOC;<span class="w"></span>
+<span class="w"> </span>$hereDoc = &lt;&lt;&lt;HEREDOC
+<span class="gd">-Interpret my \100 but not my \999</span>
+<span class="gi">+Interpret my \100 but not my \\999</span>
+<span class="w"> </span>HEREDOC;
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['heredoc_syntax'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
 
-<span class="w"> </span>$singleQuoted = &#39;String with \&quot; and My\Prefix\\&#39;;<span class="w"></span>
+<span class="w"> </span>$singleQuoted = &#39;String with \&quot; and My\Prefix\\&#39;;
 
-<span class="gd">-$doubleQuoted = &quot;Interpret my \n but not my \a&quot;;</span><span class="w"></span>
-<span class="gi">+$doubleQuoted = &quot;Interpret my \n but not my \\a&quot;;</span><span class="w"></span>
+<span class="gd">-$doubleQuoted = &quot;Interpret my \n but not my \a&quot;;</span>
+<span class="gi">+$doubleQuoted = &quot;Interpret my \n but not my \\a&quot;;</span>
 
-<span class="w"> </span>$hereDoc = &lt;&lt;&lt;HEREDOC<span class="w"></span>
-<span class="w"> </span>Interpret my \100 but not my \999<span class="w"></span>
-<span class="w"> </span>HEREDOC;<span class="w"></span>
+<span class="w"> </span>$hereDoc = &lt;&lt;&lt;HEREDOC
+<span class="w"> </span>Interpret my \100 but not my \999
+<span class="w"> </span>HEREDOC;
 </pre></div>
 </div>
 </div>

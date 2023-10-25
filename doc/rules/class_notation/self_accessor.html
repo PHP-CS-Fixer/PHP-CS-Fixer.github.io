@@ -77,21 +77,21 @@ itself.</p>
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class Sample<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>    const BAZ = 1;<span class="w"></span>
-<span class="gd">-    const BAR = Sample::BAZ;</span><span class="w"></span>
-<span class="gi">+    const BAR = self::BAZ;</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class Sample
+<span class="w"> </span>{
+<span class="w"> </span>    const BAZ = 1;
+<span class="gd">-    const BAR = Sample::BAZ;</span>
+<span class="gi">+    const BAR = self::BAZ;</span>
 
-<span class="w"> </span>    public function getBar()<span class="w"></span>
-<span class="w"> </span>    {<span class="w"></span>
-<span class="gd">-        return Sample::BAR;</span><span class="w"></span>
-<span class="gi">+        return self::BAR;</span><span class="w"></span>
-<span class="w"> </span>    }<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="w"> </span>    public function getBar()
+<span class="w"> </span>    {
+<span class="gd">-        return Sample::BAR;</span>
+<span class="gi">+        return self::BAR;</span>
+<span class="w"> </span>    }
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

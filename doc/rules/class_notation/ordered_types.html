@@ -91,62 +91,62 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>try {<span class="w"></span>
-<span class="w"> </span>    cache()-&gt;save($foo);<span class="w"></span>
-<span class="gd">-} catch (\RuntimeException|CacheException $e) {</span><span class="w"></span>
-<span class="gi">+} catch (CacheException|\RuntimeException $e) {</span><span class="w"></span>
-<span class="w"> </span>    logger($e);<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>try {
+<span class="w"> </span>    cache()-&gt;save($foo);
+<span class="gd">-} catch (\RuntimeException|CacheException $e) {</span>
+<span class="gi">+} catch (CacheException|\RuntimeException $e) {</span>
+<span class="w"> </span>    logger($e);
 
-<span class="w"> </span>    throw $e;<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="w"> </span>    throw $e;
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['case_sensitive'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>interface Foo<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="gd">-    public function bar(\Aaa|\AA $foo): string|int;</span><span class="w"></span>
-<span class="gi">+    public function bar(\AA|\Aaa $foo): int|string;</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>interface Foo
+<span class="w"> </span>{
+<span class="gd">-    public function bar(\Aaa|\AA $foo): string|int;</span>
+<span class="gi">+    public function bar(\AA|\Aaa $foo): int|string;</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['null_adjustment'</span> <span class="pre">=&gt;</span> <span class="pre">'always_last']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>interface Foo<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="gd">-    public function bar(null|string|int $foo): string|int;</span><span class="w"></span>
-<span class="gi">+    public function bar(int|string|null $foo): int|string;</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>interface Foo
+<span class="w"> </span>{
+<span class="gd">-    public function bar(null|string|int $foo): string|int;</span>
+<span class="gi">+    public function bar(int|string|null $foo): int|string;</span>
 
-<span class="gd">-    public function foo(\Stringable&amp;\Countable $obj): int;</span><span class="w"></span>
-<span class="gi">+    public function foo(\Countable&amp;\Stringable $obj): int;</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="gd">-    public function foo(\Stringable&amp;\Countable $obj): int;</span>
+<span class="gi">+    public function foo(\Countable&amp;\Stringable $obj): int;</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'none',</span> <span class="pre">'null_adjustment'</span> <span class="pre">=&gt;</span> <span class="pre">'always_last']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>interface Bar<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="gd">-    public function bar(null|string|int $foo): string|int;</span><span class="w"></span>
-<span class="gi">+    public function bar(string|int|null $foo): string|int;</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>interface Bar
+<span class="w"> </span>{
+<span class="gd">-    public function bar(null|string|int $foo): string|int;</span>
+<span class="gi">+    public function bar(string|int|null $foo): string|int;</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

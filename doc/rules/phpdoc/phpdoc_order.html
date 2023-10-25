@@ -79,81 +79,81 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="w"> </span> * Hello there!<span class="w"></span>
-<span class="w"> </span> *<span class="w"></span>
-<span class="gd">- * @throws Exception|RuntimeException foo</span><span class="w"></span>
-<span class="w"> </span> * @custom Test!<span class="w"></span>
-<span class="gd">- * @return int  Return the number of changes.</span><span class="w"></span>
-<span class="w"> </span> * @param string $foo<span class="w"></span>
-<span class="w"> </span> * @param bool   $bar Bar<span class="w"></span>
-<span class="gi">+ * @throws Exception|RuntimeException foo</span><span class="w"></span>
-<span class="gi">+ * @return int  Return the number of changes.</span><span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="w"> </span> * Hello there!
+<span class="w"> </span> *
+<span class="gd">- * @throws Exception|RuntimeException foo</span>
+<span class="w"> </span> * @custom Test!
+<span class="gd">- * @return int  Return the number of changes.</span>
+<span class="w"> </span> * @param string $foo
+<span class="w"> </span> * @param bool   $bar Bar
+<span class="gi">+ * @throws Exception|RuntimeException foo</span>
+<span class="gi">+ * @return int  Return the number of changes.</span>
+<span class="w"> </span> */
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['param',</span> <span class="pre">'throws',</span> <span class="pre">'return']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="w"> </span> * Hello there!<span class="w"></span>
-<span class="w"> </span> *<span class="w"></span>
-<span class="gd">- * @throws Exception|RuntimeException foo</span><span class="w"></span>
-<span class="w"> </span> * @custom Test!<span class="w"></span>
-<span class="gd">- * @return int  Return the number of changes.</span><span class="w"></span>
-<span class="w"> </span> * @param string $foo<span class="w"></span>
-<span class="w"> </span> * @param bool   $bar Bar<span class="w"></span>
-<span class="gi">+ * @throws Exception|RuntimeException foo</span><span class="w"></span>
-<span class="gi">+ * @return int  Return the number of changes.</span><span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="w"> </span> * Hello there!
+<span class="w"> </span> *
+<span class="gd">- * @throws Exception|RuntimeException foo</span>
+<span class="w"> </span> * @custom Test!
+<span class="gd">- * @return int  Return the number of changes.</span>
+<span class="w"> </span> * @param string $foo
+<span class="w"> </span> * @param bool   $bar Bar
+<span class="gi">+ * @throws Exception|RuntimeException foo</span>
+<span class="gi">+ * @return int  Return the number of changes.</span>
+<span class="w"> </span> */
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['param',</span> <span class="pre">'return',</span> <span class="pre">'throws']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="w"> </span> * Hello there!<span class="w"></span>
-<span class="w"> </span> *<span class="w"></span>
-<span class="gd">- * @throws Exception|RuntimeException foo</span><span class="w"></span>
-<span class="w"> </span> * @custom Test!<span class="w"></span>
-<span class="gd">- * @return int  Return the number of changes.</span><span class="w"></span>
-<span class="w"> </span> * @param string $foo<span class="w"></span>
-<span class="w"> </span> * @param bool   $bar Bar<span class="w"></span>
-<span class="gi">+ * @return int  Return the number of changes.</span><span class="w"></span>
-<span class="gi">+ * @throws Exception|RuntimeException foo</span><span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="w"> </span> * Hello there!
+<span class="w"> </span> *
+<span class="gd">- * @throws Exception|RuntimeException foo</span>
+<span class="w"> </span> * @custom Test!
+<span class="gd">- * @return int  Return the number of changes.</span>
+<span class="w"> </span> * @param string $foo
+<span class="w"> </span> * @param bool   $bar Bar
+<span class="gi">+ * @return int  Return the number of changes.</span>
+<span class="gi">+ * @throws Exception|RuntimeException foo</span>
+<span class="w"> </span> */
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['param',</span> <span class="pre">'custom',</span> <span class="pre">'throws',</span> <span class="pre">'return']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="w"> </span> * Hello there!<span class="w"></span>
-<span class="w"> </span> *<span class="w"></span>
-<span class="gi">+ * @param string $foo</span><span class="w"></span>
-<span class="gi">+ * @param bool   $bar Bar</span><span class="w"></span>
-<span class="gi">+ * @custom Test!</span><span class="w"></span>
-<span class="w"> </span> * @throws Exception|RuntimeException foo<span class="w"></span>
-<span class="gd">- * @custom Test!</span><span class="w"></span>
-<span class="w"> </span> * @return int  Return the number of changes.<span class="w"></span>
-<span class="gd">- * @param string $foo</span><span class="w"></span>
-<span class="gd">- * @param bool   $bar Bar</span><span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="w"> </span> * Hello there!
+<span class="w"> </span> *
+<span class="gi">+ * @param string $foo</span>
+<span class="gi">+ * @param bool   $bar Bar</span>
+<span class="gi">+ * @custom Test!</span>
+<span class="w"> </span> * @throws Exception|RuntimeException foo
+<span class="gd">- * @custom Test!</span>
+<span class="w"> </span> * @return int  Return the number of changes.
+<span class="gd">- * @param string $foo</span>
+<span class="gd">- * @param bool   $bar Bar</span>
+<span class="w"> </span> */
 </pre></div>
 </div>
 </div>

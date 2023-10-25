@@ -80,40 +80,40 @@ level more.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>    $heredoc = &lt;&lt;&lt;EOD<span class="w"></span>
-<span class="gd">-abc</span><span class="w"></span>
-<span class="gd">-    def</span><span class="w"></span>
-<span class="gd">-EOD;</span><span class="w"></span>
-<span class="gi">+        abc</span><span class="w"></span>
-<span class="gi">+            def</span><span class="w"></span>
-<span class="gi">+        EOD;</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>    $heredoc = &lt;&lt;&lt;EOD
+<span class="gd">-abc</span>
+<span class="gd">-    def</span>
+<span class="gd">-EOD;</span>
+<span class="gi">+        abc</span>
+<span class="gi">+            def</span>
+<span class="gi">+        EOD;</span>
 
-<span class="w"> </span>    $nowdoc = &lt;&lt;&lt;&#39;EOD&#39;<span class="w"></span>
-<span class="gd">-abc</span><span class="w"></span>
-<span class="gd">-    def</span><span class="w"></span>
-<span class="gd">-EOD;</span><span class="w"></span>
-<span class="gi">+        abc</span><span class="w"></span>
-<span class="gi">+            def</span><span class="w"></span>
-<span class="gi">+        EOD;</span><span class="w"></span>
+<span class="w"> </span>    $nowdoc = &lt;&lt;&lt;&#39;EOD&#39;
+<span class="gd">-abc</span>
+<span class="gd">-    def</span>
+<span class="gd">-EOD;</span>
+<span class="gi">+        abc</span>
+<span class="gi">+            def</span>
+<span class="gi">+        EOD;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['indentation'</span> <span class="pre">=&gt;</span> <span class="pre">'same_as_start']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>    $nowdoc = &lt;&lt;&lt;&#39;EOD&#39;<span class="w"></span>
-<span class="gd">-abc</span><span class="w"></span>
-<span class="gd">-    def</span><span class="w"></span>
-<span class="gd">-EOD;</span><span class="w"></span>
-<span class="gi">+    abc</span><span class="w"></span>
-<span class="gi">+        def</span><span class="w"></span>
-<span class="gi">+    EOD;</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>    $nowdoc = &lt;&lt;&lt;&#39;EOD&#39;
+<span class="gd">-abc</span>
+<span class="gd">-    def</span>
+<span class="gd">-EOD;</span>
+<span class="gi">+    abc</span>
+<span class="gi">+        def</span>
+<span class="gi">+    EOD;</span>
 </pre></div>
 </div>
 </div>

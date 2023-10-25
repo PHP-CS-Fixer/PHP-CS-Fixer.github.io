@@ -92,71 +92,71 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class FooTest extends TestCase {<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="gd">-     * @dataProvider dataProvider</span><span class="w"></span>
-<span class="gi">+     * @dataProvider provideSomethingCases</span><span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function testSomething($expected, $actual) {}<span class="w"></span>
-<span class="gd">-    public function dataProvider() {}</span><span class="w"></span>
-<span class="gi">+    public function provideSomethingCases() {}</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class FooTest extends TestCase {
+<span class="w"> </span>    /**
+<span class="gd">-     * @dataProvider dataProvider</span>
+<span class="gi">+     * @dataProvider provideSomethingCases</span>
+<span class="w"> </span>     */
+<span class="w"> </span>    public function testSomething($expected, $actual) {}
+<span class="gd">-    public function dataProvider() {}</span>
+<span class="gi">+    public function provideSomethingCases() {}</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['prefix'</span> <span class="pre">=&gt;</span> <span class="pre">'data_',</span> <span class="pre">'suffix'</span> <span class="pre">=&gt;</span> <span class="pre">'']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class FooTest extends TestCase {<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="gd">-     * @dataProvider dt_prvdr_ftr</span><span class="w"></span>
-<span class="gi">+     * @dataProvider data_feature</span><span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function test_feature($expected, $actual) {}<span class="w"></span>
-<span class="gd">-    public function dt_prvdr_ftr() {}</span><span class="w"></span>
-<span class="gi">+    public function data_feature() {}</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class FooTest extends TestCase {
+<span class="w"> </span>    /**
+<span class="gd">-     * @dataProvider dt_prvdr_ftr</span>
+<span class="gi">+     * @dataProvider data_feature</span>
+<span class="w"> </span>     */
+<span class="w"> </span>    public function test_feature($expected, $actual) {}
+<span class="gd">-    public function dt_prvdr_ftr() {}</span>
+<span class="gi">+    public function data_feature() {}</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['prefix'</span> <span class="pre">=&gt;</span> <span class="pre">'provides',</span> <span class="pre">'suffix'</span> <span class="pre">=&gt;</span> <span class="pre">'Data']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class FooTest extends TestCase {<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="w"> </span>     * @dataProvider dataProviderUsedInMultipleTests<span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function testA($expected, $actual) {}<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="w"> </span>     * @dataProvider dataProviderUsedInMultipleTests<span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function testB($expected, $actual) {}<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="gd">-     * @dataProvider dataProviderUsedInSingleTest</span><span class="w"></span>
-<span class="gi">+     * @dataProvider providesCData</span><span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function testC($expected, $actual) {}<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="w"> </span>     * @dataProvider dataProviderUsedAsFirstInTest<span class="w"></span>
-<span class="w"> </span>     * @dataProvider dataProviderUsedAsSecondInTest<span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="w"> </span>    public function testD($expected, $actual) {}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class FooTest extends TestCase {
+<span class="w"> </span>    /**
+<span class="w"> </span>     * @dataProvider dataProviderUsedInMultipleTests
+<span class="w"> </span>     */
+<span class="w"> </span>    public function testA($expected, $actual) {}
+<span class="w"> </span>    /**
+<span class="w"> </span>     * @dataProvider dataProviderUsedInMultipleTests
+<span class="w"> </span>     */
+<span class="w"> </span>    public function testB($expected, $actual) {}
+<span class="w"> </span>    /**
+<span class="gd">-     * @dataProvider dataProviderUsedInSingleTest</span>
+<span class="gi">+     * @dataProvider providesCData</span>
+<span class="w"> </span>     */
+<span class="w"> </span>    public function testC($expected, $actual) {}
+<span class="w"> </span>    /**
+<span class="w"> </span>     * @dataProvider dataProviderUsedAsFirstInTest
+<span class="w"> </span>     * @dataProvider dataProviderUsedAsSecondInTest
+<span class="w"> </span>     */
+<span class="w"> </span>    public function testD($expected, $actual) {}
 
-<span class="w"> </span>    public function dataProviderUsedInMultipleTests() {}<span class="w"></span>
-<span class="gd">-    public function dataProviderUsedInSingleTest() {}</span><span class="w"></span>
-<span class="gi">+    public function providesCData() {}</span><span class="w"></span>
-<span class="w"> </span>    public function dataProviderUsedAsFirstInTest() {}<span class="w"></span>
-<span class="w"> </span>    public function dataProviderUsedAsSecondInTest() {}<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<span class="w"> </span>    public function dataProviderUsedInMultipleTests() {}
+<span class="gd">-    public function dataProviderUsedInSingleTest() {}</span>
+<span class="gi">+    public function providesCData() {}</span>
+<span class="w"> </span>    public function dataProviderUsedAsFirstInTest() {}
+<span class="w"> </span>    public function dataProviderUsedAsSecondInTest() {}
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

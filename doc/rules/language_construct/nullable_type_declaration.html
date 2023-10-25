@@ -80,41 +80,41 @@ type.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-function bar(null|int $value, null|\Closure $callable): void {}</span><span class="w"></span>
-<span class="gi">+function bar(?int $value, ?\Closure $callable): void {}</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-function bar(null|int $value, null|\Closure $callable): void {}</span>
+<span class="gi">+function bar(?int $value, ?\Closure $callable): void {}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['syntax'</span> <span class="pre">=&gt;</span> <span class="pre">'union']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-function baz(?int $value, ?\stdClass $obj, ?array $config): ?int {}</span><span class="w"></span>
-<span class="gi">+function baz(null|int $value, null|\stdClass $obj, null|array $config): null|int {}</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-function baz(?int $value, ?\stdClass $obj, ?array $config): ?int {}</span>
+<span class="gi">+function baz(null|int $value, null|\stdClass $obj, null|array $config): null|int {}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['syntax'</span> <span class="pre">=&gt;</span> <span class="pre">'question_mark']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class ValueObject<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="gd">-    public null|string $name;</span><span class="w"></span>
-<span class="gi">+    public ?string $name;</span><span class="w"></span>
-<span class="w"> </span>    public ?int $count;<span class="w"></span>
-<span class="gd">-    public null|bool $internal;</span><span class="w"></span>
-<span class="gd">-    public null|\Closure $callback;</span><span class="w"></span>
-<span class="gi">+    public ?bool $internal;</span><span class="w"></span>
-<span class="gi">+    public ?\Closure $callback;</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class ValueObject
+<span class="w"> </span>{
+<span class="gd">-    public null|string $name;</span>
+<span class="gi">+    public ?string $name;</span>
+<span class="w"> </span>    public ?int $count;
+<span class="gd">-    public null|bool $internal;</span>
+<span class="gd">-    public null|\Closure $callback;</span>
+<span class="gi">+    public ?bool $internal;</span>
+<span class="gi">+    public ?\Closure $callback;</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

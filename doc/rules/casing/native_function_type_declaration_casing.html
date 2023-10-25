@@ -76,55 +76,55 @@
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class Bar {<span class="w"></span>
-<span class="gd">-    public function Foo(CALLABLE $bar)</span><span class="w"></span>
-<span class="gi">+    public function Foo(callable $bar)</span><span class="w"></span>
-<span class="w"> </span>    {<span class="w"></span>
-<span class="w"> </span>        return 1;<span class="w"></span>
-<span class="w"> </span>    }<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class Bar {
+<span class="gd">-    public function Foo(CALLABLE $bar)</span>
+<span class="gi">+    public function Foo(callable $bar)</span>
+<span class="w"> </span>    {
+<span class="w"> </span>        return 1;
+<span class="w"> </span>    }
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-function Foo(INT $a): Bool</span><span class="w"></span>
-<span class="gi">+function Foo(int $a): bool</span><span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>    return true;<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-function Foo(INT $a): Bool</span>
+<span class="gi">+function Foo(int $a): bool</span>
+<span class="w"> </span>{
+<span class="w"> </span>    return true;
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-function Foo(Iterable $a): VOID</span><span class="w"></span>
-<span class="gi">+function Foo(iterable $a): void</span><span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>    echo &#39;Hello world&#39;;<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-function Foo(Iterable $a): VOID</span>
+<span class="gi">+function Foo(iterable $a): void</span>
+<span class="w"> </span>{
+<span class="w"> </span>    echo &#39;Hello world&#39;;
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-function Foo(Object $a)</span><span class="w"></span>
-<span class="gi">+function Foo(object $a)</span><span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>    return &#39;hi!&#39;;<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-function Foo(Object $a)</span>
+<span class="gi">+function Foo(object $a)</span>
+<span class="w"> </span>{
+<span class="w"> </span>    return &#39;hi!&#39;;
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

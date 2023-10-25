@@ -84,15 +84,15 @@ Backtick operator is skipped because it is harder to handle; you can use
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-$a = &quot;My name is $name !&quot;;</span><span class="w"></span>
-<span class="gd">-$b = &quot;I live in $state-&gt;country !&quot;;</span><span class="w"></span>
-<span class="gd">-$c = &quot;I have $farm[0] chickens !&quot;;</span><span class="w"></span>
-<span class="gi">+$a = &quot;My name is {$name} !&quot;;</span><span class="w"></span>
-<span class="gi">+$b = &quot;I live in {$state-&gt;country} !&quot;;</span><span class="w"></span>
-<span class="gi">+$c = &quot;I have {$farm[0]} chickens !&quot;;</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$a = &quot;My name is $name !&quot;;</span>
+<span class="gd">-$b = &quot;I live in $state-&gt;country !&quot;;</span>
+<span class="gd">-$c = &quot;I have $farm[0] chickens !&quot;;</span>
+<span class="gi">+$a = &quot;My name is {$name} !&quot;;</span>
+<span class="gi">+$b = &quot;I live in {$state-&gt;country} !&quot;;</span>
+<span class="gi">+$c = &quot;I have {$farm[0]} chickens !&quot;;</span>
 </pre></div>
 </div>
 </div>

@@ -85,20 +85,20 @@ after applying this rule.</p>
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php function generate() {<span class="w"></span>
-<span class="gd">-    yield from [</span><span class="w"></span>
-<span class="gd">-        1,</span><span class="w"></span>
-<span class="gd">-        2,</span><span class="w"></span>
-<span class="gd">-        3,</span><span class="w"></span>
-<span class="gd">-    ];</span><span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="gi">+        yield 1;</span><span class="w"></span>
-<span class="gi">+        yield 2;</span><span class="w"></span>
-<span class="gi">+        yield 3;</span><span class="w"></span>
-<span class="gi">+</span><span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php function generate() {
+<span class="gd">-    yield from [</span>
+<span class="gd">-        1,</span>
+<span class="gd">-        2,</span>
+<span class="gd">-        3,</span>
+<span class="gd">-    ];</span>
+<span class="gi">+</span>
+<span class="gi">+        yield 1;</span>
+<span class="gi">+        yield 2;</span>
+<span class="gi">+        yield 3;</span>
+<span class="gi">+</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>

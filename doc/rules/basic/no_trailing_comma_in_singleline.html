@@ -80,29 +80,29 @@ last item MUST NOT have a trailing comma.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="gd">-foo($a,);</span><span class="w"></span>
-<span class="gd">-$foo = array(1,);</span><span class="w"></span>
-<span class="gd">-[$foo, $bar,] = $array;</span><span class="w"></span>
-<span class="gd">-use a\{ClassA, ClassB,};</span><span class="w"></span>
-<span class="gi">+foo($a);</span><span class="w"></span>
-<span class="gi">+$foo = array(1);</span><span class="w"></span>
-<span class="gi">+[$foo, $bar] = $array;</span><span class="w"></span>
-<span class="gi">+use a\{ClassA, ClassB};</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-foo($a,);</span>
+<span class="gd">-$foo = array(1,);</span>
+<span class="gd">-[$foo, $bar,] = $array;</span>
+<span class="gd">-use a\{ClassA, ClassB,};</span>
+<span class="gi">+foo($a);</span>
+<span class="gi">+$foo = array(1);</span>
+<span class="gi">+[$foo, $bar] = $array;</span>
+<span class="gi">+use a\{ClassA, ClassB};</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['elements'</span> <span class="pre">=&gt;</span> <span class="pre">['array_destructuring']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>foo($a,);<span class="w"></span>
-<span class="gd">-[$foo, $bar,] = $array;</span><span class="w"></span>
-<span class="gi">+[$foo, $bar] = $array;</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>foo($a,);
+<span class="gd">-[$foo, $bar,] = $array;</span>
+<span class="gi">+[$foo, $bar] = $array;</span>
 </pre></div>
 </div>
 </div>

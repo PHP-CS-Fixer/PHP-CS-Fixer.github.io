@@ -85,46 +85,46 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['annotations'</span> <span class="pre">=&gt;</span> <span class="pre">['author']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="w"> </span> * @internal<span class="w"></span>
-<span class="gd">- * @author John Doe</span><span class="w"></span>
-<span class="w"> </span> * @AuThOr Jane Doe<span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
-<span class="w"> </span>function foo() {}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="w"> </span> * @internal
+<span class="gd">- * @author John Doe</span>
+<span class="w"> </span> * @AuThOr Jane Doe
+<span class="w"> </span> */
+<span class="w"> </span>function foo() {}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['annotations'</span> <span class="pre">=&gt;</span> <span class="pre">['author'],</span> <span class="pre">'case_sensitive'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="w"> </span> * @internal<span class="w"></span>
-<span class="gd">- * @author John Doe</span><span class="w"></span>
-<span class="gd">- * @AuThOr Jane Doe</span><span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
-<span class="w"> </span>function foo() {}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="w"> </span> * @internal
+<span class="gd">- * @author John Doe</span>
+<span class="gd">- * @AuThOr Jane Doe</span>
+<span class="w"> </span> */
+<span class="w"> </span>function foo() {}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['annotations'</span> <span class="pre">=&gt;</span> <span class="pre">['package',</span> <span class="pre">'subpackage']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="w"> </span> * @author John Doe<span class="w"></span>
-<span class="gd">- * @package ACME API</span><span class="w"></span>
-<span class="gd">- * @subpackage Authorization</span><span class="w"></span>
-<span class="w"> </span> * @version 1.0<span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
-<span class="w"> </span>function foo() {}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="w"> </span> * @author John Doe
+<span class="gd">- * @package ACME API</span>
+<span class="gd">- * @subpackage Authorization</span>
+<span class="w"> </span> * @version 1.0
+<span class="w"> </span> */
+<span class="w"> </span>function foo() {}
 </pre></div>
 </div>
 </div>

@@ -87,33 +87,33 @@ with abstract classes or interfaces.</p>
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class Test extends \PhpUnit\FrameWork\TestCase<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>    /**<span class="w"></span>
-<span class="gd">-     * @test</span><span class="w"></span>
-<span class="gi">+     *</span><span class="w"></span>
-<span class="w"> </span>     */<span class="w"></span>
-<span class="gd">-    public function itDoesSomething() {} }</span><span class="w"></span>
-<span class="gi">+    public function testItDoesSomething() {} }</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class Test extends \PhpUnit\FrameWork\TestCase
+<span class="w"> </span>{
+<span class="w"> </span>    /**
+<span class="gd">-     * @test</span>
+<span class="gi">+     *</span>
+<span class="w"> </span>     */
+<span class="gd">-    public function itDoesSomething() {} }</span>
+<span class="gi">+    public function testItDoesSomething() {} }</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['style'</span> <span class="pre">=&gt;</span> <span class="pre">'annotation']</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>class Test extends \PhpUnit\FrameWork\TestCase<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="gd">-public function testItDoesSomething() {}}</span><span class="w"></span>
-<span class="gi">+/**</span><span class="w"></span>
-<span class="gi">+ * @test</span><span class="w"></span>
-<span class="gi">+ */</span><span class="w"></span>
-<span class="gi">+public function itDoesSomething() {}}</span><span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class Test extends \PhpUnit\FrameWork\TestCase
+<span class="w"> </span>{
+<span class="gd">-public function testItDoesSomething() {}}</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * @test</span>
+<span class="gi">+ */</span>
+<span class="gi">+public function itDoesSomething() {}}</span>
 </pre></div>
 </div>
 </div>

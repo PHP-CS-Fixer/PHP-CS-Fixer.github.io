@@ -80,43 +80,43 @@
 <div class="section" id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="gd">- * @param integer $a</span><span class="w"></span>
-<span class="gd">- * @param boolean $b</span><span class="w"></span>
-<span class="gd">- * @param real $c</span><span class="w"></span>
-<span class="gi">+ * @param int $a</span><span class="w"></span>
-<span class="gi">+ * @param bool $b</span><span class="w"></span>
-<span class="gi">+ * @param float $c</span><span class="w"></span>
-<span class="w"> </span> *<span class="w"></span>
-<span class="gd">- * @return double</span><span class="w"></span>
-<span class="gi">+ * @return float</span><span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
-<span class="w"> </span>function sample($a, $b, $c)<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>    return sample2($a, $b, $c);<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="gd">- * @param integer $a</span>
+<span class="gd">- * @param boolean $b</span>
+<span class="gd">- * @param real $c</span>
+<span class="gi">+ * @param int $a</span>
+<span class="gi">+ * @param bool $b</span>
+<span class="gi">+ * @param float $c</span>
+<span class="w"> </span> *
+<span class="gd">- * @return double</span>
+<span class="gi">+ * @return float</span>
+<span class="w"> </span> */
+<span class="w"> </span>function sample($a, $b, $c)
+<span class="w"> </span>{
+<span class="w"> </span>    return sample2($a, $b, $c);
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['types'</span> <span class="pre">=&gt;</span> <span class="pre">['boolean']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span><span class="w"></span>
-<span class="gi">+++ New</span><span class="w"></span>
-<span class="w"> </span>&lt;?php<span class="w"></span>
-<span class="w"> </span>/**<span class="w"></span>
-<span class="w"> </span> * @param integer $a<span class="w"></span>
-<span class="gd">- * @param boolean $b</span><span class="w"></span>
-<span class="gi">+ * @param bool $b</span><span class="w"></span>
-<span class="w"> </span> * @param real $c<span class="w"></span>
-<span class="w"> </span> */<span class="w"></span>
-<span class="w"> </span>function sample($a, $b, $c)<span class="w"></span>
-<span class="w"> </span>{<span class="w"></span>
-<span class="w"> </span>    return sample2($a, $b, $c);<span class="w"></span>
-<span class="w"> </span>}<span class="w"></span>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="w"> </span> * @param integer $a
+<span class="gd">- * @param boolean $b</span>
+<span class="gi">+ * @param bool $b</span>
+<span class="w"> </span> * @param real $c
+<span class="w"> </span> */
+<span class="w"> </span>function sample($a, $b, $c)
+<span class="w"> </span>{
+<span class="w"> </span>    return sample2($a, $b, $c);
+<span class="w"> </span>}
 </pre></div>
 </div>
 </div>
