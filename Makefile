@@ -89,6 +89,7 @@ build: build-install-deps build-folders build-theme-files build-default-files bu
 
 	echo λλλ copy static files
 	cp -r download dist/download
+	cp -r src/doc/schemas dist/doc/schemas
 	cp CNAME dist/CNAME
 
 	echo λλλ disable jekyll for GitHub Pages
