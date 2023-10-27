@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Freezy Vrooom (v3.35.1)</strong> edition
+                <strong>Freezy Vrooom (v3.36.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -83,8 +83,8 @@ type.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
-<span class="gd">-function bar(null|int $value, null|\Closure $callable): void {}</span>
-<span class="gi">+function bar(?int $value, ?\Closure $callable): void {}</span>
+<span class="gd">-function bar(null|int $value, null|\Closure $callable): int|null {}</span>
+<span class="gi">+function bar(?int $value, ?\Closure $callable): ?int {}</span>
 </pre></div>
 </div>
 </div>
