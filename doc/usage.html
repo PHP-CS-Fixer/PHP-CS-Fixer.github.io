@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Freezy Vrooom (v3.36.0)</strong> edition
+                <strong>ParaCache (v3.37.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -67,7 +67,20 @@
 <div class="section" id="the-fix-command">
 <h2>The <code class="docutils literal notranslate"><span class="pre">fix</span></code> command<a class="headerlink" href="#the-fix-command" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">fix</span></code> command tries to fix as much coding standards
-problems as possible on a given file or files in a given directory and its subdirectories:</p>
+problems as possible.</p>
+<p>With config file created, you can run command as easy as:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix</span>
+</pre></div>
+</div>
+<p>If you do not have config file, you can run following command to fix non-hidden, non-vendor/ PHP files with default ruleset &#64;PSR12:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix .</span>
+</pre></div>
+</div>
+<p>With some magic of tools provided by your OS, you can also fix files in parallel:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar list-files --config=.php-cs-fixer.dist.php | xargs -n 10 -P 8 php php-cs-fixer.phar fix --config=.php-cs-fixer.dist.php --path-mode intersection -v</span>
+</pre></div>
+</div>
+<p>You can limit process to given file or files in a given directory and its subdirectories:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix /path/to/dir</span>
 <span class="go">php php-cs-fixer.phar fix /path/to/file</span>
 </pre></div>
@@ -193,8 +206,10 @@ fixing across several processes might speedup the process.</p>
 <p>The caching mechanism is enabled by default. This will speed up further runs by
 fixing only files that were modified since the last run. The tool will fix all
 files if the tool version has changed or the list of rules has changed.
-Cache is supported only for tool downloaded as phar file or installed via
-composer.</p>
+The cache is supported only when the tool was downloaded as a phar file or
+installed via Composer. The cache is written to the drive progressively, so do
+not be afraid of interruption - rerun the command and start where you left.
+The cache mechanism also supports executing the command in parallel.</p>
 <p>Cache can be disabled via <code class="docutils literal notranslate"><span class="pre">--using-cache</span></code> option or config file:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
