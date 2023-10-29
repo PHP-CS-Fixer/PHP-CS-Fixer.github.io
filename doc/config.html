@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>ParaCache (v3.37.0)</strong> edition
+                <strong>ParaCache (v3.37.1)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,26 +64,82 @@
             
   <div class="section" id="config-file">
 <h1>Config file<a class="headerlink" href="#config-file" title="Permalink to this headline">¶</a></h1>
-<p>Instead of using command line options to customize rules and rule sets, you can save the
-project configuration in a <code class="docutils literal notranslate"><span class="pre">.php-cs-fixer.dist.php</span></code> file in the root directory of your project.
+<div class="section" id="no-config">
+<h2>No config<a class="headerlink" href="#no-config" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to <em>not</em> have the config file. In that case, the default rule set (&#64;PSR12) will be applied, yet the path will need to be provided via CLI.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix .</span>
+</pre></div>
+</div>
+<p>It is also possible to provide command line options to customize rules, yet instead of using them,
+it’s recommended to save the project configuration in a <code class="docutils literal notranslate"><span class="pre">.php-cs-fixer.dist.php</span></code> file in the root directory of your project.
 The file must return an instance of <a class="reference external" href="../src/ConfigInterface.php">PhpCsFixer\ConfigInterface</a>
 which lets you configure the rules, the files and directories that
 need to be analyzed. You may also create <code class="docutils literal notranslate"><span class="pre">.php-cs-fixer.php</span></code> file, which is
 the local configuration that will be used instead of the project configuration. It
 is a good practice to add that file into your <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file.
-With the <code class="docutils literal notranslate"><span class="pre">--config</span></code> option you can specify the path to the
-<code class="docutils literal notranslate"><span class="pre">.php-cs-fixer.php</span></code> file.</p>
-<p>The example below will add two rules to the default list of PSR12 set rules:</p>
+With the <code class="docutils literal notranslate"><span class="pre">--config</span></code> option you can specify the path to the config file.</p>
+</div>
+<div class="section" id="the-simplest-config">
+<h2>The simplest config<a class="headerlink" href="#the-simplest-config" title="Permalink to this headline">¶</a></h2>
+<p>The simplest config declares paths under control and rules to apply/check:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
-<span class="nv">$finder</span> <span class="o">=</span> <span class="nx">PhpCsFixer\Finder</span><span class="o">::</span><span class="na">create</span><span class="p">()</span>
-    <span class="o">-&gt;</span><span class="na">exclude</span><span class="p">(</span><span class="s1">&#39;somedir&#39;</span><span class="p">)</span>
-    <span class="o">-&gt;</span><span class="na">notPath</span><span class="p">(</span><span class="s1">&#39;src/Symfony/Component/Translation/Tests/fixtures/resources.php&#39;</span><span class="p">)</span>
+<span class="nv">$finder</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Finder</span><span class="p">())</span>
     <span class="o">-&gt;</span><span class="na">in</span><span class="p">(</span><span class="no">__DIR__</span><span class="p">)</span>
 <span class="p">;</span>
 
-<span class="nv">$config</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">();</span>
-<span class="k">return</span> <span class="nv">$config</span><span class="o">-&gt;</span><span class="na">setRules</span><span class="p">([</span>
+<span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">())</span>
+    <span class="o">-&gt;</span><span class="na">setRules</span><span class="p">([</span>
+        <span class="s1">&#39;@PER-CS&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+        <span class="s1">&#39;@PHP82Migration&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+    <span class="p">])</span>
+    <span class="o">-&gt;</span><span class="na">setFinder</span><span class="p">(</span><span class="nv">$finder</span><span class="p">)</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>Default finder ignores <code class="docutils literal notranslate"><span class="pre">__DIR__</span> <span class="pre">.</span> <span class="pre">&quot;/vendor&quot;</span></code> dir, “hidden” paths (ones starting with a dot) and VCS paths (e.g. <code class="docutils literal notranslate"><span class="pre">.git</span></code>), and filter only for <code class="docutils literal notranslate"><span class="pre">*.php</span></code> files.</p>
+</div>
+<div class="section" id="configuring-paths">
+<h2>Configuring paths<a class="headerlink" href="#configuring-paths" title="Permalink to this headline">¶</a></h2>
+<p>The example below will manipulate which paths to fix or not:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="nv">$finder</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Finder</span><span class="p">())</span>
+    <span class="o">-&gt;</span><span class="na">in</span><span class="p">(</span><span class="no">__DIR__</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">exclude</span><span class="p">([</span>
+        <span class="s1">&#39;autogenerated_content&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;tests/fixtures&#39;</span><span class="p">,</span>
+    <span class="p">])</span>
+    <span class="o">-&gt;</span><span class="na">notPath</span><span class="p">([</span>
+        <span class="s1">&#39;dump.php&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;src/exception_file.php&#39;</span><span class="p">,</span>
+    <span class="p">])</span>
+<span class="p">;</span>
+
+<span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">())</span>
+    <span class="o">-&gt;</span><span class="na">setRules</span><span class="p">([</span>
+        <span class="s1">&#39;@PhpCsFixer&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+    <span class="p">])</span>
+    <span class="o">-&gt;</span><span class="na">setFinder</span><span class="p">(</span><span class="nv">$finder</span><span class="p">)</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">exclude</span></code> will work only for directories, so if you need to exclude a file, use <code class="docutils literal notranslate"><span class="pre">notPath</span></code>.
+Both <code class="docutils literal notranslate"><span class="pre">exclude</span></code> and <code class="docutils literal notranslate"><span class="pre">notPath</span></code> methods accept only relative paths to the ones defined with the <code class="docutils literal notranslate"><span class="pre">in</span></code> method, can be called multiple times and accept string or array of them.</p>
+<p>See <a class="reference external" href="https://symfony.com/doc/current/components/finder.html#location">Symfony\Finder</a>
+online documentation for other <cite>Finder</cite> methods.</p>
+</div>
+<div class="section" id="configuring-rules">
+<h2>Configuring rules<a class="headerlink" href="#configuring-rules" title="Permalink to this headline">¶</a></h2>
+<p>The example below will add two rules to the default list of PSR12 set rules:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="nv">$finder</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Finder</span><span class="p">())</span>
+    <span class="o">-&gt;</span><span class="na">in</span><span class="p">(</span><span class="no">__DIR__</span><span class="p">)</span>
+<span class="p">;</span>
+
+<span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">())</span>
+    <span class="o">-&gt;</span><span class="na">setRules</span><span class="p">([</span>
         <span class="s1">&#39;@PSR12&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
         <span class="s1">&#39;strict_param&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
         <span class="s1">&#39;array_syntax&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;syntax&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;short&#39;</span><span class="p">],</span>
@@ -92,38 +148,44 @@ With the <code class="docutils literal notranslate"><span class="pre">--config</
 <span class="p">;</span>
 </pre></div>
 </div>
-<p><strong>NOTE</strong>: <code class="docutils literal notranslate"><span class="pre">exclude</span></code> will work only for directories, so if you need to exclude file, try <code class="docutils literal notranslate"><span class="pre">notPath</span></code>.
-Both <code class="docutils literal notranslate"><span class="pre">exclude</span></code> and <code class="docutils literal notranslate"><span class="pre">notPath</span></code> methods accept only relative paths to the ones defined with the <code class="docutils literal notranslate"><span class="pre">in</span></code> method.</p>
-<p>See <a class="reference external" href="https://symfony.com/doc/current/components/finder.html">Symfony\Finder</a>
-online documentation for other <cite>Finder</cite> methods.</p>
 <p>You may also use an exclude list for the rules instead of the above shown include approach.
-The following example shows how to use all <code class="docutils literal notranslate"><span class="pre">Symfony</span></code> rules but the <code class="docutils literal notranslate"><span class="pre">full_opening_tag</span></code> rule.</p>
+The following example shows how to use all <code class="docutils literal notranslate"><span class="pre">PhpCsFixer</span></code> rules but without the <code class="docutils literal notranslate"><span class="pre">align_multiline_comment</span></code> rule.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
-<span class="nv">$finder</span> <span class="o">=</span> <span class="nx">PhpCsFixer\Finder</span><span class="o">::</span><span class="na">create</span><span class="p">()</span>
+<span class="nv">$finder</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Finder</span><span class="p">())</span>
     <span class="o">-&gt;</span><span class="na">in</span><span class="p">(</span><span class="no">__DIR__</span><span class="p">)</span>
-    <span class="o">-&gt;</span><span class="na">exclude</span><span class="p">(</span><span class="s1">&#39;somedir&#39;</span><span class="p">)</span>
 <span class="p">;</span>
 
-<span class="nv">$config</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">();</span>
-<span class="k">return</span> <span class="nv">$config</span><span class="o">-&gt;</span><span class="na">setRules</span><span class="p">([</span>
-        <span class="s1">&#39;@Symfony&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
-        <span class="s1">&#39;full_opening_tag&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
+<span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">())</span>
+    <span class="o">-&gt;</span><span class="na">setRules</span><span class="p">([</span>
+        <span class="s1">&#39;@PhpCsFixer&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+        <span class="s1">&#39;comment_type&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
     <span class="p">])</span>
     <span class="o">-&gt;</span><span class="na">setFinder</span><span class="p">(</span><span class="nv">$finder</span><span class="p">)</span>
 <span class="p">;</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="configuring-whitespaces">
+<h2>Configuring whitespaces<a class="headerlink" href="#configuring-whitespaces" title="Permalink to this headline">¶</a></h2>
 <p>You may want to use non-linux whitespaces in your project. Then you need to
 configure them in your config file.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
-<span class="nv">$config</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">();</span>
-<span class="k">return</span> <span class="nv">$config</span>
+<span class="nv">$finder</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Finder</span><span class="p">())</span>
+    <span class="o">-&gt;</span><span class="na">in</span><span class="p">(</span><span class="no">__DIR__</span><span class="p">)</span>
+<span class="p">;</span>
+
+<span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">())</span>
+    <span class="o">-&gt;</span><span class="na">setRules</span><span class="p">([</span>
+        <span class="s1">&#39;@Symfony&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+    <span class="p">])</span>
+    <span class="o">-&gt;</span><span class="na">setFinder</span><span class="p">(</span><span class="nv">$finder</span><span class="p">)</span>
     <span class="o">-&gt;</span><span class="na">setIndent</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="o">-&gt;</span><span class="na">setLineEnding</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="p">;</span>
 </pre></div>
+</div>
 </div>
 </div>
 
