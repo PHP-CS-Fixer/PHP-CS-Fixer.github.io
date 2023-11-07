@@ -44,7 +44,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>ParaCache (v3.37.1)</strong> edition
+                <strong>CI Marathon (v3.38.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -1302,7 +1302,9 @@ was intentional.</p>
 </li>
 <li><p><a class="reference internal" href="rules/operator/long_to_shorthand_operator.html"><span class="doc">long_to_shorthand_operator</span></a></p>
 <p>Shorthand notation for operators should be used if possible.</p>
-<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> <a class="reference internal" href="ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p>
+<p><em>warning risky</em> Risky when applying for string offsets (e.g. <code class="docutils literal notranslate"><span class="pre">&lt;?php</span> <span class="pre">$text</span> <span class="pre">=</span> <span class="pre">&quot;foo&quot;;</span> <span class="pre">$text[0]</span>
+<span class="pre">=</span> <span class="pre">$text[0]</span> <span class="pre">&amp;</span> <span class="pre">&quot;\x7F&quot;;</span></code>).</p>
+<p>Part of rule sets <a class="reference internal" href="ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a> <a class="reference internal" href="ruleSets/SymfonyRisky.html"><span class="doc">&#64;Symfony:risky</span></a></p>
 <p><a class="reference external" href="./../src/Fixer/Operator/LongToShorthandOperatorFixer.php">Source PhpCsFixer\Fixer\Operator\LongToShorthandOperatorFixer</a></p>
 </li>
 <li><p><a class="reference internal" href="rules/cast_notation/lowercase_cast.html"><span class="doc">lowercase_cast</span></a></p>
@@ -2458,7 +2460,7 @@ applying this fixer may break the inheritance for their child classes.</p>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">groups</span></code></div>
 <div class="line">Sets of annotation types to be grouped together. Use <code class="docutils literal notranslate"><span class="pre">*</span></code> to match any tag character.</div>
 <div class="line">Allowed types: <code class="docutils literal notranslate"><span class="pre">string[][]</span></code></div>
-<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">[['deprecated',</span> <span class="pre">'link',</span> <span class="pre">'see',</span> <span class="pre">'since'],</span> <span class="pre">['author',</span> <span class="pre">'copyright',</span> <span class="pre">'license'],</span> <span class="pre">['category',</span> <span class="pre">'package',</span> <span class="pre">'subpackage'],</span> <span class="pre">['property',</span> <span class="pre">'property-read',</span> <span class="pre">'property-write']]</span></code></div>
+<div class="line">Default value: <code class="docutils literal notranslate"><span class="pre">[['author',</span> <span class="pre">'copyright',</span> <span class="pre">'license'],</span> <span class="pre">['category',</span> <span class="pre">'package',</span> <span class="pre">'subpackage'],</span> <span class="pre">['property',</span> <span class="pre">'property-read',</span> <span class="pre">'property-write'],</span> <span class="pre">['deprecated',</span> <span class="pre">'link',</span> <span class="pre">'see',</span> <span class="pre">'since']]</span></code></div>
 </div>
 </li>
 <li><div class="line-block">
