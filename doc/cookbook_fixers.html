@@ -45,7 +45,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>CI Marathon (v3.38.1)</strong> edition
+                <strong>CI Marathon (v3.38.2)</strong> edition
               </h1>
             </div>
           </div>
@@ -79,7 +79,7 @@ in its actions. More on this later.</p>
 discouraged - it is meant only to give more people more chance to
 contribute, and to detect bugs (<a class="reference external" href="https://en.wikipedia.org/wiki/Linus%27s_Law">Linus’s Law</a>).</p>
 <p>If possible, try to get acquainted with the public interface for the
-<a class="reference external" href="../src/Tokenizer/Tokens.php">Tokens class</a> and <a class="reference external" href="../src/Tokenizer/Token.php">Token class</a> classes.</p>
+<a class="reference external" href="./../src/Tokenizer/Tokens.php">Tokens class</a> and <a class="reference external" href="./../src/Tokenizer/Token.php">Token class</a> classes.</p>
 </section>
 <section id="assumptions">
 <h2>Assumptions<a class="headerlink" href="#assumptions" title="Permalink to this headline">¶</a></h2>
@@ -88,7 +88,7 @@ contribute, and to detect bugs (<a class="reference external" href="https://en.w
 <li><p>Forked PHP-CS-Fixer/PHP-CS-Fixer into your own GitHub Account.</p></li>
 <li><p>Cloned your forked repository locally.</p></li>
 <li><p>Installed the dependencies of PHP CS Fixer using <a class="reference external" href="https://getcomposer.org">Composer</a>.</p></li>
-<li><p>You have read <a class="reference external" href="../CONTRIBUTING.md">CONTRIBUTING.md</a>.</p></li>
+<li><p>You have read <a class="reference external" href="./../CONTRIBUTING.md">CONTRIBUTING.md</a>.</p></li>
 </ul>
 </section>
 <section id="step-by-step">
@@ -195,32 +195,34 @@ behavior of the fixer. You have to do it in two ways: first, ensuring
 the fixer changes what it should be changing; second, ensuring that
 fixer does not change what is not supposed to change. Thus:</p>
 <p>Keeping things as they are:</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span>// tests/Fixer/Comment/RemoveCommentsFixerTest.php
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// tests/Fixer/Comment/RemoveCommentsFixerTest.php</span>
 
-    // ...
-    public static function provideFixCases()
-    {
-        return [
-            [&#39;&lt;?php echo &quot;This should not be changed&quot;;&#39;], // Each sub-array is a test
-        ];
-    }
-    // ...
+    <span class="c1">// ...</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">provideFixCases</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="p">[</span><span class="s1">&#39;&lt;?php echo &quot;This should not be changed&quot;;&#39;</span><span class="p">],</span> <span class="c1">// Each sub-array is a test</span>
+        <span class="p">];</span>
+    <span class="p">}</span>
+    <span class="c1">// ...</span>
 </pre></div>
 </div>
 <p>Ensuring things change:</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span>// tests/Fixer/Comment/RemoveCommentsFixerTest.php
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// tests/Fixer/Comment/RemoveCommentsFixerTest.php</span>
 
-    // ...
-    public static function provideFixCases()
-    {
-        return [
-            [
-                &#39;&lt;?php echo &quot;This should be changed&quot;; &#39;, // This is expected output
-                &#39;&lt;?php echo &quot;This should be changed&quot;; /* Comment */&#39;, // This is input
-            ],
-        ];
-    }
-    // ...
+    <span class="c1">// ...</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">provideFixCases</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="p">[</span>
+                <span class="s1">&#39;&lt;?php echo &quot;This should be changed&quot;; &#39;</span><span class="p">,</span> <span class="c1">// This is expected output</span>
+                <span class="s1">&#39;&lt;?php echo &quot;This should be changed&quot;; /* Comment */&#39;</span><span class="p">,</span> <span class="c1">// This is input</span>
+            <span class="p">],</span>
+        <span class="p">];</span>
+    <span class="p">}</span>
+    <span class="c1">// ...</span>
 </pre></div>
 </div>
 <p>Note that expected outputs are <strong>always</strong> tested alone to ensure your fixer will not change it.</p>
@@ -276,22 +278,23 @@ like:</p>
 <p>You have defined the behavior of your fixer in tests. Now it is time to
 implement it.</p>
 <p>First, we need to create one method to describe what this fixer does:</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">// src/Fixer/Comment/RemoveCommentsFixer.php</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// src/Fixer/Comment/RemoveCommentsFixer.php</span>
 
-<span class="x">final class RemoveCommentsFixer extends AbstractFixer</span>
-<span class="x">{</span>
-<span class="x">    public function getDefinition(): FixerDefinition</span>
-<span class="x">    {</span>
-<span class="x">        return new FixerDefinition(</span>
-<span class="x">            &#39;Removes all comments of the code that are preceded by `;` (semicolon).&#39;, // Trailing dot is important. We thrive to use English grammar properly.</span>
-<span class="x">            [</span>
-<span class="x">                new CodeSample(</span>
-<span class="x">                    &quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="mi">123</span><span class="p">;</span> <span class="cm">/* Comment */</span><span class="nx">\n</span><span class="s2">&quot;</span>
-<span class="s2">                ),</span>
-<span class="s2">            ]</span>
-<span class="s2">        );</span>
-<span class="s2">    }</span>
-<span class="s2">}</span>
+<span class="k">final</span> <span class="k">class</span> <span class="nc">RemoveCommentsFixer</span> <span class="k">extends</span> <span class="nx">AbstractFixer</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getDefinition</span><span class="p">()</span><span class="o">:</span> <span class="nx">FixerDefinition</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nx">FixerDefinition</span><span class="p">(</span>
+            <span class="s1">&#39;Removes all comments of the code that are preceded by `;` (semicolon).&#39;</span><span class="p">,</span> <span class="c1">// Trailing dot is important. We thrive to use English grammar properly.</span>
+            <span class="p">[</span>
+                <span class="k">new</span> <span class="nx">CodeSample</span><span class="p">(</span>
+                    <span class="s2">&quot;&lt;?php echo 123; /* Comment */</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="p">),</span>
+            <span class="p">]</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Next, we need to update the documentation.
@@ -301,31 +304,33 @@ Execute the following command in your command shell:</p>
 </pre></div>
 </div>
 <p>Next, we must filter what type of tokens we want to fix. Here, we are interested in code that contains <code class="docutils literal notranslate"><span class="pre">T_COMMENT</span></code> tokens:</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">// src/Fixer/Comment/RemoveCommentsFixer.php</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// src/Fixer/Comment/RemoveCommentsFixer.php</span>
 
-<span class="x">final class RemoveCommentsFixer extends AbstractFixer</span>
-<span class="x">{</span>
-<span class="x">    // ...</span>
+<span class="k">final</span> <span class="k">class</span> <span class="nc">RemoveCommentsFixer</span> <span class="k">extends</span> <span class="nx">AbstractFixer</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
 
-<span class="x">    public function isCandidate(Tokens $tokens): bool</span>
-<span class="x">    {</span>
-<span class="x">        return $tokens-&gt;isTokenKindFound(T_COMMENT);</span>
-<span class="x">    }</span>
-<span class="x">}</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">isCandidate</span><span class="p">(</span><span class="nx">Tokens</span> <span class="nv">$tokens</span><span class="p">)</span><span class="o">:</span> <span class="nx">bool</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$tokens</span><span class="o">-&gt;</span><span class="na">isTokenKindFound</span><span class="p">(</span><span class="nx">T_COMMENT</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>For now, let us just make a fixer that applies no modification:</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">// src/Fixer/Comment/RemoveCommentsFixer.php</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// src/Fixer/Comment/RemoveCommentsFixer.php</span>
 
-<span class="x">final class RemoveCommentsFixer extends AbstractFixer</span>
-<span class="x">{</span>
-<span class="x">    // ...</span>
+<span class="k">final</span> <span class="k">class</span> <span class="nc">RemoveCommentsFixer</span> <span class="k">extends</span> <span class="nx">AbstractFixer</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
 
-<span class="x">    protected function applyFix(\SplFileInfo $file, Tokens $tokens): void</span>
-<span class="x">    {</span>
-<span class="x">        // no action</span>
-<span class="x">    }</span>
-<span class="x">}</span>
+    <span class="k">protected</span> <span class="k">function</span> <span class="nf">applyFix</span><span class="p">(</span><span class="nx">\SplFileInfo</span> <span class="nv">$file</span><span class="p">,</span> <span class="nx">Tokens</span> <span class="nv">$tokens</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span>
+    <span class="p">{</span>
+        <span class="c1">// no action</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Run <code class="docutils literal notranslate"><span class="pre">phpunit</span> <span class="pre">tests/Fixer/Comment/RemoveCommentsFixerTest.php</span></code>.
@@ -349,7 +354,7 @@ one of them check if they are preceded by a semicolon symbol.</p>
 <p>Now you need to do some reading, because all these symbols obey a list
 defined by the PHP compiler. It is the <a class="reference external" href="https://php.net/manual/en/tokens.php">List of Parser Tokens</a>.</p>
 <p>Internally, PHP CS Fixer transforms some of PHP native tokens into custom
-tokens through the use of <a class="reference external" href="../src/Tokenizer/Transformer">Transformers</a>, they aim to help you reason about the
+tokens through the use of <a class="reference external" href="./../src/Tokenizer/Transformer">Transformers</a>, they aim to help you reason about the
 changes you may want to do in the fixers.</p>
 <p>So we can get to move forward, humor me in believing that comments have
 one symbol name: <code class="docutils literal notranslate"><span class="pre">T_COMMENT</span></code>.</p>
@@ -358,49 +363,51 @@ one symbol name: <code class="docutils literal notranslate"><span class="pre">T_
 <h3>Step 3 - Implement your solution - continuation.<a class="headerlink" href="#step-3-implement-your-solution-continuation" title="Permalink to this headline">¶</a></h3>
 <p>We do not want all symbols to be analysed. Only <code class="docutils literal notranslate"><span class="pre">T_COMMENT</span></code>. So let us
 iterate the token(s) we are interested in.</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">// src/Fixer/Comment/RemoveCommentsFixer.php</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// src/Fixer/Comment/RemoveCommentsFixer.php</span>
 
-<span class="x">final class RemoveCommentsFixer extends AbstractFixer</span>
-<span class="x">{</span>
-<span class="x">    // ...</span>
+<span class="k">final</span> <span class="k">class</span> <span class="nc">RemoveCommentsFixer</span> <span class="k">extends</span> <span class="nx">AbstractFixer</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
 
-<span class="x">    protected function applyFix(\SplFileInfo $file, Tokens $tokens): void</span>
-<span class="x">    {</span>
-<span class="x">        foreach ($tokens as $index =&gt; $token) {</span>
-<span class="x">            if (!$token-&gt;isGivenKind(T_COMMENT)) {</span>
-<span class="x">                continue;</span>
-<span class="x">            }</span>
+    <span class="k">protected</span> <span class="k">function</span> <span class="nf">applyFix</span><span class="p">(</span><span class="nx">\SplFileInfo</span> <span class="nv">$file</span><span class="p">,</span> <span class="nx">Tokens</span> <span class="nv">$tokens</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span>
+    <span class="p">{</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$tokens</span> <span class="k">as</span> <span class="nv">$index</span> <span class="o">=&gt;</span> <span class="nv">$token</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$token</span><span class="o">-&gt;</span><span class="na">isGivenKind</span><span class="p">(</span><span class="nx">T_COMMENT</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">continue</span><span class="p">;</span>
+            <span class="p">}</span>
 
-<span class="x">            // need to figure out what to do here!</span>
-<span class="x">        }</span>
-<span class="x">    }</span>
-<span class="x">}</span>
+            <span class="c1">// need to figure out what to do here!</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>OK, now for each <code class="docutils literal notranslate"><span class="pre">T_COMMENT</span></code>, all we need to do is check if the previous
 token is a semicolon.</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">// src/Fixer/Comment/RemoveCommentsFixer.php</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// src/Fixer/Comment/RemoveCommentsFixer.php</span>
 
-<span class="x">final class RemoveCommentsFixer extends AbstractFixer</span>
-<span class="x">{</span>
-<span class="x">    // ...</span>
+<span class="k">final</span> <span class="k">class</span> <span class="nc">RemoveCommentsFixer</span> <span class="k">extends</span> <span class="nx">AbstractFixer</span>
+<span class="p">{</span>
+    <span class="c1">// ...</span>
 
-<span class="x">    protected function applyFix(\SplFileInfo $file, Tokens $tokens): void</span>
-<span class="x">    {</span>
-<span class="x">        foreach ($tokens as $index =&gt; $token) {</span>
-<span class="x">            if (!$token-&gt;isGivenKind(T_COMMENT)) {</span>
-<span class="x">                continue;</span>
-<span class="x">            }</span>
+    <span class="k">protected</span> <span class="k">function</span> <span class="nf">applyFix</span><span class="p">(</span><span class="nx">\SplFileInfo</span> <span class="nv">$file</span><span class="p">,</span> <span class="nx">Tokens</span> <span class="nv">$tokens</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span>
+    <span class="p">{</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$tokens</span> <span class="k">as</span> <span class="nv">$index</span> <span class="o">=&gt;</span> <span class="nv">$token</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$token</span><span class="o">-&gt;</span><span class="na">isGivenKind</span><span class="p">(</span><span class="nx">T_COMMENT</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">continue</span><span class="p">;</span>
+            <span class="p">}</span>
 
-<span class="x">            $prevTokenIndex = $tokens-&gt;getPrevMeaningfulToken($index);</span>
-<span class="x">            $prevToken = $tokens[$prevTokenIndex];</span>
+            <span class="nv">$prevTokenIndex</span> <span class="o">=</span> <span class="nv">$tokens</span><span class="o">-&gt;</span><span class="na">getPrevMeaningfulToken</span><span class="p">(</span><span class="nv">$index</span><span class="p">);</span>
+            <span class="nv">$prevToken</span> <span class="o">=</span> <span class="nv">$tokens</span><span class="p">[</span><span class="nv">$prevTokenIndex</span><span class="p">];</span>
 
-<span class="x">            if ($prevToken-&gt;equals(&#39;;&#39;)) {</span>
-<span class="x">                $tokens-&gt;clearAt($index);</span>
-<span class="x">            }</span>
-<span class="x">        }</span>
-<span class="x">    }</span>
-<span class="x">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$prevToken</span><span class="o">-&gt;</span><span class="na">equals</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">))</span> <span class="p">{</span>
+                <span class="nv">$tokens</span><span class="o">-&gt;</span><span class="na">clearAt</span><span class="p">(</span><span class="nv">$index</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>So the fixer in the end looks like this:</p>
