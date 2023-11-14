@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,28 +63,28 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-yield-from-array-to-yields">
+  <section id="rule-yield-from-array-to-yields">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">yield_from_array_to_yields</span></code><a class="headerlink" href="#rule-yield-from-array-to-yields" title="Permalink to this headline">¶</a></h1>
 <p>Yield from array must be unpacked to series of yields.</p>
-<div class="section" id="description">
+<section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>The conversion will make the array in <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">from</span></code> changed in arrays of 1 less
 dimension.</p>
-</div>
-<div class="section" id="warning">
+</section>
+<section id="warning">
 <h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="using-this-rule-is-risky">
+<section id="using-this-rule-is-risky">
 <h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
 <p>The rule is risky in case of <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">from</span></code> being used multiple times within
 single function scope, while using list-alike data sources (e.g. <code class="docutils literal notranslate"><span class="pre">function</span>
 <span class="pre">foo()</span> <span class="pre">{</span> <span class="pre">yield</span> <span class="pre">from</span> <span class="pre">[&quot;a&quot;];</span> <span class="pre">yield</span> <span class="pre">from</span> <span class="pre">[&quot;b&quot;];</span> <span class="pre">}</span></code>). It only matters when consuming
 such iterator with key-value context, because set of yielded keys may be changed
 after applying this rule.</p>
-</div>
-</div>
-<div class="section" id="examples">
+</section>
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example-1">
+<section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -101,16 +102,16 @@ after applying this rule.</p>
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="rule-sets">
+</section>
+</section>
+<section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule set:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>

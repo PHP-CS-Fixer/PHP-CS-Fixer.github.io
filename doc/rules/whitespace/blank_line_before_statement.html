@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,21 +63,21 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-blank-line-before-statement">
+  <section id="rule-blank-line-before-statement">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">blank_line_before_statement</span></code><a class="headerlink" href="#rule-blank-line-before-statement" title="Permalink to this headline">¶</a></h1>
 <p>An empty line feed must precede any configured statement.</p>
-<div class="section" id="configuration">
+<section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="statements">
+<section id="statements">
 <h3><code class="docutils literal notranslate"><span class="pre">statements</span></code><a class="headerlink" href="#statements" title="Permalink to this headline">¶</a></h3>
 <p>List of statements which must be preceded by an empty line.</p>
 <p>Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['break',</span> <span class="pre">'case',</span> <span class="pre">'continue',</span> <span class="pre">'declare',</span> <span class="pre">'default',</span> <span class="pre">'do',</span> <span class="pre">'exit',</span> <span class="pre">'for',</span> <span class="pre">'foreach',</span> <span class="pre">'goto',</span> <span class="pre">'if',</span> <span class="pre">'include',</span> <span class="pre">'include_once',</span> <span class="pre">'phpdoc',</span> <span class="pre">'require',</span> <span class="pre">'require_once',</span> <span class="pre">'return',</span> <span class="pre">'switch',</span> <span class="pre">'throw',</span> <span class="pre">'try',</span> <span class="pre">'while',</span> <span class="pre">'yield',</span> <span class="pre">'yield_from']</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['break',</span> <span class="pre">'continue',</span> <span class="pre">'declare',</span> <span class="pre">'return',</span> <span class="pre">'throw',</span> <span class="pre">'try']</span></code></p>
-</div>
-</div>
-<div class="section" id="examples">
+</section>
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example-1">
+<section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -89,8 +90,8 @@
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-2">
+</section>
+<section id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['break']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -106,8 +107,8 @@
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-3">
+</section>
+<section id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['continue']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -122,8 +123,8 @@
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-4">
+</section>
+<section id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['do']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -136,8 +137,8 @@
 <span class="w"> </span>} while ($i &gt; 0);
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-5">
+</section>
+<section id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['exit']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -152,8 +153,8 @@
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-6">
+</section>
+<section id="example-6">
 <h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['goto']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -170,8 +171,8 @@
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-7">
+</section>
+<section id="example-7">
 <h3>Example #7<a class="headerlink" href="#example-7" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['if']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -184,8 +185,8 @@
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-8">
+</section>
+<section id="example-8">
 <h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['return']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -199,8 +200,8 @@
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-9">
+</section>
+<section id="example-9">
 <h3>Example #9<a class="headerlink" href="#example-9" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['switch']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -214,8 +215,8 @@
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-10">
+</section>
+<section id="example-10">
 <h3>Example #10<a class="headerlink" href="#example-10" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['throw']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -228,8 +229,8 @@
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-11">
+</section>
+<section id="example-11">
 <h3>Example #11<a class="headerlink" href="#example-11" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['try']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -244,8 +245,8 @@
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-12">
+</section>
+<section id="example-12">
 <h3>Example #12<a class="headerlink" href="#example-12" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['yield']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -261,9 +262,9 @@
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="rule-sets">
+</section>
+</section>
+<section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul>
@@ -274,8 +275,8 @@
 <p><code class="docutils literal notranslate"><span class="pre">['statements'</span> <span class="pre">=&gt;</span> <span class="pre">['return']]</span></code></p>
 </li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>

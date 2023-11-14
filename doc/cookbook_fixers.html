@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,11 +63,11 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="cookbook-making-a-new-fixer-for-php-cs-fixer">
+  <section id="cookbook-making-a-new-fixer-for-php-cs-fixer">
 <h1>Cookbook - Making a new Fixer for PHP CS Fixer<a class="headerlink" href="#cookbook-making-a-new-fixer-for-php-cs-fixer" title="Permalink to this headline">¶</a></h1>
 <p>You want to make a new fixer to PHP CS Fixer and do not know how to
 start. Follow this document and you will be able to do it.</p>
-<div class="section" id="background">
+<section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
 <p>In order to be able to create a new fixer, you need some background.
 PHP CS Fixer is a transcompiler which takes valid PHP code and pretty
@@ -79,8 +80,8 @@ discouraged - it is meant only to give more people more chance to
 contribute, and to detect bugs (<a class="reference external" href="https://en.wikipedia.org/wiki/Linus%27s_Law">Linus’s Law</a>).</p>
 <p>If possible, try to get acquainted with the public interface for the
 <a class="reference external" href="../src/Tokenizer/Tokens.php">Tokens class</a> and <a class="reference external" href="../src/Tokenizer/Token.php">Token class</a> classes.</p>
-</div>
-<div class="section" id="assumptions">
+</section>
+<section id="assumptions">
 <h2>Assumptions<a class="headerlink" href="#assumptions" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>You are familiar with Test Driven Development.</p></li>
@@ -89,14 +90,14 @@ contribute, and to detect bugs (<a class="reference external" href="https://en.w
 <li><p>Installed the dependencies of PHP CS Fixer using <a class="reference external" href="https://getcomposer.org">Composer</a>.</p></li>
 <li><p>You have read <a class="reference external" href="../CONTRIBUTING.md">CONTRIBUTING.md</a>.</p></li>
 </ul>
-</div>
-<div class="section" id="step-by-step">
+</section>
+<section id="step-by-step">
 <h2>Step by step<a class="headerlink" href="#step-by-step" title="Permalink to this headline">¶</a></h2>
 <p>For this step-by-step, we are going to create a simple fixer that
 removes all comments from the code that are preceded by <cite>;</cite> (semicolon).</p>
 <p>We are calling it <code class="docutils literal notranslate"><span class="pre">remove_comments</span></code> (code name), or,
 <code class="docutils literal notranslate"><span class="pre">RemoveCommentsFixer</span></code> (class name).</p>
-<div class="section" id="step-1-creating-files">
+<section id="step-1-creating-files">
 <h3>Step 1 - Creating files<a class="headerlink" href="#step-1-creating-files" title="Permalink to this headline">¶</a></h3>
 <p>Create a new file in <code class="docutils literal notranslate"><span class="pre">src/Fixer/Comment/RemoveCommentsFixer.php</span></code>.
 Put this content inside:</p>
@@ -186,8 +187,8 @@ default behavior.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="step-2-using-tests-to-define-fixers-behavior">
+</section>
+<section id="step-2-using-tests-to-define-fixers-behavior">
 <h3>Step 2 - Using tests to define fixers behavior<a class="headerlink" href="#step-2-using-tests-to-define-fixers-behavior" title="Permalink to this headline">¶</a></h3>
 <p>Now that the files are created, you can start writing tests to define the
 behavior of the fixer. You have to do it in two ways: first, ensuring
@@ -269,8 +270,8 @@ like:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="step-3-implement-your-solution">
+</section>
+<section id="step-3-implement-your-solution">
 <h3>Step 3 - Implement your solution<a class="headerlink" href="#step-3-implement-your-solution" title="Permalink to this headline">¶</a></h3>
 <p>You have defined the behavior of your fixer in tests. Now it is time to
 implement it.</p>
@@ -329,8 +330,8 @@ Execute the following command in your command shell:</p>
 </div>
 <p>Run <code class="docutils literal notranslate"><span class="pre">phpunit</span> <span class="pre">tests/Fixer/Comment/RemoveCommentsFixerTest.php</span></code>.
 You are going to see that the tests fail.</p>
-</div>
-<div class="section" id="break">
+</section>
+<section id="break">
 <h3>Break<a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h3>
 <p>Now we have pretty much a cradle to work with. A file with a failing
 test, and the fixer, that for now does not do anything.</p>
@@ -352,8 +353,8 @@ tokens through the use of <a class="reference external" href="../src/Tokenizer/T
 changes you may want to do in the fixers.</p>
 <p>So we can get to move forward, humor me in believing that comments have
 one symbol name: <code class="docutils literal notranslate"><span class="pre">T_COMMENT</span></code>.</p>
-</div>
-<div class="section" id="step-3-implement-your-solution-continuation">
+</section>
+<section id="step-3-implement-your-solution-continuation">
 <h3>Step 3 - Implement your solution - continuation.<a class="headerlink" href="#step-3-implement-your-solution-continuation" title="Permalink to this headline">¶</a></h3>
 <p>We do not want all symbols to be analysed. Only <code class="docutils literal notranslate"><span class="pre">T_COMMENT</span></code>. So let us
 iterate the token(s) we are interested in.</p>
@@ -460,8 +461,8 @@ token is a semicolon.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="step-4-format-commit-pr">
+</section>
+<section id="step-4-format-commit-pr">
 <h3>Step 4 - Format, Commit, PR.<a class="headerlink" href="#step-4-format-commit-pr" title="Permalink to this headline">¶</a></h3>
 <p>Note that so far, we have not coded adhering to PSR-1/2. This is done on
 purpose. For every commit you make, you must use PHP CS Fixer to fix
@@ -472,8 +473,8 @@ itself. Thus, on the command line call:</p>
 <p>This will fix all the coding style mistakes.</p>
 <p>After the final CS fix, you are ready to commit. Do it.</p>
 <p>Now, go to GitHub and open a Pull Request.</p>
-</div>
-<div class="section" id="step-5-peer-review-it-is-all-about-code-and-community-building">
+</section>
+<section id="step-5-peer-review-it-is-all-about-code-and-community-building">
 <h3>Step 5 - Peer review: it is all about code and community building.<a class="headerlink" href="#step-5-peer-review-it-is-all-about-code-and-community-building" title="Permalink to this headline">¶</a></h3>
 <p>Congratulations, you have made your first fixer. Be proud. Your work
 will be reviewed carefully by PHP CS Fixer community.</p>
@@ -497,9 +498,9 @@ rid of merge commits.</p></li>
 </ol>
 <p>Your fixer will be incorporated in the next release.</p>
 <p>Congratulations! You have done it.</p>
-</div>
-</div>
-<div class="section" id="q-a">
+</section>
+</section>
+<section id="q-a">
 <h2>Q&amp;A<a class="headerlink" href="#q-a" title="Permalink to this headline">¶</a></h2>
 <dl>
 <dt>Why is not my PR merged yet?</dt><dd><p>PHP CS Fixer is used by many people, that expect it to be stable. So
@@ -524,8 +525,8 @@ you use <code class="docutils literal notranslate"><span class="pre">getPrevMean
 or a whitespace, the returned token will always be <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code>.</p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>

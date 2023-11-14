@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,64 +63,64 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-final-internal-class">
+  <section id="rule-final-internal-class">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">final_internal_class</span></code><a class="headerlink" href="#rule-final-internal-class" title="Permalink to this headline">¶</a></h1>
 <p>Internal classes should be <code class="docutils literal notranslate"><span class="pre">final</span></code>.</p>
-<div class="section" id="warning">
+<section id="warning">
 <h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="using-this-rule-is-risky">
+<section id="using-this-rule-is-risky">
 <h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
 <p>Changing classes to <code class="docutils literal notranslate"><span class="pre">final</span></code> might cause code execution to break.</p>
-</div>
-</div>
-<div class="section" id="configuration">
+</section>
+</section>
+<section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="annotation-exclude">
+<section id="annotation-exclude">
 <h3><code class="docutils literal notranslate"><span class="pre">annotation_exclude</span></code><a class="headerlink" href="#annotation-exclude" title="Permalink to this headline">¶</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This option is deprecated and will be removed in the next major version. Use <code class="docutils literal notranslate"><span class="pre">exclude</span></code> to configure PHPDoc annotations tags and attributes.</p>
-</div>
+</aside>
 <p>Class level attribute or annotation tags that must be omitted to fix the class,
 even if all of the white list ones are used as well (case insensitive).</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['&#64;final',</span> <span class="pre">'&#64;Entity',</span> <span class="pre">'&#64;ORM\\Entity',</span> <span class="pre">'&#64;ORM\\Mapping\\Entity',</span> <span class="pre">'&#64;Mapping\\Entity',</span> <span class="pre">'&#64;Document',</span> <span class="pre">'&#64;ODM\\Document']</span></code></p>
-</div>
-<div class="section" id="annotation-include">
+</section>
+<section id="annotation-include">
 <h3><code class="docutils literal notranslate"><span class="pre">annotation_include</span></code><a class="headerlink" href="#annotation-include" title="Permalink to this headline">¶</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This option is deprecated and will be removed in the next major version. Use <code class="docutils literal notranslate"><span class="pre">include</span></code> to configure PHPDoc annotations tags and attributes.</p>
-</div>
+</aside>
 <p>Class level attribute or annotation tags that must be set in order to fix the
 class (case insensitive).</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['&#64;internal']</span></code></p>
-</div>
-<div class="section" id="consider-absent-docblock-as-internal-class">
+</section>
+<section id="consider-absent-docblock-as-internal-class">
 <h3><code class="docutils literal notranslate"><span class="pre">consider_absent_docblock_as_internal_class</span></code><a class="headerlink" href="#consider-absent-docblock-as-internal-class" title="Permalink to this headline">¶</a></h3>
 <p>Whether classes without any DocBlock should be fixed to final.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-</div>
-<div class="section" id="exclude">
+</section>
+<section id="exclude">
 <h3><code class="docutils literal notranslate"><span class="pre">exclude</span></code><a class="headerlink" href="#exclude" title="Permalink to this headline">¶</a></h3>
 <p>Class level attribute or annotation tags that must be omitted to fix the class,
 even if all of the white list ones are used as well (case insensitive).</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['final',</span> <span class="pre">'Entity',</span> <span class="pre">'ORM\\Entity',</span> <span class="pre">'ORM\\Mapping\\Entity',</span> <span class="pre">'Mapping\\Entity',</span> <span class="pre">'Document',</span> <span class="pre">'ODM\\Document']</span></code></p>
-</div>
-<div class="section" id="include">
+</section>
+<section id="include">
 <h3><code class="docutils literal notranslate"><span class="pre">include</span></code><a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h3>
 <p>Class level attribute or annotation tags that must be set in order to fix the
 class (case insensitive).</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['internal']</span></code></p>
-</div>
-</div>
-<div class="section" id="examples">
+</section>
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example-1">
+<section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -134,8 +135,8 @@ class (case insensitive).</p>
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-2">
+</section>
+<section id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['include'</span> <span class="pre">=&gt;</span> <span class="pre">['&#64;Custom'],</span> <span class="pre">'exclude'</span> <span class="pre">=&gt;</span> <span class="pre">['&#64;not-fix']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -154,16 +155,16 @@ class (case insensitive).</p>
 <span class="w"> </span>class B{}
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="rule-sets">
+</section>
+</section>
+<section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule set:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>

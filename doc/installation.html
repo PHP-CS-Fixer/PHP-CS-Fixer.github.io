@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,19 +63,19 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="installation">
+  <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="requirements">
+<section id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>PHP needs to be a minimum version of PHP 7.4.</p>
-</div>
-<div class="section" id="id1">
-<h2>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="locally">
+</section>
+<section id="installation-1">
+<h2>Installation<a class="headerlink" href="#installation-1" title="Permalink to this headline">¶</a></h2>
+<section id="locally">
 <h3>Locally<a class="headerlink" href="#locally" title="Permalink to this headline">¶</a></h3>
 <p>Download the <a class="reference external" href="https://cs.symfony.com/download/php-cs-fixer-v3.phar">php-cs-fixer.phar</a> file and store it somewhere on your computer.</p>
-</div>
-<div class="section" id="globally-manual">
+</section>
+<section id="globally-manual">
 <h3>Globally (manual)<a class="headerlink" href="#globally-manual" title="Permalink to this headline">¶</a></h3>
 <p>You can run these commands to easily access latest <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code> from anywhere on
 your system:</p>
@@ -95,8 +96,8 @@ your system:</p>
 </pre></div>
 </div>
 <p>Then, just run <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code>.</p>
-</div>
-<div class="section" id="globally-composer">
+</section>
+<section id="globally-composer">
 <h3>Globally (Composer)<a class="headerlink" href="#globally-composer" title="Permalink to this headline">¶</a></h3>
 <p>To install PHP CS Fixer, <a class="reference external" href="https://getcomposer.org/download/">install Composer</a> and issue the following command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">composer global require friendsofphp/php-cs-fixer</span>
@@ -106,59 +107,59 @@ your system:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export PATH=&quot;$PATH:$HOME/.composer/vendor/bin&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="globally-homebrew">
+</section>
+<section id="globally-homebrew">
 <h3>Globally (homebrew)<a class="headerlink" href="#globally-homebrew" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">brew install php-cs-fixer</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="locally-phive">
+</section>
+<section id="locally-phive">
 <h3>Locally (PHIVE)<a class="headerlink" href="#locally-phive" title="Permalink to this headline">¶</a></h3>
 <p>Install <a class="reference external" href="https://phar.io">PHIVE</a> and issue the following command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">phive install php-cs-fixer # use `--global` for global install</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="update">
+</section>
+</section>
+<section id="update">
 <h2>Update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id2">
-<h3>Locally<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<section id="locally-1">
+<h3>Locally<a class="headerlink" href="#locally-1" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">self-update</span></code> command tries to update <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code> itself:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar self-update</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id3">
-<h3>Globally (manual)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="globally-manual-1">
+<h3>Globally (manual)<a class="headerlink" href="#globally-manual-1" title="Permalink to this headline">¶</a></h3>
 <p>You can update <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code> through this command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo php-cs-fixer self-update</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id4">
-<h3>Globally (Composer)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="globally-composer-1">
+<h3>Globally (Composer)<a class="headerlink" href="#globally-composer-1" title="Permalink to this headline">¶</a></h3>
 <p>You can update <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code> through this command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">./composer.phar global update friendsofphp/php-cs-fixer</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id5">
-<h3>Globally (homebrew)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="globally-homebrew-1">
+<h3>Globally (homebrew)<a class="headerlink" href="#globally-homebrew-1" title="Permalink to this headline">¶</a></h3>
 <p>You can update <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code> through this command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">brew upgrade php-cs-fixer</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id6">
-<h3>Locally (PHIVE)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="locally-phive-1">
+<h3>Locally (PHIVE)<a class="headerlink" href="#locally-phive-1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">phive update php-cs-fixer</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
           </div>

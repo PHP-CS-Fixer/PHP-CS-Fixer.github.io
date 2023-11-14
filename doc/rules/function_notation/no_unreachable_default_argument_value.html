@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,21 +63,21 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-no-unreachable-default-argument-value">
+  <section id="rule-no-unreachable-default-argument-value">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">no_unreachable_default_argument_value</span></code><a class="headerlink" href="#rule-no-unreachable-default-argument-value" title="Permalink to this headline">¶</a></h1>
 <p>In function arguments there must not be arguments with default values before
 non-default ones.</p>
-<div class="section" id="warning">
+<section id="warning">
 <h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="using-this-rule-is-risky">
+<section id="using-this-rule-is-risky">
 <h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
 <p>Modifies the signature of functions; therefore risky when using systems (such as
 some Symfony components) that rely on those (for example through reflection).</p>
-</div>
-</div>
-<div class="section" id="examples">
+</section>
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example-1">
+<section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -85,9 +86,9 @@ some Symfony components) that rely on those (for example through reflection).</p
 <span class="gi">+function example($foo, $bar) {}</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="rule-sets">
+</section>
+</section>
+<section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul class="simple">
@@ -99,8 +100,8 @@ some Symfony components) that rely on those (for example through reflection).</p
 <li><p><a class="reference internal" href="../../ruleSets/PSR12Risky.html"><span class="doc">&#64;PSR12:risky</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>

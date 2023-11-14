@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,33 +63,33 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-single-space-around-construct">
+  <section id="rule-single-space-around-construct">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">single_space_around_construct</span></code><a class="headerlink" href="#rule-single-space-around-construct" title="Permalink to this headline">¶</a></h1>
 <p>Ensures a single space after language constructs.</p>
-<div class="section" id="configuration">
+<section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="constructs-contain-a-single-space">
+<section id="constructs-contain-a-single-space">
 <h3><code class="docutils literal notranslate"><span class="pre">constructs_contain_a_single_space</span></code><a class="headerlink" href="#constructs-contain-a-single-space" title="Permalink to this headline">¶</a></h3>
 <p>List of constructs which must contain a single space.</p>
 <p>Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['yield_from']</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['yield_from']</span></code></p>
-</div>
-<div class="section" id="constructs-followed-by-a-single-space">
+</section>
+<section id="constructs-followed-by-a-single-space">
 <h3><code class="docutils literal notranslate"><span class="pre">constructs_followed_by_a_single_space</span></code><a class="headerlink" href="#constructs-followed-by-a-single-space" title="Permalink to this headline">¶</a></h3>
 <p>List of constructs which must be followed by a single space.</p>
 <p>Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['abstract',</span> <span class="pre">'as',</span> <span class="pre">'attribute',</span> <span class="pre">'break',</span> <span class="pre">'case',</span> <span class="pre">'catch',</span> <span class="pre">'class',</span> <span class="pre">'clone',</span> <span class="pre">'comment',</span> <span class="pre">'const',</span> <span class="pre">'const_import',</span> <span class="pre">'continue',</span> <span class="pre">'do',</span> <span class="pre">'echo',</span> <span class="pre">'else',</span> <span class="pre">'elseif',</span> <span class="pre">'enum',</span> <span class="pre">'extends',</span> <span class="pre">'final',</span> <span class="pre">'finally',</span> <span class="pre">'for',</span> <span class="pre">'foreach',</span> <span class="pre">'function',</span> <span class="pre">'function_import',</span> <span class="pre">'global',</span> <span class="pre">'goto',</span> <span class="pre">'if',</span> <span class="pre">'implements',</span> <span class="pre">'include',</span> <span class="pre">'include_once',</span> <span class="pre">'instanceof',</span> <span class="pre">'insteadof',</span> <span class="pre">'interface',</span> <span class="pre">'match',</span> <span class="pre">'named_argument',</span> <span class="pre">'namespace',</span> <span class="pre">'new',</span> <span class="pre">'open_tag_with_echo',</span> <span class="pre">'php_doc',</span> <span class="pre">'php_open',</span> <span class="pre">'print',</span> <span class="pre">'private',</span> <span class="pre">'protected',</span> <span class="pre">'public',</span> <span class="pre">'readonly',</span> <span class="pre">'require',</span> <span class="pre">'require_once',</span> <span class="pre">'return',</span> <span class="pre">'static',</span> <span class="pre">'switch',</span> <span class="pre">'throw',</span> <span class="pre">'trait',</span> <span class="pre">'try',</span> <span class="pre">'type_colon',</span> <span class="pre">'use',</span> <span class="pre">'use_lambda',</span> <span class="pre">'use_trait',</span> <span class="pre">'var',</span> <span class="pre">'while',</span> <span class="pre">'yield',</span> <span class="pre">'yield_from']</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['abstract',</span> <span class="pre">'as',</span> <span class="pre">'attribute',</span> <span class="pre">'break',</span> <span class="pre">'case',</span> <span class="pre">'catch',</span> <span class="pre">'class',</span> <span class="pre">'clone',</span> <span class="pre">'comment',</span> <span class="pre">'const',</span> <span class="pre">'const_import',</span> <span class="pre">'continue',</span> <span class="pre">'do',</span> <span class="pre">'echo',</span> <span class="pre">'else',</span> <span class="pre">'elseif',</span> <span class="pre">'enum',</span> <span class="pre">'extends',</span> <span class="pre">'final',</span> <span class="pre">'finally',</span> <span class="pre">'for',</span> <span class="pre">'foreach',</span> <span class="pre">'function',</span> <span class="pre">'function_import',</span> <span class="pre">'global',</span> <span class="pre">'goto',</span> <span class="pre">'if',</span> <span class="pre">'implements',</span> <span class="pre">'include',</span> <span class="pre">'include_once',</span> <span class="pre">'instanceof',</span> <span class="pre">'insteadof',</span> <span class="pre">'interface',</span> <span class="pre">'match',</span> <span class="pre">'named_argument',</span> <span class="pre">'namespace',</span> <span class="pre">'new',</span> <span class="pre">'open_tag_with_echo',</span> <span class="pre">'php_doc',</span> <span class="pre">'php_open',</span> <span class="pre">'print',</span> <span class="pre">'private',</span> <span class="pre">'protected',</span> <span class="pre">'public',</span> <span class="pre">'readonly',</span> <span class="pre">'require',</span> <span class="pre">'require_once',</span> <span class="pre">'return',</span> <span class="pre">'static',</span> <span class="pre">'switch',</span> <span class="pre">'throw',</span> <span class="pre">'trait',</span> <span class="pre">'try',</span> <span class="pre">'type_colon',</span> <span class="pre">'use',</span> <span class="pre">'use_lambda',</span> <span class="pre">'use_trait',</span> <span class="pre">'var',</span> <span class="pre">'while',</span> <span class="pre">'yield',</span> <span class="pre">'yield_from']</span></code></p>
-</div>
-<div class="section" id="constructs-preceded-by-a-single-space">
+</section>
+<section id="constructs-preceded-by-a-single-space">
 <h3><code class="docutils literal notranslate"><span class="pre">constructs_preceded_by_a_single_space</span></code><a class="headerlink" href="#constructs-preceded-by-a-single-space" title="Permalink to this headline">¶</a></h3>
 <p>List of constructs which must be preceded by a single space.</p>
 <p>Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['as',</span> <span class="pre">'use_lambda']</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['as',</span> <span class="pre">'use_lambda']</span></code></p>
-</div>
-</div>
-<div class="section" id="examples">
+</section>
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example-1">
+<section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -99,8 +100,8 @@
 <span class="gi">+throw new \Exception();</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-2">
+</section>
+<section id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['constructs_contain_a_single_space'</span> <span class="pre">=&gt;</span> <span class="pre">['yield_from'],</span> <span class="pre">'constructs_followed_by_a_single_space'</span> <span class="pre">=&gt;</span> <span class="pre">['yield_from']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -111,8 +112,8 @@
 <span class="gi">+function foo() { yield from baz(); }</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-3">
+</section>
+<section id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['constructs_preceded_by_a_single_space'</span> <span class="pre">=&gt;</span> <span class="pre">['use_lambda'],</span> <span class="pre">'constructs_followed_by_a_single_space'</span> <span class="pre">=&gt;</span> <span class="pre">['use_lambda']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -124,8 +125,8 @@
 <span class="w"> </span>};
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-4">
+</section>
+<section id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['constructs_followed_by_a_single_space'</span> <span class="pre">=&gt;</span> <span class="pre">['echo']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -136,8 +137,8 @@
 <span class="gi">+echo &quot;Hello!&quot;;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-5">
+</section>
+<section id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['constructs_followed_by_a_single_space'</span> <span class="pre">=&gt;</span> <span class="pre">['yield_from']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -148,17 +149,17 @@
 <span class="gi">+yield from baz();</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="rule-sets">
+</section>
+</section>
+<section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>

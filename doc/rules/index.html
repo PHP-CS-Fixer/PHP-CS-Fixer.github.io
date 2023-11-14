@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,9 +63,9 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="list-of-available-rules">
+  <section id="list-of-available-rules">
 <h1>List of Available Rules<a class="headerlink" href="#list-of-available-rules" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="alias">
+<section id="alias">
 <h2>Alias<a class="headerlink" href="#alias" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="alias/array_push.html"><span class="doc">array_push</span></a> <em>(risky)</em></p>
@@ -101,8 +102,8 @@
 <p>Cast shall be used, not <code class="docutils literal notranslate"><span class="pre">settype</span></code>.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="array-notation">
+</section>
+<section id="array-notation">
 <h2>Array Notation<a class="headerlink" href="#array-notation" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="array_notation/array_syntax.html"><span class="doc">array_syntax</span></a></p>
@@ -133,16 +134,16 @@
 <p>Yield from array must be unpacked to series of yields.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="attribute-notation">
+</section>
+<section id="attribute-notation">
 <h2>Attribute Notation<a class="headerlink" href="#attribute-notation" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="attribute_notation/attribute_empty_parentheses.html"><span class="doc">attribute_empty_parentheses</span></a></p>
 <p>PHP attributes declared without arguments must (not) be followed by empty parentheses.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="basic">
+</section>
+<section id="basic">
 <h2>Basic<a class="headerlink" href="#basic" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="basic/braces.html"><span class="doc">braces</span></a> <em>(deprecated)</em></p>
@@ -176,8 +177,8 @@
 <p>Empty body of class, interface, trait, enum or function must be abbreviated as <code class="docutils literal notranslate"><span class="pre">{}</span></code> and placed on the same line as the previous symbol, separated by a single space.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="casing">
+</section>
+<section id="casing">
 <h2>Casing<a class="headerlink" href="#casing" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="casing/class_reference_name_casing.html"><span class="doc">class_reference_name_casing</span></a></p>
@@ -211,8 +212,8 @@
 <p>Native type declarations should be used in the correct case.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="cast-notation">
+</section>
+<section id="cast-notation">
 <h2>Cast Notation<a class="headerlink" href="#cast-notation" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="cast_notation/cast_spaces.html"><span class="doc">cast_spaces</span></a></p>
@@ -234,8 +235,8 @@
 <p>Cast <code class="docutils literal notranslate"><span class="pre">(boolean)</span></code> and <code class="docutils literal notranslate"><span class="pre">(integer)</span></code> should be written as <code class="docutils literal notranslate"><span class="pre">(bool)</span></code> and <code class="docutils literal notranslate"><span class="pre">(int)</span></code>, <code class="docutils literal notranslate"><span class="pre">(double)</span></code> and <code class="docutils literal notranslate"><span class="pre">(real)</span></code> as <code class="docutils literal notranslate"><span class="pre">(float)</span></code>, <code class="docutils literal notranslate"><span class="pre">(binary)</span></code> as <code class="docutils literal notranslate"><span class="pre">(string)</span></code>.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="class-notation">
+</section>
+<section id="class-notation">
 <h2>Class Notation<a class="headerlink" href="#class-notation" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="class_notation/class_attributes_separation.html"><span class="doc">class_attributes_separation</span></a></p>
@@ -299,16 +300,16 @@
 <p>Visibility MUST be declared on all properties and methods; <code class="docutils literal notranslate"><span class="pre">abstract</span></code> and <code class="docutils literal notranslate"><span class="pre">final</span></code> MUST be declared before the visibility; <code class="docutils literal notranslate"><span class="pre">static</span></code> MUST be declared after the visibility.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="class-usage">
+</section>
+<section id="class-usage">
 <h2>Class Usage<a class="headerlink" href="#class-usage" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="class_usage/date_time_immutable.html"><span class="doc">date_time_immutable</span></a> <em>(risky)</em></p>
 <p>Class <code class="docutils literal notranslate"><span class="pre">DateTimeImmutable</span></code> should be used instead of <code class="docutils literal notranslate"><span class="pre">DateTime</span></code>.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="comment">
+</section>
+<section id="comment">
 <h2>Comment<a class="headerlink" href="#comment" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="comment/comment_to_phpdoc.html"><span class="doc">comment_to_phpdoc</span></a> <em>(risky)</em></p>
@@ -333,16 +334,16 @@
 <p>Single-line comments and multi-line comments with only one line of actual content should use the <code class="docutils literal notranslate"><span class="pre">//</span></code> syntax.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="constant-notation">
+</section>
+<section id="constant-notation">
 <h2>Constant Notation<a class="headerlink" href="#constant-notation" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="constant_notation/native_constant_invocation.html"><span class="doc">native_constant_invocation</span></a> <em>(risky)</em></p>
 <p>Add leading <code class="docutils literal notranslate"><span class="pre">\</span></code> before constant invocation of internal constant to speed up resolving. Constant name match is case-sensitive, except for <code class="docutils literal notranslate"><span class="pre">null</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="control-structure">
+</section>
+<section id="control-structure">
 <h2>Control Structure<a class="headerlink" href="#control-structure" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="control_structure/control_structure_braces.html"><span class="doc">control_structure_braces</span></a></p>
@@ -406,8 +407,8 @@
 <p>Write conditions in Yoda style (<code class="docutils literal notranslate"><span class="pre">true</span></code>), non-Yoda style (<code class="docutils literal notranslate"><span class="pre">['equal'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'identical'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'less_and_greater'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>) or ignore those conditions (<code class="docutils literal notranslate"><span class="pre">null</span></code>) based on configuration.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="doctrine-annotation">
+</section>
+<section id="doctrine-annotation">
 <h2>Doctrine Annotation<a class="headerlink" href="#doctrine-annotation" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="doctrine_annotation/doctrine_annotation_array_assignment.html"><span class="doc">doctrine_annotation_array_assignment</span></a></p>
@@ -423,8 +424,8 @@
 <p>Fixes spaces in Doctrine annotations.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="function-notation">
+</section>
+<section id="function-notation">
 <h2>Function Notation<a class="headerlink" href="#function-notation" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="function_notation/combine_nested_dirname.html"><span class="doc">combine_nested_dirname</span></a> <em>(risky)</em></p>
@@ -500,8 +501,8 @@
 <p>Add <code class="docutils literal notranslate"><span class="pre">void</span></code> return type to functions with missing or empty return statements, but priority is given to <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> annotations. Requires PHP &gt;= 7.1.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="import">
+</section>
+<section id="import">
 <h2>Import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="import/fully_qualified_strict_types.html"><span class="doc">fully_qualified_strict_types</span></a></p>
@@ -532,8 +533,8 @@
 <p>Each namespace use MUST go on its own line and there MUST be one blank line after the use statements block.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="language-construct">
+</section>
+<section id="language-construct">
 <h2>Language Construct<a class="headerlink" href="#language-construct" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="language_construct/class_keyword_remove.html"><span class="doc">class_keyword_remove</span></a> <em>(deprecated)</em></p>
@@ -582,16 +583,16 @@
 <p>Ensures a single space after language constructs.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="list-notation">
+</section>
+<section id="list-notation">
 <h2>List Notation<a class="headerlink" href="#list-notation" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="list_notation/list_syntax.html"><span class="doc">list_syntax</span></a></p>
 <p>List (<code class="docutils literal notranslate"><span class="pre">array</span></code> destructuring) assignment should be declared using the configured syntax. Requires PHP &gt;= 7.1.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="namespace-notation">
+</section>
+<section id="namespace-notation">
 <h2>Namespace Notation<a class="headerlink" href="#namespace-notation" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="namespace_notation/blank_line_after_namespace.html"><span class="doc">blank_line_after_namespace</span></a></p>
@@ -613,16 +614,16 @@
 <p>There should be exactly one blank line before a namespace declaration.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="naming">
+</section>
+<section id="naming">
 <h2>Naming<a class="headerlink" href="#naming" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="naming/no_homoglyph_names.html"><span class="doc">no_homoglyph_names</span></a> <em>(risky)</em></p>
 <p>Replace accidental usage of homoglyphs (non ascii characters) in names.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="operator">
+</section>
+<section id="operator">
 <h2>Operator<a class="headerlink" href="#operator" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="operator/assign_null_coalescing_to_coalesce_equal.html"><span class="doc">assign_null_coalescing_to_coalesce_equal</span></a></p>
@@ -689,8 +690,8 @@
 <p>Unary operators should be placed adjacent to their operands.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="php-tag">
+</section>
+<section id="php-tag">
 <h2>PHP Tag<a class="headerlink" href="#php-tag" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="php_tag/blank_line_after_opening_tag.html"><span class="doc">blank_line_after_opening_tag</span></a></p>
@@ -709,8 +710,8 @@
 <p>The closing <code class="docutils literal notranslate"><span class="pre">?&gt;</span></code> tag MUST be omitted from files containing only PHP.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="phpunit">
+</section>
+<section id="phpunit">
 <h2>PHPUnit<a class="headerlink" href="#phpunit" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="php_unit/php_unit_construct.html"><span class="doc">php_unit_construct</span></a> <em>(risky)</em></p>
@@ -774,8 +775,8 @@
 <p>Adds a default <code class="docutils literal notranslate"><span class="pre">&#64;coversNothing</span></code> annotation to PHPUnit test classes that have no <code class="docutils literal notranslate"><span class="pre">&#64;covers*</span></code> annotation.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="phpdoc">
+</section>
+<section id="phpdoc">
 <h2>PHPDoc<a class="headerlink" href="#phpdoc" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="phpdoc/align_multiline_comment.html"><span class="doc">align_multiline_comment</span></a></p>
@@ -881,8 +882,8 @@
 <p><code class="docutils literal notranslate"><span class="pre">&#64;var</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;type</span></code> annotations of classy properties should not contain the name.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="return-notation">
+</section>
+<section id="return-notation">
 <h2>Return Notation<a class="headerlink" href="#return-notation" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="return_notation/no_useless_return.html"><span class="doc">no_useless_return</span></a></p>
@@ -895,8 +896,8 @@
 <p>A return statement wishing to return <code class="docutils literal notranslate"><span class="pre">void</span></code> should not return <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="semicolon">
+</section>
+<section id="semicolon">
 <h2>Semicolon<a class="headerlink" href="#semicolon" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="semicolon/multiline_whitespace_before_semicolons.html"><span class="doc">multiline_whitespace_before_semicolons</span></a></p>
@@ -915,8 +916,8 @@
 <p>Fix whitespace after a semicolon.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="strict">
+</section>
+<section id="strict">
 <h2>Strict<a class="headerlink" href="#strict" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="strict/declare_strict_types.html"><span class="doc">declare_strict_types</span></a> <em>(risky)</em></p>
@@ -929,8 +930,8 @@
 <p>Functions should be used with <code class="docutils literal notranslate"><span class="pre">$strict</span></code> param set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="string-notation">
+</section>
+<section id="string-notation">
 <h2>String Notation<a class="headerlink" href="#string-notation" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="string_notation/escape_implicit_backslashes.html"><span class="doc">escape_implicit_backslashes</span></a></p>
@@ -961,8 +962,8 @@
 <p>All multi-line strings must use correct line ending.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="whitespace">
+</section>
+<section id="whitespace">
 <h2>Whitespace<a class="headerlink" href="#whitespace" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="whitespace/array_indentation.html"><span class="doc">array_indentation</span></a></p>
@@ -1023,8 +1024,8 @@
 <p>A single space or none should be around union type and intersection type operators.</p>
 </li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>

@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,20 +63,20 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-date-time-immutable">
+  <section id="rule-date-time-immutable">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">date_time_immutable</span></code><a class="headerlink" href="#rule-date-time-immutable" title="Permalink to this headline">¶</a></h1>
 <p>Class <code class="docutils literal notranslate"><span class="pre">DateTimeImmutable</span></code> should be used instead of <code class="docutils literal notranslate"><span class="pre">DateTime</span></code>.</p>
-<div class="section" id="warning">
+<section id="warning">
 <h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="using-this-rule-is-risky">
+<section id="using-this-rule-is-risky">
 <h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
 <p>Risky when the code relies on modifying <code class="docutils literal notranslate"><span class="pre">DateTime</span></code> objects or if any of the
 <code class="docutils literal notranslate"><span class="pre">date_create*</span></code> functions are overridden.</p>
-</div>
-</div>
-<div class="section" id="examples">
+</section>
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example-1">
+<section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -84,9 +85,9 @@
 <span class="gi">+new DateTimeImmutable();</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
           </div>

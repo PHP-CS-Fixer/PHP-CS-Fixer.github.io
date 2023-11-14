@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,11 +63,11 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-explicit-string-variable">
+  <section id="rule-explicit-string-variable">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">explicit_string_variable</span></code><a class="headerlink" href="#rule-explicit-string-variable" title="Permalink to this headline">¶</a></h1>
 <p>Converts implicit variables into explicit ones in double-quoted strings or
 heredoc syntax.</p>
-<div class="section" id="description">
+<section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>The reasoning behind this rule is the following:
 - When there are two valid ways of doing the same thing, using both is
@@ -79,10 +80,10 @@ explicit: explicit code should always be preferred.
 colors/highlight with higher contrast, which is easier to read.
 Backtick operator is skipped because it is harder to handle; you can use
 <code class="docutils literal notranslate"><span class="pre">backtick_to_shell_exec</span></code> fixer to normalize backticks to strings.</p>
-</div>
-<div class="section" id="examples">
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example-1">
+<section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -95,16 +96,16 @@ Backtick operator is skipped because it is harder to handle; you can use
 <span class="gi">+$c = &quot;I have {$farm[0]} chickens !&quot;;</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="rule-sets">
+</section>
+</section>
+<section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule set:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>

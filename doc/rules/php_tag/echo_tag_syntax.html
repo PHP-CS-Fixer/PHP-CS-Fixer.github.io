@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,34 +63,34 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-echo-tag-syntax">
+  <section id="rule-echo-tag-syntax">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">echo_tag_syntax</span></code><a class="headerlink" href="#rule-echo-tag-syntax" title="Permalink to this headline">¶</a></h1>
 <p>Replaces short-echo <code class="docutils literal notranslate"><span class="pre">&lt;?=</span></code> with long format <code class="docutils literal notranslate"><span class="pre">&lt;?php</span> <span class="pre">echo</span></code>/<code class="docutils literal notranslate"><span class="pre">&lt;?php</span> <span class="pre">print</span></code>
 syntax, or vice-versa.</p>
-<div class="section" id="configuration">
+<section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="format">
+<section id="format">
 <h3><code class="docutils literal notranslate"><span class="pre">format</span></code><a class="headerlink" href="#format" title="Permalink to this headline">¶</a></h3>
 <p>The desired language construct.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'long'</span></code> and <code class="docutils literal notranslate"><span class="pre">'short'</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'long'</span></code></p>
-</div>
-<div class="section" id="long-function">
+</section>
+<section id="long-function">
 <h3><code class="docutils literal notranslate"><span class="pre">long_function</span></code><a class="headerlink" href="#long-function" title="Permalink to this headline">¶</a></h3>
 <p>The function to be used to expand the short echo tags.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'echo'</span></code> and <code class="docutils literal notranslate"><span class="pre">'print'</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'echo'</span></code></p>
-</div>
-<div class="section" id="shorten-simple-statements-only">
+</section>
+<section id="shorten-simple-statements-only">
 <h3><code class="docutils literal notranslate"><span class="pre">shorten_simple_statements_only</span></code><a class="headerlink" href="#shorten-simple-statements-only" title="Permalink to this headline">¶</a></h3>
 <p>Render short-echo tags only in case of simple code.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
-</div>
-</div>
-<div class="section" id="examples">
+</section>
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example-1">
+<section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -101,8 +102,8 @@ syntax, or vice-versa.</p>
 <span class="w"> </span>&lt;?php print &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-2">
+</section>
+<section id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['format'</span> <span class="pre">=&gt;</span> <span class="pre">'long']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -114,8 +115,8 @@ syntax, or vice-versa.</p>
 <span class="w"> </span>&lt;?php print &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-3">
+</section>
+<section id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['format'</span> <span class="pre">=&gt;</span> <span class="pre">'long',</span> <span class="pre">'long_function'</span> <span class="pre">=&gt;</span> <span class="pre">'print']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -127,8 +128,8 @@ syntax, or vice-versa.</p>
 <span class="w"> </span>&lt;?php print &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-4">
+</section>
+<section id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['format'</span> <span class="pre">=&gt;</span> <span class="pre">'short']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -141,8 +142,8 @@ syntax, or vice-versa.</p>
 <span class="w"> </span>&lt;?php print &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-5">
+</section>
+<section id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['format'</span> <span class="pre">=&gt;</span> <span class="pre">'short',</span> <span class="pre">'shorten_simple_statements_only'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -156,17 +157,17 @@ syntax, or vice-versa.</p>
 <span class="gi">+&lt;?= &#39;2&#39; . &#39;3&#39;; someFunction(); ?&gt;</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="rule-sets">
+</section>
+</section>
+<section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>

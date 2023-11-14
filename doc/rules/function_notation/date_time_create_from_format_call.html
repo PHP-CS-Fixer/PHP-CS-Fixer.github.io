@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,11 +63,11 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-date-time-create-from-format-call">
+  <section id="rule-date-time-create-from-format-call">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">date_time_create_from_format_call</span></code><a class="headerlink" href="#rule-date-time-create-from-format-call" title="Permalink to this headline">¶</a></h1>
 <p>The first argument of <code class="docutils literal notranslate"><span class="pre">DateTime::createFromFormat</span></code> method must start with
 <code class="docutils literal notranslate"><span class="pre">!</span></code>.</p>
-<div class="section" id="description">
+<section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <dl class="simple">
 <dt>Consider this code:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">DateTime::createFromFormat('Y-m-d',</span> <span class="pre">'2022-02-11')</span></code>.
@@ -76,18 +77,18 @@ What value will be returned? ‘2022-02-11 00:00:00.0’? No, actual return</p>
 So, adding <code class="docutils literal notranslate"><span class="pre">!</span></code> to format string will make return value more intuitive.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="warning">
+</section>
+<section id="warning">
 <h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="using-this-rule-is-risky">
+<section id="using-this-rule-is-risky">
 <h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
 <p>Risky when depending on the actual timings being used even when not explicit set
 in format.</p>
-</div>
-</div>
-<div class="section" id="examples">
+</section>
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example-1">
+<section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -95,9 +96,9 @@ in format.</p>
 <span class="gi">+&lt;?php \DateTime::createFromFormat(&#39;!Y-m-d&#39;, &#39;2022-02-11&#39;);</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
           </div>

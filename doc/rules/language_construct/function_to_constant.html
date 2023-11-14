@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,28 +63,28 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-function-to-constant">
+  <section id="rule-function-to-constant">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">function_to_constant</span></code><a class="headerlink" href="#rule-function-to-constant" title="Permalink to this headline">¶</a></h1>
 <p>Replace core functions calls returning constants with the constants.</p>
-<div class="section" id="warning">
+<section id="warning">
 <h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="using-this-rule-is-risky">
+<section id="using-this-rule-is-risky">
 <h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
 <p>Risky when any of the configured functions to replace are overridden.</p>
-</div>
-</div>
-<div class="section" id="configuration">
+</section>
+</section>
+<section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="functions">
+<section id="functions">
 <h3><code class="docutils literal notranslate"><span class="pre">functions</span></code><a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
 <p>List of function names to fix.</p>
 <p>Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['get_called_class',</span> <span class="pre">'get_class',</span> <span class="pre">'get_class_this',</span> <span class="pre">'php_sapi_name',</span> <span class="pre">'phpversion',</span> <span class="pre">'pi']</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['get_called_class',</span> <span class="pre">'get_class',</span> <span class="pre">'get_class_this',</span> <span class="pre">'php_sapi_name',</span> <span class="pre">'phpversion',</span> <span class="pre">'pi']</span></code></p>
-</div>
-</div>
-<div class="section" id="examples">
+</section>
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example-1">
+<section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -107,8 +108,8 @@
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-2">
+</section>
+<section id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['functions'</span> <span class="pre">=&gt;</span> <span class="pre">['get_called_class',</span> <span class="pre">'get_class_this',</span> <span class="pre">'phpversion']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -130,17 +131,17 @@
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="rule-sets">
+</section>
+</section>
+<section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/SymfonyRisky.html"><span class="doc">&#64;Symfony:risky</span></a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>

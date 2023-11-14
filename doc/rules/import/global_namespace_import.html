@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,33 +63,33 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-global-namespace-import">
+  <section id="rule-global-namespace-import">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">global_namespace_import</span></code><a class="headerlink" href="#rule-global-namespace-import" title="Permalink to this headline">¶</a></h1>
 <p>Imports or fully qualifies global classes/functions/constants.</p>
-<div class="section" id="configuration">
+<section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="import-classes">
+<section id="import-classes">
 <h3><code class="docutils literal notranslate"><span class="pre">import_classes</span></code><a class="headerlink" href="#import-classes" title="Permalink to this headline">¶</a></h3>
 <p>Whether to import, not import or ignore global classes.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
-</div>
-<div class="section" id="import-constants">
+</section>
+<section id="import-constants">
 <h3><code class="docutils literal notranslate"><span class="pre">import_constants</span></code><a class="headerlink" href="#import-constants" title="Permalink to this headline">¶</a></h3>
 <p>Whether to import, not import or ignore global constants.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
-</div>
-<div class="section" id="import-functions">
+</section>
+<section id="import-functions">
 <h3><code class="docutils literal notranslate"><span class="pre">import_functions</span></code><a class="headerlink" href="#import-functions" title="Permalink to this headline">¶</a></h3>
 <p>Whether to import, not import or ignore global functions.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
-</div>
-</div>
-<div class="section" id="examples">
+</section>
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example-1">
+<section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -102,8 +103,8 @@
 <span class="gi">+$d = new DateTimeImmutable();</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-2">
+</section>
+<section id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['import_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true,</span> <span class="pre">'import_constants'</span> <span class="pre">=&gt;</span> <span class="pre">true,</span> <span class="pre">'import_functions'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -126,8 +127,8 @@
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-3">
+</section>
+<section id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['import_classes'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'import_constants'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'import_functions'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -151,9 +152,9 @@
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="rule-sets">
+</section>
+</section>
+<section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul>
@@ -164,8 +165,8 @@
 <p><code class="docutils literal notranslate"><span class="pre">['import_classes'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'import_constants'</span> <span class="pre">=&gt;</span> <span class="pre">false,</span> <span class="pre">'import_functions'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code></p>
 </li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>

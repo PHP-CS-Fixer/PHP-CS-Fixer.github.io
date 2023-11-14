@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,47 +63,47 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-class-definition">
+  <section id="rule-class-definition">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">class_definition</span></code><a class="headerlink" href="#rule-class-definition" title="Permalink to this headline">¶</a></h1>
 <p>Whitespace around the keywords of a class, trait, enum or interfaces definition
 should be one space.</p>
-<div class="section" id="configuration">
+<section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="inline-constructor-arguments">
+<section id="inline-constructor-arguments">
 <h3><code class="docutils literal notranslate"><span class="pre">inline_constructor_arguments</span></code><a class="headerlink" href="#inline-constructor-arguments" title="Permalink to this headline">¶</a></h3>
 <p>Whether constructor argument list in anonymous classes should be single line.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
-</div>
-<div class="section" id="multi-line-extends-each-single-line">
+</section>
+<section id="multi-line-extends-each-single-line">
 <h3><code class="docutils literal notranslate"><span class="pre">multi_line_extends_each_single_line</span></code><a class="headerlink" href="#multi-line-extends-each-single-line" title="Permalink to this headline">¶</a></h3>
 <p>Whether definitions should be multiline.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-</div>
-<div class="section" id="single-item-single-line">
+</section>
+<section id="single-item-single-line">
 <h3><code class="docutils literal notranslate"><span class="pre">single_item_single_line</span></code><a class="headerlink" href="#single-item-single-line" title="Permalink to this headline">¶</a></h3>
 <p>Whether definitions should be single line when including a single item.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-</div>
-<div class="section" id="single-line">
+</section>
+<section id="single-line">
 <h3><code class="docutils literal notranslate"><span class="pre">single_line</span></code><a class="headerlink" href="#single-line" title="Permalink to this headline">¶</a></h3>
 <p>Whether definitions should be single line.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-</div>
-<div class="section" id="space-before-parenthesis">
+</section>
+<section id="space-before-parenthesis">
 <h3><code class="docutils literal notranslate"><span class="pre">space_before_parenthesis</span></code><a class="headerlink" href="#space-before-parenthesis" title="Permalink to this headline">¶</a></h3>
 <p>Whether there should be a single space after the parenthesis of anonymous class
 (PSR12) or not.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-</div>
-</div>
-<div class="section" id="examples">
+</section>
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example-1">
+<section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -128,8 +129,8 @@ should be one space.</p>
 <span class="gi">+$foo = new class extends Bar implements Baz, BarBaz {};</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-2">
+</section>
+<section id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['single_line'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -143,8 +144,8 @@ should be one space.</p>
 <span class="w"> </span>{}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-3">
+</section>
+<section id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['single_item_single_line'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -158,8 +159,8 @@ should be one space.</p>
 <span class="w"> </span>{}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-4">
+</section>
+<section id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['multi_line_extends_each_single_line'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -174,8 +175,8 @@ should be one space.</p>
 <span class="w"> </span>{}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-5">
+</section>
+<section id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['space_before_parenthesis'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -185,8 +186,8 @@ should be one space.</p>
 <span class="gi">+$foo = new class () {};</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-6">
+</section>
+<section id="example-6">
 <h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['inline_constructor_arguments'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -199,9 +200,9 @@ should be one space.</p>
 <span class="gi">+$foo = new class($bar, $baz) {};</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="rule-sets">
+</section>
+</section>
+<section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul>
@@ -228,8 +229,8 @@ should be one space.</p>
 <p><code class="docutils literal notranslate"><span class="pre">['single_line'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
 </li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>

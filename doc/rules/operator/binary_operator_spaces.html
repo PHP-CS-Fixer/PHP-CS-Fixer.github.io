@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,18 +63,18 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-binary-operator-spaces">
+  <section id="rule-binary-operator-spaces">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">binary_operator_spaces</span></code><a class="headerlink" href="#rule-binary-operator-spaces" title="Permalink to this headline">¶</a></h1>
 <p>Binary operators should be surrounded by space as configured.</p>
-<div class="section" id="configuration">
+<section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="default">
+<section id="default">
 <h3><code class="docutils literal notranslate"><span class="pre">default</span></code><a class="headerlink" href="#default" title="Permalink to this headline">¶</a></h3>
 <p>Default fix strategy.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'align'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_minimal'</span></code>, <code class="docutils literal notranslate"><span class="pre">'align_single_space_minimal_by_scope'</span></code>, <code class="docutils literal notranslate"><span class="pre">'at_least_single_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">'no_space'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single_space'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'single_space'</span></code></p>
-</div>
-<div class="section" id="operators">
+</section>
+<section id="operators">
 <h3><code class="docutils literal notranslate"><span class="pre">operators</span></code><a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h3>
 <p>Dictionary of <code class="docutils literal notranslate"><span class="pre">binary</span> <span class="pre">operator</span></code> =&gt; <code class="docutils literal notranslate"><span class="pre">fix</span> <span class="pre">strategy</span></code> values that differ from
 the default strategy. Supported are: <code class="docutils literal notranslate"><span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">%</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>,
@@ -83,11 +84,11 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">^=</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code>, <code class="docutils literal notranslate"><span class="pre">**=</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">??</span></code> and <code class="docutils literal notranslate"><span class="pre">??=</span></code>.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></p>
-</div>
-</div>
-<div class="section" id="examples">
+</section>
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example-1">
+<section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -97,8 +98,8 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <span class="gi">+$a = 1 + $b ^ $d !== $e or $f;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-2">
+</section>
+<section id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['='</span> <span class="pre">=&gt;</span> <span class="pre">'align',</span> <span class="pre">'xor'</span> <span class="pre">=&gt;</span> <span class="pre">null]]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -113,8 +114,8 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <span class="gi">+$f -= 1;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-3">
+</section>
+<section id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['+='</span> <span class="pre">=&gt;</span> <span class="pre">'align_single_space']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -131,8 +132,8 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <span class="gi">+$h = $ee    += $f;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-4">
+</section>
+<section id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['==='</span> <span class="pre">=&gt;</span> <span class="pre">'align_single_space_minimal']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -146,8 +147,8 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <span class="gi">+$h = $i === $j;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-5">
+</section>
+<section id="example-5">
 <h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['|'</span> <span class="pre">=&gt;</span> <span class="pre">'no_space']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -157,8 +158,8 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <span class="gi">+$foo = \json_encode($bar, JSON_PRESERVE_ZERO_FRACTION|JSON_PRETTY_PRINT);</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-6">
+</section>
+<section id="example-6">
 <h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'single_space']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -172,8 +173,8 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <span class="w"> </span>];
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-7">
+</section>
+<section id="example-7">
 <h3>Example #7<a class="headerlink" href="#example-7" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -188,8 +189,8 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <span class="w"> </span>];
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-8">
+</section>
+<section id="example-8">
 <h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align_by_scope']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -205,8 +206,8 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <span class="w"> </span>];
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-9">
+</section>
+<section id="example-9">
 <h3>Example #9<a class="headerlink" href="#example-9" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align_single_space']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -221,8 +222,8 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <span class="w"> </span>];
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-10">
+</section>
+<section id="example-10">
 <h3>Example #10<a class="headerlink" href="#example-10" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align_single_space_by_scope']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -238,8 +239,8 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <span class="w"> </span>];
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-11">
+</section>
+<section id="example-11">
 <h3>Example #11<a class="headerlink" href="#example-11" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align_single_space_minimal']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -255,8 +256,8 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <span class="w"> </span>];
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-12">
+</section>
+<section id="example-12">
 <h3>Example #12<a class="headerlink" href="#example-12" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['operators'</span> <span class="pre">=&gt;</span> <span class="pre">['=&gt;'</span> <span class="pre">=&gt;</span> <span class="pre">'align_single_space_minimal_by_scope']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -273,9 +274,9 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <span class="w"> </span>];
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="rule-sets">
+</section>
+</section>
+<section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul>
@@ -297,8 +298,8 @@ the default strategy. Supported are: <code class="docutils literal notranslate">
 <li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>

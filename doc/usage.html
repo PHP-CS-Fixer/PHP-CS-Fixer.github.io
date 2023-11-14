@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,9 +63,9 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="usage">
+  <section id="usage">
 <h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="the-fix-command">
+<section id="the-fix-command">
 <h2>The <code class="docutils literal notranslate"><span class="pre">fix</span></code> command<a class="headerlink" href="#the-fix-command" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">fix</span></code> command tries to fix as much coding standards
 problems as possible.</p>
@@ -162,13 +163,13 @@ fixed but without actually modifying them:</p>
 </div>
 <p>By using <code class="docutils literal notranslate"><span class="pre">--using-cache</span></code> option with <code class="docutils literal notranslate"><span class="pre">yes</span></code> or <code class="docutils literal notranslate"><span class="pre">no</span></code> you can set if the caching
 mechanism should be used.</p>
-</div>
-<div class="section" id="the-check-command">
+</section>
+<section id="the-check-command">
 <h2>The <code class="docutils literal notranslate"><span class="pre">check</span></code> command<a class="headerlink" href="#the-check-command" title="Permalink to this headline">¶</a></h2>
 <p>This command is a shorthand for <code class="docutils literal notranslate"><span class="pre">fix</span> <span class="pre">--dry-run</span></code> and offers all the options and arguments as <code class="docutils literal notranslate"><span class="pre">fix</span></code> command.
 The only difference is that <code class="docutils literal notranslate"><span class="pre">check</span></code> command won’t apply any changes, but will only print analysis result.</p>
-</div>
-<div class="section" id="the-list-files-command">
+</section>
+<section id="the-list-files-command">
 <h2>The <code class="docutils literal notranslate"><span class="pre">list-files</span></code> command<a class="headerlink" href="#the-list-files-command" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">list-files</span></code> command will list all files which need fixing.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar list-files</span>
@@ -189,8 +190,8 @@ fixing across several processes might speedup the process.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">-n</span></code> defines how many files a single subprocess process</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-P</span></code> defines how many subprocesses the shell is allowed to spawn for parallel processing (usually similar to the number of CPUs your system has)</p></li>
 </ul>
-</div>
-<div class="section" id="rule-descriptions">
+</section>
+<section id="rule-descriptions">
 <h2>Rule descriptions<a class="headerlink" href="#rule-descriptions" title="Permalink to this headline">¶</a></h2>
 <p>Use the following command to quickly understand what a rule will do to your code:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar describe align_multiline_comment</span>
@@ -200,8 +201,8 @@ fixing across several processes might speedup the process.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar describe @PSR2</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="caching">
+</section>
+<section id="caching">
 <h2>Caching<a class="headerlink" href="#caching" title="Permalink to this headline">¶</a></h2>
 <p>The caching mechanism is enabled by default. This will speed up further runs by
 fixing only files that were modified since the last run. The tool will fix all
@@ -224,8 +225,8 @@ The cache mechanism also supports executing the command in parallel.</p>
 <span class="k">return</span> <span class="nv">$config</span><span class="o">-&gt;</span><span class="na">setCacheFile</span><span class="p">(</span><span class="no">__DIR__</span><span class="o">.</span><span class="s1">&#39;/.php-cs-fixer.cache&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="using-php-cs-fixer-on-ci">
+</section>
+<section id="using-php-cs-fixer-on-ci">
 <h2>Using PHP CS Fixer on CI<a class="headerlink" href="#using-php-cs-fixer-on-ci" title="Permalink to this headline">¶</a></h2>
 <p>Require <code class="docutils literal notranslate"><span class="pre">friendsofphp/php-cs-fixer</span></code> as a <code class="docutils literal notranslate"><span class="pre">dev</span></code> dependency:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">./composer.phar require --dev friendsofphp/php-cs-fixer</span>
@@ -240,13 +241,13 @@ The cache mechanism also supports executing the command in parallel.</p>
 </pre></div>
 </div>
 <p>Where <code class="docutils literal notranslate"><span class="pre">$COMMIT_RANGE</span></code> is your range of commits, e.g. <code class="docutils literal notranslate"><span class="pre">$TRAVIS_COMMIT_RANGE</span></code> or <code class="docutils literal notranslate"><span class="pre">HEAD~..HEAD</span></code>.</p>
-<div class="section" id="gitlab-code-quality-integration">
+<section id="gitlab-code-quality-integration">
 <h3>GitLab Code Quality Integration<a class="headerlink" href="#gitlab-code-quality-integration" title="Permalink to this headline">¶</a></h3>
 <p>If you want to integrate with GitLab’s Code Quality feature, in order for report to contain correct line numbers, you
 will need to use both <code class="docutils literal notranslate"><span class="pre">--format=gitlab</span></code> and <code class="docutils literal notranslate"><span class="pre">--diff</span></code> arguments.</p>
-</div>
-</div>
-<div class="section" id="environment-options">
+</section>
+</section>
+<section id="environment-options">
 <h2>Environment options<a class="headerlink" href="#environment-options" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">PHP_CS_FIXER_IGNORE_ENV</span></code> environment variable can be used to ignore any environment requirements.
 This includes requirements like missing PHP extensions, unsupported PHP versions or by using HHVM.</p>
@@ -254,8 +255,8 @@ This includes requirements like missing PHP extensions, unsupported PHP versions
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">PHP_CS_FIXER_IGNORE_ENV=1 php php-cs-fixer.phar fix /path/to/dir</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="exit-code">
+</section>
+<section id="exit-code">
 <h2>Exit code<a class="headerlink" href="#exit-code" title="Permalink to this headline">¶</a></h2>
 <p>Exit code of the <code class="docutils literal notranslate"><span class="pre">fix</span></code> command is built using following bit flags:</p>
 <ul class="simple">
@@ -267,8 +268,8 @@ This includes requirements like missing PHP extensions, unsupported PHP versions
 <li><p>32 - Configuration error of a Fixer.</p></li>
 <li><p>64 - Exception raised within the application.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>

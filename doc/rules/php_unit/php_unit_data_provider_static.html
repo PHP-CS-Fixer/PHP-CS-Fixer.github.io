@@ -9,7 +9,8 @@
     <meta name="Language" content="en" />
     <meta name="Description" content="PHP Coding Standards Fixer" />
     <meta name="Keywords" content="php, coding standards" />
-    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
       <title>PHP Coding Standards Fixer</title>
     
   <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css" />
@@ -62,30 +63,30 @@
           </div>
           <div class="more_intro">
             
-  <div class="section" id="rule-php-unit-data-provider-static">
+  <section id="rule-php-unit-data-provider-static">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">php_unit_data_provider_static</span></code><a class="headerlink" href="#rule-php-unit-data-provider-static" title="Permalink to this headline">¶</a></h1>
 <p>Data providers must be static.</p>
-<div class="section" id="warning">
+<section id="warning">
 <h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="using-this-rule-is-risky">
+<section id="using-this-rule-is-risky">
 <h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
 <p>Fixer could be risky if one is calling data provider function dynamically.</p>
-</div>
-</div>
-<div class="section" id="configuration">
+</section>
+</section>
+<section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="force">
+<section id="force">
 <h3><code class="docutils literal notranslate"><span class="pre">force</span></code><a class="headerlink" href="#force" title="Permalink to this headline">¶</a></h3>
 <p>Whether to make the data providers static even if they have a dynamic class call
 (may introduce fatal error “using $this when not in object context”, and you may
 have to adjust the code manually by converting dynamic calls to static ones).</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-</div>
-</div>
-<div class="section" id="examples">
+</section>
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example-1">
+<section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -101,8 +102,8 @@ have to adjust the code manually by converting dynamic calls to static ones).</p
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-2">
+</section>
+<section id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['force'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -121,8 +122,8 @@ have to adjust the code manually by converting dynamic calls to static ones).</p
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-3">
+</section>
+<section id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['force'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
@@ -140,9 +141,9 @@ have to adjust the code manually by converting dynamic calls to static ones).</p
 <span class="w"> </span>}
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="rule-sets">
+</section>
+</section>
+<section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule set:</p>
 <ul>
@@ -150,8 +151,8 @@ have to adjust the code manually by converting dynamic calls to static ones).</p
 <p><code class="docutils literal notranslate"><span class="pre">['force'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
 </li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>
