@@ -64,15 +64,18 @@ build-fetch-docs: build-folders
 	git -C $${tmp_dir} checkout HEAD doc/ && \
 	mv $${tmp_dir}/doc/ src/doc/
 
-.PHONY: build-internal-links
-build-internal-links: build-fetch-docs
+.PHONY: build-links
+build-links: build-fetch-docs
 	echo λλλ replace internal links
 	# ```diff
-	# -`DESC <PATH.rst>`__
+	# -`DESC <PATH.rst>`_
 	# +:doc:`DESC <PATH>`
 	# ```
 	# to find: grep -r --perl '`[^<]+<[^>]+\.rst>`_+' src
-	find src -type f -name "*.rst" -print0 | xargs -0 perl -pi -e 's/`([^<]+)<([^>]+)\.rst>`_+/:doc:`\1<\2>`/g'
+	find src -type f -name "*.rst" -print0 | xargs -0 perl -pi -e 's|`([^<]+)<([^>]+)\.rst>`_+|:doc:`\1<\2>`|g'
+	echo λλλ replace links to source files
+	PHP_CS_FIXER_VERSION=$(shell cat download/version.json | jq .number) && \
+	find src -type f -name "*.rst" -print0 | xargs -0 perl -pi -e "s|\`([^<]+)<(?:\./)?\.\./([^>]+)\.php>\`_+|\`\1<https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v$${PHP_CS_FIXER_VERSION}/\2.php>\`_|g"
 
 .PHONY: build-install-deps
 .SILENT:
@@ -80,7 +83,7 @@ build-install-deps: requirements.txt
 	pip3 install -r requirements.txt
 
 .PHONY: build
-build: build-install-deps build-folders build-theme-files build-default-files build-fetch-docs build-internal-links
+build: build-install-deps build-folders build-theme-files build-default-files build-fetch-docs build-links
 	echo λλλ generate website content
 	sphinx-build -c . src dist
 
