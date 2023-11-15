@@ -41,7 +41,7 @@
     <meta name="Keywords" content="php, coding standards" />
     {{ metatags }}
     {%- block htmltitle %}
-      <title>{{ project }}</title>
+      <title>{% if title != project %}{{ title|striptags|e }} - {% endif %}{{ project }}</title>
     {%- endblock %}
     {{ css() }}
     {{ script() }}
