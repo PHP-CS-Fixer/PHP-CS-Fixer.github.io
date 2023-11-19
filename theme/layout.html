@@ -1,46 +1,39 @@
-{%- block doctype -%}
 <!DOCTYPE html>
-{%- endblock %}
-{%- set url_root = pathto('', 1) %}
-{# XXX necessary? #}
-{%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
-
-{%- macro css() %}
-  <link href="{{ pathto('_static/css/reset-min.css', 1) }}" rel="stylesheet" type="text/css">
-  <link href="{{ pathto('_static/css/base.css', 1) }}" rel="stylesheet" type="text/css">
-  <link href="{{ pathto('_static/css/code.css', 1) }}" rel="stylesheet" type="text/css">
-  <link href="{{ pathto('_static/css/colors.css', 1) }}" rel="stylesheet" type="text/css">
-  <link href="{{ pathto('_static/pygments.css', 1) }}" rel="stylesheet" type="text/css">
-
-  {%- for cssfile in css_files %}
-    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css">
-  {%- endfor %}
-{%- endmacro %}
-
-{%- macro script() %}
-  <script>
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-32006827-2']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-{%- endmacro %}
-
 <html lang="{{ language|default('en') }}">
   <head>
     <meta charset="UTF-8">
     <meta name="description" content="{{ project }}">
     {{ metatags }}
+
+    <link href="{{ pathto('_static/css/reset-min.css', 1) }}" rel="stylesheet" type="text/css">
+    <link href="{{ pathto('_static/css/base.css', 1) }}" rel="stylesheet" type="text/css">
+    <link href="{{ pathto('_static/css/code.css', 1) }}" rel="stylesheet" type="text/css">
+    <link href="{{ pathto('_static/css/colors.css', 1) }}" rel="stylesheet" type="text/css">
+    <link href="{{ pathto('_static/pygments.css', 1) }}" rel="stylesheet" type="text/css">
+
+    {%- for cssfile in css_files %}
+      <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css">
+    {%- endfor %}
+
     {%- block htmltitle %}
       <title>{% if title != project %}{{ title|striptags|e }} - {% endif %}{{ project }}</title>
     {%- endblock %}
-    {{ css() }}
-    {{ script() }}
+
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-32006827-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
     {%- block extrahead %} {% endblock %}
   </head>
   <body>
