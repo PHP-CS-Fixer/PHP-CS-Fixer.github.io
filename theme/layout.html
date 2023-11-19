@@ -31,7 +31,7 @@
   </script>
 {%- endmacro %}
 
-<html xmlns="http://www.w3.org/1999/xhtml"{% if language is not none %} lang="{{ language }}"{% endif %}>
+<html lang="{{ language|default('en') }}">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}" />
     <meta name="robots" content="index, follow, all" />
