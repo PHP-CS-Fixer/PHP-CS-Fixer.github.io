@@ -58,7 +58,6 @@ a:visited
   max-width: 1200px;
   min-width: 996px;
   width: 100%;
-  _width: expression(document.body.clientWidth >= 1200 ? "1200px": document.body.clientWidth <= 996 ? "996px" :"100%");
   margin: auto;
   background-color: #fff;
 }
