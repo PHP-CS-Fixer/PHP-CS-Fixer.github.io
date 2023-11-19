@@ -6,14 +6,14 @@
 {%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
 
 {%- macro css() %}
-  <link href="{{ pathto('_static/css/reset-min.css', 1) }}" rel="stylesheet" type="text/css" />
-  <link href="{{ pathto('_static/css/base.css', 1) }}" rel="stylesheet" type="text/css" />
-  <link href="{{ pathto('_static/css/code.css', 1) }}" rel="stylesheet" type="text/css" />
-  <link href="{{ pathto('_static/css/colors.css', 1) }}" rel="stylesheet" type="text/css" />
-  <link href="{{ pathto('_static/pygments.css', 1) }}" rel="stylesheet" type="text/css" />
+  <link href="{{ pathto('_static/css/reset-min.css', 1) }}" rel="stylesheet" type="text/css">
+  <link href="{{ pathto('_static/css/base.css', 1) }}" rel="stylesheet" type="text/css">
+  <link href="{{ pathto('_static/css/code.css', 1) }}" rel="stylesheet" type="text/css">
+  <link href="{{ pathto('_static/css/colors.css', 1) }}" rel="stylesheet" type="text/css">
+  <link href="{{ pathto('_static/pygments.css', 1) }}" rel="stylesheet" type="text/css">
 
   {%- for cssfile in css_files %}
-    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css">
   {%- endfor %}
 {%- endmacro %}
 
@@ -34,7 +34,7 @@
 <html lang="{{ language|default('en') }}">
   <head>
     <meta charset="UTF-8">
-    <meta name="Description" content="{{ project }}" />
+    <meta name="description" content="{{ project }}">
     {{ metatags }}
     {%- block htmltitle %}
       <title>{% if title != project %}{{ title|striptags|e }} - {% endif %}{{ project }}</title>
