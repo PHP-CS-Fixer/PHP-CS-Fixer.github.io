@@ -123,6 +123,35 @@ a:visited
 .hd .illustration
 {
   background: transparent url(../images/logo.png) no-repeat bottom right 40px;
+  position: relative;
+  overflow: clip;
+}
+
+.github-ribbon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotate(-45deg) translate(-29%, 0%);
+  transform-style: preserve-3d;
+  transform-origin: center;
+  display: flex;
+  align-items: center;
+  padding: .5rem 3rem;
+  background: #6d6d6d;
+  box-shadow: 2px 2px 8px 4px #00000020;
+  font-size: 14px;
+  font-stretch: semi-condensed;
+  font-family: system-ui, serif;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+.github-ribbon:before {
+  position: absolute;
+  inset: 2px;
+  content: "";
+  opacity: .15;
+  border-top: 2px dotted #fff;
+  border-bottom: 2px dotted #fff;
 }
 
 .menu
