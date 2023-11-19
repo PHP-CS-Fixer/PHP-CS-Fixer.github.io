@@ -34,10 +34,7 @@
 <html lang="{{ language|default('en') }}">
   <head>
     <meta charset="UTF-8">
-    <meta name="robots" content="index, follow, all" />
-    <meta name="Language" content="en" />
     <meta name="Description" content="{{ project }}" />
-    <meta name="Keywords" content="php, coding standards" />
     {{ metatags }}
     {%- block htmltitle %}
       <title>{% if title != project %}{{ title|striptags|e }} - {% endif %}{{ project }}</title>
