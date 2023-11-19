@@ -64,7 +64,7 @@ a:visited
 
 .hd
 {
-  background: #9743A3 linear-gradient(#49185B, #9743A3) 0 -40px repeat-x;
+  background: #9743A3 linear-gradient(#49185B, #9743A3) 0 -38px repeat-x;
   position: relative;
   height: 390px;
 }
@@ -201,6 +201,30 @@ a:visited
 .links_intro
 {
   padding: 20px 0 0 676px;
+}
+
+.download-button {
+    display: flex;
+    padding: 14px 24px;
+    gap: 16px;
+    font-size: 24px;
+    color: #fff !important;
+    align-items: center;
+    background: #FFA210;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+}
+.download-button svg {
+    display: flex;
+    height: 1.125em;
+    width: auto;
+    transform: rotate(135deg);
+    transform-origin: center;
+    transform-style: flat;
+    fill: #fff;
 }
 
 .bd .content .links_intro li
