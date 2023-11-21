@@ -250,9 +250,6 @@ a:visited
     display: flex;
     height: 1.125em;
     width: auto;
-    transform: rotate(135deg);
-    transform-origin: center;
-    transform-style: flat;
     fill: #fff;
 }
 
