@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="description" content="{{ project }}">
+    {% if pagename|default == '404' %}
+      <meta name="robots" content="noindex">
+      {# 404 is pre-rendered once and later served from any directory #}
+      <base href="/">
+    {% endif %}
     {{ metatags }}
 
     <link href="{{ pathto('_static/css/reset-min.css', 1) }}" rel="stylesheet" type="text/css">
