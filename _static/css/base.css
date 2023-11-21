@@ -58,18 +58,18 @@ a:visited
   max-width: 1200px;
   min-width: 996px;
   width: 100%;
-  _width: expression(document.body.clientWidth >= 1200 ? "1200px": document.body.clientWidth <= 996 ? "996px" :"100%");
   margin: auto;
   background-color: #fff;
 }
 
 .hd
 {
-  background: #fff url("../images/background.png") repeat-x;
+  background: #9743A3 linear-gradient(#49185B 20%, #9743A3) 0 -38px repeat-x;
   position: relative;
+  height: 390px;
 }
 
-.hd .illustration, .hd
+.hd .illustration
 {
   height:390px;
 }
@@ -122,7 +122,36 @@ a:visited
 
 .hd .illustration
 {
-  background: transparent url(../images/logo.png) no-repeat center 2px;
+  background: transparent url(../images/logo.png) no-repeat bottom right 40px;
+  position: relative;
+  overflow: clip;
+}
+
+.github-ribbon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotate(-45deg) translate(-29%, 0%);
+  transform-style: preserve-3d;
+  transform-origin: center;
+  display: flex;
+  align-items: center;
+  padding: .5rem 3rem;
+  background: #6d6d6d;
+  box-shadow: 2px 2px 8px 4px #00000020;
+  font-size: 14px;
+  font-stretch: semi-condensed;
+  font-family: system-ui, serif;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+.github-ribbon:before {
+  position: absolute;
+  inset: 2px;
+  content: "";
+  opacity: .15;
+  border-top: 2px dotted #fff;
+  border-bottom: 2px dotted #fff;
 }
 
 .menu
@@ -201,6 +230,27 @@ a:visited
 .links_intro
 {
   padding: 20px 0 0 676px;
+}
+
+.download-button {
+    display: flex;
+    padding: 14px 24px;
+    gap: 16px;
+    font-size: 24px;
+    color: #fff !important;
+    align-items: center;
+    background: #FFA210;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+}
+.download-button svg {
+    display: flex;
+    height: 1.125em;
+    width: auto;
+    fill: #fff;
 }
 
 .bd .content .links_intro li
