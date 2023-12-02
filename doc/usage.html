@@ -40,7 +40,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>I ate three cookies 🍪 (v3.40.0)</strong> edition
+                <strong>I ate three cookies 🍪 (v3.40.1)</strong> edition
               </h1>
             </div>
           </div>
@@ -92,7 +92,7 @@ which will use the intersection of the paths from the config file and from the a
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix --path-mode=intersection /path/to/dir</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">--format</span></code> option for the output format. Supported formats are <code class="docutils literal notranslate"><span class="pre">txt</span></code> (default one), <code class="docutils literal notranslate"><span class="pre">checkstyle</span></code>, <code class="docutils literal notranslate"><span class="pre">gitlab</span></code>, <code class="docutils literal notranslate"><span class="pre">json</span></code>, <code class="docutils literal notranslate"><span class="pre">junit``and</span> <span class="pre">``xml</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">--format</span></code> option for the output format. Supported formats are <code class="docutils literal notranslate"><span class="pre">txt</span></code> (default one), <code class="docutils literal notranslate"><span class="pre">checkstyle</span></code>, <code class="docutils literal notranslate"><span class="pre">gitlab</span></code>, <code class="docutils literal notranslate"><span class="pre">json</span></code>, <code class="docutils literal notranslate"><span class="pre">junit</span></code> and <code class="docutils literal notranslate"><span class="pre">xml</span></code>.</p>
 <p>NOTE: the output for the following formats are generated in accordance with schemas</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">checkstyle</span></code> follows the common <a class="reference external" href="/doc/schemas/fix/checkstyle.xsd">“checkstyle” XML schema</a></p></li>
@@ -132,7 +132,7 @@ using <code class="docutils literal notranslate"><span class="pre">-name_of_fixe
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix /path/to/project --rules=&#39;{&quot;concat_space&quot;: {&quot;spacing&quot;: &quot;none&quot;}}&#39;</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">--dry-run</span></code> flag will run the fixer without making changes to your files (implicitly set when you use <cite>check</cite> command).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">--dry-run</span></code> flag will run the fixer without making changes to your files (implicitly set when you use <code class="docutils literal notranslate"><span class="pre">check</span></code> command).</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">--diff</span></code> flag can be used to let the fixer output all the changes it makes in <code class="docutils literal notranslate"><span class="pre">udiff</span></code> format.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">--allow-risky</span></code> option (pass <code class="docutils literal notranslate"><span class="pre">yes</span></code> or <code class="docutils literal notranslate"><span class="pre">no</span></code>) allows you to set whether risky rules may run. Default value is taken from config file.
 A rule is considered risky if it could change code behaviour. By default no risky rules are run.</p>
@@ -151,7 +151,7 @@ automatically fix anything:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cat foo.php | php php-cs-fixer.phar fix --diff -</span>
 </pre></div>
 </div>
-<p>Finally, if you don’t need BC kept on CLI level, you might use <cite>PHP_CS_FIXER_FUTURE_MODE</cite> to start using options that
+<p>Finally, if you don’t need BC kept on CLI level, you might use <code class="docutils literal notranslate"><span class="pre">PHP_CS_FIXER_FUTURE_MODE</span></code> to start using options that
 would be default in next MAJOR release and to forbid using deprecated configuration:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">PHP_CS_FIXER_FUTURE_MODE=1 php php-cs-fixer.phar fix -v --diff</span>
 </pre></div>
