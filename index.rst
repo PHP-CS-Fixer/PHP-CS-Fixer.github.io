@@ -20,6 +20,7 @@ Supported PHP Versions
 * PHP 8.0 (except PHP 8.0.0 due to `bug in PHP tokenizer <https://bugs.php.net/bug.php?id=80462>`__)
 * PHP 8.1
 * PHP 8.2
+* PHP 8.3
 
 Documentation
 -------------
