@@ -40,7 +40,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Long Night (v3.41.1)</strong> edition
+                <strong>Three Keys (v3.42.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -506,7 +506,7 @@
 <h2>Import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="import/fully_qualified_strict_types.html"><span class="doc">fully_qualified_strict_types</span></a></p>
-<p>Transforms imported FQCN parameters and return types in function arguments to short version.</p>
+<p>Removes the leading part of fully qualified symbol references if a given symbol is imported or belongs to the current namespace. Fixes function arguments, exceptions in <code class="docutils literal notranslate"><span class="pre">catch</span></code> block, <code class="docutils literal notranslate"><span class="pre">extend</span></code> and <code class="docutils literal notranslate"><span class="pre">implements</span></code> of classes and interfaces.</p>
 </li>
 <li><p><a class="reference internal" href="import/global_namespace_import.html"><span class="doc">global_namespace_import</span></a></p>
 <p>Imports or fully qualifies global classes/functions/constants.</p>
@@ -537,6 +537,9 @@
 <section id="language-construct">
 <h2>Language Construct<a class="headerlink" href="#language-construct" title="Permalink to this headline">¶</a></h2>
 <ul>
+<li><p><a class="reference internal" href="language_construct/class_keyword.html"><span class="doc">class_keyword</span></a> <em>(risky)</em></p>
+<p>EXPERIMENTAL: Converts FQCN strings to <code class="docutils literal notranslate"><span class="pre">*::class</span></code> keywords. Do not use it, unless you know what you are doing.</p>
+</li>
 <li><p><a class="reference internal" href="language_construct/class_keyword_remove.html"><span class="doc">class_keyword_remove</span></a> <em>(deprecated)</em></p>
 <p>Converts <code class="docutils literal notranslate"><span class="pre">::class</span></code> keywords to FQCN strings.</p>
 </li>
@@ -801,7 +804,7 @@
 <p>PHPDoc should contain <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> for all params.</p>
 </li>
 <li><p><a class="reference internal" href="phpdoc/phpdoc_align.html"><span class="doc">phpdoc_align</span></a></p>
-<p>All items of the given phpdoc tags must be either left-aligned or (by default) aligned vertically.</p>
+<p>All items of the given PHPDoc tags must be either left-aligned or (by default) aligned vertically.</p>
 </li>
 <li><p><a class="reference internal" href="phpdoc/phpdoc_annotation_without_dot.html"><span class="doc">phpdoc_annotation_without_dot</span></a></p>
 <p>PHPDoc annotation descriptions should not be a sentence.</p>
@@ -831,7 +834,7 @@
 <p>Classy that does not inherit must not have <code class="docutils literal notranslate"><span class="pre">&#64;inheritdoc</span></code> tags.</p>
 </li>
 <li><p><a class="reference internal" href="phpdoc/phpdoc_order_by_value.html"><span class="doc">phpdoc_order_by_value</span></a></p>
-<p>Order phpdoc tags by value.</p>
+<p>Order PHPDoc tags by value.</p>
 </li>
 <li><p><a class="reference internal" href="phpdoc/phpdoc_order.html"><span class="doc">phpdoc_order</span></a></p>
 <p>Annotations in PHPDoc should be ordered in defined sequence.</p>

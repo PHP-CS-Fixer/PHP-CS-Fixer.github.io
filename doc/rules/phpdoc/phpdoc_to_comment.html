@@ -40,7 +40,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Long Night (v3.41.1)</strong> edition
+                <strong>Three Keys (v3.42.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -68,6 +68,12 @@
 <p>Docblocks should only be used on structural elements.</p>
 <section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<section id="allow-before-return-statement">
+<h3><code class="docutils literal notranslate"><span class="pre">allow_before_return_statement</span></code><a class="headerlink" href="#allow-before-return-statement" title="Permalink to this headline">¶</a></h3>
+<p>Whether to allow PHPDoc before return statement.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</section>
 <section id="ignored-tags">
 <h3><code class="docutils literal notranslate"><span class="pre">ignored_tags</span></code><a class="headerlink" href="#ignored-tags" title="Permalink to this headline">¶</a></h3>
 <p>List of ignored tags (matched case insensitively).</p>
@@ -114,6 +120,27 @@
 </pre></div>
 </div>
 </section>
+<section id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['allow_before_return_statement'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>$first = true;// needed because by default first docblock is never fixed.
+
+<span class="gd">-/** This should be a comment */</span>
+<span class="gi">+/* This should be a comment */</span>
+<span class="w"> </span>foreach($connections as $key =&gt; $sqlite) {
+<span class="w"> </span>    $sqlite-&gt;open($path);
+<span class="w"> </span>}
+
+<span class="w"> </span>function returnClassName() {
+<span class="w"> </span>    /** @var class-string */
+<span class="w"> </span>    return \StdClass::class;
+<span class="w"> </span>}
+</pre></div>
+</div>
+</section>
 </section>
 <section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
@@ -125,7 +152,7 @@
 </section>
 <section id="source-class">
 <h2>Source class<a class="headerlink" href="#source-class" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.41.1/src/Fixer/Phpdoc/PhpdocToCommentFixer.php">PhpCsFixer\Fixer\Phpdoc\PhpdocToCommentFixer</a></p>
+<p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.42.0/src/Fixer/Phpdoc/PhpdocToCommentFixer.php">PhpCsFixer\Fixer\Phpdoc\PhpdocToCommentFixer</a></p>
 </section>
 </section>
 

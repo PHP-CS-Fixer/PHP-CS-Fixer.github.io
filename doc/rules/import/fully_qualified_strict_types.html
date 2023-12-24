@@ -40,7 +40,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Long Night (v3.41.1)</strong> edition
+                <strong>Three Keys (v3.42.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -65,10 +65,18 @@
             
   <section id="rule-fully-qualified-strict-types">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">fully_qualified_strict_types</span></code><a class="headerlink" href="#rule-fully-qualified-strict-types" title="Permalink to this headline">¶</a></h1>
-<p>Transforms imported FQCN parameters and return types in function arguments to
-short version.</p>
+<p>Removes the leading part of fully qualified symbol references if a given symbol
+is imported or belongs to the current namespace. Fixes function arguments,
+exceptions in <code class="docutils literal notranslate"><span class="pre">catch</span></code> block, <code class="docutils literal notranslate"><span class="pre">extend</span></code> and <code class="docutils literal notranslate"><span class="pre">implements</span></code> of classes and
+interfaces.</p>
 <section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<section id="import-symbols">
+<h3><code class="docutils literal notranslate"><span class="pre">import_symbols</span></code><a class="headerlink" href="#import-symbols" title="Permalink to this headline">¶</a></h3>
+<p>Whether FQCNs found during analysis should be automatically imported.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</section>
 <section id="leading-backslash-in-global-namespace">
 <h3><code class="docutils literal notranslate"><span class="pre">leading_backslash_in_global_namespace</span></code><a class="headerlink" href="#leading-backslash-in-global-namespace" title="Permalink to this headline">¶</a></h3>
 <p>Whether FQCN is prefixed with backslash when that FQCN is used in global
@@ -88,17 +96,45 @@ namespace context.</p>
 
 <span class="w"> </span>use Foo\Bar;
 <span class="w"> </span>use Foo\Bar\Baz;
+<span class="w"> </span>use Foo\OtherClass;
+<span class="w"> </span>use Foo\SomeContract;
+<span class="w"> </span>use Foo\SomeException;
 
-<span class="w"> </span>class SomeClass
+<span class="w"> </span>/**
+<span class="gd">- * @see \Foo\Bar\Baz</span>
+<span class="gi">+ * @see Baz</span>
+<span class="w"> </span> */
+<span class="gd">-class SomeClass extends \Foo\OtherClass implements \Foo\SomeContract</span>
+<span class="gi">+class SomeClass extends OtherClass implements SomeContract</span>
 <span class="w"> </span>{
-<span class="gd">-    public function doX(\Foo\Bar $foo): \Foo\Bar\Baz</span>
-<span class="gi">+    public function doX(Bar $foo): Baz</span>
-<span class="w"> </span>    {
+<span class="w"> </span>    /**
+<span class="gd">-     * @var \Foo\Bar\Baz</span>
+<span class="gi">+     * @var Baz</span>
+<span class="w"> </span>     */
+<span class="w"> </span>    public $baz;
+
+<span class="w"> </span>    /**
+<span class="gd">-     * @param \Foo\Bar\Baz $baz</span>
+<span class="gi">+     * @param Baz $baz</span>
+<span class="w"> </span>     */
+<span class="w"> </span>    public function __construct($baz) {
+<span class="w"> </span>        $this-&gt;baz = $baz;
 <span class="w"> </span>    }
 
-<span class="gd">-    public function doY(Foo\NotImported $u, \Foo\NotImported $v)</span>
-<span class="gi">+    public function doY(Foo\NotImported $u, Foo\NotImported $v)</span>
+<span class="w"> </span>    /**
+<span class="gd">-     * @return \Foo\Bar\Baz</span>
+<span class="gi">+     * @return Baz</span>
+<span class="w"> </span>     */
+<span class="w"> </span>    public function getBaz() {
+<span class="w"> </span>        return $this-&gt;baz;
+<span class="w"> </span>    }
+
+<span class="gd">-    public function doX(\Foo\Bar $foo, \Exception $e): \Foo\Bar\Baz</span>
+<span class="gi">+    public function doX(Bar $foo, Exception $e): Baz</span>
 <span class="w"> </span>    {
+<span class="w"> </span>        try {}
+<span class="gd">-        catch (\Foo\SomeException $e) {}</span>
+<span class="gi">+        catch (SomeException $e) {}</span>
 <span class="w"> </span>    }
 <span class="w"> </span>}
 </pre></div>
@@ -121,6 +157,67 @@ namespace context.</p>
 </pre></div>
 </div>
 </section>
+<section id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['leading_backslash_in_global_namespace'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>namespace {
+<span class="w"> </span>    use Foo\A;
+<span class="w"> </span>    try {
+<span class="w"> </span>        foo();
+<span class="gd">-    } catch (\Exception|\Foo\A $e) {</span>
+<span class="gi">+    } catch (Exception|A $e) {</span>
+<span class="w"> </span>    }
+<span class="w"> </span>}
+<span class="w"> </span>namespace Foo\Bar {
+<span class="gd">-    class SomeClass implements \Foo\Bar\Baz</span>
+<span class="gi">+    class SomeClass implements Baz</span>
+<span class="w"> </span>    {
+<span class="w"> </span>    }
+<span class="w"> </span>}
+</pre></div>
+</div>
+</section>
+<section id="example-4">
+<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['import_symbols'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+
+<span class="w"> </span>namespace Foo\Test;
+<span class="gi">+use Other\BaseClass;</span>
+<span class="gi">+use Other\CaughtThrowable;</span>
+<span class="gi">+use Other\FunctionArgument;</span>
+<span class="gi">+use Other\FunctionReturnType;</span>
+<span class="gi">+use Other\Interface1;</span>
+<span class="gi">+use Other\Interface2;</span>
+<span class="gi">+use Other\PropertyPhpDoc;</span>
+<span class="gi">+use Other\StaticFunctionCall;</span>
+
+<span class="gd">-class Foo extends \Other\BaseClass implements \Other\Interface1, \Other\Interface2</span>
+<span class="gi">+class Foo extends BaseClass implements Interface1, Interface2</span>
+<span class="w"> </span>{
+<span class="gd">-    /** @var \Other\PropertyPhpDoc */</span>
+<span class="gi">+    /** @var PropertyPhpDoc */</span>
+<span class="w"> </span>    private $array;
+<span class="gd">-    public function __construct(\Other\FunctionArgument $arg) {}</span>
+<span class="gd">-    public function foo(): \Other\FunctionReturnType</span>
+<span class="gi">+    public function __construct(FunctionArgument $arg) {}</span>
+<span class="gi">+    public function foo(): FunctionReturnType</span>
+<span class="w"> </span>    {
+<span class="w"> </span>        try {
+<span class="gd">-            \Other\StaticFunctionCall::bar();</span>
+<span class="gd">-        } catch (\Other\CaughtThrowable $e) {}</span>
+<span class="gi">+            StaticFunctionCall::bar();</span>
+<span class="gi">+        } catch (CaughtThrowable $e) {}</span>
+<span class="w"> </span>    }
+<span class="w"> </span>}
+</pre></div>
+</div>
+</section>
 </section>
 <section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
@@ -132,7 +229,7 @@ namespace context.</p>
 </section>
 <section id="source-class">
 <h2>Source class<a class="headerlink" href="#source-class" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.41.1/src/Fixer/Import/FullyQualifiedStrictTypesFixer.php">PhpCsFixer\Fixer\Import\FullyQualifiedStrictTypesFixer</a></p>
+<p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.42.0/src/Fixer/Import/FullyQualifiedStrictTypesFixer.php">PhpCsFixer\Fixer\Import\FullyQualifiedStrictTypesFixer</a></p>
 </section>
 </section>
 

@@ -12,7 +12,7 @@
     <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
-      <title>Rule linebreak_after_opening_tag - PHP Coding Standards Fixer</title>
+      <title>Rule class_keyword - PHP Coding Standards Fixer</title>
 
     <script>
       var _gaq = _gaq || [];
@@ -63,34 +63,43 @@
           </div>
           <div class="more_intro">
             
-  <section id="rule-linebreak-after-opening-tag">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">linebreak_after_opening_tag</span></code><a class="headerlink" href="#rule-linebreak-after-opening-tag" title="Permalink to this headline">¶</a></h1>
-<p>Ensure there is no code on the same line as the PHP open tag.</p>
+  <section id="rule-class-keyword">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">class_keyword</span></code><a class="headerlink" href="#rule-class-keyword" title="Permalink to this headline">¶</a></h1>
+<p>EXPERIMENTAL: Converts FQCN strings to <code class="docutils literal notranslate"><span class="pre">*::class</span></code> keywords. Do not use it,
+unless you know what you are doing.</p>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>This rule does not have an understanding of whether a class exists in the scope
+of the codebase or not, relying on run-time and autoloaded classes to determine
+it, which makes the rule useless when running on a single file out of codebase
+context.</p>
+</section>
+<section id="warning">
+<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
+<section id="using-this-rule-is-risky">
+<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
+<p>Risky as EXPERIMENTAL.</p>
+</section>
+</section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
-<span class="gd">-&lt;?php $a = 1;</span>
-<span class="gi">+&lt;?php</span>
-<span class="gi">+$a = 1;</span>
-<span class="w"> </span>$b = 3;
+<span class="w"> </span>&lt;?php
+
+<span class="gd">-$foo = &#39;PhpCsFixer\Tokenizer\Tokens&#39;;</span>
+<span class="gd">-$bar = &quot;\PhpCsFixer\Tokenizer\Tokens&quot;;</span>
+<span class="gi">+$foo = \PhpCsFixer\Tokenizer\Tokens::class;</span>
+<span class="gi">+$bar = \PhpCsFixer\Tokenizer\Tokens::class;</span>
 </pre></div>
 </div>
 </section>
 </section>
-<section id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
-<p>The rule is part of the following rule sets:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
-</ul>
-</section>
 <section id="source-class">
 <h2>Source class<a class="headerlink" href="#source-class" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.42.0/src/Fixer/PhpTag/LinebreakAfterOpeningTagFixer.php">PhpCsFixer\Fixer\PhpTag\LinebreakAfterOpeningTagFixer</a></p>
+<p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.42.0/src/Fixer/LanguageConstruct/ClassKeywordFixer.php">PhpCsFixer\Fixer\LanguageConstruct\ClassKeywordFixer</a></p>
 </section>
 </section>
 
