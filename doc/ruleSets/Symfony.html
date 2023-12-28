@@ -40,7 +40,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Three Keys (v3.42.0)</strong> edition
+                <strong>Three Keys (v3.43.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -69,7 +69,7 @@
 <section id="rules">
 <h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p><a class="reference internal" href="PSR12.html"><span class="doc">&#64;PSR12</span></a></p></li>
+<li><p><a class="reference internal" href="PER-CS2.0.html"><span class="doc">&#64;PER-CS2.0</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/phpdoc/align_multiline_comment.html"><span class="doc">align_multiline_comment</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/array_notation/array_syntax.html"><span class="doc">array_syntax</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/alias/backtick_to_shell_exec.html"><span class="doc">backtick_to_shell_exec</span></a></p></li>
@@ -80,7 +80,6 @@
 <li><p><a class="reference internal" href="../rules/basic/braces_position.html"><span class="doc">braces_position</span></a> with config:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['allow_single_line_anonymous_functions'</span> <span class="pre">=&gt;</span> <span class="pre">true,</span> <span class="pre">'allow_single_line_empty_anonymous_classes'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
 </li>
-<li><p><a class="reference internal" href="../rules/cast_notation/cast_spaces.html"><span class="doc">cast_spaces</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/class_notation/class_attributes_separation.html"><span class="doc">class_attributes_separation</span></a> with config:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['elements'</span> <span class="pre">=&gt;</span> <span class="pre">['method'</span> <span class="pre">=&gt;</span> <span class="pre">'one']]</span></code></p>
 </li>
@@ -97,6 +96,7 @@
 </li>
 <li><p><a class="reference internal" href="../rules/control_structure/empty_loop_condition.html"><span class="doc">empty_loop_condition</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/import/fully_qualified_strict_types.html"><span class="doc">fully_qualified_strict_types</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/function_notation/function_declaration.html"><span class="doc">function_declaration</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/phpdoc/general_phpdoc_tag_rename.html"><span class="doc">general_phpdoc_tag_rename</span></a> with config:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['replacements'</span> <span class="pre">=&gt;</span> <span class="pre">['inheritDocs'</span> <span class="pre">=&gt;</span> <span class="pre">'inheritDoc']]</span></code></p>
 </li>
@@ -206,13 +206,23 @@
 </li>
 <li><p><a class="reference internal" href="../rules/operator/standardize_increment.html"><span class="doc">standardize_increment</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/operator/standardize_not_equals.html"><span class="doc">standardize_not_equals</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/whitespace/statement_indentation.html"><span class="doc">statement_indentation</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['stick_comment_to_next_continuous_control_statement'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
+</li>
 <li><p><a class="reference internal" href="../rules/control_structure/switch_continue_to_break.html"><span class="doc">switch_continue_to_break</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/control_structure/trailing_comma_in_multiline.html"><span class="doc">trailing_comma_in_multiline</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/array_notation/trim_array_spaces.html"><span class="doc">trim_array_spaces</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/whitespace/type_declaration_spaces.html"><span class="doc">type_declaration_spaces</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/whitespace/types_spaces.html"><span class="doc">types_spaces</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/operator/unary_operator_spaces.html"><span class="doc">unary_operator_spaces</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/array_notation/whitespace_after_comma_in_array.html"><span class="doc">whitespace_after_comma_in_array</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/control_structure/yoda_style.html"><span class="doc">yoda_style</span></a></p></li>
+</ul>
+</section>
+<section id="disabled-rules">
+<h2>Disabled rules<a class="headerlink" href="#disabled-rules" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../rules/basic/single_line_empty_body.html"><span class="doc">single_line_empty_body</span></a></p></li>
 </ul>
 </section>
 </section>

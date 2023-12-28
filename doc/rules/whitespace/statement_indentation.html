@@ -40,7 +40,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Three Keys (v3.42.0)</strong> edition
+                <strong>Three Keys (v3.43.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -66,10 +66,20 @@
   <section id="rule-statement-indentation">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">statement_indentation</span></code><a class="headerlink" href="#rule-statement-indentation" title="Permalink to this headline">¶</a></h1>
 <p>Each statement must be indented.</p>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<section id="stick-comment-to-next-continuous-control-statement">
+<h3><code class="docutils literal notranslate"><span class="pre">stick_comment_to_next_continuous_control_statement</span></code><a class="headerlink" href="#stick-comment-to-next-continuous-control-statement" title="Permalink to this headline">¶</a></h3>
+<p>Last comment of code block counts as comment for next block.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</section>
+</section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
@@ -84,24 +94,71 @@
 </pre></div>
 </div>
 </section>
+<section id="example-2">
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['stick_comment_to_next_continuous_control_statement'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-        // foo</span>
+<span class="gi">+// foo</span>
+<span class="w"> </span>if ($foo) {
+<span class="w"> </span>    echo &quot;foo&quot;;
+<span class="gd">-        // this is treated as comment of `if` block, as `stick_comment_to_next_continuous_control_statement` is disabled</span>
+<span class="gi">+    // this is treated as comment of `if` block, as `stick_comment_to_next_continuous_control_statement` is disabled</span>
+<span class="w"> </span>} else {
+<span class="w"> </span>    $aaa = 1;
+<span class="w"> </span>}
+</pre></div>
+</div>
+</section>
+<section id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['stick_comment_to_next_continuous_control_statement'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-        // foo</span>
+<span class="gi">+// foo</span>
+<span class="w"> </span>if ($foo) {
+<span class="w"> </span>    echo &quot;foo&quot;;
+<span class="gd">-        // this is treated as comment of `elseif(1)` block, as `stick_comment_to_next_continuous_control_statement` is enabled</span>
+<span class="gi">+// this is treated as comment of `elseif(1)` block, as `stick_comment_to_next_continuous_control_statement` is enabled</span>
+<span class="w"> </span>} elseif(1) {
+<span class="w"> </span>    echo &quot;bar&quot;;
+<span class="w"> </span>} elseif(2) {
+<span class="gd">-        // this is treated as comment of `elseif(2)` block, as the only content of that block</span>
+<span class="gi">+    // this is treated as comment of `elseif(2)` block, as the only content of that block</span>
+<span class="w"> </span>} elseif(3) {
+<span class="w"> </span>    $aaa = 1;
+<span class="gd">-        // this is treated as comment of `elseif(3)` block, as it is a comment in the final block</span>
+<span class="gi">+    // this is treated as comment of `elseif(3)` block, as it is a comment in the final block</span>
+<span class="w"> </span>}
+</pre></div>
+</div>
+</section>
 </section>
 <section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
-<ul class="simple">
+<ul>
 <li><p><a class="reference internal" href="../../ruleSets/PER.html"><span class="doc">&#64;PER</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/PER-CS.html"><span class="doc">&#64;PER-CS</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/PER-CS2.0.html"><span class="doc">&#64;PER-CS2.0</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['stick_comment_to_next_continuous_control_statement'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
+</li>
+<li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['stick_comment_to_next_continuous_control_statement'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
+</li>
 </ul>
 </section>
 <section id="source-class">
 <h2>Source class<a class="headerlink" href="#source-class" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.42.0/src/Fixer/Whitespace/StatementIndentationFixer.php">PhpCsFixer\Fixer\Whitespace\StatementIndentationFixer</a></p>
+<p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.43.0/src/Fixer/Whitespace/StatementIndentationFixer.php">PhpCsFixer\Fixer\Whitespace\StatementIndentationFixer</a></p>
 </section>
 </section>
 
