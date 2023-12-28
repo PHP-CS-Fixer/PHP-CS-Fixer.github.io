@@ -75,6 +75,6 @@ The PHP CS Fixer is maintained on GitHub at
 https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.
 Bug reports and ideas about new features are welcome there.
 
-You can reach us at https://gitter.im/PHP-CS-Fixer/Lobby about the
+You can reach us at https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/discussions about the
 project, configuration, possible improvements, ideas and questions, please
 visit us!
