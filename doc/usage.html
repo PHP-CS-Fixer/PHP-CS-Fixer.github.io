@@ -40,7 +40,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Three Keys (v3.43.1)</strong> edition
+                <strong>Three Keys (v3.44.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -102,7 +102,7 @@ which will use the intersection of the paths from the config file and from the a
 <li><p><code class="docutils literal notranslate"><span class="pre">xml</span></code> follows the <a class="reference external" href="/doc/schemas/fix/xml.xsd">own XML schema</a></p></li>
 </ul>
 <p>The <code class="docutils literal notranslate"><span class="pre">--quiet</span></code> Do not output any message.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">--verbose</span></code> option will show the applied rules. When using the <code class="docutils literal notranslate"><span class="pre">txt</span></code> format it will also display progress notifications.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">--verbose</span></code> option will show the applied rules. When using the <code class="docutils literal notranslate"><span class="pre">txt</span></code> format it will also display progress output (progress bar by default, but can be changed using <code class="docutils literal notranslate"><span class="pre">--show-progress</span></code> option).</p>
 <p>NOTE: if there is an error like “errors reported during linting after fixing”, you can use this to be even more verbose for debugging purpose</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">-v</span></code>: verbose</p></li>
@@ -141,8 +141,9 @@ A rule is considered risky if it could change code behaviour. By default no risk
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">none</span></code>: disables progress output;</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dots</span></code>: multiline progress output with number of files and percentage on each line. Note that with this option, the files list is evaluated before processing to get the total number of files and then kept in memory to avoid using the file iterator twice. This has an impact on memory usage so using this option is not recommended on very large projects;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bar</span></code>: single line progress output with number of files and calculated percentage. Similar to <code class="docutils literal notranslate"><span class="pre">dots</span></code> output, it has to evaluate files list twice;</p></li>
 </ul>
-<p>If the option is not provided, it defaults to <code class="docutils literal notranslate"><span class="pre">dots</span></code> unless a config file that disables output is used, in which case it defaults to <code class="docutils literal notranslate"><span class="pre">none</span></code>. This option has no effect if the verbosity of the command is less than <code class="docutils literal notranslate"><span class="pre">verbose</span></code>.</p>
+<p>If the option is not provided, it defaults to <code class="docutils literal notranslate"><span class="pre">bar</span></code> unless a config file that disables output, or non-txt reporter is used, then it defaults to <code class="docutils literal notranslate"><span class="pre">none</span></code>.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix --verbose --show-progress=dots</span>
 </pre></div>
 </div>
