@@ -40,7 +40,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Three Keys (v3.45.0)</strong> edition
+                <strong>Three Keys (v3.46.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -66,9 +66,7 @@
   <section id="rule-fully-qualified-strict-types">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">fully_qualified_strict_types</span></code><a class="headerlink" href="#rule-fully-qualified-strict-types" title="Permalink to this headline">¶</a></h1>
 <p>Removes the leading part of fully qualified symbol references if a given symbol
-is imported or belongs to the current namespace. Fixes function arguments,
-exceptions in <code class="docutils literal notranslate"><span class="pre">catch</span></code> block, <code class="docutils literal notranslate"><span class="pre">extend</span></code> and <code class="docutils literal notranslate"><span class="pre">implements</span></code> of classes and
-interfaces.</p>
+is imported or belongs to the current namespace.</p>
 <section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <section id="import-symbols">
@@ -175,7 +173,7 @@ only simple tags with <code class="docutils literal notranslate"><span class="pr
 <span class="w"> </span>    try {
 <span class="w"> </span>        foo();
 <span class="gd">-    } catch (\Exception|\Foo\A $e) {</span>
-<span class="gi">+    } catch (Exception|A $e) {</span>
+<span class="gi">+    } catch (\Exception|A $e) {</span>
 <span class="w"> </span>    }
 <span class="w"> </span>}
 <span class="w"> </span>namespace Foo\Bar {
@@ -236,9 +234,13 @@ only simple tags with <code class="docutils literal notranslate"><span class="pr
 <li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
 </ul>
 </section>
-<section id="source-class">
-<h2>Source class<a class="headerlink" href="#source-class" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.45.0/src/Fixer/Import/FullyQualifiedStrictTypesFixer.php">PhpCsFixer\Fixer\Import\FullyQualifiedStrictTypesFixer</a></p>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.46.0/src/Fixer/Import/FullyQualifiedStrictTypesFixer.php">PhpCsFixer\Fixer\Import\FullyQualifiedStrictTypesFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/Import/FullyQualifiedStrictTypesFixerTest.php">PhpCsFixer\Tests\Fixer\Import\FullyQualifiedStrictTypesFixerTest</a></p></li>
+</ul>
+<p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
 </section>
 
