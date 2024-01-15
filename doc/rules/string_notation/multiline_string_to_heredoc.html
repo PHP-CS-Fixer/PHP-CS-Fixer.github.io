@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="PHP Coding Standards Fixer">
+    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+
+    <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css">
+    <link href="../../../_static/css/base.css" rel="stylesheet" type="text/css">
+    <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css">
+    <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css">
+    <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+      <title>Rule multiline_string_to_heredoc - PHP Coding Standards Fixer</title>
+
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-32006827-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script> 
+  </head>
+  <body>
+      <header class="hd">
+        <div class="illustration png_fix">
+          <a href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer" class="github-ribbon">Fork me on GitHub</a>
+          <div class="content">
+            <div class="sensio_product">
+              <img class="png_fix" src="../../../_static/images/sensio-labs-product.png" alt="a Sensio Labs Product" />
+            </div>
+            <div class="clearfix">
+              <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
+              <h1 class="title_header">
+                <strong>Big Changes (v3.47.0)</strong> edition
+              </h1>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+      <main class="bd">
+        <div class="content">
+          <div class="links_intro">
+            <ul>
+              <li>
+                <a href="./download/php-cs-fixer-v3.phar" class="download-button">
+                  Install now
+                  <svg viewBox="0 0 24 24">
+                    <path d="M13 3h-2v14.3l-4.7-4.6L5 14l5.7 5.6 1.4 1.4 1.4-1.4 5.7-5.6-1.4-1.4-4.7 4.6V3Z"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="more_intro">
+            
+  <section id="rule-multiline-string-to-heredoc">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">multiline_string_to_heredoc</span></code><a class="headerlink" href="#rule-multiline-string-to-heredoc" title="Permalink to this headline">¶</a></h1>
+<p>Convert multiline string to <code class="docutils literal notranslate"><span class="pre">heredoc</span></code> or <code class="docutils literal notranslate"><span class="pre">nowdoc</span></code>.</p>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<section id="example-1">
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$a = &#39;line1</span>
+<span class="gd">-line2&#39;;</span>
+<span class="gi">+$a = &lt;&lt;&lt;&#39;EOD&#39;</span>
+<span class="gi">+line1</span>
+<span class="gi">+line2</span>
+<span class="gi">+EOD;</span>
+</pre></div>
+</div>
+</section>
+<section id="example-2">
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$a = &quot;line1</span>
+<span class="gd">-{$obj-&gt;getName()}&quot;;</span>
+<span class="gi">+$a = &lt;&lt;&lt;EOD</span>
+<span class="gi">+line1</span>
+<span class="gi">+{$obj-&gt;getName()}</span>
+<span class="gi">+EOD;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/StringNotation/MultilineStringToHeredocFixer.php">PhpCsFixer\Fixer\StringNotation\MultilineStringToHeredocFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/StringNotation/MultilineStringToHeredocFixerTest.php">PhpCsFixer\Tests\Fixer\StringNotation\MultilineStringToHeredocFixerTest</a></p></li>
+</ul>
+<p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </main>
+      <footer class="ft">
+        <div class="content">
+          The <a href="../../../_static/images/logo.png">logo</a> is &copy; 2010+ Sensio Labs
+        </div>
+      </footer>
+  </body>
+</html>

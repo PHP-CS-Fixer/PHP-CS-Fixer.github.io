@@ -40,7 +40,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Three Keys (v3.46.0)</strong> edition
+                <strong>Big Changes (v3.47.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -166,6 +166,9 @@
 </li>
 <li><p><a class="reference internal" href="basic/non_printable_character.html"><span class="doc">non_printable_character</span></a> <em>(risky)</em></p>
 <p>Remove Zero-width space (ZWSP), Non-breaking space (NBSP) and other invisible unicode symbols.</p>
+</li>
+<li><p><a class="reference internal" href="basic/numeric_literal_separator.html"><span class="doc">numeric_literal_separator</span></a></p>
+<p>Adds separators to numeric literals of any kind.</p>
 </li>
 <li><p><a class="reference internal" href="basic/octal_notation.html"><span class="doc">octal_notation</span></a></p>
 <p>Literal octal must be in <code class="docutils literal notranslate"><span class="pre">0o</span></code> notation.</p>
@@ -473,14 +476,14 @@
 <li><p><a class="reference internal" href="function_notation/nullable_type_declaration_for_default_null_value.html"><span class="doc">nullable_type_declaration_for_default_null_value</span></a></p>
 <p>Adds or removes <code class="docutils literal notranslate"><span class="pre">?</span></code> before single type declarations or <code class="docutils literal notranslate"><span class="pre">|null</span></code> at the end of union types when parameters have a default <code class="docutils literal notranslate"><span class="pre">null</span></code> value.</p>
 </li>
-<li><p><a class="reference internal" href="function_notation/phpdoc_to_param_type.html"><span class="doc">phpdoc_to_param_type</span></a> <em>(risky)</em></p>
-<p>EXPERIMENTAL: Takes <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> annotations of non-mixed types and adjusts accordingly the function signature. Requires PHP &gt;= 7.0.</p>
+<li><p><a class="reference internal" href="function_notation/phpdoc_to_param_type.html"><span class="doc">phpdoc_to_param_type</span></a> <em>(experimental, risky)</em></p>
+<p>Takes <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> annotations of non-mixed types and adjusts accordingly the function signature. Requires PHP &gt;= 7.0.</p>
 </li>
-<li><p><a class="reference internal" href="function_notation/phpdoc_to_property_type.html"><span class="doc">phpdoc_to_property_type</span></a> <em>(risky)</em></p>
-<p>EXPERIMENTAL: Takes <code class="docutils literal notranslate"><span class="pre">&#64;var</span></code> annotation of non-mixed types and adjusts accordingly the property signature. Requires PHP &gt;= 7.4.</p>
+<li><p><a class="reference internal" href="function_notation/phpdoc_to_property_type.html"><span class="doc">phpdoc_to_property_type</span></a> <em>(experimental, risky)</em></p>
+<p>Takes <code class="docutils literal notranslate"><span class="pre">&#64;var</span></code> annotation of non-mixed types and adjusts accordingly the property signature. Requires PHP &gt;= 7.4.</p>
 </li>
-<li><p><a class="reference internal" href="function_notation/phpdoc_to_return_type.html"><span class="doc">phpdoc_to_return_type</span></a> <em>(risky)</em></p>
-<p>EXPERIMENTAL: Takes <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> annotation of non-mixed types and adjusts accordingly the function signature.</p>
+<li><p><a class="reference internal" href="function_notation/phpdoc_to_return_type.html"><span class="doc">phpdoc_to_return_type</span></a> <em>(experimental, risky)</em></p>
+<p>Takes <code class="docutils literal notranslate"><span class="pre">&#64;return</span></code> annotation of non-mixed types and adjusts accordingly the function signature.</p>
 </li>
 <li><p><a class="reference internal" href="function_notation/regular_callable_call.html"><span class="doc">regular_callable_call</span></a> <em>(risky)</em></p>
 <p>Callables must be called without using <code class="docutils literal notranslate"><span class="pre">call_user_func*</span></code> when possible.</p>
@@ -537,8 +540,8 @@
 <section id="language-construct">
 <h2>Language Construct<a class="headerlink" href="#language-construct" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p><a class="reference internal" href="language_construct/class_keyword.html"><span class="doc">class_keyword</span></a> <em>(risky)</em></p>
-<p>EXPERIMENTAL: Converts FQCN strings to <code class="docutils literal notranslate"><span class="pre">*::class</span></code> keywords. Do not use it, unless you know what you are doing.</p>
+<li><p><a class="reference internal" href="language_construct/class_keyword.html"><span class="doc">class_keyword</span></a> <em>(experimental, risky)</em></p>
+<p>Converts FQCN strings to <code class="docutils literal notranslate"><span class="pre">*::class</span></code> keywords.</p>
 </li>
 <li><p><a class="reference internal" href="language_construct/class_keyword_remove.html"><span class="doc">class_keyword_remove</span></a> <em>(deprecated)</em></p>
 <p>Converts <code class="docutils literal notranslate"><span class="pre">::class</span></code> keywords to FQCN strings.</p>
@@ -943,8 +946,14 @@
 <li><p><a class="reference internal" href="string_notation/explicit_string_variable.html"><span class="doc">explicit_string_variable</span></a></p>
 <p>Converts implicit variables into explicit ones in double-quoted strings or heredoc syntax.</p>
 </li>
+<li><p><a class="reference internal" href="string_notation/heredoc_closing_marker.html"><span class="doc">heredoc_closing_marker</span></a></p>
+<p>Unify <code class="docutils literal notranslate"><span class="pre">heredoc</span></code> or <code class="docutils literal notranslate"><span class="pre">nowdoc</span></code> closing marker.</p>
+</li>
 <li><p><a class="reference internal" href="string_notation/heredoc_to_nowdoc.html"><span class="doc">heredoc_to_nowdoc</span></a></p>
 <p>Convert <code class="docutils literal notranslate"><span class="pre">heredoc</span></code> to <code class="docutils literal notranslate"><span class="pre">nowdoc</span></code> where possible.</p>
+</li>
+<li><p><a class="reference internal" href="string_notation/multiline_string_to_heredoc.html"><span class="doc">multiline_string_to_heredoc</span></a></p>
+<p>Convert multiline string to <code class="docutils literal notranslate"><span class="pre">heredoc</span></code> or <code class="docutils literal notranslate"><span class="pre">nowdoc</span></code>.</p>
 </li>
 <li><p><a class="reference internal" href="string_notation/no_binary_string.html"><span class="doc">no_binary_string</span></a></p>
 <p>There should not be a binary flag before strings.</p>

@@ -40,7 +40,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Three Keys (v3.46.0)</strong> edition
+                <strong>Big Changes (v3.47.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -118,6 +118,16 @@ your system:</p>
 <h3>Locally (PHIVE)<a class="headerlink" href="#locally-phive" title="Permalink to this headline">¶</a></h3>
 <p>Install <a class="reference external" href="https://phar.io">PHIVE</a> and issue the following command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">phive install php-cs-fixer # use `--global` for global install</span>
+</pre></div>
+</div>
+</section>
+<section id="gitlab-ci-docker">
+<h3>Gitlab-CI (Docker)<a class="headerlink" href="#gitlab-ci-docker" title="Permalink to this headline">¶</a></h3>
+<p>To integrate php-cs-fixer as check into Gitlab-CI, you can use a configuration like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">php-cs-fixer</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/php-cs-fixer/php-cs-fixer:${FIXER_VERSION:-3-php8.3}</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">php-cs-fixer check --diff --format=txt src</span>
 </pre></div>
 </div>
 </section>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="PHP Coding Standards Fixer">
+    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+
+    <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css">
+    <link href="../../../_static/css/base.css" rel="stylesheet" type="text/css">
+    <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css">
+    <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css">
+    <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+      <title>Rule numeric_literal_separator - PHP Coding Standards Fixer</title>
+
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-32006827-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script> 
+  </head>
+  <body>
+      <header class="hd">
+        <div class="illustration png_fix">
+          <a href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer" class="github-ribbon">Fork me on GitHub</a>
+          <div class="content">
+            <div class="sensio_product">
+              <img class="png_fix" src="../../../_static/images/sensio-labs-product.png" alt="a Sensio Labs Product" />
+            </div>
+            <div class="clearfix">
+              <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
+              <h1 class="title_header">
+                <strong>Big Changes (v3.47.0)</strong> edition
+              </h1>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+      <main class="bd">
+        <div class="content">
+          <div class="links_intro">
+            <ul>
+              <li>
+                <a href="./download/php-cs-fixer-v3.phar" class="download-button">
+                  Install now
+                  <svg viewBox="0 0 24 24">
+                    <path d="M13 3h-2v14.3l-4.7-4.6L5 14l5.7 5.6 1.4 1.4 1.4-1.4 5.7-5.6-1.4-1.4-4.7 4.6V3Z"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="more_intro">
+            
+  <section id="rule-numeric-literal-separator">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">numeric_literal_separator</span></code><a class="headerlink" href="#rule-numeric-literal-separator" title="Permalink to this headline">¶</a></h1>
+<p>Adds separators to numeric literals of any kind.</p>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<section id="override-existing">
+<h3><code class="docutils literal notranslate"><span class="pre">override_existing</span></code><a class="headerlink" href="#override-existing" title="Permalink to this headline">¶</a></h3>
+<p>Whether literals already containing underscores should be reformatted.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</section>
+<section id="strategy">
+<h3><code class="docutils literal notranslate"><span class="pre">strategy</span></code><a class="headerlink" href="#strategy" title="Permalink to this headline">¶</a></h3>
+<p>Whether numeric literal should be separated by underscores or not.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'no_separator'</span></code> and <code class="docutils literal notranslate"><span class="pre">'use_separator'</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'use_separator'</span></code></p>
+</section>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<section id="example-1">
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p><em>Default</em> configuration.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$integer = 1234567890;</span>
+<span class="gi">+$integer = 1_234_567_890;</span>
+</pre></div>
+</div>
+</section>
+<section id="example-2">
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['strategy'</span> <span class="pre">=&gt;</span> <span class="pre">'no_separator']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$integer = 1234_5678;</span>
+<span class="gd">-$octal = 01_234_56;</span>
+<span class="gd">-$binary = 0b00_10_01_00;</span>
+<span class="gd">-$hexadecimal = 0x3D45_8F4F;</span>
+<span class="gi">+$integer = 12345678;</span>
+<span class="gi">+$octal = 0123456;</span>
+<span class="gi">+$binary = 0b00100100;</span>
+<span class="gi">+$hexadecimal = 0x3D458F4F;</span>
+</pre></div>
+</div>
+</section>
+<section id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['strategy'</span> <span class="pre">=&gt;</span> <span class="pre">'use_separator']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-$integer = 12345678;</span>
+<span class="gd">-$octal = 0123456;</span>
+<span class="gd">-$binary = 0b0010010011011010;</span>
+<span class="gd">-$hexadecimal = 0x3D458F4F;</span>
+<span class="gi">+$integer = 12_345_678;</span>
+<span class="gi">+$octal = 0123_456;</span>
+<span class="gi">+$binary = 0b00100100_11011010;</span>
+<span class="gi">+$hexadecimal = 0x3D_45_8F_4F;</span>
+</pre></div>
+</div>
+</section>
+<section id="example-4">
+<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['override_existing'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="gd">-&lt;?php $var = 24_40_21;</span>
+<span class="gi">+&lt;?php $var = 244_021;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/Basic/NumericLiteralSeparatorFixer.php">PhpCsFixer\Fixer\Basic\NumericLiteralSeparatorFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/Basic/NumericLiteralSeparatorFixerTest.php">PhpCsFixer\Tests\Fixer\Basic\NumericLiteralSeparatorFixerTest</a></p></li>
+</ul>
+<p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </main>
+      <footer class="ft">
+        <div class="content">
+          The <a href="../../../_static/images/logo.png">logo</a> is &copy; 2010+ Sensio Labs
+        </div>
+      </footer>
+  </body>
+</html>

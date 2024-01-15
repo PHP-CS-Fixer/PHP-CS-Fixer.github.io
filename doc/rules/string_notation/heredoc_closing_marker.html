@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="PHP Coding Standards Fixer">
+    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+
+    <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css">
+    <link href="../../../_static/css/base.css" rel="stylesheet" type="text/css">
+    <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css">
+    <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css">
+    <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+      <title>Rule heredoc_closing_marker - PHP Coding Standards Fixer</title>
+
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-32006827-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script> 
+  </head>
+  <body>
+      <header class="hd">
+        <div class="illustration png_fix">
+          <a href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer" class="github-ribbon">Fork me on GitHub</a>
+          <div class="content">
+            <div class="sensio_product">
+              <img class="png_fix" src="../../../_static/images/sensio-labs-product.png" alt="a Sensio Labs Product" />
+            </div>
+            <div class="clearfix">
+              <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
+              <h1 class="title_header">
+                <strong>Big Changes (v3.47.0)</strong> edition
+              </h1>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+      <main class="bd">
+        <div class="content">
+          <div class="links_intro">
+            <ul>
+              <li>
+                <a href="./download/php-cs-fixer-v3.phar" class="download-button">
+                  Install now
+                  <svg viewBox="0 0 24 24">
+                    <path d="M13 3h-2v14.3l-4.7-4.6L5 14l5.7 5.6 1.4 1.4 1.4-1.4 5.7-5.6-1.4-1.4-4.7 4.6V3Z"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="more_intro">
+            
+  <section id="rule-heredoc-closing-marker">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">heredoc_closing_marker</span></code><a class="headerlink" href="#rule-heredoc-closing-marker" title="Permalink to this headline">¶</a></h1>
+<p>Unify <code class="docutils literal notranslate"><span class="pre">heredoc</span></code> or <code class="docutils literal notranslate"><span class="pre">nowdoc</span></code> closing marker.</p>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<section id="closing-marker">
+<h3><code class="docutils literal notranslate"><span class="pre">closing_marker</span></code><a class="headerlink" href="#closing-marker" title="Permalink to this headline">¶</a></h3>
+<p>Preferred closing marker.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">string</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'EOD'</span></code></p>
+</section>
+<section id="explicit-heredoc-style">
+<h3><code class="docutils literal notranslate"><span class="pre">explicit_heredoc_style</span></code><a class="headerlink" href="#explicit-heredoc-style" title="Permalink to this headline">¶</a></h3>
+<p>Whether the closing marker should be wrapped in double quotes.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</section>
+<section id="reserved-closing-markers">
+<h3><code class="docutils literal notranslate"><span class="pre">reserved_closing_markers</span></code><a class="headerlink" href="#reserved-closing-markers" title="Permalink to this headline">¶</a></h3>
+<p>Reserved closing markers to be kept unchanged.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">['CSS',</span> <span class="pre">'DIFF',</span> <span class="pre">'HTML',</span> <span class="pre">'JS',</span> <span class="pre">'JSON',</span> <span class="pre">'MD',</span> <span class="pre">'PHP',</span> <span class="pre">'PYTHON',</span> <span class="pre">'RST',</span> <span class="pre">'TS',</span> <span class="pre">'SQL',</span> <span class="pre">'XML',</span> <span class="pre">'YAML']</span></code></p>
+</section>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<section id="example-1">
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p><em>Default</em> configuration.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="gd">-&lt;?php $a = &lt;&lt;&lt;&quot;TEST&quot;</span>
+<span class="gi">+&lt;?php $a = &lt;&lt;&lt;EOD</span>
+<span class="w"> </span>Foo
+<span class="gd">-TEST;</span>
+<span class="gi">+EOD;</span>
+</pre></div>
+</div>
+</section>
+<section id="example-2">
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['closing_marker'</span> <span class="pre">=&gt;</span> <span class="pre">'EOF']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="gd">-&lt;?php $a = &lt;&lt;&lt;&#39;TEST&#39;</span>
+<span class="gi">+&lt;?php $a = &lt;&lt;&lt;&#39;EOF&#39;</span>
+<span class="w"> </span>Foo
+<span class="gd">-TEST;</span>
+<span class="gi">+EOF;</span>
+</pre></div>
+</div>
+</section>
+<section id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['explicit_heredoc_style'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="gd">-&lt;?php $a = &lt;&lt;&lt;EOD</span>
+<span class="gi">+&lt;?php $a = &lt;&lt;&lt;&quot;EOD&quot;</span>
+<span class="w"> </span>Foo
+<span class="w"> </span>EOD;
+</pre></div>
+</div>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/StringNotation/HeredocClosingMarkerFixer.php">PhpCsFixer\Fixer\StringNotation\HeredocClosingMarkerFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/StringNotation/HeredocClosingMarkerFixerTest.php">PhpCsFixer\Tests\Fixer\StringNotation\HeredocClosingMarkerFixerTest</a></p></li>
+</ul>
+<p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </main>
+      <footer class="ft">
+        <div class="content">
+          The <a href="../../../_static/images/logo.png">logo</a> is &copy; 2010+ Sensio Labs
+        </div>
+      </footer>
+  </body>
+</html>
