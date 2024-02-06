@@ -99,6 +99,17 @@ the <code class="docutils literal notranslate"><span class="pre">tools/php-cs-fi
 </div>
 <p>For more details and other installation methods, see <a class="reference internal" href="doc/installation.html"><span class="doc">installation instructions</span></a>.</p>
 </section>
+<section id="run-with-docker">
+<h3>Run with Docker<a class="headerlink" href="#run-with-docker" title="Permalink to this heading">¶</a></h3>
+<p>PHP CS Fixer can be run in a Docker container.</p>
+<p>You can use pre-built Docker images to run <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">$FIXER_VERSION</span></code> used in example above is an identifier of a release you want to use, which is based on Fixer and PHP versions combined. There are different tags for each Fixer’s SemVer level and PHP version with syntax <code class="docutils literal notranslate"><span class="pre">&lt;php-cs-fixer-version&gt;-php&lt;php-version&gt;</span></code>. For example:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">3.47.0-php7.4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3.47-php8.0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3-php8.3</span></code></p></li>
+</ul>
+</section>
 <section id="usage">
 <h3>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h3>
 <p>Assuming you installed PHP CS Fixer as instructed above, you can run
