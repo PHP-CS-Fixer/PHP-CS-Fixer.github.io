@@ -12,6 +12,8 @@
     <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../../../_static/" type="text/css">
       <title>Rule ordered_class_elements - PHP Coding Standards Fixer</title>
 
     <script>
@@ -40,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Big Changes (v3.47.0)</strong> edition
+                <strong>Insomnia (v3.49.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,10 +66,10 @@
           <div class="more_intro">
             
   <section id="rule-ordered-class-elements">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">ordered_class_elements</span></code><a class="headerlink" href="#rule-ordered-class-elements" title="Permalink to this headline">¶</a></h1>
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">ordered_class_elements</span></code><a class="headerlink" href="#rule-ordered-class-elements" title="Permalink to this heading">¶</a></h1>
 <p>Orders the elements of classes/interfaces/traits/enums.</p>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
 <p>Accepts a subset of pre-defined element types, special element groups, and
 custom patterns.</p>
 <p>Element types: <code class="docutils literal notranslate"><span class="pre">['use_trait',</span> <span class="pre">'public',</span> <span class="pre">'protected',</span> <span class="pre">'private',</span> <span class="pre">'case',</span>
@@ -89,30 +91,30 @@ custom patterns.</p>
 <p>the order of that specific method.</p>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
 <section id="case-sensitive">
-<h3><code class="docutils literal notranslate"><span class="pre">case_sensitive</span></code><a class="headerlink" href="#case-sensitive" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">case_sensitive</span></code><a class="headerlink" href="#case-sensitive" title="Permalink to this heading">¶</a></h3>
 <p>Whether the sorting should be case sensitive.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </section>
 <section id="order">
-<h3><code class="docutils literal notranslate"><span class="pre">order</span></code><a class="headerlink" href="#order" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">order</span></code><a class="headerlink" href="#order" title="Permalink to this heading">¶</a></h3>
 <p>List of strings defining order of elements.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['use_trait',</span> <span class="pre">'case',</span> <span class="pre">'constant_public',</span> <span class="pre">'constant_protected',</span> <span class="pre">'constant_private',</span> <span class="pre">'property_public',</span> <span class="pre">'property_protected',</span> <span class="pre">'property_private',</span> <span class="pre">'construct',</span> <span class="pre">'destruct',</span> <span class="pre">'magic',</span> <span class="pre">'phpunit',</span> <span class="pre">'method_public',</span> <span class="pre">'method_protected',</span> <span class="pre">'method_private']</span></code></p>
 </section>
 <section id="sort-algorithm">
-<h3><code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code><a class="headerlink" href="#sort-algorithm" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code><a class="headerlink" href="#sort-algorithm" title="Permalink to this heading">¶</a></h3>
 <p>How multiple occurrences of same type statements should be sorted.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code> and <code class="docutils literal notranslate"><span class="pre">'none'</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'none'</span></code></p>
 </section>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
-<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
 <p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -159,7 +161,7 @@ custom patterns.</p>
 </div>
 </section>
 <section id="example-2">
-<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['method_private',</span> <span class="pre">'method_public']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -174,7 +176,7 @@ custom patterns.</p>
 </div>
 </section>
 <section id="example-3">
-<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['method_public'],</span> <span class="pre">'sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'alpha']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -192,7 +194,7 @@ custom patterns.</p>
 </div>
 </section>
 <section id="example-4">
-<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
+<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['method_public'],</span> <span class="pre">'sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'alpha',</span> <span class="pre">'case_sensitive'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -211,7 +213,7 @@ custom patterns.</p>
 </section>
 </section>
 <section id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
+<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul>
 <li><p><a class="reference internal" href="../../ruleSets/PER.html"><span class="doc">&#64;PER</span></a> with config:</p>
@@ -236,9 +238,9 @@ custom patterns.</p>
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/ClassNotation/OrderedClassElementsFixer.php">PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/ClassNotation/OrderedClassElementsFixer.php">PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer</a></p></li>
 <li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/ClassNotation/OrderedClassElementsFixerTest.php">PhpCsFixer\Tests\Fixer\ClassNotation\OrderedClassElementsFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>

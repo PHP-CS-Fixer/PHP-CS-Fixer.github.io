@@ -12,6 +12,8 @@
     <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../../../_static/" type="text/css">
       <title>Rule native_function_invocation - PHP Coding Standards Fixer</title>
 
     <script>
@@ -40,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Big Changes (v3.47.0)</strong> edition
+                <strong>Insomnia (v3.49.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,25 +66,25 @@
           <div class="more_intro">
             
   <section id="rule-native-function-invocation">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">native_function_invocation</span></code><a class="headerlink" href="#rule-native-function-invocation" title="Permalink to this headline">¶</a></h1>
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">native_function_invocation</span></code><a class="headerlink" href="#rule-native-function-invocation" title="Permalink to this heading">¶</a></h1>
 <p>Add leading <code class="docutils literal notranslate"><span class="pre">\</span></code> before function invocation to speed up resolving.</p>
 <section id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
+<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
 <section id="using-this-rule-is-risky">
-<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
+<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this heading">¶</a></h3>
 <p>Risky when any of the functions are overridden.</p>
 </section>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
 <section id="exclude">
-<h3><code class="docutils literal notranslate"><span class="pre">exclude</span></code><a class="headerlink" href="#exclude" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">exclude</span></code><a class="headerlink" href="#exclude" title="Permalink to this heading">¶</a></h3>
 <p>List of functions to ignore.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></p>
 </section>
 <section id="include">
-<h3><code class="docutils literal notranslate"><span class="pre">include</span></code><a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">include</span></code><a class="headerlink" href="#include" title="Permalink to this heading">¶</a></h3>
 <p>List of function names or sets to fix. Defined sets are <code class="docutils literal notranslate"><span class="pre">&#64;internal</span></code> (all
 native functions), <code class="docutils literal notranslate"><span class="pre">&#64;all</span></code> (all global functions) and <code class="docutils literal notranslate"><span class="pre">&#64;compiler_optimized</span></code>
 (functions that are specially optimized by Zend).</p>
@@ -90,22 +92,22 @@ native functions), <code class="docutils literal notranslate"><span class="pre">
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['&#64;compiler_optimized']</span></code></p>
 </section>
 <section id="scope">
-<h3><code class="docutils literal notranslate"><span class="pre">scope</span></code><a class="headerlink" href="#scope" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">scope</span></code><a class="headerlink" href="#scope" title="Permalink to this heading">¶</a></h3>
 <p>Only fix function calls that are made within a namespace or fix all.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'all'</span></code> and <code class="docutils literal notranslate"><span class="pre">'namespaced'</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'all'</span></code></p>
 </section>
 <section id="strict">
-<h3><code class="docutils literal notranslate"><span class="pre">strict</span></code><a class="headerlink" href="#strict" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">strict</span></code><a class="headerlink" href="#strict" title="Permalink to this heading">¶</a></h3>
 <p>Whether leading <code class="docutils literal notranslate"><span class="pre">\</span></code> of function call not meant to have it should be removed.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
 </section>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
-<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
 <p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -124,7 +126,7 @@ native functions), <code class="docutils literal notranslate"><span class="pre">
 </div>
 </section>
 <section id="example-2">
-<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['exclude'</span> <span class="pre">=&gt;</span> <span class="pre">['json_encode']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -143,7 +145,7 @@ native functions), <code class="docutils literal notranslate"><span class="pre">
 </div>
 </section>
 <section id="example-3">
-<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['scope'</span> <span class="pre">=&gt;</span> <span class="pre">'all']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -160,7 +162,7 @@ native functions), <code class="docutils literal notranslate"><span class="pre">
 </div>
 </section>
 <section id="example-4">
-<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
+<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['scope'</span> <span class="pre">=&gt;</span> <span class="pre">'namespaced']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -176,7 +178,7 @@ native functions), <code class="docutils literal notranslate"><span class="pre">
 </div>
 </section>
 <section id="example-5">
-<h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
+<h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['include'</span> <span class="pre">=&gt;</span> <span class="pre">['myGlobalFunction']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -188,7 +190,7 @@ native functions), <code class="docutils literal notranslate"><span class="pre">
 </div>
 </section>
 <section id="example-6">
-<h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
+<h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['include'</span> <span class="pre">=&gt;</span> <span class="pre">['&#64;all']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -201,7 +203,7 @@ native functions), <code class="docutils literal notranslate"><span class="pre">
 </div>
 </section>
 <section id="example-7">
-<h3>Example #7<a class="headerlink" href="#example-7" title="Permalink to this headline">¶</a></h3>
+<h3>Example #7<a class="headerlink" href="#example-7" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['include'</span> <span class="pre">=&gt;</span> <span class="pre">['&#64;internal']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -213,7 +215,7 @@ native functions), <code class="docutils literal notranslate"><span class="pre">
 </div>
 </section>
 <section id="example-8">
-<h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this headline">¶</a></h3>
+<h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['include'</span> <span class="pre">=&gt;</span> <span class="pre">['&#64;compiler_optimized']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -226,7 +228,7 @@ native functions), <code class="docutils literal notranslate"><span class="pre">
 </section>
 </section>
 <section id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
+<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul>
 <li><p><a class="reference internal" href="../../ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a> with config:</p>
@@ -238,9 +240,9 @@ native functions), <code class="docutils literal notranslate"><span class="pre">
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/FunctionNotation/NativeFunctionInvocationFixer.php">PhpCsFixer\Fixer\FunctionNotation\NativeFunctionInvocationFixer</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/FunctionNotation/NativeFunctionInvocationFixer.php">PhpCsFixer\Fixer\FunctionNotation\NativeFunctionInvocationFixer</a></p></li>
 <li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/FunctionNotation/NativeFunctionInvocationFixerTest.php">PhpCsFixer\Tests\Fixer\FunctionNotation\NativeFunctionInvocationFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>

@@ -12,6 +12,8 @@
     <link href="../_static/css/code.css" rel="stylesheet" type="text/css">
     <link href="../_static/css/colors.css" rel="stylesheet" type="text/css">
     <link href="../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../_static/" type="text/css">
       <title>Creating custom rules - PHP Coding Standards Fixer</title>
 
     <script>
@@ -40,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Big Changes (v3.47.0)</strong> edition
+                <strong>Insomnia (v3.49.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,11 +66,11 @@
           <div class="more_intro">
             
   <section id="creating-custom-rules">
-<h1>Creating custom rules<a class="headerlink" href="#creating-custom-rules" title="Permalink to this headline">¶</a></h1>
+<h1>Creating custom rules<a class="headerlink" href="#creating-custom-rules" title="Permalink to this heading">¶</a></h1>
 <p>If you need to enforce some specific code style rules, you can implement your
 own fixers.</p>
 <p>For each rule you want to add, create a class that implements
-<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/FixerInterface.php">PhpCsFixer\Fixer\FixerInterface</a>.
+<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/FixerInterface.php">PhpCsFixer\Fixer\FixerInterface</a>.
 Note that there is a specific constraint
 regarding custom rules names: they must match the pattern
 <code class="docutils literal notranslate"><span class="pre">/^[A-Z][a-zA-Z0-9]*\/[a-z][a-z0-9_]*$/</span></code>.</p>
@@ -91,9 +93,9 @@ regarding custom rules names: they must match the pattern
 </div>
 <p>There are several interfaces that your fixers can also implement if needed:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/WhitespacesAwareFixerInterface.php">PhpCsFixer\Fixer\WhitespacesAwareFixerInterface</a>: for fixers that need to know the configured indentation and line endings;</p></li>
-<li><p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/ConfigurableFixerInterface.php">PhpCsFixer\Fixer\ConfigurableFixerInterface</a>: to create a configurable fixer;</p></li>
-<li><p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/DeprecatedFixerInterface.php">PhpCsFixer\Fixer\DeprecatedFixerInterface</a>: to deprecate a fixer.</p></li>
+<li><p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/WhitespacesAwareFixerInterface.php">PhpCsFixer\Fixer\WhitespacesAwareFixerInterface</a>: for fixers that need to know the configured indentation and line endings;</p></li>
+<li><p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/ConfigurableFixerInterface.php">PhpCsFixer\Fixer\ConfigurableFixerInterface</a>: to create a configurable fixer;</p></li>
+<li><p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/DeprecatedFixerInterface.php">PhpCsFixer\Fixer\DeprecatedFixerInterface</a>: to deprecate a fixer.</p></li>
 </ul>
 </section>
 

@@ -12,6 +12,8 @@
     <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../../../_static/" type="text/css">
       <title>Rule return_type_declaration - PHP Coding Standards Fixer</title>
 
     <script>
@@ -40,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Big Changes (v3.47.0)</strong> edition
+                <strong>Insomnia (v3.49.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,25 +66,25 @@
           <div class="more_intro">
             
   <section id="rule-return-type-declaration">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">return_type_declaration</span></code><a class="headerlink" href="#rule-return-type-declaration" title="Permalink to this headline">¶</a></h1>
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">return_type_declaration</span></code><a class="headerlink" href="#rule-return-type-declaration" title="Permalink to this heading">¶</a></h1>
 <p>Adjust spacing around colon in return type declarations and backed enum types.</p>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
 <p>Rule is applied only in a PHP 7+ environment.</p>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
 <section id="space-before">
-<h3><code class="docutils literal notranslate"><span class="pre">space_before</span></code><a class="headerlink" href="#space-before" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">space_before</span></code><a class="headerlink" href="#space-before" title="Permalink to this heading">¶</a></h3>
 <p>Spacing to apply before colon.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'none'</span></code> and <code class="docutils literal notranslate"><span class="pre">'one'</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'none'</span></code></p>
 </section>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
-<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
 <p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -93,7 +95,7 @@
 </div>
 </section>
 <section id="example-2">
-<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['space_before'</span> <span class="pre">=&gt;</span> <span class="pre">'none']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -104,7 +106,7 @@
 </div>
 </section>
 <section id="example-3">
-<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['space_before'</span> <span class="pre">=&gt;</span> <span class="pre">'one']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -116,7 +118,7 @@
 </section>
 </section>
 <section id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
+<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../ruleSets/PER.html"><span class="doc">&#64;PER</span></a></p></li>
@@ -129,9 +131,9 @@
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/FunctionNotation/ReturnTypeDeclarationFixer.php">PhpCsFixer\Fixer\FunctionNotation\ReturnTypeDeclarationFixer</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/FunctionNotation/ReturnTypeDeclarationFixer.php">PhpCsFixer\Fixer\FunctionNotation\ReturnTypeDeclarationFixer</a></p></li>
 <li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/FunctionNotation/ReturnTypeDeclarationFixerTest.php">PhpCsFixer\Tests\Fixer\FunctionNotation\ReturnTypeDeclarationFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>

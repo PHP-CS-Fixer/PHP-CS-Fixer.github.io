@@ -12,6 +12,8 @@
     <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../../../_static/" type="text/css">
       <title>Rule method_argument_space - PHP Coding Standards Fixer</title>
 
     <script>
@@ -40,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Big Changes (v3.47.0)</strong> edition
+                <strong>Insomnia (v3.49.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,47 +66,47 @@
           <div class="more_intro">
             
   <section id="rule-method-argument-space">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">method_argument_space</span></code><a class="headerlink" href="#rule-method-argument-space" title="Permalink to this headline">¶</a></h1>
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">method_argument_space</span></code><a class="headerlink" href="#rule-method-argument-space" title="Permalink to this heading">¶</a></h1>
 <p>In method arguments and method call, there MUST NOT be a space before each comma
 and there MUST be one space after each comma. Argument lists MAY be split across
 multiple lines, where each subsequent line is indented once. When doing so, the
 first item in the list MUST be on the next line, and there MUST be only one
 argument per line.</p>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
 <p>This fixer covers rules defined in PSR2 ¶4.4, ¶4.6.</p>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
 <section id="after-heredoc">
-<h3><code class="docutils literal notranslate"><span class="pre">after_heredoc</span></code><a class="headerlink" href="#after-heredoc" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">after_heredoc</span></code><a class="headerlink" href="#after-heredoc" title="Permalink to this heading">¶</a></h3>
 <p>Whether the whitespace between heredoc end and comma should be removed.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </section>
 <section id="attribute-placement">
-<h3><code class="docutils literal notranslate"><span class="pre">attribute_placement</span></code><a class="headerlink" href="#attribute-placement" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">attribute_placement</span></code><a class="headerlink" href="#attribute-placement" title="Permalink to this heading">¶</a></h3>
 <p>Defines how to handle argument attributes when function definition is multiline.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'ignore'</span></code>, <code class="docutils literal notranslate"><span class="pre">'same_line'</span></code> and <code class="docutils literal notranslate"><span class="pre">'standalone'</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'standalone'</span></code></p>
 </section>
 <section id="keep-multiple-spaces-after-comma">
-<h3><code class="docutils literal notranslate"><span class="pre">keep_multiple_spaces_after_comma</span></code><a class="headerlink" href="#keep-multiple-spaces-after-comma" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">keep_multiple_spaces_after_comma</span></code><a class="headerlink" href="#keep-multiple-spaces-after-comma" title="Permalink to this heading">¶</a></h3>
 <p>Whether keep multiple spaces after comma.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </section>
 <section id="on-multiline">
-<h3><code class="docutils literal notranslate"><span class="pre">on_multiline</span></code><a class="headerlink" href="#on-multiline" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">on_multiline</span></code><a class="headerlink" href="#on-multiline" title="Permalink to this heading">¶</a></h3>
 <p>Defines how to handle function arguments lists that contain newlines.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'ensure_fully_multiline'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ensure_single_line'</span></code> and <code class="docutils literal notranslate"><span class="pre">'ignore'</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'ensure_fully_multiline'</span></code></p>
 </section>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
-<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
 <p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -117,7 +119,7 @@ argument per line.</p>
 </div>
 </section>
 <section id="example-2">
-<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['keep_multiple_spaces_after_comma'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -130,7 +132,7 @@ argument per line.</p>
 </div>
 </section>
 <section id="example-3">
-<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['keep_multiple_spaces_after_comma'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -142,7 +144,7 @@ argument per line.</p>
 </div>
 </section>
 <section id="example-4">
-<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
+<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -164,7 +166,7 @@ argument per line.</p>
 </div>
 </section>
 <section id="example-5">
-<h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
+<h3>Example #5<a class="headerlink" href="#example-5" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_single_line']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -184,7 +186,7 @@ argument per line.</p>
 </div>
 </section>
 <section id="example-6">
-<h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
+<h3>Example #6<a class="headerlink" href="#example-6" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline',</span> <span class="pre">'keep_multiple_spaces_after_comma'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -208,7 +210,7 @@ argument per line.</p>
 </div>
 </section>
 <section id="example-7">
-<h3>Example #7<a class="headerlink" href="#example-7" title="Permalink to this headline">¶</a></h3>
+<h3>Example #7<a class="headerlink" href="#example-7" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline',</span> <span class="pre">'keep_multiple_spaces_after_comma'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -234,7 +236,7 @@ argument per line.</p>
 </div>
 </section>
 <section id="example-8">
-<h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this headline">¶</a></h3>
+<h3>Example #8<a class="headerlink" href="#example-8" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline',</span> <span class="pre">'attribute_placement'</span> <span class="pre">=&gt;</span> <span class="pre">'ignore']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -252,7 +254,7 @@ argument per line.</p>
 </div>
 </section>
 <section id="example-9">
-<h3>Example #9<a class="headerlink" href="#example-9" title="Permalink to this headline">¶</a></h3>
+<h3>Example #9<a class="headerlink" href="#example-9" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline',</span> <span class="pre">'attribute_placement'</span> <span class="pre">=&gt;</span> <span class="pre">'same_line']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -272,7 +274,7 @@ argument per line.</p>
 </div>
 </section>
 <section id="example-10">
-<h3>Example #10<a class="headerlink" href="#example-10" title="Permalink to this headline">¶</a></h3>
+<h3>Example #10<a class="headerlink" href="#example-10" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ensure_fully_multiline',</span> <span class="pre">'attribute_placement'</span> <span class="pre">=&gt;</span> <span class="pre">'standalone']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -292,7 +294,7 @@ argument per line.</p>
 </div>
 </section>
 <section id="example-11">
-<h3>Example #11<a class="headerlink" href="#example-11" title="Permalink to this headline">¶</a></h3>
+<h3>Example #11<a class="headerlink" href="#example-11" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['after_heredoc'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -310,7 +312,7 @@ argument per line.</p>
 </section>
 </section>
 <section id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
+<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul>
 <li><p><a class="reference internal" href="../../ruleSets/PER.html"><span class="doc">&#64;PER</span></a></p></li>
@@ -352,9 +354,9 @@ argument per line.</p>
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/FunctionNotation/MethodArgumentSpaceFixer.php">PhpCsFixer\Fixer\FunctionNotation\MethodArgumentSpaceFixer</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/FunctionNotation/MethodArgumentSpaceFixer.php">PhpCsFixer\Fixer\FunctionNotation\MethodArgumentSpaceFixer</a></p></li>
 <li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/FunctionNotation/MethodArgumentSpaceFixerTest.php">PhpCsFixer\Tests\Fixer\FunctionNotation\MethodArgumentSpaceFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>

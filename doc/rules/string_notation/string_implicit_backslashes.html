@@ -14,7 +14,7 @@
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
       <link rel="stylesheet" href="../../../_static/" type="text/css">
-      <title>Rule escape_implicit_backslashes - PHP Coding Standards Fixer</title>
+      <title>Rule string_implicit_backslashes - PHP Coding Standards Fixer</title>
 
     <script>
       var _gaq = _gaq || [];
@@ -65,10 +65,13 @@
           </div>
           <div class="more_intro">
             
-  <section id="rule-escape-implicit-backslashes">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">escape_implicit_backslashes</span></code><a class="headerlink" href="#rule-escape-implicit-backslashes" title="Permalink to this heading">¶</a></h1>
-<p>Escape implicit backslashes in strings and heredocs to ease the understanding of
-which are special chars interpreted by PHP and which not.</p>
+  <section id="rule-string-implicit-backslashes">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">string_implicit_backslashes</span></code><a class="headerlink" href="#rule-string-implicit-backslashes" title="Permalink to this heading">¶</a></h1>
+<p>Handles implicit backslashes in strings and heredocs. Depending on the chosen
+strategy, it can escape implicit backslashes to ease the understanding of which
+are special chars interpreted by PHP and which not (<code class="docutils literal notranslate"><span class="pre">escape</span></code>), or it can
+remove these additional backslashes if you find them superfluous (<code class="docutils literal notranslate"><span class="pre">unescape</span></code>).
+You can also leave them as-is using <code class="docutils literal notranslate"><span class="pre">ignore</span></code> strategy.</p>
 <section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
 <p>In PHP double-quoted strings and heredocs some chars like <code class="docutils literal notranslate"><span class="pre">n</span></code>, <code class="docutils literal notranslate"><span class="pre">$</span></code> or <code class="docutils literal notranslate"><span class="pre">u</span></code>
@@ -83,32 +86,25 @@ ensure that all backslashes are escaped. Both single and double backslashes are
 allowed in single-quoted strings, so the purpose in this context is mainly to
 have a uniformed way to have them written all over the codebase.</p>
 </section>
-<section id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
-<section id="this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version">
-<h3>This rule is deprecated and will be removed in the next major version<a class="headerlink" href="#this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version" title="Permalink to this heading">¶</a></h3>
-<p>You should use <code class="docutils literal notranslate"><span class="pre">string_implicit_backslashes</span></code> instead.</p>
-</section>
-</section>
 <section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
 <section id="double-quoted">
 <h3><code class="docutils literal notranslate"><span class="pre">double_quoted</span></code><a class="headerlink" href="#double-quoted" title="Permalink to this heading">¶</a></h3>
-<p>Whether to fix double-quoted strings.</p>
-<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+<p>Whether to escape backslashes in double-quoted strings.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'escape'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ignore'</span></code> and <code class="docutils literal notranslate"><span class="pre">'unescape'</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'escape'</span></code></p>
 </section>
-<section id="heredoc-syntax">
-<h3><code class="docutils literal notranslate"><span class="pre">heredoc_syntax</span></code><a class="headerlink" href="#heredoc-syntax" title="Permalink to this heading">¶</a></h3>
-<p>Whether to fix heredoc syntax.</p>
-<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+<section id="heredoc">
+<h3><code class="docutils literal notranslate"><span class="pre">heredoc</span></code><a class="headerlink" href="#heredoc" title="Permalink to this heading">¶</a></h3>
+<p>Whether to escape backslashes in heredoc syntax.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'escape'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ignore'</span></code> and <code class="docutils literal notranslate"><span class="pre">'unescape'</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'escape'</span></code></p>
 </section>
 <section id="single-quoted">
 <h3><code class="docutils literal notranslate"><span class="pre">single_quoted</span></code><a class="headerlink" href="#single-quoted" title="Permalink to this heading">¶</a></h3>
-<p>Whether to fix single-quoted strings.</p>
-<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+<p>Whether to escape backslashes in single-quoted strings.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'escape'</span></code>, <code class="docutils literal notranslate"><span class="pre">'ignore'</span></code> and <code class="docutils literal notranslate"><span class="pre">'unescape'</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'unescape'</span></code></p>
 </section>
 </section>
 <section id="examples">
@@ -134,7 +130,7 @@ have a uniformed way to have them written all over the codebase.</p>
 </section>
 <section id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
-<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['single_quoted'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['single_quoted'</span> <span class="pre">=&gt;</span> <span class="pre">'escape']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
@@ -154,7 +150,7 @@ have a uniformed way to have them written all over the codebase.</p>
 </section>
 <section id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this heading">¶</a></h3>
-<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['double_quoted'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['double_quoted'</span> <span class="pre">=&gt;</span> <span class="pre">'unescape']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
@@ -172,7 +168,7 @@ have a uniformed way to have them written all over the codebase.</p>
 </section>
 <section id="example-4">
 <h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this heading">¶</a></h3>
-<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['heredoc_syntax'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['heredoc'</span> <span class="pre">=&gt;</span> <span class="pre">'unescape']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
@@ -189,11 +185,20 @@ have a uniformed way to have them written all over the codebase.</p>
 </div>
 </section>
 </section>
+<section id="rule-sets">
+<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
+<p>The rule is part of the following rule set:</p>
+<ul>
+<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['single_quoted'</span> <span class="pre">=&gt;</span> <span class="pre">'ignore']</span></code></p>
+</li>
+</ul>
+</section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/StringNotation/EscapeImplicitBackslashesFixer.php">PhpCsFixer\Fixer\StringNotation\EscapeImplicitBackslashesFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/StringNotation/EscapeImplicitBackslashesFixerTest.php">PhpCsFixer\Tests\Fixer\StringNotation\EscapeImplicitBackslashesFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/StringNotation/StringImplicitBackslashesFixer.php">PhpCsFixer\Fixer\StringNotation\StringImplicitBackslashesFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/StringNotation/StringImplicitBackslashesFixerTest.php">PhpCsFixer\Tests\Fixer\StringNotation\StringImplicitBackslashesFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>

@@ -12,6 +12,8 @@
     <link href="../_static/css/code.css" rel="stylesheet" type="text/css">
     <link href="../_static/css/colors.css" rel="stylesheet" type="text/css">
     <link href="../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../_static/" type="text/css">
       <title>Config file - PHP Coding Standards Fixer</title>
 
     <script>
@@ -40,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Big Changes (v3.47.0)</strong> edition
+                <strong>Insomnia (v3.49.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,16 +66,16 @@
           <div class="more_intro">
             
   <section id="config-file">
-<h1>Config file<a class="headerlink" href="#config-file" title="Permalink to this headline">¶</a></h1>
+<h1>Config file<a class="headerlink" href="#config-file" title="Permalink to this heading">¶</a></h1>
 <section id="no-config">
-<h2>No config<a class="headerlink" href="#no-config" title="Permalink to this headline">¶</a></h2>
+<h2>No config<a class="headerlink" href="#no-config" title="Permalink to this heading">¶</a></h2>
 <p>It is possible to <em>not</em> have the config file. In that case, the default rule set (&#64;PSR12) will be applied, yet the path will need to be provided via CLI.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix .</span>
 </pre></div>
 </div>
 <p>It is also possible to provide command line options to customize rules, yet instead of using them,
 it’s recommended to save the project configuration in a <code class="docutils literal notranslate"><span class="pre">.php-cs-fixer.dist.php</span></code> file in the root directory of your project.
-The file must return an instance of <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/ConfigInterface.php">PhpCsFixer\ConfigInterface</a>
+The file must return an instance of <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/ConfigInterface.php">PhpCsFixer\ConfigInterface</a>
 which lets you configure the rules, the files and directories that
 need to be analyzed. You may also create <code class="docutils literal notranslate"><span class="pre">.php-cs-fixer.php</span></code> file, which is
 the local configuration that will be used instead of the project configuration. It
@@ -81,7 +83,7 @@ is a good practice to add that file into your <code class="docutils literal notr
 With the <code class="docutils literal notranslate"><span class="pre">--config</span></code> option you can specify the path to the config file.</p>
 </section>
 <section id="the-simplest-config">
-<h2>The simplest config<a class="headerlink" href="#the-simplest-config" title="Permalink to this headline">¶</a></h2>
+<h2>The simplest config<a class="headerlink" href="#the-simplest-config" title="Permalink to this heading">¶</a></h2>
 <p>The simplest config declares paths under control and rules to apply/check:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
@@ -101,7 +103,7 @@ With the <code class="docutils literal notranslate"><span class="pre">--config</
 <p>Default finder ignores <code class="docutils literal notranslate"><span class="pre">__DIR__</span> <span class="pre">.</span> <span class="pre">&quot;/vendor&quot;</span></code> dir, “hidden” paths (ones starting with a dot) and VCS paths (e.g. <code class="docutils literal notranslate"><span class="pre">.git</span></code>), and filter only for <code class="docutils literal notranslate"><span class="pre">*.php</span></code> files.</p>
 </section>
 <section id="configuring-paths">
-<h2>Configuring paths<a class="headerlink" href="#configuring-paths" title="Permalink to this headline">¶</a></h2>
+<h2>Configuring paths<a class="headerlink" href="#configuring-paths" title="Permalink to this heading">¶</a></h2>
 <p>The example below will manipulate which paths to fix or not:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
@@ -131,7 +133,7 @@ Both <code class="docutils literal notranslate"><span class="pre">exclude</span>
 online documentation for other <code class="docutils literal notranslate"><span class="pre">Finder</span></code> methods.</p>
 </section>
 <section id="configuring-rules">
-<h2>Configuring rules<a class="headerlink" href="#configuring-rules" title="Permalink to this headline">¶</a></h2>
+<h2>Configuring rules<a class="headerlink" href="#configuring-rules" title="Permalink to this heading">¶</a></h2>
 <p>The example below will add two rules to the default list of PSR12 set rules:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
@@ -168,7 +170,7 @@ The following example shows how to use all <code class="docutils literal notrans
 </div>
 </section>
 <section id="configuring-whitespaces">
-<h2>Configuring whitespaces<a class="headerlink" href="#configuring-whitespaces" title="Permalink to this headline">¶</a></h2>
+<h2>Configuring whitespaces<a class="headerlink" href="#configuring-whitespaces" title="Permalink to this heading">¶</a></h2>
 <p>You may want to use non-linux whitespaces in your project. Then you need to
 configure them in your config file.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>

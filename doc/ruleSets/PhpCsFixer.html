@@ -12,6 +12,8 @@
     <link href="../../_static/css/code.css" rel="stylesheet" type="text/css">
     <link href="../../_static/css/colors.css" rel="stylesheet" type="text/css">
     <link href="../../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../../_static/" type="text/css">
       <title>Rule set @PhpCsFixer - PHP Coding Standards Fixer</title>
 
     <script>
@@ -40,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Big Changes (v3.47.0)</strong> edition
+                <strong>Insomnia (v3.49.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,10 +66,10 @@
           <div class="more_intro">
             
   <section id="rule-set-phpcsfixer">
-<h1>Rule set <code class="docutils literal notranslate"><span class="pre">&#64;PhpCsFixer</span></code><a class="headerlink" href="#rule-set-phpcsfixer" title="Permalink to this headline">¶</a></h1>
+<h1>Rule set <code class="docutils literal notranslate"><span class="pre">&#64;PhpCsFixer</span></code><a class="headerlink" href="#rule-set-phpcsfixer" title="Permalink to this heading">¶</a></h1>
 <p>Rule set as used by the PHP-CS-Fixer development team, highly opinionated.</p>
 <section id="rules">
-<h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
+<h2>Rules<a class="headerlink" href="#rules" title="Permalink to this heading">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="PER-CS.html"><span class="doc">&#64;PER-CS</span></a></p></li>
 <li><p><a class="reference internal" href="Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
@@ -78,7 +80,6 @@
 <li><p><a class="reference internal" href="../rules/language_construct/combine_consecutive_issets.html"><span class="doc">combine_consecutive_issets</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/language_construct/combine_consecutive_unsets.html"><span class="doc">combine_consecutive_unsets</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/control_structure/empty_loop_body.html"><span class="doc">empty_loop_body</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/string_notation/escape_implicit_backslashes.html"><span class="doc">escape_implicit_backslashes</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/language_construct/explicit_indirect_variable.html"><span class="doc">explicit_indirect_variable</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/string_notation/explicit_string_variable.html"><span class="doc">explicit_string_variable</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/import/fully_qualified_strict_types.html"><span class="doc">fully_qualified_strict_types</span></a> with config:</p>
@@ -122,13 +123,16 @@
 <li><p><a class="reference internal" href="../rules/class_notation/self_static_accessor.html"><span class="doc">self_static_accessor</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/comment/single_line_comment_style.html"><span class="doc">single_line_comment_style</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/basic/single_line_empty_body.html"><span class="doc">single_line_empty_body</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/string_notation/string_implicit_backslashes.html"><span class="doc">string_implicit_backslashes</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['single_quoted'</span> <span class="pre">=&gt;</span> <span class="pre">'ignore']</span></code></p>
+</li>
 <li><p><a class="reference internal" href="../rules/array_notation/whitespace_after_comma_in_array.html"><span class="doc">whitespace_after_comma_in_array</span></a> with config:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['ensure_single_space'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
 </li>
 </ul>
 </section>
 <section id="disabled-rules">
-<h2>Disabled rules<a class="headerlink" href="#disabled-rules" title="Permalink to this headline">¶</a></h2>
+<h2>Disabled rules<a class="headerlink" href="#disabled-rules" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="../rules/function_notation/nullable_type_declaration_for_default_null_value.html"><span class="doc">nullable_type_declaration_for_default_null_value</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/function_notation/single_line_throw.html"><span class="doc">single_line_throw</span></a></p></li>

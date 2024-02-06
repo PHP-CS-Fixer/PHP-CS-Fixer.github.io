@@ -14,7 +14,7 @@
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
       <link rel="stylesheet" href="../../../_static/" type="text/css">
-      <title>Rule lambda_not_used_import - PHP Coding Standards Fixer</title>
+      <title>Rule phpdoc_list_type - PHP Coding Standards Fixer</title>
 
     <script>
       var _gaq = _gaq || [];
@@ -65,9 +65,16 @@
           </div>
           <div class="more_intro">
             
-  <section id="rule-lambda-not-used-import">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">lambda_not_used_import</span></code><a class="headerlink" href="#rule-lambda-not-used-import" title="Permalink to this heading">¶</a></h1>
-<p>Lambda must not import variables it doesn’t use.</p>
+  <section id="rule-phpdoc-list-type">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">phpdoc_list_type</span></code><a class="headerlink" href="#rule-phpdoc-list-type" title="Permalink to this heading">¶</a></h1>
+<p>PHPDoc <code class="docutils literal notranslate"><span class="pre">list</span></code> type must be used instead of <code class="docutils literal notranslate"><span class="pre">array</span></code> without a key.</p>
+<section id="warning">
+<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
+<section id="using-this-rule-is-risky">
+<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this heading">¶</a></h3>
+<p>Risky when <code class="docutils literal notranslate"><span class="pre">array</span></code> key should be present, but is missing.</p>
+</section>
+</section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
@@ -75,25 +82,21 @@
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
-<span class="gd">-$foo = function() use ($bar) {};</span>
-<span class="gi">+$foo = function() {};</span>
+<span class="w"> </span>/**
+<span class="gd">- * @param array&lt;int&gt; $x</span>
+<span class="gd">- * @param array&lt;array&lt;string&gt;&gt; $y</span>
+<span class="gi">+ * @param list&lt;int&gt; $x</span>
+<span class="gi">+ * @param list&lt;list&lt;string&gt;&gt; $y</span>
+<span class="w"> </span> */
 </pre></div>
 </div>
 </section>
 </section>
-<section id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
-<p>The rule is part of the following rule sets:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
-</ul>
-</section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/FunctionNotation/LambdaNotUsedImportFixer.php">PhpCsFixer\Fixer\FunctionNotation\LambdaNotUsedImportFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/FunctionNotation/LambdaNotUsedImportFixerTest.php">PhpCsFixer\Tests\Fixer\FunctionNotation\LambdaNotUsedImportFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/Phpdoc/PhpdocListTypeFixer.php">PhpCsFixer\Fixer\Phpdoc\PhpdocListTypeFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/Phpdoc/PhpdocListTypeFixerTest.php">PhpCsFixer\Tests\Fixer\Phpdoc\PhpdocListTypeFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>

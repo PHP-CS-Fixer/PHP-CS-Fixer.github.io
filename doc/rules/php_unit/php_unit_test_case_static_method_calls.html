@@ -12,6 +12,8 @@
     <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../../../_static/" type="text/css">
       <title>Rule php_unit_test_case_static_method_calls - PHP Coding Standards Fixer</title>
 
     <script>
@@ -40,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Big Changes (v3.47.0)</strong> edition
+                <strong>Insomnia (v3.49.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,27 +66,27 @@
           <div class="more_intro">
             
   <section id="rule-php-unit-test-case-static-method-calls">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">php_unit_test_case_static_method_calls</span></code><a class="headerlink" href="#rule-php-unit-test-case-static-method-calls" title="Permalink to this headline">¶</a></h1>
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">php_unit_test_case_static_method_calls</span></code><a class="headerlink" href="#rule-php-unit-test-case-static-method-calls" title="Permalink to this heading">¶</a></h1>
 <p>Calls to <code class="docutils literal notranslate"><span class="pre">PHPUnit\Framework\TestCase</span></code> static methods must all be of the same
 type, either <code class="docutils literal notranslate"><span class="pre">$this-&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">self::</span></code> or <code class="docutils literal notranslate"><span class="pre">static::</span></code>.</p>
 <section id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
+<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
 <section id="using-this-rule-is-risky">
-<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
+<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this heading">¶</a></h3>
 <p>Risky when PHPUnit methods are overridden or not accessible, or when project has
 PHPUnit incompatibilities.</p>
 </section>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
 <section id="call-type">
-<h3><code class="docutils literal notranslate"><span class="pre">call_type</span></code><a class="headerlink" href="#call-type" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">call_type</span></code><a class="headerlink" href="#call-type" title="Permalink to this heading">¶</a></h3>
 <p>The call type to use for referring to PHPUnit methods.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'self'</span></code>, <code class="docutils literal notranslate"><span class="pre">'static'</span></code> and <code class="docutils literal notranslate"><span class="pre">'this'</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'static'</span></code></p>
 </section>
 <section id="methods">
-<h3><code class="docutils literal notranslate"><span class="pre">methods</span></code><a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">methods</span></code><a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h3>
 <p>Dictionary of <code class="docutils literal notranslate"><span class="pre">method</span></code> =&gt; <code class="docutils literal notranslate"><span class="pre">call_type</span></code> values that differ from the default
 strategy.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array</span></code></p>
@@ -92,9 +94,9 @@ strategy.</p>
 </section>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
-<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
 <p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -114,7 +116,7 @@ strategy.</p>
 </div>
 </section>
 <section id="example-2">
-<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['call_type'</span> <span class="pre">=&gt;</span> <span class="pre">'this']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -135,7 +137,7 @@ strategy.</p>
 </section>
 </section>
 <section id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
+<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
 <p>The rule is part of the following rule set:</p>
 <ul>
 <li><p><a class="reference internal" href="../../ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a> with config:</p>
@@ -144,9 +146,9 @@ strategy.</p>
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/PhpUnit/PhpUnitTestCaseStaticMethodCallsFixer.php">PhpCsFixer\Fixer\PhpUnit\PhpUnitTestCaseStaticMethodCallsFixer</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/PhpUnit/PhpUnitTestCaseStaticMethodCallsFixer.php">PhpCsFixer\Fixer\PhpUnit\PhpUnitTestCaseStaticMethodCallsFixer</a></p></li>
 <li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/PhpUnit/PhpUnitTestCaseStaticMethodCallsFixerTest.php">PhpCsFixer\Tests\Fixer\PhpUnit\PhpUnitTestCaseStaticMethodCallsFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>

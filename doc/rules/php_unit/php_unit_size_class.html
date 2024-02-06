@@ -12,6 +12,8 @@
     <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../../../_static/" type="text/css">
       <title>Rule php_unit_size_class - PHP Coding Standards Fixer</title>
 
     <script>
@@ -40,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Big Changes (v3.47.0)</strong> edition
+                <strong>Insomnia (v3.49.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,27 +66,27 @@
           <div class="more_intro">
             
   <section id="rule-php-unit-size-class">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">php_unit_size_class</span></code><a class="headerlink" href="#rule-php-unit-size-class" title="Permalink to this headline">¶</a></h1>
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">php_unit_size_class</span></code><a class="headerlink" href="#rule-php-unit-size-class" title="Permalink to this heading">¶</a></h1>
 <p>All PHPUnit test cases should have <code class="docutils literal notranslate"><span class="pre">&#64;small</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;medium</span></code> or <code class="docutils literal notranslate"><span class="pre">&#64;large</span></code>
 annotation to enable run time limits.</p>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
 <p>The special groups [small, medium, large] provides a way to identify tests that
 are taking long to be executed.</p>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
 <section id="group">
-<h3><code class="docutils literal notranslate"><span class="pre">group</span></code><a class="headerlink" href="#group" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">group</span></code><a class="headerlink" href="#group" title="Permalink to this heading">¶</a></h3>
 <p>Define a specific group to be used in case no group is already in use.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'large'</span></code>, <code class="docutils literal notranslate"><span class="pre">'medium'</span></code> and <code class="docutils literal notranslate"><span class="pre">'small'</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'small'</span></code></p>
 </section>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
-<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
 <p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -98,7 +100,7 @@ are taking long to be executed.</p>
 </div>
 </section>
 <section id="example-2">
-<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['group'</span> <span class="pre">=&gt;</span> <span class="pre">'medium']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -113,9 +115,9 @@ are taking long to be executed.</p>
 </section>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/PhpUnit/PhpUnitSizeClassFixer.php">PhpCsFixer\Fixer\PhpUnit\PhpUnitSizeClassFixer</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/PhpUnit/PhpUnitSizeClassFixer.php">PhpCsFixer\Fixer\PhpUnit\PhpUnitSizeClassFixer</a></p></li>
 <li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/PhpUnit/PhpUnitSizeClassFixerTest.php">PhpCsFixer\Tests\Fixer\PhpUnit\PhpUnitSizeClassFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>

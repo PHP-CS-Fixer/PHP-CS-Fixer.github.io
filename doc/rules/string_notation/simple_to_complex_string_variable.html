@@ -12,6 +12,8 @@
     <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../../../_static/" type="text/css">
       <title>Rule simple_to_complex_string_variable - PHP Coding Standards Fixer</title>
 
     <script>
@@ -40,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Big Changes (v3.47.0)</strong> edition
+                <strong>Insomnia (v3.49.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,18 +66,18 @@
           <div class="more_intro">
             
   <section id="rule-simple-to-complex-string-variable">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">simple_to_complex_string_variable</span></code><a class="headerlink" href="#rule-simple-to-complex-string-variable" title="Permalink to this headline">¶</a></h1>
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">simple_to_complex_string_variable</span></code><a class="headerlink" href="#rule-simple-to-complex-string-variable" title="Permalink to this heading">¶</a></h1>
 <p>Converts explicit variables in double-quoted strings and heredoc syntax from
 simple to complex format (<code class="docutils literal notranslate"><span class="pre">${</span></code> to <code class="docutils literal notranslate"><span class="pre">{$</span></code>).</p>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
 <p>Doesn’t touch implicit variables. Works together nicely with
 <code class="docutils literal notranslate"><span class="pre">explicit_string_variable</span></code>.</p>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
-<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
@@ -86,7 +88,7 @@ simple to complex format (<code class="docutils literal notranslate"><span class
 </div>
 </section>
 <section id="example-2">
-<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
@@ -100,7 +102,7 @@ simple to complex format (<code class="docutils literal notranslate"><span class
 </section>
 </section>
 <section id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
+<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../ruleSets/PHP82Migration.html"><span class="doc">&#64;PHP82Migration</span></a></p></li>
@@ -110,9 +112,9 @@ simple to complex format (<code class="docutils literal notranslate"><span class
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/StringNotation/SimpleToComplexStringVariableFixer.php">PhpCsFixer\Fixer\StringNotation\SimpleToComplexStringVariableFixer</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/StringNotation/SimpleToComplexStringVariableFixer.php">PhpCsFixer\Fixer\StringNotation\SimpleToComplexStringVariableFixer</a></p></li>
 <li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/StringNotation/SimpleToComplexStringVariableFixerTest.php">PhpCsFixer\Tests\Fixer\StringNotation\SimpleToComplexStringVariableFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>

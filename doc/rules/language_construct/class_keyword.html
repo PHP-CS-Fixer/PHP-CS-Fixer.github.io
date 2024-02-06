@@ -12,6 +12,8 @@
     <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../../../_static/" type="text/css">
       <title>Rule class_keyword - PHP Coding Standards Fixer</title>
 
     <script>
@@ -40,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Big Changes (v3.47.0)</strong> edition
+                <strong>Insomnia (v3.49.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,19 +66,19 @@
           <div class="more_intro">
             
   <section id="rule-class-keyword">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">class_keyword</span></code><a class="headerlink" href="#rule-class-keyword" title="Permalink to this headline">¶</a></h1>
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">class_keyword</span></code><a class="headerlink" href="#rule-class-keyword" title="Permalink to this heading">¶</a></h1>
 <p>Converts FQCN strings to <code class="docutils literal notranslate"><span class="pre">*::class</span></code> keywords.</p>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
 <p>This rule does not have an understanding of whether a class exists in the scope
 of the codebase or not, relying on run-time and autoloaded classes to determine
 it, which makes the rule useless when running on a single file out of codebase
 context.</p>
 </section>
 <section id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
+<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
 <section id="this-rule-is-experimental">
-<h3>This rule is experimental<a class="headerlink" href="#this-rule-is-experimental" title="Permalink to this headline">¶</a></h3>
+<h3>This rule is experimental<a class="headerlink" href="#this-rule-is-experimental" title="Permalink to this heading">¶</a></h3>
 <p>Rule is not covered with backward compatibility promise, use it at your own
 risk. Rule’s behaviour may be changed at any point, including rule’s name; its
 options’ names, availability and allowed values; its default configuration. Rule
@@ -84,14 +86,14 @@ may be even removed without prior notice. Feel free to provide feedback and help
 with determining final state of the rule.</p>
 </section>
 <section id="using-this-rule-is-risky">
-<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
+<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this heading">¶</a></h3>
 <p>Do not use it, unless you know what you are doing.</p>
 </section>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
-<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
@@ -105,9 +107,9 @@ with determining final state of the rule.</p>
 </section>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/LanguageConstruct/ClassKeywordFixer.php">PhpCsFixer\Fixer\LanguageConstruct\ClassKeywordFixer</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/LanguageConstruct/ClassKeywordFixer.php">PhpCsFixer\Fixer\LanguageConstruct\ClassKeywordFixer</a></p></li>
 <li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/LanguageConstruct/ClassKeywordFixerTest.php">PhpCsFixer\Tests\Fixer\LanguageConstruct\ClassKeywordFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>

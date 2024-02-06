@@ -12,6 +12,8 @@
     <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../../../_static/" type="text/css">
       <title>Rule no_spaces_around_offset - PHP Coding Standards Fixer</title>
 
     <script>
@@ -40,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Big Changes (v3.47.0)</strong> edition
+                <strong>Insomnia (v3.49.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,21 +66,21 @@
           <div class="more_intro">
             
   <section id="rule-no-spaces-around-offset">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">no_spaces_around_offset</span></code><a class="headerlink" href="#rule-no-spaces-around-offset" title="Permalink to this headline">¶</a></h1>
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">no_spaces_around_offset</span></code><a class="headerlink" href="#rule-no-spaces-around-offset" title="Permalink to this heading">¶</a></h1>
 <p>There MUST NOT be spaces around offset braces.</p>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
 <section id="positions">
-<h3><code class="docutils literal notranslate"><span class="pre">positions</span></code><a class="headerlink" href="#positions" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">positions</span></code><a class="headerlink" href="#positions" title="Permalink to this heading">¶</a></h3>
 <p>Whether spacing should be fixed inside and/or outside the offset braces.</p>
 <p>Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['inside',</span> <span class="pre">'outside']</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['inside',</span> <span class="pre">'outside']</span></code></p>
 </section>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
-<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
 <p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -89,7 +91,7 @@
 </div>
 </section>
 <section id="example-2">
-<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['positions'</span> <span class="pre">=&gt;</span> <span class="pre">['inside']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -100,7 +102,7 @@
 </div>
 </section>
 <section id="example-3">
-<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['positions'</span> <span class="pre">=&gt;</span> <span class="pre">['outside']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -112,7 +114,7 @@
 </section>
 </section>
 <section id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
+<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
@@ -120,9 +122,9 @@
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/Whitespace/NoSpacesAroundOffsetFixer.php">PhpCsFixer\Fixer\Whitespace\NoSpacesAroundOffsetFixer</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/Whitespace/NoSpacesAroundOffsetFixer.php">PhpCsFixer\Fixer\Whitespace\NoSpacesAroundOffsetFixer</a></p></li>
 <li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/Whitespace/NoSpacesAroundOffsetFixerTest.php">PhpCsFixer\Tests\Fixer\Whitespace\NoSpacesAroundOffsetFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>

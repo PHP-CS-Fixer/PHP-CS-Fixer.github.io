@@ -12,6 +12,8 @@
     <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../../../_static/" type="text/css">
       <title>Rule strict_param - PHP Coding Standards Fixer</title>
 
     <script>
@@ -40,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Big Changes (v3.47.0)</strong> edition
+                <strong>Insomnia (v3.49.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,25 +66,25 @@
           <div class="more_intro">
             
   <section id="rule-strict-param">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">strict_param</span></code><a class="headerlink" href="#rule-strict-param" title="Permalink to this headline">¶</a></h1>
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">strict_param</span></code><a class="headerlink" href="#rule-strict-param" title="Permalink to this heading">¶</a></h1>
 <p>Functions should be used with <code class="docutils literal notranslate"><span class="pre">$strict</span></code> param set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
 <p>The functions “array_keys”, “array_search”, “base64_decode”, “in_array” and
 “mb_detect_encoding” should be used with $strict param.</p>
 </section>
 <section id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
+<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
 <section id="using-this-rule-is-risky">
-<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
+<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this heading">¶</a></h3>
 <p>Risky when the fixed function is overridden or if the code relies on non-strict
 usage.</p>
 </section>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
-<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
@@ -100,16 +102,16 @@ usage.</p>
 </section>
 </section>
 <section id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this headline">¶</a></h2>
+<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
 <p>The rule is part of the following rule set:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a></p></li>
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/Strict/StrictParamFixer.php">PhpCsFixer\Fixer\Strict\StrictParamFixer</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/Strict/StrictParamFixer.php">PhpCsFixer\Fixer\Strict\StrictParamFixer</a></p></li>
 <li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/Strict/StrictParamFixerTest.php">PhpCsFixer\Tests\Fixer\Strict\StrictParamFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>

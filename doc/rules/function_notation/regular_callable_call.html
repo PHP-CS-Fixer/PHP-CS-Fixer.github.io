@@ -12,6 +12,8 @@
     <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css">
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../../../_static/" type="text/css">
       <title>Rule regular_callable_call - PHP Coding Standards Fixer</title>
 
     <script>
@@ -40,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Big Changes (v3.47.0)</strong> edition
+                <strong>Insomnia (v3.49.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,12 +66,12 @@
           <div class="more_intro">
             
   <section id="rule-regular-callable-call">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">regular_callable_call</span></code><a class="headerlink" href="#rule-regular-callable-call" title="Permalink to this headline">¶</a></h1>
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">regular_callable_call</span></code><a class="headerlink" href="#rule-regular-callable-call" title="Permalink to this heading">¶</a></h1>
 <p>Callables must be called without using <code class="docutils literal notranslate"><span class="pre">call_user_func*</span></code> when possible.</p>
 <section id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
+<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
 <section id="using-this-rule-is-risky">
-<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this headline">¶</a></h3>
+<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this heading">¶</a></h3>
 <p>Risky when the <code class="docutils literal notranslate"><span class="pre">call_user_func</span></code> or <code class="docutils literal notranslate"><span class="pre">call_user_func_array</span></code> function is
 overridden or when are used in constructions that should be avoided, like
 <code class="docutils literal notranslate"><span class="pre">call_user_func_array('foo',</span> <span class="pre">['bar'</span> <span class="pre">=&gt;</span> <span class="pre">'baz'])</span></code> or <code class="docutils literal notranslate"><span class="pre">call_user_func($foo,</span> <span class="pre">$foo</span>
@@ -77,9 +79,9 @@ overridden or when are used in constructions that should be avoided, like
 </section>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
-<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
@@ -95,7 +97,7 @@ overridden or when are used in constructions that should be avoided, like
 </div>
 </section>
 <section id="example-2">
-<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
@@ -109,9 +111,9 @@ overridden or when are used in constructions that should be avoided, like
 </section>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.47.0/src/Fixer/FunctionNotation/RegularCallableCallFixer.php">PhpCsFixer\Fixer\FunctionNotation\RegularCallableCallFixer</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.49.0/src/Fixer/FunctionNotation/RegularCallableCallFixer.php">PhpCsFixer\Fixer\FunctionNotation\RegularCallableCallFixer</a></p></li>
 <li><p>Test class: <a class="reference external" href="./../../../tests/Fixer/FunctionNotation/RegularCallableCallFixerTest.php">PhpCsFixer\Tests\Fixer\FunctionNotation\RegularCallableCallFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>

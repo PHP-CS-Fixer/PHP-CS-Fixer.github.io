@@ -12,6 +12,8 @@
     <link href="../_static/css/code.css" rel="stylesheet" type="text/css">
     <link href="../_static/css/colors.css" rel="stylesheet" type="text/css">
     <link href="../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../_static/" type="text/css">
       <title>Installation - PHP Coding Standards Fixer</title>
 
     <script>
@@ -40,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Big Changes (v3.47.0)</strong> edition
+                <strong>Insomnia (v3.49.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,19 +66,19 @@
           <div class="more_intro">
             
   <section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h1>
 <section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
 <p>PHP needs to be a minimum version of PHP 7.4.</p>
 </section>
-<section id="installation-1">
-<h2>Installation<a class="headerlink" href="#installation-1" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h2>Installation<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <section id="locally">
-<h3>Locally<a class="headerlink" href="#locally" title="Permalink to this headline">¶</a></h3>
+<h3>Locally<a class="headerlink" href="#locally" title="Permalink to this heading">¶</a></h3>
 <p>Download the <a class="reference external" href="https://cs.symfony.com/download/php-cs-fixer-v3.phar">php-cs-fixer.phar</a> file and store it somewhere on your computer.</p>
 </section>
 <section id="globally-manual">
-<h3>Globally (manual)<a class="headerlink" href="#globally-manual" title="Permalink to this headline">¶</a></h3>
+<h3>Globally (manual)<a class="headerlink" href="#globally-manual" title="Permalink to this heading">¶</a></h3>
 <p>You can run these commands to easily access latest <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code> from anywhere on
 your system:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">wget https://cs.symfony.com/download/php-cs-fixer-v3.phar -O php-cs-fixer</span>
@@ -98,7 +100,7 @@ your system:</p>
 <p>Then, just run <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code>.</p>
 </section>
 <section id="globally-composer">
-<h3>Globally (Composer)<a class="headerlink" href="#globally-composer" title="Permalink to this headline">¶</a></h3>
+<h3>Globally (Composer)<a class="headerlink" href="#globally-composer" title="Permalink to this heading">¶</a></h3>
 <p>To install PHP CS Fixer, <a class="reference external" href="https://getcomposer.org/download/">install Composer</a> and issue the following command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">composer global require friendsofphp/php-cs-fixer</span>
 </pre></div>
@@ -109,61 +111,73 @@ your system:</p>
 </div>
 </section>
 <section id="globally-homebrew">
-<h3>Globally (homebrew)<a class="headerlink" href="#globally-homebrew" title="Permalink to this headline">¶</a></h3>
+<h3>Globally (homebrew)<a class="headerlink" href="#globally-homebrew" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">brew install php-cs-fixer</span>
 </pre></div>
 </div>
 </section>
 <section id="locally-phive">
-<h3>Locally (PHIVE)<a class="headerlink" href="#locally-phive" title="Permalink to this headline">¶</a></h3>
+<h3>Locally (PHIVE)<a class="headerlink" href="#locally-phive" title="Permalink to this heading">¶</a></h3>
 <p>Install <a class="reference external" href="https://phar.io">PHIVE</a> and issue the following command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">phive install php-cs-fixer # use `--global` for global install</span>
 </pre></div>
 </div>
 </section>
+<section id="github-action-docker">
+<h3>GitHub Action (Docker)<a class="headerlink" href="#github-action-docker" title="Permalink to this heading">¶</a></h3>
+<p>To integrate php-cs-fixer as check into a GitHub Action step, you can use a configuration like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PHP-CS-Fixer</span>
+<span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker://ghcr.io/php-cs-fixer/php-cs-fixer:3-php8.3</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">with</span><span class="p p-Indicator">:</span>
+<span class="w">      </span><span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">check</span>
+<span class="w">      </span><span class="c1"># use `check .` if your repository not having paths configured in .php-cs-fixer[.dist].php</span>
+</pre></div>
+</div>
+</section>
 <section id="gitlab-ci-docker">
-<h3>Gitlab-CI (Docker)<a class="headerlink" href="#gitlab-ci-docker" title="Permalink to this headline">¶</a></h3>
+<h3>Gitlab-CI (Docker)<a class="headerlink" href="#gitlab-ci-docker" title="Permalink to this heading">¶</a></h3>
 <p>To integrate php-cs-fixer as check into Gitlab-CI, you can use a configuration like this:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">php-cs-fixer</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/php-cs-fixer/php-cs-fixer:${FIXER_VERSION:-3-php8.3}</span>
 <span class="w">  </span><span class="nt">script</span><span class="p">:</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">php-cs-fixer check --diff --format=txt src</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">php-cs-fixer check --format gitlab</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain"># use `check .` if your repository not having paths configured in .php-cs-fixer[.dist].php</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="update">
-<h2>Update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h2>
-<section id="locally-1">
-<h3>Locally<a class="headerlink" href="#locally-1" title="Permalink to this headline">¶</a></h3>
+<h2>Update<a class="headerlink" href="#update" title="Permalink to this heading">¶</a></h2>
+<section id="id2">
+<h3>Locally<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">self-update</span></code> command tries to update <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code> itself:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar self-update</span>
 </pre></div>
 </div>
 </section>
-<section id="globally-manual-1">
-<h3>Globally (manual)<a class="headerlink" href="#globally-manual-1" title="Permalink to this headline">¶</a></h3>
+<section id="id3">
+<h3>Globally (manual)<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
 <p>You can update <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code> through this command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo php-cs-fixer self-update</span>
 </pre></div>
 </div>
 </section>
-<section id="globally-composer-1">
-<h3>Globally (Composer)<a class="headerlink" href="#globally-composer-1" title="Permalink to this headline">¶</a></h3>
+<section id="id4">
+<h3>Globally (Composer)<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
 <p>You can update <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code> through this command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">./composer.phar global update friendsofphp/php-cs-fixer</span>
 </pre></div>
 </div>
 </section>
-<section id="globally-homebrew-1">
-<h3>Globally (homebrew)<a class="headerlink" href="#globally-homebrew-1" title="Permalink to this headline">¶</a></h3>
+<section id="id5">
+<h3>Globally (homebrew)<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
 <p>You can update <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code> through this command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">brew upgrade php-cs-fixer</span>
 </pre></div>
 </div>
 </section>
-<section id="locally-phive-1">
-<h3>Locally (PHIVE)<a class="headerlink" href="#locally-phive-1" title="Permalink to this headline">¶</a></h3>
+<section id="id6">
+<h3>Locally (PHIVE)<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">phive update php-cs-fixer</span>
 </pre></div>
 </div>
