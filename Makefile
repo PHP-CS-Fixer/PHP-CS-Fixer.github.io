@@ -75,7 +75,7 @@ build-links: build-fetch-docs
 	find src -type f -name "*.rst" -print0 | xargs -0 perl -pi -e 's|`([^<]+)<([^>]+)\.rst>`_+|:doc:`\1<\2>`|g'
 	echo λλλ replace links to source files
 	PHP_CS_FIXER_VERSION=$(shell cat download/version.json | jq .number) && \
-	find src -type f -name "*.rst" -print0 | xargs -0 perl -pi -e "s|\`([^<]+)<(?:\./)?(?:\.\./)+src/([^>]+)\.php>\`_+|\`\1<https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v$${PHP_CS_FIXER_VERSION}/src/\2.php>\`_|g"
+	find src -type f -name "*.rst" -print0 | xargs -0 perl -pi -e "s|\`([^<]+)<(?:\./)?(?:\.\./)+(src\|tests)+/([^>]+)\.php>\`_+|\`\1<https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v$${PHP_CS_FIXER_VERSION}/\2/\3.php>\`_|g"
 
 .PHONY: build-install-deps
 .SILENT:
