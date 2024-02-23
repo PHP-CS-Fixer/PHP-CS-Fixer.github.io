@@ -14,7 +14,7 @@
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
       <link rel="stylesheet" href="../../../_static/" type="text/css">
-      <title>Rule ternary_operator_spaces - PHP Coding Standards Fixer</title>
+      <title>Rule phpdoc_array_type - PHP Coding Standards Fixer</title>
 
     <script>
       var _gaq = _gaq || [];
@@ -65,39 +65,38 @@
           </div>
           <div class="more_intro">
             
-  <section id="rule-ternary-operator-spaces">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">ternary_operator_spaces</span></code><a class="headerlink" href="#rule-ternary-operator-spaces" title="Permalink to this heading">¶</a></h1>
-<p>Standardize spaces around ternary operator.</p>
+  <section id="rule-phpdoc-array-type">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">phpdoc_array_type</span></code><a class="headerlink" href="#rule-phpdoc-array-type" title="Permalink to this heading">¶</a></h1>
+<p>PHPDoc <code class="docutils literal notranslate"><span class="pre">array&lt;T&gt;</span></code> type must be used instead of <code class="docutils literal notranslate"><span class="pre">T[]</span></code>.</p>
+<section id="warning">
+<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
+<section id="using-this-rule-is-risky">
+<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this heading">¶</a></h3>
+<p>Risky when using <code class="docutils literal notranslate"><span class="pre">T[]</span></code> in union types.</p>
+</section>
+</section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
-<span class="gd">-&lt;?php $a = $a   ?1 :0;</span>
-<span class="gi">+&lt;?php $a = $a ? 1 : 0;</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="gd">- * @param int[] $x</span>
+<span class="gd">- * @param string[][] $y</span>
+<span class="gi">+ * @param array&lt;int&gt; $x</span>
+<span class="gi">+ * @param array&lt;array&lt;string&gt;&gt; $y</span>
+<span class="w"> </span> */
 </pre></div>
 </div>
 </section>
 </section>
-<section id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
-<p>The rule is part of the following rule sets:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../../ruleSets/PER.html"><span class="doc">&#64;PER</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PER-CS.html"><span class="doc">&#64;PER-CS</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PER-CS2.0.html"><span class="doc">&#64;PER-CS2.0</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
-</ul>
-</section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.50.0/src/Fixer/Operator/TernaryOperatorSpacesFixer.php">PhpCsFixer\Fixer\Operator\TernaryOperatorSpacesFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.50.0/tests/Fixer/Operator/TernaryOperatorSpacesFixerTest.php">PhpCsFixer\Tests\Fixer\Operator\TernaryOperatorSpacesFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.50.0/src/Fixer/Phpdoc/PhpdocArrayTypeFixer.php">PhpCsFixer\Fixer\Phpdoc\PhpdocArrayTypeFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.50.0/tests/Fixer/Phpdoc/PhpdocArrayTypeFixerTest.php">PhpCsFixer\Tests\Fixer\Phpdoc\PhpdocArrayTypeFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
