@@ -42,7 +42,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Insomnia (v3.51.0)</strong> edition
+                <strong>15 Keys (v3.52.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -77,6 +77,10 @@ union types when parameters have a default <code class="docutils literal notrans
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
 <section id="use-nullable-type-declaration">
 <h3><code class="docutils literal notranslate"><span class="pre">use_nullable_type_declaration</span></code><a class="headerlink" href="#use-nullable-type-declaration" title="Permalink to this heading">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This option is deprecated and will be removed in the next major version. Behaviour will follow default one.</p>
+</div>
 <p>Whether to add or remove <code class="docutils literal notranslate"><span class="pre">?</span></code> or <code class="docutils literal notranslate"><span class="pre">|null</span></code> to parameters with a default
 <code class="docutils literal notranslate"><span class="pre">null</span></code> value.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
@@ -160,16 +164,17 @@ union types when parameters have a default <code class="docutils literal notrans
 </section>
 <section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
-<p>The rule is part of the following rule set:</p>
+<p>The rule is part of the following rule sets:</p>
 <ul class="simple">
+<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
 </ul>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.51.0/src/Fixer/FunctionNotation/NullableTypeDeclarationForDefaultNullValueFixer.php">PhpCsFixer\Fixer\FunctionNotation\NullableTypeDeclarationForDefaultNullValueFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.51.0/tests/Fixer/FunctionNotation/NullableTypeDeclarationForDefaultNullValueFixerTest.php">PhpCsFixer\Tests\Fixer\FunctionNotation\NullableTypeDeclarationForDefaultNullValueFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.52.0/src/Fixer/FunctionNotation/NullableTypeDeclarationForDefaultNullValueFixer.php">PhpCsFixer\Fixer\FunctionNotation\NullableTypeDeclarationForDefaultNullValueFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.52.0/tests/Fixer/FunctionNotation/NullableTypeDeclarationForDefaultNullValueFixerTest.php">PhpCsFixer\Tests\Fixer\FunctionNotation\NullableTypeDeclarationForDefaultNullValueFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
