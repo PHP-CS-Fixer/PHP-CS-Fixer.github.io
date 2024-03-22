@@ -52,62 +52,21 @@ blockquote
     background-color: #fff;
 }
 
-div.admonition-wrapper
+div.admonition
 {
     margin: 20px 0;
     padding: 15px;
     padding-right: 0;
     position: relative;
+    background-color: #F5F5F5;
 }
 
-.body-web div.admonition-wrapper
+.body-web div.admonition
 {
     overflow: auto;
 }
 
-div.admonition
-{
-  background-color: #F5F5F5;
-  padding: 35px 35px 13px 50px;
-}
-
-div.note
-{
-  background: url(../images/admonition/note.gif) no-repeat 0 0;
-  height: 51px; left: 0; position: absolute; top: 0; width: 51px;
-}
-
-div.caution
-{
-  background: url(../images/admonition/caution.gif) no-repeat 0 0;
-  height: 51px; left: 0; position: absolute; top: 0; width: 51px;
-}
-
-div.warning
-{
-  background: url(../images/admonition/warning.gif) no-repeat 0 0;
-  height: 51px; left: 0; position: absolute; top: 0; width: 51px;
-}
-
-div.tip
-{
-  background: url(../images/admonition/tip.gif) no-repeat 0 0;
-  height: 51px; left: 0; position: absolute; top: 0; width: 51px;
-}
-
-div.sidebar
-{
-  background: url(../images/admonition/sidebar.gif) no-repeat 0 0;
-  height: 51px; left: 0; position: absolute; top: 0; width: 51px;
-}
-
-div.seealso
-{
-    background: url(../images/admonition/seealso.png) no-repeat 0 0;
-    height: 51px; left: 0; position: absolute; top: 0; width: 51px;
-}
-
-div.admonition-wrapper p.admonition-title
+p.admonition-title
 {
     display: none;
 }
