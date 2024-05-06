@@ -14,7 +14,7 @@
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
       <link rel="stylesheet" href="../../../_static/" type="text/css">
-      <title>Rule new_with_braces - PHP Coding Standards Fixer</title> 
+      <title>Rule ordered_attributes - PHP Coding Standards Fixer</title> 
   </head>
   <body>
       <header class="hd">
@@ -50,29 +50,23 @@
           </div>
           <div class="more_intro">
             
-  <section id="rule-new-with-braces">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">new_with_braces</span></code><a class="headerlink" href="#rule-new-with-braces" title="Permalink to this heading">¶</a></h1>
-<p>All instances created with <code class="docutils literal notranslate"><span class="pre">new</span></code> keyword must (not) be followed by braces.</p>
-<section id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
-<section id="this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version">
-<h3>This rule is deprecated and will be removed in the next major version<a class="headerlink" href="#this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version" title="Permalink to this heading">¶</a></h3>
-<p>You should use <code class="docutils literal notranslate"><span class="pre">new_with_parentheses</span></code> instead.</p>
-</section>
-</section>
+  <section id="rule-ordered-attributes">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">ordered_attributes</span></code><a class="headerlink" href="#rule-ordered-attributes" title="Permalink to this heading">¶</a></h1>
+<p>Sorts attributes using the configured sort algorithm.</p>
 <section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
-<section id="anonymous-class">
-<h3><code class="docutils literal notranslate"><span class="pre">anonymous_class</span></code><a class="headerlink" href="#anonymous-class" title="Permalink to this heading">¶</a></h3>
-<p>Whether anonymous classes should be followed by parentheses.</p>
-<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+<section id="order">
+<h3><code class="docutils literal notranslate"><span class="pre">order</span></code><a class="headerlink" href="#order" title="Permalink to this heading">¶</a></h3>
+<p>A list of FQCNs of attributes defining the desired order used when custom
+sorting algorithm is configured.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">string[]</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></p>
 </section>
-<section id="named-class">
-<h3><code class="docutils literal notranslate"><span class="pre">named_class</span></code><a class="headerlink" href="#named-class" title="Permalink to this heading">¶</a></h3>
-<p>Whether named classes should be followed by parentheses.</p>
-<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+<section id="sort-algorithm">
+<h3><code class="docutils literal notranslate"><span class="pre">sort_algorithm</span></code><a class="headerlink" href="#sort-algorithm" title="Permalink to this heading">¶</a></h3>
+<p>How the attributes should be sorted.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code> and <code class="docutils literal notranslate"><span class="pre">'custom'</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'alpha'</span></code></p>
 </section>
 </section>
 <section id="examples">
@@ -84,34 +78,44 @@
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
 
-<span class="gd">-$x = new X;</span>
-<span class="gd">-$y = new class {};</span>
-<span class="gi">+$x = new X();</span>
-<span class="gi">+$y = new class() {};</span>
+<span class="gi">+#[Bar(3)]</span>
+<span class="gi">+#[Corge(a: &#39;test&#39;)]</span>
+<span class="w"> </span>#[Foo]
+<span class="gd">-#[Bar(3)]</span>
+<span class="w"> </span>#[Qux(new Bar(5))]
+<span class="gd">-#[Corge(a: &#39;test&#39;)]</span>
+<span class="w"> </span>class Sample1 {}
+
+<span class="w"> </span>#[
+<span class="gi">+    Bar(3),</span>
+<span class="gi">+    Corge(a: &#39;test&#39;),</span>
+<span class="w"> </span>    Foo,
+<span class="gd">-    Bar(3),</span>
+<span class="w"> </span>    Qux(new Bar(5)),
+<span class="gd">-    Corge(a: &#39;test&#39;),</span>
+<span class="w"> </span>]
+<span class="w"> </span>class Sample2 {}
 </pre></div>
 </div>
 </section>
 <section id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
-<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['anonymous_class'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'custom',</span> <span class="pre">'order'</span> <span class="pre">=&gt;</span> <span class="pre">['A\\B\\Qux',</span> <span class="pre">'A\\B\\Bar',</span> <span class="pre">'A\\B\\Corge']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
 
-<span class="gd">-$y = new class() {};</span>
-<span class="gi">+$y = new class {};</span>
-</pre></div>
-</div>
-</section>
-<section id="example-3">
-<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this heading">¶</a></h3>
-<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['named_class'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
-<span class="w"> </span>&lt;?php
+<span class="w"> </span>use A\B\Foo;
+<span class="w"> </span>use A\B\Bar as BarAlias;
+<span class="w"> </span>use A\B as AB;
 
-<span class="gd">-$x = new X();</span>
-<span class="gi">+$x = new X;</span>
+<span class="gd">-#[Foo]</span>
+<span class="gi">+#[AB\Qux(new Bar(5))]</span>
+<span class="w"> </span>#[BarAlias(3)]
+<span class="gd">-#[AB\Qux(new Bar(5))]</span>
+<span class="w"> </span>#[\A\B\Corge(a: &#39;test&#39;)]
+<span class="gi">+#[Foo]</span>
+<span class="w"> </span>class Sample1 {}
 </pre></div>
 </div>
 </section>
@@ -119,8 +123,8 @@
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.55.0/src/Fixer/Operator/NewWithBracesFixer.php">PhpCsFixer\Fixer\Operator\NewWithBracesFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.55.0/tests/Fixer/Operator/NewWithBracesFixerTest.php">PhpCsFixer\Tests\Fixer\Operator\NewWithBracesFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.55.0/src/Fixer/AttributeNotation/OrderedAttributesFixer.php">PhpCsFixer\Fixer\AttributeNotation\OrderedAttributesFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.55.0/tests/Fixer/AttributeNotation/OrderedAttributesFixerTest.php">PhpCsFixer\Tests\Fixer\AttributeNotation\OrderedAttributesFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
