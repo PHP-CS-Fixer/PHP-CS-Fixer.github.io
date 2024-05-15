@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>15 Keys Accelerate (v3.56.2)</strong> edition
+                <strong>7th Gear (v3.57.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -64,8 +64,20 @@ problems as possible.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix .</span>
 </pre></div>
 </div>
-<p>With some magic of tools provided by your OS, you can also fix files in parallel:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar list-files --config=.php-cs-fixer.dist.php | xargs -n 50 -P 8 php php-cs-fixer.phar fix --config=.php-cs-fixer.dist.php --path-mode intersection -v</span>
+<p>You can also fix files in parallel, utilising more CPU cores. You can do this by using config class that implements <code class="docutils literal notranslate"><span class="pre">PhpCsFixer\Runner\Parallel\ParallelConfig\ParallelAwareConfigInterface</span></code>, and use <code class="docutils literal notranslate"><span class="pre">setParallelConfig()</span></code> method. Recommended way is to utilise auto-detecting parallel configuration:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">())</span>
+    <span class="o">-&gt;</span><span class="na">setParallelConfig</span><span class="p">(</span><span class="nx">ParallelConfigFactory</span><span class="o">::</span><span class="na">detect</span><span class="p">())</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>However, in some case you may want to fine-tune parallelisation with explicit values (e.g. in environments where auto-detection does not work properly and suggests more cores than it should):</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">())</span>
+    <span class="o">-&gt;</span><span class="na">setParallelConfig</span><span class="p">(</span><span class="k">new</span> <span class="nx">ParallelConfig</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<span class="p">;</span>
 </pre></div>
 </div>
 <p>You can limit process to given file or files in a given directory and its subdirectories:</p>
@@ -120,6 +132,7 @@ using <code class="docutils literal notranslate"><span class="pre">-name_of_fixe
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">--dry-run</span></code> flag will run the fixer without making changes to your files (implicitly set when you use <code class="docutils literal notranslate"><span class="pre">check</span></code> command).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">--sequential</span></code> flag will enforce sequential analysis even if parallel config is provided.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">--diff</span></code> flag can be used to let the fixer output all the changes it makes in <code class="docutils literal notranslate"><span class="pre">udiff</span></code> format.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">--allow-risky</span></code> option (pass <code class="docutils literal notranslate"><span class="pre">yes</span></code> or <code class="docutils literal notranslate"><span class="pre">no</span></code>) allows you to set whether risky rules may run. Default value is taken from config file.
 A rule is considered risky if it could change code behaviour. By default no risky rules are run.</p>
