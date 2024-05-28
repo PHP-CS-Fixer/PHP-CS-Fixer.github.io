@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>7th Gear (v3.57.2)</strong> edition
+                <strong>7th Gear (v3.58.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -68,7 +68,7 @@ problems as possible.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
 <span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">())</span>
-    <span class="o">-&gt;</span><span class="na">setParallelConfig</span><span class="p">(</span><span class="nx">ParallelConfigFactory</span><span class="o">::</span><span class="na">detect</span><span class="p">())</span>
+    <span class="o">-&gt;</span><span class="na">setParallelConfig</span><span class="p">(</span><span class="nx">PhpCsFixer\Runner\Parallel\ParallelConfigFactory</span><span class="o">::</span><span class="na">detect</span><span class="p">())</span>
 <span class="p">;</span>
 </pre></div>
 </div>
@@ -76,7 +76,7 @@ problems as possible.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
 <span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">())</span>
-    <span class="o">-&gt;</span><span class="na">setParallelConfig</span><span class="p">(</span><span class="k">new</span> <span class="nx">ParallelConfig</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+    <span class="o">-&gt;</span><span class="na">setParallelConfig</span><span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Runner\Parallel\ParallelConfig</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
 <span class="p">;</span>
 </pre></div>
 </div>
