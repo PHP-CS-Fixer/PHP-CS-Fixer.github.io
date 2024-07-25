@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>7th Gear (v3.59.3)</strong> edition
+                <strong>7th Gear (v3.60.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -53,10 +53,21 @@
   <section id="rule-php-unit-attributes">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">php_unit_attributes</span></code><a class="headerlink" href="#rule-php-unit-attributes" title="Permalink to this heading">¶</a></h1>
 <p>PHPUnit attributes must be used over their respective PHPDoc-based annotations.</p>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
+<section id="keep-annotations">
+<h3><code class="docutils literal notranslate"><span class="pre">keep_annotations</span></code><a class="headerlink" href="#keep-annotations" title="Permalink to this heading">¶</a></h3>
+<p>Whether to keep annotations or not. This may be helpful for projects that
+support PHP before version 8 or PHPUnit before version 10.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</section>
+</section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
+<p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
@@ -79,12 +90,37 @@
 </pre></div>
 </div>
 </section>
+<section id="example-2">
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['keep_annotations'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="w"> </span> * @covers \VendorName\Foo
+<span class="w"> </span> * @internal
+<span class="w"> </span> */
+<span class="gi">+#[\PHPUnit\Framework\Attributes\CoversClass(\VendorName\Foo::class)]</span>
+<span class="w"> </span>final class FooTest extends TestCase {
+<span class="w"> </span>    /**
+<span class="w"> </span>     * @param int $expected
+<span class="w"> </span>     * @param int $actual
+<span class="w"> </span>     * @dataProvider giveMeSomeData
+<span class="w"> </span>     * @requires PHP 8.0
+<span class="w"> </span>     */
+<span class="gi">+    #[\PHPUnit\Framework\Attributes\DataProvider(&#39;giveMeSomeData&#39;)]</span>
+<span class="gi">+    #[\PHPUnit\Framework\Attributes\RequiresPhp(&#39;8.0&#39;)]</span>
+<span class="w"> </span>    public function testSomething($expected, $actual) {}
+<span class="w"> </span>}
+</pre></div>
+</div>
+</section>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.59.3/src/Fixer/PhpUnit/PhpUnitAttributesFixer.php">PhpCsFixer\Fixer\PhpUnit\PhpUnitAttributesFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.59.3/tests/Fixer/PhpUnit/PhpUnitAttributesFixerTest.php">PhpCsFixer\Tests\Fixer\PhpUnit\PhpUnitAttributesFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.60.0/src/Fixer/PhpUnit/PhpUnitAttributesFixer.php">PhpCsFixer\Fixer\PhpUnit\PhpUnitAttributesFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.60.0/tests/Fixer/PhpUnit/PhpUnitAttributesFixerTest.php">PhpCsFixer\Tests\Fixer\PhpUnit\PhpUnitAttributesFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
