@@ -14,7 +14,7 @@
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
       <link rel="stylesheet" href="../../../_static/" type="text/css">
-      <title>Rule no_unneeded_curly_braces - PHP Coding Standards Fixer</title> 
+      <title>Rule php_unit_assert_new_names - PHP Coding Standards Fixer</title> 
   </head>
   <body>
       <header class="hd">
@@ -50,69 +50,51 @@
           </div>
           <div class="more_intro">
             
-  <section id="rule-no-unneeded-curly-braces">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">no_unneeded_curly_braces</span></code><a class="headerlink" href="#rule-no-unneeded-curly-braces" title="Permalink to this heading">¶</a></h1>
-<p>Removes unneeded curly braces that are superfluous and aren’t part of a control
-structure’s body.</p>
+  <section id="rule-php-unit-assert-new-names">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">php_unit_assert_new_names</span></code><a class="headerlink" href="#rule-php-unit-assert-new-names" title="Permalink to this heading">¶</a></h1>
+<p>Rename deprecated PHPUnit assertions like <code class="docutils literal notranslate"><span class="pre">assertFileNotExists</span></code> to new methods
+like <code class="docutils literal notranslate"><span class="pre">assertFileDoesNotExist</span></code>.</p>
 <section id="warning">
 <h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
-<section id="this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version">
-<h3>This rule is deprecated and will be removed in the next major version<a class="headerlink" href="#this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version" title="Permalink to this heading">¶</a></h3>
-<p>You should use <code class="docutils literal notranslate"><span class="pre">no_unneeded_braces</span></code> instead.</p>
-</section>
-</section>
-<section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
-<section id="namespaces">
-<h3><code class="docutils literal notranslate"><span class="pre">namespaces</span></code><a class="headerlink" href="#namespaces" title="Permalink to this heading">¶</a></h3>
-<p>Remove unneeded curly braces from bracketed namespaces.</p>
-<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+<section id="using-this-rule-is-risky">
+<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this heading">¶</a></h3>
+<p>Fixer could be risky if one is overriding PHPUnit’s native methods.</p>
 </section>
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
-<p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
-<span class="gd">-&lt;?php {</span>
-<span class="gi">+&lt;?php</span>
-<span class="w"> </span>    echo 1;
-<span class="gd">-}</span>
-
-<span class="gi">+</span>
-<span class="w"> </span>switch ($b) {
-<span class="gd">-    case 1: {</span>
-<span class="gi">+    case 1:</span>
-<span class="w"> </span>        break;
-<span class="gd">-    }</span>
-<span class="gi">+</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase
+<span class="w"> </span>{
+<span class="w"> </span>    public function testSomeTest()
+<span class="w"> </span>    {
+<span class="gd">-        $this-&gt;assertFileNotExists(&quot;test.php&quot;);</span>
+<span class="gd">-        $this-&gt;assertNotIsWritable(&quot;path.php&quot;);</span>
+<span class="gi">+        $this-&gt;assertFileDoesNotExist(&quot;test.php&quot;);</span>
+<span class="gi">+        $this-&gt;assertIsNotWritable(&quot;path.php&quot;);</span>
+<span class="w"> </span>    }
 <span class="w"> </span>}
 </pre></div>
 </div>
 </section>
-<section id="example-2">
-<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
-<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['namespaces'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
-<span class="w"> </span>&lt;?php
-<span class="gd">-namespace Foo {</span>
-<span class="gi">+namespace Foo;</span>
-<span class="w"> </span>    function Bar(){}
-<span class="gd">-}</span>
-<span class="gi">+</span>
-</pre></div>
-</div>
 </section>
+<section id="rule-sets">
+<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
+<p>The rule is part of the following rule sets:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../ruleSets/PHPUnit91MigrationRisky.html"><span class="doc">&#64;PHPUnit91Migration:risky</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/PHPUnit100MigrationRisky.html"><span class="doc">&#64;PHPUnit100Migration:risky</span></a></p></li>
+</ul>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.61.0/src/Fixer/ControlStructure/NoUnneededCurlyBracesFixer.php">PhpCsFixer\Fixer\ControlStructure\NoUnneededCurlyBracesFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.61.0/tests/Fixer/ControlStructure/NoUnneededCurlyBracesFixerTest.php">PhpCsFixer\Tests\Fixer\ControlStructure\NoUnneededCurlyBracesFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.61.0/src/Fixer/PhpUnit/PhpUnitAssertNewNamesFixer.php">PhpCsFixer\Fixer\PhpUnit\PhpUnitAssertNewNamesFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.61.0/tests/Fixer/PhpUnit/PhpUnitAssertNewNamesFixerTest.php">PhpCsFixer\Tests\Fixer\PhpUnit\PhpUnitAssertNewNamesFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
