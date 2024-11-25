@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Space Sets (v3.64.0)</strong> edition
+                <strong>Persian Successor (v3.65.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -53,7 +53,7 @@
   <section id="rule-phpdoc-to-property-type">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">phpdoc_to_property_type</span></code><a class="headerlink" href="#rule-phpdoc-to-property-type" title="Permalink to this heading">¶</a></h1>
 <p>Takes <code class="docutils literal notranslate"><span class="pre">&#64;var</span></code> annotation of non-mixed types and adjusts accordingly the
-property signature. Requires PHP &gt;= 7.4.</p>
+property signature..</p>
 <section id="warning">
 <h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
 <section id="this-rule-is-experimental">
@@ -79,6 +79,12 @@ be required for newly typed properties that are read before initialization.</p>
 coercion system.</p>
 <p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+</section>
+<section id="types-map">
+<h3><code class="docutils literal notranslate"><span class="pre">types_map</span></code><a class="headerlink" href="#types-map" title="Permalink to this heading">¶</a></h3>
+<p>Map of custom types, e.g. template types from PHPStan.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array&lt;string,</span> <span class="pre">string&gt;</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></p>
 </section>
 <section id="union-types">
 <h3><code class="docutils literal notranslate"><span class="pre">union_types</span></code><a class="headerlink" href="#union-types" title="Permalink to this heading">¶</a></h3>
@@ -142,8 +148,8 @@ coercion system.</p>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.64.0/src/Fixer/FunctionNotation/PhpdocToPropertyTypeFixer.php">PhpCsFixer\Fixer\FunctionNotation\PhpdocToPropertyTypeFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.64.0/tests/Fixer/FunctionNotation/PhpdocToPropertyTypeFixerTest.php">PhpCsFixer\Tests\Fixer\FunctionNotation\PhpdocToPropertyTypeFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.65.0/src/Fixer/FunctionNotation/PhpdocToPropertyTypeFixer.php">PhpCsFixer\Fixer\FunctionNotation\PhpdocToPropertyTypeFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.65.0/tests/Fixer/FunctionNotation/PhpdocToPropertyTypeFixerTest.php">PhpCsFixer\Tests\Fixer\FunctionNotation\PhpdocToPropertyTypeFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>

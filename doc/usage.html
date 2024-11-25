@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Space Sets (v3.64.0)</strong> edition
+                <strong>Persian Successor (v3.65.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -239,7 +239,7 @@ rerun the command and start where you left. The cache mechanism also supports ex
 <span class="go">vendor/bin/php-cs-fixer check --config=.php-cs-fixer.dist.php -v --stop-on-violation --using-cache=no ${EXTRA_ARGS}</span>
 </pre></div>
 </div>
-<p>Where <code class="docutils literal notranslate"><span class="pre">$COMMIT_RANGE</span></code> is your range of commits, e.g. <code class="docutils literal notranslate"><span class="pre">$TRAVIS_COMMIT_RANGE</span></code> or <code class="docutils literal notranslate"><span class="pre">HEAD~..HEAD</span></code>.</p>
+<p>Where <code class="docutils literal notranslate"><span class="pre">$COMMIT_RANGE</span></code> is your range of commits, e.g. <code class="docutils literal notranslate"><span class="pre">${{github.event.before}}...${{github.event.after}}</span></code> or <code class="docutils literal notranslate"><span class="pre">HEAD~..HEAD</span></code>.</p>
 <section id="gitlab-code-quality-integration">
 <h3>GitLab Code Quality Integration<a class="headerlink" href="#gitlab-code-quality-integration" title="Permalink to this heading">¶</a></h3>
 <p>If you want to integrate with GitLab’s Code Quality feature, in order for report to contain correct line numbers, you
