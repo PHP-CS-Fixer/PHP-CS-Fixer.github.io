@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Persian Successor (v3.66.0)</strong> edition
+                <strong>Persian Successor (v3.66.1)</strong> edition
               </h1>
             </div>
           </div>
@@ -74,7 +74,7 @@ PHPUnit incompatibilities.</p>
 <h3><code class="docutils literal notranslate"><span class="pre">methods</span></code><a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h3>
 <p>Dictionary of <code class="docutils literal notranslate"><span class="pre">method</span></code> =&gt; <code class="docutils literal notranslate"><span class="pre">call_type</span></code> values that differ from the default
 strategy.</p>
-<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">list&lt;string&gt;</span></code></p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">array&lt;string,</span> <span class="pre">string&gt;</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></p>
 </section>
 </section>
@@ -95,6 +95,7 @@ strategy.</p>
 <span class="gi">+        static::assertSame(1, 2);</span>
 <span class="gi">+        static::assertSame(1, 2);</span>
 <span class="w"> </span>        static::assertSame(1, 2);
+<span class="w"> </span>        static::assertTrue(false);
 <span class="w"> </span>    }
 <span class="w"> </span>}
 </pre></div>
@@ -113,8 +114,32 @@ strategy.</p>
 <span class="w"> </span>        $this-&gt;assertSame(1, 2);
 <span class="gd">-        self::assertSame(1, 2);</span>
 <span class="gd">-        static::assertSame(1, 2);</span>
+<span class="gd">-        static::assertTrue(false);</span>
 <span class="gi">+        $this-&gt;assertSame(1, 2);</span>
 <span class="gi">+        $this-&gt;assertSame(1, 2);</span>
+<span class="gi">+        $this-&gt;assertTrue(false);</span>
+<span class="w"> </span>    }
+<span class="w"> </span>}
+</pre></div>
+</div>
+</section>
+<section id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this heading">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['methods'</span> <span class="pre">=&gt;</span> <span class="pre">['assertTrue'</span> <span class="pre">=&gt;</span> <span class="pre">'this']]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>final class MyTest extends \PHPUnit_Framework_TestCase
+<span class="w"> </span>{
+<span class="w"> </span>    public function testMe()
+<span class="w"> </span>    {
+<span class="gd">-        $this-&gt;assertSame(1, 2);</span>
+<span class="gd">-        self::assertSame(1, 2);</span>
+<span class="w"> </span>        static::assertSame(1, 2);
+<span class="gd">-        static::assertTrue(false);</span>
+<span class="gi">+        static::assertSame(1, 2);</span>
+<span class="gi">+        static::assertSame(1, 2);</span>
+<span class="gi">+        $this-&gt;assertTrue(false);</span>
 <span class="w"> </span>    }
 <span class="w"> </span>}
 </pre></div>
@@ -133,8 +158,8 @@ strategy.</p>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.66.0/src/Fixer/PhpUnit/PhpUnitTestCaseStaticMethodCallsFixer.php">PhpCsFixer\Fixer\PhpUnit\PhpUnitTestCaseStaticMethodCallsFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.66.0/tests/Fixer/PhpUnit/PhpUnitTestCaseStaticMethodCallsFixerTest.php">PhpCsFixer\Tests\Fixer\PhpUnit\PhpUnitTestCaseStaticMethodCallsFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.66.1/src/Fixer/PhpUnit/PhpUnitTestCaseStaticMethodCallsFixer.php">PhpCsFixer\Fixer\PhpUnit\PhpUnitTestCaseStaticMethodCallsFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.66.1/tests/Fixer/PhpUnit/PhpUnitTestCaseStaticMethodCallsFixerTest.php">PhpCsFixer\Tests\Fixer\PhpUnit\PhpUnitTestCaseStaticMethodCallsFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
