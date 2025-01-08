@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Persian Successor (v3.66.2)</strong> edition
+                <strong>Persian Successor (v3.67.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -127,6 +127,9 @@
 <ul>
 <li><p><a class="reference internal" href="attribute_notation/attribute_empty_parentheses.html"><span class="doc">attribute_empty_parentheses</span></a></p>
 <p>PHP attributes declared without arguments must (not) be followed by empty parentheses.</p>
+</li>
+<li><p><a class="reference internal" href="attribute_notation/general_attribute_remove.html"><span class="doc">general_attribute_remove</span></a></p>
+<p>Removes configured attributes by their respective FQN.</p>
 </li>
 <li><p><a class="reference internal" href="attribute_notation/ordered_attributes.html"><span class="doc">ordered_attributes</span></a></p>
 <p>Sorts attributes using the configured sort algorithm.</p>
@@ -785,7 +788,7 @@
 <p>Each line of multi-line DocComments must have an asterisk [PSR-5] and must be aligned with the first one.</p>
 </li>
 <li><p><a class="reference internal" href="phpdoc/general_phpdoc_annotation_remove.html"><span class="doc">general_phpdoc_annotation_remove</span></a></p>
-<p>Configured annotations should be omitted from PHPDoc.</p>
+<p>Removes configured annotations from PHPDoc.</p>
 </li>
 <li><p><a class="reference internal" href="phpdoc/general_phpdoc_tag_rename.html"><span class="doc">general_phpdoc_tag_rename</span></a></p>
 <p>Renames PHPDoc tags.</p>
@@ -824,16 +827,16 @@
 <p>PHPDoc <code class="docutils literal notranslate"><span class="pre">list</span></code> type must be used instead of <code class="docutils literal notranslate"><span class="pre">array</span></code> without a key.</p>
 </li>
 <li><p><a class="reference internal" href="phpdoc/phpdoc_no_access.html"><span class="doc">phpdoc_no_access</span></a></p>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;access</span></code> annotations should be omitted from PHPDoc.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;access</span></code> annotations must be removed from PHPDoc.</p>
 </li>
 <li><p><a class="reference internal" href="phpdoc/phpdoc_no_alias_tag.html"><span class="doc">phpdoc_no_alias_tag</span></a></p>
 <p>No alias PHPDoc tags should be used.</p>
 </li>
 <li><p><a class="reference internal" href="phpdoc/phpdoc_no_empty_return.html"><span class="doc">phpdoc_no_empty_return</span></a></p>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;return</span> <span class="pre">void</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;return</span> <span class="pre">null</span></code> annotations should be omitted from PHPDoc.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;return</span> <span class="pre">void</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;return</span> <span class="pre">null</span></code> annotations must be removed from PHPDoc.</p>
 </li>
 <li><p><a class="reference internal" href="phpdoc/phpdoc_no_package.html"><span class="doc">phpdoc_no_package</span></a></p>
-<p><code class="docutils literal notranslate"><span class="pre">&#64;package</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;subpackage</span></code> annotations should be omitted from PHPDoc.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;package</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;subpackage</span></code> annotations must be removed from PHPDoc.</p>
 </li>
 <li><p><a class="reference internal" href="phpdoc/phpdoc_no_useless_inheritdoc.html"><span class="doc">phpdoc_no_useless_inheritdoc</span></a></p>
 <p>Classy that does not inherit must not have <code class="docutils literal notranslate"><span class="pre">&#64;inheritdoc</span></code> tags.</p>

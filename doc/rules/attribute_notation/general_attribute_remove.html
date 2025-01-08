@@ -14,7 +14,7 @@
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
       <link rel="stylesheet" href="../../../_static/" type="text/css">
-      <title>Rule string_length_to_empty - PHP Coding Standards Fixer</title> 
+      <title>Rule general_attribute_remove - PHP Coding Standards Fixer</title> 
   </head>
   <body>
       <header class="hd">
@@ -50,42 +50,51 @@
           </div>
           <div class="more_intro">
             
-  <section id="rule-string-length-to-empty">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">string_length_to_empty</span></code><a class="headerlink" href="#rule-string-length-to-empty" title="Permalink to this heading">¶</a></h1>
-<p>String tests for empty must be done against <code class="docutils literal notranslate"><span class="pre">''</span></code>, not with <code class="docutils literal notranslate"><span class="pre">strlen</span></code>.</p>
-<section id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
-<section id="using-this-rule-is-risky">
-<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this heading">¶</a></h3>
-<p>Risky when <code class="docutils literal notranslate"><span class="pre">strlen</span></code> is overridden, when called using a <code class="docutils literal notranslate"><span class="pre">stringable</span></code> object,
-also no longer triggers warning when called using non-string(able).</p>
+  <section id="rule-general-attribute-remove">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">general_attribute_remove</span></code><a class="headerlink" href="#rule-general-attribute-remove" title="Permalink to this heading">¶</a></h1>
+<p>Removes configured attributes by their respective FQN.</p>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
+<section id="attributes">
+<h3><code class="docutils literal notranslate"><span class="pre">attributes</span></code><a class="headerlink" href="#attributes" title="Permalink to this heading">¶</a></h3>
+<p>List of FQNs of attributes for removal.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">list&lt;string&gt;</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">[]</span></code></p>
 </section>
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['attributes'</span> <span class="pre">=&gt;</span> <span class="pre">['\\A\\B\\Foo']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
-<span class="gd">-&lt;?php $a = 0 === strlen($b) || \STRLEN($c) &lt; 1;</span>
-<span class="gi">+&lt;?php $a = &#39;&#39; === $b || $c === &#39;&#39;;</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-#[\A\B\Foo]</span>
+<span class="w"> </span>function foo() {}
+</pre></div>
+</div>
+</section>
+<section id="example-2">
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['attributes'</span> <span class="pre">=&gt;</span> <span class="pre">['\\A\\B\\Foo',</span> <span class="pre">'A\\B\\Bar']]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>use A\B\Bar as BarAlias;
+
+<span class="gd">-#[\A\B\Foo]</span>
+<span class="gd">-#[BarAlias]</span>
+<span class="w"> </span>function foo() {}
 </pre></div>
 </div>
 </section>
 </section>
-<section id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
-<p>The rule is part of the following rule sets:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/SymfonyRisky.html"><span class="doc">&#64;Symfony:risky</span></a></p></li>
-</ul>
-</section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.67.0/src/Fixer/StringNotation/StringLengthToEmptyFixer.php">PhpCsFixer\Fixer\StringNotation\StringLengthToEmptyFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.67.0/tests/Fixer/StringNotation/StringLengthToEmptyFixerTest.php">PhpCsFixer\Tests\Fixer\StringNotation\StringLengthToEmptyFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.67.0/src/Fixer/AttributeNotation/GeneralAttributeRemoveFixer.php">PhpCsFixer\Fixer\AttributeNotation\GeneralAttributeRemoveFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.67.0/tests/Fixer/AttributeNotation/GeneralAttributeRemoveFixerTest.php">PhpCsFixer\Tests\Fixer\AttributeNotation\GeneralAttributeRemoveFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
