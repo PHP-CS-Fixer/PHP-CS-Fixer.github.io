@@ -14,7 +14,7 @@
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
       <link rel="stylesheet" href="../../../_static/" type="text/css">
-      <title>Rule php_unit_internal_class - PHP Coding Standards Fixer</title> 
+      <title>Rule php_unit_data_provider_method_order - PHP Coding Standards Fixer</title> 
   </head>
   <body>
       <header class="hd">
@@ -50,16 +50,16 @@
           </div>
           <div class="more_intro">
             
-  <section id="rule-php-unit-internal-class">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">php_unit_internal_class</span></code><a class="headerlink" href="#rule-php-unit-internal-class" title="Permalink to this heading">¶</a></h1>
-<p>All PHPUnit test classes should be marked as internal.</p>
+  <section id="rule-php-unit-data-provider-method-order">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">php_unit_data_provider_method_order</span></code><a class="headerlink" href="#rule-php-unit-data-provider-method-order" title="Permalink to this heading">¶</a></h1>
+<p>Data provider method must be placed after/before the last/first test where used.</p>
 <section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
-<section id="types">
-<h3><code class="docutils literal notranslate"><span class="pre">types</span></code><a class="headerlink" href="#types" title="Permalink to this heading">¶</a></h3>
-<p>What types of classes to mark as internal.</p>
-<p>Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['abstract',</span> <span class="pre">'final',</span> <span class="pre">'normal']</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">['normal',</span> <span class="pre">'final']</span></code></p>
+<section id="placement">
+<h3><code class="docutils literal notranslate"><span class="pre">placement</span></code><a class="headerlink" href="#placement" title="Permalink to this heading">¶</a></h3>
+<p>Where to place the data provider relative to the test where used.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'after'</span></code> and <code class="docutils literal notranslate"><span class="pre">'before'</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'after'</span></code></p>
 </section>
 </section>
 <section id="examples">
@@ -70,26 +70,31 @@
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
-<span class="gi">+</span>
-<span class="gi">+/**</span>
-<span class="gi">+ * @internal</span>
-<span class="gi">+ */</span>
-<span class="w"> </span>class MyTest extends TestCase {}
+<span class="w"> </span>class FooTest extends TestCase {
+<span class="gd">-    public function dataProvider() {}</span>
+<span class="w"> </span>    /**
+<span class="w"> </span>     * @dataProvider dataProvider
+<span class="w"> </span>     */
+<span class="w"> </span>    public function testSomething($expected, $actual) {}
+<span class="gi">+    public function dataProvider() {}</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </section>
 <section id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
-<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['types'</span> <span class="pre">=&gt;</span> <span class="pre">['final']]</span></code>.</p>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['placement'</span> <span class="pre">=&gt;</span> <span class="pre">'before']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
-<span class="w"> </span>class MyTest extends TestCase {}
-<span class="gi">+/**</span>
-<span class="gi">+ * @internal</span>
-<span class="gi">+ */</span>
-<span class="w"> </span>final class FinalTest extends TestCase {}
-<span class="w"> </span>abstract class AbstractTest extends TestCase {}
+<span class="w"> </span>class FooTest extends TestCase {
+<span class="gi">+    public function dataProvider() {}</span>
+<span class="w"> </span>    /**
+<span class="w"> </span>     * @dataProvider dataProvider
+<span class="w"> </span>     */
+<span class="w"> </span>    public function testSomething($expected, $actual) {}
+<span class="gd">-    public function dataProvider() {}</span>
+<span class="w"> </span>}
 </pre></div>
 </div>
 </section>
@@ -104,8 +109,8 @@
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.70.0/src/Fixer/PhpUnit/PhpUnitInternalClassFixer.php">PhpCsFixer\Fixer\PhpUnit\PhpUnitInternalClassFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.70.0/tests/Fixer/PhpUnit/PhpUnitInternalClassFixerTest.php">PhpCsFixer\Tests\Fixer\PhpUnit\PhpUnitInternalClassFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.70.0/src/Fixer/PhpUnit/PhpUnitDataProviderMethodOrderFixer.php">PhpCsFixer\Fixer\PhpUnit\PhpUnitDataProviderMethodOrderFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.70.0/tests/Fixer/PhpUnit/PhpUnitDataProviderMethodOrderFixerTest.php">PhpCsFixer\Tests\Fixer\PhpUnit\PhpUnitDataProviderMethodOrderFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>

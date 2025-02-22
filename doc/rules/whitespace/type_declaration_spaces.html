@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Persian Successor (v3.69.1)</strong> edition
+                <strong>Persian Successor (v3.70.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -60,7 +60,7 @@ arguments and properties.</p>
 <h3><code class="docutils literal notranslate"><span class="pre">elements</span></code><a class="headerlink" href="#elements" title="Permalink to this heading">¶</a></h3>
 <p>Structural elements where the spacing after the type declaration should be
 fixed.</p>
-<p>Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['function',</span> <span class="pre">'property']</span></code></p>
+<p>Allowed values: a subset of <code class="docutils literal notranslate"><span class="pre">['constant',</span> <span class="pre">'function',</span> <span class="pre">'property']</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">['function',</span> <span class="pre">'property']</span></code></p>
 </section>
 </section>
@@ -121,6 +121,20 @@ fixed.</p>
 </pre></div>
 </div>
 </section>
+<section id="example-4">
+<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this heading">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['elements'</span> <span class="pre">=&gt;</span> <span class="pre">['constant']]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>class Foo
+<span class="w"> </span>{
+<span class="gd">-    public  const string   BAR = &quot;&quot;;</span>
+<span class="gi">+    public  const string BAR = &quot;&quot;;</span>
+<span class="w"> </span>}
+</pre></div>
+</div>
+</section>
 </section>
 <section id="rule-sets">
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
@@ -133,8 +147,8 @@ fixed.</p>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.69.1/src/Fixer/Whitespace/TypeDeclarationSpacesFixer.php">PhpCsFixer\Fixer\Whitespace\TypeDeclarationSpacesFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.69.1/tests/Fixer/Whitespace/TypeDeclarationSpacesFixerTest.php">PhpCsFixer\Tests\Fixer\Whitespace\TypeDeclarationSpacesFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.70.0/src/Fixer/Whitespace/TypeDeclarationSpacesFixer.php">PhpCsFixer\Fixer\Whitespace\TypeDeclarationSpacesFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.70.0/tests/Fixer/Whitespace/TypeDeclarationSpacesFixerTest.php">PhpCsFixer\Tests\Fixer\Whitespace\TypeDeclarationSpacesFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
