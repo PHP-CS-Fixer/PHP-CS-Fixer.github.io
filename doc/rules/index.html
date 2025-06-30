@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Persian Successor (v3.75.0)</strong> edition
+                <strong>Kids Playground (v3.76.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -292,8 +292,11 @@
 <li><p><a class="reference internal" href="class_notation/single_trait_insert_per_statement.html"><span class="doc">single_trait_insert_per_statement</span></a></p>
 <p>Each trait <code class="docutils literal notranslate"><span class="pre">use</span></code> must be done as single statement.</p>
 </li>
+<li><p><a class="reference internal" href="class_notation/static_private_method.html"><span class="doc">static_private_method</span></a> <em>(risky)</em></p>
+<p>Converts private methods to <code class="docutils literal notranslate"><span class="pre">static</span></code> where possible.</p>
+</li>
 <li><p><a class="reference internal" href="class_notation/visibility_required.html"><span class="doc">visibility_required</span></a></p>
-<p>Visibility MUST be declared on all properties and methods; <code class="docutils literal notranslate"><span class="pre">abstract</span></code> and <code class="docutils literal notranslate"><span class="pre">final</span></code> MUST be declared before the visibility; <code class="docutils literal notranslate"><span class="pre">static</span></code> MUST be declared after the visibility.</p>
+<p>Classes, constants, properties, and methods MUST have visibility declared, and keyword modifiers MUST be in the following order: inheritance modifier (<code class="docutils literal notranslate"><span class="pre">abstract</span></code> or <code class="docutils literal notranslate"><span class="pre">final</span></code>), visibility modifier (<code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">protected</span></code>, or <code class="docutils literal notranslate"><span class="pre">private</span></code>), set-visibility modifier (<code class="docutils literal notranslate"><span class="pre">public(set)</span></code>, <code class="docutils literal notranslate"><span class="pre">protected(set)</span></code>, or <code class="docutils literal notranslate"><span class="pre">private(set)</span></code>), scope modifier (<code class="docutils literal notranslate"><span class="pre">static</span></code>), mutation modifier (<code class="docutils literal notranslate"><span class="pre">readonly</span></code>), type declaration, name.</p>
 </li>
 </ul>
 </section>
@@ -450,6 +453,9 @@
 </li>
 <li><p><a class="reference internal" href="function_notation/method_argument_space.html"><span class="doc">method_argument_space</span></a></p>
 <p>In method arguments and method call, there MUST NOT be a space before each comma and there MUST be one space after each comma. Argument lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument per line.</p>
+</li>
+<li><p><a class="reference internal" href="function_notation/multiline_promoted_properties.html"><span class="doc">multiline_promoted_properties</span></a> <em>(experimental)</em></p>
+<p>Promoted properties must be on separate lines.</p>
 </li>
 <li><p><a class="reference internal" href="function_notation/native_function_invocation.html"><span class="doc">native_function_invocation</span></a> <em>(risky)</em></p>
 <p>Add leading <code class="docutils literal notranslate"><span class="pre">\</span></code> before function invocation to speed up resolving.</p>
@@ -642,6 +648,9 @@
 </li>
 <li><p><a class="reference internal" href="operator/long_to_shorthand_operator.html"><span class="doc">long_to_shorthand_operator</span></a> <em>(risky)</em></p>
 <p>Shorthand notation for operators should be used if possible.</p>
+</li>
+<li><p><a class="reference internal" href="operator/new_expression_parentheses.html"><span class="doc">new_expression_parentheses</span></a></p>
+<p>All <code class="docutils literal notranslate"><span class="pre">new</span></code> expressions with a further call must (not) be wrapped in parentheses.</p>
 </li>
 <li><p><a class="reference internal" href="operator/new_with_braces.html"><span class="doc">new_with_braces</span></a> <em>(deprecated)</em></p>
 <p>All instances created with <code class="docutils literal notranslate"><span class="pre">new</span></code> keyword must (not) be followed by braces.</p>

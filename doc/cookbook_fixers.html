@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Persian Successor (v3.75.0)</strong> edition
+                <strong>Kids Playground (v3.76.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -66,7 +66,8 @@ in its actions. More on this later.</p>
 discouraged - it is meant only to give more people more chance to
 contribute, and to detect bugs (<a class="reference external" href="https://en.wikipedia.org/wiki/Linus%27s_Law">Linus’s Law</a>).</p>
 <p>If possible, try to get acquainted with the public interface for the
-<a class="reference external" href="./../src/Tokenizer/Tokens.php">Tokens class</a> and <a class="reference external" href="./../src/Tokenizer/Token.php">Token class</a> classes.</p>
+<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.76.0/src/Tokenizer/Tokens.php">PhpCsFixer\Tokenizer\Tokens</a> and
+<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.76.0/src/Tokenizer/Token.php">PhpCsFixer\Tokenizer\Token</a> classes.</p>
 </section>
 <section id="assumptions">
 <h2>Assumptions<a class="headerlink" href="#assumptions" title="Permalink to this heading">¶</a></h2>
@@ -342,8 +343,8 @@ one of them check if they are preceded by a semicolon symbol.</p>
 <p>Now you need to do some reading, because all these symbols obey a list
 defined by the PHP compiler. It is the <a class="reference external" href="https://php.net/manual/en/tokens.php">List of Parser Tokens</a>.</p>
 <p>Internally, PHP CS Fixer transforms some of PHP native tokens into custom
-tokens through the use of <a class="reference external" href="./../src/Tokenizer/Transformer">Transformers</a>, they aim to help you reason about the
-changes you may want to do in the fixers.</p>
+tokens through the use of <a class="reference external" href="./../src/Tokenizer/Transformer">PhpCsFixer\Tokenizer\Transformer</a> transformers,
+they aim to help you reason about the changes you may want to do in the fixers.</p>
 <p>So we can get to move forward, humor me in believing that comments have
 one symbol name: <code class="docutils literal notranslate"><span class="pre">T_COMMENT</span></code>.</p>
 </section>

@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Persian Successor (v3.75.0)</strong> edition
+                <strong>Kids Playground (v3.76.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -52,9 +52,12 @@
             
   <section id="rule-visibility-required">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">visibility_required</span></code><a class="headerlink" href="#rule-visibility-required" title="Permalink to this heading">¶</a></h1>
-<p>Visibility MUST be declared on all properties and methods; <code class="docutils literal notranslate"><span class="pre">abstract</span></code> and
-<code class="docutils literal notranslate"><span class="pre">final</span></code> MUST be declared before the visibility; <code class="docutils literal notranslate"><span class="pre">static</span></code> MUST be declared
-after the visibility.</p>
+<p>Classes, constants, properties, and methods MUST have visibility declared, and
+keyword modifiers MUST be in the following order: inheritance modifier
+(<code class="docutils literal notranslate"><span class="pre">abstract</span></code> or <code class="docutils literal notranslate"><span class="pre">final</span></code>), visibility modifier (<code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">protected</span></code>, or
+<code class="docutils literal notranslate"><span class="pre">private</span></code>), set-visibility modifier (<code class="docutils literal notranslate"><span class="pre">public(set)</span></code>, <code class="docutils literal notranslate"><span class="pre">protected(set)</span></code>, or
+<code class="docutils literal notranslate"><span class="pre">private(set)</span></code>), scope modifier (<code class="docutils literal notranslate"><span class="pre">static</span></code>), mutation modifier
+(<code class="docutils literal notranslate"><span class="pre">readonly</span></code>), type declaration, name.</p>
 <section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
 <section id="elements">
@@ -72,23 +75,110 @@ after the visibility.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
-<span class="w"> </span>class Sample
+<span class="w"> </span>abstract class ClassName
 <span class="w"> </span>{
-<span class="gd">-    var $a;</span>
-<span class="gd">-    static protected $var_foo2;</span>
-<span class="gi">+    public $a;</span>
-<span class="gi">+    protected static $var_foo2;</span>
+<span class="gd">-    const SAMPLE = 1;</span>
+<span class="gi">+    public const SAMPLE = 1;</span>
 
-<span class="gd">-    function A()</span>
-<span class="gi">+    public function A()</span>
-<span class="w"> </span>    {
-<span class="w"> </span>    }
+<span class="gd">-    var $a;</span>
+<span class="gi">+    public $a;</span>
+
+<span class="w"> </span>    protected string $foo;
+
+<span class="gd">-    static protected int $beep;</span>
+<span class="gi">+    protected static int $beep;</span>
+
+<span class="gd">-    static public final function bar() {}</span>
+<span class="gi">+    final public static function bar() {}</span>
+
+<span class="gd">-    protected abstract function zim();</span>
+<span class="gi">+    abstract protected function zim();</span>
+
+<span class="gd">-    function zex() {}</span>
+<span class="gi">+    public function zex() {}</span>
 <span class="w"> </span>}
 </pre></div>
 </div>
 </section>
 <section id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
+<p><em>Default</em> configuration.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>abstract class ClassName
+<span class="w"> </span>{
+<span class="gd">-    const SAMPLE = 1;</span>
+<span class="gi">+    public const SAMPLE = 1;</span>
+
+<span class="gd">-    var $a;</span>
+<span class="gi">+    public $a;</span>
+
+<span class="gd">-    readonly protected string $foo;</span>
+<span class="gi">+    protected readonly string $foo;</span>
+
+<span class="gd">-    static protected int $beep;</span>
+<span class="gi">+    protected static int $beep;</span>
+
+<span class="gd">-    static public final function bar() {}</span>
+<span class="gi">+    final public static function bar() {}</span>
+
+<span class="gd">-    protected abstract function zim();</span>
+<span class="gi">+    abstract protected function zim();</span>
+
+<span class="gd">-    function zex() {}</span>
+<span class="gi">+    public function zex() {}</span>
+<span class="w"> </span>}
+
+<span class="w"> </span>readonly final class ValueObject
+<span class="w"> </span>{
+<span class="w"> </span>    // ...
+<span class="w"> </span>}
+</pre></div>
+</div>
+</section>
+<section id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this heading">¶</a></h3>
+<p><em>Default</em> configuration.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>abstract class ClassName
+<span class="w"> </span>{
+<span class="gd">-    const SAMPLE = 1;</span>
+<span class="gi">+    public const SAMPLE = 1;</span>
+
+<span class="gd">-    var $a;</span>
+<span class="gi">+    public $a;</span>
+
+<span class="gd">-    protected abstract string $bar { get =&gt; &quot;a&quot;; set; }</span>
+<span class="gi">+    abstract protected string $bar { get =&gt; &quot;a&quot;; set; }</span>
+
+<span class="gd">-    readonly final protected string $foo;</span>
+<span class="gi">+    final protected readonly string $foo;</span>
+
+<span class="gd">-    static protected final int $beep;</span>
+<span class="gi">+    final protected static int $beep;</span>
+
+<span class="gd">-    static public final function bar() {}</span>
+<span class="gi">+    final public static function bar() {}</span>
+
+<span class="gd">-    protected abstract function zim();</span>
+<span class="gi">+    abstract protected function zim();</span>
+
+<span class="gd">-    function zex() {}</span>
+<span class="gi">+    public function zex() {}</span>
+<span class="w"> </span>}
+
+<span class="w"> </span>readonly final class ValueObject
+<span class="w"> </span>{
+<span class="w"> </span>    // ...
+<span class="w"> </span>}
+</pre></div>
+</div>
+</section>
+<section id="example-4">
+<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['elements'</span> <span class="pre">=&gt;</span> <span class="pre">['const']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -129,8 +219,8 @@ after the visibility.</p>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.75.0/src/Fixer/ClassNotation/VisibilityRequiredFixer.php">PhpCsFixer\Fixer\ClassNotation\VisibilityRequiredFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.75.0/tests/Fixer/ClassNotation/VisibilityRequiredFixerTest.php">PhpCsFixer\Tests\Fixer\ClassNotation\VisibilityRequiredFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.76.0/src/Fixer/ClassNotation/VisibilityRequiredFixer.php">PhpCsFixer\Fixer\ClassNotation\VisibilityRequiredFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.76.0/tests/Fixer/ClassNotation/VisibilityRequiredFixerTest.php">PhpCsFixer\Tests\Fixer\ClassNotation\VisibilityRequiredFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
