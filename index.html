@@ -69,6 +69,7 @@ projects. This tool does not only detect them, but also fixes them for you.</p>
 <li><p>PHP 8.1</p></li>
 <li><p>PHP 8.2</p></li>
 <li><p>PHP 8.3</p></li>
+<li><p>PHP 8.4</p></li>
 </ul>
 </section>
 <section id="documentation">
@@ -76,10 +77,10 @@ projects. This tool does not only detect them, but also fixes them for you.</p>
 <section id="installation">
 <h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h3>
 <p>The recommended way to install PHP CS Fixer is to use
-<a class="reference external" href="https://getcomposer.org/download/">Composer</a> in a dedicated <code class="docutils literal notranslate"><span class="pre">composer.json</span></code> file in your project, for example in
-the <code class="docutils literal notranslate"><span class="pre">tools/php-cs-fixer</span></code> directory:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir<span class="w"> </span>--parents<span class="w"> </span>tools/php-cs-fixer
-<span class="gp">$ </span>composer<span class="w"> </span>require<span class="w"> </span>--working-dir<span class="o">=</span>tools/php-cs-fixer<span class="w"> </span>friendsofphp/php-cs-fixer
+<a class="reference external" href="https://getcomposer.org/download/">Composer</a>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>friendsofphp/php-cs-fixer
+<span class="gp">$ </span><span class="c1">## or when facing conflicts in dependencies:</span>
+<span class="gp">$ </span>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>php-cs-fixer/shim
 </pre></div>
 </div>
 <p>For more details and other installation methods, see <a class="reference internal" href="doc/installation.html"><span class="doc">installation instructions</span></a>.</p>
@@ -90,16 +91,16 @@ the <code class="docutils literal notranslate"><span class="pre">tools/php-cs-fi
 <p>You can use pre-built Docker images to run <code class="docutils literal notranslate"><span class="pre">php-cs-fixer</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">$FIXER_VERSION</span></code> used in example above is an identifier of a release you want to use, which is based on Fixer and PHP versions combined. There are different tags for each Fixer’s SemVer level and PHP version with syntax <code class="docutils literal notranslate"><span class="pre">&lt;php-cs-fixer-version&gt;-php&lt;php-version&gt;</span></code>. For example:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">3.47.0-php7.4</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">3.47-php8.0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">3-php8.3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3.80.0-php8.4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3.80-php8.4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3-php8.4</span></code></p></li>
 </ul>
 </section>
 <section id="usage">
 <h3>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h3>
 <p>Assuming you installed PHP CS Fixer as instructed above, you can run
 the following command to fix the files PHP files in the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>tools/php-cs-fixer/vendor/bin/php-cs-fixer<span class="w"> </span>fix<span class="w"> </span>src
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>./vendor/bin/php-cs-fixer<span class="w"> </span>fix<span class="w"> </span>src
 </pre></div>
 </div>
 <p>See <a class="reference internal" href="doc/usage.html"><span class="doc">usage</span></a>, list of <a class="reference internal" href="doc/rules/index.html"><span class="doc">built-in rules</span></a>, list of <a class="reference internal" href="doc/ruleSets/index.html"><span class="doc">rule sets</span></a> and <a class="reference internal" href="doc/config.html"><span class="doc">configuration file</span></a> documentation for more
