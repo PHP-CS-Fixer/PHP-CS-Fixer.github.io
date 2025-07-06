@@ -21,6 +21,7 @@ Supported PHP Versions
 * PHP 8.1
 * PHP 8.2
 * PHP 8.3
+* PHP 8.4
 
 Documentation
 -------------
@@ -29,13 +30,14 @@ Installation
 ~~~~~~~~~~~~
 
 The recommended way to install PHP CS Fixer is to use
-`Composer <https://getcomposer.org/download/>`__ in a dedicated ``composer.json`` file in your project, for example in
-the ``tools/php-cs-fixer`` directory:
+`Composer <https://getcomposer.org/download/>`__:
 
 .. code:: console
 
-    $ mkdir --parents tools/php-cs-fixer
-    $ composer require --working-dir=tools/php-cs-fixer friendsofphp/php-cs-fixer
+    $ composer require --dev friendsofphp/php-cs-fixer
+    $ ## or when facing conflicts in dependencies:
+    $ composer require --dev php-cs-fixer/shim
+
 
 For more details and other installation methods, see `installation instructions <./doc/installation.rst>`__.
 
@@ -51,9 +53,9 @@ You can use pre-built Docker images to run ``php-cs-fixer``.
 
 ``$FIXER_VERSION`` used in example above is an identifier of a release you want to use, which is based on Fixer and PHP versions combined. There are different tags for each Fixer's SemVer level and PHP version with syntax ``<php-cs-fixer-version>-php<php-version>``. For example:
 
-* ``3.47.0-php7.4``
-* ``3.47-php8.0``
-* ``3-php8.3``
+* ``3.80.0-php8.4``
+* ``3.80-php8.4``
+* ``3-php8.4``
 
 Usage
 ~~~~~
@@ -63,7 +65,7 @@ the following command to fix the files PHP files in the ``src`` directory:
 
 .. code:: console
 
-    $ tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src
+    $ ./vendor/bin/php-cs-fixer fix src
 
 See `usage <./doc/usage.rst>`__, list of `built-in rules <./doc/rules/index.rst>`__, list of `rule sets <./doc/ruleSets/index.rst>`__ and `configuration file <./doc/config.rst>`__ documentation for more
 details.
