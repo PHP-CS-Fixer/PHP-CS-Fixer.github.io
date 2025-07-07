@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Alexander (v3.80.0)</strong> edition
+                <strong>Alexander (v3.81.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -65,7 +65,7 @@ problems as possible.</p>
 </pre></div>
 </div>
 <p>You can also fix files in parallel, utilising more CPU cores. You can do this by using config class that implements
-<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.80.0/src/ParallelAwareConfigInterface.php">PhpCsFixer\ParallelAwareConfigInterface</a>, and use <code class="docutils literal notranslate"><span class="pre">setParallelConfig()</span></code> method.
+<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.81.0/src/ParallelAwareConfigInterface.php">PhpCsFixer\ParallelAwareConfigInterface</a>, and use <code class="docutils literal notranslate"><span class="pre">setParallelConfig()</span></code> method.
 Recommended way is to utilise auto-detecting parallel configuration:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
@@ -256,10 +256,11 @@ rerun the command and start where you left. The cache mechanism also supports ex
 will need to use both <code class="docutils literal notranslate"><span class="pre">--format=gitlab</span></code> and <code class="docutils literal notranslate"><span class="pre">--diff</span></code> arguments.</p>
 </section>
 </section>
-<section id="environment-options">
-<h2>Environment options<a class="headerlink" href="#environment-options" title="Permalink to this heading">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">PHP_CS_FIXER_IGNORE_ENV</span></code> environment variable can be used to ignore any environment requirements.
-This includes requirements like missing PHP extensions, unsupported PHP versions or by using HHVM.</p>
+<section id="environment">
+<h2>Environment<a class="headerlink" href="#environment" title="Permalink to this heading">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">--allow-unsupported-php-version=yes</span></code> can be used to ignore any environment requirements.</p>
+<p>Also possible via <code class="docutils literal notranslate"><span class="pre">PHP_CS_FIXER_IGNORE_ENV</span></code> environment variable (deprecated),
+which also allows the Fixer to run with required PHP extensions missing.</p>
 <p>NOTE: Execution may be unstable when used.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">PHP_CS_FIXER_IGNORE_ENV=1 php php-cs-fixer.phar fix /path/to/dir</span>
 </pre></div>
