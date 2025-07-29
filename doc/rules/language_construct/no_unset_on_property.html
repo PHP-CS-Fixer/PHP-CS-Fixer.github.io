@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Alexander (v3.84.0)</strong> edition
+                <strong>Alexander (v3.85.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -60,7 +60,7 @@
 <p>Risky when relying on attributes to be removed using <code class="docutils literal notranslate"><span class="pre">unset</span></code> rather than be
 set to <code class="docutils literal notranslate"><span class="pre">null</span></code>. Changing variables to <code class="docutils literal notranslate"><span class="pre">null</span></code> instead of unsetting means these
 still show up when looping over class variables and reference properties remain
-unbroken. With PHP 7.4, this rule might introduce <code class="docutils literal notranslate"><span class="pre">null</span></code> assignments to
+unbroken. Since PHP 7.4, this rule might introduce <code class="docutils literal notranslate"><span class="pre">null</span></code> assignments to
 properties whose type declaration does not allow it.</p>
 </section>
 </section>
@@ -87,8 +87,8 @@ properties whose type declaration does not allow it.</p>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.84.0/src/Fixer/LanguageConstruct/NoUnsetOnPropertyFixer.php">PhpCsFixer\Fixer\LanguageConstruct\NoUnsetOnPropertyFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.84.0/tests/Fixer/LanguageConstruct/NoUnsetOnPropertyFixerTest.php">PhpCsFixer\Tests\Fixer\LanguageConstruct\NoUnsetOnPropertyFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.85.0/src/Fixer/LanguageConstruct/NoUnsetOnPropertyFixer.php">PhpCsFixer\Fixer\LanguageConstruct\NoUnsetOnPropertyFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.85.0/tests/Fixer/LanguageConstruct/NoUnsetOnPropertyFixerTest.php">PhpCsFixer\Tests\Fixer\LanguageConstruct\NoUnsetOnPropertyFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
