@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Alexander (v3.85.1)</strong> edition
+                <strong>Alexander (v3.86.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -56,7 +56,7 @@
 <section id="rules">
 <h2>Rules<a class="headerlink" href="#rules" title="Permalink to this heading">¶</a></h2>
 <ul>
-<li><p><a class="reference internal" href="PER-CS2.0.html"><span class="doc">&#64;PER-CS2.0</span></a></p></li>
+<li><p><a class="reference internal" href="PER-CS3.0.html"><span class="doc">&#64;PER-CS3.0</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/phpdoc/align_multiline_comment.html"><span class="doc">align_multiline_comment</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/alias/backtick_to_shell_exec.html"><span class="doc">backtick_to_shell_exec</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/operator/binary_operator_spaces.html"><span class="doc">binary_operator_spaces</span></a></p></li>
@@ -97,7 +97,7 @@
 <li><p><a class="reference internal" href="../rules/casing/magic_constant_casing.html"><span class="doc">magic_constant_casing</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/casing/magic_method_casing.html"><span class="doc">magic_method_casing</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/function_notation/method_argument_space.html"><span class="doc">method_argument_space</span></a> with config:</p>
-<p><code class="docutils literal notranslate"><span class="pre">['on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ignore']</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">['after_heredoc'</span> <span class="pre">=&gt;</span> <span class="pre">true,</span> <span class="pre">'on_multiline'</span> <span class="pre">=&gt;</span> <span class="pre">'ignore']</span></code></p>
 </li>
 <li><p><a class="reference internal" href="../rules/casing/native_function_casing.html"><span class="doc">native_function_casing</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/casing/native_type_declaration_casing.html"><span class="doc">native_type_declaration_casing</span></a></p></li>
@@ -133,9 +133,10 @@
 <li><p><a class="reference internal" href="../rules/import/no_unused_imports.html"><span class="doc">no_unused_imports</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/operator/no_useless_concat_operator.html"><span class="doc">no_useless_concat_operator</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/operator/no_useless_nullsafe_operator.html"><span class="doc">no_useless_nullsafe_operator</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/array_notation/no_whitespace_before_comma_in_array.html"><span class="doc">no_whitespace_before_comma_in_array</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/array_notation/no_whitespace_before_comma_in_array.html"><span class="doc">no_whitespace_before_comma_in_array</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['after_heredoc'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code></p>
+</li>
 <li><p><a class="reference internal" href="../rules/array_notation/normalize_index_brace.html"><span class="doc">normalize_index_brace</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/language_construct/nullable_type_declaration.html"><span class="doc">nullable_type_declaration</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/function_notation/nullable_type_declaration_for_default_null_value.html"><span class="doc">nullable_type_declaration_for_default_null_value</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/operator/object_operator_without_whitespace.html"><span class="doc">object_operator_without_whitespace</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/operator/operator_linebreak.html"><span class="doc">operator_linebreak</span></a> with config:</p>
@@ -143,9 +144,6 @@
 </li>
 <li><p><a class="reference internal" href="../rules/import/ordered_imports.html"><span class="doc">ordered_imports</span></a> with config:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['imports_order'</span> <span class="pre">=&gt;</span> <span class="pre">['class',</span> <span class="pre">'function',</span> <span class="pre">'const'],</span> <span class="pre">'sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'alpha']</span></code></p>
-</li>
-<li><p><a class="reference internal" href="../rules/class_notation/ordered_types.html"><span class="doc">ordered_types</span></a> with config:</p>
-<p><code class="docutils literal notranslate"><span class="pre">['null_adjustment'</span> <span class="pre">=&gt;</span> <span class="pre">'always_last',</span> <span class="pre">'sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'none']</span></code></p>
 </li>
 <li><p><a class="reference internal" href="../rules/php_unit/php_unit_fqcn_annotation.html"><span class="doc">php_unit_fqcn_annotation</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/php_unit/php_unit_method_casing.html"><span class="doc">php_unit_method_casing</span></a></p></li>
@@ -177,10 +175,10 @@
 <li><p><a class="reference internal" href="../rules/phpdoc/phpdoc_types_order.html"><span class="doc">phpdoc_types_order</span></a> with config:</p>
 <p><code class="docutils literal notranslate"><span class="pre">['null_adjustment'</span> <span class="pre">=&gt;</span> <span class="pre">'always_last',</span> <span class="pre">'sort_algorithm'</span> <span class="pre">=&gt;</span> <span class="pre">'none']</span></code></p>
 </li>
+<li><p><a class="reference internal" href="../rules/phpdoc/phpdoc_var_annotation_correct_order.html"><span class="doc">phpdoc_var_annotation_correct_order</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/phpdoc/phpdoc_var_without_name.html"><span class="doc">phpdoc_var_without_name</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/semicolon/semicolon_after_instruction.html"><span class="doc">semicolon_after_instruction</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/string_notation/simple_to_complex_string_variable.html"><span class="doc">simple_to_complex_string_variable</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/class_notation/single_class_element_per_statement.html"><span class="doc">single_class_element_per_statement</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/import/single_import_per_statement.html"><span class="doc">single_import_per_statement</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/comment/single_line_comment_spacing.html"><span class="doc">single_line_comment_spacing</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/comment/single_line_comment_style.html"><span class="doc">single_line_comment_style</span></a> with config:</p>
@@ -203,7 +201,6 @@
 </li>
 <li><p><a class="reference internal" href="../rules/array_notation/trim_array_spaces.html"><span class="doc">trim_array_spaces</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/whitespace/type_declaration_spaces.html"><span class="doc">type_declaration_spaces</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/whitespace/types_spaces.html"><span class="doc">types_spaces</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/operator/unary_operator_spaces.html"><span class="doc">unary_operator_spaces</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/array_notation/whitespace_after_comma_in_array.html"><span class="doc">whitespace_after_comma_in_array</span></a></p></li>
 <li><p><a class="reference internal" href="../rules/control_structure/yoda_style.html"><span class="doc">yoda_style</span></a></p></li>
