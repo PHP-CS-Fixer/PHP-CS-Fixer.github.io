@@ -2,7 +2,7 @@ PHP Coding Standards Fixer
 ==========================
 
 The PHP Coding Standards Fixer (PHP CS Fixer) tool fixes your code to follow standards;
-whether you want to follow PHP coding standards as defined in the PSR-1, PSR-2, etc.,
+whether you want to follow PHP coding standards as defined by `PER Coding Style <https://www.php-fig.org/per/coding-style/>`__,
 or other community driven ones like the Symfony one.
 You can **also** define your (team's) style through configuration.
 
@@ -32,7 +32,7 @@ Installation
 The recommended way to install PHP CS Fixer is to use
 `Composer <https://getcomposer.org/download/>`__:
 
-.. code:: console
+.. code:: sh
 
     $ composer require --dev friendsofphp/php-cs-fixer
     $ ## or when facing conflicts in dependencies:
@@ -48,9 +48,9 @@ PHP CS Fixer can be run in a Docker container.
 
 You can use pre-built Docker images to run ``php-cs-fixer``.
 
-.. code:: console
+.. code:: sh
 
-    docker run -v $(pwd):/code ghcr.io/php-cs-fixer/php-cs-fixer:${FIXER_VERSION:-3-php8.3} fix src
+    $ docker run -v $(pwd):/code ghcr.io/php-cs-fixer/php-cs-fixer:${FIXER_VERSION:-3-php8.3} fix src
 
 ``$FIXER_VERSION`` used in example above is an identifier of a release you want to use, which is based on Fixer and PHP versions combined. There are different tags for each Fixer's SemVer level and PHP version with syntax ``<php-cs-fixer-version>-php<php-version>``. For example:
 
@@ -64,7 +64,7 @@ Usage
 Assuming you installed PHP CS Fixer as instructed above, you can run
 the following command to fix the files PHP files in the ``src`` directory:
 
-.. code:: console
+.. code:: sh
 
     $ ./vendor/bin/php-cs-fixer fix src
 
