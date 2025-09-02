@@ -1,27 +1,24 @@
 PHP Coding Standards Fixer
 ==========================
 
-The PHP Coding Standards Fixer (PHP CS Fixer) tool fixes your code to follow standards;
-whether you want to follow PHP coding standards as defined by `PER Coding Style <https://www.php-fig.org/per/coding-style/>`__,
-or other community driven ones like the Symfony one.
-You can **also** define your (team's) style through configuration.
-
-It can modernize your code (like converting the ``pow`` function to the ``**`` operator on PHP 5.6)
-and (micro) optimize it.
+The PHP Coding Standards Fixer (PHP CS Fixer) fixes your code to follow the standards.
 
 If you are already using a linter to identify coding standards problems in your
 code, you know that fixing them by hand is tedious, especially on large
-projects. This tool does not only detect them, but also fixes them for you.
+projects. This tool not only detects them, but also fixes them for you.
+
+PHP CS Fixer has built-in rule sets, whether you want to follow PHP coding standards as defined by `PHP-FIG's PER Coding Style <https://www.php-fig.org/per/coding-style/>`__,
+a wide community like the `Symfony <https://symfony.com/doc/current/contributing/code/standards.html>`__,
+or `our opinionated one <./doc/ruleSets/PhpCsFixer.rst>`__.
+You can **also** define your (team's) style through the `configuration file <./doc/config.rst>`__.
+
+PHP CS Fixer can not only unify the style of your code, but also help to modernize your codebase towards
+newer PHP (e.g. `@PHP85Migration <./doc/ruleSets/PHP85Migration.rst>`__) and newer PHPUnit (e.g. `@PHPUnit91Migration:risky <./doc/ruleSets/PHPUnit91MigrationRisky.rst>`__).
 
 Supported PHP Versions
 ----------------------
 
-* PHP 7.4
-* PHP 8.0
-* PHP 8.1
-* PHP 8.2
-* PHP 8.3
-* PHP 8.4
+* PHP 7.4 - PHP 8.4
 
 Documentation
 -------------
@@ -39,24 +36,7 @@ The recommended way to install PHP CS Fixer is to use
     $ composer require --dev php-cs-fixer/shim
 
 
-For more details and other installation methods, see `installation instructions <./doc/installation.rst>`__.
-
-Run with Docker
-~~~~~~~~~~~~~~~
-
-PHP CS Fixer can be run in a Docker container.
-
-You can use pre-built Docker images to run ``php-cs-fixer``.
-
-.. code:: sh
-
-    $ docker run -v $(pwd):/code ghcr.io/php-cs-fixer/php-cs-fixer:${FIXER_VERSION:-3-php8.3} fix src
-
-``$FIXER_VERSION`` used in example above is an identifier of a release you want to use, which is based on Fixer and PHP versions combined. There are different tags for each Fixer's SemVer level and PHP version with syntax ``<php-cs-fixer-version>-php<php-version>``. For example:
-
-* ``3.80.0-php8.4``
-* ``3.80-php8.4``
-* ``3-php8.4``
+For more details and other installation methods (also with Docker or behind CI), see `installation instructions <./doc/installation.rst>`__.
 
 Usage
 ~~~~~
@@ -90,10 +70,8 @@ Dedicated plugins exist for:
 Community
 ---------
 
-The PHP CS Fixer is maintained on GitHub at
-https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.
-Bug reports and ideas about new features are welcome there.
+The PHP CS Fixer is maintained on GitHub at https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.
+Contributions, bug reports and ideas about new features are welcome there.
 
 You can reach us at https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/discussions about the
-project, configuration, possible improvements, ideas and questions, please
-visit us!
+project, configuration, possible improvements, ideas and questions.
