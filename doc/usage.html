@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Alexander (v3.86.0)</strong> edition
+                <strong>Alexander (v3.87.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -65,7 +65,7 @@ problems as possible.</p>
 </pre></div>
 </div>
 <p>You can also fix files in parallel, utilising more CPU cores. You can do this by using config class that implements
-<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.86.0/src/ParallelAwareConfigInterface.php">PhpCsFixer\ParallelAwareConfigInterface</a>, and use <code class="docutils literal notranslate"><span class="pre">setParallelConfig()</span></code> method.
+<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.87.0/src/ParallelAwareConfigInterface.php">PhpCsFixer\ParallelAwareConfigInterface</a>, and use <code class="docutils literal notranslate"><span class="pre">setParallelConfig()</span></code> method.
 Recommended way is to utilise auto-detecting parallel configuration:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
@@ -253,7 +253,7 @@ rerun the command and start where you left. The cache mechanism also supports ex
 <span class="go">&#39;</span>
 <span class="go">CHANGED_FILES=$(git diff --name-only --diff-filter=ACMRTUXB &quot;${COMMIT_RANGE}&quot;)</span>
 <span class="go">if ! echo &quot;${CHANGED_FILES}&quot; | grep -qE &quot;^(\\.php-cs-fixer(\\.dist)?\\.php|composer\\.lock)$&quot;; then EXTRA_ARGS=$(printf -- &#39;--path-mode=intersection\n--\n%s&#39; &quot;${CHANGED_FILES}&quot;); else EXTRA_ARGS=&#39;&#39;; fi</span>
-<span class="go">vendor/bin/php-cs-fixer check --config=.php-cs-fixer.dist.php -v --stop-on-violation --using-cache=no ${EXTRA_ARGS}</span>
+<span class="go">vendor/bin/php-cs-fixer check --config=.php-cs-fixer.dist.php -v --show-progress=dots --stop-on-violation --using-cache=no ${EXTRA_ARGS}</span>
 </pre></div>
 </div>
 <p>Where <code class="docutils literal notranslate"><span class="pre">$COMMIT_RANGE</span></code> is your range of commits, e.g. <code class="docutils literal notranslate"><span class="pre">${{github.event.before}}...${{github.event.after}}</span></code> or <code class="docutils literal notranslate"><span class="pre">HEAD~..HEAD</span></code>.</p>

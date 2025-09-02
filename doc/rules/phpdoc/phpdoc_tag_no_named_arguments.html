@@ -14,7 +14,7 @@
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
       <link rel="stylesheet" href="../../../_static/" type="text/css">
-      <title>Rule phpdoc_inline_tag_normalizer - PHP Coding Standards Fixer</title> 
+      <title>Rule phpdoc_tag_no_named_arguments - PHP Coding Standards Fixer</title> 
   </head>
   <body>
       <header class="hd">
@@ -50,16 +50,29 @@
           </div>
           <div class="more_intro">
             
-  <section id="rule-phpdoc-inline-tag-normalizer">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">phpdoc_inline_tag_normalizer</span></code><a class="headerlink" href="#rule-phpdoc-inline-tag-normalizer" title="Permalink to this heading">¶</a></h1>
-<p>Fixes PHPDoc inline tags.</p>
+  <section id="rule-phpdoc-tag-no-named-arguments">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">phpdoc_tag_no_named_arguments</span></code><a class="headerlink" href="#rule-phpdoc-tag-no-named-arguments" title="Permalink to this heading">¶</a></h1>
+<p>There must be <code class="docutils literal notranslate"><span class="pre">&#64;no-named-arguments</span></code> tag in PHPDoc of a
+class/enum/interface/trait.</p>
 <section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
-<section id="tags">
-<h3><code class="docutils literal notranslate"><span class="pre">tags</span></code><a class="headerlink" href="#tags" title="Permalink to this heading">¶</a></h3>
-<p>The list of tags to normalize.</p>
-<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">list&lt;string&gt;</span></code></p>
-<p>Default value: <code class="docutils literal notranslate"><span class="pre">['example',</span> <span class="pre">'id',</span> <span class="pre">'internal',</span> <span class="pre">'inheritdoc',</span> <span class="pre">'inheritdocs',</span> <span class="pre">'link',</span> <span class="pre">'source',</span> <span class="pre">'toc',</span> <span class="pre">'tutorial']</span></code></p>
+<section id="description">
+<h3><code class="docutils literal notranslate"><span class="pre">description</span></code><a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h3>
+<p>Description of the tag.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">string</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">''</span></code></p>
+</section>
+<section id="fix-attribute">
+<h3><code class="docutils literal notranslate"><span class="pre">fix_attribute</span></code><a class="headerlink" href="#fix-attribute" title="Permalink to this heading">¶</a></h3>
+<p>Whether to fix attribute classes.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+</section>
+<section id="fix-internal">
+<h3><code class="docutils literal notranslate"><span class="pre">fix_internal</span></code><a class="headerlink" href="#fix-internal" title="Permalink to this heading">¶</a></h3>
+<p>Whether to fix internal elements (marked with <code class="docutils literal notranslate"><span class="pre">&#64;internal</span></code>).</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
 </section>
 </section>
 <section id="examples">
@@ -70,45 +83,40 @@
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
-<span class="w"> </span>/**
-<span class="gd">- * @{TUTORIAL}</span>
-<span class="gd">- * {{ @link }}</span>
-<span class="gi">+ * {@TUTORIAL}</span>
-<span class="gi">+ * {@link}</span>
-<span class="w"> </span> * @inheritDoc
-<span class="w"> </span> */
+<span class="gi">+</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * @no-named-arguments</span>
+<span class="gi">+ */</span>
+<span class="w"> </span>class Foo
+<span class="w"> </span>{
+<span class="w"> </span>    public function bar(string $s) {}
+<span class="w"> </span>}
 </pre></div>
 </div>
 </section>
 <section id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
-<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['tags'</span> <span class="pre">=&gt;</span> <span class="pre">['TUTORIAL']]</span></code>.</p>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['description'</span> <span class="pre">=&gt;</span> <span class="pre">'Parameter</span> <span class="pre">names</span> <span class="pre">are</span> <span class="pre">not</span> <span class="pre">covered</span> <span class="pre">by</span> <span class="pre">the</span> <span class="pre">backward</span> <span class="pre">compatibility</span> <span class="pre">promise.']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
-<span class="w"> </span>/**
-<span class="gd">- * @{TUTORIAL}</span>
-<span class="gi">+ * {@TUTORIAL}</span>
-<span class="w"> </span> * {{ @link }}
-<span class="w"> </span> * @inheritDoc
-<span class="w"> </span> */
+<span class="gi">+</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * @no-named-arguments Parameter names are not covered by the backward compatibility promise.</span>
+<span class="gi">+ */</span>
+<span class="w"> </span>class Foo
+<span class="w"> </span>{
+<span class="w"> </span>    public function bar(string $s) {}
+<span class="w"> </span>}
 </pre></div>
 </div>
 </section>
 </section>
-<section id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
-<p>The rule is part of the following rule sets:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
-</ul>
-</section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.87.0/src/Fixer/Phpdoc/PhpdocInlineTagNormalizerFixer.php">PhpCsFixer\Fixer\Phpdoc\PhpdocInlineTagNormalizerFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.87.0/tests/Fixer/Phpdoc/PhpdocInlineTagNormalizerFixerTest.php">PhpCsFixer\Tests\Fixer\Phpdoc\PhpdocInlineTagNormalizerFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.87.0/src/Fixer/Phpdoc/PhpdocTagNoNamedArgumentsFixer.php">PhpCsFixer\Fixer\Phpdoc\PhpdocTagNoNamedArgumentsFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.87.0/tests/Fixer/Phpdoc/PhpdocTagNoNamedArgumentsFixerTest.php">PhpCsFixer\Tests\Fixer\Phpdoc\PhpdocTagNoNamedArgumentsFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
