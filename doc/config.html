@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Alexander (v3.87.2)</strong> edition
+                <strong>Folding Bike (v3.88.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -60,7 +60,7 @@
 </div>
 <p>It is also possible to provide command line options to customize rules, yet instead of using them,
 it’s recommended to save the project configuration in a <code class="docutils literal notranslate"><span class="pre">.php-cs-fixer.dist.php</span></code> file in the root directory of your project.
-The file must return an instance of <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.87.2/src/ConfigInterface.php">PhpCsFixer\ConfigInterface</a>
+The file must return an instance of <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.88.0/src/ConfigInterface.php">PhpCsFixer\ConfigInterface</a>
 which lets you configure the rules, the files and directories that
 need to be analyzed. You may also create <code class="docutils literal notranslate"><span class="pre">.php-cs-fixer.php</span></code> file, which is
 the local configuration that will be used instead of the project configuration. It
@@ -174,6 +174,20 @@ configure them in your config file.</p>
 <span class="p">;</span>
 </pre></div>
 </div>
+<p>It’s possible to register custom rule sets, which makes it easier to reuse custom configuration between multiple projects. If you have prepared rule set, you can register it, and then enable it in the rules. Custom rule sets (in this example <code class="docutils literal notranslate"><span class="pre">\MyNameSpace\MyRuleSetClass</span></code>) must implement <code class="docutils literal notranslate"><span class="pre">\PhpCsFixer\RuleSet\RuleSetDefinitionInterface</span></code>.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">())</span>
+    <span class="o">-&gt;</span><span class="na">registerCustomRuleSets</span><span class="p">([</span>
+        <span class="nx">MyNameSpace\MyRuleSetClass</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="c1">// It identifies itself as &#39;@MyRuleSet&#39;</span>
+    <span class="p">])</span>
+    <span class="o">-&gt;</span><span class="na">setRules</span><span class="p">([</span>
+        <span class="s1">&#39;@MyRuleSet&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+    <span class="p">])</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>ℹ️ If you use <code class="docutils literal notranslate"><span class="pre">\PhpCsFixer\ConfigInterface</span></code> implementation other than built-in one, make sure it implements <code class="docutils literal notranslate"><span class="pre">\PhpCsFixer\CustomRulesetsAwareConfigInterface</span></code>.</p>
 </section>
 </section>
 

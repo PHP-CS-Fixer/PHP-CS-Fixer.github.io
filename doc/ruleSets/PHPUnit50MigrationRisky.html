@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Alexander (v3.87.2)</strong> edition
+                <strong>Folding Bike (v3.88.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -53,8 +53,12 @@
   <section id="rule-set-phpunit50migration-risky">
 <h1>Rule set <code class="docutils literal notranslate"><span class="pre">&#64;PHPUnit50Migration:risky</span></code><a class="headerlink" href="#rule-set-phpunit50migration-risky" title="Permalink to this heading">¶</a></h1>
 <p>Rules to improve tests code for PHPUnit 5.0 compatibility.</p>
-<section id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
+<section id="warnings">
+<h2>Warnings<a class="headerlink" href="#warnings" title="Permalink to this heading">¶</a></h2>
+<section id="this-rule-set-is-deprecated-and-will-be-removed-in-the-next-major-version">
+<h3>This rule set is deprecated and will be removed in the next major version<a class="headerlink" href="#this-rule-set-is-deprecated-and-will-be-removed-in-the-next-major-version" title="Permalink to this heading">¶</a></h3>
+<p>You should use <code class="docutils literal notranslate"><span class="pre">&#64;PHPUnit5x0Migration:risky</span></code> instead.</p>
+</section>
 <section id="this-set-contains-rules-that-are-risky">
 <h3>This set contains rules that are risky<a class="headerlink" href="#this-set-contains-rules-that-are-risky" title="Permalink to this heading">¶</a></h3>
 <p>Using this rule set may lead to changes in your code’s logic and behaviour. Use it with caution and review changes before incorporating them into your code base.</p>
@@ -62,11 +66,8 @@
 </section>
 <section id="rules">
 <h2>Rules<a class="headerlink" href="#rules" title="Permalink to this heading">¶</a></h2>
-<ul>
-<li><p><a class="reference internal" href="PHPUnit48MigrationRisky.html"><span class="doc">&#64;PHPUnit48Migration:risky</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/php_unit/php_unit_dedicate_assert.html"><span class="doc">php_unit_dedicate_assert</span></a> with config:</p>
-<p><code class="docutils literal notranslate"><span class="pre">['target'</span> <span class="pre">=&gt;</span> <span class="pre">'5.0']</span></code></p>
-</li>
+<ul class="simple">
+<li><p><a class="reference internal" href="PHPUnit5x0MigrationRisky.html"><span class="doc">&#64;PHPUnit5x0Migration:risky</span></a></p></li>
 </ul>
 </section>
 </section>

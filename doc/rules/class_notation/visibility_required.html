@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Alexander (v3.87.2)</strong> edition
+                <strong>Folding Bike (v3.88.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -58,6 +58,13 @@ keyword modifiers MUST be in the following order: inheritance modifier
 <code class="docutils literal notranslate"><span class="pre">private</span></code>), set-visibility modifier (<code class="docutils literal notranslate"><span class="pre">public(set)</span></code>, <code class="docutils literal notranslate"><span class="pre">protected(set)</span></code>, or
 <code class="docutils literal notranslate"><span class="pre">private(set)</span></code>), scope modifier (<code class="docutils literal notranslate"><span class="pre">static</span></code>), mutation modifier
 (<code class="docutils literal notranslate"><span class="pre">readonly</span></code>), type declaration, name.</p>
+<section id="warning">
+<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
+<section id="this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version">
+<h3>This rule is deprecated and will be removed in the next major version<a class="headerlink" href="#this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version" title="Permalink to this heading">¶</a></h3>
+<p>You should use <code class="docutils literal notranslate"><span class="pre">modifier_keywords</span></code> instead.</p>
+</section>
+</section>
 <section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
 <section id="elements">
@@ -192,37 +199,11 @@ keyword modifiers MUST be in the following order: inheritance modifier
 </div>
 </section>
 </section>
-<section id="rule-sets">
-<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
-<p>The rule is part of the following rule sets:</p>
-<ul>
-<li><p><a class="reference internal" href="../../ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <em>(deprecated)</em></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PER-CS.html"><span class="doc">&#64;PER-CS</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PER-CS2.0.html"><span class="doc">&#64;PER-CS2.0</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PER-CS3.0.html"><span class="doc">&#64;PER-CS3.0</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PHP71Migration.html"><span class="doc">&#64;PHP71Migration</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PHP73Migration.html"><span class="doc">&#64;PHP73Migration</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PHP74Migration.html"><span class="doc">&#64;PHP74Migration</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PHP80Migration.html"><span class="doc">&#64;PHP80Migration</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PHP81Migration.html"><span class="doc">&#64;PHP81Migration</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PHP82Migration.html"><span class="doc">&#64;PHP82Migration</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PHP83Migration.html"><span class="doc">&#64;PHP83Migration</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PHP84Migration.html"><span class="doc">&#64;PHP84Migration</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PHP85Migration.html"><span class="doc">&#64;PHP85Migration</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PSR2.html"><span class="doc">&#64;PSR2</span></a> with config:</p>
-<p><code class="docutils literal notranslate"><span class="pre">['elements'</span> <span class="pre">=&gt;</span> <span class="pre">['method',</span> <span class="pre">'property']]</span></code></p>
-</li>
-<li><p><a class="reference internal" href="../../ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
-</ul>
-</section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.87.2/src/Fixer/ClassNotation/VisibilityRequiredFixer.php">PhpCsFixer\Fixer\ClassNotation\VisibilityRequiredFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.87.2/tests/Fixer/ClassNotation/VisibilityRequiredFixerTest.php">PhpCsFixer\Tests\Fixer\ClassNotation\VisibilityRequiredFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.88.0/src/Fixer/ClassNotation/VisibilityRequiredFixer.php">PhpCsFixer\Fixer\ClassNotation\VisibilityRequiredFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.88.0/tests/Fixer/ClassNotation/VisibilityRequiredFixerTest.php">PhpCsFixer\Tests\Fixer\ClassNotation\VisibilityRequiredFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>

@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Alexander (v3.87.2)</strong> edition
+                <strong>Folding Bike (v3.88.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -53,8 +53,12 @@
   <section id="rule-set-php70migration-risky">
 <h1>Rule set <code class="docutils literal notranslate"><span class="pre">&#64;PHP70Migration:risky</span></code><a class="headerlink" href="#rule-set-php70migration-risky" title="Permalink to this heading">¶</a></h1>
 <p>Rules to improve code for PHP 7.0 compatibility.</p>
-<section id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
+<section id="warnings">
+<h2>Warnings<a class="headerlink" href="#warnings" title="Permalink to this heading">¶</a></h2>
+<section id="this-rule-set-is-deprecated-and-will-be-removed-in-the-next-major-version">
+<h3>This rule set is deprecated and will be removed in the next major version<a class="headerlink" href="#this-rule-set-is-deprecated-and-will-be-removed-in-the-next-major-version" title="Permalink to this heading">¶</a></h3>
+<p>You should use <code class="docutils literal notranslate"><span class="pre">&#64;PHP7x0Migration:risky</span></code> instead.</p>
+</section>
 <section id="this-set-contains-rules-that-are-risky">
 <h3>This set contains rules that are risky<a class="headerlink" href="#this-set-contains-rules-that-are-risky" title="Permalink to this heading">¶</a></h3>
 <p>Using this rule set may lead to changes in your code’s logic and behaviour. Use it with caution and review changes before incorporating them into your code base.</p>
@@ -62,14 +66,8 @@
 </section>
 <section id="rules">
 <h2>Rules<a class="headerlink" href="#rules" title="Permalink to this heading">¶</a></h2>
-<ul>
-<li><p><a class="reference internal" href="PHP56MigrationRisky.html"><span class="doc">&#64;PHP56Migration:risky</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/function_notation/combine_nested_dirname.html"><span class="doc">combine_nested_dirname</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/strict/declare_strict_types.html"><span class="doc">declare_strict_types</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/basic/non_printable_character.html"><span class="doc">non_printable_character</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/alias/random_api_migration.html"><span class="doc">random_api_migration</span></a> with config:</p>
-<p><code class="docutils literal notranslate"><span class="pre">['replacements'</span> <span class="pre">=&gt;</span> <span class="pre">['mt_rand'</span> <span class="pre">=&gt;</span> <span class="pre">'random_int',</span> <span class="pre">'rand'</span> <span class="pre">=&gt;</span> <span class="pre">'random_int']]</span></code></p>
-</li>
+<ul class="simple">
+<li><p><a class="reference internal" href="PHP7x0MigrationRisky.html"><span class="doc">&#64;PHP7x0Migration:risky</span></a></p></li>
 </ul>
 </section>
 </section>

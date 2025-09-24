@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Alexander (v3.87.2)</strong> edition
+                <strong>Folding Bike (v3.88.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -86,26 +86,6 @@
 </section>
 <section id="example-2">
 <h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
-<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['param',</span> <span class="pre">'throws',</span> <span class="pre">'return']]</span></code>.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
-<span class="gi">+++ New</span>
-<span class="w"> </span>&lt;?php
-<span class="w"> </span>/**
-<span class="w"> </span> * Hello there!
-<span class="w"> </span> *
-<span class="gd">- * @throws Exception|RuntimeException foo</span>
-<span class="w"> </span> * @custom Test!
-<span class="gd">- * @return int  Return the number of changes.</span>
-<span class="w"> </span> * @param string $foo
-<span class="w"> </span> * @param bool   $bar Bar
-<span class="gi">+ * @throws Exception|RuntimeException foo</span>
-<span class="gi">+ * @return int  Return the number of changes.</span>
-<span class="w"> </span> */
-</pre></div>
-</div>
-</section>
-<section id="example-3">
-<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['param',</span> <span class="pre">'return',</span> <span class="pre">'throws']]</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -120,6 +100,26 @@
 <span class="w"> </span> * @param bool   $bar Bar
 <span class="gi">+ * @return int  Return the number of changes.</span>
 <span class="gi">+ * @throws Exception|RuntimeException foo</span>
+<span class="w"> </span> */
+</pre></div>
+</div>
+</section>
+<section id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this heading">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['order'</span> <span class="pre">=&gt;</span> <span class="pre">['param',</span> <span class="pre">'throws',</span> <span class="pre">'return']]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="w"> </span>/**
+<span class="w"> </span> * Hello there!
+<span class="w"> </span> *
+<span class="gd">- * @throws Exception|RuntimeException foo</span>
+<span class="w"> </span> * @custom Test!
+<span class="gd">- * @return int  Return the number of changes.</span>
+<span class="w"> </span> * @param string $foo
+<span class="w"> </span> * @param bool   $bar Bar
+<span class="gi">+ * @throws Exception|RuntimeException foo</span>
+<span class="gi">+ * @return int  Return the number of changes.</span>
 <span class="w"> </span> */
 </pre></div>
 </div>
@@ -161,8 +161,8 @@
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.87.2/src/Fixer/Phpdoc/PhpdocOrderFixer.php">PhpCsFixer\Fixer\Phpdoc\PhpdocOrderFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.87.2/tests/Fixer/Phpdoc/PhpdocOrderFixerTest.php">PhpCsFixer\Tests\Fixer\Phpdoc\PhpdocOrderFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.88.0/src/Fixer/Phpdoc/PhpdocOrderFixer.php">PhpCsFixer\Fixer\Phpdoc\PhpdocOrderFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.88.0/tests/Fixer/Phpdoc/PhpdocOrderFixerTest.php">PhpCsFixer\Tests\Fixer\Phpdoc\PhpdocOrderFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
