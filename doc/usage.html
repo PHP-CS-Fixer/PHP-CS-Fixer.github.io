@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Folding Bike (v3.88.2)</strong> edition
+                <strong>Folding Bike (v3.89.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -65,7 +65,7 @@ problems as possible.</p>
 </pre></div>
 </div>
 <p>You can also fix files in parallel, utilising more CPU cores. You can do this by using config class that implements
-<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.88.2/src/ParallelAwareConfigInterface.php">PhpCsFixer\ParallelAwareConfigInterface</a>, and use <code class="docutils literal notranslate"><span class="pre">setParallelConfig()</span></code> method.
+<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.89.0/src/ParallelAwareConfigInterface.php">PhpCsFixer\ParallelAwareConfigInterface</a>, and use <code class="docutils literal notranslate"><span class="pre">setParallelConfig()</span></code> method.
 Recommended way is to utilise auto-detecting parallel configuration:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
@@ -118,27 +118,16 @@ which will use the intersection of the paths from the config file and from the a
 <li><p><code class="docutils literal notranslate"><span class="pre">-vv</span></code>: very verbose</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-vvv</span></code>: debug</p></li>
 </ul>
-<p>The <code class="docutils literal notranslate"><span class="pre">--rules</span></code> option limits the rules to apply to the
-project:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix /path/to/project --rules=@PSR12</span>
+<p>The <code class="docutils literal notranslate"><span class="pre">--rules</span></code> option allows to explicitly select rules to use, overriding the default PSR-12 or your own project config:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix . --rules=line_ending,full_opening_tag,indentation_type</span>
 </pre></div>
 </div>
-<p>By default the <code class="docutils literal notranslate"><span class="pre">PSR12</span></code> rules are used. If the <code class="docutils literal notranslate"><span class="pre">--rules</span></code> option is used rules from config files are ignored.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">--rules</span></code> option lets you choose the exact rules to apply (the rule names must be separated by a comma):</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix /path/to/dir --rules=line_ending,full_opening_tag,indentation_type</span>
+<p>You can also exclude the rules you don’t want by placing a dash in front of the rule name, like <code class="docutils literal notranslate"><span class="pre">-name_of_fixer</span></code>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix . --rules=@Symfony,-@PSR1,-blank_line_before_statement,strict_comparison</span>
 </pre></div>
 </div>
-<p>You can also exclude the rules you don’t want by placing a dash in front of the rule name, if this is more convenient,
-using <code class="docutils literal notranslate"><span class="pre">-name_of_fixer</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix /path/to/dir --rules=-full_opening_tag,-indentation_type</span>
-</pre></div>
-</div>
-<p>When using combinations of exact and exclude rules, applying exact rules along with above excluded results:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix /path/to/project --rules=@Symfony,-@PSR1,-blank_line_before_statement,strict_comparison</span>
-</pre></div>
-</div>
-<p>Complete configuration for rules can be supplied using a <code class="docutils literal notranslate"><span class="pre">json</span></code> formatted string.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix /path/to/project --rules=&#39;{&quot;concat_space&quot;: {&quot;spacing&quot;: &quot;none&quot;}}&#39;</span>
+<p>Complete configuration for rules can be supplied using a <code class="docutils literal notranslate"><span class="pre">json</span></code> formatted string as well.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix . --rules=&#39;{&quot;concat_space&quot;: {&quot;spacing&quot;: &quot;none&quot;}}&#39;</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">--dry-run</span></code> flag will run the fixer without making changes to your files (implicitly set when you use <code class="docutils literal notranslate"><span class="pre">check</span></code> command).</p>
@@ -194,7 +183,7 @@ The only difference is that <code class="docutils literal notranslate"><span cla
 This can be useful e.g. in situations where the caching mechanism might not be available (CI, Docker) and distribute
 fixing across several processes might speedup the process.</p>
 <p>Note: You need to pass the config to the <code class="docutils literal notranslate"><span class="pre">fix</span></code> command, in order to make it work with several files being passed by <code class="docutils literal notranslate"><span class="pre">list-files</span></code>.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar list-files --config=.php-cs-fixer.dist.php | xargs -n 50 -P 8 php php-cs-fixer.phar fix --config=.php-cs-fixer.dist.php --path-mode intersection -v</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar list-files --config=.php-cs-fixer.dist.php | xargs -n 50 -P 8 php php-cs-fixer.phar fix --config=.php-cs-fixer.dist.php --path-mode=intersection -v</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -210,6 +199,18 @@ fixing across several processes might speedup the process.</p>
 </div>
 <p>To visualize all the rules that belong to a ruleset:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar describe @PSR2</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">--expand</span></code> option can be used to show all rules when describing a ruleset, including nested rulesets:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar describe @PSR2 --expand</span>
+</pre></div>
+</div>
+<p>You can also use the special <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> alias to describe the configuration currently in use:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar describe @</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">--config</span></code> option can be used to specify which config file to load:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar describe @ --config=.php-cs-fixer.dist.php</span>
 </pre></div>
 </div>
 </section>
