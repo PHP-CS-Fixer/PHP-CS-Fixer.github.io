@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Folding Bike (v3.89.0)</strong> edition
+                <strong>Folding Bike (v3.89.1)</strong> edition
               </h1>
             </div>
           </div>
@@ -66,18 +66,24 @@ in its actions. More on this later.</p>
 discouraged - it is meant only to give more people more chance to
 contribute, and to detect bugs (<a class="reference external" href="https://en.wikipedia.org/wiki/Linus%27s_Law">Linus’s Law</a>).</p>
 <p>If possible, try to get acquainted with the public interface for the
-<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.89.0/src/Tokenizer/Tokens.php">PhpCsFixer\Tokenizer\Tokens</a> and
-<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.89.0/src/Tokenizer/Token.php">PhpCsFixer\Tokenizer\Token</a> classes.</p>
+<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.89.1/src/Tokenizer/Tokens.php">PhpCsFixer\Tokenizer\Tokens</a> and
+<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.89.1/src/Tokenizer/Token.php">PhpCsFixer\Tokenizer\Token</a> classes.</p>
 </section>
 <section id="assumptions">
 <h2>Assumptions<a class="headerlink" href="#assumptions" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
+<li><p>You want to create a new fixer for PHP CS Fixer main repository.</p></li>
 <li><p>You are familiar with Test Driven Development.</p></li>
 <li><p>Forked PHP-CS-Fixer/PHP-CS-Fixer into your own GitHub Account.</p></li>
 <li><p>Cloned your forked repository locally.</p></li>
 <li><p>Installed the dependencies of PHP CS Fixer using <a class="reference external" href="https://getcomposer.org">Composer</a>.</p></li>
 <li><p>You have read <a class="reference external" href="./../CONTRIBUTING.md">CONTRIBUTING.md</a>.</p></li>
 </ul>
+<p>In case you want to create a custom fixer for your own use, you can
+follow this guide as well, but you will need to apply some changes on the go,
+for example use <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.89.1/src/Fixer/FixerInterface.php">PhpCsFixer\Fixer\FixerInterface</a>
+instead of <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.89.1/src/AbstractFixer.php">PhpCsFixer\AbstractFixer</a> (which is internal
+and not covered with BC promise).</p>
 </section>
 <section id="step-by-step">
 <h2>Step by step<a class="headerlink" href="#step-by-step" title="Permalink to this heading">¶</a></h2>
@@ -131,8 +137,8 @@ Put this content inside:</p>
 </pre></div>
 </div>
 <p>Note how the class and file name match. Also keep in mind that all
-fixers must implement <code class="docutils literal notranslate"><span class="pre">Fixer\FixerInterface</span></code>. In this case, the fixer is
-inheriting from <code class="docutils literal notranslate"><span class="pre">AbstractFixer</span></code>, which fulfills the interface with some
+fixers must implement <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.89.1/src/Fixer/FixerInterface.php">PhpCsFixer\Fixer\FixerInterface</a>. In this case, the fixer is
+inheriting from <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.89.1/src/AbstractFixer.php">PhpCsFixer\AbstractFixer</a>, which fulfills the interface with some
 default behavior.</p>
 <p>Now let us create the test file at
 <code class="docutils literal notranslate"><span class="pre">tests/Fixer/Comment/RemoveCommentsFixerTest.php</span></code>. Put this content inside:</p>
