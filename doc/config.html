@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Folding Bike (v3.89.2)</strong> edition
+                <strong>Folding Bike (v3.90.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -54,18 +54,22 @@
 <h1>Config file<a class="headerlink" href="#config-file" title="Permalink to this heading">¶</a></h1>
 <section id="no-config">
 <h2>No config<a class="headerlink" href="#no-config" title="Permalink to this heading">¶</a></h2>
-<p>It is possible to <em>not</em> have the config file. In that case, the default rule set (&#64;PSR12) will be applied, yet the path will need to be provided via CLI.</p>
+<p>It is possible to <em>not</em> have the config file. In that case, the default rule set (<code class="docutils literal notranslate"><span class="pre">&#64;PSR12</span></code> for v3, <code class="docutils literal notranslate"><span class="pre">&#64;auto</span></code> for v4) will be applied,
+and under v3, the path will need to be provided via CLI (defaults to <code class="docutils literal notranslate"><span class="pre">.</span></code> under v4).</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix .</span>
 </pre></div>
 </div>
-<p>It is also possible to provide command line options to customize rules, yet instead of using them,
+<p>While it is possible to provide command line options to configure rules,
 it’s recommended to save the project configuration in a <code class="docutils literal notranslate"><span class="pre">.php-cs-fixer.dist.php</span></code> file in the root directory of your project.
-The file must return an instance of <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.89.2/src/ConfigInterface.php">PhpCsFixer\ConfigInterface</a>
-which lets you configure the rules, the files and directories that
-need to be analysed. You may also create <code class="docutils literal notranslate"><span class="pre">.php-cs-fixer.php</span></code> file, which is
-the local configuration that will be used instead of the project configuration. It
-is a good practice to add that file into your <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file.
-With the <code class="docutils literal notranslate"><span class="pre">--config</span></code> option you can specify the path to the config file.</p>
+The file must return an instance of <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.90.0/src/ConfigInterface.php">PhpCsFixer\ConfigInterface</a>,
+which lets you configure the rules, finder (the files and directories that
+need to be analysed), select output format and even configure path to <code class="docutils literal notranslate"><span class="pre">PHP</span></code>.</p>
+<p>You may also create <code class="docutils literal notranslate"><span class="pre">.php-cs-fixer.php</span></code> file, which is
+the local configuration that will be used instead of the project configuration.
+You can use it to customize for your environment (like path to <code class="docutils literal notranslate"><span class="pre">PHP</span></code>) or preference (like output format or progress indicator),
+while ruleset / finder shall be re-imported from project configuration.
+It is a good practice to add that file into your <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file.</p>
+<p>With the <code class="docutils literal notranslate"><span class="pre">--config</span></code> option you can specify the path to the config file, when it is named differently.</p>
 </section>
 <section id="the-simplest-config">
 <h2>The simplest config<a class="headerlink" href="#the-simplest-config" title="Permalink to this heading">¶</a></h2>
