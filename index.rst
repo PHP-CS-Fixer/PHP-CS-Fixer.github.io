@@ -18,7 +18,7 @@ newer PHP (e.g. `@autoPHPMigration <./doc/ruleSets/AutoPHPMigration.rst>`__) and
 Supported PHP Versions
 ----------------------
 
-* PHP 7.4 - PHP 8.4
+* PHP 7.4 - PHP 8.5
 
 Documentation
 -------------
