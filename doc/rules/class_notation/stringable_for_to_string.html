@@ -14,7 +14,7 @@
     <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
       <link rel="stylesheet" href="../../../_static/" type="text/css">
-      <title>Rule no_blank_lines_after_class_opening - PHP Coding Standards Fixer</title> 
+      <title>Rule stringable_for_to_string - PHP Coding Standards Fixer</title> 
   </head>
   <body>
       <header class="hd">
@@ -50,9 +50,10 @@
           </div>
           <div class="more_intro">
             
-  <section id="rule-no-blank-lines-after-class-opening">
-<h1>Rule <code class="docutils literal notranslate"><span class="pre">no_blank_lines_after_class_opening</span></code><a class="headerlink" href="#rule-no-blank-lines-after-class-opening" title="Permalink to this heading">¶</a></h1>
-<p>There should be no empty lines after class opening brace.</p>
+  <section id="rule-stringable-for-to-string">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">stringable_for_to_string</span></code><a class="headerlink" href="#rule-stringable-for-to-string" title="Permalink to this heading">¶</a></h1>
+<p>A class that implements the <code class="docutils literal notranslate"><span class="pre">__toString()</span></code> method must explicitly implement
+the <code class="docutils literal notranslate"><span class="pre">Stringable</span></code> interface.</p>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
@@ -60,11 +61,12 @@
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
-<span class="w"> </span>final class Sample
+<span class="gd">-class Foo</span>
+<span class="gi">+class Foo implements \Stringable</span>
 <span class="w"> </span>{
-<span class="gd">-</span>
-<span class="w"> </span>    protected function foo()
+<span class="w"> </span>    public function __toString()
 <span class="w"> </span>    {
+<span class="w"> </span>        return &quot;Foo&quot;;
 <span class="w"> </span>    }
 <span class="w"> </span>}
 </pre></div>
@@ -75,15 +77,6 @@
 <h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
 <p>The rule is part of the following rule sets:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../ruleSets/PER.html"><span class="doc">&#64;PER</span></a> <em>(deprecated)</em></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PER-CS.html"><span class="doc">&#64;PER-CS</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PER-CS1.0.html"><span class="doc">&#64;PER-CS1.0</span></a> <em>(deprecated)</em></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PER-CS1x0.html"><span class="doc">&#64;PER-CS1x0</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PER-CS2.0.html"><span class="doc">&#64;PER-CS2.0</span></a> <em>(deprecated)</em></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PER-CS2x0.html"><span class="doc">&#64;PER-CS2x0</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PER-CS3.0.html"><span class="doc">&#64;PER-CS3.0</span></a> <em>(deprecated)</em></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PER-CS3x0.html"><span class="doc">&#64;PER-CS3x0</span></a></p></li>
-<li><p><a class="reference internal" href="../../ruleSets/PSR12.html"><span class="doc">&#64;PSR12</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/PhpCsFixer.html"><span class="doc">&#64;PhpCsFixer</span></a></p></li>
 <li><p><a class="reference internal" href="../../ruleSets/Symfony.html"><span class="doc">&#64;Symfony</span></a></p></li>
 </ul>
@@ -91,8 +84,8 @@
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.0/src/Fixer/ClassNotation/NoBlankLinesAfterClassOpeningFixer.php">PhpCsFixer\Fixer\ClassNotation\NoBlankLinesAfterClassOpeningFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.0/tests/Fixer/ClassNotation/NoBlankLinesAfterClassOpeningFixerTest.php">PhpCsFixer\Tests\Fixer\ClassNotation\NoBlankLinesAfterClassOpeningFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.0/src/Fixer/ClassNotation/StringableForToStringFixer.php">PhpCsFixer\Fixer\ClassNotation\StringableForToStringFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.0/tests/Fixer/ClassNotation/StringableForToStringFixerTest.php">PhpCsFixer\Tests\Fixer\ClassNotation\StringableForToStringFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
