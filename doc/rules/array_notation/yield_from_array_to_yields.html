@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Folding Bike (v3.91.0)</strong> edition
+                <strong>Folding Bike (v3.91.1)</strong> edition
               </h1>
             </div>
           </div>
@@ -60,8 +60,8 @@ dimension.</p>
 </section>
 <section id="warning">
 <h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
-<section id="using-this-rule-is-risky">
-<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this heading">¶</a></h3>
+<section id="this-rule-is-risky">
+<h3>This rule is RISKY<a class="headerlink" href="#this-rule-is-risky" title="Permalink to this heading">¶</a></h3>
 <p>The rule is risky in case of <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">from</span></code> being used multiple times within
 single function scope, while using list-alike data sources (e.g. <code class="docutils literal notranslate"><span class="pre">function</span>
 <span class="pre">foo()</span> <span class="pre">{</span> <span class="pre">yield</span> <span class="pre">from</span> <span class="pre">[&quot;a&quot;];</span> <span class="pre">yield</span> <span class="pre">from</span> <span class="pre">[&quot;b&quot;];</span> <span class="pre">}</span></code>). It only matters when consuming
@@ -101,8 +101,8 @@ after applying this rule.</p>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.0/src/Fixer/ArrayNotation/YieldFromArrayToYieldsFixer.php">PhpCsFixer\Fixer\ArrayNotation\YieldFromArrayToYieldsFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.0/tests/Fixer/ArrayNotation/YieldFromArrayToYieldsFixerTest.php">PhpCsFixer\Tests\Fixer\ArrayNotation\YieldFromArrayToYieldsFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.1/src/Fixer/ArrayNotation/YieldFromArrayToYieldsFixer.php">PhpCsFixer\Fixer\ArrayNotation\YieldFromArrayToYieldsFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.1/tests/Fixer/ArrayNotation/YieldFromArrayToYieldsFixerTest.php">PhpCsFixer\Tests\Fixer\ArrayNotation\YieldFromArrayToYieldsFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>

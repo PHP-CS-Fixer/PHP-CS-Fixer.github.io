@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Folding Bike (v3.91.0)</strong> edition
+                <strong>Folding Bike (v3.91.1)</strong> edition
               </h1>
             </div>
           </div>
@@ -54,21 +54,27 @@
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">phpdoc_to_param_type</span></code><a class="headerlink" href="#rule-phpdoc-to-param-type" title="Permalink to this heading">¶</a></h1>
 <p>Takes <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> annotations of non-mixed types and adjusts accordingly the
 function signature.</p>
-<section id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
+<section id="warnings">
+<h2>Warnings<a class="headerlink" href="#warnings" title="Permalink to this heading">¶</a></h2>
 <section id="this-rule-is-experimental">
-<h3>This rule is experimental<a class="headerlink" href="#this-rule-is-experimental" title="Permalink to this heading">¶</a></h3>
-<p>Rule is not covered with backward compatibility promise, use it at your own
-risk. Rule’s behaviour may be changed at any point, including rule’s name; its
-options’ names, availability and allowed values; its default configuration. Rule
-may be even removed without prior notice. Feel free to provide feedback and help
-with determining final state of the rule.</p>
+<h3>This rule is EXPERIMENTAL<a class="headerlink" href="#this-rule-is-experimental" title="Permalink to this heading">¶</a></h3>
+<p>Rule is not covered with backward compatibility promise and may produce unstable
+or unexpected results, use it at your own risk. Rule’s behaviour may be changed
+at any point, including rule’s name; its options’ names, availability and
+allowed values; its default configuration. Rule may be even removed without
+prior notice. Feel free to provide feedback and help with determining final
+state of the rule.</p>
 </section>
-<section id="using-this-rule-is-risky">
-<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this heading">¶</a></h3>
+<section id="this-rule-is-risky">
+<h3>This rule is RISKY<a class="headerlink" href="#this-rule-is-risky" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">&#64;param</span></code> annotation is mandatory for the fixer to make changes, signatures
 of methods without it (no docblock, inheritdocs) will not be fixed. Manual
 actions are required if inherited signatures are not properly documented.</p>
+</section>
+<section id="this-rule-is-configurable">
+<h3>This rule is CONFIGURABLE<a class="headerlink" href="#this-rule-is-configurable" title="Permalink to this heading">¶</a></h3>
+<p>You can configure this rule using the following options: <code class="docutils literal notranslate"><span class="pre">scalar_types</span></code>,
+<code class="docutils literal notranslate"><span class="pre">types_map</span></code>, <code class="docutils literal notranslate"><span class="pre">union_types</span></code>.</p>
 </section>
 </section>
 <section id="configuration">
@@ -146,8 +152,8 @@ coercion system.</p>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.0/src/Fixer/FunctionNotation/PhpdocToParamTypeFixer.php">PhpCsFixer\Fixer\FunctionNotation\PhpdocToParamTypeFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.0/tests/Fixer/FunctionNotation/PhpdocToParamTypeFixerTest.php">PhpCsFixer\Tests\Fixer\FunctionNotation\PhpdocToParamTypeFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.1/src/Fixer/FunctionNotation/PhpdocToParamTypeFixer.php">PhpCsFixer\Fixer\FunctionNotation\PhpdocToParamTypeFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.1/tests/Fixer/FunctionNotation/PhpdocToParamTypeFixerTest.php">PhpCsFixer\Tests\Fixer\FunctionNotation\PhpdocToParamTypeFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>

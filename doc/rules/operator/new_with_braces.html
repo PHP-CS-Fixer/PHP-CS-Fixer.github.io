@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Folding Bike (v3.91.0)</strong> edition
+                <strong>Folding Bike (v3.91.1)</strong> edition
               </h1>
             </div>
           </div>
@@ -53,11 +53,16 @@
   <section id="rule-new-with-braces">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">new_with_braces</span></code><a class="headerlink" href="#rule-new-with-braces" title="Permalink to this heading">¶</a></h1>
 <p>All instances created with <code class="docutils literal notranslate"><span class="pre">new</span></code> keyword must (not) be followed by braces.</p>
-<section id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
-<section id="this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version">
-<h3>This rule is deprecated and will be removed in the next major version<a class="headerlink" href="#this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version" title="Permalink to this heading">¶</a></h3>
+<section id="warnings">
+<h2>Warnings<a class="headerlink" href="#warnings" title="Permalink to this heading">¶</a></h2>
+<section id="this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version-4-0">
+<h3>This rule is DEPRECATED and will be removed in the next major version 4.0<a class="headerlink" href="#this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version-4-0" title="Permalink to this heading">¶</a></h3>
 <p>You should use <code class="docutils literal notranslate"><span class="pre">new_with_parentheses</span></code> instead.</p>
+</section>
+<section id="this-rule-is-configurable">
+<h3>This rule is CONFIGURABLE<a class="headerlink" href="#this-rule-is-configurable" title="Permalink to this heading">¶</a></h3>
+<p>You can configure this rule using the following options: <code class="docutils literal notranslate"><span class="pre">anonymous_class</span></code>,
+<code class="docutils literal notranslate"><span class="pre">named_class</span></code>.</p>
 </section>
 </section>
 <section id="configuration">
@@ -119,8 +124,8 @@
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.0/src/Fixer/Operator/NewWithBracesFixer.php">PhpCsFixer\Fixer\Operator\NewWithBracesFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.0/tests/Fixer/Operator/NewWithBracesFixerTest.php">PhpCsFixer\Tests\Fixer\Operator\NewWithBracesFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.1/src/Fixer/Operator/NewWithBracesFixer.php">PhpCsFixer\Fixer\Operator\NewWithBracesFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.1/tests/Fixer/Operator/NewWithBracesFixerTest.php">PhpCsFixer\Tests\Fixer\Operator\NewWithBracesFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>

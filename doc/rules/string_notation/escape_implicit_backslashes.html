@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Folding Bike (v3.91.0)</strong> edition
+                <strong>Folding Bike (v3.91.1)</strong> edition
               </h1>
             </div>
           </div>
@@ -68,11 +68,16 @@ ensure that all backslashes are escaped. Both single and double backslashes are
 allowed in single-quoted strings, so the purpose in this context is mainly to
 have a uniformed way to have them written all over the codebase.</p>
 </section>
-<section id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
-<section id="this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version">
-<h3>This rule is deprecated and will be removed in the next major version<a class="headerlink" href="#this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version" title="Permalink to this heading">¶</a></h3>
+<section id="warnings">
+<h2>Warnings<a class="headerlink" href="#warnings" title="Permalink to this heading">¶</a></h2>
+<section id="this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version-4-0">
+<h3>This rule is DEPRECATED and will be removed in the next major version 4.0<a class="headerlink" href="#this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version-4-0" title="Permalink to this heading">¶</a></h3>
 <p>You should use <code class="docutils literal notranslate"><span class="pre">string_implicit_backslashes</span></code> instead.</p>
+</section>
+<section id="this-rule-is-configurable">
+<h3>This rule is CONFIGURABLE<a class="headerlink" href="#this-rule-is-configurable" title="Permalink to this heading">¶</a></h3>
+<p>You can configure this rule using the following options: <code class="docutils literal notranslate"><span class="pre">double_quoted</span></code>,
+<code class="docutils literal notranslate"><span class="pre">heredoc_syntax</span></code>, <code class="docutils literal notranslate"><span class="pre">single_quoted</span></code>.</p>
 </section>
 </section>
 <section id="configuration">
@@ -177,8 +182,8 @@ have a uniformed way to have them written all over the codebase.</p>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.0/src/Fixer/StringNotation/EscapeImplicitBackslashesFixer.php">PhpCsFixer\Fixer\StringNotation\EscapeImplicitBackslashesFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.0/tests/Fixer/StringNotation/EscapeImplicitBackslashesFixerTest.php">PhpCsFixer\Tests\Fixer\StringNotation\EscapeImplicitBackslashesFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.1/src/Fixer/StringNotation/EscapeImplicitBackslashesFixer.php">PhpCsFixer\Fixer\StringNotation\EscapeImplicitBackslashesFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.1/tests/Fixer/StringNotation/EscapeImplicitBackslashesFixerTest.php">PhpCsFixer\Tests\Fixer\StringNotation\EscapeImplicitBackslashesFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>

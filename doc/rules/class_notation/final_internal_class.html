@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Folding Bike (v3.91.0)</strong> edition
+                <strong>Folding Bike (v3.91.1)</strong> edition
               </h1>
             </div>
           </div>
@@ -53,11 +53,17 @@
   <section id="rule-final-internal-class">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">final_internal_class</span></code><a class="headerlink" href="#rule-final-internal-class" title="Permalink to this heading">¶</a></h1>
 <p>Internal classes should be <code class="docutils literal notranslate"><span class="pre">final</span></code>.</p>
-<section id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
-<section id="using-this-rule-is-risky">
-<h3>Using this rule is risky<a class="headerlink" href="#using-this-rule-is-risky" title="Permalink to this heading">¶</a></h3>
+<section id="warnings">
+<h2>Warnings<a class="headerlink" href="#warnings" title="Permalink to this heading">¶</a></h2>
+<section id="this-rule-is-risky">
+<h3>This rule is RISKY<a class="headerlink" href="#this-rule-is-risky" title="Permalink to this heading">¶</a></h3>
 <p>Changing classes to <code class="docutils literal notranslate"><span class="pre">final</span></code> might cause code execution to break.</p>
+</section>
+<section id="this-rule-is-configurable">
+<h3>This rule is CONFIGURABLE<a class="headerlink" href="#this-rule-is-configurable" title="Permalink to this heading">¶</a></h3>
+<p>You can configure this rule using the following options: <code class="docutils literal notranslate"><span class="pre">annotation_exclude</span></code>,
+<code class="docutils literal notranslate"><span class="pre">annotation_include</span></code>, <code class="docutils literal notranslate"><span class="pre">consider_absent_docblock_as_internal_class</span></code>,
+<code class="docutils literal notranslate"><span class="pre">exclude</span></code>, <code class="docutils literal notranslate"><span class="pre">include</span></code>.</p>
 </section>
 </section>
 <section id="configuration">
@@ -154,8 +160,8 @@ class (case insensitive).</p>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.0/src/Fixer/ClassNotation/FinalInternalClassFixer.php">PhpCsFixer\Fixer\ClassNotation\FinalInternalClassFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.0/tests/Fixer/ClassNotation/FinalInternalClassFixerTest.php">PhpCsFixer\Tests\Fixer\ClassNotation\FinalInternalClassFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.1/src/Fixer/ClassNotation/FinalInternalClassFixer.php">PhpCsFixer\Fixer\ClassNotation\FinalInternalClassFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.1/tests/Fixer/ClassNotation/FinalInternalClassFixerTest.php">PhpCsFixer\Tests\Fixer\ClassNotation\FinalInternalClassFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>

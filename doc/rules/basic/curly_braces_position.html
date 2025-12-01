@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Folding Bike (v3.91.0)</strong> edition
+                <strong>Folding Bike (v3.91.1)</strong> edition
               </h1>
             </div>
           </div>
@@ -53,11 +53,20 @@
   <section id="rule-curly-braces-position">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">curly_braces_position</span></code><a class="headerlink" href="#rule-curly-braces-position" title="Permalink to this heading">¶</a></h1>
 <p>Curly braces must be placed as configured.</p>
-<section id="warning">
-<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
-<section id="this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version">
-<h3>This rule is deprecated and will be removed in the next major version<a class="headerlink" href="#this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version" title="Permalink to this heading">¶</a></h3>
+<section id="warnings">
+<h2>Warnings<a class="headerlink" href="#warnings" title="Permalink to this heading">¶</a></h2>
+<section id="this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version-4-0">
+<h3>This rule is DEPRECATED and will be removed in the next major version 4.0<a class="headerlink" href="#this-rule-is-deprecated-and-will-be-removed-in-the-next-major-version-4-0" title="Permalink to this heading">¶</a></h3>
 <p>You should use <code class="docutils literal notranslate"><span class="pre">braces_position</span></code> instead.</p>
+</section>
+<section id="this-rule-is-configurable">
+<h3>This rule is CONFIGURABLE<a class="headerlink" href="#this-rule-is-configurable" title="Permalink to this heading">¶</a></h3>
+<p>You can configure this rule using the following options:
+<code class="docutils literal notranslate"><span class="pre">allow_single_line_anonymous_functions</span></code>,
+<code class="docutils literal notranslate"><span class="pre">allow_single_line_empty_anonymous_classes</span></code>,
+<code class="docutils literal notranslate"><span class="pre">anonymous_classes_opening_brace</span></code>, <code class="docutils literal notranslate"><span class="pre">anonymous_functions_opening_brace</span></code>,
+<code class="docutils literal notranslate"><span class="pre">classes_opening_brace</span></code>, <code class="docutils literal notranslate"><span class="pre">control_structures_opening_brace</span></code>,
+<code class="docutils literal notranslate"><span class="pre">functions_opening_brace</span></code>.</p>
 </section>
 </section>
 <section id="configuration">
@@ -241,8 +250,8 @@
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.0/src/Fixer/Basic/CurlyBracesPositionFixer.php">PhpCsFixer\Fixer\Basic\CurlyBracesPositionFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.0/tests/Fixer/Basic/CurlyBracesPositionFixerTest.php">PhpCsFixer\Tests\Fixer\Basic\CurlyBracesPositionFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.1/src/Fixer/Basic/CurlyBracesPositionFixer.php">PhpCsFixer\Fixer\Basic\CurlyBracesPositionFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.1/tests/Fixer/Basic/CurlyBracesPositionFixerTest.php">PhpCsFixer\Tests\Fixer\Basic\CurlyBracesPositionFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
