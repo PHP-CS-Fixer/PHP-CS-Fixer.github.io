@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="PHP Coding Standards Fixer">
+    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+
+    <link href="../_static/css/reset-min.css" rel="stylesheet" type="text/css">
+    <link href="../_static/css/base.css" rel="stylesheet" type="text/css">
+    <link href="../_static/css/code.css" rel="stylesheet" type="text/css">
+    <link href="../_static/css/colors.css" rel="stylesheet" type="text/css">
+    <link href="../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../_static/" type="text/css">
+      <title>Rules exceptions - PHP Coding Standards Fixer</title> 
+  </head>
+  <body>
+      <header class="hd">
+        <div class="illustration png_fix">
+          <a href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer" class="github-ribbon">Fork me on GitHub</a>
+          <div class="content">
+            <div class="sensio_product">
+              <img class="png_fix" src="../_static/images/sensio-labs-product.png" alt="a Sensio Labs Product" />
+            </div>
+            <div class="clearfix">
+              <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
+              <h1 class="title_header">
+                <strong>Exceptional Exception (v3.92.0)</strong> edition
+              </h1>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+      <main class="bd">
+        <div class="content">
+          <div class="links_intro">
+            <ul>
+              <li>
+                <a href="/download/php-cs-fixer-v3.phar" class="download-button">
+                  Install now
+                  <svg viewBox="0 0 24 24">
+                    <path d="M13 3h-2v14.3l-4.7-4.6L5 14l5.7 5.6 1.4 1.4 1.4-1.4 5.7-5.6-1.4-1.4-4.7 4.6V3Z"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="more_intro">
+            
+  <section id="rules-exceptions">
+<h1>Rules exceptions<a class="headerlink" href="#rules-exceptions" title="Permalink to this heading">¶</a></h1>
+<p>Sometimes you may want to ignore/modify certain rule for specific files or directories.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>⚠️ EXPERIMENTAL ⚠️</strong></p>
+<p>This feature is experimental.</p>
+<p>That means the API may change in minor releases of PHP CS Fixer.</p>
+<p>We are open to feedback about this feature to make it better.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>⚠️ WARNING ⚠️</strong></p>
+<p>Sets provided by PHP CS Fixer are a living standards, and as such their definition is NOT covered with Backward Compatibility promise.
+That means any upgrade of PHP CS Fixer may add or remove fixers from the sets (or change their configuration).
+This already means that after upgrade of PHP CS Fixer, your project will start applying different rules, simply due to fact of upgrade.
+This may come from adding a new rules to the set, but also removed the rule or replace the deprecated rule by its successor.</p>
+<p>Now, when you use exceptions for the rules, this may lead to situation where, after PHP CS Fixer upgrade,
+your exception refers to a rule that is no longer part of the set you use.</p>
+<p>For such cases, PHP CS Fixer will check that all the rules configured as exceptions are actually configured in set and raise error if some of them are not used.
+This will prevent accidental breaking of rules exceptions due to upgrade of PHP CS Fixer.</p>
+</div>
+<section id="configuring-exceptions-via-php-cs-fixer-ignore-annotation">
+<h2>Configuring exceptions via <code class="docutils literal notranslate"><span class="pre">&#64;php-cs-fixer-ignore</span></code> annotation<a class="headerlink" href="#configuring-exceptions-via-php-cs-fixer-ignore-annotation" title="Permalink to this heading">¶</a></h2>
+<p>This is the simplest way to <strong>ignore</strong> specific rule for specific file.</p>
+<p>Just put this annotation in comment anywhere on top or bottom of the file, and the rule will be ignored for the whole file:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="cm">/*</span>
+<span class="cm"> * File header..</span>
+<span class="cm"> * LICENSE...</span>
+<span class="cm"> */</span>
+
+<span class="c1">// @php-cs-fixer-ignore no_binary_string</span>
+<span class="c1">// @php-cs-fixer-ignore no_trailing_whitespace Optional comment - Rule ignored because of ...</span>
+
+<span class="cm">/*</span>
+<span class="cm"> * @php-cs-fixer-ignore no_unset_on_property,no_useless_else Multiple rules ignored at once</span>
+<span class="cm"> */</span>
+
+<span class="k">class</span> <span class="nc">MyClass</span> <span class="p">{</span>
+    <span class="cm">/* ... */</span>
+<span class="p">}</span>
+
+<span class="c1">// @php-cs-fixer-ignore no_empty_statement    Works Also</span>
+<span class="c1">// @php-cs-fixer-ignore no_extra_blank_lines  on bottom of file</span>
+</pre></div>
+</div>
+</section>
+<section id="configuring-exceptions-via-rule-customisation-policy">
+<h2>Configuring exceptions via <code class="docutils literal notranslate"><span class="pre">Rule</span> <span class="pre">Customisation</span> <span class="pre">Policy</span></code><a class="headerlink" href="#configuring-exceptions-via-rule-customisation-policy" title="Permalink to this heading">¶</a></h2>
+<p>Sometimes, simple annotation usage for ignoring the rule in-file is not enough.</p>
+<p>If you need to <strong>ignore</strong> or <strong>reconfigure</strong> a rule for specific files, you can inject <code class="docutils literal notranslate"><span class="pre">RuleCustomisationPolicyInterface</span></code> via <code class="docutils literal notranslate"><span class="pre">Config::setRuleCustomisationPolicy()</span></code> method:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="k">use</span> <span class="nx">PhpCsFixer\Config</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">PhpCsFixer\Config\RuleCustomisationPolicyInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">PhpCsFixer\Finder</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">PhpCsFixer\Fixer\FixerInterface</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">MyPolicy</span> <span class="k">implements</span> <span class="nx">RuleCustomisationPolicyInterface</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getPolicyVersionForCache</span><span class="p">()</span><span class="o">:</span> <span class="nx">string</span>
+    <span class="p">{</span>
+        <span class="c1">// to provide version of the policy, you may use the following snippet if your policy does not depend on any code outside of the file</span>
+        <span class="k">return</span> <span class="nb">hash_file</span><span class="p">(</span><span class="nx">\PHP_VERSION_ID</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="nx">_01_00</span> <span class="o">?</span> <span class="s1">&#39;xxh128&#39;</span> <span class="o">:</span> <span class="s1">&#39;md5&#39;</span><span class="p">,</span> <span class="no">__FILE__</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getRuleCustomisers</span><span class="p">()</span><span class="o">:</span> <span class="k">array</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="s1">&#39;array_syntax&#39;</span> <span class="o">=&gt;</span> <span class="k">static</span> <span class="k">function</span> <span class="p">(</span><span class="nx">\SplFileInfo</span> <span class="nv">$file</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nb">str_ends_with</span><span class="p">(</span><span class="nv">$file</span><span class="o">-&gt;</span><span class="na">getPathname</span><span class="p">(),</span> <span class="s1">&#39;/tests/foo.php&#39;</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="c1">// Disable the fixer for the file tests/foo.php</span>
+                    <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+                <span class="p">}</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="nb">str_ends_with</span><span class="p">(</span><span class="nv">$file</span><span class="o">-&gt;</span><span class="na">getPathname</span><span class="p">(),</span> <span class="s1">&#39;/bin/entrypoint&#39;</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="c1">// For the file bin/entrypoint let&#39;s create a new fixer instance with a different configuration</span>
+                    <span class="nv">$fixer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArraySyntaxFixer</span><span class="p">();</span>
+                    <span class="nv">$fixer</span><span class="o">-&gt;</span><span class="na">configure</span><span class="p">([</span><span class="s1">&#39;syntax&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;long&#39;</span><span class="p">]);</span>
+                    <span class="k">return</span> <span class="nv">$fixer</span><span class="p">;</span>
+                <span class="p">}</span>
+
+                <span class="c1">// Keep the default configuration for other files</span>
+                <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+            <span class="p">},</span>
+        <span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nx">Config</span><span class="p">())</span>
+    <span class="o">-&gt;</span><span class="na">setRules</span><span class="p">([</span>
+        <span class="s1">&#39;array_syntax&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;syntax&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;short&#39;</span><span class="p">],</span>
+    <span class="p">])</span>
+    <span class="o">-&gt;</span><span class="na">setRuleCustomisationPolicy</span><span class="p">(</span><span class="k">new</span> <span class="nx">MyPolicy</span><span class="p">())</span>
+    <span class="o">-&gt;</span><span class="na">setFinder</span><span class="p">(</span>
+        <span class="p">(</span><span class="k">new</span> <span class="nx">Finder</span><span class="p">())</span>
+            <span class="o">-&gt;</span><span class="na">in</span><span class="p">(</span><span class="no">__DIR__</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </main>
+      <footer class="ft">
+        <div class="content">
+          The <a href="../_static/images/logo.png">logo</a> is &copy; 2010+ Sensio Labs
+        </div>
+      </footer>
+  </body>
+</html>

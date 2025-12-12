@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Folding Bike (v3.91.3)</strong> edition
+                <strong>Exceptional Exception (v3.92.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -61,12 +61,12 @@ and under v3, the path will need to be provided via CLI (defaults to <code class
 </div>
 <p>While it is possible to provide command line options to configure rules,
 it’s recommended to save the project configuration in a <code class="docutils literal notranslate"><span class="pre">.php-cs-fixer.dist.php</span></code> file in the root directory of your project.
-The file must return an instance of <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.3/src/ConfigInterface.php">PhpCsFixer\ConfigInterface</a>,
+The file must return an instance of <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.92.0/src/ConfigInterface.php">PhpCsFixer\ConfigInterface</a>,
 which lets you configure the rules, finder (the files and directories that
 need to be analysed), select output format and even configure path to <code class="docutils literal notranslate"><span class="pre">PHP</span></code>.</p>
 <p>You may also create <code class="docutils literal notranslate"><span class="pre">.php-cs-fixer.php</span></code> file, which is
 the local configuration that will be used instead of the project configuration.
-You can use it to customize for your environment (like path to <code class="docutils literal notranslate"><span class="pre">PHP</span></code>) or preference (like output format or progress indicator),
+You can use it to customise for your environment (like path to <code class="docutils literal notranslate"><span class="pre">PHP</span></code>) or preference (like output format or progress indicator),
 while ruleset / finder shall be re-imported from project configuration.
 It is a good practice to add that file into your <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file.</p>
 <p>With the <code class="docutils literal notranslate"><span class="pre">--config</span></code> option you can specify the path to the config file, when it is named differently.</p>
@@ -83,7 +83,7 @@ It is a good practice to add that file into your <code class="docutils literal n
 <span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">())</span>
     <span class="o">-&gt;</span><span class="na">setRules</span><span class="p">([</span>
         <span class="s1">&#39;@PER-CS&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
-        <span class="s1">&#39;@PHP82Migration&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+        <span class="s1">&#39;@PHP8x2Migration&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
     <span class="p">])</span>
     <span class="o">-&gt;</span><span class="na">setFinder</span><span class="p">(</span><span class="nv">$finder</span><span class="p">)</span>
 <span class="p">;</span>
@@ -157,6 +157,7 @@ The following example shows how to use all <code class="docutils literal notrans
 <span class="p">;</span>
 </pre></div>
 </div>
+<p>If you need to set up exception for rules, eg ignore or reconfigure a rule for specific files, check the <a class="reference internal" href="rules_exceptions.html"><span class="doc">Rules exceptions</span></a>.</p>
 </section>
 <section id="configuring-whitespaces">
 <h2>Configuring whitespaces<a class="headerlink" href="#configuring-whitespaces" title="Permalink to this heading">¶</a></h2>

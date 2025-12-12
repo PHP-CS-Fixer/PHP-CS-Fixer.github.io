@@ -14,7 +14,7 @@
     <link href="../../_static/pygments.css" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css">
       <link rel="stylesheet" href="../../_static/" type="text/css">
-      <title>Rule set @DoctrineAnnotation - PHP Coding Standards Fixer</title> 
+      <title>Rule set @PHPUnit11x0Migration:risky - PHP Coding Standards Fixer</title> 
   </head>
   <body>
       <header class="hd">
@@ -50,19 +50,24 @@
           </div>
           <div class="more_intro">
             
-  <section id="rule-set-doctrineannotation">
-<h1>Rule set <code class="docutils literal notranslate"><span class="pre">&#64;DoctrineAnnotation</span></code><a class="headerlink" href="#rule-set-doctrineannotation" title="Permalink to this heading">¶</a></h1>
-<p>Rules covering <code class="docutils literal notranslate"><span class="pre">Doctrine</span></code> annotations with configuration based on examples found in <a class="reference external" href="https://www.doctrine-project.org/projects/doctrine-annotations/en/latest/annotations.html">Doctrine Annotation documentation</a> and <a class="reference external" href="https://symfony.com/doc/master/bundles/SensioFrameworkExtraBundle/annotations/routing.html">Symfony documentation</a>.</p>
+  <section id="rule-set-phpunit11x0migration-risky">
+<h1>Rule set <code class="docutils literal notranslate"><span class="pre">&#64;PHPUnit11x0Migration:risky</span></code><a class="headerlink" href="#rule-set-phpunit11x0migration-risky" title="Permalink to this heading">¶</a></h1>
+<p>Rules to improve tests code for PHPUnit 11.0 compatibility.</p>
+<section id="warning">
+<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
+<section id="this-rule-set-is-risky">
+<h3>This rule set is RISKY<a class="headerlink" href="#this-rule-set-is-risky" title="Permalink to this heading">¶</a></h3>
+<p>This set contains rules that are risky. Using it may lead to changes in your
+code’s logic and behaviour. Use it with caution and review changes before
+incorporating them into your code base.</p>
+</section>
+</section>
 <section id="rules">
 <h2>Rules<a class="headerlink" href="#rules" title="Permalink to this heading">¶</a></h2>
 <ul>
-<li><p><a class="reference internal" href="../rules/doctrine_annotation/doctrine_annotation_array_assignment.html"><span class="doc">doctrine_annotation_array_assignment</span></a> with config:</p>
-<p><code class="docutils literal notranslate"><span class="pre">['operator'</span> <span class="pre">=&gt;</span> <span class="pre">':']</span></code></p>
-</li>
-<li><p><a class="reference internal" href="../rules/doctrine_annotation/doctrine_annotation_braces.html"><span class="doc">doctrine_annotation_braces</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/doctrine_annotation/doctrine_annotation_indentation.html"><span class="doc">doctrine_annotation_indentation</span></a></p></li>
-<li><p><a class="reference internal" href="../rules/doctrine_annotation/doctrine_annotation_spaces.html"><span class="doc">doctrine_annotation_spaces</span></a> with config:</p>
-<p><code class="docutils literal notranslate"><span class="pre">['before_array_assignments_colon'</span> <span class="pre">=&gt;</span> <span class="pre">false]</span></code></p>
+<li><p><a class="reference internal" href="PHPUnit10x0MigrationRisky.html"><span class="doc">&#64;PHPUnit10x0Migration:risky</span></a></p></li>
+<li><p><a class="reference internal" href="../rules/php_unit/php_unit_test_case_static_method_calls.html"><span class="doc">php_unit_test_case_static_method_calls</span></a> with config:</p>
+<p><code class="docutils literal notranslate"><span class="pre">['target'</span> <span class="pre">=&gt;</span> <span class="pre">'11.0']</span></code></p>
 </li>
 </ul>
 </section>

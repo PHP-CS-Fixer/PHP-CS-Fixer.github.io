@@ -27,7 +27,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Folding Bike (v3.91.3)</strong> edition
+                <strong>Exceptional Exception (v3.92.0)</strong> edition
               </h1>
             </div>
           </div>
@@ -76,8 +76,8 @@ Lack of new syntax in vY does not guarantee BC compatibility for internal PHP To
 <h2>2nd phase - compatibility support<a class="headerlink" href="#nd-phase-compatibility-support" title="Permalink to this heading">¶</a></h2>
 <p>2nd phase is about teaching PHP CS Fixer to not only run under vY runtime, but also to understand vY syntax.</p>
 <p>Here, we want to first understand explicit or implicit Tokenizer changes:
-- explicit change is when new PHP token is introduced - in such case we cover it under <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.3/src/Tokenizer/FCT.php">Forward Compatibility Tokens</a> to simplify cross-php-version handling.
-- implicit change is when PHP token is now having more possible contexts - in such case we separate it with dedicated <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.91.3/src/Tokenizer/CT.php">Custom Tokens</a>. Doing it after declaring the official support for vY would be a BC breaker.</p>
+- explicit change is when new PHP token is introduced - in such case we cover it under <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.92.0/src/Tokenizer/FCT.php">Forward Compatibility Tokens</a> to simplify cross-php-version handling.
+- implicit change is when PHP token is now having more possible contexts - in such case we separate it with dedicated <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.92.0/src/Tokenizer/CT.php">Custom Tokens</a>. Doing it after declaring the official support for vY would be a BC breaker.</p>
 <p>Then, we want to ensure compatibility. With high amount of rules, it’s not-likely to check every single combination of rules and vY syntax, so we focus to run newly introduced syntax as integration test against ruleset of “&#64;PhpCsFixer: true, PHPvYMigration:true” (<a class="reference external" href="./../tests/Fixtures/Integration/php_compat/">example</a>).</p>
 <p>On that moment, we claim initial support for vY is completed and PHP CS Fixer can run on vY runtime as-is.
 Any newly discovered incompatibility should be reported as a bug.</p>
