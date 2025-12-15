@@ -29,7 +29,7 @@ Installation
 The recommended way to install PHP CS Fixer is to use
 `Composer <https://getcomposer.org/download/>`__:
 
-.. code:: sh
+.. code:: console
 
     $ composer require --dev friendsofphp/php-cs-fixer
     $ ## or when facing conflicts in dependencies:
@@ -44,13 +44,13 @@ Usage
 Assuming you installed PHP CS Fixer as instructed above, you can
 initialise base config for your project by using following command:
 
-.. code:: sh
+.. code:: console
 
     $ ./vendor/bin/php-cs-fixer init
 
 To automatically fix your project, or only check against the need of changes, run:
 
-.. code:: sh
+.. code:: console
 
     $ ./vendor/bin/php-cs-fixer fix
     $ ./vendor/bin/php-cs-fixer check
