@@ -7,7 +7,7 @@ If you are already using a linter to identify coding standards problems in your
 code, you know that fixing them by hand is tedious, especially on large
 projects. This tool not only detects them, but also fixes them for you.
 
-PHP CS Fixer has built-in rule sets, whether you want to follow PHP coding standards as defined by `PHP-FIG\'s PER Coding Style <https://www.php-fig.org/per/coding-style/>`__ - `@PER-CS <./doc/ruleSets/PER-CS.rst>`__,
+PHP CS Fixer has built-in rule sets, whether you want to follow PHP coding standards as defined by `PHP-FIG's PER Coding Style <https://www.php-fig.org/per/coding-style/>`__ - `@PER-CS <./doc/ruleSets/PER-CS.rst>`__,
 a wide community like the `Symfony <https://symfony.com/doc/current/contributing/code/standards.html>`__ - `@Symfony <./doc/ruleSets/Symfony.rst>`__,
 or our opinionated one - `@PhpCsFixer <./doc/ruleSets/PhpCsFixer.rst>`__.
 You can also define your (team's) style through the `configuration file <./doc/config.rst>`__.
