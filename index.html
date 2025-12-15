@@ -74,9 +74,9 @@ newer PHP (e.g. <a class="reference internal" href="doc/ruleSets/AutoPHPMigratio
 <h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h3>
 <p>The recommended way to install PHP CS Fixer is to use
 <a class="reference external" href="https://getcomposer.org/download/">Composer</a>:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>friendsofphp/php-cs-fixer
-$<span class="w"> </span><span class="c1">## or when facing conflicts in dependencies:</span>
-$<span class="w"> </span>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>php-cs-fixer/shim
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>friendsofphp/php-cs-fixer
+<span class="gp">$ </span><span class="c1">## or when facing conflicts in dependencies:</span>
+<span class="gp">$ </span>composer<span class="w"> </span>require<span class="w"> </span>--dev<span class="w"> </span>php-cs-fixer/shim
 </pre></div>
 </div>
 <p>For more details and other installation methods (also with Docker or behind CI), see <a class="reference internal" href="doc/installation.html"><span class="doc">installation instructions</span></a>.</p>
@@ -85,12 +85,12 @@ $<span class="w"> </span>composer<span class="w"> </span>require<span class="w">
 <h3>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h3>
 <p>Assuming you installed PHP CS Fixer as instructed above, you can
 initialise base config for your project by using following command:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./vendor/bin/php-cs-fixer<span class="w"> </span>init
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>./vendor/bin/php-cs-fixer<span class="w"> </span>init
 </pre></div>
 </div>
 <p>To automatically fix your project, or only check against the need of changes, run:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./vendor/bin/php-cs-fixer<span class="w"> </span>fix
-$<span class="w"> </span>./vendor/bin/php-cs-fixer<span class="w"> </span>check
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>./vendor/bin/php-cs-fixer<span class="w"> </span>fix
+<span class="gp">$ </span>./vendor/bin/php-cs-fixer<span class="w"> </span>check
 </pre></div>
 </div>
 <p>See <a class="reference internal" href="doc/usage.html"><span class="doc">usage</span></a>, list of <a class="reference internal" href="doc/rules/index.html"><span class="doc">built-in rules</span></a>, list of <a class="reference internal" href="doc/ruleSets/index.html"><span class="doc">rule sets</span></a> and <a class="reference internal" href="doc/config.html"><span class="doc">configuration file</span></a> documentation for more
