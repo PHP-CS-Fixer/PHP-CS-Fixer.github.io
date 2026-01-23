@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="PHP Coding Standards Fixer">
+    
+    <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+
+    <link href="../../../_static/css/reset-min.css" rel="stylesheet" type="text/css">
+    <link href="../../../_static/css/base.css" rel="stylesheet" type="text/css">
+    <link href="../../../_static/css/code.css" rel="stylesheet" type="text/css">
+    <link href="../../../_static/css/colors.css" rel="stylesheet" type="text/css">
+    <link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css">
+      <link rel="stylesheet" href="../../../_static/" type="text/css">
+      <title>Rule modern_serialization_methods - PHP Coding Standards Fixer</title> 
+  </head>
+  <body>
+      <header class="hd">
+        <div class="illustration png_fix">
+          <a href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer" class="github-ribbon">Fork me on GitHub</a>
+          <div class="content">
+            <div class="sensio_product">
+              <img class="png_fix" src="../../../_static/images/sensio-labs-product.png" alt="a Sensio Labs Product" />
+            </div>
+            <div class="clearfix">
+              <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
+              <h1 class="title_header">
+                <strong>Exceptional Exception (v3.93.0)</strong> edition
+              </h1>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+      <main class="bd">
+        <div class="content">
+          <div class="links_intro">
+            <ul>
+              <li>
+                <a href="/download/php-cs-fixer-v3.phar" class="download-button">
+                  Install now
+                  <svg viewBox="0 0 24 24">
+                    <path d="M13 3h-2v14.3l-4.7-4.6L5 14l5.7 5.6 1.4 1.4 1.4-1.4 5.7-5.6-1.4-1.4-4.7 4.6V3Z"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="more_intro">
+            
+  <section id="rule-modern-serialization-methods">
+<h1>Rule <code class="docutils literal notranslate"><span class="pre">modern_serialization_methods</span></code><a class="headerlink" href="#rule-modern-serialization-methods" title="Permalink to this heading">¶</a></h1>
+<p>Use new serialization methods <code class="docutils literal notranslate"><span class="pre">__serialize</span></code> and <code class="docutils literal notranslate"><span class="pre">__unserialize</span></code> instead of
+deprecated ones <code class="docutils literal notranslate"><span class="pre">__sleep</span></code> and <code class="docutils literal notranslate"><span class="pre">__wakeup</span></code>.</p>
+<section id="warning">
+<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
+<section id="this-rule-is-risky">
+<h3>This rule is RISKY<a class="headerlink" href="#this-rule-is-risky" title="Permalink to this heading">¶</a></h3>
+<p>Risky when calling the old methods directly or having logic in the <code class="docutils literal notranslate"><span class="pre">__sleep</span></code>
+and <code class="docutils literal notranslate"><span class="pre">__wakeup</span></code> methods.</p>
+</section>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
+<section id="example-1">
+<h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php class Foo {
+<span class="gd">-    public function __sleep() {}</span>
+<span class="gd">-    public function __wakeup() {}</span>
+<span class="gi">+    public function __serialize() {}</span>
+<span class="gi">+    public function __unserialize(array $data) {}</span>
+<span class="w"> </span>}
+</pre></div>
+</div>
+</section>
+</section>
+<section id="rule-sets">
+<h2>Rule sets<a class="headerlink" href="#rule-sets" title="Permalink to this heading">¶</a></h2>
+<p>The rule is part of the following rule sets:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../ruleSets/PHP8x5MigrationRisky.html"><span class="doc">&#64;PHP8x5Migration:risky</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/PhpCsFixerRisky.html"><span class="doc">&#64;PhpCsFixer:risky</span></a></p></li>
+<li><p><a class="reference internal" href="../../ruleSets/SymfonyRisky.html"><span class="doc">&#64;Symfony:risky</span></a></p></li>
+</ul>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.93.0/src/Fixer/ClassNotation/ModernSerializationMethodsFixer.php">PhpCsFixer\Fixer\ClassNotation\ModernSerializationMethodsFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.93.0/tests/Fixer/ClassNotation/ModernSerializationMethodsFixerTest.php">PhpCsFixer\Tests\Fixer\ClassNotation\ModernSerializationMethodsFixerTest</a></p></li>
+</ul>
+<p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </main>
+      <footer class="ft">
+        <div class="content">
+          The <a href="../../../_static/images/logo.png">logo</a> is &copy; 2010+ Sensio Labs
+        </div>
+      </footer>
+  </body>
+</html>
