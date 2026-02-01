@@ -16,6 +16,12 @@
     <link href="{{ pathto('_static/css/colors.css', 1) }}" rel="stylesheet" type="text/css">
     <link href="{{ pathto('_static/pygments.css', 1) }}" rel="stylesheet" type="text/css">
 
+    <link rel="icon" type="image/svg+xml" href="{{ pathto('_static/images/favicon.svg', 1) }}">
+    <link rel="shortcut icon" href="{{ pathto('_static/images/favicon.ico', 1) }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ pathto('_static/images/favicon-32x32.png', 1) }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ pathto('_static/images/favicon-96x96.png', 1) }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ pathto('_static/images/favicon-192x192.png', 1) }}">
+
     {%- for cssfile in css_files %}
       <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css">
     {%- endfor %}
