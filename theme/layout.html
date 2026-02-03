@@ -52,6 +52,17 @@
       </header>
     {% endblock %}
 
+    {%- block navigation %}
+      <nav class="nav">
+        <ul class="menu">
+          <li class="{% if pagename == 'doc/usage' or pagename.startswith('doc/usage') %}active{% endif %}"><a href="{{ pathto('doc/usage') }}">Usage</a></li>
+          <li class="{% if pagename == 'doc/rules/index' or pagename.startswith('doc/rules') %}active{% endif %}"><a href="{{ pathto('doc/rules/index') }}">Rules</a></li>
+          <li class="{% if pagename == 'doc/ruleSets/index' or pagename.startswith('doc/ruleSets') %}active{% endif %}"><a href="{{ pathto('doc/ruleSets/index') }}">Rule sets</a></li>
+          <li class="{% if pagename == 'doc/config' or pagename.startswith('doc/config') %}active{% endif %}"><a href="{{ pathto('doc/config') }}">Configuration</a></li>
+        </ul>
+      </nav>
+    {% endblock %}
+
     {%- block content %}
       <main class="bd">
         <div class="content">
