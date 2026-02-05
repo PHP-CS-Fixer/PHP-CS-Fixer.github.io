@@ -154,21 +154,22 @@ a:visited
   border-bottom: 2px dotted #fff;
 }
 
+ .nav {
+    background-color: transparent;
+    margin-top: 50px;
+}
+
 .nav .menu
 {
   font-family: Arial, sans-serif;
   display: flex;
   gap: 30px;
-  padding: 0 15px 40px;
-}
-
-.nav .menu li
-{
-  font-size: 1.125em;
 }
 
 .nav .menu a
 {
+  font-size: 1.2em;
+  color: #fff;
   text-decoration: none;
 }
 
