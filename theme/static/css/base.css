@@ -180,7 +180,7 @@ a:visited
 
 .nav .menu li.active a
 {
-  font-weight: bold;
+  color: #fbc817;
 }
 
 .bd .content
