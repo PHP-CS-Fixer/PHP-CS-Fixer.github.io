@@ -51,7 +51,7 @@
             {%- block navigation %}
             <nav class="nav">
               <ul class="menu">
-                <li><a href="{% if pagename == root_doc %}#installation{% else %}{{ pathto(root_doc) }}#installation{% endif %}">Installation</a></li>
+                <li class="{% if pagename.startswith('doc/installation') %}active{% endif %}"><a href="{{ pathto('doc/installation') }}">Installation</a></li>
                 <li class="{% if pagename.startswith('doc/usage') %}active{% endif %}"><a href="{{ pathto('doc/usage') }}">Usage</a></li>
                 <li class="{% if pagename.startswith('doc/config') %}active{% endif %}"><a href="{{ pathto('doc/config') }}">Configuration</a></li>
                 <li class="{% if pagename.startswith('doc/rules') %}active{% endif %}"><a href="{{ pathto('doc/rules/index') }}">Rules</a></li>
