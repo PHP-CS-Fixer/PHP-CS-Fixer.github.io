@@ -33,7 +33,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Exceptional Exception (v3.93.1)</strong> edition
+                <strong>7th Gear (v3.94.0)</strong> edition
               </h1>
             </div>
             <nav class="nav">
@@ -68,18 +68,29 @@
             
   <section id="rule-phpdoc-line-span">
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">phpdoc_line_span</span></code><a class="headerlink" href="#rule-phpdoc-line-span" title="Permalink to this heading">¶</a></h1>
-<p>Changes doc blocks from single to multi line, or reversed. Works for class
-constants, properties and methods only.</p>
+<p>Changes doc blocks from single to multi line, or reversed.</p>
 <section id="warning">
 <h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
 <section id="this-rule-is-configurable">
 <h3>This rule is CONFIGURABLE<a class="headerlink" href="#this-rule-is-configurable" title="Permalink to this heading">¶</a></h3>
-<p>You can configure this rule using the following options: <code class="docutils literal notranslate"><span class="pre">const</span></code>, <code class="docutils literal notranslate"><span class="pre">method</span></code>,
-<code class="docutils literal notranslate"><span class="pre">property</span></code>.</p>
+<p>You can configure this rule using the following options: <code class="docutils literal notranslate"><span class="pre">case</span></code>, <code class="docutils literal notranslate"><span class="pre">class</span></code>,
+<code class="docutils literal notranslate"><span class="pre">const</span></code>, <code class="docutils literal notranslate"><span class="pre">method</span></code>, <code class="docutils literal notranslate"><span class="pre">other</span></code>, <code class="docutils literal notranslate"><span class="pre">property</span></code>, <code class="docutils literal notranslate"><span class="pre">trait_import</span></code>.</p>
 </section>
 </section>
 <section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
+<section id="case">
+<h3><code class="docutils literal notranslate"><span class="pre">case</span></code><a class="headerlink" href="#case" title="Permalink to this heading">¶</a></h3>
+<p>Whether enum case doc blocks should be single or multi line.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code></p>
+</section>
+<section id="class">
+<h3><code class="docutils literal notranslate"><span class="pre">class</span></code><a class="headerlink" href="#class" title="Permalink to this heading">¶</a></h3>
+<p>Whether class/interface/enum/trait blocks should be single or multi line.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code></p>
+</section>
 <section id="const">
 <h3><code class="docutils literal notranslate"><span class="pre">const</span></code><a class="headerlink" href="#const" title="Permalink to this heading">¶</a></h3>
 <p>Whether const blocks should be single or multi line.</p>
@@ -92,11 +103,23 @@ constants, properties and methods only.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code></p>
 </section>
+<section id="other">
+<h3><code class="docutils literal notranslate"><span class="pre">other</span></code><a class="headerlink" href="#other" title="Permalink to this heading">¶</a></h3>
+<p>Whether blocks for other code lines should be single or multi line.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
+</section>
 <section id="property">
 <h3><code class="docutils literal notranslate"><span class="pre">property</span></code><a class="headerlink" href="#property" title="Permalink to this heading">¶</a></h3>
 <p>Whether property doc blocks should be single or multi line.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code></p>
+</section>
+<section id="trait-import">
+<h3><code class="docutils literal notranslate"><span class="pre">trait_import</span></code><a class="headerlink" href="#trait-import" title="Permalink to this heading">¶</a></h3>
+<p>Whether trait usage blocks should be single or multi line.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
 </section>
 </section>
 <section id="examples">
@@ -135,12 +158,26 @@ constants, properties and methods only.</p>
 </pre></div>
 </div>
 </section>
+<section id="example-3">
+<h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this heading">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['other'</span> <span class="pre">=&gt;</span> <span class="pre">'single']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+<span class="gd">-/**</span>
+<span class="gd">- * @var string</span>
+<span class="gd">- */</span>
+<span class="gi">+/** @var string */</span>
+<span class="w"> </span>$var = foo();
+</pre></div>
+</div>
+</section>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.93.1/src/Fixer/Phpdoc/PhpdocLineSpanFixer.php">PhpCsFixer\Fixer\Phpdoc\PhpdocLineSpanFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.93.1/tests/Fixer/Phpdoc/PhpdocLineSpanFixerTest.php">PhpCsFixer\Tests\Fixer\Phpdoc\PhpdocLineSpanFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.0/src/Fixer/Phpdoc/PhpdocLineSpanFixer.php">PhpCsFixer\Fixer\Phpdoc\PhpdocLineSpanFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.0/tests/Fixer/Phpdoc/PhpdocLineSpanFixerTest.php">PhpCsFixer\Tests\Fixer\Phpdoc\PhpdocLineSpanFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
