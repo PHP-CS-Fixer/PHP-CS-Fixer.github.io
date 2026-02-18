@@ -33,7 +33,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>7th Gear (v3.94.0)</strong> edition
+                <strong>7th Gear (v3.94.1)</strong> edition
               </h1>
             </div>
             <nav class="nav">
@@ -82,8 +82,8 @@ in its actions. More on this later.</p>
 discouraged - it is meant only to give more people more chance to
 contribute, and to detect bugs (<a class="reference external" href="https://en.wikipedia.org/wiki/Linus%27s_Law">Linus’s Law</a>).</p>
 <p>If possible, try to get acquainted with the public interface for the
-<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.0/src/Tokenizer/Tokens.php">PhpCsFixer\Tokenizer\Tokens</a> and
-<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.0/src/Tokenizer/Token.php">PhpCsFixer\Tokenizer\Token</a> classes.</p>
+<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.1/src/Tokenizer/Tokens.php">PhpCsFixer\Tokenizer\Tokens</a> and
+<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.1/src/Tokenizer/Token.php">PhpCsFixer\Tokenizer\Token</a> classes.</p>
 </section>
 <section id="assumptions">
 <h2>Assumptions<a class="headerlink" href="#assumptions" title="Permalink to this heading">¶</a></h2>
@@ -97,8 +97,8 @@ contribute, and to detect bugs (<a class="reference external" href="https://en.w
 </ul>
 <p>In case you want to create a custom fixer for your own use, you can
 follow this guide as well, but you will need to apply some changes on the go,
-for example use <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.0/src/Fixer/FixerInterface.php">PhpCsFixer\Fixer\FixerInterface</a>
-instead of <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.0/src/AbstractFixer.php">PhpCsFixer\AbstractFixer</a> (which is internal
+for example use <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.1/src/Fixer/FixerInterface.php">PhpCsFixer\Fixer\FixerInterface</a>
+instead of <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.1/src/AbstractFixer.php">PhpCsFixer\AbstractFixer</a> (which is internal
 and not covered with BC promise).</p>
 </section>
 <section id="step-by-step">
@@ -153,8 +153,8 @@ Put this content inside:</p>
 </pre></div>
 </div>
 <p>Note how the class and file name match. Also keep in mind that all
-fixers must implement <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.0/src/Fixer/FixerInterface.php">PhpCsFixer\Fixer\FixerInterface</a>. In this case, the fixer is
-inheriting from <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.0/src/AbstractFixer.php">PhpCsFixer\AbstractFixer</a>, which fulfills the interface with some
+fixers must implement <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.1/src/Fixer/FixerInterface.php">PhpCsFixer\Fixer\FixerInterface</a>. In this case, the fixer is
+inheriting from <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.1/src/AbstractFixer.php">PhpCsFixer\AbstractFixer</a>, which fulfills the interface with some
 default behaviour.</p>
 <p>Now let us create the test file at
 <code class="docutils literal notranslate"><span class="pre">tests/Fixer/Comment/RemoveCommentsFixerTest.php</span></code>. Put this content inside:</p>
@@ -544,10 +544,10 @@ get <code class="docutils literal notranslate"><span class="pre">/*comment*/</sp
 you use <code class="docutils literal notranslate"><span class="pre">getPrevMeaningfulToken()</span></code>, no matter if you have got a comment
 or a whitespace, the returned token will always be <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code>.</p>
 </dd>
-<dt>Why am I asked to iterate <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.0/src/Tokenizer/Tokens.php">PhpCsFixer\Tokenizer\Tokens</a> backward?</dt><dd><p>If you add new tokens to the collection, and iterating the collection going forward, you will mismatch the index/not add the items properly.</p>
+<dt>Why am I asked to iterate <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.1/src/Tokenizer/Tokens.php">PhpCsFixer\Tokenizer\Tokens</a> backward?</dt><dd><p>If you add new tokens to the collection, and iterating the collection going forward, you will mismatch the index/not add the items properly.</p>
 <p>See <a class="reference external" href="https://3v4l.org/sP9s0#v8.5.1">https://3v4l.org/sP9s0#v8.5.1</a>.</p>
 </dd>
-<dt>How shall I decide on default option values for rules configurable via <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.0/src/Fixer/ConfigurableFixerInterface.php">PhpCsFixer\Fixer\ConfigurableFixerInterface</a>?</dt><dd><p>Default value should reflect default style of following standard, in order:</p>
+<dt>How shall I decide on default option values for rules configurable via <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.1/src/Fixer/ConfigurableFixerInterface.php">PhpCsFixer\Fixer\ConfigurableFixerInterface</a>?</dt><dd><p>Default value should reflect default style of following standard, in order:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.php-fig.org/per/coding-style/">PER-CS</a>,</p></li>
 <li><p>if not specified - <a class="reference external" href="https://symfony.com/doc/current/contributing/code/standards.html">Symfony Coding Standards</a> or PHPUnit best practices,</p></li>
