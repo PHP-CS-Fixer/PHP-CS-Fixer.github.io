@@ -33,7 +33,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>7th Gear (v3.94.2)</strong> edition
+                <strong>Adalbertus (v3.95.0)</strong> edition
               </h1>
             </div>
             <nav class="nav">
@@ -81,7 +81,7 @@ problems as possible.</p>
 </pre></div>
 </div>
 <p>You can also fix files in parallel, utilising more CPU cores. You can do this by using config class that implements
-<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.2/src/ParallelAwareConfigInterface.php">PhpCsFixer\ParallelAwareConfigInterface</a>, and use <code class="docutils literal notranslate"><span class="pre">setParallelConfig()</span></code> method.
+<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.95.0/src/ParallelAwareConfigInterface.php">PhpCsFixer\ParallelAwareConfigInterface</a>, and use <code class="docutils literal notranslate"><span class="pre">setParallelConfig()</span></code> method.
 Recommended way is to utilise auto-detecting parallel configuration:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
@@ -118,6 +118,7 @@ which will use the intersection of the paths from the config file and from the a
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&#64;auto,{format}</span></code> takes <code class="docutils literal notranslate"><span class="pre">&#64;auto</span></code> under CI, and {format} otherwise</p></li>
 </ul>
+<p>When the <code class="docutils literal notranslate"><span class="pre">AI_AGENT</span></code> environment variable (or another popular one) is set, the format is unconditionally resolved to the selected best fit for the AI agent (currently <code class="docutils literal notranslate"><span class="pre">json</span></code>).</p>
 <p>NOTE: the output for the following formats are generated in accordance with schemas</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">checkstyle</span></code> follows the common <a class="reference external" href="/doc/schemas/fix/checkstyle.xsd">“checkstyle” XML schema</a></p></li>
@@ -292,12 +293,12 @@ which also allows the Fixer to run with required PHP extensions missing.</p>
 </section>
 <section id="exit-code">
 <h2>Exit code<a class="headerlink" href="#exit-code" title="Permalink to this heading">¶</a></h2>
-<p>Exit code of the <code class="docutils literal notranslate"><span class="pre">fix</span></code> command is built using following bit flags:</p>
+<p>Exit code of the <code class="docutils literal notranslate"><span class="pre">check</span></code> and <code class="docutils literal notranslate"><span class="pre">fix</span></code> command is built using following bit flags:</p>
 <ul class="simple">
 <li><p>0 - OK.</p></li>
 <li><p>1 - General error (or PHP minimal requirement not matched).</p></li>
-<li><p>4 - Some files have invalid syntax (only in dry-run mode).</p></li>
-<li><p>8 - Some files need fixing (only in dry-run mode).</p></li>
+<li><p>4 - Some files have invalid syntax (only in <code class="docutils literal notranslate"><span class="pre">check</span></code>/<code class="docutils literal notranslate"><span class="pre">fix</span> <span class="pre">--dry-run</span></code> mode).</p></li>
+<li><p>8 - Some files need fixing (only in <code class="docutils literal notranslate"><span class="pre">check</span></code>/<code class="docutils literal notranslate"><span class="pre">fix</span> <span class="pre">--dry-run</span></code> mode).</p></li>
 <li><p>16 - Configuration error of the application.</p></li>
 <li><p>32 - Configuration error of a Fixer.</p></li>
 <li><p>64 - Exception raised within the application.</p></li>

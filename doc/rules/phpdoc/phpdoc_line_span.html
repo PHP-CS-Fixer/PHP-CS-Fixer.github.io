@@ -33,7 +33,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>7th Gear (v3.94.2)</strong> edition
+                <strong>Adalbertus (v3.95.0)</strong> edition
               </h1>
             </div>
             <nav class="nav">
@@ -74,7 +74,7 @@
 <section id="this-rule-is-configurable">
 <h3>This rule is CONFIGURABLE<a class="headerlink" href="#this-rule-is-configurable" title="Permalink to this heading">¶</a></h3>
 <p>You can configure this rule using the following options: <code class="docutils literal notranslate"><span class="pre">case</span></code>, <code class="docutils literal notranslate"><span class="pre">class</span></code>,
-<code class="docutils literal notranslate"><span class="pre">const</span></code>, <code class="docutils literal notranslate"><span class="pre">method</span></code>, <code class="docutils literal notranslate"><span class="pre">other</span></code>, <code class="docutils literal notranslate"><span class="pre">property</span></code>, <code class="docutils literal notranslate"><span class="pre">trait_import</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">const</span></code>, <code class="docutils literal notranslate"><span class="pre">function</span></code>, <code class="docutils literal notranslate"><span class="pre">method</span></code>, <code class="docutils literal notranslate"><span class="pre">other</span></code>, <code class="docutils literal notranslate"><span class="pre">property</span></code>, <code class="docutils literal notranslate"><span class="pre">trait_import</span></code>.</p>
 </section>
 </section>
 <section id="configuration">
@@ -94,6 +94,12 @@
 <section id="const">
 <h3><code class="docutils literal notranslate"><span class="pre">const</span></code><a class="headerlink" href="#const" title="Permalink to this heading">¶</a></h3>
 <p>Whether const blocks should be single or multi line.</p>
+<p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code></p>
+</section>
+<section id="function">
+<h3><code class="docutils literal notranslate"><span class="pre">function</span></code><a class="headerlink" href="#function" title="Permalink to this heading">¶</a></h3>
+<p>Whether function declaration doc blocks should be single or multi line.</p>
 <p>Allowed values: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code>, <code class="docutils literal notranslate"><span class="pre">'single'</span></code> and <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
 <p>Default value: <code class="docutils literal notranslate"><span class="pre">'multi'</span></code></p>
 </section>
@@ -160,6 +166,21 @@
 </section>
 <section id="example-3">
 <h3>Example #3<a class="headerlink" href="#example-3" title="Permalink to this heading">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['function'</span> <span class="pre">=&gt;</span> <span class="pre">'multi']</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+
+<span class="gd">-/** Description of foo function. */</span>
+<span class="gi">+/**</span>
+<span class="gi">+ * Description of foo function.</span>
+<span class="gi">+ */</span>
+<span class="w"> </span>function foo(): void {}
+</pre></div>
+</div>
+</section>
+<section id="example-4">
+<h3>Example #4<a class="headerlink" href="#example-4" title="Permalink to this heading">¶</a></h3>
 <p>With configuration: <code class="docutils literal notranslate"><span class="pre">['other'</span> <span class="pre">=&gt;</span> <span class="pre">'single']</span></code>.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
@@ -176,8 +197,8 @@
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.2/src/Fixer/Phpdoc/PhpdocLineSpanFixer.php">PhpCsFixer\Fixer\Phpdoc\PhpdocLineSpanFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.2/tests/Fixer/Phpdoc/PhpdocLineSpanFixerTest.php">PhpCsFixer\Tests\Fixer\Phpdoc\PhpdocLineSpanFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.95.0/src/Fixer/Phpdoc/PhpdocLineSpanFixer.php">PhpCsFixer\Fixer\Phpdoc\PhpdocLineSpanFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.95.0/tests/Fixer/Phpdoc/PhpdocLineSpanFixerTest.php">PhpCsFixer\Tests\Fixer\Phpdoc\PhpdocLineSpanFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>

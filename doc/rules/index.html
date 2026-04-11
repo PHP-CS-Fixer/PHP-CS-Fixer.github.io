@@ -33,7 +33,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>7th Gear (v3.94.2)</strong> edition
+                <strong>Adalbertus (v3.95.0)</strong> edition
               </h1>
             </div>
             <nav class="nav">
@@ -120,6 +120,9 @@
 </li>
 <li><p><a class="reference internal" href="array_notation/no_whitespace_before_comma_in_array.html"><span class="doc">no_whitespace_before_comma_in_array</span></a> <em>(configurable)</em></p>
 <p>In array declaration, there MUST NOT be a whitespace before each comma.</p>
+</li>
+<li><p><a class="reference internal" href="array_notation/no_whitespace_in_empty_array.html"><span class="doc">no_whitespace_in_empty_array</span></a></p>
+<p>Empty arrays should not contain only whitespace.</p>
 </li>
 <li><p><a class="reference internal" href="array_notation/normalize_index_brace.html"><span class="doc">normalize_index_brace</span></a></p>
 <p>Array index should always be written by using square braces.</p>
@@ -878,6 +881,9 @@
 <li><p><a class="reference internal" href="phpdoc/phpdoc_no_alias_tag.html"><span class="doc">phpdoc_no_alias_tag</span></a> <em>(configurable)</em></p>
 <p>No alias PHPDoc tags should be used.</p>
 </li>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_no_duplicate_types.html"><span class="doc">phpdoc_no_duplicate_types</span></a></p>
+<p>Removes duplicate PHPDoc types.</p>
+</li>
 <li><p><a class="reference internal" href="phpdoc/phpdoc_no_empty_return.html"><span class="doc">phpdoc_no_empty_return</span></a></p>
 <p><code class="docutils literal notranslate"><span class="pre">&#64;return</span> <span class="pre">void</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;return</span> <span class="pre">null</span></code> annotations must be removed from PHPDoc.</p>
 </li>
@@ -932,7 +938,7 @@
 <li><p><a class="reference internal" href="phpdoc/phpdoc_types.html"><span class="doc">phpdoc_types</span></a> <em>(configurable)</em></p>
 <p>The correct case must be used for standard PHP types in PHPDoc.</p>
 </li>
-<li><p><a class="reference internal" href="phpdoc/phpdoc_types_no_duplicates.html"><span class="doc">phpdoc_types_no_duplicates</span></a></p>
+<li><p><a class="reference internal" href="phpdoc/phpdoc_types_no_duplicates.html"><span class="doc">phpdoc_types_no_duplicates</span></a> <em>(deprecated)</em></p>
 <p>Removes duplicate PHPDoc types.</p>
 </li>
 <li><p><a class="reference internal" href="phpdoc/phpdoc_types_order.html"><span class="doc">phpdoc_types_order</span></a> <em>(configurable)</em></p>
@@ -952,7 +958,7 @@
 <li><p><a class="reference internal" href="return_notation/no_useless_return.html"><span class="doc">no_useless_return</span></a></p>
 <p>There should not be an empty <code class="docutils literal notranslate"><span class="pre">return</span></code> statement at the end of a function.</p>
 </li>
-<li><p><a class="reference internal" href="return_notation/return_assignment.html"><span class="doc">return_assignment</span></a></p>
+<li><p><a class="reference internal" href="return_notation/return_assignment.html"><span class="doc">return_assignment</span></a> <em>(configurable)</em></p>
 <p>Local, dynamic and directly referenced variables should not be assigned and directly returned by a function or method.</p>
 </li>
 <li><p><a class="reference internal" href="return_notation/simplified_null_return.html"><span class="doc">simplified_null_return</span></a></p>
@@ -984,7 +990,7 @@
 <h2>Strict<a class="headerlink" href="#strict" title="Permalink to this heading">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="strict/declare_strict_types.html"><span class="doc">declare_strict_types</span></a> <em>(risky, configurable)</em></p>
-<p>Force strict types declaration in all files.</p>
+<p>Force a strict types mode in all files.</p>
 </li>
 <li><p><a class="reference internal" href="strict/strict_comparison.html"><span class="doc">strict_comparison</span></a> <em>(risky)</em></p>
 <p>Comparisons should be strict.</p>

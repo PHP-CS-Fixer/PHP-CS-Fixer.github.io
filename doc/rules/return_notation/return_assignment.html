@@ -33,7 +33,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>7th Gear (v3.94.2)</strong> edition
+                <strong>Adalbertus (v3.95.0)</strong> edition
               </h1>
             </div>
             <nav class="nav">
@@ -70,17 +70,81 @@
 <h1>Rule <code class="docutils literal notranslate"><span class="pre">return_assignment</span></code><a class="headerlink" href="#rule-return-assignment" title="Permalink to this heading">¶</a></h1>
 <p>Local, dynamic and directly referenced variables should not be assigned and
 directly returned by a function or method.</p>
+<section id="warning">
+<h2>Warning<a class="headerlink" href="#warning" title="Permalink to this heading">¶</a></h2>
+<section id="this-rule-is-configurable">
+<h3>This rule is CONFIGURABLE<a class="headerlink" href="#this-rule-is-configurable" title="Permalink to this heading">¶</a></h3>
+<p>You can configure this rule using the following option: <code class="docutils literal notranslate"><span class="pre">skip_named_var_tags</span></code>.</p>
+</section>
+</section>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
+<section id="skip-named-var-tags">
+<h3><code class="docutils literal notranslate"><span class="pre">skip_named_var_tags</span></code><a class="headerlink" href="#skip-named-var-tags" title="Permalink to this heading">¶</a></h3>
+<p>Whether to skip cases where named <code class="docutils literal notranslate"><span class="pre">&#64;var</span></code> tags are used.</p>
+<p>Allowed types: <code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p>Default value: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</section>
+</section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
 <section id="example-1">
 <h3>Example #1<a class="headerlink" href="#example-1" title="Permalink to this heading">¶</a></h3>
+<p><em>Default</em> configuration.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
 <span class="gi">+++ New</span>
 <span class="w"> </span>&lt;?php
+
 <span class="w"> </span>function a() {
 <span class="gd">-    $a = 1;</span>
 <span class="gd">-    return $a;</span>
 <span class="gi">+    return 1;</span>
+<span class="w"> </span>}
+
+<span class="w"> </span>function foo() {
+<span class="w"> </span>    /** @var int[] */
+<span class="gd">-    $a = doSomething();</span>
+<span class="gd">-</span>
+<span class="gd">-    return $a;</span>
+<span class="gi">+    return doSomething();</span>
+<span class="w"> </span>}
+
+<span class="w"> </span>function bar() {
+<span class="w"> </span>    /** @var int[] $b */
+<span class="gd">-    $b = doSomething();</span>
+<span class="gd">-</span>
+<span class="gd">-    return $b;</span>
+<span class="gi">+    return doSomething();</span>
+<span class="w"> </span>}
+</pre></div>
+</div>
+</section>
+<section id="example-2">
+<h3>Example #2<a class="headerlink" href="#example-2" title="Permalink to this heading">¶</a></h3>
+<p>With configuration: <code class="docutils literal notranslate"><span class="pre">['skip_named_var_tags'</span> <span class="pre">=&gt;</span> <span class="pre">true]</span></code>.</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- Original</span>
+<span class="gi">+++ New</span>
+<span class="w"> </span>&lt;?php
+
+<span class="w"> </span>function a() {
+<span class="gd">-    $a = 1;</span>
+<span class="gd">-    return $a;</span>
+<span class="gi">+    return 1;</span>
+<span class="w"> </span>}
+
+<span class="w"> </span>function foo() {
+<span class="w"> </span>    /** @var int[] */
+<span class="gd">-    $a = doSomething();</span>
+<span class="gd">-</span>
+<span class="gd">-    return $a;</span>
+<span class="gi">+    return doSomething();</span>
+<span class="w"> </span>}
+
+<span class="w"> </span>function bar() {
+<span class="w"> </span>    /** @var int[] $b */
+<span class="w"> </span>    $b = doSomething();
+
+<span class="w"> </span>    return $b;
 <span class="w"> </span>}
 </pre></div>
 </div>
@@ -96,8 +160,8 @@ directly returned by a function or method.</p>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.2/src/Fixer/ReturnNotation/ReturnAssignmentFixer.php">PhpCsFixer\Fixer\ReturnNotation\ReturnAssignmentFixer</a></p></li>
-<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.94.2/tests/Fixer/ReturnNotation/ReturnAssignmentFixerTest.php">PhpCsFixer\Tests\Fixer\ReturnNotation\ReturnAssignmentFixerTest</a></p></li>
+<li><p>Fixer class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.95.0/src/Fixer/ReturnNotation/ReturnAssignmentFixer.php">PhpCsFixer\Fixer\ReturnNotation\ReturnAssignmentFixer</a></p></li>
+<li><p>Test class: <a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.95.0/tests/Fixer/ReturnNotation/ReturnAssignmentFixerTest.php">PhpCsFixer\Tests\Fixer\ReturnNotation\ReturnAssignmentFixerTest</a></p></li>
 </ul>
 <p>The test class defines officially supported behaviour. Each test case is a part of our backward compatibility promise.</p>
 </section>
