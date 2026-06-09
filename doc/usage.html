@@ -33,7 +33,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Adalbertus (v3.95.4)</strong> edition
+                <strong>Adalbertus (v3.95.5)</strong> edition
               </h1>
             </div>
             <nav class="nav">
@@ -81,7 +81,7 @@ problems as possible.</p>
 </pre></div>
 </div>
 <p>You can also fix files in parallel, utilising more CPU cores. You can do this by using config class that implements
-<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.95.4/src/ParallelAwareConfigInterface.php">PhpCsFixer\ParallelAwareConfigInterface</a>, and use <code class="docutils literal notranslate"><span class="pre">setParallelConfig()</span></code> method.
+<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.95.5/src/ParallelAwareConfigInterface.php">PhpCsFixer\ParallelAwareConfigInterface</a>, and use <code class="docutils literal notranslate"><span class="pre">setParallelConfig()</span></code> method.
 Recommended way is to utilise auto-detecting parallel configuration:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
@@ -113,12 +113,13 @@ which will use the intersection of the paths from the config file and from the a
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&#64;auto</span></code> aims to auto-select best reporter for given CI or local execution (resolution into best format is outside of BC promise and is future-ready)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">gitlab</span></code> for GitLab</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gitlab</span></code> when running in GitLab CI</p></li>
+<li><p>best fit for the AI agent (currently: <code class="docutils literal notranslate"><span class="pre">json</span></code>) when running in an AI agent (for example, when the <code class="docutils literal notranslate"><span class="pre">AI_AGENT</span></code> environment variable, or another popular one, is set), unless running in GitLab CI</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&#64;auto,{format}</span></code> takes <code class="docutils literal notranslate"><span class="pre">&#64;auto</span></code> under CI, and {format} otherwise</p></li>
 </ul>
-<p>When the <code class="docutils literal notranslate"><span class="pre">AI_AGENT</span></code> environment variable (or another popular one) is set, the format is unconditionally resolved to the selected best fit for the AI agent (currently <code class="docutils literal notranslate"><span class="pre">json</span></code>).</p>
+<p>Agent detection only applies when the format is resolved automatically (<code class="docutils literal notranslate"><span class="pre">&#64;auto</span></code>); an explicitly selected format (for example, <code class="docutils literal notranslate"><span class="pre">--format=txt</span></code>) is never overridden. When both GitLab CI and an AI agent are detected, GitLab CI takes precedence and the format resolves to <code class="docutils literal notranslate"><span class="pre">gitlab</span></code>.</p>
 <p>NOTE: the output for the following formats are generated in accordance with schemas</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">checkstyle</span></code> follows the common <a class="reference external" href="/doc/schemas/fix/checkstyle.xsd">“checkstyle” XML schema</a></p></li>

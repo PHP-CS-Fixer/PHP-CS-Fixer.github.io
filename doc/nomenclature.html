@@ -20,7 +20,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="../_static/images/favicon-192x192.png">
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css">
       <link rel="stylesheet" href="../_static/" type="text/css">
-      <title>Creating custom rules - PHP Coding Standards Fixer</title> 
+      <title>Nomenclature - PHP Coding Standards Fixer</title> 
   </head>
   <body>
       <header class="hd">
@@ -66,38 +66,33 @@
           </div>
           <div class="more_intro">
             
-  <section id="creating-custom-rules">
-<h1>Creating custom rules<a class="headerlink" href="#creating-custom-rules" title="Permalink to this heading">¶</a></h1>
-<p>If you need to enforce some specific code style rules, you can implement your
-own fixers. There is a <a class="reference internal" href="cookbook_fixers.html"><span class="doc">cookbook</span></a> with basic instructions on how to build a new fixer.</p>
-<p>For each rule you want to add, create a class that implements
-<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.95.5/src/Fixer/FixerInterface.php">PhpCsFixer\Fixer\FixerInterface</a>.
-Note that there is a specific constraint
-regarding custom rules names: they must match the pattern
-<code class="docutils literal notranslate"><span class="pre">/^[A-Z][a-zA-Z0-9]*\/[a-z][a-z0-9_]*$/</span></code>.</p>
-<p>Then register your custom fixers and enable them in the config file:</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
-<span class="c1">// ...</span>
-<span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">())</span>
-    <span class="c1">// ...</span>
-    <span class="o">-&gt;</span><span class="na">registerCustomFixers</span><span class="p">([</span>
-        <span class="k">new</span> <span class="nx">CustomerFixer1</span><span class="p">(),</span>
-        <span class="k">new</span> <span class="nx">CustomerFixer2</span><span class="p">(),</span>
-    <span class="p">])</span>
-    <span class="o">-&gt;</span><span class="na">setRules</span><span class="p">([</span>
-        <span class="c1">// ...</span>
-        <span class="s1">&#39;YourVendorName/custome_rule&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
-        <span class="s1">&#39;YourVendorName/custome_rule_2&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
-    <span class="p">])</span>
-<span class="p">;</span>
-</pre></div>
-</div>
-<p>There are several interfaces that your fixers can also implement if needed:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.95.5/src/Fixer/WhitespacesAwareFixerInterface.php">PhpCsFixer\Fixer\WhitespacesAwareFixerInterface</a>: for fixers that need to know the configured indentation and line endings;</p></li>
-<li><p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.95.5/src/Fixer/ConfigurableFixerInterface.php">PhpCsFixer\Fixer\ConfigurableFixerInterface</a>: to create a configurable fixer;</p></li>
-<li><p><a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.95.5/src/Fixer/DeprecatedFixerInterface.php">PhpCsFixer\Fixer\DeprecatedFixerInterface</a>: to deprecate a fixer.</p></li>
-</ul>
+  <section id="nomenclature">
+<h1>Nomenclature<a class="headerlink" href="#nomenclature" title="Permalink to this heading">¶</a></h1>
+<section id="brackets">
+<h2>Brackets<a class="headerlink" href="#brackets" title="Permalink to this heading">¶</a></h2>
+<p>ref <a class="reference external" href="https://en.wikipedia.org/wiki/Bracket">https://en.wikipedia.org/wiki/Bracket</a></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p>Characters | ( )</p></th>
+<th class="head"><p>[ ]</p></th>
+<th class="head"><p>{ }</p></th>
+<th class="head"><p>&lt;&gt;</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="3"><p>Plural     | parentheses</p></td>
+<td><p>brackets</p></td>
+<td><p>braces</p></td>
+<td><p>chevrons</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p>Singular   | parenthesis</p></td>
+<td><p>bracket</p></td>
+<td><p>brace</p></td>
+<td><p>chevron</p></td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 
 
