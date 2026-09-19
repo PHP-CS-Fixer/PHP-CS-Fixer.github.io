@@ -33,7 +33,7 @@
             <div class="clearfix">
               <div class="logo_header"><a href="/">PHP Coding Standards Fixer</a></div>
               <h1 class="title_header">
-                <strong>Adalbertus (v3.95.25)</strong> edition
+                <strong>Adalbertus (v3.95.26)</strong> edition
               </h1>
             </div>
             <nav class="nav">
@@ -80,33 +80,19 @@ problems as possible.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix .</span>
 </pre></div>
 </div>
-<p>You can also fix files in parallel, utilising more CPU cores. You can do this by using config class that implements
-<a class="reference external" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/v3.95.25/src/ParallelAwareConfigInterface.php">PhpCsFixer\ParallelAwareConfigInterface</a>, and use <code class="docutils literal notranslate"><span class="pre">setParallelConfig()</span></code> method.
-Recommended way is to utilise auto-detecting parallel configuration:</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
-
-<span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">())</span>
-    <span class="o">-&gt;</span><span class="na">setParallelConfig</span><span class="p">(</span><span class="nx">PhpCsFixer\Runner\Parallel\ParallelConfigFactory</span><span class="o">::</span><span class="na">detect</span><span class="p">())</span>
-<span class="p">;</span>
+<p>You can also specify a path to execute a command only over a nested directory or a file.
+By default <code class="docutils literal notranslate"><span class="pre">--path-mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">override</span></code>, which means, that if you specify the path to a directory or a file via
+command arguments, then the paths provided to a <code class="docutils literal notranslate"><span class="pre">Finder</span></code> in config file will be ignored. You can use <code class="docutils literal notranslate"><span class="pre">--path-mode=intersection</span></code>,
+which will use the intersection of the paths from the config file and from the argument:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix --path-mode=intersection /path/to/dir</span>
 </pre></div>
 </div>
-<p>However, in some case you may want to fine-tune parallelisation with explicit values (e.g. in environments where auto-detection does not work properly and suggests more cores than it should):</p>
+<p>PHP CS Fixer executes in parallel by default, utilising more CPU cores. You can also fine-tune parallelisation with explicit values (e.g. if you want to disable it, or in environments where auto-detection does not work properly and suggests more cores than it should):</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
 <span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Config</span><span class="p">())</span>
     <span class="o">-&gt;</span><span class="na">setParallelConfig</span><span class="p">(</span><span class="k">new</span> <span class="nx">PhpCsFixer\Runner\Parallel\ParallelConfig</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
 <span class="p">;</span>
-</pre></div>
-</div>
-<p>You can limit process to given file or files in a given directory and its subdirectories:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix /path/to/dir</span>
-<span class="go">php php-cs-fixer.phar fix /path/to/file</span>
-</pre></div>
-</div>
-<p>By default <code class="docutils literal notranslate"><span class="pre">--path-mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">override</span></code>, which means, that if you specify the path to a file or a directory via
-command arguments, then the paths provided to a <code class="docutils literal notranslate"><span class="pre">Finder</span></code> in config file will be ignored. You can also use <code class="docutils literal notranslate"><span class="pre">--path-mode=intersection</span></code>,
-which will use the intersection of the paths from the config file and from the argument:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">php php-cs-fixer.phar fix --path-mode=intersection /path/to/dir</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">--format</span></code> option for the output format. Supported formats are <code class="docutils literal notranslate"><span class="pre">&#64;auto</span></code> (default one on v4+), <code class="docutils literal notranslate"><span class="pre">txt</span></code> (default one on v3), <code class="docutils literal notranslate"><span class="pre">checkstyle</span></code>, <code class="docutils literal notranslate"><span class="pre">gitlab</span></code>, <code class="docutils literal notranslate"><span class="pre">json</span></code>, <code class="docutils literal notranslate"><span class="pre">junit</span></code> and <code class="docutils literal notranslate"><span class="pre">xml</span></code>.</p>
@@ -288,7 +274,7 @@ will need to use both <code class="docutils literal notranslate"><span class="pr
 <p>Also possible via <code class="docutils literal notranslate"><span class="pre">PHP_CS_FIXER_IGNORE_ENV</span></code> environment variable (deprecated),
 which also allows the Fixer to run with required PHP extensions missing.</p>
 <p>NOTE: Execution may be unstable when used.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">PHP_CS_FIXER_IGNORE_ENV=1 php php-cs-fixer.phar fix /path/to/dir</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">PHP_CS_FIXER_IGNORE_ENV=1 php php-cs-fixer.phar fix</span>
 </pre></div>
 </div>
 </section>
