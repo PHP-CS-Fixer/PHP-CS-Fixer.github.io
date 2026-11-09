@@ -1,0 +1,14 @@
+download/version.json
+  h_44235ea8856697 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "22be27796d6c302c91f36c7c5900df38c7eb6b9f",
+  "prompts": {},
+  "humans": {
+    "h_44235ea8856697": {
+      "author": "Dariusz Ruminski <dariusz.ruminski@gmail.com>"
+    }
+  }
+}
